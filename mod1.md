@@ -148,6 +148,7 @@ A *variable* is a name (ie identifier) associated with value, it represents the 
 
 Example:
 ```python
+
 b=4
 h=9
 A=b*h
