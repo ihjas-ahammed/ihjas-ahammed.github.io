@@ -168,6 +168,12 @@ print(random_number)
 ## Writing User-Defined Functions
 ### Function Definition
 A function definition is a block of code that defines the behavior of a function. It specifies the function's name, parameters, and return value.
+Syntax
+```python
+def function_name(parameter1,parameter2,...):
+    # function code block
+    return return_value # if needed
+```
 
 Example
 
