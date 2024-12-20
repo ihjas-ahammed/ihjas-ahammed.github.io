@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Notes Hub</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .semester-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .course-card {
+            background: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .course-card h2 {
+            color: #2c3e50;
+            margin-top: 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+
+        .module-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .module-list li {
+            margin: 10px 0;
+        }
+
+        .module-link {
+            display: block;
+            padding: 10px 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            color: #3498db;
+            text-decoration: none;
+            transition: all 0.2s ease;
+        }
+
+        .module-link:hover {
+            background: #e9ecef;
+            transform: translateX(5px);
+        }
+
+        .semester-label {
+            background: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .coming-soon {
+            color: #95a5a6;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Notes</h1>
+
+        <!-- Semester 1 -->
+        <div class="semester-grid">
+            <div class="course-card">
+                <span class="semester-label">Semester 1</span>
+                <h2>Computer Science</h2>
+                <ul class="module-list">
+                    <li><a href="/cs1/mod1" class="module-link">Module 1</a></li>
+                    <li><a href="/cs1/mod2" class="module-link">Module 2</a></li>
+                    <li><a href="/cs1/mod3" class="module-link">Module 3</a></li>
+                    <li><a href="/cs1/mod4" class="module-link">Module 4</a></li>
+                </ul>
+            </div>
+
+            <div class="course-card">
+                <span class="semester-label">Semester 1</span>
+                <h2>Statistics</h2>
+                <ul class="module-list">
+                    <li><a href="/stat1/mod1" class="module-link">Module 1</a></li>
+                    <li><a href="/stat1/mod2" class="module-link">Module 2</a></li>
+                    <!-- <li><a href="/stat1/mod3" class="module-link">Module 3</a></li>
+                    <li><a href="/stat1/mod4" class="module-link">Module 4</a></li> -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Semester 2 -->
+        <div class="semester-grid">
+            <div class="course-card">
+                <span class="semester-label">Semester 2</span>
+                <h2>Computer Science</h2>
+                <ul class="module-list">
+                    <li><a href="/cs2/mod1" class="module-link">Module 1</a></li>
+                    <!-- <li><a href="/cs2/mod2" class="module-link">Module 2</a></li>
+                    <li><a href="/cs2/mod3" class="module-link">Module 3</a></li>
+                    <li><a href="/cs2/mod4" class="module-link">Module 4</a></li> -->
+                </ul>
+            </div>
+
+            <div class="course-card">
+                <span class="semester-label">Semester 2</span>
+                <h2>Statistics</h2>
+                <ul class="module-list">
+                    <li><a href="/stat2/mod1" class="module-link">Module 1</a></li>
+                    <!-- <li><a href="/stat2/mod2" class="module-link">Module 2</a></li>
+                    <li><a href="/stat2/mod3" class="module-link">Module 3</a></li>
+                    <li><a href="/stat2/mod4" class="module-link">Module 4</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
