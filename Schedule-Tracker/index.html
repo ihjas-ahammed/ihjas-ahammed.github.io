@@ -1,7 +1,10 @@
 <!DOCTYPE html>
+<!-- saved from url=(0049)https://ihjas-ahammed.github.io/Schedule-Tracker/ -->
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
     <title>Schedule Tracker</title>
     <style>
         :root {
@@ -35,11 +38,11 @@
             max-width: 800px;
             margin: 0 auto;
             overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
         }
 
         .schedule-header {
-            background: rgba(0,0,0,0.1);
+            background: rgba(0, 0, 0, 0.1);
             padding: 15px 20px;
             display: flex;
             justify-content: space-between;
@@ -50,9 +53,10 @@
         .schedule-item {
             display: flex;
             align-items: center;
-            padding: 10px 15px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding: 4px 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             gap: 10px;
+
         }
 
         .schedule-item.current-task {
@@ -84,7 +88,7 @@
 
         .progress-bar-container {
             flex: 1;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
             height: 8px;
             overflow: hidden;
@@ -106,13 +110,13 @@
         }
 
         .schedule-item:hover .actions {
-            width: 120px;
+            width: 150px;
             opacity: 1;
         }
 
         .btn {
-            background: rgba(255,255,255,0.2);
-            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
             color: white;
             padding: 5px 10px;
             border-radius: 6px;
@@ -122,11 +126,11 @@
         }
 
         .btn:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
         }
 
         .btn.delete:hover {
-            background: rgba(255,0,0,0.3);
+            background: rgba(255, 0, 0, 0.3);
         }
 
         .modal {
@@ -136,7 +140,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             align-items: center;
             justify-content: center;
             backdrop-filter: blur(5px);
@@ -195,14 +199,38 @@
             background: #e2e8f0;
             color: #333;
         }
+
+        .manual-progress-btn {
+            background: rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .manual-progress-btn:hover {
+            background: rgba(000, 255, 000, 0.3);
+        }
+
     </style>
 </head>
+
 <body>
     <div class="schedule-container">
         <div class="schedule-header">
             <h2>Today's Schedule</h2>
             <div class="header-actions">
-                <span class="overall-progress"></span>
+                <span class="overall-progress">
+                    <div class="progress-container">
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" style="width: 0%"></div>
+                        </div>
+                        <span>0%</span>
+                    </div>
+                </span>
                 <button class="btn" style="width:100%;" onclick="openAddModal()">Add Task</button>
             </div>
         </div>
@@ -232,59 +260,79 @@
     </div>
 
     <script>
-        let schedule = JSON.parse(localStorage.getItem('schedule')) || [
-        ];
+        let schedule = JSON.parse(localStorage.getItem('schedule')) || [];
         let editingTaskId = null;
 
         function saveToLocalStorage() {
             localStorage.setItem('schedule', JSON.stringify(schedule));
         }
 
-        function calculateProgress(startTime, duration) {
+        function calculateProgress(startTime, duration, manualProgress = 0) {
             const now = new Date();
             const [hours, minutes, period] = startTime.match(/(\d+):(\d+)\s*(\w+)/).slice(1);
             let scheduleStart = new Date();
             scheduleStart.setHours(
-                period === 'pm' ? (parseInt(hours) === 12 ? 12 : parseInt(hours) + 12) : 
-                (parseInt(hours) === 12 ? 0 : parseInt(hours)),
-                parseInt(minutes), 
+                period === 'pm' ? (parseInt(hours) === 12 ? 12 : parseInt(hours) + 12) :
+                    (parseInt(hours) === 12 ? 0 : parseInt(hours)),
+                parseInt(minutes),
                 0
             );
 
             const scheduleEnd = new Date(scheduleStart.getTime() + duration * 60000);
 
-            if (now < scheduleStart) return 0;
-            if (now > scheduleEnd) return 100;
+            if (now < scheduleStart) return manualProgress * 0.5;
+            if (now > scheduleEnd) return Math.min(100, 50 + manualProgress * 0.5);
 
             const totalDuration = scheduleEnd.getTime() - scheduleStart.getTime();
             const elapsedTime = now.getTime() - scheduleStart.getTime();
-            
-            return Math.min(100, (elapsedTime / totalDuration) * 100);
+            const timeProgress = Math.min(100, (elapsedTime / totalDuration) * 100);
+
+            return Math.min(100, (timeProgress * 0.5) + (manualProgress * 0.5));
+        }
+
+        function updateManualProgress(id) {
+            const progress = prompt("Enter progress percentage (0-100):", "0");
+            if (progress === null) return;
+
+            const progressValue = parseInt(progress);
+            if (isNaN(progressValue) || progressValue < 0 || progressValue > 100) {
+                alert("Please enter a valid number between 0 and 100");
+                return;
+            }
+
+            schedule = schedule.map(task =>
+                task.id === id
+                    ? { ...task, manualProgress: progressValue }
+                    : task
+            );
+
+            saveToLocalStorage();
+            renderSchedule();
         }
 
         function calculateOverallProgress() {
             if (schedule.length === 0) return 0;
-            
+
             const now = new Date();
             const firstTask = schedule[0];
             const lastTask = schedule[schedule.length - 1];
-            
+
             const [firstHours, firstMinutes, firstPeriod] = firstTask.time.match(/(\d+):(\d+)\s*(\w+)/).slice(1);
             const [lastHours, lastMinutes, lastPeriod] = lastTask.time.match(/(\d+):(\d+)\s*(\w+)/).slice(1);
-            
+
             let firstStart = new Date();
             firstStart.setHours(
-                firstPeriod === 'pm' ? (parseInt(firstHours) === 12 ? 12 : parseInt(firstHours) + 12) : 
-                (parseInt(firstHours) === 12 ? 0 : parseInt(firstHours)),
-                parseInt(firstMinutes), 
+                firstPeriod === 'pm' ? (parseInt(firstHours) === 12 ? 12 : parseInt(firstHours) + 12) :
+                    (parseInt(firstHours) === 12 ? 0 : parseInt(firstHours)),
+                parseInt(firstMinutes),
                 0
             );
 
             let lastEnd = new Date();
             lastEnd.setHours(
-                lastPeriod === 'pm' ? (parseInt(lastHours) === 12 ? 12 : parseInt(lastHours) + 12) : 
-                (parseInt(lastHours) === 12 ? 0 : parseInt(lastHours)),
-                parseInt(lastMinutes) + lastTask.duration, 
+                lastPeriod === 'pm' ? (parseInt(lastHours) === 12 ? 12 : parseInt(lastHours) + 12) :
+                    (parseInt(lastHours) === 12 ? 0 : parseInt(lastHours)),
+                parseInt(lastMinutes) + lastTask.duration,
                 0
             );
 
@@ -293,7 +341,7 @@
 
             const totalDuration = lastEnd.getTime() - firstStart.getTime();
             const elapsedTime = now.getTime() - firstStart.getTime();
-            
+
             return Math.min(100, (elapsedTime / totalDuration) * 100);
         }
 
@@ -306,13 +354,13 @@
                 const period = item.time.split(" ")[1]
                 let scheduleStart = new Date();
                 scheduleStart.setHours(
-                    period === 'pm' ? (parseInt(hours) === 12 ? 12 : parseInt(hours) + 12) : 
-                    (parseInt(hours) === 12 ? 0 : parseInt(hours)),
-                    parseInt(minutes), 
+                    period === 'pm' ? (parseInt(hours) === 12 ? 12 : parseInt(hours) + 12) :
+                        (parseInt(hours) === 12 ? 0 : parseInt(hours)),
+                    parseInt(minutes),
                     0
                 );
                 const scheduleEnd = new Date(scheduleStart.getTime() + item.duration * 60000);
-                
+
                 return now >= scheduleStart && now <= scheduleEnd;
             });
         }
@@ -321,36 +369,38 @@
             const container = document.getElementById('scheduleItems');
             const currentTaskIndex = findCurrentTask();
             const overallProgress = calculateOverallProgress();
+
             document.querySelector('.overall-progress').innerHTML = `
-                <div class="progress-container">
-                    <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: ${overallProgress}%"></div>
-                    </div>
-                    <span>${Math.round(overallProgress)}%</span>
-                </div>`;
+        <div class="progress-container">
+            <div class="progress-bar-container">
+                <div class="progress-bar" style="width: ${overallProgress}%"></div>
+            </div>
+            <span>${Math.round(overallProgress)}%</span>
+        </div>`;
 
             container.innerHTML = schedule.map((item, index) => {
-                const progressPercentage = calculateProgress(item.time, item.duration);
+                const progressPercentage = calculateProgress(item.time, item.duration, item.manualProgress || 0);
                 const isCurrentTask = index === currentTaskIndex;
-                
+
                 return `
-                    <div class="schedule-item ${isCurrentTask ? 'current-task' : ''}">
-                        <div class="task-main">
-                            <div class="time-slot">${item.time}</div>
-                            <div class="activity">${item.activity}</div>
-                        </div>
-                        <div class="progress-container">
-                            <div class="progress-bar-container">
-                                <div class="progress-bar" style="width: ${progressPercentage}%"></div>
-                            </div>
-                            <span>${Math.round(progressPercentage)}%</span>
-                        </div>
-                        <div class="actions">
-                            <button class="btn" onclick="editTask(${item.id})">Edit</button>
-                            <button class="btn delete" onclick="deleteTask(${item.id})">Delete</button>
-                        </div>
+            <div class="schedule-item ${isCurrentTask ? 'current-task' : ''}">
+                <div class="task-main">
+                    <div class="time-slot">${item.time}</div>
+                    <div class="activity">${item.activity}</div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" style="width: ${progressPercentage}%"></div>
                     </div>
-                `;
+                    <span>${Math.round(progressPercentage)}%</span>
+                </div>
+                <div class="actions">
+                    <button class="btn" onclick="editTask(${item.id})">Edit</button>
+                    <button class="btn delete" onclick="deleteTask(${item.id})">Delete</button>
+                    <button class="manual-progress-btn" onclick="updateManualProgress(${item.id})">Set</button>
+                </div>
+            </div>
+        `;
             }).join('');
         }
 
@@ -391,8 +441,8 @@
             }
 
             if (editingTaskId) {
-                schedule = schedule.map(task => 
-                    task.id === editingTaskId 
+                schedule = schedule.map(task =>
+                    task.id === editingTaskId
                         ? { ...task, time, activity, duration }
                         : task
                 );
@@ -401,7 +451,8 @@
                     id: Date.now(),
                     time,
                     activity,
-                    duration
+                    duration,
+                    manualProgress: 0
                 };
                 schedule.push(newTask);
             }
@@ -429,5 +480,8 @@
         renderSchedule();
         setInterval(renderSchedule, 60000); // Update every minute
     </script>
+
+
 </body>
+
 </html>
