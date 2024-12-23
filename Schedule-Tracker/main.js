@@ -248,4 +248,4 @@ function deleteTask(id) {
 // Initialize
 initializeDateTimeDisplay();
 renderSchedule();
-setInterval(renderSchedule, 1000); // Update every second
+setInterval(renderSchedule, 60000); // Update every second
