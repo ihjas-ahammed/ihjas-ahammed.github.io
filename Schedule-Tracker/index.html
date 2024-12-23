@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Schedule Tracker Pro</title>
+    <title>Routine</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
 </head>
@@ -14,7 +14,7 @@
             <!-- Header Section -->
             <header class="app-header">
                 <div class="header-content">
-                    <h1>Schedule Tracker</h1>
+                    <h1>Routine</h1>
                     <div class="date-time">
                         <span id="currentDate"></span>
                         <span id="currentTime"></span>
@@ -33,8 +33,8 @@
                         <div class="progress-bar" id="overallProgressBar"></div>
                     </div>
                     <div class="progress-details">
-                        <span>Auto: <span id="autoProgress">0%</span></span>
-                        <span>Manual: <span id="manualProgress">0%</span></span>
+                        <span>Time: <span id="timeProgress">0%</span></span>
+                        <span>Real: <span id="realProgress">0%</span></span>
                     </div>
                 </div>
             </div>
@@ -43,7 +43,7 @@
             <div class="schedule-content">
                 <div class="schedule-header">
                     <h2>Today's Tasks</h2>
-                    <button class="add-task-btn" onclick="openAddModal()">
+                    <button class="add-task-btn btn" onclick="openAddModal()">
                         <i class="fas fa-plus"></i> Add Task
                     </button>
                 </div>
@@ -67,9 +67,9 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="taskTime">
-                        <i class="fas fa-clock"></i> Time
+                        <i class="fas fa-clock"></i> Start Time
                     </label>
-                    <input type="text" id="taskTime" placeholder="e.g. 2:30 pm">
+                    <input type="time" id="taskTime">
                 </div>
                 <div class="form-group">
                     <label for="taskName">
@@ -82,6 +82,19 @@
                         <i class="fas fa-hourglass-half"></i> Duration (minutes)
                     </label>
                     <input type="number" id="taskDuration" placeholder="Duration in minutes">
+                    <span id="endTime" class="end-time-display"></span>
+                </div>
+                <div class="form-group">
+                    <label class="progress-type-label">
+                        Progress Tracking Method
+                    </label>
+                    <div class="progress-type-toggle">
+                        <input type="checkbox" id="progressType" class="toggle-input">
+                        <label for="progressType" class="toggle-label">
+                            <span class="toggle-option">Manual Progress</span>
+                            <span class="toggle-option">Subtasks</span>
+                        </label>
+                    </div>
                 </div>
             </div>
             <div class="modal-footer">
@@ -91,25 +104,54 @@
         </div>
     </div>
 
-    <!-- Custom Alert Modal -->
-    <div class="modal" id="alertModal">
-        <div class="modal-content alert-content">
+    <!-- Progress Modal (for manual progress) -->
+    <div class="modal" id="progressModal">
+        <div class="modal-content">
             <div class="modal-header">
-                <h3>Set Progress</h3>
-                <button class="close-btn" onclick="closeAlertModal()">
+                <h3>Update Progress</h3>
+                <button class="close-btn" onclick="closeProgressModal()">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             <div class="modal-body">
-                <div class="progress-input">
-                    <label for="manualProgressInput">Manual Progress (%)</label>
-                    <input type="range" id="manualProgressInput" min="0" max="100" value="0">
-                    <span id="progressValue">0%</span>
+                <div class="task-time-info">
+                    <span id="progressTaskTime"></span> - <span id="progressTaskEndTime"></span>
+                </div>
+                <div class="manual-progress-input">
+                    <input type="range" id="manualProgress" min="0" max="100" step="1">
+                    <span id="manualProgressValue">0%</span>
                 </div>
             </div>
             <div class="modal-footer">
-                <button class="btn secondary-btn" onclick="closeAlertModal()">Cancel</button>
-                <button class="btn primary-btn" onclick="saveManualProgress()">Save Progress</button>
+                <button class="btn primary-btn" onclick="saveProgress()">Save Progress</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Subtasks Modal -->
+    <div class="modal" id="subtasksModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Subtasks</h3>
+                <button class="close-btn" onclick="closeSubtasksModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="task-time-info">
+                    <span id="taskStartTime"></span> - <span id="taskEndTime"></span>
+                </div>
+                <div class="subtasks-list" id="subtasksList">
+                    <!-- Subtasks will be rendered here -->
+                </div>
+                <div class="add-subtask-section">
+                    <div class="form-group">
+                        <input type="text" id="newSubtaskInput" placeholder="New subtask">
+                        <button class="btn primary-btn" onclick="addSubtask()">
+                            <i class="fas fa-plus"></i> Add Subtask
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

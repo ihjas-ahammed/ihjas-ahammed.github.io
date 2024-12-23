@@ -1,14 +1,14 @@
 /* Root Variables */
 :root {
-    --primary-color: #4f46e5;
-    --primary-hover: #4338ca;
+    --primary-color: #ff8c42;
+    --primary-hover: #ff7324;
     --secondary-color: #64748b;
     --success-color: #22c55e;
     --danger-color: #ef4444;
     --text-primary: #1e293b;
     --text-secondary: #475569;
     --text-light: #94a3b8;
-    --glass-bg: rgba(255, 255, 255, 0.4);
+    --glass-bg: rgba(255, 255, 255, 0.9);
     --glass-border: rgba(255, 255, 255, 0.2);
     --modal-bg: rgba(0, 0, 0, 0.5);
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -17,6 +17,7 @@
     --radius-sm: 0.375rem;
     --radius-md: 0.5rem;
     --radius-lg: 1rem;
+    --orange-gradient: linear-gradient(135deg, #ff8c42 0%, #ff7324 100%);
 }
 
 /* Reset & Base Styles */
@@ -27,10 +28,10 @@
 }
 
 body {
-    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     color: var(--text-primary);
     min-height: 100vh;
-    background: url('images/bg.png') no-repeat center center fixed;
+    background: url("images/bg.png");
     background-size: cover;
     line-height: 1.5;
 }
@@ -46,8 +47,6 @@ body {
 
 .glass-container {
     background: var(--glass-bg);
-    backdrop-filter: blur(12px);
-    border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
     width: 100%;
     max-width: 1000px;
@@ -59,8 +58,7 @@ body {
 /* Header Styles */
 .app-header {
     padding: 1.5rem;
-    background: rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid var(--glass-border);
+    background: var(--orange-gradient);
 }
 
 .header-content {
@@ -72,15 +70,14 @@ body {
 .header-content h1 {
     font-size: 1.875rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: white;
 }
 
 .date-time {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Progress Overview */
@@ -115,16 +112,14 @@ body {
 
 .progress-bar-container {
     height: 0.75rem;
-    background: #e2e8f0;
+    background: #ffecd2;
     border-radius: var(--radius-sm);
     overflow: hidden;
-    min-width: 100px;
-    margin-bottom: 0.75rem;
 }
 
 .progress-bar {
     height: 100%;
-    background: var(--primary-color);
+    background: var(--orange-gradient);
     border-radius: var(--radius-sm);
     transition: width 0.3s ease;
 }
@@ -134,6 +129,7 @@ body {
     justify-content: space-between;
     font-size: 0.875rem;
     color: var(--text-secondary);
+    margin-top: 0.75rem;
 }
 
 /* Schedule Content */
@@ -153,49 +149,21 @@ body {
     font-weight: 600;
 }
 
-.add-task-btn {
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    padding: 0.625rem 1.25rem;
-    border-radius: var(--radius-md);
-    font-weight: 500;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: background-color 0.2s;
-}
-
-.add-task-btn:hover {
-    background: var(--primary-hover);
-}
-
-/* Schedule Items */
-.schedule-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
+/* Task Items */
 .schedule-item {
     background: white;
     border-radius: var(--radius-md);
     padding: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
     box-shadow: var(--shadow-sm);
-    transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.schedule-item:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transition: transform 0.2s;
 }
 
 .schedule-item.current-task {
-    border-left: 4px solid var(--success-color);
+    border-left: 4px solid var(--primary-color);
 }
 
 .task-main {
@@ -206,15 +174,29 @@ body {
 }
 
 .time-slot {
-    font-weight: 600;
-    color: var(--text-secondary);
-    min-width: 90px;
-}
-
-.activity {
+    min-width: 180px;
     font-weight: 500;
 }
 
+.activity {
+    flex: 1;
+    font-weight: 500;
+}
+
+.progress-container {
+    min-width: 150px;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#progressModal .task-time-info{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.actions {
+    display: flex;
+    gap: 0.5rem;
+}
 
 /* Modal Styles */
 .modal {
@@ -225,11 +207,10 @@ body {
     right: 0;
     bottom: 0;
     background: var(--modal-bg);
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     padding: 1rem;
-    z-index: 1000;
-    backdrop-filter: blur(4px);
 }
 
 .modal.active {
@@ -241,12 +222,14 @@ body {
     border-radius: var(--radius-lg);
     width: 100%;
     max-width: 500px;
-    box-shadow: var(--shadow-lg);
+    animation: slideIn 0.3s ease;
 }
 
 .modal-header {
     padding: 1.25rem;
-    border-bottom: 1px solid #e2e8f0;
+    background: var(--orange-gradient);
+    color: white;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -278,11 +261,10 @@ body {
 
 .form-group input {
     width: 100%;
-    padding: 0.625rem;
+    padding: 0.75rem;
     border: 1px solid #e2e8f0;
     border-radius: var(--radius-sm);
     font-size: 1rem;
-    transition: border-color 0.2s;
 }
 
 .form-group input:focus {
@@ -290,108 +272,87 @@ body {
     border-color: var(--primary-color);
 }
 
-/* Custom Alert Modal */
-.alert-content {
-    max-width: 400px;
-}
-
-.progress-input {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.progress-input input[type="range"] {
+/* Progress Type Toggle */
+.progress-type-toggle {
+    position: relative;
     width: 100%;
-    height: 6px;
-    background: #e2e8f0;
-    border-radius: var(--radius-sm);
-    outline: none;
+    height: 40px;
+    margin-top: 0.5rem;
 }
 
-.progress-input input[type="range"]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 20px;
-    height: 20px;
-    background: var(--primary-color);
-    border-radius: 50%;
+.toggle-input {
+    display: none;
+}
+
+.toggle-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: #f1f5f9;
+    border-radius: var(--radius-md);
     cursor: pointer;
+    padding: 0.25rem;
 }
 
-#progressValue {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: var(--primary-color);
+.toggle-option {
+    flex: 1;
     text-align: center;
+    padding: 0.5rem;
+    border-radius: var(--radius-sm);
+    transition: all 0.3s ease;
 }
 
-/* Buttons */
+.toggle-input:checked + .toggle-label .toggle-option:last-child {
+    background: var(--primary-color);
+    color: white;
+}
+
+.toggle-input:not(:checked) + .toggle-label .toggle-option:first-child {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Button Styles */
 .btn {
     padding: 0.625rem 1.25rem;
     border-radius: var(--radius-md);
     font-weight: 500;
     cursor: pointer;
     border: none;
-    transition: background-color 0.2s;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .primary-btn {
-    background: var(--primary-color);
+    background: var(--orange-gradient);
     color: white;
 }
 
 .primary-btn:hover {
-    background: var(--primary-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-sm);
 }
 
 .secondary-btn {
-    background: #e2e8f0;
+    background: #f1f5f9;
     color: var(--text-secondary);
 }
 
 .secondary-btn:hover {
-    background: #cbd5e1;
+    background: #e2e8f0;
 }
 
 .close-btn {
     background: none;
     border: none;
-    color: var(--text-light);
+    color: white;
     cursor: pointer;
     padding: 0.25rem;
-    transition: color 0.2s;
 }
-
-.close-btn:hover {
-    color: var(--text-secondary);
-}
-
-.schedule-item .actions {
-    width: 0px;
-    overflow: hidden;
-    display: flex;
-    transition-duration: 0.25s;
-    column-gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.schedule-item .progress-container{
-    width:200px;
-    align-items: center;
-    justify-content: center;
-    gap:5px;
-    display: flex;
-    flex-direction: row;
-    overflow: hidden;
-    opacity: 1;
-    transition-duration: 0.25s;
-}
-
-.schedule-item:hover .actions{
-    width:200px;
-}
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -404,37 +365,28 @@ body {
         min-height: 100vh;
     }
 
-    .header-content {
+    .schedule-item {
         flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
+        gap: 1rem;
     }
-
-    .date-time {
-        align-items: flex-start;
-    }
-
 
     .task-main {
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem;
     }
 
-    .schedule-item .progress-container{
-        width: 150px;
+    .time-slot {
+        min-width: auto;
     }
 
-    .schedule-item:hover .progress-container{
-        width: 0px;
+    .progress-container {
+        width: 100%;
+        justify-content: space-between;
     }
 
-    .schedule-item:hover .actions{
-        width: 180px;
-    }
-
-    .schedule-item .actions{
-        gap: 2px;
+    .actions {
+        width: 100%;
+        justify-content: space-between;
     }
 }
 
@@ -450,7 +402,79 @@ body {
     }
 }
 
-.modal-content {
-    animation: slideIn 0.3s ease;
+/* Empty State */
+.empty-schedule {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 1.125rem;
 }
 
+/* Manual Progress Styles */
+.manual-progress-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#manualProgress {
+    width: 100%;
+    height: 6px;
+    -webkit-appearance: none;
+    background: #ffecd2;
+    border-radius: var(--radius-sm);
+    outline: none;
+}
+
+#manualProgress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 20px;
+    height: 20px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#manualProgressValue {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+
+/* Subtasks Styles */
+.subtasks-list {
+    margin: 1rem 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.subtask-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: #f8fafc;
+    border-radius: var(--radius-sm);
+    margin-bottom: 0.5rem;
+}
+
+.subtask-item input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.subtask-text {
+    flex: 1;
+}
+
+.delete-subtask {
+    color: var(--danger-color);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.fa-clock{
+    margin-right: 10px;
+}
