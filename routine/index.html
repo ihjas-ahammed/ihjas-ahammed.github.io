@@ -8,8 +8,10 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
+    <!-- Main Container -->
     <div class="app-container">
         <div class="glass-container">
+            <!-- Header Section -->
             <header class="app-header">
                 <div class="header-content">
                     <h1>Routine</h1>
@@ -20,22 +22,28 @@
                 </div>
             </header>
 
+            <!-- Progress Overview -->
             <div class="progress-overview">
                 <div class="progress-card">
                     <div class="progress-title">
                         <h3>Overall Progress</h3>
-                        <span class="progress-percentage" id="overallProgressText">0%</span>
+                        <div class="progress-labels">
+                            <span class="progress-percentage time-progress" id="overallTimeProgress">0%</span>
+                            <span class="progress-percentage real-progress" id="overallRealProgress">0%</span>
+                        </div>
                     </div>
                     <div class="progress-bar-container">
-                        <div class="progress-bar" id="overallProgressBar"></div>
+                        <div class="progress-bar time-progress" id="overallTimeProgressBar"></div>
+                        <div class="progress-bar real-progress" id="overallRealProgressBar"></div>
                     </div>
                     <div class="progress-details">
-                        <span>Time: <span id="timeProgress">0%</span></span>
-                        <span>Real: <span id="realProgress">0%</span></span>
+                        <span>Time Progress</span>
+                        <span>Real Progress</span>
                     </div>
                 </div>
             </div>
 
+            <!-- Schedule Content -->
             <div class="schedule-content">
                 <div class="schedule-header">
                     <h2>Today's Tasks</h2>
@@ -45,11 +53,13 @@
                 </div>
                 
                 <div class="schedule-list" id="scheduleItems">
-                    </div>
+                    <!-- Tasks will be rendered here by JavaScript -->
+                </div>
             </div>
         </div>
     </div>
 
+    <!-- Add/Edit Task Modal -->
     <div class="modal" id="taskModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -98,6 +108,7 @@
         </div>
     </div>
 
+    <!-- Progress Modal (for manual progress) -->
     <div class="modal" id="progressModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -114,6 +125,12 @@
                     <input type="range" id="manualProgress" min="0" max="100" step="1">
                     <span id="manualProgressValue">0%</span>
                 </div>
+                <div class="progress-bar-preview">
+                    <div class="progress-bar-container">
+                        <div class="progress-bar time-progress" id="previewTimeProgress"></div>
+                        <div class="progress-bar real-progress" id="previewRealProgress"></div>
+                    </div>
+                </div>
             </div>
             <div class="modal-footer">
                 <button class="btn primary-btn" onclick="saveProgress()">Save Progress</button>
@@ -121,6 +138,7 @@
         </div>
     </div>
 
+    <!-- Subtasks Modal -->
     <div class="modal" id="subtasksModal">
         <div class="modal-content">
             <div class="modal-header">
@@ -134,7 +152,8 @@
                     <span id="taskStartTime"></span> - <span id="taskEndTime"></span>
                 </div>
                 <div class="subtasks-list" id="subtasksList">
-                    </div>
+                    <!-- Subtasks will be rendered here -->
+                </div>
                 <div class="add-subtask-section">
                     <div class="form-group">
                         <input type="text" id="newSubtaskInput" placeholder="New subtask">

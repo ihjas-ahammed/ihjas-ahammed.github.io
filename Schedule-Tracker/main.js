@@ -1,7 +1,13 @@
 // Global Variables
 let schedule = JSON.parse(localStorage.getItem('schedule')) || [];
 let editingTaskId = null;
+let completedTasks = JSON.parse(localStorage.getItem('completedTasks')) || [];
 let currentTaskId = null;
+
+const audio = new Audio('sound-effect/background.mp3'); 
+audio.loop = true;
+audio.volume = 0.2;
+audio.play();
 
 // Initialize date and time display
 function initializeDateTimeDisplay() {
@@ -16,6 +22,11 @@ function initializeDateTimeDisplay() {
 
     updateDateTime();
     setInterval(updateDateTime, 1000);
+}
+
+function isTaskComplete(task) {
+    const progress = calculateProgress(task);
+    return progress.real >= 100;
 }
 
 // Time Utility Functions
@@ -77,11 +88,32 @@ function calculateProgress(task) {
             : 0;
     }
 
+    if (!task.completed && realProgress >= 100) {
+        task.completed = true;
+        // Trigger completion notification
+        showTaskCompletionNotification(task);
+    }
+
     return {
         time: timeProgress,
         real: realProgress,
         total: (timeProgress + realProgress) / 2
     };
+}
+
+// Add notification function
+function showTaskCompletionNotification(task) {
+    if (!("Notification" in window)) return;
+    
+    if (completedTasks.includes(task.id)) return;
+    
+    if (Notification.permission === "granted") {
+        new Notification("Task Completed!", {
+            body: `The task "${task.activity}" has been completed`
+        });
+        completedTasks.push(task.id);
+        localStorage.setItem('completedTasks', JSON.stringify(completedTasks));
+    }
 }
 
 function calculateOverallProgress() {
@@ -259,10 +291,15 @@ function renderSchedule() {
     const overallProgress = calculateOverallProgress();
 
     // Update overall progress
-    document.getElementById('overallProgressBar').style.width = `${overallProgress.total}%`;
     document.getElementById('overallProgressText').textContent = `${overallProgress.total}%`;
     document.getElementById('timeProgress').textContent = `${overallProgress.time}%`;
     document.getElementById('realProgress').textContent = `${overallProgress.real}%`;
+    
+    let overallTime = document.querySelector(".progress-bar.time.overall")
+    let overallReal = document.querySelector(".progress-bar.real.overall")
+
+    overallTime.style.width = `${overallProgress.time}%`
+    overallReal.style.width = `${overallProgress.real}%`
 
     if (schedule.length === 0) {
         container.innerHTML = '<div class="empty-schedule">No tasks scheduled. Click "Add Task" to get started.</div>';
@@ -283,10 +320,11 @@ function renderSchedule() {
                     </div>
                     <div class="activity">${task.activity}</div>
                 </div>
-                <span>${Math.round(progress.total)}%</span>
+                <span>${Math.round(progress.real)}%</span>
                 <div class="progress-container">
                     <div class="progress-bar-container">
-                        <div class="progress-bar" style="width: ${progress.total}%"></div>
+                        <div class="progress-bar real" style="width: ${progress.real}%"></div>
+                        <div class="progress-bar time" style="width: ${progress.time}%"></div>
                     </div>
                 </div>
                 <div class="actions">
@@ -352,7 +390,7 @@ function saveTask() {
             progressType,
             subtasks: progressType === 'subtasks' ? [] : undefined,
             manualProgress: progressType === 'manual' ? 0 : undefined
-        };
+        };4
         schedule.push(newTask);
     }
 
@@ -394,6 +432,11 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('newSubtaskInput').addEventListener('keypress', (e) => {
         if (e.key === 'Enter') addSubtask();
     });
+
+    // Request notification permission
+    if ("Notification" in window) {
+        Notification.requestPermission();
+    }
 });
 
 // Update the schedule display periodically
