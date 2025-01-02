@@ -27,18 +27,15 @@
                 <div class="progress-card">
                     <div class="progress-title">
                         <h3>Overall Progress</h3>
-                        <div class="progress-labels">
-                            <span class="progress-percentage time-progress" id="overallTimeProgress">0%</span>
-                            <span class="progress-percentage real-progress" id="overallRealProgress">0%</span>
-                        </div>
+                        <span class="progress-percentage" id="overallProgressText">0%</span>
                     </div>
                     <div class="progress-bar-container">
-                        <div class="progress-bar time-progress" id="overallTimeProgressBar"></div>
-                        <div class="progress-bar real-progress" id="overallRealProgressBar"></div>
+                        <div class="progress-bar time overall" id="overallProgressBar"></div>
+                        <div class="progress-bar real overall" id="overallProgressBar"></div>
                     </div>
                     <div class="progress-details">
-                        <span>Time Progress</span>
-                        <span>Real Progress</span>
+                        <span>Time: <span id="timeProgress">0%</span></span>
+                        <span>Real: <span id="realProgress">0%</span></span>
                     </div>
                 </div>
             </div>
@@ -124,12 +121,6 @@
                 <div class="manual-progress-input">
                     <input type="range" id="manualProgress" min="0" max="100" step="1">
                     <span id="manualProgressValue">0%</span>
-                </div>
-                <div class="progress-bar-preview">
-                    <div class="progress-bar-container">
-                        <div class="progress-bar time-progress" id="previewTimeProgress"></div>
-                        <div class="progress-bar real-progress" id="previewRealProgress"></div>
-                    </div>
                 </div>
             </div>
             <div class="modal-footer">

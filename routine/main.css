@@ -1,18 +1,22 @@
 /* Root Variables - Updated based on color psychology research */
 :root {
     /* Primary colors - Using blue as the main color for productivity and focus */
-    --primary-color: #2b6cb0;  /* Calming blue that promotes focus */
+    --primary-color: #2b6cb0;
+    /* Calming blue that promotes focus */
     --primary-hover: #1e4e8c;
     --secondary-color: #64748b;
     /* Success/Danger using research-backed colors */
-    --success-color: #38a169;  /* Green for balance and harmony */
-    --danger-color: #e53e3e;   /* Red used sparingly for urgent items */
+    --success-color: #38a169;
+    /* Green for balance and harmony */
+    --danger-color: #e53e3e;
+    /* Red used sparingly for urgent items */
     /* Text colors - Using balanced contrast for readability */
     --text-primary: #1e293b;
     --text-secondary: #475569;
     --text-light: #94a3b8;
     /* Background colors - Using tranquil combinations */
-    --glass-bg: rgba(247, 250, 252, 0.4);  /* Light blue tint for calmness */
+    --glass-bg: rgba(247, 250, 252, 0.4);
+    /* Light blue tint for calmness */
     --glass-border: rgba(255, 255, 255, 0.2);
     --modal-bg: rgba(0, 0, 0, 0.5);
     /* Shadows remain unchanged for consistent depth perception */
@@ -123,6 +127,7 @@ body {
     background: #e2e8f0;
     border-radius: var(--radius-sm);
     overflow: hidden;
+    position: relative;
 }
 
 .progress-bar {
@@ -130,6 +135,16 @@ body {
     background: var(--blue-gradient);
     border-radius: var(--radius-sm);
     transition: width 0.3s ease;
+    position: absolute;
+    /* Position div1 absolutely within the container */
+    top: 0;
+    /* Adjust top position as needed */
+    left: 0;
+}
+
+
+.progress-bar.time {
+    opacity: 0.4;
 }
 
 .progress-details {
@@ -173,6 +188,17 @@ body {
 .schedule-item.current-task {
     border-left: 4px solid var(--primary-color);
 }
+
+.schedule-list {
+    overflow: scroll;
+    max-height: 500px;
+    scrollbar-color: #0000;
+}
+
+.schedule-list::-webkit-scrollbar {
+    display: none;
+}
+
 
 .task-main {
     display: flex;
@@ -313,12 +339,12 @@ body {
     transition: all 0.3s ease;
 }
 
-.toggle-input:checked + .toggle-label .toggle-option:last-child {
+.toggle-input:checked+.toggle-label .toggle-option:last-child {
     background: var(--primary-color);
     color: white;
 }
 
-.toggle-input:not(:checked) + .toggle-label .toggle-option:first-child {
+.toggle-input:not(:checked)+.toggle-label .toggle-option:first-child {
     background: var(--primary-color);
     color: white;
 }
@@ -397,6 +423,30 @@ body {
         width: 100%;
         justify-content: space-between;
     }
+
+    .date-time {
+        display: none;
+    }
+
+    .app-header {
+        padding: 1.0rem;
+        padding-left: 2rem;
+        background: var(--blue-gradient);
+        border-bottom: 1px solid #fff5;
+    }
+    
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-content h1 {
+        font-size: 2rem;
+        font-weight: 500;
+        text-shadow: 0 0 #0005;
+        color: white;
+    }
 }
 
 /* Animations */
@@ -405,6 +455,7 @@ body {
         transform: translateY(20px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -486,88 +537,4 @@ body {
 
 .fa-clock {
     margin-right: 10px;
-}
-
-/* Updated Progress Bar Styles */
-.progress-bar-container {
-    position: relative;
-    height: 0.75rem;
-    background: #e2e8f0;
-    border-radius: var(--radius-sm);
-    overflow: hidden;
-}
-
-.progress-bar {
-    position: absolute;
-    height: 100%;
-    border-radius: var(--radius-sm);
-    transition: width 0.3s ease;
-}
-
-.progress-bar.time-progress {
-    background: var(--blue-gradient);
-    opacity: 0.3;
-}
-
-.progress-bar.real-progress {
-    background: var(--blue-gradient);
-}
-
-/* Progress Labels */
-.progress-labels {
-    display: flex;
-    gap: 1rem;
-}
-
-.progress-percentage {
-    font-size: 1.125rem;
-    font-weight: 600;
-}
-
-.progress-percentage.time-progress {
-    color: var(--text-secondary);
-}
-
-.progress-percentage.real-progress {
-    color: var(--primary-color);
-}
-
-/* Progress Details Update */
-.progress-details {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.875rem;
-    color: var(--text-secondary);
-    margin-top: 0.75rem;
-}
-
-/* Progress Bar Preview in Modal */
-.progress-bar-preview {
-    margin-top: 1.5rem;
-    padding: 0.5rem 0;
-}
-
-/* Task Item Progress Bar Updates */
-.schedule-item .progress-container {
-    flex: 1;
-    margin: 0 1rem;
-    max-width: 200px;
-}
-
-.schedule-item .progress-labels {
-    min-width: 80px;
-    text-align: right;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .progress-container {
-        width: 100%;
-        max-width: none !important;
-    }
-    
-    .progress-labels {
-        min-width: auto;
-        justify-content: flex-end;
-    }
 }

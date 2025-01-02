@@ -440,4 +440,4 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Update the schedule display periodically
-setInterval(renderSchedule, 60000); // Update every 30 seconds
+setInterval(renderSchedule, 30000); // Update every 30 seconds
