@@ -164,4 +164,84 @@ Example json
 * As input predictive models
 * Chatbots
 
+##  Statistical Data
 
+Statistical Data refers to qualitative facts that are, gathered, organised and analysed in a systematic way. Which are collected from surveys, experiments, observations and even from existing sources.
+
+Statistical Data is divided into both qualitative and quantitative based on whether they are measurable or not.
+
+### Qualitative Data
+
+It is also called categorical data and it is about things that can't be measured in an objective sense.
+
+Eg: Age Group, Gender, Nationality etc.
+
+They are divided into nominal and ordinal data based on if they are ordered units or not.
+
+
+#### Nominal Data
+
+Nominal Data is used to label variables without giving any quantitaive value. But they are represented in discrete units.
+
+Eg: Gender, Hair color, Nationality etc.
+
+Hot encoding is used to transform nominal data into numerical feature. The only logical operation can be applied will be equality or inequality.
+
+They can be represented using frequencies, percentages, proportions and central point.
+
+Graphically using a pie chart or a bar chart.
+
+In short, the units in nominal data all have same priority so order doesn't matter.
+
+#### Ordinal Data
+
+Discrete ordered units with no concistancy between the realtive distance of adjacent categories.
+
+Examples are:
+
+* Opinion (agree, mostly agree, neutral, disagree, mostly disagree)
+* Socio-economic status
+
+Label encoding is used to transform it into a numerical feature. It supports all ways of represntation as nominal and also median, made and interquartile range.
+
+Visualisation method is same.
+
+### Quantitaive 
+
+Quantitaive Data is about quantities of things that we can measure, Height, Volume, Weight and Distance are examples.
+
+They are divided into discrete and continues and also continues is further divided into interval and ratio data.
+
+#### Discrete data
+
+The numarical data has distinct and seperate values.
+
+Eg: No. of students in a class
+
+#### Continues data
+
+It is the numarical data that is given within a range.
+
+EG: Age group
+
+It can be visualized using histograms and box plots.
+
+They are more adjuctive and conclusive in nature.
+
+#### Interval Data
+
+Data that measured along an equal distance between adjacent units.
+
+It can be continues or discrete.
+
+Eg: IQ test's intelligence, Time if meausured using a 12 hour clock.
+
+Can only be either added or substracted. Represented using central point range and spread.
+
+#### Ratio Data
+
+Can be given zero, cannot take negative value also within some difference between individual units.
+
+Eg: Temperature in kelvin scale, height
+
+Can be multiplied or divided.
