@@ -245,3 +245,67 @@ Can be given zero, cannot take negative value also within some difference betwee
 Eg: Temperature in kelvin scale, height
 
 Can be multiplied or divided.
+
+### Data Analysis
+
+1. Collect
+2. Organise
+3. **Analyse**
+
+Steps:
+
+* Identify data using descriptive analysis
+* Investigate using diagnostic analysis
+* Perform actions using prescriptive analysis
+* Predict future using predictive analysis
+
+Collect, Clean, Store and Transform then apply required analysis technique
+
+#### Data Mining
+
+It is the step that involves to collect data from different sources.
+
+#### Data Management
+
+Changing different types of data into something effective. Like format and unit to a standard format.
+
+#### Statistical Analysis
+
+Analysis data statistically based on the way we needed to analyse.
+
+#### Data Presnetation
+
+After deny all these, one must create a statistical report with the prediction needed to be made.
+
+## Types of Data Analysis
+
+1. Predictive
+2. Descriptive
+3. Exploration
+4. Diagnostic
+5. Inferential
+
+### Predictive Analysis
+
+It gives the probability of an event or a situation.
+
+By using techniques like:
+
+* Modeling
+* Machine Learning
+* Data Mining
+* Game Theory
+
+This may help to give predictions about a future event.
+
+The processes:
+1. Linear regression
+2. Time series analysis
+3. Data mining
+
+Basicity cornerstones of predictive analysis:
+
+1. Predictive Modeling
+2. Decision Analysis and Optimization
+3. Transaction Profile
+
