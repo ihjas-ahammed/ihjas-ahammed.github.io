@@ -15,9 +15,13 @@
 }
 
 body {
-    background: #f7f7f7;
     color: var(--text);
     line-height: 1.6;
+    background: url("/routine/images/bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    backdrop-filter: blur(10px);
 }
 
 .container {
