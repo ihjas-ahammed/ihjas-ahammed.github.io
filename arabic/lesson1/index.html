@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arabic Literature Learner</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <div class="header">
+        <button class="menu-btn" onclick="returnToMainMenu()">Menu</button>
+        <div class="lives">
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+            <span class="heart">❤️</span>
+        </div>
+        <div class="progress-bar">
+            <div class="progress-fill"></div>
+        </div>
+        <div class="score">0</div>
+    </div>
+
+    <div class="container">
+        <div class="level-select">
+            <!-- Level cards will be generated dynamically -->
+        </div>
+
+        <div id="question-container" class="question-container" style="display: none;">
+            <div class="question"></div>
+            <div class="options"></div>
+            <div class="feedback"></div>
+            <div class="nav-buttons">
+                <button class="nav-btn" id="prevBtn" onclick="previousQuestion()">Previous</button>
+                <button class="nav-btn" id="nextBtn" onclick="nextQuestion()">Next</button>
+                <button class="nav-btn" onclick="restartLevel()">Restart Level</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -21,3 +21,25 @@ This table is called probability distribution (like a frequency distribution)
 E(x) which is expectation of x is also mean of the probability distribution
 
 E(x)= ∑ x<sub>i</sub>p(x=x<sub>i</sub>)
+
+<hr>
+
+
+Random variables are also called chance variables or stochastic variables
+
+if x<sub>1</sub> and x<sub>2</sub> are random variables and c is a constant.
+
+1. cx<sub>1</sub> is a random variable
+2. x<sub>1</sub> + x<sub>2</sub> is a random variable
+3. x<sub>1</sub> - x<sub>2</sub> is a random variable
+4. Max[x<sub>1</sub>,x<sub>2</sub>] is a random variable
+5. Min[x<sub>1</sub>,x<sub>2</sub>] is a random variable
+
+### Probability Mass Functions
+
+The probability distribution of a discrete random variable is a list of the distinct values of x<sub>i</sub> of X with their associated probablities.
+
+f(x<sub>i</sub>) or p(X=x<sub>i</sub>) is called probability mass function, provided:
+
+1. f(x<sub>i</sub>) >= 0
+2. Σ f(x<sub>i</sub>) = 1
