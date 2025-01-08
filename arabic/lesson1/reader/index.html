@@ -6,6 +6,10 @@
     <title>Arabic Lesson Reader</title>
     <!-- Add Noto Naskh Arabic font - one of the best for Arabic readability -->
     <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Adding Scheherazade New as fallback - also great for diacritics -->
+    <link href="https://fonts.googleapis.com/css2?family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet">
+    
     <style>
         /* Reset and base styles */
         * {
@@ -121,14 +125,15 @@
         }
 
         .arabic-text {
-            font-family: 'Noto Naskh Arabic', serif;
-            font-weight: 500;
-            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            font-family: 'Amiri', 'Scheherazade New', serif;
+            font-weight: 400;
+            font-size: clamp(1.75rem, 5vw, 2.75rem);
             text-align: right;
             margin-bottom: 1.5rem;
-            line-height: 2;
+            line-height: 2.5;
             color: #1a365d;
             direction: rtl;
+            letter-spacing: 0.5px; /* Helps with diacritic clarity */
         }
 
         .english-text {
@@ -161,9 +166,10 @@
 
         /* Arabic text in table */
         td[dir="rtl"] {
-            font-family: 'Noto Naskh Arabic', serif;
-            font-size: 1.2em;
+            font-family: 'Amiri', 'Scheherazade New', serif;
+            font-size: 1.4em;
             text-align: right;
+            line-height: 2;
         }
 
         th {
