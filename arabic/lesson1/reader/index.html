@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arabic Lesson Reader</title>
+    <!-- Add Noto Naskh Arabic font - one of the best for Arabic readability -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         /* Reset and base styles */
         * {
@@ -119,12 +121,14 @@
         }
 
         .arabic-text {
+            font-family: 'Noto Naskh Arabic', serif;
+            font-weight: 500;
             font-size: clamp(1.5rem, 5vw, 2.5rem);
             text-align: right;
             margin-bottom: 1.5rem;
-            line-height: 1.8;
+            line-height: 2;
             color: #1a365d;
-            font-family: 'Traditional Arabic', 'Scheherazade New', Arial, sans-serif;
+            direction: rtl;
         }
 
         .english-text {
@@ -153,6 +157,13 @@
             padding: 1rem;
             text-align: left;
             border-bottom: 1px solid #e2e8f0;
+        }
+
+        /* Arabic text in table */
+        td[dir="rtl"] {
+            font-family: 'Noto Naskh Arabic', serif;
+            font-size: 1.2em;
+            text-align: right;
         }
 
         th {
@@ -211,6 +222,10 @@
             th, td {
                 padding: 0.75rem 0.5rem;
                 font-size: 0.875rem;
+            }
+
+            td[dir="rtl"] {
+                font-size: 1.1em;
             }
 
             .keyboard-shortcuts {
