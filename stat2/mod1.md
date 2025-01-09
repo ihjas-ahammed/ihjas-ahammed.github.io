@@ -43,3 +43,27 @@ f(x<sub>i</sub>) or p(X=x<sub>i</sub>) is called probability mass function, prov
 
 1. f(x<sub>i</sub>) >= 0
 2. Σ f(x<sub>i</sub>) = 1
+
+* A probability mass function can be represented as a histogram
+
+### Distribution Functions
+
+For any random variable 'X' the function of the real variable X defined as
+ F(x) = P(X<=x) is called cumulative probability distribution function or cumilative distribution function
+
+ if X is a discrete random variable with probability mass function p(x), then the distribution function is defined as:
+
+ F(x) = p(X<=x) = ∑ p(x)
+
+ ### Properties
+
+ If F(x) is the distribution function of X:
+
+ 1. It is defined for all real values of X
+ 2. 0 <= F(x) <= 1 
+ 3. F(-∞)=0 and F(∞)=1
+ 4. a < b => F(a) < F(b) => F is non-decreasing
+ 5. The graph of F(x) is a step function for discrete random variables
+
+
+ 
