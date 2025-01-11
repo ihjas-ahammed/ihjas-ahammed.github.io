@@ -1,38 +1,38 @@
-# Control Structures
+#  Control  Structures
 
-## Decision Making Statements
+##  Decision  Making  Statements
 
-### If statement
+###  If  statement
 
-If statement allows a code block to execute conditionally based on if a specific boolean expression is true or false.
+If  statement  allows  a  code  block  to  execute  conditionally  based  on  if  a  specific  boolean  expression  is  true  or  false.
 
-#### Syntax
+####  Syntax
 
 ```python
-if expression:
-    # code block
+if  expression:
+        #  code  block
 ```
 
-Here the ```expression``` is a boolean expression and if it is true, then the code given in the intendation after the statement will be executed unless the rest of the program will be executed.
+Here  the  ```expression```  is  a  boolean  expression  and  if  it  is  true,  then  the  code  given  in  the  intendation  after  the  statement  will  be  executed  unless  the  rest  of  the  program  will  be  executed.
 
 Example
 
 ```python
-# check if a number is greater than ten
-a=int(input("Enter the number: "))
+#  check  if  a  number  is  greater  than  ten
+a=int(input("Enter  the  number:  "))
 
-if a > 10:
-    print(a,"is greater")
+if  a  >  10:
+        print(a,"is  greater")
 ```
 
 ```
-Enter the number: 12
-12 is greater
+Enter  the  number:  12
+12  is  greater
 ```
 
-### If Else Statement
+###  If  Else  Statement
 
-In ```if``` only statement the code block is executed only if the condition given is true, here we also add an ```else``` statement to specify the code which gets executed only if the expression is false
+In  ```if``` only statement the code block is executed only if the condition given is true, here we also add an ```else``` statement to specify the code which gets executed only if the expression is false
 
 #### Syntax
 
