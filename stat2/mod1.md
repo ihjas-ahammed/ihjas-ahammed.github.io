@@ -235,3 +235,106 @@ d/dt M<sub>x</sub>(t)|<sub>t=0</sub> = μ<sub>1</sub>'
 
 d<sup>2</sup>/dt<sup>2</sup> M<sub>x</sub>(t)|<sub>t=0</sub> = μ<sub>2</sub>'
 
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: #f8fafc;
+      color: #1a1a1a;
+    }
+    
+    .card {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      margin: 1rem 0;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+    
+    h1 {
+      color: #2563eb;
+      font-size: 2rem;
+      margin-bottom: 1.5rem;
+    }
+    
+    h2 {
+      color: #1e40af;
+      font-size: 1.5rem;
+      margin: 2rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #e5e7eb;
+    }
+    
+    .formula {
+      font-family: 'Computer Modern', serif;
+      background: #f1f5f9;
+      padding: 1rem;
+      border-radius: 4px;
+      margin: 1rem 0;
+      overflow-x: auto;
+    }
+    
+    .example {
+      border-left: 4px solid #3b82f6;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .proof {
+      border-left: 4px solid #10b981;
+      padding-left: 1rem;
+      margin: 1rem 0;
+    }
+    
+    .note {
+      font-size: 0.9rem;
+      color: #4b5563;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Basic Definitions</h2>
+    <div class="formula">
+      M₂ = M₁' - (M₁)²<br>
+      M₂ = E(x - E(x))²<br>
+      V(ax) = a²V(x)
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Properties of Variance</h2>
+    <div class="formula">
+      1. V(ax²) = E((ax)² - E(ax))²<br>
+      2. For random variables x and y:<br>
+      V(x + y) = V(x) + V(y) + 2Cov(x,y)<br>
+      3. If x and y are independent:<br>
+      V(x + y) = V(x) + V(y)
+    </div>
+  </div>
+
+
+  <div class="card">
+    <h2>Covariance</h2>
+    <div class="formula">
+      Cov(x,y) = E[(x - E(x))(y - E(y))]<br>
+      = E(xy) - E(x)E(y)
+    </div>
+    <div class="proof">
+      <h3>Proof for Independent Variables:</h3>
+      If x and y are independent:<br>
+      E(xy) = E(x)E(y)<br>
+      Therefore:<br>
+      Cov(x,y) = E(xy) - E(x)E(y) = 0
+    </div>
+
+  </div>
+
+
