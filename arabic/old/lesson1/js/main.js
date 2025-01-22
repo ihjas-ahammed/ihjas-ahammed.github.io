@@ -168,6 +168,7 @@ function initializeLevelSelectAr() {
     }
 }
 
+
 // Question randomization
 function shuffleQuestions() {
     const currentQuestions = currentTab === 'english' ? levels[currentLevel] : levelsAr[currentLevel];
@@ -178,7 +179,7 @@ function shuffleQuestions() {
 
 function getLevelDescription(level) {
     const descriptions = {
-        1: "Introduction to Taha Hussein",
+        1: "Introduction",
         2: "Arabic Vocabulary",
         3: "Literary Themes",
         4: "Advanced Analysis"
@@ -188,7 +189,7 @@ function getLevelDescription(level) {
 
 function getLevelDescriptionAr(level) {
     const descriptions = {
-        1: "مقدمة عن طه حسين",
+        1: "مقدمة",
         2: "المفردات العربية",
         3: "المواضيع الأدبية",
         4: "التحليل المتقدم"

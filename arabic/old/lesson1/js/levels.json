@@ -1,0 +1,478 @@
+{
+        "1": [
+    {
+      "type": "basic",
+      "question": "What were humans created from?",
+      "options": [
+        "Clay",
+        "Water",
+        "Fire",
+        "Air"
+      ],
+      "correct": 0,
+      "explanation": "Humans were created from clay according to the Quran."
+    },
+    {
+      "type": "basic",
+      "question": "Why did Allah create spouses for humans?",
+      "options": [
+        "For companionship and tranquility",
+        "To increase the population",
+        "To test their patience",
+        "To create competition"
+      ],
+      "correct": 0,
+      "explanation": "Allah created spouses for humans to find comfort and peace in each other's company."
+    },
+    {
+      "type": "basic",
+      "question": "What are some of the signs of Allah mentioned in the text?",
+      "options": [
+        "The creation of the heavens and the earth, the alternation of the night and day, the sailing of the ships in the sea, the rain",
+        "The sun, the moon, the stars",
+        "Mountains, rivers, oceans",
+        "Animals, plants, insects"
+      ],
+      "correct": 0,
+      "explanation": "The Quran mentions several signs of Allah, including the creation of the heavens and earth, the alternation of night and day, the sailing of ships, and rain."
+    },
+    {
+      "type": "basic",
+      "question": "What does the lightning cause in people?",
+      "options": [
+        "Fear",
+        "Hope",
+        "Joy",
+        "Anger"
+      ],
+      "correct": 0,
+      "explanation": "Lightning often causes fear in people due to its power and association with storms."
+    },
+    {
+      "type": "basic",
+      "question": "What happens to the earth after rain?",
+      "options": [
+        "It is revived and flourishes",
+        "It becomes barren",
+        "It floods",
+        "It erodes"
+      ],
+      "correct": 0,
+      "explanation": "Rain revitalizes the earth, causing plants to grow and life to flourish."
+    },
+    {
+      "type": "basic",
+      "question": "What stands by the command of Allah?",
+      "options": [
+        "The heavens and the earth",
+        "The sun and the moon",
+        "The mountains and the rivers",
+        "The animals and the plants"
+      ],
+      "correct": 0,
+      "explanation": "The heavens and the earth are sustained by the command of Allah."
+    },
+    {
+      "type": "basic",
+      "question": "When will people come out from the earth?",
+      "options": [
+        "On the Day of Judgment",
+        "After a heavy rain",
+        "During an earthquake",
+        "When the sun rises in the west"
+      ],
+      "correct": 0,
+      "explanation": "People will be resurrected and emerge from the earth on the Day of Judgment."
+    },
+    {
+      "type": "basic",
+      "question": "What does the creation of the heavens and earth indicate?",
+      "options": [
+        "The power and wisdom of Allah",
+        "The randomness of the universe",
+        "The evolution of species",
+        "The insignificance of humans"
+      ],
+      "correct": 0,
+      "explanation": "The creation of humans is a testament to the power and wisdom of Allah."
+    },
+    {
+      "type": "basic",
+      "question": "What is the proof for those who listen to the word of Allah?",
+      "options": [
+        "The Quran",
+        "Miracles",
+        "Scientific discoveries",
+        "Personal experiences"
+      ],
+      "correct": 0,
+      "explanation": "The Quran serves as the primary proof for those who attentively listen to the word of Allah."
+    },
+    {
+      "type": "basic",
+      "question": "How are the heavens and earth established?",
+      "options": [
+        "With truth",
+        "With magic",
+        "With force",
+        "By chance"
+      ],
+      "correct": 0,
+      "explanation": "The heavens and earth are established and maintained with truth, reflecting the divine order and purpose."
+    }
+  ],
+  "2": [
+    {
+      "type": "meaning",
+      "question": "What is the meaning of the word 'آيات' in the text?",
+      "options": [
+        "Signs",
+        "Verses",
+        "Miracles",
+        "Blessings"
+      ],
+      "correct": 0,
+      "explanation": "In this context, 'آيات' refers to the signs of Allah's existence and power."
+    },
+    {
+      "type": "meaning",
+      "question": "Define the word 'أزواجًا'.",
+      "options": [
+        "Spouses",
+        "Children",
+        "Friends",
+        "Animals"
+      ],
+      "correct": 0,
+      "explanation": "'أزواجًا' means spouses or mates, referring to the creation of pairs in humans."
+    },
+    {
+      "type": "meaning",
+      "question": "What does 'مودَّةً' mean?",
+      "options": [
+        "Love and affection",
+        "Respect and obedience",
+        "Fear and awe",
+        "Patience and tolerance"
+      ],
+      "correct": 0,
+      "explanation": "'مودَّةً' translates to love, affection, and tenderness."
+    },
+    {
+      "type": "meaning",
+      "question": "What is the meaning of 'اختلاف' in the context of the passage?",
+      "options": [
+        "Alternation",
+        "Disagreement",
+        "Diversity",
+        "Separation"
+      ],
+      "correct": 0,
+      "explanation": "Here, 'اختلاف' refers to the alternation or change, specifically between night and day."
+    },
+    {
+      "type": "meaning",
+      "question": "Define the word 'ابتغاء'.",
+      "options": [
+        "Seeking",
+        "Giving",
+        "Receiving",
+        "Ignoring"
+      ],
+      "correct": 0,
+      "explanation": "'ابتغاء' means seeking or striving for something."
+    },
+    {
+      "type": "meaning",
+      "question": "What is the meaning of 'البرق'?",
+      "options": [
+        "Lightning",
+        "Thunder",
+        "Rain",
+        "Wind"
+      ],
+      "correct": 0,
+      "explanation": "'البرق' means lightning."
+    },
+    {
+      "type": "meaning",
+      "question": "What does 'ماءً' mean?",
+      "options": [
+        "Water",
+        "Air",
+        "Fire",
+        "Earth"
+      ],
+      "correct": 0,
+      "explanation": "'ماءً' means water."
+    },
+    {
+      "type": "meaning",
+      "question": "Define the word 'الأرض'.",
+      "options": [
+        "Earth",
+        "Sky",
+        "Sea",
+        "Mountain"
+      ],
+      "correct": 0,
+      "explanation": "'الأرض' means the earth or land."
+    },
+    {
+      "type": "meaning",
+      "question": "What does 'السماء' mean?",
+      "options": [
+        "Sky",
+        "Heaven",
+        "Cloud",
+        "Rain"
+      ],
+      "correct": 0,
+      "explanation": "'السماء' can mean both sky and heaven."
+    },
+    {
+      "type": "meaning",
+      "question": "What is the meaning of 'دَعْوَةً'?",
+      "options": [
+        "Call",
+        "Prayer",
+        "Supplication",
+        "Invitation"
+      ],
+      "correct": 0,
+      "explanation": "In this context, 'دَعْوَةً' refers to a call or invitation."
+    }
+  ],
+  "3": [
+    {
+      "type": "inference",
+      "question": "What is the significance of human diversity according to the text?",
+      "options": [
+        "It is a source of conflict and division.",
+        "It is a punishment from Allah.",
+        "It is a sign of Allah's wisdom and power.",
+        "It is a result of random chance."
+      ],
+      "correct": 2,
+      "explanation": "The text highlights human diversity in languages and colors as a sign of Allah's wisdom and power. It suggests that these differences are meant to encourage people to learn from each other and appreciate the richness of human existence."
+    },
+    {
+      "type": "inference",
+      "question": "How does the text describe the relationship between fear and hope in relation to lightning?",
+      "options": [
+        "Lightning only causes fear.",
+        "Lightning only inspires hope.",
+        "Lightning inspires both fear and hope.",
+        "Lightning has no emotional effect on people."
+      ],
+      "correct": 2,
+      "explanation": "The text indicates that lightning inspires both fear and hope. People fear its destructive power, but it also brings rain, which gives them hope for sustenance and prosperity."
+    },
+    {
+      "type": "inference",
+      "question": "What can you infer about the concept of resurrection from the passage?",
+      "options": [
+        "Resurrection is only a spiritual concept.",
+        "Resurrection is a physical reality.",
+        "Resurrection will happen gradually over time.",
+        "Resurrection is not mentioned in the passage."
+      ],
+      "correct": 1,
+      "explanation": "The passage mentions that people will come out of the earth when they are resurrected. This suggests that resurrection is a physical reality and that people will be held accountable for their deeds on the Day of Judgment."
+    },
+    {
+      "type": "inference",
+      "question": "How are sleep and seeking provision connected according to the text?",
+      "options": [
+        "Sleep prevents people from seeking provision.",
+        "Sleep is necessary for people to have the energy to seek provision.",
+        "There is no connection between sleep and seeking provision.",
+        "Sleep is a form of seeking provision."
+      ],
+      "correct": 1,
+      "explanation": "The text implies that sleep is a time of rest and rejuvenation, allowing people to go out and seek provision during the day. It suggests that Allah has provided a natural cycle of rest and work to ensure human well-being."
+    },
+    {
+      "type": "inference",
+      "question": "What does the text suggest about the nature of Allah's creation?",
+      "options": [
+        "It is random and chaotic.",
+        "It is solely for human benefit.",
+        "It is purposeful, balanced, and interconnected.",
+        "It is static and unchanging."
+      ],
+      "correct": 2,
+      "explanation": "The text portrays Allah's creation as purposeful, balanced, and interconnected. It suggests that everything in the universe, from the heavens and earth to humans and animals, is created with wisdom and serves a specific function."
+    },
+    {
+      "type": "inference",
+      "question": "How does the text emphasize the importance of reflection and understanding?",
+      "options": [
+        "By discouraging questioning and critical thinking.",
+        "By emphasizing blind faith and obedience.",
+        "By encouraging the study of science and philosophy.",
+        "By pointing to the signs of Allah in creation and encouraging contemplation."
+      ],
+      "correct": 3,
+      "explanation": "The text repeatedly points to the signs of Allah in creation, encouraging people to reflect upon them and gain a deeper understanding of the divine. It suggests that true knowledge comes from contemplating the world around us and recognizing the wisdom behind it."
+    },
+    {
+      "type": "inference",
+      "question": "What is the role of balance in the universe according to the passage?",
+      "options": [
+        "Balance is insignificant in the grand scheme of things.",
+        "Balance is necessary for the stability and harmony of creation.",
+        "Balance is only relevant to the natural world.",
+        "Balance is an illusion."
+      ],
+      "correct": 1,
+      "explanation": "The passage emphasizes the importance of balance in the universe, highlighting the alternation of day and night, the cycle of rain and growth, and the creation of pairs. It suggests that this balance is essential for the stability and harmony of creation."
+    },
+    {
+      "type": "inference",
+      "question": "What does the text imply about human destiny?",
+      "options": [
+        "Humans have no predetermined destiny.",
+        "Human destiny is determined by fate.",
+        "Human destiny is ultimately determined by their choices and deeds.",
+        "Human destiny is to return to the earth."
+      ],
+      "correct": 2,
+      "explanation": "The text implies that humans have a purpose in life and will be held accountable for their actions. The mention of resurrection and the Day of Judgment suggests that human destiny is ultimately determined by their choices and deeds."
+    },
+    {
+      "type": "inference",
+      "question": "How does the passage portray the relationship between humanity and the natural world?",
+      "options": [
+        "Humans are separate from and superior to the natural world.",
+        "Humans are meant to dominate and exploit the natural world.",
+        "Humans are interconnected with the natural world and should live in harmony with it.",
+        "The natural world is irrelevant to human existence."
+      ],
+      "correct": 2,
+      "explanation": "The passage portrays humans as being interconnected with the natural world. They benefit from its resources, are influenced by its phenomena, and are responsible for its care. The text suggests that humans should live in harmony with nature and appreciate its role in their lives."
+    }
+  ],
+  "4": [
+    {
+      "type": "application",
+      "question": "How can understanding the creation of humans from dust impact one's perspective on life?",
+      "options": [
+        "It can lead to arrogance and a sense of superiority.",
+        "It can promote humility and appreciation for life's fragility.",
+        "It has no impact on one's perspective.",
+        "It can cause fear and anxiety about death."
+      ],
+      "correct": 1,
+      "explanation": "Recognizing that humans were created from dust can foster humility and an understanding of our place within the grand scheme of creation. It can also lead to a greater appreciation for the gift of life and its temporary nature."
+    },
+    {
+      "type": "application",
+      "question": "Discuss the importance of affection and mercy in building strong relationships.",
+      "options": [
+        "Affection and mercy are not essential for strong relationships.",
+        "Affection and mercy are only important in romantic relationships.",
+        "Affection and mercy are fundamental for fostering love, trust, and understanding in all relationships.",
+        "Affection and mercy should only be shown to family members."
+      ],
+      "correct": 2,
+      "explanation": "Affection and mercy create a nurturing environment where individuals feel valued, respected, and supported. These qualities promote empathy, forgiveness, and a willingness to work through challenges together, strengthening the bonds between people."
+    },
+    {
+      "type": "application",
+      "question": "How can the diversity of languages and colors be seen as a blessing?",
+      "options": [
+        "It leads to confusion and miscommunication.",
+        "It creates barriers between people.",
+        "It is a source of beauty, cultural richness, and opportunities for learning.",
+        "It is irrelevant to human interaction."
+      ],
+      "correct": 2,
+      "explanation": "The diversity of languages and colors enriches human experience by exposing us to different cultures, perspectives, and ways of life. It allows us to appreciate the beauty of human expression and fosters understanding and cooperation among people."
+    },
+    {
+      "type": "application",
+      "question": "In what ways do humans seek provision from Allah's bounty in today's world?",
+      "options": [
+        "Only through prayer and religious rituals.",
+        "Through hard work, education, and utilizing their skills and talents.",
+        "By relying solely on luck and chance.",
+        "By exploiting natural resources without regard for sustainability."
+      ],
+      "correct": 1,
+      "explanation": "Seeking provision encompasses various aspects of life, including pursuing education, developing skills, working diligently, and engaging in lawful trade and commerce. It involves utilizing our abilities and resources to fulfill our needs and contribute to society."
+    },
+    {
+      "type": "application",
+      "question": "How can observing natural phenomena like lightning and rain strengthen one's faith?",
+      "options": [
+        "It creates fear and anxiety about the power of nature.",
+        "It leads to a sense of insignificance and hopelessness.",
+        "It inspires awe and wonder at the power and wisdom of Allah.",
+        "It has no impact on one's faith."
+      ],
+      "correct": 2,
+      "explanation": "Witnessing the power and beauty of natural phenomena can serve as a reminder of Allah's creative power and the intricate workings of the universe. It can inspire feelings of gratitude, humility, and a deeper connection to the divine."
+    },
+    {
+      "type": "application",
+      "question": "What are the implications of the heavens and earth standing by Allah's command?",
+      "options": [
+        "It suggests that the universe is chaotic and unpredictable.",
+        "It implies that humans have complete control over nature.",
+        "It highlights the power and sovereignty of Allah and the orderliness of creation.",
+        "It indicates that the universe is static and unchanging."
+      ],
+      "correct": 2,
+      "explanation": "The statement that the heavens and earth stand by Allah's command emphasizes that the universe is not random but governed by divine will and purpose. It underscores Allah's authority and the intricate design and balance within creation."
+    },
+    {
+      "type": "application",
+      "question": "Discuss the concept of accountability in light of the passage's mention of the Day of Judgment.",
+      "options": [
+        "Humans are not accountable for their actions.",
+        "Accountability only applies to religious people.",
+        "Humans will be held accountable for their choices and deeds on the Day of Judgment.",
+        "Accountability is a social construct with no real consequences."
+      ],
+      "correct": 2,
+      "explanation": "The mention of the Day of Judgment reinforces the concept of accountability, reminding us that our actions have consequences. It encourages us to live righteously, make responsible choices, and strive to fulfill our purpose in life."
+    },
+    {
+      "type": "application",
+      "question": "How can we promote reflection and contemplation in our lives?",
+      "options": [
+        "By constantly engaging in social media and entertainment.",
+        "By leading a busy and distracted life.",
+        "By setting aside dedicated time for quiet reflection, prayer, and studying the Quran.",
+        "By avoiding any intellectual or spiritual pursuits."
+      ],
+      "correct": 2,
+      "explanation": "Creating space for reflection and contemplation allows us to connect with our inner selves, ponder the deeper meaning of life, and strengthen our relationship with Allah. This can be achieved through practices like prayer, meditation, journaling, and spending time in nature."
+    },
+    {
+      "type": "application",
+      "question": "What responsibilities do humans have towards the natural world based on this text?",
+      "options": [
+        "Humans have no responsibility towards the natural world.",
+        "Humans can exploit the natural world however they please.",
+        "Humans are stewards of the earth and responsible for its care and preservation.",
+        "The natural world is solely a source of resources for human consumption."
+      ],
+      "correct": 2,
+      "explanation": "The text highlights the interconnectedness between humans and the natural world. It implies that humans have a responsibility to utilize its resources wisely, protect its delicate balance, and ensure its sustainability for future generations."
+    },
+    {
+      "type": "application",
+      "question": "How can we use the signs of Allah to guide our actions and decisions?",
+      "options": [
+        "By ignoring them and relying solely on our own desires.",
+        "By using them to manipulate and control others.",
+        "By reflecting on them to gain wisdom, develop moral values, and make choices that align with Allah's will.",
+        "By treating them as mere natural occurrences with no deeper meaning."
+      ],
+      "correct": 2,
+      "explanation": "The signs of Allah in creation serve as a compass for navigating life's challenges and making ethical decisions. By contemplating these signs, we can gain a deeper understanding of Allah's attributes, develop a stronger moral compass, and make choices that are in harmony with our purpose and values."
+    }
+  ]
+}
