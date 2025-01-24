@@ -56,3 +56,72 @@
     *   **Kurtosis:** Measure of the "peakedness" of the distribution relative to a normal (Gaussian) distribution.
 
 
+## Introduction to python libraries
+
+ <table>
+    <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+    </tr>
+    <tr>
+            <td>Alice</td>
+            <td>24</td>
+            <td>50,000</td>
+    </tr>
+    <tr>
+            <td>Bob</td>
+            <td>27</td>
+            <td>60,000</td>
+    </tr>
+    <tr>
+            <td>Charlie</td>
+            <td>22</td>
+            <td>55,000</td>
+    </tr>
+    <tr>
+            <td>David</td>
+            <td>32</td>
+            <td>70,000</td>
+    </tr>
+    <tr>
+            <td>Eve</td>
+            <td>29</td>
+            <td>65,000</td>
+    </tr>
+</table>
+
+The above data can be represented in python using dictionaries:
+
+
+```python
+data = {
+    name: ["Alice","Bob","Charlie","David","Eve"],
+    age: [24,27,22,32,29],
+    salary: [50000,60000,50000,30000,65000]
+}
+```
+
+We use python libraries like:
+
+1. Panda
+2. MathplotLib
+3. Seaborn
+
+To work on the data, first by coverting it into a *data frame* by using panda
+
+```python
+import panda as pd
+df = pd.DataFrame(data)
+```
+
+### Data Frame
+
+It is a 2D data structure in python with rows and columns
+
+#### Features
+
+* Two Dimensional
+* Labeled Axes
+* Flexible and Powerful
+
