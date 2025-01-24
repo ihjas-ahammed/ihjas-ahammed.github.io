@@ -1,4 +1,4 @@
-**Exploratory Data Analysis (EDA)**
+# Exploratory Data Analysis (EDA)
 
 *   **Purpose:**
     *   Summarize main characteristics of datasets.
@@ -54,3 +54,5 @@
         *   **Outliers:** Extreme values that deviate significantly from the rest of the data.
     *   **Skewness:** Measure of asymmetry in the distribution.
     *   **Kurtosis:** Measure of the "peakedness" of the distribution relative to a normal (Gaussian) distribution.
+
+
