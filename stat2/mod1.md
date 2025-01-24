@@ -337,4 +337,160 @@ d<sup>2</sup>/dt<sup>2</sup> M<sub>x</sub>(t)|<sub>t=0</sub> = μ<sub>2</sub>'
 
   </div>
 
+# Binomial Distribution
+
+ A discrete random variable x is defined to have a binomial distribution if the PDF of x is given by:
+
+P(X=x) = <sup>n</sup>C<sub>x</sub> p<sup>x</sup> q<sup>n-x</sup>, x=0,1,2,....n
+otherwise = 0,  p+q=1
+
+Here 'n' and 'p' are called parameters of binomial distribution.
+
+→ If a random variable X follows binomial distribution with the parameters 'n' and 'p', we denote,
+
+X ~ B(n, p)
+or X ~ B(n, p)
+
+## Mean
+
+E(X) = Σ x P(x)
+      <sup>x=0</sup>
+
+= Σ x \* <sup>n</sup>C<sub>x</sub> \* p<sup>x</sup> \* q<sup>n-x</sup>
+  <sup>x=0</sup>
+
+= Σ x \* (n! / (x! \* (n-x)!)) \* p<sup>x</sup> \* q<sup>n-x</sup>
+  <sup>x=0</sup>
+
+= Σ (n! / ((x-1)! \* (n-x)!)) \* p<sup>x</sup> \* q<sup>n-x</sup>
+  <sup>x=0</sup>
+
+
+= Σ (n! / (x-1)!(n-x)!) p<sup>x</sup> q<sup>n-x</sup>
+  <sup>x=1</sup>
+
+= n!/(n-1)! p q<sup>n-1</sup> + n!/(n-2)! p<sup>2</sup> q<sup>n-2</sup> + n!/2!(n-3)! p<sup>3</sup> q<sup>n-3</sup> + ...
+
+= np[q<sup>n-1</sup> + <sup>n-1</sup>C<sub>1</sub> p q<sup>n-2</sup> + <sup>n-1</sup>C<sub>2</sub> p<sup>2</sup> q<sup>n-3</sup> + ... ]
+
+= np[q<sup>n-1</sup> + (n-1)pq<sup>n-2</sup> + (n-1)(n-2)/2 p<sup>2</sup>q<sup>n-3</sup> + ...]
+
+= np[(q+p)<sup>n-1</sup>]
+= np
+
+since q+p = 1
+
+**mean = np**
+
+## Variance
+
+V(X) = E(X<sup>2</sup>) - [E(X)]<sup>2</sup>
+
+E(X<sup>2</sup>) = Σ x<sup>2</sup> . p(x)
+       <sup>x=0</sup>
+
+
+= Σ x(x-1) . p(x) + Σ x . p(x)
+  <sup>x=0</sup>           <sup>x=0</sup>
+
+= Σ x(x-1) . p(x) + np
+  <sup>x=0</sup>
+
+= Σ x(x-1) . p(x) + np
+  <sup>x=0</sup>
+
+= Σ x(x-1) . <sup>n</sup>C<sub>x</sub> p<sup>x</sup> q<sup>n-x</sup> + np
+  <sup>x=0</sup>
+
+= Σ x(x-1) . (n! / (x!(n-x)!)) p<sup>x</sup> q<sup>n-x</sup> + np
+  <sup>x=0</sup>
+
+= Σ (n! / ((x-2)!(n-x)!)) p<sup>x</sup> q<sup>n-x</sup> + np
+   <sup>x=0</sup>
+
+= Σ n(n-1) (n-2)! / ((x-2)!(n-x)!) p<sup>x</sup> q<sup>n-x</sup> + np
+  <sup>x=2</sup>
+
+= Σ n(n-1) p<sup>2</sup> (n-2)! / ((x-2)!(n-x)!) p<sup>x-2</sup> q<sup>n-x</sup> + np
+  <sup>x=2</sup>
+
+= n(n-1)p<sup>2</sup> Σ (n-2)! / ((x-2)!(n-x)!) p<sup>x-2</sup> q<sup>n-x</sup> + np
+            <sup>x=2</sup>
+
+= n(n-1)p<sup>2</sup> [q<sup>n-2</sup> + <sup>n-2</sup>C<sub>1</sub> p q<sup>n-3</sup> + <sup>n-2</sup>C<sub>2</sub> p<sup>2</sup> q<sup>n-4</sup> + ...] + np
+= n(n-1)p<sup>2</sup> [q+p]<sup>n-2</sup> + np
+
+
+n!/(n-2)! p<sup>2</sup> q<sup>n-2</sup> + <sup>n</sup>C<sub>1</sub> p q<sup>n-1</sup>
+
+= n(n-1)p<sup>2</sup> q<sup>n-2</sup> + <sup>n</sup>C<sub>1</sub> p q<sup>n-1</sup>
+= n(n-1)p<sup>2</sup>q<sup>n-2</sup> + np
+
+= n(n-1)(n-2) p<sup>3</sup> q<sup>n-3</sup> + ... + <sup>n</sup>C<sub>n-1</sub> p q<sup>n-1</sup> + np
+  2!
+
+= n(n-1) p<sup>2</sup> [q<sup>n-2</sup> + <sup>n-2</sup>C<sub>1</sub>p q<sup>n-3</sup> + <sup>n-2</sup>C<sub>2</sub> p<sup>2</sup> q<sup>n-4</sup> + ... + <sup>n-2</sup>C<sub>n-2</sub> p<sup>n-2</sup>] + np
+
+= n(n-1)p<sup>2</sup> [q + p]<sup>n-2</sup> + np
+= n(n-1)p<sup>2</sup> + np
+
+= n<sup>2</sup>p<sup>2</sup> - np<sup>2</sup> + np
+
+
+<hr/>
+
+E(x) = np
+
+E(x<sup>2</sup>) = n(n-1)p<sup>2</sup> + np - (np)<sup>2</sup>
+
+V(x) = E(x<sup>2</sup>) - (E(x))<sup>2</sup> = n(n-1)p<sup>2</sup> + np - (np)<sup>2</sup> = np((n-1)p + 1 - np) = np(1-p) = npq
+
+## mgf | Moment Generating Function
+
+Use: 
+
+M<sub>x</sub>(t) = E(e<sup>tx</sup>) = Σ e <sup>tx</sup>p(x)
+
+You get:
+
+M<sub>x</sub>(t) = (q+pe<sup>t</sup>)<sup>n</sup>
+
+## Moments
+
+Moment 1 = np
+Moment 2 =  E(x<sup>2</sup>)
+
+# Poisson Distribution
+
+f(x) = e<sup>-λ</sup>λ<sup>x</sup>/x!
+
+x=0,1,2,3...
+
+otherwise, f(x) = 0
+
+Here λ is the parameter of poisson distribution
+
+## Mean and Variance
+
+Use:
+
+E(x) = Σ xp(x)
+
+Also e<sup>λ</sup> = 1 + λ + λ<sup>2</sup>/2! + λ<sup>3</sup>/3! + ...
+
+You'll get:
+
+Mean = λ = Variance
+
+## Mgf
+
+Use:
+
+M<sub>x</sub>(t) = E(e<sup>tx</sup>)
+
+You'll get
+
+
+M<sub>x</sub>(t) = e<sup>λ(e<sup>t</sup>-1)
+
 
