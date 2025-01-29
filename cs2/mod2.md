@@ -125,3 +125,13 @@ It is a 2D data structure in python with rows and columns
 * Labeled Axes
 * Flexible and Powerful
 
+#### Finding Measures using DataFrame
+
+Since dataframe is still the dictionary, you can find the measures like this:
+
+```python
+meanAge = df["age"].mean()
+medianAge = df["age"].median()
+```
+
+Similarly, we have function for mod, variance etc.
