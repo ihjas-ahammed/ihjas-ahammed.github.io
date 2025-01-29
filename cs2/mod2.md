@@ -135,3 +135,34 @@ medianAge = df["age"].median()
 ```
 
 Similarly, we have function for mod, variance etc.
+
+### Visualizations
+
+For graphical representation we use ```matplotlib``` and ```seaborn```
+
+* ```matplotlib``` is used to show the screen and set the screen size
+* ```seaborn``` is used to plot the type of graph, like histogram or boxplot.
+
+For example, if we already have dataFrame ```df```
+
+```python
+# Import matplotlib and seaborn (assuming we already have pandas as pd)
+
+import matplotlib as plt
+import seaborn as sns
+
+# Create the screen using figure by matplot lib
+
+plt.figure(figuresize=(10,10)) # specify width and height
+
+# Plot Histogram using seaborn
+
+sns.histplot(data=df,x="age",bins=10) # x as category and bins as interval size
+
+# Add a title and show the plot
+
+plt.title("Histogram of Value2")
+plt.show()
+```
+
+Similarly you can create box plot using ```sns.boxplot()``` function
