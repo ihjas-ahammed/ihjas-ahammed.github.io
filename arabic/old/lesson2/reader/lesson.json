@@ -1,0 +1,152 @@
+[
+  {
+    "sentence": "يَحْثُنَا النَّبِيُّ صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ عَلَى الْعِلْمِ وَالْعَمَلِ وَالسَّعْيِ لِلتَّكَسُّبِ",
+    "meaning": "The Prophet, peace and blessings be upon him, urges us to seek knowledge, work, and strive to earn a livelihood",
+    "words": [
+      {
+        "word": "يَحْثُنَا",
+        "meaning": "He urges us"
+      },
+      {
+        "word": "النَّبِيُّ",
+        "meaning": "The Prophet"
+      },
+      {
+        "word": "صَلَّى اللَّهُ عَلَيْهِ وَسَلَّمَ",
+        "meaning": "Peace and blessings be upon him"
+      },
+      {
+        "word": "الْعِلْمِ",
+        "meaning": "Knowledge"
+      },
+      {
+        "word": "الْعَمَلِ",
+        "meaning": "Work"
+      },
+      {
+        "word": "السَّعْيِ",
+        "meaning": "Striving"
+      },
+      {
+        "word": "لِلتَّكَسُّبِ",
+        "meaning": "To earn a livelihood"
+      }
+    ]
+  },
+  {
+    "sentence": "إذَا مَاتَ الإِنْسَانُ انْقَطَعَ عَنْهُ عَمَلُهُ إِلَّا مِن ثَلَاثَةٍ",
+    "meaning": "When a man dies, his deeds come to an end except for three",
+    "words": [
+      {
+        "word": "إذَا",
+        "meaning": "When"
+      },
+      {
+        "word": "مَاتَ",
+        "meaning": "Dies"
+      },
+      {
+        "word": "الإِنْسَانُ",
+        "meaning": "The human, the person"
+      },
+      {
+        "word": "انْقَطَعَ",
+        "meaning": "Comes to an end"
+      },
+      {
+        "word": "عَمَلُهُ",
+        "meaning": "His deeds"
+      },
+      {
+        "word": "إِلَّا",
+        "meaning": "Except"
+      },
+      {
+        "word": "ثَلَاثَةٍ",
+        "meaning": "Three"
+      }
+    ]
+  },
+  {
+    "sentence": "صَدَقَةٍ جَارِيَةٍ، أَوْ عِلْمٍ يُنْتَفَعُ بِهِ، أَوْ وَلَدٍ صَالِحٍ يَدْعُو لَهُ",
+    "meaning": "An ongoing charity, knowledge that is benefited from, or a righteous child who prays for him",
+    "words": [
+      {
+        "word": "صَدَقَةٍ جَارِيَةٍ",
+        "meaning": "Ongoing charity"
+      },
+      {
+        "word": "عِلْمٍ",
+        "meaning": "Knowledge"
+      },
+      {
+        "word": "يُنْتَفَعُ",
+        "meaning": "Is benefited"
+      },
+      {
+        "word": "وَلَدٍ",
+        "meaning": "Child"
+      },
+      {
+        "word": "صَالِحٍ",
+        "meaning": "Righteous"
+      },
+      {
+        "word": "يَدْعُو",
+        "meaning": "Prays"
+      }
+    ]
+  },
+  {
+    "sentence": "مَن نَفَّسَ عَن مُؤْمِنٍ كُرْبَةً مِن كُرَبِ الدُّنْيَا، نَفَّسَ اللَّهُ عَنْهُ كُرْبَةً مِن كُرَبِ يَوْمِ الْقِيَامَةِ",
+    "meaning": "Whoever relieves a believer of a burden from the burdens of this world, Allah will relieve him of a burden from the burdens of the Day of Resurrection",
+    "words": [
+      {
+        "word": "نَفَّسَ",
+        "meaning": "To relieve"
+      },
+      {
+        "word": "مُؤْمِنٍ",
+        "meaning": "Believer"
+      },
+      {
+        "word": "كُرْبَةً",
+        "meaning": "A burden"
+      },
+      {
+        "word": "الدُّنْيَا",
+        "meaning": "The world"
+      },
+      {
+        "word": "يَوْمِ الْقِيَامَةِ",
+        "meaning": "Day of Resurrection"
+      }
+    ]
+  },
+  {
+    "sentence": "مَا أَكَلَ أَحَدٌ طَعَامًا قَطُّ خَيْرًا مِنْ أَنْ يَأْكُلَ مِنْ عَمَلِ يَدِهِ",
+    "meaning": "No one ever eats better food than that which he earns by working with his own hands",
+    "words": [
+      {
+        "word": "أَكَلَ",
+        "meaning": "To eat"
+      },
+      {
+        "word": "طَعَامًا",
+        "meaning": "Food"
+      },
+      {
+        "word": "خَيْرًا",
+        "meaning": "Better"
+      },
+      {
+        "word": "عَمَلِ",
+        "meaning": "Work"
+      },
+      {
+        "word": "يَدِهِ",
+        "meaning": "His hands"
+      }
+    ]
+  }
+]

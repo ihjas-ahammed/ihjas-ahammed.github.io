@@ -1,0 +1,410 @@
+{
+    "1": [
+        {
+            "question": "What is the meaning of 'التَّكَسُّب' (At-Takassub)?",
+            "options": [
+                "Laziness",
+                "Earning a livelihood",
+                "Money",
+                "Trade"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the meaning of 'يَحُثّنا' (Yahuthuna)?",
+            "options": [
+                "Prevents us",
+                "Encourages and motivates us",
+                "Teaches us",
+                "Informs us"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the meaning of 'صَدَقَة جَارِيَة' (Sadaqa Jariya)?",
+            "options": [
+                "Moving money",
+                "Temporary charity",
+                "Continuous charity with ongoing reward",
+                "Annual Zakat (obligatory charity)"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the meaning of 'كُرْبَة' (Kurba)?",
+            "options": [
+                "Gift",
+                "Hardship and distress",
+                "Joy",
+                "Sickness"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the meaning of 'نَفَّسَ' (Naffasa)?",
+            "options": [
+                "Breathed",
+                "Relieved and removed",
+                "Helped",
+                "Spoke"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the meaning of 'مُعْسِر' (Mu'sir)?",
+            "options": [
+                "Rich",
+                "Person in financial difficulty",
+                "Merchant",
+                "Worker"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the meaning of 'يَلْتَمِس' (Yaltamis)?",
+            "options": [
+                "Seeks and searches",
+                "Touches",
+                "Learns",
+                "Studies"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the meaning of 'يَكُفّ' (Yakuff)?",
+            "options": [
+                "Increases",
+                "Protects and preserves",
+                "Prevents",
+                "Gives"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the meaning of 'حُزْمَة' (Huzma)?",
+            "options": [
+                "Tied bundle",
+                "Bag",
+                "Box",
+                "Pile"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the meaning of 'يَسْأَل النَّاس' (Yas'al An-Naas)?",
+            "options": [
+                "Talks with people",
+                "Asks people for money",
+                "Helps people",
+                "Teaches people"
+            ],
+            "correct": 1
+        }
+    ],
+    "2": [
+        {
+            "question": "What deeds continue after a person's death?",
+            "options": [
+                "Prayer and fasting",
+                "Hajj and Umrah (pilgrimage)",
+                "Ongoing charity, beneficial knowledge, righteous child",
+                "Charity and Zakat"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the reward for relieving a believer's distress?",
+            "options": [
+                "Entering Paradise",
+                "Abundant wealth",
+                "Relief from distress on the Day of Judgment",
+                "People's love"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "When is God's help with a person?",
+            "options": [
+                "During prayer",
+                "As long as a person is helping his brother",
+                "During fasting",
+                "In Ramadan"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the best food a person eats?",
+            "options": [
+                "Food of hospitality",
+                "Food from one's own labor",
+                "Food of charity",
+                "Food of celebration"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is better for a person than asking people?",
+            "options": [
+                "Trade",
+                "Agriculture",
+                "Working by selling firewood",
+                "Industry"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What happens to one who makes things easy for someone in difficulty?",
+            "options": [
+                "Enters Paradise",
+                "God makes things easy for him in this world and the hereafter",
+                "People love him",
+                "Becomes rich"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the reward for one who conceals the faults of a Muslim?",
+            "options": [
+                "Fame",
+                "Money",
+                "God will conceal his faults in this world and the hereafter",
+                "People's love"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What makes the path to Paradise easy?",
+            "options": [
+                "Prayer",
+                "Seeking knowledge",
+                "Charity",
+                "Fasting"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Which prophet used to eat from the work of his own hands?",
+            "options": [
+                "Moses (peace be upon him)",
+                "David (peace be upon him)",
+                "Jesus (peace be upon him)",
+                "Abraham (peace be upon him)"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is best for a person?",
+            "options": [
+                "Asking people",
+                "Waiting for help",
+                "Working and earning a lawful living",
+                "Sitting at home"
+            ],
+            "correct": 2
+        }
+    ],
+    "3": [
+        {
+            "question": "What is the relationship between knowledge and work in the mentioned hadiths?",
+            "options": [
+                "There is no relationship between them",
+                "Knowledge hinders work",
+                "Knowledge and work are complementary and Islam encourages both",
+                "Work is more important than knowledge"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What is the wisdom behind mentioning the story of David (peace be upon him) in the hadith?",
+            "options": [
+                "To show his strength",
+                "To encourage working with one's hands, even for prophets",
+                "To mention stories of the prophets",
+                "To show his miracles"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Why is ongoing charity mentioned along with beneficial knowledge in the same hadith?",
+            "options": [
+                "Because they are contradictory",
+                "Because they are both continuous good deeds",
+                "Coincidence",
+                "Because they are easy"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the relationship between seeking knowledge and relieving distress?",
+            "options": [
+                "There is no relationship between them",
+                "Knowledge relieves the distress of this world and the hereafter",
+                "Knowledge increases distress",
+                "Relieving distress is more important than knowledge"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How is concealing the faults of a Muslim related to seeking knowledge in the hadith?",
+            "options": [
+                "There is no connection between them",
+                "Both are good deeds for which God rewards",
+                "Concealing prevents knowledge",
+                "Knowledge prevents concealing"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the link between a person helping his brother and making the path of knowledge easy?",
+            "options": [
+                "There is no link between them",
+                "Both are reasons for God's help and facilitation",
+                "Helping prevents knowledge",
+                "Knowledge prevents helping"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "Why did the hadith prefer working with one's hands over asking people?",
+            "options": [
+                "Because it is easier",
+                "To preserve a person's dignity and self-respect",
+                "Because it is more profitable",
+                "Because it is faster"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the relationship between a righteous child and beneficial knowledge?",
+            "options": [
+                "There is no relationship between them",
+                "Both are continuous deeds after death",
+                "Knowledge is more important than a child",
+                "A child is more important than knowledge"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the wisdom behind specifically mentioning a bundle of firewood in the hadith?",
+            "options": [
+                "Because it was available",
+                "To show that the simplest work is better than begging",
+                "Because it is difficult to carry",
+                "Because it is easy to sell"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the goal of connecting work with knowledge in the hadiths?",
+            "options": [
+                "To show contradiction between them",
+                "To show the integration of aspects in a Muslim's life",
+                "To prefer one of them",
+                "To compare between them"
+            ],
+            "correct": 1
+        }
+    ],
+    "4": [
+        {
+            "question": "How can the concept of 'beneficial knowledge' be applied in our current era?",
+            "options": [
+                "Learning to obtain a certificate only",
+                "Learning what benefits society and sharing it with others",
+                "Memorizing information without application",
+                "Limiting oneself to basic education"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How can we balance seeking knowledge and working in our contemporary lives?",
+            "options": [
+                "Abandoning work to dedicate oneself to knowledge",
+                "Organizing time to combine both in a balanced way",
+                "Abandoning knowledge for work",
+                "Focusing on one of them exclusively"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the contemporary application of the concept of ongoing charity (Sadaqah Jariyah)?",
+            "options": [
+                "Giving daily charity only",
+                "Building schools, hospitals, and continuous charitable projects",
+                "Lending money only",
+                "Donating to the poor only"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How can we relieve the distress of believers in our current era?",
+            "options": [
+                "By praying only",
+                "By providing material and moral assistance and solving problems",
+                "By giving advice only",
+                "By expressing sympathy only"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is meant by a person helping his brother in our contemporary context?",
+            "options": [
+                "Providing material assistance only",
+                "All types of legitimate help and support",
+                "Giving advice only",
+                "Praying only"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How do we apply the principle 'better than asking people' in the age of social media?",
+            "options": [
+                "By not using social media",
+                "By working and earning instead of asking for donations online",
+                "By deleting social media accounts",
+                "By sharing problems with everyone"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the best way to apply the principle of 'concealing the faults of a Muslim' in the internet age?",
+            "options": [
+                "Ignoring the mistakes of others",
+                "Not publishing the mistakes and flaws of others on social media",
+                "Deleting accounts",
+                "Publishing everything"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How can we achieve lawful earning in the digital age?",
+            "options": [
+                "By working traditionally only",
+                "By investing modern technologies in legitimate projects",
+                "By avoiding technology",
+                "By working manually only"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "What is the impact of applying these hadiths on contemporary society?",
+            "options": [
+                "Delaying society",
+                "Achieving solidarity and social progress",
+                "Increasing problems",
+                "No impact"
+            ],
+            "correct": 1
+        },
+        {
+            "question": "How do we raise new generations on these concepts?",
+            "options": [
+                "By rote learning only",
+                "By practical example along with guidance and education",
+                "By compulsion and coercion",
+                "By leaving them without guidance"
+            ],
+            "correct": 1
+        }
+    ]
+}
