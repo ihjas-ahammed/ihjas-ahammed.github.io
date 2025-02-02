@@ -148,12 +148,12 @@ For example, if we already have dataFrame ```df```
 ```python
 # Import matplotlib and seaborn (assuming we already have pandas as pd)
 
-import matplotlib as plt
+import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Create the screen using figure by matplot lib
 
-plt.figure(figuresize=(10,10)) # specify width and height
+plt.figure((10)) # specify width and height
 
 # Plot Histogram using seaborn
 
