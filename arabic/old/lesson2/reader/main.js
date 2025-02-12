@@ -1,8 +1,12 @@
-// State management
+'use strict';
+
 let currentLessonIndex = 0;
 let lessonData = [];
 
-// DOM Elements
+
+const storageKey = `old${window.location.pathname}_lessonProgress`;
+
+const lessonContent = document.querySelector('.lesson-content');
 const arabicText = document.getElementById('arabicText');
 const englishText = document.getElementById('englishText');
 const wordTableBody = document.getElementById('wordTableBody');
@@ -11,98 +15,80 @@ const progressText = document.getElementById('progressText');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
 
-// Fetch lesson data
+// ------------
 async function fetchLessonData() {
     try {
         const response = await fetch('lesson.json');
+        if (!response.ok) {
+            throw new Error(`HTTP error: ${response.status}`);
+        }
         lessonData = await response.json();
-        updateProgressText();
+        loadProgress(); // Load saved progress from local storage (if any)
         displayLesson(currentLessonIndex);
         updateNavigationButtons();
+        updateProgress();
     } catch (error) {
         console.error('Error loading lesson data:', error);
-        document.querySelector('.lesson-content').innerHTML = 
-            '<p class="error">Error loading lesson data. Please try again later.</p>';
+        lessonContent.innerHTML =
+            `<p class="error">Error loading lesson data. Please try again later.</p>`;
     }
 }
 
-// Display current lesson
 function displayLesson(index) {
-    if(index > lessonData.length) currentLessonIndex = 0
-    const lesson = lessonData[index < lessonData.length ? index:0];
+    const lesson = lessonData[index];
     if (!lesson) return;
-
-    // Add fade out effect
-    const content = document.querySelector('.lesson-content');
-    content.classList.add('fade');
-
-    // Update content after brief animation
+    lessonContent.classList.add('fade');
     setTimeout(() => {
-        // Update Arabic and English text
         arabicText.textContent = lesson.sentence;
         englishText.textContent = lesson.meaning;
 
-        // Clear and update word table
-        wordTableBody.innerHTML = '';
-        lesson.words.forEach(word => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td dir="rtl">${word.word}</td>
-                <td>${word.meaning}</td>
-            `;
-            wordTableBody.appendChild(row);
-        });
+        wordTableBody.innerHTML = lesson.words
+            .map(word => `
+                <tr>
+                    <td dir="rtl">${word.word}</td>
+                    <td>${word.meaning}</td>
+                </tr>
+            `)
+            .join('');
 
-        // Update progress
         updateProgress();
-        
-        // Remove fade effect
-        content.classList.remove('fade');
+        lessonContent.classList.remove('fade');
     }, 300);
 }
 
-// Update progress bar and text
 function updateProgress() {
     const progress = ((currentLessonIndex + 1) / lessonData.length) * 100;
     progressBar.style.width = `${progress}%`;
-    updateProgressText();
-}
-
-// Update progress text
-function updateProgressText() {
     progressText.textContent = `${currentLessonIndex + 1}/${lessonData.length}`;
 }
 
-// Navigate to previous lesson
 function previousLesson() {
     if (currentLessonIndex > 0) {
         currentLessonIndex--;
         displayLesson(currentLessonIndex);
         updateNavigationButtons();
+        saveProgress();
     }
 }
 
-// Navigate to next lesson
 function nextLesson() {
     if (currentLessonIndex < lessonData.length - 1) {
         currentLessonIndex++;
         displayLesson(currentLessonIndex);
         updateNavigationButtons();
+        saveProgress();
     }
 }
 
-// Update navigation button states
 function updateNavigationButtons() {
     prevBtn.disabled = currentLessonIndex === 0;
     nextBtn.disabled = currentLessonIndex === lessonData.length - 1;
 }
 
-// Event Listeners
 prevBtn.addEventListener('click', previousLesson);
 nextBtn.addEventListener('click', nextLesson);
 
-// Keyboard navigation
-document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', event => {
     if (event.key === 'ArrowLeft') {
         previousLesson();
     } else if (event.key === 'ArrowRight') {
@@ -110,89 +96,62 @@ document.addEventListener('keydown', (event) => {
     }
 });
 
-// Touch swipe navigation
 let touchStartX = 0;
-let touchEndX = 0;
-
-document.addEventListener('touchstart', (event) => {
+document.addEventListener('touchstart', event => {
     touchStartX = event.changedTouches[0].screenX;
 });
-
-document.addEventListener('touchend', (event) => {
-    touchEndX = event.changedTouches[0].screenX;
-    handleSwipe();
-});
-
-function handleSwipe() {
+document.addEventListener('touchend', event => {
+    const touchEndX = event.changedTouches[0].screenX;
     const swipeThreshold = 50;
     const swipeLength = touchEndX - touchStartX;
 
     if (Math.abs(swipeLength) > swipeThreshold) {
-        if (swipeLength > 0) {
-            previousLesson();
-        } else {
-            nextLesson();
-        }
+        swipeLength > 0 ? previousLesson() : nextLesson();
     }
-}
+});
 
-// Add auto-resize functionality for Arabic text
 function adjustArabicTextSize() {
-    const container = document.querySelector('.lesson-content');
-    const arabicText = document.getElementById('arabicText');
-    
-    if (arabicText.scrollHeight > container.clientHeight * 0.4) {
-        let fontSize = parseInt(window.getComputedStyle(arabicText).fontSize);
-        while (arabicText.scrollHeight > container.clientHeight * 0.4 && fontSize > 16) {
-            fontSize--;
-            arabicText.style.fontSize = `${fontSize}px`;
-        }
+    const containerHeight = lessonContent.clientHeight;
+    let fontSize = parseInt(window.getComputedStyle(arabicText).fontSize, 10);
+    while (arabicText.scrollHeight > containerHeight * 0.4 && fontSize > 16) {
+        fontSize--;
+        arabicText.style.fontSize = `${fontSize}px`;
     }
 }
-
-// Observer for dynamic content changes
 const resizeObserver = new ResizeObserver(entries => {
     for (let entry of entries) {
-        if (entry.target === document.getElementById('arabicText')) {
+        if (entry.target === arabicText) {
             adjustArabicTextSize();
         }
     }
 });
+resizeObserver.observe(arabicText);
 
-resizeObserver.observe(document.getElementById('arabicText'));
+window.addEventListener(
+    'error',
+    event => {
+        if (event.target.tagName === 'IMG') {
+            event.target.style.display = 'none';
+            const errorText = document.createElement('span');
+            errorText.className = 'error-text';
+            errorText.textContent = 'Image failed to load';
+            event.target.parentNode.appendChild(errorText);
+        }
+    },
+    true
+);
 
-// Initialize lesson
-window.addEventListener('load', () => {
-    fetchLessonData();
-});
-
-// Add error handling for failed image/resource loading
-window.addEventListener('error', (event) => {
-    if (event.target.tagName === 'IMG') {
-        event.target.style.display = 'none';
-        const errorText = document.createElement('span');
-        errorText.className = 'error-text';
-        errorText.textContent = 'Image failed to load';
-        event.target.parentNode.appendChild(errorText);
-    }
-}, true);
-
-// Add local storage for lesson progress
 function saveProgress() {
-    localStorage.setItem('lessonProgress', currentLessonIndex);
+    localStorage.setItem(storageKey, currentLessonIndex);
 }
 
 function loadProgress() {
-    const savedProgress = localStorage.getItem('lessonProgress');
+    const savedProgress = localStorage.getItem(storageKey);
     if (savedProgress !== null) {
-        currentLessonIndex = parseInt(savedProgress);
-        displayLesson(currentLessonIndex);
-        updateNavigationButtons();
+        currentLessonIndex = parseInt(savedProgress, 10);
     }
 }
 
-// Save progress when leaving page
-window.addEventListener('beforeunload', saveProgress);
 
-// Load saved progress on initial load
-window.addEventListener('load', loadProgress);
+window.addEventListener('load', fetchLessonData);
+window.addEventListener('beforeunload', saveProgress);

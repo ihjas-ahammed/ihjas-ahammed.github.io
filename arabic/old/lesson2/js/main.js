@@ -1,44 +1,42 @@
+'use strict';
+
 let currentLevel = 1;
 let currentQuestion = 0;
 let score = 0;
 let lives = 3;
-let progress = {};
+let progress = {}; // progress per level, e.g. {1: 50, 2: 100, ...}
 let answeredQuestions = new Set();
-let levels = {};
-let levelsAr = {};
+let levels = {};     // English levels
+let levelsAr = {};   // Arabic levels
 let currentTab = 'english';
-let questionOrder = [];
-let questionOrderAr = [];
+let currentQuestionShuffledData = {};
 
-// Fetch levels data from JSON files
+const storageKey = `old${window.location.pathname}_arabicLiteratureProgress`;
+
 async function fetchLevels() {
     try {
         const [englishResponse, arabicResponse] = await Promise.all([
             fetch('js/levels.json'),
             fetch('js/levels-ar.json')
         ]);
-        
         levels = await englishResponse.json();
         levelsAr = await arabicResponse.json();
-        
-        // Shuffle both English and Arabic questions on initial load
+
         Object.keys(levels).forEach(level => {
             shuffleArray(levels[level]);
         });
-        
         Object.keys(levelsAr).forEach(level => {
             shuffleArray(levelsAr[level]);
         });
-        
-        initializeLevelSelect();
-        initializeLevelSelectAr();
+
+        initializeLevelSelectForLang('english');
+        initializeLevelSelectForLang('arabic');
         updateBackButton();
     } catch (error) {
         console.error('Error loading levels:', error);
     }
 }
 
-// Fisher-Yates shuffle algorithm
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -47,53 +45,35 @@ function shuffleArray(array) {
     return array;
 }
 
-// Back button functionality
 function updateBackButton() {
     const backButton = document.getElementById('backButton');
     const isHome = (currentTab === 'english' && document.querySelector('.level-select').style.display !== 'none') ||
-                  (currentTab === 'arabic' && document.querySelector('.level-select-ar').style.display !== 'none') ||
-                  currentTab === 'reader';
-    
+                   (currentTab === 'arabic' && document.querySelector('.level-select-ar').style.display !== 'none') ||
+                   currentTab === 'reader';
     backButton.disabled = isHome;
     backButton.style.opacity = isHome ? '0.5' : '1';
-    
-    backButton.onclick = isHome ? null : () => {
-        returnToMainMenu();
-    };
+    backButton.onclick = isHome ? null : returnToMainMenu;
 }
 
-// Tab switching functionality
 function switchTab(tabName) {
     currentTab = tabName;
-    
-    document.querySelectorAll('.nav-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    
+    document.querySelectorAll('.nav-item').forEach(item => item.classList.remove('active'));
     document.querySelector(`.nav-item[onclick="switchTab('${tabName}')"]`).classList.add('active');
-    
-    document.querySelectorAll('.tab-content').forEach(tab => {
-        tab.classList.remove('active');
-    });
-    
+
+    document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
     document.getElementById(`${tabName}-tab`).classList.add('active');
     updateBackButton();
 }
 
-// Load progress from localStorage
 function loadProgress() {
-    const savedProgress = localStorage.getItem('arabicLiteratureProgress');
-    if (savedProgress) {
-        return JSON.parse(savedProgress);
-    }
-    return {
+    const savedProgress = localStorage.getItem(storageKey);
+    return savedProgress ? JSON.parse(savedProgress) : {
         levelProgress: {},
         levelProgressAr: {},
         totalScore: 0
     };
 }
 
-// Save progress to localStorage
 function saveProgress() {
     const progressData = {
         levelProgress: {},
@@ -107,7 +87,6 @@ function saveProgress() {
             progress: progress[level] || 0
         };
     });
-
     Object.keys(levelsAr).forEach(level => {
         progressData.levelProgressAr[level] = {
             completed: answeredQuestions.size === levelsAr[level]?.length,
@@ -115,65 +94,35 @@ function saveProgress() {
         };
     });
 
-    localStorage.setItem('arabicLiteratureProgress', JSON.stringify(progressData));
+    localStorage.setItem(storageKey, JSON.stringify(progressData));
 }
 
-function initializeLevelSelect() {
-    const levelSelect = document.querySelector('.level-select');
+function initializeLevelSelectForLang(lang) {
+    const container = document.querySelector(lang === 'english' ? '.level-select' : '.level-select-ar');
     const savedProgress = loadProgress();
+    const levelsData = lang === 'english' ? levels : levelsAr;
+    const getDesc = lang === 'english' ? getLevelDescription : getLevelDescriptionAr;
+    const onclickFn = lang === 'english' ? 'startLevel' : 'startLevelAr';
 
-    try{
-        levelSelect.innerHTML = Object.keys(levels).map(level => `
-            <div class="level-card" onclick="startLevel(${level})">
+    try {
+        container.innerHTML = Object.keys(levelsData).map(level => `
+            <div class="level-card" onclick="${onclickFn}(${level})">
                 <div class="level-icon">📚</div>
-                <h3>Level ${level}</h3>
-                <p>${getLevelDescription(level)}</p>
-                <div class="level-progress" style="width: ${savedProgress.levelProgress[level]?.progress || 0}%"></div>
+                <h3>${lang === 'english' ? `Level ${level}` : `المستوى ${level}`}</h3>
+                <p>${getDesc(level)}</p>
+                <div class="level-progress" style="width: ${savedProgress[lang === 'english' ? 'levelProgress' : 'levelProgressAr'][level]?.progress || 0}%"></div>
             </div>
         `).join('');
-    }catch(e){
-        levelSelect.innerHTML = Object.keys(levels).map(level => `
-            <div class="level-card" onclick="startLevel(${level})">
+    } catch (e) {
+        container.innerHTML = Object.keys(levelsData).map(level => `
+            <div class="level-card" onclick="${onclickFn}(${level})">
                 <div class="level-icon">📚</div>
-                <h3>Level ${level}</h3>
-                <p>${getLevelDescription(level)}</p>
+                <h3>${lang === 'english' ? `Level ${level}` : `المستوى ${level}`}</h3>
+                <p>${getDesc(level)}</p>
                 <div class="level-progress" style="width: 0%"></div>
             </div>
         `).join('');
     }
-}
-
-function initializeLevelSelectAr() {
-    const levelSelect = document.querySelector('.level-select-ar');
-    const savedProgress = loadProgress();
-
-    try{
-        levelSelect.innerHTML = Object.keys(levelsAr).map(level => `
-            <div class="level-card" onclick="startLevelAr(${level})">
-                <div class="level-icon">📚</div>
-                <h3>المستوى ${level}</h3>
-                <p>${getLevelDescriptionAr(level)}</p>
-                <div class="level-progress" style="width: ${savedProgress.levelProgressAr[level]?.progress || 0}%"></div>
-            </div>
-        `).join('');
-    }catch(e){
-        levelSelect.innerHTML = Object.keys(levelsAr).map(level => `
-            <div class="level-card" onclick="startLevelAr(${level})">
-                <div class="level-icon">📚</div>
-                <h3>المستوى ${level}</h3>
-                <p>${getLevelDescriptionAr(level)}</p>
-                <div class="level-progress" style="width: 0%"></div>
-            </div>
-        `).join('');
-    }
-}
-
-// Question randomization
-function shuffleQuestions() {
-    const currentQuestions = currentTab === 'english' ? levels[currentLevel] : levelsAr[currentLevel];
-    shuffleArray(currentQuestions);
-    currentQuestion = 0;
-    showCurrentQuestion();
 }
 
 function getLevelDescription(level) {
@@ -196,56 +145,64 @@ function getLevelDescriptionAr(level) {
     return descriptions[level] || `المستوى ${level}`;
 }
 
-// Restart level function
-function restartLevel() {
-    const level = currentLevel;
-    if (currentTab === 'english') {
-        startLevel(level);
+function shuffleQuestions() {
+    const currentQuestions = currentTab === 'english' ? levels[currentLevel] : levelsAr[currentLevel];
+    shuffleArray(currentQuestions); // Randomize order
+    currentQuestion = 0;
+    showCurrentQuestion();
+}
+
+function startLevelForLang(level, lang) {
+    currentLevel = level;
+    currentQuestion = 0;
+    answeredQuestions.clear();
+    lives = 3;
+    progress[level] = 0;
+    currentQuestionShuffledData = {};
+
+    if (lang === 'english') {
+        document.querySelector('.level-select').style.display = 'none';
+        document.getElementById('question-container').style.display = 'block';
     } else {
-        startLevelAr(level);
+        document.querySelector('.level-select-ar').style.display = 'none';
+        document.getElementById('question-container-ar').style.display = 'block';
     }
+    shuffleQuestions();
+    updateUI();
+    updateBackButton();
 }
 
-// Level management functions
 function startLevel(level) {
-    currentLevel = level;
-    currentQuestion = 0;
-    answeredQuestions.clear();
-    lives = 3;
-    progress[level] = 0;
-    document.querySelector('.level-select').style.display = 'none';
-    document.getElementById('question-container').style.display = 'block';
-    shuffleQuestions();
-    updateUI();
-    updateBackButton();
+    startLevelForLang(level, 'english');
+}
+function startLevelAr(level) {
+    startLevelForLang(level, 'arabic');
 }
 
-function startLevelAr(level) {
-    currentLevel = level;
-    currentQuestion = 0;
-    answeredQuestions.clear();
-    lives = 3;
-    progress[level] = 0;
-    document.querySelector('.level-select-ar').style.display = 'none';
-    document.getElementById('question-container-ar').style.display = 'block';
-    shuffleQuestions();
-    updateUI();
-    updateBackButton();
+function restartLevel() {
+    currentTab === 'english' ? startLevel(currentLevel) : startLevelAr(currentLevel);
 }
 
 function updateUI() {
     document.querySelector('.score').textContent = score;
-    document.querySelector('.progress-fill').style.width = `${progress[currentLevel] || 0}%`;
-    document.querySelector('.progress-fill').setAttribute('data-level', currentLevel);
+    const progressFill = document.querySelector('.progress-fill');
+    progressFill.style.width = `${progress[currentLevel] || 0}%`;
+    progressFill.setAttribute('data-level', currentLevel);
     updateLives();
     updateNavButtons();
+}
+
+function updateLives() {
+    const heartsContainer = document.querySelector('.lives');
+    heartsContainer.innerHTML = '❤️'.repeat(lives);
 }
 
 function showCurrentQuestion() {
     const currentQuestions = currentTab === 'english' ? levels[currentLevel] : levelsAr[currentLevel];
     const question = currentQuestions[currentQuestion];
-    
-    const container = document.querySelector(`#question-container${currentTab === 'english' ? '' : '-ar'}`);
+    const container = document.querySelector(
+        currentTab === 'english' ? '#question-container' : '#question-container-ar'
+    );
     const questionElement = container.querySelector('.question');
     const optionsContainer = container.querySelector('.options');
 
@@ -259,15 +216,22 @@ function showCurrentQuestion() {
             question.question;
     }
 
-    optionsContainer.innerHTML = question.options
+    if (!currentQuestionShuffledData[currentQuestion]) {
+        const originalOptions = question.options;
+        const shuffledOptions = shuffleArray([...originalOptions]);
+        const originalCorrectOption = originalOptions[question.correct];
+        const newCorrectIndex = shuffledOptions.indexOf(originalCorrectOption);
+        currentQuestionShuffledData[currentQuestion] = { options: shuffledOptions, correct: newCorrectIndex };
+    }
+    const shuffledData = currentQuestionShuffledData[currentQuestion];
+
+    optionsContainer.innerHTML = shuffledData.options
         .map((option, index) => `
-            <div class="option ${answeredQuestions.has(currentQuestion) ?
-                (index === question.correct ? 'correct' : '') : ''}" 
-                onclick="checkAnswer(${index})">
+            <div class="option ${answeredQuestions.has(currentQuestion) && index === shuffledData.correct ? 'correct' : ''}" 
+                 onclick="checkAnswer(${index})">
                 ${option}
             </div>
         `).join('');
-
     updateNavButtons();
 }
 
@@ -301,19 +265,29 @@ function checkAnswer(selectedIndex) {
 
     const currentQuestions = currentTab === 'english' ? levels[currentLevel] : levelsAr[currentLevel];
     const question = currentQuestions[currentQuestion];
-    const container = currentTab === 'english' ? 
-        document.getElementById('question-container') : 
+    const container = currentTab === 'english' ?
+        document.getElementById('question-container') :
         document.getElementById('question-container-ar');
     const options = container.querySelectorAll('.option');
 
-    if (selectedIndex === question.correct) {
+    let shuffledData = currentQuestionShuffledData[currentQuestion];
+    if (!shuffledData) {
+        const originalOptions = question.options;
+        const shuffledOptions = shuffleArray([...originalOptions]);
+        const originalCorrectOption = originalOptions[question.correct];
+        const newCorrectIndex = shuffledOptions.indexOf(originalCorrectOption);
+        shuffledData = { options: shuffledOptions, correct: newCorrectIndex };
+        currentQuestionShuffledData[currentQuestion] = shuffledData;
+    }
+
+    if (selectedIndex === shuffledData.correct) {
         options[selectedIndex].classList.add('correct');
         score += 10;
         answeredQuestions.add(currentQuestion);
         progress[currentLevel] = (answeredQuestions.size / currentQuestions.length) * 100;
     } else {
         options[selectedIndex].classList.add('wrong');
-        options[question.correct].classList.add('correct');
+        options[shuffledData.correct].classList.add('correct');
         lives--;
         if (lives === 0) {
             gameOver();
@@ -325,16 +299,10 @@ function checkAnswer(selectedIndex) {
     saveProgress();
 }
 
-function updateLives() {
-    const heartsContainer = document.querySelector('.lives');
-    heartsContainer.innerHTML = '❤️'.repeat(lives);
-}
-
 function gameOver() {
-    const container = currentTab === 'english' ? 
-        document.getElementById('question-container') : 
+    const container = currentTab === 'english' ?
+        document.getElementById('question-container') :
         document.getElementById('question-container-ar');
-    
     container.innerHTML = `
         <div class="game-over">
             <h2>${currentTab === 'english' ? 'Game Over!' : 'انتهت اللعبة!'}</h2>
@@ -349,48 +317,41 @@ function gameOver() {
     updateBackButton();
 }
 
-
 function returnToMainMenu() {
     if (currentTab === 'english') {
         document.querySelector('.level-select').style.display = 'grid';
         document.getElementById('question-container').style.display = 'none';
-        initializeLevelSelect();
+        initializeLevelSelectForLang('english');
     } else {
         document.querySelector('.level-select-ar').style.display = 'grid';
         document.getElementById('question-container-ar').style.display = 'none';
-        initializeLevelSelectAr();
+        initializeLevelSelectForLang('arabic');
     }
     updateBackButton();
 }
 
-function fixReaderHeight(){
-    let readerTab = document.getElementById("reader-tab")
-    let mainContent = document.querySelector(".main-content")
-
-    readerTab.style.height = "100%"
-    setTimeout(()=>readerTab.style.height = (mainContent.clientHeight-30)+"px",100)
+function fixReaderHeight() {
+    const readerTab = document.getElementById("reader-tab");
+    const mainContent = document.querySelector(".main-content");
+    if (readerTab && mainContent) {
+        readerTab.style.height = "100%";
+        setTimeout(() => readerTab.style.height = (mainContent.clientHeight - 30) + "px", 100);
+    }
 }
 
-window.addEventListener("resize", function(event) {
-    fixReaderHeight()
-});
+window.addEventListener("resize", fixReaderHeight);
 
-
-
-// Event listeners
 document.addEventListener('DOMContentLoaded', () => {
     fetchLevels();
     switchTab('english');
 
-    // Navigation button event listeners
     document.getElementById('prevBtn').addEventListener('click', previousQuestion);
     document.getElementById('nextBtn').addEventListener('click', nextQuestion);
     document.getElementById('prevBtn-ar').addEventListener('click', previousQuestion);
     document.getElementById('nextBtn-ar').addEventListener('click', nextQuestion);
-    
-    // Shuffle button event listeners
+
     document.getElementById('shuffleBtn').addEventListener('click', shuffleQuestions);
     document.getElementById('shuffleBtn-ar').addEventListener('click', shuffleQuestions);
-});
 
-fixReaderHeight()
+    fixReaderHeight();
+});
