@@ -1,0 +1,102 @@
+[
+  {
+    "sentence": "تلك الطبيعة قف بنا يا ساري",
+    "meaning": "That is nature, stop with us, O traveler!",
+    "words": [
+      {
+        "word": "الطبيعة",
+        "meaning": "Nature"
+      },
+      {
+        "word": "ساري",
+        "meaning": "Traveler"
+      }
+    ]
+  },
+  {
+    "sentence": "حتى أريك بديع صنع الباري",
+    "meaning": "So that I may show you the wonder of the Creator's work",
+    "words": [
+      {
+        "word": "بديع",
+        "meaning": "Wonder/amazing"
+      },
+      {
+        "word": "صنع",
+        "meaning": "Work/creation"
+      },
+      {
+        "word": "الباري",
+        "meaning": "The Creator"
+      }
+    ]
+  },
+  {
+    "sentence": "الأرض حولك والسماء اهتزتا",
+    "meaning": "The earth around you and the sky have trembled",
+    "words": [
+      {
+        "word": "الأرض",
+        "meaning": "Earth"
+      },
+      {
+        "word": "السماء",
+        "meaning": "Sky"
+      },
+      {
+        "word": "اهتزتا",
+        "meaning": "Trembled"
+      }
+    ]
+  },
+  {
+    "sentence": "لروائع الآيات والآثار",
+    "meaning": "At the splendor of the signs and monuments",
+    "words": [
+      {
+        "word": "روائع",
+        "meaning": "Splendors"
+      },
+      {
+        "word": "الآيات",
+        "meaning": "Signs"
+      },
+      {
+        "word": "الآثار",
+        "meaning": "Monuments"
+      }
+    ]
+  },
+  {
+    "sentence": "من كل ناطقة الجلال كأنها",
+    "meaning": "From every eloquent speaker of majesty, it is as if",
+    "words": [
+      {
+        "word": "ناطقة",
+        "meaning": "Speaker"
+      },
+      {
+        "word": "الجلال",
+        "meaning": "Majesty"
+      }
+    ]
+  },
+  {
+    "sentence": "وضَحُوكِ سِنِّ تَمْلَأُ الدُّنْيَا سَنِّى",
+    "meaning": "And a smiling one with teeth that fill the world with brightness",
+    "words": [
+      {
+        "word": "ضَحُوك",
+        "meaning": "Smiling"
+      },
+      {
+        "word": "تَمْلَأُ",
+        "meaning": "Fill"
+      },
+      {
+        "word": "الدُّنْيَا",
+        "meaning": "World"
+      }
+    ]
+  }
+]
