@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data</title>
+    
+    <!-- GitHub Markdown CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    
+    <!-- Highlight.js for Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+
+    <!-- Showdown.js for Markdown Parsing -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+
+    <!-- MathJax for Math Rendering -->
+    <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #27292a;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+        .markdown-body {
+            width: 100%;
+            padding: 30px;
+            background: balck;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        pre {
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <article id="content" class="markdown-body"></article>
+
+    <script>
+        fetch("mod1.md")  // Replace with your .md file
+            .then(response => response.text())
+            .then(md => {
+                let converter = new showdown.Converter({
+                    tables: true,
+                    ghCodeBlocks: true,
+                    tasklists: true,
+                    simplifiedAutoLink: true,
+                    emoji: true,
+                    extensions: [mathjaxExtension]
+                });
+
+                document.getElementById("content").innerHTML = converter.makeHtml(md);
+                
+                // Apply syntax highlighting
+                document.querySelectorAll("pre code").forEach((block) => {
+                    hljs.highlightElement(block);
+                });
+
+                // Render MathJax
+                MathJax.typesetPromise();
+            });
+
+        // MathJax extension for Showdown.js
+        function mathjaxExtension() {
+            return [
+                { type: 'lang', regex: /\$\$(.+?)\$\$/g, replace: '<span class="math">\\($1\\)</span>' },
+                { type: 'lang', regex: /\$(.+?)\$/g, replace: '<span class="math">\\($1\\)</span>' }
+            ];
+        }
+    </script>
+
+</body>
+</html>

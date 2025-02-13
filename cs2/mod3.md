@@ -54,53 +54,51 @@ Like days, a weight range from 0 to 120 lbs, and height range 0 to 6 ft complete
 
 #### Standard Scaling / Z-Score:
 
-
-x_i' = (x_i - μ)/σ 
-
+$$ x_i' = \frac{x_i - μ}σ  $$
 
 Where:
-- x_i' is the standardized value,
-- x_i is the original value,
-- μ is the mean,
-- σ is the standard deviation.
+- $x_i'$ is the standardized value,
+- $x_i$ is the original value,
+- $μ$ is the mean,
+- $σ$ is the standard deviation.
 
 
 #### Min-Max Scaling:
 
 
-x_i' = (x_i -x_min)/(x_max - x_min)
+$$ x_i' = \frac{x_i -x_{min}}{x_{max} - x_{min}} $$
 
 
 Where:
-- x_i' is the scaled value,
-- x_i is the original value,
-- x_min is the minimum value of the dataset,
-- x_max is the maximum value of the dataset.
+- $x_i'$ is the scaled value,
+- $x_i$ is the original value,
+- $x_{min}$ is the minimum value of the dataset,
+- $x_{max}$ is the maximum value of the dataset.
 
 #### Robust Scaling:
 
 
- x_i' = (x_i-Q_1)/(Q_3-Q_1)
+ $$ x_i' = \frac{x_i-Q_1}{Q_3-Q_1} $$
 
 
 Where:
 
 
-- x_i' is the scaled value,
-- x_i is the original value,
-- Q for quartiles
+- $x_i'$ is the scaled value,
+- $x_i$ is the original value,
+- $Q$ for quartiles
 
 
 #### Normalizer:
 
 
-x_i' = x_i/x
+$$ x_i' = \frac{x_i}x $$
 
 
 Where:
-- x_i' is the normalized value,
-- x_i is the original value,
-- x is norm which is square root of sum of squares of all values
+- $x_i'$ is the normalized value,
+- $x_i$ is the original value,
+- $x$ is norm which is square root of sum of squares of all values
 
 
 ## Data Cleaning using python

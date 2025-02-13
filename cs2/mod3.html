@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Markdown with KaTeX</title>
+  <!-- GitHub Markdown CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+  <!-- KaTeX CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.3/katex.min.css">
+  <!-- Showdown -->
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <!-- KaTeX JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.15.3/katex.min.js"></script>
+  <!-- Highlight.js for Code Syntax Highlighting -->
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
+  <style>
+    body { background: #282d32; padding: 20px; display: flex; justify-content: center; }
+    .markdown-body { max-width: 100%; padding: 30px; background: rgb(0, 0, 0); border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <article id="content" class="markdown-body"></article>
+ 
+  <script>
+    // Custom Showdown extension for KaTeX rendering
+    function katexExtension() {
+      return [
+        {
+          type: 'lang',
+          regex: /\$\$([\s\S]+?)\$\$/g,
+          replace: function(match, tex) {
+            try {
+              return katex.renderToString(tex, { displayMode: true });
+            } catch (e) { return match; }
+          }
+        },
+        {
+          type: 'lang',
+          regex: /\$([^$]+?)\$/g,
+          replace: function(match, tex) {
+            try {
+              return katex.renderToString(tex, { displayMode: false });
+            } catch (e) { return match; }
+          }
+        }
+      ];
+    }
+    // Fetch and render Markdown with KaTeX math rendering
+    fetch("mod3.md") // Replace with your Markdown file path
+      .then(response => response.text())
+      .then(md => {
+        let converter = new showdown.Converter({
+          tables: true,
+          ghCodeBlocks: true,
+          tasklists: true,
+          literalMidWordUnderscores: true,
+          extensions: [katexExtension]
+        });
+        document.getElementById("content").innerHTML = converter.makeHtml(md);
+        document.querySelectorAll("pre code").forEach(block => hljs.highlightElement(block));
+      });
+  </script>
+</body>
+</html>
