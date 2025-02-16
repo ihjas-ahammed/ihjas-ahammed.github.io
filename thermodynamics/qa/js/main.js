@@ -128,9 +128,10 @@ function initializeLevelSelectForLang(lang) {
 function getLevelDescription(level) {
     const descriptions = {
         1: "Page 0-10",
-        2: "Word Meaning",
-        3: "Inference and Deeper Understanding",
-        4: "Advanced Vocabulary and Literary Analysis"
+        2: "Page 10-20",
+        3: "Page 20-30",
+        4: "Page 30-40",
+        5: "Page 40-50"
     };
     return descriptions[level] || `Level ${level}`;
 }

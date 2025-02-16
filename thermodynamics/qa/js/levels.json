@@ -1059,5 +1059,1067 @@
       ],
       "correct": 1
     }
+  ],
+  "2": [
+    {
+      "question": "What is the difference between positive and negative work in thermodynamics?",
+      "options": [
+        "Positive work is expansion, negative work is compression.",
+        "Positive work is compression, negative work is expansion.",
+        "Positive work is heating, negative work is cooling.",
+        "Positive work is cooling, negative work is heating."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a cyclic process?",
+      "options": [
+        "A process in which the system returns to its initial state.",
+        "A process in which the system remains in a constant state.",
+        "A process in which the system expands indefinitely.",
+        "A process in which the system compresses indefinitely."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How is work calculated in a cyclic process?",
+      "options": [
+        "W = ∮dW = ∮PdV",
+        "W = ∫PdV",
+        "W = PΔV",
+        "W = nRT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the difference between a state function and a path function?",
+      "options": [
+        "State functions depend only on initial and final states, path functions depend on the path taken.",
+        "State functions depend on the path taken, path functions depend only on initial and final states.",
+        "State functions are exact differentials, path functions are inexact differentials.",
+        "State functions are inexact differentials, path functions are exact differentials."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is a state function?",
+      "options": [
+        "Temperature",
+        "Work",
+        "Heat",
+        "Distance"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How do you calculate the work done in an isothermal process for an ideal gas?",
+      "options": [
+        "W = ∫(V1 to V2) PdV",
+        "W = PΔV",
+        "W = nRTln(V2/V1)",
+        "W = nRT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the equation of state for an ideal gas?",
+      "options": [
+        "PV = nRT",
+        "PV = constant",
+        "P = nRT/V",
+        "All of the above"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does '∮' symbol represent in the context of work done in a cyclic process?",
+      "options": [
+        "Integration over a closed path",
+        "Integration over an open path",
+        "Differentiation",
+        "Summation"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does Wi-f represent?",
+      "options": [
+        "Work done in going from initial state i to final state f",
+        "Work done in going from final state f to initial state i",
+        "Change in internal energy",
+        "Heat supplied"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the network done in a cyclic process equal to?",
+      "options": [
+        "Area enclosed by the P-V curve",
+        "Area under the P-V curve",
+        "Zero",
+        "Change in internal energy"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for work done in an isothermal process?",
+      "options": [
+        "W = nRT ln(V2/V1)",
+        "W = PΔV",
+        "W = nRT",
+        "W = ∮PdV"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the equation of state used in the derivation for work done in an isothermal process?",
+      "options": [
+        "PV = nRT",
+        "PV^γ = constant",
+        "P = nRT/V",
+        "V = nRT/P"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the integral of 1/V with respect to V?",
+      "options": [
+        "ln(V)",
+        "V",
+        "1/V^2",
+        "-1/V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What type of process is considered when deriving the formula W = nRT ln(V2/V1)?",
+      "options": [
+        "Isothermal (Temperature constant)",
+        "Adiabatic (entropy constant)",
+        "Isobaric (Pressure constant)",
+        "Isochoric (Volume constant)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the isothermal work derivation, what does the term 'n' represent?",
+      "options": [
+        "Number of moles",
+        "Pressure",
+        "Volume",
+        "Temperature"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the isothermal work derivation, what does the term 'R' represent?",
+      "options": [
+        "Ideal Gas Constant",
+        "Pressure",
+        "Volume",
+        "Temperature"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the isothermal work derivation, what does the term 'T' represent?",
+      "options": [
+        "Temperature",
+        "Pressure",
+        "Volume",
+        "Number of moles"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the isothermal work derivation, what do the terms 'V1' and 'V2' represent?",
+      "options": [
+        "Initial and Final Volumes",
+        "Initial and Final Pressures",
+        "Initial and Final Temperatures",
+        "Initial and Final Moles"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula being derived in the context of the notes?",
+      "options": [
+        "Work done in an Isothermal process",
+        "Work done in an Adiabatic process",
+        "Heat transfer in an Isothermal process",
+        "Heat transfer in an Adiabatic process"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the next step to consider according to the notes?",
+      "options": [
+        "Work done in an Adiabatic process",
+        "Work done in an Isobaric process",
+        "Work done in an Isochoric process",
+        "Derivation of the ideal gas law"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for work done during an isothermal expansion of a solid?",
+      "options": [
+        "W = (1/(-r+1)) * [P22V - PiVi]",
+        "W = (1/(r-1)) * [P1V1 - P2V2]",
+        "W = ∫(from V1 to V2) PdV",
+        "W = nRT ln(V2/V1)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for work done for an ideal gas in general?",
+      "options": [
+        "W = (1/(-r+1)) * [P22V - PiVi]",
+        "W = (1/(r-1)) * [P1V1 - P2V2]",
+        "W = ∫(from V1 to V2) PdV",
+        "W = nRT ln(V2/V1)"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the relationship between V, T, and P?",
+      "options": [
+        "V = V(T, P)",
+        "P = P(V, T)",
+        "T = T(P, V)",
+        "PV = nRT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for dV (change in volume)?",
+      "options": [
+        "dV = (∂V/∂T)_P dT + (∂V/∂P)_T dP",
+        "dV = (∂V/∂T)_V dT + (∂V/∂P)_T dP",
+        "dV = (∂V/∂T)_P dT + (∂V/∂P)_V dP",
+        "dV = (∂P/∂T)_V dT + (∂V/∂P)_T dP"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for work done during an adiabatic process?",
+      "options": [
+        "W = (nR/(r-1)) * (T1 - T2)",
+        "W = (1/(r-1)) * [P1V1 - P2V2]",
+        "W = ∫(from V1 to V2) PdV",
+        "W = nRT ln(V2/V1)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does 'r' represent?",
+      "options": [
+        "OZ",
+        "A constant",
+        "Temperature",
+        "Pressure"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the work done in an isochoric process?",
+      "options": [
+        "W = 0",
+        "W = nRT ln(V2/V1)",
+        "W = (nR/(r-1)) * (T1 - T2)",
+        "W = PV"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for work done in an isobaric process for an ideal gas?",
+      "options": [
+        "W = P ∫(from V1 to V2) dV",
+        "W = nRT ln(V2/V1)",
+        "W = (nR/(r-1)) * (T1 - T2)",
+        "W = 0"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of (∂V/∂P)_T?",
+      "options": [
+        "-kV",
+        "kV",
+        "0",
+        "V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for work done considering (∂V/∂P)_T?",
+      "options": [
+        "W = -k ∫(from V1 to V2) P dP",
+        "W = -kV ∫(from V1 to V2) P dP",
+        "W = ∫(from V1 to V2) PdV",
+        "W = nRT ln(V2/V1)"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the formula for work done in an isothermal process considering (∂V/∂P)_T?",
+      "options": [
+        "W = -k ∫(from V1 to V2) P dP",
+        "W = -kV/2 (P2^2 - P1^2)",
+        "W = -kV ∫(from V1 to V2) P dP",
+        "W = ∫(from V1 to V2) PdV"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "When is there no need for mechanical work?",
+      "options": [
+        "When there is heat transfer",
+        "When the system is adiabatic",
+        "When the process is isothermal",
+        "When the process is isobaric"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is heat defined as?",
+      "options": [
+        "Energy transferred by virtue of temperature difference",
+        "Energy transferred by virtue of pressure difference",
+        "The total internal energy of a system",
+        "The work done by a system"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is an adiabatic system defined as?",
+      "options": [
+        "A system with no heat transfer",
+        "A system with constant temperature",
+        "A system with no work done",
+        "A system with constant pressure"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In an adiabatic system, what is the relationship between work done (W) and temperature change (T1 - T2)?",
+      "options": [
+        "W ∝ (T1 - T2)",
+        "W = (T1 - T2)",
+        "W ∝ 1/(T1 - T2)",
+        "W = (T1 + T2)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why is work a path function but adiabatic work a state function?",
+      "options": [
+        "Because in an adiabatic system, T is a state function",
+        "Because work is always a path function",
+        "Because heat is a state function",
+        "Because pressure is constant"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is internal energy (U)?",
+      "options": [
+        "A state function",
+        "A path function",
+        "Equal to heat transfer",
+        "Equal to work done"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What are the two types of internal energy?",
+      "options": [
+        "Internal KE and Internal PE",
+        "Kinetic Energy and Potential Energy",
+        "Heat and Work",
+        "Temperature and Pressure"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is Internal KE due to?",
+      "options": [
+        "Thermal fluctuations or temperature",
+        "Intermolecular interactions",
+        "Pressure changes",
+        "Volume changes"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for Internal KE (E)?",
+      "options": [
+        "E = (3/2)KT",
+        "E = (1/2)KT",
+        "E = KT",
+        "E = (5/2)KT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is Internal PE due to?",
+      "options": [
+        "Intermolecular interaction",
+        "Thermal fluctuations",
+        "Temperature changes",
+        "Pressure changes"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the First Law of Thermodynamics described as?",
+      "options": [
+        "The law of conservation of energy",
+        "The law of conservation of mass",
+        "The law of conservation of momentum",
+        "The law of conservation of entropy"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the First Law of Thermodynamics in simple terms?",
+      "options": [
+        "Heat given to a system is utilized for change in the internal energy and doing external work",
+        "Heat can neither be created nor destroyed",
+        "Energy can be transferred from one state to another",
+        "Internal energy of a system always increases"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For a closed system, if the state is changed by adiabatic means only, what does the work done depend on?",
+      "options": [
+        "Initial and final states only",
+        "The path taken",
+        "Temperature change",
+        "Pressure change"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the mathematical form of the First Law of Thermodynamics for a closed system?",
+      "options": [
+        "Q = (U2 - U1) + W",
+        "Q = U + W",
+        "ΔU = Q + W",
+        "W = Q - ΔU"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "If the heat given to the system is infinitesimal, what is the differential form of the First Law of Thermodynamics?",
+      "options": [
+        "dQ = dU + dW or dQ = dU + PdV",
+        "dQ = dU - dW",
+        "dU = dQ + dW",
+        "dW = dQ + dU"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is internal energy (U) a function of?",
+      "options": [
+        "Temperature, pressure, and volume",
+        "Heat and work",
+        "Entropy and enthalpy",
+        "Kinetic and potential energy"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for dU in terms of U(T,V)?",
+      "options": [
+        "dU = (∂U/∂T)_V dT + (∂U/∂V)_T dV",
+        "dU = (∂U/∂T)_P dT + (∂U/∂P)_T dP",
+        "dU = (∂T/∂U)_V dT + (∂V/∂U)_T dV",
+        "dU = (∂T/∂U)_P dT + (∂P/∂U)_T dP"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for dU in terms of U(T,P)?",
+      "options": [
+        "dU = (∂U/∂T)_P dT + (∂U/∂P)_T dP",
+        "dU = (∂U/∂T)_V dT + (∂U/∂V)_T dV",
+        "dU = (∂P/∂T)_U dT + (∂T/∂P)_U dP",
+        "dU = (∂V/∂T)_U dT + (∂T/∂V)_U dV"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For heat transfer between a system at temperature T and surroundings at T' separated by a diathermic wall, what is the relationship for heat transfer (Q)?",
+      "options": [
+        "Q ∝ (T' - T)",
+        "Q = (T' - T)",
+        "Q ∝ 1/(T' - T)",
+        "Q = (T + T')"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the specific heat at constant volume denoted as?",
+      "options": [
+        "Cv",
+        "Cp",
+        "C",
+        "Cv,m"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does specific heat at constant volume represent?",
+      "options": [
+        "Heat required to change the temperature at constant volume",
+        "Heat required to change the temperature at constant pressure",
+        "Heat required to change the volume at constant temperature",
+        "Heat required to change the pressure at constant temperature"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for specific heat (c)?",
+      "options": [
+        "c = dQ/dT",
+        "c = dQ/dV",
+        "c = dT/dQ",
+        "c = dV/dQ"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is specific heat at constant pressure denoted as?",
+      "options": [
+        "Cp",
+        "Cv",
+        "C",
+        "Cp,m"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does specific heat at constant pressure represent?",
+      "options": [
+        "Heat required to change the temperature at constant pressure",
+        "Heat required to change the temperature at constant volume",
+        "Heat required to change the pressure at constant temperature",
+        "Heat required to change the volume at constant temperature"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a calorie?",
+      "options": [
+        "Heat required to change 1g of water from 14.5°C to 15.5°C",
+        "Heat required to change 1kg of water from 14.5°C to 15.5°C",
+        "Heat required to change the temperature of any substance by 1K",
+        "Heat required to change the temperature of any substance by 1°C"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How many Joules are in 1 calorie?",
+      "options": [
+        "4.186 Joules",
+        "4.2 Joules",
+        "4 Joules",
+        "4.184 Joules"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between Cp and Cv for an ideal gas?",
+      "options": [
+        "Cp - Cv = nR",
+        "Cp + Cv = nR",
+        "Cp/Cv = nR",
+        "Cp * Cv = nR"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for molar specific heat (c)?",
+      "options": [
+        "C = C/n",
+        "C = n/C",
+        "C = C * n",
+        "C = n + C"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "If the amount of substance is 1 mol, what is the expression for dQ?",
+      "options": [
+        "dQ = dU + PdV",
+        "dQ = dU - PdV",
+        "dQ = dH + PdV",
+        "dQ = dH - PdV"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "At constant volume, what is the relationship between dQ and dU?",
+      "options": [
+        "dQ = dU",
+        "dQ = dU + PdV",
+        "dQ = dU - PdV",
+        "dQ = dH"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for (dQ/dT) at constant pressure?",
+      "options": [
+        "(dQ/dT)p = (∂U/∂T)v + [(∂U/∂V)T + P](∂V/∂T)p",
+        "(dQ/dT)p = (∂U/∂T)v + [(∂U/∂V)T + P](∂V/∂P)T",
+        "(dQ/dT)p = (∂U/∂T)v + P(∂V/∂T)p",
+        "(dQ/dT)p = (∂U/∂T)v"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for (dQ/dT) at constant volume?",
+      "options": [
+        "(dQ/dT)v = (dU/dT)v",
+        "(dQ/dT)v = (dU/dT)p",
+        "(dQ/dT)v = (dH/dT)v",
+        "(dQ/dT)v = (dH/dT)p"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for heat capacity (C)?",
+      "options": [
+        "C = dQ/dT",
+        "C = dT/dQ",
+        "C = dQ/dV",
+        "C = dV/dQ"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does heat capacity represent?",
+      "options": [
+        "Ratio of heat change to temperature change",
+        "Ratio of temperature change to heat change",
+        "Heat required to change the volume",
+        "Heat required to change the pressure"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the specific heat capacity (c) defined as?",
+      "options": [
+        "Heat required to change the temperature of unit mass of a substance by unit K",
+        "Heat required to change the temperature of unit mass of a substance by unit °C",
+        "Heat required to change the volume of unit mass of a substance by unit K",
+        "Heat required to change the pressure of unit mass of a substance by unit °C"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for specific heat capacity (c) for 1 kg of substance?",
+      "options": [
+        "C = dQ/dT",
+        "C = dT/dQ",
+        "C = dQ/dV",
+        "C = dV/dQ"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "If the amount of substance is 1 mol, what is molar specific heat (c)?",
+      "options": [
+        "C = C/n",
+        "C = n/C",
+        "C = C * n",
+        "C = n + C"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for specific heat at constant volume (Cv)?",
+      "options": [
+        "Cv = (dQ/dT)v = (dU/dT)v",
+        "Cv = (dQ/dT)p = (dH/dT)p",
+        "Cv = (dQ/dT)",
+        "Cv = (dU/dT)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for specific heat at constant pressure (Cp)?",
+      "options": [
+        "Cp = (dQ/dT)p = (dH/dT)p",
+        "Cp = (dQ/dT)v = (dU/dT)v",
+        "Cp = (dQ/dT)",
+        "Cp = (dH/dT)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between Cp and Cv for an ideal gas?",
+      "options": [
+        "Cp - Cv = nR",
+        "Cp + Cv = nR",
+        "Cp * Cv = nR",
+        "Cp / Cv = nR"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for dQ in terms of dU, dV, and P?",
+      "options": [
+        "dQ = dU + PdV",
+        "dQ = dU - PdV",
+        "dQ = dH + PdV",
+        "dQ = dH - PdV"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "At constant volume, what is the relationship between dQ and dU?",
+      "options": [
+        "dQ = dU",
+        "dQ = dU + PdV",
+        "dQ = dU - PdV",
+        "dQ = dH"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for (dQ/dT) at constant pressure?",
+      "options": [
+        "(dQ/dT)p = (∂U/∂T)v + [(∂U/∂V)T + P](∂V/∂T)p",
+        "(dQ/dT)p = (∂U/∂T)v + [(∂U/∂V)T + P](∂V/∂P)T",
+        "(dQ/dT)p = (∂U/∂T)v + P(∂V/∂T)p",
+        "(dQ/dT)p = (∂U/∂T)v"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for (dQ/dT) at constant volume?",
+      "options": [
+        "(dQ/dT)v = (dU/dT)v",
+        "(dQ/dT)v = (dU/dT)p",
+        "(dQ/dT)v = (dH/dT)v",
+        "(dQ/dT)v = (dH/dT)p"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between Cp, Cv, and the partial derivatives of V?",
+      "options": [
+        "Cp = Cv + [(∂V/∂T)_P + P](∂V/∂T)_P",
+        "Cp = Cv + [(∂V/∂P)_T + P](∂V/∂T)_P",
+        "Cp = Cv + [(∂V/∂T)_P + P](∂V/∂P)_T",
+        "Cp = Cv + [(∂V/∂P)_T + P](∂V/∂P)_T"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the notes, what is U a function of for an ideal gas?",
+      "options": [
+        "P only",
+        "T only",
+        "V only",
+        "P and T"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the change in internal energy (U) at constant temperature for an ideal gas?",
+      "options": [
+        "0",
+        "1",
+        "∞",
+        "depends on P and V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for Cp - Cv?",
+      "options": [
+        "Cp - Cv = P(∂V/∂T)_P",
+        "Cp - Cv = V(∂P/∂T)_V",
+        "Cp - Cv = T(∂P/∂V)_T",
+        "Cp - Cv = P(∂V/∂P)_T"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For an ideal gas, what is the value of (∂V/∂T)_P?",
+      "options": [
+        "nR/P",
+        "P/nR",
+        "nR",
+        "P"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For one mole of an ideal gas, what is the value of Cp - Cv?",
+      "options": [
+        "R",
+        "nR",
+        "P",
+        "V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for dQ from the first law of thermodynamics?",
+      "options": [
+        "dQ = dU + PdV",
+        "dQ = dU - PdV",
+        "dQ = dU + VdP",
+        "dQ = dU - VdP"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For an adiabatic process, what is the value of dQ?",
+      "options": [
+        "0",
+        "1",
+        "∞",
+        "depends on T and P"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For an adiabatic process involving an ideal gas, what is the relationship between Cv, dT, P, and dV?",
+      "options": [
+        "Cv dT + PdV = 0",
+        "Cv dT - PdV = 0",
+        "Cp dT + PdV = 0",
+        "Cp dT - PdV = 0"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the equation of state for an adiabatic process?",
+      "options": [
+        "Cv (PdV + VdP)/(Cp - Cv) + PdV = 0",
+        "Cv (PdV - VdP)/(Cp - Cv) + PdV = 0",
+        "Cp (PdV + VdP)/(Cp - Cv) + PdV = 0",
+        "Cp (PdV - VdP)/(Cp - Cv) + PdV = 0"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For pressures up to 40 atmospheres, what is the behavior of the higher order terms in the equation?",
+      "options": [
+        "Linear and absolute",
+        "Quadratic and positive",
+        "Cubic and negative",
+        "Exponential"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the first virial coefficient (A) depend on?",
+      "options": [
+        "Temperature",
+        "Pressure",
+        "Volume",
+        "Number of moles"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the limit of PV as pressure approaches zero for an ideal gas?",
+      "options": [
+        "Constant",
+        "Zero",
+        "Infinity",
+        "Undefined"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the mathematical expression for absolute temperature (T) using a reference point at the triple point of water (T_TP)?",
+      "options": [
+        "T = 273.16 * lim(P/P_TP) as P_TP -> 0",
+        "T = 273.16 * lim(P_TP/P) as P_TP -> 0",
+        "T = 273.16 * lim(PV/(PV)_TP) as P_TP -> 0",
+        "T = 273.16 * lim((PV)_TP/PV) as P_TP -> 0"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How is the ideal gas behavior achieved in real gases?",
+      "options": [
+        "By taking the limit as pressure approaches zero",
+        "By increasing the pressure",
+        "By increasing the temperature",
+        "By decreasing the volume"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of the gas constant (R)?",
+      "options": [
+        "8.314 J/mol K",
+        "8.314 cal/mol K",
+        "0.0821 L atm/mol K",
+        "1.987 cal/mol K"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the term for an adiabatic expansion of a gas into a vacuum?",
+      "options": [
+        "Free expansion",
+        "Isothermal expansion",
+        "Isobaric expansion",
+        "Adiabatic compression"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In an adiabatic system with two parts (one with gas, one empty), what happens when the partition is removed?",
+      "options": [
+        "The gas flows to fill the entire volume",
+        "The gas remains in the original part",
+        "The gas contracts",
+        "The gas's temperature increases"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is another name for free adiabatic expansion?",
+      "options": [
+        "Joule expansion",
+        "Joule-Thomson expansion",
+        "Isothermal expansion",
+        "Adiabatic compression"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In Joule expansion, what are the values of (∂U/∂V)_T and (∂U/∂P)_T?",
+      "options": [
+        "(∂U/∂V)_T = 0 and (∂U/∂P)_T = 0",
+        "(∂U/∂V)_T = 1 and (∂U/∂P)_T = 1",
+        "(∂U/∂V)_T = ∞ and (∂U/∂P)_T = ∞",
+        "(∂U/∂V)_T = 0 and (∂U/∂P)_T = 1"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is an example of Joule-Thomson expansion?",
+      "options": [
+        "Body spray",
+        "Bicycle pump",
+        "Refrigerator",
+        "Air conditioner"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How do Joule expansion and Joule-Thomson expansion differ?",
+      "options": [
+        "Joule expansion is adiabatic with no cooling, while Joule-Thomson expansion involves cooling.",
+        "Joule expansion involves cooling, while Joule-Thomson expansion is adiabatic with no cooling.",
+        "Joule expansion is isothermal, while Joule-Thomson expansion is adiabatic.",
+        "Joule expansion is adiabatic, while Joule-Thomson expansion is isothermal."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In Joule expansion, what are the changes in U, W, and Q?",
+      "options": [
+        "ΔU = 0, W = 0, Q = 0",
+        "ΔU > 0, W < 0, Q = 0",
+        "ΔU < 0, W > 0, Q = 0",
+        "ΔU = 0, W > 0, Q < 0"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For an ideal gas, what is U a function of?",
+      "options": [
+        "T only",
+        "V only",
+        "P only",
+        "T and V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For real gases, what is the value of (∂U/∂P)_T?",
+      "options": [
+        "(∂U/∂P)_T ≠ 0",
+        "(∂U/∂P)_T = 0",
+        "(∂U/∂P)_T = 1",
+        "(∂U/∂P)_T = ∞"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the equation of state for an adiabatic process?",
+      "options": [
+        "PV^γ = constant",
+        "PV = constant",
+        "P/V = constant",
+        "P^γV = constant"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of γ (the ratio of specific heats) for a monoatomic ideal gas?",
+      "options": [
+        "5/3",
+        "7/5",
+        "4/3",
+        "1.67"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of γ for a diatomic ideal gas?",
+      "options": [
+        "7/5",
+        "5/3",
+        "4/3",
+        "1.4"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of γ for a polyatomic ideal gas?",
+      "options": [
+        "4/3",
+        "5/3",
+        "7/5",
+        "1.33"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How can processes be classified?",
+      "options": [
+        "Ideal and real",
+        "Isothermal and adiabatic",
+        "Reversible and irreversible",
+        "Cyclic and non-cyclic"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In Joule expansion, what are the values of (∂U/∂T) and du?",
+      "options": [
+        "(∂U/∂T) = 0 and du = 0",
+        "(∂U/∂T) = 1 and du = 1",
+        "(∂U/∂T) = ∞ and du = ∞",
+        "(∂U/∂T) = 0 and du = 1"
+      ],
+      "correct": 0
+    }
   ]
 }
