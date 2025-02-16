@@ -127,11 +127,10 @@ function initializeLevelSelectForLang(lang) {
 
 function getLevelDescription(level) {
     const descriptions = {
-        1: "Page 0-10",
-        2: "Page 10-20",
-        3: "Page 20-30",
-        4: "Page 30-40",
-        5: "Page 40-50"
+        1: "Page 1-10",
+        2: "Page 11-19",
+        3: "Page 21-28",
+        4: "Page 29-36"
     };
     return descriptions[level] || `Level ${level}`;
 }

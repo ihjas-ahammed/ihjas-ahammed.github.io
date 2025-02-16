@@ -2121,5 +2121,1089 @@
       ],
       "correct": 0
     }
-  ]
+  ],
+  "3":[
+    {
+      "question": "What is an irreversible process according to the notes?",
+      "options": [
+        "A process that can be reversed.",
+        "A process that cannot be reversed.",
+        "A process that occurs naturally.",
+        "A process that is quasi-static."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is an example of an irreversible process?",
+      "options": [
+        "A reversible process.",
+        "A quasi-static process.",
+        "All natural processes.",
+        "An isothermal process."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What are the conditions for a reversible process mentioned in the notes?",
+      "options": [
+        "The process must be fast and involve energy losses.",
+        "All stages of the process can be reversed, and energy utilized is the same in either direction.",
+        "The process must be adiabatic and involve friction.",
+        "The process must be isothermal and involve heat transfer."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the characteristics of a reversible process?",
+      "options": [
+        "It is quasi-static, infinitely slow, and has no energy losses.",
+        "It is fast, adiabatic, and has significant energy losses.",
+        "It is isothermal, involves friction, and is spontaneous.",
+        "It is isobaric, involves heat transfer, and is irreversible."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a heat engine, as defined in the notes?",
+      "options": [
+        "A device used to convert mechanical work into heat.",
+        "A device used to convert heat into mechanical work.",
+        "A device used to measure temperature.",
+        "A device used to transfer heat from a cold reservoir to a hot reservoir."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the three parts of a heat engine?",
+      "options": [
+        "Source, sink, and working substance.",
+        "Compressor, turbine, and condenser.",
+        "Boiler, generator, and pump.",
+        "Evaporator, expansion valve, and absorber."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the function of the source in a heat engine?",
+      "options": [
+        "To absorb heat from the working substance.",
+        "To maintain a low temperature.",
+        "To maintain a high temperature and supply heat.",
+        "To convert heat into mechanical work."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the role of the working substance in a heat engine?",
+      "options": [
+        "To reject heat to the sink.",
+        "To absorb heat from the source, perform work, and reject remaining heat to the sink.",
+        "To maintain a constant temperature.",
+        "To convert mechanical work into heat."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is J in the equation W = QW = JA, and what does it represent?",
+      "options": [
+        "Joule's constant, representing the mechanical equivalent of heat.",
+        "Boltzmann constant, representing the relationship between temperature and energy.",
+        "Avogadro's number, representing the number of molecules in a mole.",
+        "Planck's constant, representing the energy of a photon."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Who proposed the first heat engine?",
+      "options": [
+        "James Watt",
+        "Rudolf Diesel",
+        "Sadi Carnot",
+        "Nikolaus Otto"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the name of the cycle associated with the first heat engine?",
+      "options": [
+        "Otto cycle",
+        "Diesel cycle",
+        "Carnot cycle",
+        "Brayton cycle"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How many parts does a Carnot engine have?",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What type of processes does the Carnot cycle consist of?",
+      "options": [
+        "Irreversible",
+        "Reversible",
+        "Adiabatic",
+        "Isothermal"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the working substance in a Carnot engine, as mentioned in the notes?",
+      "options": [
+        "Water",
+        "Steam",
+        "Ideal gas",
+        "Refrigerant"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What are the four main parts of a Carnot engine?",
+      "options": [
+        "Source, sink, piston, cylinder",
+        "Boiler, turbine, condenser, pump",
+        "Compressor, regenerator, turbine, cooler",
+        "Evaporator, compressor, condenser, expansion valve"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the function of the insulating stand in a Carnot engine?",
+      "options": [
+        "To provide insulation for the engine",
+        "To move the working substance from source to sink without friction",
+        "To convert heat into work",
+        "To maintain a constant temperature"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the first process in a Carnot cycle?",
+      "options": [
+        "Adiabatic expansion",
+        "Isothermal expansion",
+        "Isothermal compression",
+        "Adiabatic compression"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "During the isothermal expansion process, what happens to the heat?",
+      "options": [
+        "Heat is rejected to the sink",
+        "Heat is absorbed from the source",
+        "No heat transfer occurs",
+        "Heat is converted into work"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In the isothermal process, what remains constant?",
+      "options": [
+        "Pressure",
+        "Volume",
+        "Temperature",
+        "Entropy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does the equation W = RT₁ ln(V₂/V₁) + RT₂ ln(V₄/V₃) represent?",
+      "options": [
+        "The total work done in a Carnot cycle",
+        "The heat absorbed during isothermal expansion",
+        "The heat rejected during isothermal compression",
+        "The efficiency of the Carnot engine"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the given context, what does the expression log(a/b) = log a - log b represent?",
+      "options": [
+        "A logarithmic identity",
+        "The relationship between pressure and volume in an adiabatic process",
+        "The efficiency of a Carnot engine",
+        "The work done in an isothermal process"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the equation PV^γ = k represent?",
+      "options": [
+        "The equation of state for an ideal gas",
+        "A thermodynamic process",
+        "The relationship between pressure and volume in an adiabatic process",
+        "The work done in an isothermal process"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does the equation W = R(T₁ - T₂) ln(V₂/V₁) represent?",
+      "options": [
+        "The total work done in a Carnot cycle",
+        "The work done in an isothermal process",
+        "The work done in an adiabatic process",
+        "The efficiency of the Carnot engine"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the efficiency (η) of a Carnot engine defined as?",
+      "options": [
+        "The ratio of the heat absorbed to the work done",
+        "The ratio of the work done to the heat absorbed",
+        "The ratio of the heat rejected to the work done",
+        "The ratio of the work done to the heat rejected"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the formula for the efficiency of a Carnot engine in terms of temperatures?",
+      "options": [
+        "η = (T₁ - T₂)/T₁",
+        "η = (T₂ - T₁)/T₁",
+        "η = T₁/T₂",
+        "η = T₂/T₁"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between V₂/V₁ and V₄/V₃ in a Carnot cycle?",
+      "options": [
+        "V₂/V₁ = V₄/V₃",
+        "V₂/V₁ = -V₄/V₃",
+        "V₂/V₁ = 1/(V₄/V₃)",
+        "V₂/V₁ = 1 - (V₄/V₃)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the equations for adiabatic processes BC and DA, what do T₁ and T₂ represent?",
+      "options": [
+        "The temperatures at the beginning and end of the cycle",
+        "The temperatures during isothermal expansion and compression",
+        "The temperatures during adiabatic expansion and compression",
+        "The temperatures of the source and sink"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the significance of the Carnot cycle?",
+      "options": [
+        "It represents the most efficient heat engine possible.",
+        "It is a reversible cycle that defines the maximum efficiency.",
+        "It helps understand the theoretical limits of converting heat into work.",
+        "All of the above."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What does the expression  (V₂/V₁)^(γ-1) = (V₃/V₄)^(γ-1) imply in the context of adiabatic processes?",
+      "options": [
+        "The ratio of volumes in adiabatic processes is related to the specific heat ratio.",
+        "The work done during adiabatic processes is equal.",
+        "The change in internal energy during adiabatic processes is zero.",
+        "The temperature remains constant during adiabatic processes."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the efficiency (η) of a Carnot engine given by?",
+      "options": [
+        "η = (T₁ - T₂)/T₁",
+        "η = T₁/T₂",
+        "η = (T₂ - T₁)/T₁",
+        "η = T₂/T₁"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the expression for efficiency in terms of heat transfer?",
+      "options": [
+        "η = (Q₁ - Q₂)/Q₁",
+        "η = Q₁/Q₂",
+        "η = (Q₂ - Q₁)/Q₂",
+        "η = Q₂/Q₁"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a refrigerator, as described in the notes?",
+      "options": [
+        "A device that converts heat into work.",
+        "A device that transfers heat from a higher temperature region to a lower temperature region.",
+        "A device that transfers heat from a lower temperature region to a higher temperature region by doing work.",
+        "A device that measures temperature."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In a refrigerator, what is the relationship between Q₁, Q₂, T₁, and T₂?",
+      "options": [
+        "Q₁/Q₂ = T₁/T₂",
+        "Q₁/Q₂ = T₂/T₁",
+        "Q₁T₁ = Q₂T₂",
+        "Q₁T₂ = Q₂T₁"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the ratio of heat absorbed by the working substance from the source to the heat rejected to the sink represent?",
+      "options": [
+        "The efficiency of the engine",
+        "The coefficient of performance of the refrigerator",
+        "The ratio of temperatures of the source and sink",
+        "The work done by the engine"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the formula for the work done (W) in terms of Q₁ and η?",
+      "options": [
+        "W = Q₁η",
+        "W = Q₁/η",
+        "W = η/Q₁",
+        "W = Q₁(1 - η)"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the context of the notes, what does 'H' represent in the diagrams?",
+      "options": [
+        "Heat absorbed from the source",
+        "Heat rejected to the sink",
+        "A heat engine or refrigerator",
+        "Work done by the system"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does the equation η = 1 - (T₂/T₁) imply about the efficiency of a Carnot engine?",
+      "options": [
+        "The efficiency increases as the temperature of the source increases.",
+        "The efficiency increases as the temperature of the sink decreases.",
+        "The efficiency is dependent on the working substance.",
+        "Both (a) and (b)"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the significance of the temperatures T₁ and T₂ in the context of heat engines and refrigerators?",
+      "options": [
+        "T₁ is the temperature of the hot reservoir (source) and T₂ is the temperature of the cold reservoir (sink).",
+        "T₁ is the temperature of the cold reservoir (sink) and T₂ is the temperature of the hot reservoir (source).",
+        "T₁ and T₂ are the temperatures of the working substance at different states.",
+        "T₁ and T₂ are arbitrary temperatures."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the key difference between a heat engine and a refrigerator in terms of heat transfer and work?",
+      "options": [
+        "A heat engine converts heat into work, while a refrigerator uses work to transfer heat from cold to hot.",
+        "A heat engine transfers heat from cold to hot, while a refrigerator converts heat into work.",
+        "A heat engine and a refrigerator both convert work into heat.",
+        "A heat engine and a refrigerator both transfer heat from hot to cold."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the machine 'M' in the diagram violate?",
+      "options": [
+        "First law of thermodynamics",
+        "Second law of thermodynamics (Clausius statement)",
+        "Second law of thermodynamics (Kelvin-Planck statement)",
+        "Joule's law"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the combined machine (CM) supposed to do?",
+      "options": [
+        "Absorb heat from the sink and perform work",
+        "Absorb heat from the source and perform work",
+        "Perform work without absorbing heat",
+        "Transfer heat from sink to source"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the working of the combined machine (CM) violate?",
+      "options": [
+        "Clausius statement",
+        "Kelvin-Planck statement",
+        "Both Clausius and Kelvin-Planck statements",
+        "First law of thermodynamics"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the conclusion regarding the relationship between the Clausius and Kelvin-Planck statements?",
+      "options": [
+        "Clausius statement implies Kelvin-Planck statement",
+        "Kelvin-Planck statement implies Clausius statement",
+        "Clausius and Kelvin-Planck statements are independent",
+        "Clausius statement violates Kelvin-Planck statement"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the second scenario, what type of machine is considered that obeys the Clausius statement?",
+      "options": [
+        "Heat engine",
+        "Refrigerator",
+        "Heat pump",
+        "Perpetual motion machine"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In the second scenario, what does the machine do with the heat absorbed from the sink and the work done on it?",
+      "options": [
+        "Converts them into work",
+        "Rejects them to the source",
+        "Stores them in the machine",
+        "Transfers them to the sink"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the significance of the combined machine in the second scenario?",
+      "options": [
+        "It demonstrates the equivalence of heat and work",
+        "It violates the Kelvin-Planck statement",
+        "It proves the Clausius statement",
+        "It explains the working of a refrigerator"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the ultimate conclusion of the thought experiment involving the combined machine in both scenarios?",
+      "options": [
+        "The Clausius and Kelvin-Planck statements are equivalent",
+        "The Clausius statement is stronger than the Kelvin-Planck statement",
+        "The Kelvin-Planck statement is stronger than the Clausius statement",
+        "The first law of thermodynamics is violated"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the symbol 'H' represent in the diagrams?",
+      "options": [
+        "Heat",
+        "Work",
+        "Heat engine or refrigerator",
+        "Combined machine"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the main idea conveyed through the diagrams and text?",
+      "options": [
+        "The working of a heat engine",
+        "The principle of a refrigerator",
+        "The interrelation between the Clausius and Kelvin-Planck statements of the second law of thermodynamics",
+        "The concept of entropy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does Carnot's theorem state regarding the efficiency of reversible and irreversible engines?",
+      "options": [
+        "No engine can be more efficient than a reversible engine working between the same source and sink temperatures.",
+        "All reversible engines working between the same source and sink temperatures have the same efficiency.",
+        "Irreversible engines are more efficient than reversible engines.",
+        "The efficiency of an engine is independent of the working substance."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between the efficiencies of irreversible (η₁) and reversible (ηR) engines operating between the same temperatures?",
+      "options": [
+        "η₁ > ηR",
+        "η₁ < ηR",
+        "η₁ = ηR",
+        "There is no specific relationship between η₁ and ηR."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to Carnot's theorem, what can be said about the efficiency of all reversible engines operating between the same source and sink temperatures?",
+      "options": [
+        "Their efficiencies are different.",
+        "Their efficiencies are the same.",
+        "Their efficiencies depend on the working substance.",
+        "Their efficiencies are zero."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the First Law of Thermodynamics describe?",
+      "options": [
+        "The direction of heat flow.",
+        "The conservation of energy.",
+        "The efficiency of engines.",
+        "The entropy of the universe."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the Second Law of Thermodynamics describe?",
+      "options": [
+        "The conservation of energy.",
+        "The direction of heat flow.",
+        "The absolute temperature.",
+        "The reversibility of processes."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the Zeroth Law of Thermodynamics define?",
+      "options": [
+        "The concept of entropy.",
+        "The direction of heat flow.",
+        "The temperature.",
+        "The internal energy."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In the given context, what does the symbol 'M' likely represent?",
+      "options": [
+        "A reversible engine",
+        "An irreversible engine",
+        "A machine that violates the Clausius statement",
+        "A heat pump"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the significance of combining two machines as shown in the diagram?",
+      "options": [
+        "To increase the efficiency of the engine",
+        "To demonstrate the violation of the Kelvin-Planck statement",
+        "To prove Carnot's theorem",
+        "To illustrate the principle of refrigeration"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the quantity (Q_2) in the combined machine scenario?",
+      "options": [
+        "Heat absorbed from the source",
+        "Heat rejected to the sink",
+        "Work done by the machine",
+        "Change in internal energy"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "If a machine violates the Clausius statement, what does it imply according to the text?",
+      "options": [
+        "It also violates the Kelvin-Planck statement.",
+        "It obeys the Kelvin-Planck statement.",
+        "It is a reversible machine.",
+        "It is a highly efficient machine."
+      ],
+      "correct": 0
+    }
+  ],
+  "4":[
+    {
+      "question": "What is the purpose of the notes?",
+      "options": [
+        "To prove Carnot's theorem.",
+        "To explain the concept of efficiency.",
+        "To compare reversible and irreversible engines.",
+        "All of the above."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the key assumption made in the notes?",
+      "options": [
+        "The efficiency of an irreversible engine is less than that of a reversible engine.",
+        "The efficiency of an irreversible engine is greater than that of a reversible engine.",
+        "All engines have the same efficiency.",
+        "Reversible engines cannot act as refrigerators."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the two types of engines being compared?",
+      "options": [
+        "Petrol and diesel engines",
+        "Heat engines and refrigerators",
+        "Reversible and irreversible engines",
+        "Internal and external combustion engines"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the meaning of the symbols η_I and η_R?",
+      "options": [
+        "Heat absorbed by I and R respectively",
+        "Work done by I and R respectively",
+        "Efficiency of irreversible engine I and reversible engine R respectively",
+        "Heat rejected by I and R respectively"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the significance of coupling the two engines together?",
+      "options": [
+        "To increase the overall efficiency of the system.",
+        "To demonstrate the difference in their efficiencies.",
+        "To prove that the efficiency of I is greater than R.",
+        "Both b and c."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "According to the notes, what is a crucial difference between reversible and irreversible engines?",
+      "options": [
+        "Reversible engines have higher efficiency.",
+        "Irreversible engines can act as refrigerators.",
+        "Reversible engines can act as both heat engines and refrigerators.",
+        "Irreversible engines have lower work done."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "If Q_I is the heat absorbed by engine I and w is the work done, what does Q_I - w represent?",
+      "options": [
+        "Heat rejected by engine I",
+        "Efficiency of engine I",
+        "Heat absorbed by engine R",
+        "Work done by engine R"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relation between Q_R and Q_I as per the assumption made in the notes?",
+      "options": [
+        "Q_R < Q_I",
+        "Q_R = Q_I",
+        "Q_R > Q_I",
+        "No specific relation is mentioned"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the final conclusion derived from the coupled engine setup?",
+      "options": [
+        "The efficiency of the irreversible engine is equal to the reversible engine.",
+        "The efficiency of the irreversible engine is less than the reversible engine.",
+        "The efficiency of the irreversible engine is greater than the reversible engine.",
+        "No conclusion can be derived."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the primary focus of the text?",
+      "options": [
+        "Describing the Carnot cycle",
+        "Explaining the laws of thermodynamics",
+        "Comparing the efficiency of reversible and irreversible engines",
+        "Calculating the work done by different engines"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the significance of the coupled machine in the discussion?",
+      "options": [
+        "It demonstrates the first law of thermodynamics.",
+        "It helps prove that the efficiency of an irreversible engine cannot be greater than that of a reversible engine.",
+        "It is used to calculate the absolute zero temperature.",
+        "It explains the concept of entropy."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the text, what happens if we assume that the efficiency of an irreversible engine is greater than that of a reversible engine?",
+      "options": [
+        "It leads to a contradiction with the second law of thermodynamics.",
+        "It proves the Carnot theorem.",
+        "It shows that all engines have the same efficiency.",
+        "It results in the efficiency of the reversible engine being zero."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of the quantity  Q_R - Q_I in the coupled machine analysis?",
+      "options": [
+        "It represents the work done by the coupled machine.",
+        "It is the heat transferred from the sink to the source.",
+        "It is the heat rejected by the irreversible engine.",
+        "It represents the change in entropy."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the main conclusion derived from the analysis of the coupled machine?",
+      "options": [
+        "The efficiency of all engines is the same.",
+        "The efficiency of a reversible engine is greater than that of an irreversible engine.",
+        "The efficiency of an irreversible engine can be greater than that of a reversible engine.",
+        "The second law of thermodynamics is invalid."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In the context of the discussion, what does 'reversible' imply about an engine's operation?",
+      "options": [
+        "It can operate at any temperature.",
+        "It can achieve 100% efficiency.",
+        "It can operate in both forward and reverse directions without any loss of energy.",
+        "It does not produce any waste heat."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the significance of the quantities Q_S - W  and Q_R - W  in the diagram?",
+      "options": [
+        "They represent the heat absorbed by the engines.",
+        "They represent the work done by the engines.",
+        "They represent the heat rejected by the engines.",
+        "They represent the efficiency of the engines."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the ultimate implication of the coupled machine's operation if  eta_I > eta_R  ?",
+      "options": [
+        "Heat flows spontaneously from a colder to a hotter body without external work.",
+        "The entropy of the universe decreases.",
+        "The first law of thermodynamics is violated.",
+        "The efficiency of the reversible engine increases."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "According to the text, which of the following statements is true?",
+      "options": [
+        "All reversible engines have the same efficiency.",
+        "All irreversible engines have the same efficiency.",
+        "The efficiency of a reversible engine depends on the working fluid.",
+        "The efficiency of an irreversible engine is greater than that of a reversible engine."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the main topic discussed in the notes?",
+      "options": [
+        "The Carnot Cycle",
+        "The Laws of Thermodynamics",
+        "Efficiency of Reversible and Irreversible Engines",
+        "Entropy and Disorder"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the significance of coupling two engines together?",
+      "options": [
+        "To increase the total work output",
+        "To demonstrate the equivalence of heat and work",
+        "To prove that the efficiency of an irreversible engine cannot be greater than that of a reversible one",
+        "To create a perpetual motion machine"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Based on the coupled engine analysis, what is the ultimate conclusion regarding the efficiency of reversible and irreversible engines?",
+      "options": [
+        "All engines have the same efficiency.",
+        "Reversible engines have higher efficiency than irreversible engines.",
+        "Irreversible engines can have higher efficiency than reversible engines.",
+        "The efficiency depends on the working substance."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the term 'reversible' imply about an engine's operation?",
+      "options": [
+        "It can operate at any temperature.",
+        "It can achieve 100% efficiency.",
+        "It can operate in both forward and reverse directions without any loss of energy.",
+        "It produces no waste heat."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "According to the notes, what is a key difference between reversible and irreversible engines?",
+      "options": [
+        "Reversible engines are more complex to design.",
+        "Irreversible engines operate faster.",
+        "Reversible engines can theoretically achieve maximum efficiency.",
+        "Irreversible engines do not produce any waste heat."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the significance of the Carnot cycle in the context of the notes?",
+      "options": [
+        "It represents the most efficient cycle possible for a reversible engine.",
+        "It is used to analyze the efficiency of irreversible engines.",
+        "It helps understand the concept of entropy.",
+        "It explains the working of refrigerators."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to Carnot's theorems, what determines the efficiency of a Carnot engine?",
+      "options": [
+        "The nature of the working substance",
+        "The temperatures of the source and sink",
+        "The amount of heat absorbed from the source",
+        "The manner in which it performs work"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the significance of the Carnot cycle?",
+      "options": [
+        "It is the most efficient cycle possible for any engine.",
+        "It helps determine the absolute zero temperature.",
+        "It is used to measure entropy changes.",
+        "It explains the working of irreversible engines."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between the temperatures in a Carnot cycle and its efficiency?",
+      "options": [
+        "Efficiency is directly proportional to the temperature difference between source and sink.",
+        "Efficiency is directly proportional to the absolute temperature of the source.",
+        "Efficiency depends only on the ratio of temperatures between source and sink.",
+        "Efficiency is independent of the temperatures of the source and sink."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the purpose of establishing a thermodynamic scale of temperature?",
+      "options": [
+        "To define temperature based on the properties of ideal gases.",
+        "To measure temperature independent of the working substance used.",
+        "To relate temperature to the efficiency of reversible engines.",
+        "All of the above."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "According to the notes, what are the three conclusions for the efficiency of a reversible engine?",
+      "options": [
+        "It is independent of the nature of the working substance, mode of heat transfer, and manner of performing work.",
+        "It depends on the temperatures of the source and sink, the amount of heat absorbed, and the working substance.",
+        "It is determined by the first law of thermodynamics, the second law of thermodynamics, and the Carnot theorem.",
+        "It is related to entropy changes, enthalpy changes, and Gibbs free energy."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the primary focus of the text?",
+      "options": [
+        "Analyzing the efficiency of Carnot engines.",
+        "Deriving a relationship between heat and temperature.",
+        "Explaining the second law of thermodynamics.",
+        "Defining a thermodynamic scale of temperature."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the key idea behind the development of a thermodynamic temperature scale?",
+      "options": [
+        "To measure temperature using ideal gases.",
+        "To define temperature independent of the working substance.",
+        "To relate temperature to the energy of molecules.",
+        "To establish a universal scale applicable to all substances."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the final outcome of the analysis presented in the text?",
+      "options": [
+        "A definition for the absolute zero of temperature.",
+        "A relationship between heat and work.",
+        "A thermodynamic scale of temperature that is independent of the working substance.",
+        "A proof of the Carnot theorem."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the absolute temperature also known as?",
+      "options": [
+        "Carnot temperature",
+        "Kelvin temperature",
+        "Ideal gas temperature",
+        "Boyle temperature"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the notes, what is the ratio of absolute temperatures on the absolute scale equal to?",
+      "options": [
+        "The ratio of work done by a reversible Carnot engine",
+        "The ratio of heat transferred between the source and sink by a reversible Carnot heat engine",
+        "The ratio of efficiencies of two Carnot engines",
+        "The ratio of internal energies of two systems"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a key property of the absolute temperature scale according to the text?",
+      "options": [
+        "It depends on the working substance used.",
+        "It is independent of the nature of working substances.",
+        "It is defined based on the boiling point of water.",
+        "It is proportional to the pressure of an ideal gas."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the definition of absolute zero temperature?",
+      "options": [
+        "The temperature at which water freezes",
+        "The temperature at which a Carnot cycle rejects no heat",
+        "The temperature at which all molecular motion ceases",
+        "The temperature at which a substance has zero entropy"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the text, what is the temperature difference between nearby isothermals after dividing the Carnot cycle into 100 equal parts?",
+      "options": [
+        "100 K",
+        "1 K",
+        "0.1 K",
+        "0.01 K"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How is the unit Kelvin defined in the notes?",
+      "options": [
+        "The temperature difference between the boiling point and freezing point of water.",
+        "The temperature difference at which a reversible engine operates to get an energy output of one hundredth of the energy obtained by a Carnot cycle operated between the boiling point and freezing point of water.",
+        "The temperature difference at which the efficiency of a Carnot engine is 1%.",
+        "The temperature difference between absolute zero and the freezing point of water."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the energy output of a reversible engine when operated between two temperatures with a temperature difference of 1 Kelvin, according to the definition?",
+      "options": [
+        "1 Joule",
+        "100 Joules",
+        "One hundredth of the energy obtained by a Carnot cycle operated between the boiling point and freezing point of water",
+        "Zero"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the initial efficiency of the Carnot engine?",
+      "options": [
+        "0.2",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "By how much is the source temperature increased?",
+      "options": [
+        "25 K",
+        "25°C",
+        "50 K",
+        "50°C"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the new efficiency of the Carnot engine after the source temperature is increased?",
+      "options": [
+        "0.2",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the initial temperatures of the source and sink, respectively?",
+      "options": [
+        "400 K and 300 K",
+        "300 K and 400 K",
+        "375 K and 300 K",
+        "300 K and 375 K"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the temperature of the sink?",
+      "options": [
+        "27°C",
+        "300 K",
+        "375 K",
+        "400 K"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the initial temperature of the source in Celsius?",
+      "options": [
+        "27°C",
+        "102°C",
+        "127°C",
+        "400°C"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the new temperature of the source in Kelvin?",
+      "options": [
+        "375 K",
+        "400 K",
+        "425 K",
+        "450 K"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the efficiency of a Carnot engine working between 127°C and 27°C?",
+      "options": [
+        "0.2",
+        "0.25",
+        "0.5",
+        "0.75"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the temperature of the source for the second Carnot engine in Kelvin?",
+      "options": [
+        "127 K",
+        "273 K",
+        "400 K",
+        "573 K"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the temperature of the sink for the second Carnot engine in Kelvin?",
+      "options": [
+        "27 K",
+        "300 K",
+        "400 K",
+        "573 K"
+      ],
+      "correct": 1
+    }
+   ]
 }
