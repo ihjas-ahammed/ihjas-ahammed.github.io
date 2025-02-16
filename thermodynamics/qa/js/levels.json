@@ -1,0 +1,1063 @@
+{
+  "1": [
+    {
+      "question": "What is the focus of study in thermodynamics?",
+      "options": [
+        "A portion of matter in a region of space",
+        "The boundary separating the system from surroundings",
+        "Anything outside the boundary affecting the system",
+        "The behavior of the system on a molecular level"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What separates the system from its surroundings?",
+      "options": [
+        "The portion of matter under study",
+        "The boundary",
+        "The macroscopic point of view",
+        "The microscopic point of view"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is NOT a characteristic of the 'system'?",
+      "options": [
+        "It is the focus of attention.",
+        "It is anything inside the boundary.",
+        "It has a direct bearing on the surroundings.",
+        "It is a portion of matter under study."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the 'surrounding' in thermodynamic terms?",
+      "options": [
+        "Anything inside the boundary",
+        "Anything outside the boundary that affects the system",
+        "The portion of matter being studied",
+        "The space occupied by the system"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In an open system, which of the following can be exchanged with the surroundings?",
+      "options": [
+        "Only energy",
+        "Only matter",
+        "Both energy and matter",
+        "Neither energy nor matter"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of these is true for a closed system?",
+      "options": [
+        "Matter is exchanged, but energy is not.",
+        "Energy is exchanged, but matter is not.",
+        "Both energy and matter are exchanged.",
+        "Neither energy nor matter is exchanged."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What characterizes the macroscopic point of view in thermodynamics?",
+      "options": [
+        "Describing the system on a molecular level",
+        "Specifying quantities in human scale or larger",
+        "Focusing on the microscopic behavior of the system",
+        "Ignoring the surroundings"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is an example of an open system?",
+      "options": [
+        "Hot water in a closed container",
+        "Hot water in a glass",
+        "Gasoline vapor in a sealed tank",
+        "A perfectly insulated box"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In the example of a mixture of gasoline vapor and air, what can be specified before ignition?",
+      "options": [
+        "Only mass",
+        "Only composition",
+        "Both mass and composition",
+        "Neither mass nor composition"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the zeroth law of thermodynamics related to?",
+      "options": [
+        "Thermal equilibrium",
+        "Internal energy",
+        "Entropy",
+        "Enthalpy"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What quantities are used to explain a system in thermodynamics?",
+      "options": [
+        "Mass, composition, pressure, volume, and temperature",
+        "Color, smell, taste, texture, and sound",
+        "Height, width, depth, and weight",
+        "Happiness, sadness, anger, fear, and surprise"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the focus of the 'macroscopic point of view'?",
+      "options": [
+        "Understanding the internal structure of matter",
+        "Using theory of probability and statistical mechanics",
+        "Involving assumptions regarding matter, radiation or fields",
+        "Describing a system using a few fundamental and measurable quantities"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which is NOT a general characteristic of macroscopic quantities?",
+      "options": [
+        "They do not involve assumptions regarding internal structure",
+        "They are few in number",
+        "They are fundamental and related to sensory perception",
+        "They require a large number of quantities"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "How are microscopic quantities typically assessed?",
+      "options": [
+        "Directly measured using sensory perceptions",
+        "Through mathematical models and calculations",
+        "By counting individual particles in a system",
+        "Using specialized instruments like microscopes"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a key difference between macroscopic and microscopic viewpoints?",
+      "options": [
+        "Macroscopic uses many quantities, microscopic uses few",
+        "Macroscopic is directly measurable, microscopic is based on calculations",
+        "Macroscopic involves assumptions, microscopic doesn't",
+        "Macroscopic describes internal structure, microscopic describes bulk properties"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the significance of E1, E2,...En in the context of the microscopic view?",
+      "options": [
+        "They represent different energy levels in the system",
+        "They are macroscopic properties like pressure and volume",
+        "They signify the sensory perceptions of the observer",
+        "They denote the different components of the system"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is used to calculate the population of states in the microscopic view?",
+      "options": [
+        "Macroscopic quantities like temperature and pressure",
+        "Theory of probability and statistical mechanics",
+        "Direct measurements using sensory perceptions",
+        "Assumptions about the internal structure of matter only"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the text, what must be the outcome when comparing macroscopic and microscopic points of view?",
+      "options": [
+        "They should yield different results due to their different approaches",
+        "They must yield the same result",
+        "There is no need to compare them as they are independent",
+        "Only macroscopic view is valid, microscopic view is just theoretical"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following statements is true about microscopic quantities?",
+      "options": [
+        "They are directly measurable",
+        "They are fundamental and suggested by sensory perceptions",
+        "They are not measurable, but obtained through calculations",
+        "They involve no assumptions regarding the internal structure"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of the following is a characteristic of the macroscopic description of a system?",
+      "options": [
+        "It includes microscopic quantities",
+        "It relies on a large number of variables",
+        "It is based on assumptions about the internal structure",
+        "It uses macroscopic quantities like pressure and temperature"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the relationship between microscopic and macroscopic quantities?",
+      "options": [
+        "Microscopic quantities are averages of macroscopic quantities.",
+        "Macroscopic quantities are averages of microscopic quantities.",
+        "They are unrelated.",
+        "They are directly proportional."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which statement is true about the modification of the microscopic point of view?",
+      "options": [
+        "It cannot be modified.",
+        "It can be modified with theoretical advancements.",
+        "It is modified based on macroscopic observations.",
+        "It is modified arbitrarily."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a characteristic of the macroscopic point of view?",
+      "options": [
+        "It is based on specific details.",
+        "It is based on general assumptions.",
+        "It is constantly modified.",
+        "It is unrelated to microscopic properties."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the focus of thermodynamics?",
+      "options": [
+        "The exterior of the system.",
+        "The interior of the system.",
+        "The surroundings of the system.",
+        "The equilibrium of the system."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does thermodynamics provide?",
+      "options": [
+        "Specific values for variables.",
+        "Relationships between variables.",
+        "Descriptions of microscopic states.",
+        "Explanations of external conditions."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a thermodynamics system?",
+      "options": [
+        "A system described by macroscopic properties only.",
+        "A system described by microscopic properties only.",
+        "A system described by thermodynamics variables or coordinates.",
+        "A system in equilibrium only."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which is the most used quantity or variable in thermodynamics?",
+      "options": [
+        "Pressure",
+        "Volume",
+        "Temperature",
+        "Composition"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "For a system with constant mass and composition, how many thermodynamics coordinates are needed to describe it?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is an equilibrium state in thermodynamics?",
+      "options": [
+        "A state where external conditions are changing.",
+        "A state where the system is isolated from its surroundings.",
+        "A state where the system's properties have definite values and don't change with unaltered external conditions.",
+        "A state where the system is undergoing irreversible processes."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the term 'thermodynamics coordinates' used for?",
+      "options": [
+        "To describe the microscopic state of a system.",
+        "To specify the quantities needed for the description of a system from experiments.",
+        "To define the equilibrium state of a system.",
+        "To explain the relationships between variables in a system."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the equilibrium state of a system depend on?",
+      "options": [
+        "The proximity of other systems and the nature of the boundary/walls of the container",
+        "The temperature of the surroundings",
+        "The volume of the container",
+        "The pressure exerted on the system"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What are the two types of boundaries mentioned in the text?",
+      "options": [
+        "Open and closed",
+        "Rigid and flexible",
+        "Adiabatic and diathermic",
+        "Permeable and impermeable"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the characteristic of an adiabatic wall?",
+      "options": [
+        "It allows heat transfer",
+        "It prevents any communication between the system and surroundings",
+        "It allows matter transfer",
+        "It is made of a thin metallic sheet"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is an example of an adiabatic wall?",
+      "options": [
+        "A thin metallic sheet",
+        "Thick layers of wood",
+        "A glass window",
+        "A copper wire"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens when two systems at different temperatures are brought into contact through a diathermic wall?",
+      "options": [
+        "They reach thermal equilibrium",
+        "They remain at their original temperatures",
+        "Heat is transferred from the colder to the hotter system",
+        "No change occurs"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a characteristic of a diathermic wall?",
+      "options": [
+        "It prevents heat transfer",
+        "It allows communication between the system and surroundings",
+        "It is always in thermal equilibrium",
+        "It is made of thick insulating material"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the zeroth law of thermodynamics related to?",
+      "options": [
+        "Energy conservation",
+        "Entropy",
+        "Thermal equilibrium",
+        "Enthalpy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "According to the text, when are two systems in thermal equilibrium?",
+      "options": [
+        "When they have the same temperature",
+        "When they are separated by an adiabatic wall",
+        "When they have different temperatures",
+        "When they are in contact through any type of wall"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "If systems A and B are in thermal equilibrium, and systems B and C are in thermal equilibrium, what does the zeroth law imply?",
+      "options": [
+        "Systems A and C are not in thermal equilibrium",
+        "Systems A and C are in thermal equilibrium",
+        "Systems A, B, and C cannot be in thermal equilibrium simultaneously",
+        "The temperatures of A, B, and C are all different"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens to the thermodynamics coordinates when two systems in thermal equilibrium are brought together?",
+      "options": [
+        "They remain unchanged",
+        "They change spontaneously until a new equilibrium is reached",
+        "They become zero",
+        "They oscillate indefinitely"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "When are two systems (A and B) said to be in thermal equilibrium?",
+      "options": [
+        "When they are in contact with each other.",
+        "When they are separately in thermal equilibrium with a third system (C).",
+        "When they have the same temperature.",
+        "When they are separated by a diathermic wall."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Who stated the zeroth law of thermodynamics?",
+      "options": [
+        "James Prescott Joule",
+        "Sadi Carnot",
+        "Rudolf Clausius",
+        "Ralph Fowler"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What does the zeroth law of thermodynamics provide?",
+      "options": [
+        "The concept of entropy",
+        "The concept of internal energy",
+        "The concept of temperature",
+        "The concept of enthalpy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is an isotherm?",
+      "options": [
+        "A line representing a change of state at constant temperature",
+        "A line representing a change of state at constant pressure",
+        "A line representing a change of state at constant volume",
+        "A curve showing the relation between pressure and volume"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does an isotherm represent on a xy diagram?",
+      "options": [
+        "Different states of a system in thermal equilibrium with a single state of another system.",
+        "Different states of a system not in thermal equilibrium.",
+        "The change in temperature of a system.",
+        "The change in pressure of a system."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the significance of corresponding isotherms?",
+      "options": [
+        "They represent the same temperature for different systems.",
+        "They represent different temperatures for the same system.",
+        "They show the change in volume of a system with temperature.",
+        "They illustrate the relationship between pressure and temperature."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What property is common to corresponding isotherms?",
+      "options": [
+        "Pressure",
+        "Volume",
+        "Temperature",
+        "Internal energy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "If a system A is in thermal equilibrium with system B, and system A is also in thermal equilibrium with system C, what does the zeroth law imply?",
+      "options": [
+        "System B and C are not in thermal equilibrium.",
+        "System B and C are in thermal equilibrium.",
+        "System A, B, and C are at different temperatures.",
+        "System A, B, and C have different volumes."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the text, what characterizes a system in thermal equilibrium?",
+      "options": [
+        "Having the same pressure as the surroundings.",
+        "Having the same volume as the surroundings.",
+        "Having the same temperature as the surroundings or another system.",
+        "Having the same internal energy as the surroundings."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the role of a third system (like system C in the text) in establishing thermal equilibrium between two other systems (A and B)?",
+      "options": [
+        "It changes the temperature of systems A and B.",
+        "It acts as a catalyst for heat transfer between A and B.",
+        "It serves as a reference to determine if A and B are at the same temperature.",
+        "It isolates systems A and B from the surroundings."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What are the thermodynamic coordinates for a hydrostatic system?",
+      "options": [
+        "M, C, P, V, T",
+        "P, V, T",
+        "M, C, P",
+        "V, T"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a thermodynamic system, if mass and composition are constant, how many variables are independent?",
+      "options": [
+        "One",
+        "Two",
+        "Three",
+        "Four"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the significance of the equation of state?",
+      "options": [
+        "It defines the relationship between thermodynamic coordinates.",
+        "It determines the equilibrium state of a system.",
+        "It calculates the internal energy of a system.",
+        "It describes the heat transfer in a system."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For an ideal gas, what is the relationship between pressure (P), volume (V), number of moles (n), gas constant (R), and temperature (T)?",
+      "options": [
+        "PV = nRT",
+        "PV = RT",
+        "PV = nT",
+        "P = nRT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of the universal gas constant (R)?",
+      "options": [
+        "8.314 J/mol K",
+        "8.314 cal/mol K",
+        "1.987 J/mol K",
+        "1.987 cal/mol K"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the molar volume (v) defined as?",
+      "options": [
+        "v = V/n",
+        "v = n/V",
+        "v = PV/n",
+        "v = nRT/P"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the main difference between an ideal gas and a real gas?",
+      "options": [
+        "Ideal gases have potential energy, while real gases don't.",
+        "Real gases have intermolecular interactions, while ideal gases don't.",
+        "Ideal gases follow the equation PV=nRT, while real gases don't.",
+        "Real gases have higher kinetic energy than ideal gases."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the equation of state for a Van der Waals gas?",
+      "options": [
+        "(P + a/V^2)(V-b) = RT",
+        "PV = nRT",
+        "P = nRT",
+        "PV = RT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the term 'hydrostatic system' refer to?",
+      "options": [
+        "A system capable of exerting external pressure.",
+        "A system in equilibrium with its surroundings.",
+        "A system with constant volume.",
+        "A system with constant temperature."
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What are the three categories of hydrostatic systems mentioned in the notes?",
+      "options": [
+        "Ideal gas, real gas, plasma",
+        "Solid, liquid, gas",
+        "Pure substance, homogeneous mixture, heterogeneous mixture",
+        "Open system, closed system, isolated system"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What characterizes a 'pure substance'?",
+      "options": [
+        "Single chemical constituent",
+        "Mixture of different chemical constituents",
+        "Same properties in all directions",
+        "Different properties in different directions"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How is a 'homogeneous mixture' defined?",
+      "options": [
+        "Mixture with varying proportions",
+        "Mixture with the same proportions throughout",
+        "Single chemical constituent",
+        "Substance with no definite composition"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a 'heterogeneous mixture'?",
+      "options": [
+        "A mixture with uniform composition",
+        "A mixture with distinct phases",
+        "A pure substance",
+        "A system in equilibrium"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is Absolute Temperature defined as in the text?",
+      "options": [
+        "A temperature scale dependent on the nature of the gas.",
+        "The temperature measured by a mercury thermometer.",
+        "The temperature at which a system is in thermal equilibrium.",
+        "A property that doesn't depend on the nature of the gas, defined by the equation  T=273.16 Con(P→0)(P/P_TP).",
+        "A scalar quantity representing the hotness of an object."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the primary characteristic of a 'Thermoscope' as described in the notes?",
+      "options": [
+        "A device that measures the exact temperature of a system.",
+        "A device used to determine if two systems are in thermal equilibrium.",
+        "A specific type of gas thermometer.",
+        "A device that measures mechanical equilibrium.",
+        "A device that measures chemical equilibrium."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the notes, what is the condition for 'Thermal Equilibrium' between two systems?",
+      "options": [
+        "They have the same pressure.",
+        "They have the same chemical potential.",
+        "They have the same temperature.",
+        "They are in mechanical equilibrium.",
+        "They are in thermodynamic equilibrium."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which equation is used to represent the relationship for defining Absolute Temperature in the text?",
+      "options": [
+        "PV = nRT",
+        "T = 273.16 Con(P→0)(P/P_TP)",
+        "P_TP ∝ 273.16",
+        "P/P_TP = θ/273.16",
+        "1387 - 18 N/m"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the three types of equilibrium that constitute 'Thermodynamic Equilibrium'?",
+      "options": [
+        "Thermal, Pressure, and Volume Equilibrium",
+        "Mechanical, Chemical, and Thermal Equilibrium",
+        "Kinetic, Potential, and Total Energy Equilibrium",
+        "Solid, Liquid, and Gas Equilibrium",
+        "Macroscopic, Microscopic, and Thermodynamic Equilibrium"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the note suggest about the temperature scale based on the ideal gas law?",
+      "options": [
+        "It depends on the specific type of gas used.",
+        "It is independent of the nature of the gas.",
+        "It is only valid at very high pressures.",
+        "It is only valid at very low temperatures.",
+        "It is less accurate than the mercury thermometer."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In the context of the notes, what is 'Mechanical Equilibrium'?",
+      "options": [
+        "A state where there is no temperature difference.",
+        "A state where there is no chemical reaction.",
+        "A state where there is no unbalanced force or torque.",
+        "A state where the system is in thermal equilibrium with the surroundings.",
+        "A state where the pressure is constant throughout the system."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the 'Gas Thermometer' based on, according to the provided text?",
+      "options": [
+        "Ideal gas equation",
+        "Mercury's thermal expansion",
+        "Chemical reactions",
+        "Mechanical forces",
+        "Vapor pressure"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the significance of the triple point of water (P_TP) in the context of absolute temperature measurement?",
+      "options": [
+        "It's a reference point for temperature scales.",
+        "It's the point where water exists in three phases.",
+        "It's used to calibrate gas thermometers.",
+        "All of the above.",
+        "None of the above."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What are the thermodynamic coordinates for a hydrostatic system?",
+      "options": [
+        "M, C, P, V, T",
+        "P, V, T",
+        "M, C, P",
+        "V, T",
+        "M, C"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the condition for specifying thermodynamic coordinates?",
+      "options": [
+        "System must be in thermal equilibrium",
+        "System must be in mechanical equilibrium",
+        "System must be in chemical equilibrium",
+        "System must be in thermodynamic equilibrium",
+        "System must be in a steady state"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the equation of state?",
+      "options": [
+        "A mathematical relation connecting thermodynamic coordinates",
+        "A relation defining thermodynamic equilibrium",
+        "An equation for ideal gases only",
+        "An equation independent of temperature",
+        "A relation between mass and volume"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the ideal gas equation?",
+      "options": [
+        "PV = nRT",
+        "PV = RT",
+        "PV = nRT^2",
+        "PV^2 = nRT",
+        "P^2V = nRT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the value of the universal gas constant (R)?",
+      "options": [
+        "8.314 J/mol K",
+        "8.314 J/K",
+        "8.314 J mol/K",
+        "8.314 mol K/J",
+        "8.314 J K/mol"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the Van der Waals equation?",
+      "options": [
+        "(P + a/V^2)(V - b) = RT",
+        "(P + a/V)(V - b) = RT",
+        "(P + a/V^2)(V - b) = nRT",
+        "(P + a/V)(V - b) = nRT",
+        "PV = nRT"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a hydrostatic system?",
+      "options": [
+        "A system capable of exerting external pressure",
+        "A system in gravitational field",
+        "A system with electric and magnetic energies",
+        "A system at constant temperature",
+        "A system at constant volume"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How are hydrostatic systems categorized in the text?",
+      "options": [
+        "Into 2 types",
+        "Into 3 types",
+        "Into 4 types",
+        "Into ideal and real systems",
+        "Into open and closed systems"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the categories of hydrostatic systems mentioned?",
+      "options": [
+        "Ideal, real and complex",
+        "Open, closed and isolated",
+        "Pure substance, homogeneous mixture and heterogeneous mixture",
+        "Solid, liquid and gas",
+        "Isothermal, adiabatic and isobaric"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is a homogeneous mixture?",
+      "options": [
+        "A mixture with varying properties",
+        "A mixture with same properties throughout",
+        "A mixture of only two substances",
+        "A mixture that is not uniform",
+        "A pure substance"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are the three coordinates used to describe a hydrostatic system?",
+      "options": [
+        "Temperature, Volume, Pressure",
+        "Mass, Volume, Temperature",
+        "Pressure, Volume, Density",
+        "Enthalpy, Entropy, Pressure",
+        "Internal Energy, Volume, Temperature"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the differential equation for dV (change in Volume) in terms of dT (change in Temperature) and dP (change in Pressure)?",
+      "options": [
+        "dV = (∂V/∂T)_P dT + (∂V/∂P)_T dP",
+        "dV = (∂V/∂T)_V dT + (∂V/∂P)_T dP",
+        "dV = (∂V/∂T)_P dT - (∂V/∂P)_T dP",
+        "dV = (∂V/∂P)_T dP - (∂V/∂T)_P dT",
+        "dV = (∂V/∂T) dT + (∂V/∂P) dP"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What are Intensive variables?",
+      "options": [
+        "Variables dependent on the amount of substance",
+        "Variables whose value changes when the system is divided",
+        "Variables independent of the amount of substance",
+        "Variables that are always constant",
+        "Variables that describe the state of a system"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of the following is an example of an Intensive variable?",
+      "options": [
+        "Volume",
+        "Mass",
+        "Temperature",
+        "Energy",
+        "Number of moles"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What are Extensive variables?",
+      "options": [
+        "Variables independent of the amount of substance",
+        "Variables whose value remains the same when the system is divided",
+        "Variables dependent on the amount of substance",
+        "Variables that are always changing",
+        "Variables that cannot be measured"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which of the following is an example of an Extensive variable?",
+      "options": [
+        "Temperature",
+        "Pressure",
+        "Density",
+        "Volume",
+        "Specific heat"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the formula for the average coefficient of volume expansion (β)?",
+      "options": [
+        "β = (change in volume) / (original volume * change in temperature)",
+        "β = (change in volume) / (change in temperature)",
+        "β = (change in temperature) / (original volume * change in volume)",
+        "β = (original volume * change in temperature) / (change in volume)",
+        "β = (∂V/∂T)_P / V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the formula for the average Bulk modulus (B)?",
+      "options": [
+        "B = -V (∂P/∂V)_T",
+        "B = V (∂P/∂V)_T",
+        "B = -(∂P/∂V)_T / V",
+        "B = (∂P/∂V)_T / V",
+        "B = -V (∂V/∂P)_T"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the relationship between Isothermal compressibility (κ) and Bulk modulus (B)?",
+      "options": [
+        "κ = 1/B",
+        "κ = B",
+        "κ = -B",
+        "κ = B^2",
+        "κ = 1/B^2"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "If 1 mole of water (H₂O) is considered, what is its mass approximately?",
+      "options": [
+        "18 g",
+        "100 g",
+        "22.4 g",
+        "6.022 x 10^23 g",
+        "1 g"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the nature of the states a system passes through in a thermodynamic process?",
+      "options": [
+        "States of non-equilibrium",
+        "States of partial equilibrium",
+        "States of thermodynamic equilibrium",
+        "States of constant temperature",
+        "States of constant pressure"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In a spontaneous system, is work done by or on the system?",
+      "options": [
+        "Work is done by the system",
+        "Work is done on the system",
+        "No work is done",
+        "Work is always positive",
+        "Work is always negative"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the indicator diagram or P-V diagram represent?",
+      "options": [
+        "The change in temperature with volume",
+        "The change in pressure with temperature",
+        "The state of a system with pressure and volume",
+        "The internal energy of the system",
+        "The enthalpy of the system"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the formula for work done (dW) in terms of pressure (P) and change in volume (dV)?",
+      "options": [
+        "dW = P dV",
+        "dW = V dP",
+        "dW = P + dV",
+        "dW = V + dP",
+        "dW = PdP"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does the area under the curve in a P-V diagram represent?",
+      "options": [
+        "Internal energy",
+        "Enthalpy",
+        "Work done",
+        "Heat transfer",
+        "Entropy"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In the given diagram, what does the process from (P₁, V₁) to (P₂, V₂) represent?",
+      "options": [
+        "Isothermal process",
+        "Adiabatic process",
+        "Isobaric process",
+        "Expansion",
+        "Compression"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "If work (W) is positive, what does it indicate about the work done?",
+      "options": [
+        "Work is done by the system",
+        "Work is done on the system",
+        "No work is done",
+        "System is expanding",
+        "System is compressing"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "If work (W) is negative, what does it indicate about the work done?",
+      "options": [
+        "Work is done by the system",
+        "Work is done on the system",
+        "No work is done",
+        "System is expanding",
+        "System is compressing"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In engineering textbooks, what concept does the work done in a P-V diagram relate to?",
+      "options": [
+        "Efficiency of a cycle",
+        "Heat transfer in a process",
+        "Area under the curve",
+        "Change in internal energy",
+        "Entropy generation"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In the given context, what is the expression for the total work done (W) during a process?",
+      "options": [
+        "W = P(V₂ - V₁)",
+        "W = ∫(from V₁ to V₂) P dV",
+        "W = PΔV",
+        "W = P₁V₁ - P₂V₂",
+        "W = nRT ln(V₂/V₁)"
+      ],
+      "correct": 1
+    }
+  ]
+}
