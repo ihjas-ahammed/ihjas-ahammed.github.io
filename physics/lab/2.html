@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Half Wave Rectifier Lab Exercise</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #24292e;
+        }
+        
+        .header {
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1, h2, h3 {
+            color: #1b1f23;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .experiment-box {
+            background-color: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #e1e4e8;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f6f8fa;
+        }
+        
+        .waveform {
+            text-align: center;
+            margin: 2rem 0;
+        }
+        
+        .components-list {
+            background-color: #f1f8ff;
+            border: 1px solid #c8e1ff;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Experiment 2: Half Wave Rectifier</h1>
+    </div>
+
+    <div class="experiment-box">
+        <h2>Objectives</h2>
+        <ol>
+            <li>To construct a half wave rectifier</li>
+            <li>To observe input/output waveforms with and without filter capacitors using CRO</li>
+            <li>To measure voltages and calculate ripple factor</li>
+            <li>To analyze ripple factor variation with different filter capacitor values at fixed load resistance</li>
+        </ol>
+    </div>
+
+    <h2>Components Required</h2>
+    <div class="components-list">
+        <ul>
+            <li>Transformer (6V-0-6V)</li>
+            <li>Diode 1N4007</li>
+            <li>Filter Capacitors:
+                <ul>
+                    <li>4.7μF</li>
+                    <li>10μF</li>
+                    <li>47μF</li>
+                    <li>100μF</li>
+                </ul>
+            </li>
+            <li>Decade Resistance Box</li>
+            <li>AC & DC Voltmeters</li>
+            <li>Digital Multimeter</li>
+            <li>CRO (Cathode Ray Oscilloscope)</li>
+        </ul>
+    </div>
+
+    <h2>Circuit Diagram</h2>
+    <div class="waveform">
+        <pre class="mermaid">
+        graph LR
+            A[230V AC] --> B[Transformer 230/6V]
+            B --> C[Diode]
+            C --> D[Filter Capacitor]
+            D --> E[Load Resistor]
+            D --> F[Output]
+            E --> F
+        </pre>
+    </div>
+
+    <h2>CRO Settings and Measurements</h2>
+    <div class="experiment-box">
+        <table>
+            <tr>
+                <th>Parameter</th>
+                <th>Value</th>
+            </tr>
+            <tr>
+                <td>Volts/Division</td>
+                <td>________ V/div</td>
+            </tr>
+            <tr>
+                <td>Time/Division</td>
+                <td>________ ms/div</td>
+            </tr>
+            <tr>
+                <td>Peak Voltage</td>
+                <td>________ V</td>
+            </tr>
+            <tr>
+                <td>Frequency</td>
+                <td>________ Hz</td>
+            </tr>
+            <tr>
+                <td>Input AC Voltage</td>
+                <td>________ V</td>
+            </tr>
+        </table>
+    </div>
+
+    <h2>Observations Without Filter</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Load Resistance (Ω)</th>
+                <th>Vac (V)</th>
+                <th>Vdc (V)</th>
+                <th>Ripple Factor (γ = Vac/Vdc)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>100</td><td></td><td></td><td></td></tr>
+            <tr><td>500</td><td></td><td></td><td></td></tr>
+            <tr><td>1000</td><td></td><td></td><td></td></tr>
+            <tr><td>1500</td><td></td><td></td><td></td></tr>
+            <tr><td>2000</td><td></td><td></td><td></td></tr>
+            <tr><td colspan="3">Mean Ripple Factor (γ)</td><td></td></tr>
+        </tbody>
+    </table>
+
+    <h2>Observations With Filter (RL = 100Ω)</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Capacitance (μF)</th>
+                <th>Vac (V)</th>
+                <th>Vdc (V)</th>
+                <th>Ripple Factor (γ = Vac/Vdc)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>4.7</td><td></td><td></td><td></td></tr>
+            <tr><td>10</td><td></td><td></td><td></td></tr>
+            <tr><td>47</td><td></td><td></td><td></td></tr>
+            <tr><td>100</td><td></td><td></td><td></td></tr>
+        </tbody>
+    </table>
+
+    <h2>Expected Waveforms</h2>
+    <div class="experiment-box">
+        <div style="text-align: center;">
+            <svg width="400" height="200" viewBox="0 0 400 200">
+                <!-- Input AC Waveform -->
+                <path d="M 0,100 Q 50,20 100,100 Q 150,180 200,100 Q 250,20 300,100 Q 350,180 400,100" 
+                      fill="none" stroke="blue" stroke-width="2"/>
+                <!-- Half-Wave Rectified Output -->
+                <path d="M 0,100 Q 50,20 100,100 L 200,100 Q 250,20 300,100 L 400,100" 
+                      fill="none" stroke="red" stroke-width="2" transform="translate(0,50)"/>
+                <text x="10" y="20">Input vs Output Waveforms</text>
+                <text x="10" y="40" fill="blue">— Input AC</text>
+                <text x="10" y="60" fill="red">— Rectified Output</text>
+            </svg>
+        </div>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+        });
+    </script>
+</body>
+</html>

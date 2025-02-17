@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Photodiode Characteristics Lab Exercise</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem;
+            color: #24292e;
+        }
+        
+        .header {
+            border-bottom: 1px solid #e1e4e8;
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        h1, h2, h3 {
+            color: #1b1f23;
+            margin-top: 24px;
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .experiment-box {
+            background-color: #f6f8fa;
+            border: 1px solid #e1e4e8;
+            border-radius: 6px;
+            padding: 16px;
+            margin-bottom: 16px;
+        }
+        
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        
+        th, td {
+            border: 1px solid #e1e4e8;
+            padding: 8px;
+            text-align: left;
+        }
+        
+        th {
+            background-color: #f6f8fa;
+        }
+        
+        .evaluation {
+            background-color: #f1f8ff;
+            border: 1px solid #c8e1ff;
+            border-radius: 6px;
+            padding: 16px;
+            margin: 1rem 0;
+        }
+        
+        .circuit-diagram {
+            text-align: center;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Experiment 1B: Photodiode Characteristics</h1>
+    </div>
+
+    <div class="experiment-box">
+        <h2>Objectives</h2>
+        <ol>
+            <li>To study I-V characteristics of photodiode</li>
+            <li>To determine the power responsivity by analyzing photocurrent variations with respect to:
+                <ul>
+                    <li>Reverse voltage</li>
+                    <li>Light intensity</li>
+                </ul>
+            </li>
+        </ol>
+    </div>
+
+    <h2>Circuit Diagram</h2>
+    <div class="circuit-diagram">
+        <pre class="mermaid">
+        graph LR
+            A[Battery] --> B[Rheostat and Resistor]
+            B --> C[Ammeter]
+            C --> E[Photodiode]
+            B --> D[Voltmeter]
+            D -->|parallel| E
+            E --> A
+        </pre>
+    </div>
+
+    <h2>Experimental Procedure</h2>
+    <ol>
+        <li>Set up the circuit as shown in the diagram above</li>
+        <li>For I-V Characteristics:
+            <ul>
+                <li>Vary voltage from 0.1V to 2.5V in steps</li>
+                <li>Record corresponding current readings</li>
+                <li>Repeat for different LED power levels (10mW, 21mW)</li>
+            </ul>
+        </li>
+        <li>For Power Responsivity:
+            <ul>
+                <li>Maintain constant voltage (-2V)</li>
+                <li>Vary LED power from 10mW to 30mW</li>
+                <li>Record photocurrent readings</li>
+            </ul>
+        </li>
+    </ol>
+
+    <h2>Data Tables</h2>
+    <h3>Table 1: I-V Characteristics</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>VPD (Volts)</th>
+                <th>IPD (μA) at PLED = 10mW</th>
+                <th>IPD (μA) at PLED = 21mW</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>0</td><td></td><td></td></tr>
+            <tr><td>-0.1</td><td></td><td></td></tr>
+            <tr><td>-0.2</td><td></td><td></td></tr>
+            <tr><td>-0.3</td><td></td><td></td></tr>
+            <tr><td>-0.4</td><td></td><td></td></tr>
+            <tr><td>-0.5</td><td></td><td></td></tr>
+            <tr><td>-1.0</td><td></td><td></td></tr>
+            <tr><td>-1.5</td><td></td><td></td></tr>
+            <tr><td>-2.0</td><td></td><td></td></tr>
+            <tr><td>-2.5</td><td></td><td></td></tr>
+        </tbody>
+    </table>
+
+    <h3>Table 2: Photocurrent vs. LED Intensity (VPD = -2V)</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>PLED (mW)</th>
+                <th>IPD (μA)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>10</td><td></td></tr>
+            <tr><td>11</td><td></td></tr>
+            <tr><td>12</td><td></td></tr>
+            <tr><td>13</td><td></td></tr>
+            <tr><td>14</td><td></td></tr>
+            <tr><td>15</td><td></td></tr>
+            <tr><td>18</td><td></td></tr>
+            <tr><td>21</td><td></td></tr>
+            <tr><td>24</td><td></td></tr>
+            <tr><td>30</td><td></td></tr>
+        </tbody>
+    </table>
+
+    <h2>Calculations</h2>
+    <div class="experiment-box">
+        <p><strong>Power Responsivity</strong> = ΔIPD / ΔPLED</p>
+        <p>Where:</p>
+        <ul>
+            <li>ΔIPD = Change in photodiode current (A)</li>
+            <li>ΔPLED = Change in LED power (W)</li>
+        </ul>
+    </div>
+
+    <h2>Evaluation Scheme</h2>
+    <div class="evaluation">
+        <table>
+            <tr>
+                <th>Component</th>
+                <th>Marks</th>
+            </tr>
+            <tr>
+                <td>Circuit diagram details and formula</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>Experiment setting</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Observation, Tabulation and Performance</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td>Calculation, Graphs and Results</td>
+                <td>30</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>100</strong></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        mermaid.initialize({
+            startOnLoad: true,
+            theme: 'default',
+            securityLevel: 'loose',
+        });
+    </script>
+</body>
+</html>
