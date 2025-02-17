@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diode Characteristics Lab Exercise</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mermaid/10.6.1/mermaid.min.js"></script>
+    <script type="text/javascript" async 
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-mml-chtml.js">
+    </script>
     <style>
         :root {
             --color-canvas-default: #ffffff;
@@ -108,122 +110,22 @@
         <div class="container">
             <h2>Circuit Diagram</h2>
             <div class="circuit-diagram">
-                <pre class="mermaid">
-                graph LR
-                    A[Battery] --> B[Rheostat and Resistor]
-                    B --> C[Ammeter]
-                    C --> E[Diode]
-                    B --> D[Voltmeter]
-                    D -->|parallel| E
-                    E --> A
-                </pre>
+                <img src="1A.1.PNG" alt="Circuit Diagram" width="80%">
             </div>
         </div>
 
         <div class="container">
             <h2>Principle</h2>
             <p>The diode equation governing the behavior is:</p>
-            <p>I = I₀(e^(qV/nkT) - 1) = I₀(e^(V/nVT) - 1)</p>
+            <p>\[ I = I_0 \left(e^{\frac{qV}{nkT}} - 1\right) = I_0 \left(e^{\frac{V}{nV_T}} - 1\right) \]</p>
             <p>Where:</p>
             <ul>
-                <li>I₀ = Reverse Saturation Current</li>
-                <li>n = Ideality Factor</li>
-                <li>VT = (kT/q) = 26 mV</li>
-                <li>n = (q/kT) × Slope = (1/VT) × Slope</li>
+                <li>\( I_0 \) = Reverse Saturation Current</li>
+                <li>\( n \) = Ideality Factor</li>
+                <li>\( V_T = \frac{kT}{q} = 26 \text{ mV} \)</li>
+                <li>\( n = \frac{q}{kT} \times \text{Slope} = \frac{1}{V_T} \times \text{Slope} \)</li>
             </ul>
-        </div>
-
-        <div class="container">
-            <h2>Observation Tables</h2>
-            
-            <h3>1. Forward Characteristics - Si Diode (IN 4007)</h3>
-            <table>
-                <tr>
-                    <th>Diode Voltage (V)</th>
-                    <th>Diode Current (mA)</th>
-                </tr>
-                <tr><td></td><td></td></tr>
-            </table>
-
-            <h3>2. Forward Characteristics - Ge Diode (OA 79)</h3>
-            <table>
-                <tr>
-                    <th>Diode Voltage (V)</th>
-                    <th>Diode Current (mA)</th>
-                </tr>
-                <tr><td></td><td></td></tr>
-            </table>
-
-            <h3>3. Reverse Characteristics - Ge Diode (OA 79)</h3>
-            <table>
-                <tr>
-                    <th>Diode Voltage (V)</th>
-                    <th>Diode Current (μA)</th>
-                </tr>
-                <tr><td></td><td></td></tr>
-            </table>
-        </div>
-
-        <div class="container">
-            <h2>Calculations</h2>
-            <h3>Silicon Diode</h3>
-            <ul>
-                <li>Knee Voltage = _____ V</li>
-                <li>ΔV = _____ V</li>
-                <li>ΔI = _____ mA</li>
-                <li>Forward resistance (rd) = ΔV/ΔI = _____ Ω</li>
-                <li>Ideality Factor = _____</li>
-            </ul>
-
-            <h3>Germanium Diode</h3>
-            <ul>
-                <li>Knee Voltage = _____ V</li>
-                <li>ΔV = _____ V</li>
-                <li>ΔI = _____ mA</li>
-                <li>Forward resistance (rd) = ΔV/ΔI = _____ Ω</li>
-                <li>Ideality Factor = _____</li>
-                <li>Reverse Saturation Current = _____ μA</li>
-                <li>Reverse Resistance = _____ Ω</li>
-            </ul>
-        </div>
-
-        <div class="evaluation">
-            <h2>Evaluation Scheme</h2>
-            <table>
-                <tr>
-                    <th>Component</th>
-                    <th>Marks</th>
-                </tr>
-                <tr>
-                    <td>Circuit diagram details and formula</td>
-                    <td>10</td>
-                </tr>
-                <tr>
-                    <td>Experiment setting</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>Observation, Tabulation and Performance</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <td>Calculation, Graphs and Results</td>
-                    <td>30</td>
-                </tr>
-                <tr>
-                    <th>Total</th>
-                    <th>100</th>
-                </tr>
-            </table>
         </div>
     </div>
-
-    <script>
-        mermaid.initialize({
-            startOnLoad: true,
-            theme: 'default',
-            securityLevel: 'loose',
-        });
-    </script>
 </body>
 </html>
