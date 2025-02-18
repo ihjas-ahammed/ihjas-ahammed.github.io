@@ -297,4 +297,4 @@ plt.show()
 
 Similarly you can create box plot using ```sns.boxplot()``` function
 
-<a href="mod2.2.html">Next part </a>
+<a href="mod2.2.html">Next part (Same module) </a>

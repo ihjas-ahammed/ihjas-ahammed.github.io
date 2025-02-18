@@ -126,3 +126,29 @@ Remove missing value rows:
 df = df.dropna()
 ```
 
+### Using filna
+
+```python
+df['column_name'] =filna(replace_with,inplace=True)
+```
+
+eg: Here age is replaced with mean
+
+```python
+df['Age'] = filna(df['Age'].mean(),inplace=True)
+```
+
+### Removing outliers using z-score
+
+
+```python
+# Import modules
+from scipy import stats
+import numpy as np
+# find z_score with columns needed (Here age only)
+z_score =np.abs(stats.z_score(df[['Age']]))
+
+# get cleaned df by limiting z_score by 3 (or any other number)
+df_cleaned = df[(z_score < 3).all(axios = 1)]
+
+```

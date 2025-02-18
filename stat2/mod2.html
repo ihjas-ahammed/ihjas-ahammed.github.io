@@ -1,141 +1,85 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Continuous Random Variables and Their Probability Distributions</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                inlineMath: [['$','$'], ['\\(','\\)']],
-                displayMath: [['$$','$$'], ['\\[','\\]']],
-                processEscapes: true
-            }
-        });
-    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exploratory Data Analysis</title>
+    <!-- GitHub Markdown CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
+    <!-- KaTeX CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.css"
+        integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib" crossorigin="anonymous">
+    <!-- Showdown -->
+    <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+    <!-- The loading of KaTeX is deferred to speed up page rendering -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
+        integrity="sha384-Rma6DA2IPUwhNxmrB/7S3Tno0YY7sFu9WSYMCuulLhIqYSGZ2gKCJWIqhBWqMQfh"
+        crossorigin="anonymous"></script>
+
+    <!-- To automatically render math in text elements, include the auto-render extension: -->
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/contrib/auto-render.min.js"
+        integrity="sha384-hCXGrW6PitJEwbkoStFjeJxv+fSOOQKOPbJxSfM6G5sWZjAyWhXiTIIAmQqnlLlh" crossorigin="anonymous"
+        onload="renderMathInElement(document.body);"></script>
+    <!-- Highlight.js for Code Syntax Highlighting -->
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <style>
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.6;
-            max-width: 800px;
-            margin: 0 auto;
+            background: #282d32;
             padding: 20px;
+            display: flex;
+            color:#fff;
+            justify-content: center;
         }
-        h1, h2, h3 { color: #333; }
-        .theorem {
-            margin: 1em 0;
-            padding: 1em;
-            background: #f8f9fa;
-            border-left: 4px solid #007bff;
+
+        .markdown-body {
+            max-width: 100%;
+            padding: 30px;
+            background: rgb(0, 0, 0);
+            color:#fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
+
 <body>
-    <h1>Continuous Random Variables and Their Probability Distributions</h1>
+    <article id="content" class="markdown-body"></article>
+    <script>
+        // Custom Showdown extension for KaTeX rendering, supporting inline math like $x$
+        
+        // Fetch and render Markdown with KaTeX math rendering
+        fetch("mod2.md") // Replace with your Markdown file path
+            .then(response => response.text())
+            .then(md => {
+                let converter = new showdown.Converter({
+                    tables: true,
+                    ghCodeBlocks: true,
+                    tasklists: true,
+                    literalMidWordUnderscores: true,
+                    extensions: []
+                });
+                document.getElementById("content").innerHTML = converter.makeHtml(md);
+                document.querySelectorAll("pre code").forEach(block => hljs.highlightElement(block));
+                renderMathInElement(document.body, {
+                        // customised options
+                        // • auto-render specific keys, e.g.:
+                        delimiters: [
+                            { left: '$$', right: '$$', display: true },
+                            { left: '$', right: '$', display: false },
+                            { left: '\\(', right: '\\)', display: false },
+                            { left: '\\[', right: '\\]', display: true }
+                        ],
+                        // • rendering keys, e.g.:
+                        throwOnError: false
+                    });
+            });
 
-    <h2>Continuous Random Variables</h2>
-    <p>Random variables which can assume infinite number of values from an interval of the form [a,b], e.g.: Height, Temperature, Weight etc.</p>
-
-    <h2>Probability Density Function</h2>
-    <p>$p(x \leq X \leq x+dx) = f(x) dx$ is the PDF for a continuous random variable $x$</p>
-
-    <p>It satisfies:</p>
-    <ul>
-        <li>$f(x) \geq 0$ for all $x$</li>
-        <li>$$\int_{-\infty}^{\infty} f(x) dx = 1$$</li>
-    </ul>
-
-    <h3>Result 1</h3>
-    <div class="theorem">
-        $$p(a \leq x \leq b) = p(a \leq x < b) = p(a < x < b) = \int_{a}^{b} f(x) dx$$
-    </div>
-
-    <h3>Result 2</h3>
-    <div class="theorem">
-        $$p(x = a) = 0$$
-    </div>
-
-    <h2>Distribution Function</h2>
-    <div class="theorem">
-        $$F_x(x) = p(X \leq x) = \int_{-\infty}^{x} f(t) dt$$
-    </div>
-
-    <h2>Moments of Continuous Probability Distribution</h2>
-
-    <h3>Arithmetic Mean</h3>
-    <div class="theorem">
-        $$E(x) = \int_{-\infty}^{\infty} xf(x)dx$$
-    </div>
-
-    <h3>Median</h3>
-    <div class="theorem">
-        $$\int_{-\infty}^{M} f(x)dx = \frac{1}{2} = \int_{M}^{\infty} f(x)dx$$
-    </div>
-
-    <p>$M$ is determined by solving the equation $f'(x) = 0$ and verifying whether $f''(x) < 0$ at mode</p>
-
-    <h3>r<sup>th</sup> Central Moment</h3>
-    <div class="theorem">
-        $$\mu_r = \int_{-\infty}^{\infty} (x-E(x))^r f(x)dx$$
-    </div>
-
-    <h3>Variance as 2<sup>nd</sup> Central Moment</h3>
-    <div class="theorem">
-        $$\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2 f(x)dx$$
-    </div>
-
-    <h3>Quartiles</h3>
-    <div class="theorem">
-        $$\int_{-\infty}^{Q_1} f(x) dx = \frac{1}{4}$$
-        $$\int_{-\infty}^{Q_3} f(x) dx = \frac{3}{4}$$
-    </div>
-    <h2>Rectangular Distributions</h2>
-    <div class="theorem">
-        $$\ f(x) = \begin{cases} \frac{1}{b-a} & a\leq x \leq b \\ 0 & otherwise\end{cases}$$
-    </div>
-    <p>
-        Here a and b are parameters
-    </p>
-    <h3>Mean</h3>
-    <div class="theorem">
-    $$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{a+b} 2$$
-    </div>
-    <h3>Variance</h3>
-    <div class="theorem">
-    $$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{(a-b)^2} 2 $$
-    </div>
-    
-    
-    <h2>Exponential Distribution</h2>
-    <div class="theorem">
-        $$\ f(x) = \theta e^{-\theta x}$$
-    </div>
-    <p>
-        Here $\theta$ is a parameter 
-    </p>
-    <h3>Mean</h3>
-    <div class="theorem">
-    $$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{1} \theta$$
-    </div>
-    <h3>Variance</h3>
-    <div class="theorem">
-    $$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{1} {{\theta}^2} $$
-    </div>
-    <h2>Normal Distribution</h2>
-    $x \to N(\mu,\sigma)$
-    <div class="theorem">
-        $$\ f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{\frac{-(x-\mu)^2}{2{\sigma}^2}}$$
-    </div>
-    <p>
-        Here $\sigma,\mu$ are parameters
-    </p>
-    <h3>Mean</h3>
-    <div class="theorem">
-    $$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{1} \theta$$
-    </div>
-    <h3>Variance</h3>
-    <div class="theorem">
-    $$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{1} {{\theta}^2} $$
-    </div> 
+    </script>
 
 </body>
+
 </html>
