@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,  initial-scale=1.0">
   <title>Notes</title>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-analytics-compat.js"></script>
   <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe  UI', Roboto, sans-serif;
@@ -171,6 +173,29 @@
       </div>
     </div>
   </div>
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyAnjWWep4dtxvn1YKtmdU7A002X2NAvlX0",
+      authDomain: "data-science-ef878.firebaseapp.com",
+      databaseURL: "https://data-science-ef878-default-rtdb.firebaseio.com",
+      projectId: "data-science-ef878",
+      storageBucket: "data-science-ef878.firebasestorage.app",
+      messagingSenderId: "1010841233830",
+      appId: "1:1010841233830:web:e7aa0b516ace71c1720767",
+      measurementId: "G-FL7XZR6X7Q"
+    };
+
+    // Initialize Firebase and Analytics (inside the load event)
+    window.addEventListener('load', () => {
+      firebase.initializeApp(firebaseConfig);
+      const analytics = firebase.analytics();
+
+      analytics.logEvent('page_view');
+      console.log("Automatic page_view event logged.");
+
+
+    });
+  </script>
 </body>
 
 </html>
