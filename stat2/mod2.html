@@ -52,7 +52,7 @@
         // Custom Showdown extension for KaTeX rendering, supporting inline math like $x$
         
         // Fetch and render Markdown with KaTeX math rendering
-        fetch("mod2.md") // Replace with your Markdown file path
+        fetch("mod2") // Replace with your Markdown file path
             .then(response => response.text())
             .then(md => {
                 let converter = new showdown.Converter({
