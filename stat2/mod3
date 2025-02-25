@@ -1,0 +1,37 @@
+# 3rd Module - Correlation and Regression
+
+## Correlation
+
+Correlation is a statistical measure for finding out the degree of association or relationship between 2 variables. By association, we mean the tendency of the variables to move together. Correlation is said to be:
+
+1. **Positive (+ve) Correlation**: If the movements of the two variables are in the same direction, then the two variables are said to be +ve. For example, height and weight.
+
+2. **Negative (-ve) Correlation**: If the change of the two variables are in the opposite direction, then the correlation is said to be -ve. For example, pressure and volume.
+
+3. **No Correlation (0)**: If the change of the variables are not related, then the correlation is said to be 0 or no correlation.
+
+### Correlation Coefficient (r)
+The correlation coefficient (r) measures the degree of linear relationship between two variables. It lies between -1 and +1, represented as $$-1 ≤ r ≤ +1$$
+
+
+
+# Methods for Finding Correlation
+
+Correlation between two variables may be determined by any of the following methods:
+
+1. Scatter Diagram method or Karl Pearson's covariance method
+2. Spearman's Rank method
+
+## Scatter Diagram
+
+It is the diagrammatic representation of the existence of correlation between two variables. Statistical data relating simultaneous movements of variables can be represented by points or dots. One of the variables $X$ is shown along the $x$-axis and the other along the $y$-axis. Pairs of values of $x$ and $y$ are shown by points along the $x$-$y$ plane.
+
+The scatter diagram of these points also reveals the direction and strength of correlation between two variables.
+
+### Examples of Perfect Correlation
+- Perfect +ve correlation: $r = +1$
+- Perfect -ve correlation: $r = -1$
+
+Search for "scatter-plot-negative-correlation"
+"scatter-plot-positive-correlation"
+"scatter-plot-zero-correlation"
