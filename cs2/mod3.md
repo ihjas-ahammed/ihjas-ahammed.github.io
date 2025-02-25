@@ -152,3 +152,15 @@ z_score =np.abs(stats.z_score(df[['Age']]))
 df_cleaned = df[(z_score < 3).all(axios = 1)]
 
 ```
+## Data Reduction: Dimensionality Reduction
+- Reducing the number of features in a dataset while retaining most of its key information.
+- Benefits: Removes noise, speeds up processing, aids visualization, and prevents overfitting.
+
+### Principal Component Analysis (PCA)
+- A technique to reduce dimensions by creating new features called **principal components**.
+- **Process**:  
+  - Standardize data (mean = 0, variance = 1).  
+  - Identify principal components (directions of maximum variance).  
+  - Project data onto these components to reduce dimensions.  
+- **Key Idea**: Keeps the most variance (important patterns) and discards noise.  
+- **Use Case**: High-dimensional, correlated data for machine learning or visualization.
