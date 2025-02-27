@@ -15,14 +15,14 @@ The correlation coefficient (r) measures the degree of linear relationship betwe
 
 
 
-# Methods for Finding Correlation
+## Methods for Finding Correlation
 
 Correlation between two variables may be determined by any of the following methods:
 
 1. Scatter Diagram method or Karl Pearson's covariance method
 2. Spearman's Rank method
 
-## Scatter Diagram
+### Scatter Diagram
 
 It is the diagrammatic representation of the existence of correlation between two variables. Statistical data relating simultaneous movements of variables can be represented by points or dots. One of the variables $X$ is shown along the $x$-axis and the other along the $y$-axis. Pairs of values of $x$ and $y$ are shown by points along the $x$-$y$ plane.
 
@@ -36,3 +36,37 @@ The scatter diagram of these points also reveals the direction and strength of c
 Search for "scatter-plot-negative-correlation"
 "scatter-plot-positive-correlation"
 "scatter-plot-zero-correlation"
+
+## Angle b/w two regression lines
+
+# Regression Equation of y on x
+
+We know that the regression equation of y on x is:
+
+$$ y - \bar{y} = b_{yx} (x - \bar{x}) $$
+
+where $ b_{yx} $ is the slope of the line, $ m_1 = \frac{\sigma_y}{\sigma_x} = b_{yx} $
+
+## Regression Equation of Line x on y
+
+The regression equation of line x on y is:
+
+$$ x - \bar{x} = b_{xy} (y - \bar{y}) $$
+
+where $ b_{xy} $ is the slope of the line, the reciprocal of the slope of the line, i.e.,
+
+$$ \frac{1}{m_1} = \frac{\sigma_x}{\sigma_y} = b_{xy} $$
+
+# Angle Between Lines of Regression
+
+If $ \theta $ is the angle between the two lines of regression, then:
+
+$$ \tan \theta = \frac{m_1 - m_2}{1 + m_1 m_2} $$
+
+$$ tan(\theta) = \left(\frac{1 - r^2}{|r|} \cdot \frac{|\sigma_y\sigma_x|}{\sigma_x^2 + \sigma_y^2}\right) $$
+
+# Lines of Regression and Correlation
+
+If the two variables are uncorrelated, the lines of regression become perpendicular to each other.
+
+If $ r = \pm 1 $, then $ \theta = 0 $ or $ 180^\circ $, and the regression lines coincide.

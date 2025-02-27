@@ -1,57 +1,57 @@
 /* Root variables - Material You Colors and more */
 :root {
-    /* Primary Colors */
-    --md-primary: #006A6A;
-    --md-on-primary: #FFFFFF;
-    --md-primary-container: #6FF7F7;
-    --md-on-primary-container: #002020;
+    /* Primary Colors (Darkened for dark-white theme) */
+    --md-primary: #004040; /* Darker teal */
+    --md-on-primary: #F5F6F5; /* Light white for contrast */
+    --md-primary-container: #4DB6AC; /* Softer teal for hover states */
+    --md-on-primary-container: #FFFFFF;
 
     /* Secondary Colors */
-    --md-secondary: #4A6363;
+    --md-secondary: #37474F;
     --md-on-secondary: #FFFFFF;
-    --md-secondary-container: #CCE8E8;
-    --md-on-secondary-container: #041F1F;
+    --md-secondary-container: #B0BEC5;
+    --md-on-secondary-container: #102027;
 
-    /* Surface Colors */
-    --md-surface: #FAFDFC;
-    --md-on-surface: #191C1C;
-    --md-surface-container: #F2FAF9;
-    --md-surface-variant: #DAE4E4;
-    --md-on-surface-variant: #3F4949;
+    /* Surface Colors (Lighter whites for content) */
+    --md-surface: #FFFFFF; /* Pure white for main content */
+    --md-on-surface: #212121; /* Darker gray for text */
+    --md-surface-container: #FAFAFA; /* Slightly off-white for containers */
+    --md-surface-variant: #E0E0E0;
+    --md-on-surface-variant: #424242;
 
     /* Background Color */
-    --md-background: #FAFDFC;
-    --md-on-background: #191C1C;
+    --md-background: #F5F6F5; /* Light grayish-white for body */
+    --md-on-background: #212121;
 
     /* Feedback Colors */
-    --md-error: #BA1A1A;
+    --md-error: #D32F2F;
     --md-on-error: #FFFFFF;
-    --md-error-container: #FFDAD6;
-    --md-on-error-container: #410002;
+    --md-error-container: #FFCDD2;
+    --md-on-error-container: #B71C1C;
 
-    --md-success: #146C2E;
+    --md-success: #2E7D32;
     --md-on-success: #FFFFFF;
-    --md-success-container: #99F5A5;
-    --md-on-success-container: #002107;
+    --md-success-container: #A5D6A7;
+    --md-on-success-container: #1B5E20;
 
-    --md-warning: #915A00;
+    --md-warning: #F57C00;
     --md-on-warning: #FFFFFF;
-    --md-warning-container: #FFDDAE;
-    --md-on-warning-container: #271900;
+    --md-warning-container: #FFCC80;
+    --md-on-warning-container: #E65100;
 
     /* Other System Colors */
-    --md-outline: #6F7979;
-    --md-inverse-surface: #2E3131;
-    --md-inverse-on-surface: #EFF1F1;
+    --md-outline: #757575;
+    --md-inverse-surface: #424242;
+    --md-inverse-on-surface: #F5F6F5;
 
     /* Elevation Levels (Shadows) */
-    --md-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.14);
+    --md-elevation-1: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     --md-elevation-2: 0 3px 6px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.12);
     --md-elevation-3: 0 10px 20px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.10);
 
     /* Typography */
     --md-font-family: 'Nunito', sans-serif;
-    --md-font-family-arabic: 'Traditional Arabic', 'Amiri', serif; /* For Arabic Text */
+    --md-font-family-arabic: 'Traditional Arabic', 'Amiri', serif;
 
     /* Spacing */
     --md-spacing-small: 8px;
@@ -65,15 +65,15 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--md-font-family);
-    -webkit-tap-highlight-color: transparent; /* Remove tap highlight on touch devices */
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     background-color: var(--md-background);
     color: var(--md-on-surface);
     line-height: 1.6;
-    min-height: 100vh; /* Use min-height to allow for content expansion */
-    overflow-y: auto; /* Allow scrolling when content overflows */
+    min-height: 100vh;
+    overflow-y: auto;
 }
 
 /* App Container */
@@ -84,16 +84,20 @@ body {
     position: relative;
 }
 
-/* Top App Bar */
+/* Top App Bar (Dark Theme) */
 .top-app-bar {
     display: flex;
     align-items: center;
     padding: var(--md-spacing-small) var(--md-spacing-medium);
-    background-color: var(--md-surface);
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
     height: 64px;
     box-shadow: var(--md-elevation-1);
-    position: relative;
-    z-index: 100; /* Ensure it stays on top of other content */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
 }
 
 .menu-btn {
@@ -102,16 +106,16 @@ body {
     padding: var(--md-spacing-small);
     border-radius: 50%;
     cursor: pointer;
-    color: var(--md-on-surface);
+    color: var(--md-on-primary);
     margin-right: var(--md-spacing-medium);
-    transition: background-color 0.3s ease; /* Smooth transition */
-    display: flex; /* Center the icon */
+    transition: background-color 0.3s ease;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .menu-btn:not(:disabled):hover {
-    background-color: var(--md-surface-variant);
+    background-color: var(--md-primary-container);
 }
 
 .menu-btn:disabled {
@@ -131,24 +135,25 @@ body {
     gap: var(--md-spacing-medium);
 }
 
-/* Progress Bar */
+/* Progress Bar (Enhanced for Questions) */
 .progress-bar {
-    height: 4px;
-    background: var(--md-surface-variant);
-    position: relative;
+    height: 6px;
+    background: #000000;
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
     z-index: 99;
-    overflow: hidden; /* Hide the overflowing part of the fill */
+    overflow: hidden;
 }
 
 .progress-fill {
     height: 100%;
-    background: var(--md-primary);
+    background: rgb(0, 82, 4);
     width: 0%;
     transition: width 0.3s ease;
-    position: relative; /* For the ::after pseudo-element */
 }
 
-/* Progress fill animations */
 .progress-fill::after {
     content: '';
     position: absolute;
@@ -170,12 +175,25 @@ body {
     100% { transform: translateX(100%); }
 }
 
+.progress-label {
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--md-on-surface);
+    background: var(--md-surface-container);
+    padding: var(--md-spacing-small);
+    position: fixed;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    z-index: 98;
+}
+
 /* Main Content Area */
 .main-content {
     flex-grow: 1;
     overflow-y: auto;
-    padding: var(--md-spacing-medium);
-    background-color: var(--md-surface-container);
+    padding: calc(64px + 6px + var(--md-spacing-large) + var(--md-spacing-medium)) var(--md-spacing-medium) var(--md-spacing-medium); /* Adjusted for fixed top bar and progress */
+    background-color: var(--md-surface);
 }
 
 /* Level Selection Grid */
@@ -194,7 +212,7 @@ body {
 }
 
 .level-card {
-    background: var(--md-surface);
+    background: var(--md-surface-container);
     border-radius: var(--md-spacing-medium);
     padding: var(--md-spacing-large);
     box-shadow: var(--md-elevation-1);
@@ -212,7 +230,7 @@ body {
 .level-icon {
     font-size: 2rem;
     margin-bottom: var(--md-spacing-medium);
-    color: var(--md-primary); /* Consistent color */
+    color: var(--md-primary);
 }
 
 .level-card h3 {
@@ -231,7 +249,7 @@ body {
 
 /* Question Container */
 .question-container {
-    background: var(--md-surface);
+    background: var(--md-surface-container);
     border-radius: var(--md-spacing-medium);
     padding: var(--md-spacing-large);
     margin-bottom: var(--md-spacing-medium);
@@ -263,7 +281,7 @@ body {
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
     font-size: 1rem;
-    background-color: var(--md-surface);
+    background-color: var(--md-surface-container);
     position: relative;
     overflow: hidden;
 }
@@ -320,16 +338,13 @@ body {
     cursor: pointer;
     font-weight: 600;
     transition: background-color 0.2s ease, transform 0.2s ease;
-    position: relative;
-    overflow: hidden;
-    min-height: 48px; /* Consistent height */
+    min-height: 48px;
 }
 
 .nav-btn:disabled {
     background-color: var(--md-surface-variant);
     color: var(--md-outline);
     cursor: not-allowed;
-    transform: none;
 }
 
 .nav-btn:not(:disabled):hover {
@@ -338,14 +353,18 @@ body {
     transform: translateY(-1px);
 }
 
-/* Bottom Navigation */
+/* Bottom Navigation (Dark Theme) */
 .bottom-nav {
     display: flex;
     justify-content: space-around;
-    background-color: var(--md-surface);
+    background-color: var(--md-primary);
+    color: var(--md-on-primary);
     padding: var(--md-spacing-small) var(--md-spacing-medium);
     box-shadow: var(--md-elevation-2);
-    position: relative;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
 }
 
@@ -358,17 +377,19 @@ body {
     gap: 4px;
     border: none;
     background: none;
-    color: var(--md-on-surface);
+    color: var(--md-on-primary);
     cursor: pointer;
     border-radius: var(--md-spacing-medium);
     transition: background-color 0.2s ease, color 0.2s ease;
     flex: 1;
-    position: relative;
-    overflow: hidden;
 }
 
 .nav-item.active {
-    color: var(--md-primary);
+    color: var(--md-on-primary);
+    background-color: var(--md-primary-container);
+}
+
+.nav-item:hover {
     background-color: var(--md-primary-container);
 }
 
@@ -462,32 +483,21 @@ body {
 
 /* Media Query for Mobile View */
 @media (max-width: 600px) {
-    .top-app-bar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-    }
-
-    .app-title{
+    .app-title {
         font-size: 1rem;
     }
-  
+
     .main-content {
-      padding-top: calc(64px + var(--md-spacing-medium)); /* Top bar height + spacing */
-      padding-bottom: calc(56px + var(--md-spacing-medium)); /* Bottom nav height + spacing */
+        padding-top: calc(64px + 6px + var(--md-spacing-large) + var(--md-spacing-medium)); /* Adjusted for fixed top bar and progress */
+        padding-bottom: calc(56px + var(--md-spacing-medium)); /* Bottom nav height + spacing */
     }
-  
-    .bottom-nav {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 70px; /* Standard bottom nav height */
-    }
-    
+
     .level-select,
     .level-select-ar {
         grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     }
-  }
+
+    .progress-label {
+        font-size: 0.75rem;
+    }
+}

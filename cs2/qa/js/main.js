@@ -32,6 +32,7 @@ async function fetchLevels() {
         initializeLevelSelectForLang('english');
         initializeLevelSelectForLang('arabic');
         updateBackButton();
+        updateProgressLabel();
     } catch (error) {
         console.error('Error loading levels:', error);
     }
@@ -63,6 +64,7 @@ function switchTab(tabName) {
     document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
     document.getElementById(`${tabName}-tab`).classList.add('active');
     updateBackButton();
+    updateProgressLabel();
 }
 
 function loadProgress() {
@@ -129,7 +131,7 @@ function getLevelDescription(level) {
     const descriptions = {
         1: "Data",
         2: "Explorative Data Analysis",
-        3: "Page 21-28",
+        3: "Data Preprocessing",
         4: "Page 29-36"
     };
     return descriptions[level] || `Level ${level}`;
@@ -157,7 +159,7 @@ function startLevelForLang(level, lang) {
     currentQuestion = 0;
     answeredQuestions.clear();
     lives = 3;
-    progress[level] = 0;
+    progress[level] = progress[level] || 0; // Preserve existing progress if any
     currentQuestionShuffledData = {};
 
     if (lang === 'english') {
@@ -170,6 +172,7 @@ function startLevelForLang(level, lang) {
     shuffleQuestions();
     updateUI();
     updateBackButton();
+    updateProgressLabel();
 }
 
 function startLevel(level) {
@@ -190,11 +193,25 @@ function updateUI() {
     progressFill.setAttribute('data-level', currentLevel);
     updateLives();
     updateNavButtons();
+    updateProgressLabel();
 }
 
 function updateLives() {
     const heartsContainer = document.querySelector('.lives');
     heartsContainer.innerHTML = '❤️'.repeat(lives);
+}
+
+function updateProgressLabel() {
+    const progressLabel = document.querySelector('.progress-label');
+    const isLevelActive = (currentTab === 'english' && document.getElementById('question-container').style.display === 'block') ||
+                         (currentTab === 'arabic' && document.getElementById('question-container-ar').style.display === 'block');
+    if (isLevelActive) {
+        const currentQuestions = currentTab === 'english' ? levels[currentLevel] : levelsAr[currentLevel];
+        const questionProgress = ((currentQuestion + 1) / currentQuestions.length) * 100;
+        progressLabel.textContent = `${currentTab === 'english' ? 'Level' : 'المستوى'} ${currentLevel}: ${Math.round(progress[currentLevel] || 0)}% (Question ${currentQuestion + 1}/${currentQuestions.length})`;
+    } else {
+        progressLabel.textContent = 'Select a level';
+    }
 }
 
 function showCurrentQuestion() {
@@ -233,6 +250,7 @@ function showCurrentQuestion() {
             </div>
         `).join('');
     updateNavButtons();
+    updateProgressLabel();
 }
 
 function updateNavButtons() {
@@ -315,6 +333,7 @@ function gameOver() {
         </div>
     `;
     updateBackButton();
+    updateProgressLabel();
 }
 
 function returnToMainMenu() {
@@ -328,6 +347,7 @@ function returnToMainMenu() {
         initializeLevelSelectForLang('arabic');
     }
     updateBackButton();
+    updateProgressLabel();
 }
 
 function fixReaderHeight() {
@@ -350,8 +370,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('prevBtn-ar').addEventListener('click', previousQuestion);
     document.getElementById('nextBtn-ar').addEventListener('click', nextQuestion);
 
-    document.getElementById('shuffleBtn').addEventListener('click', shuffleQuestions);
-    document.getElementById('shuffleBtn-ar').addEventListener('click', shuffleQuestions);
-
+    // Removed shuffleBtn listeners as they don't exist in HTML
     fixReaderHeight();
 });

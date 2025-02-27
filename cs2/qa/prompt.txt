@@ -17,4 +17,4 @@ from the notes I send you, create q&a with as a json array of following format 
  also make them a single json file without the squre brackest of an array but commas so U can copy easily without errors
 
 
-make as much as questions as yiu can which are effective to memorise the topic
+make as much 30 questions which are effective to memorise the topic

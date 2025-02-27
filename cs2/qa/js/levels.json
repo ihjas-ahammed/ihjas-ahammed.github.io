@@ -1,5 +1,5 @@
 {
-  "1":[
+  "1": [
     {
       "question": "What is data?",
       "options": [
@@ -271,7 +271,7 @@
       "correct": 0
     }
   ],
-  "2":[
+  "2": [
     {
       "question": "What is Exploratory Data Analysis (EDA)?",
       "options": [
@@ -471,6 +471,308 @@
         "μ = (1/(n-1)) ∑₍ᵢ₌₁₎ᴺ xᵢ"
       ],
       "correct": 0
+    }
+  ],
+  "3": [
+    {
+      "question": "What is data preprocessing?",
+      "options": [
+        "The process of collecting data from various sources",
+        "The process of transforming raw data into a format suitable for analysis",
+        "The process of visualizing data",
+        "The process of storing data in a database"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Why is data preprocessing required?",
+      "options": [
+        "Because real-world data is always complete and consistent",
+        "Because real-world data is incomplete, noisy, and inconsistent",
+        "Because it makes data harder to analyze",
+        "Because it is only needed for small datasets"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What are outliers in a dataset?",
+      "options": [
+        "Values close to the mean",
+        "Values that make big deviations from the measures of center",
+        "Values that are always accurate",
+        "Values that are missing"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a step in data preprocessing?",
+      "options": [
+        "Data integration",
+        "Data deletion",
+        "Data fabrication",
+        "Data encryption"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does data transformation fix in a dataset?",
+      "options": [
+        "Formats or units of data",
+        "The size of the dataset",
+        "The source of the data",
+        "The storage location"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the goal of data reduction?",
+      "options": [
+        "Increasing the dataset size",
+        "Getting the specific part needed for analysis",
+        "Adding more features",
+        "Making data more complex"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which is an advantage of data preprocessing?",
+      "options": [
+        "Increased complexity",
+        "Improved data quality",
+        "Reduced data accuracy",
+        "Slower model performance"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does data cleaning NOT involve?",
+      "options": [
+        "Handling missing values",
+        "Correcting errors",
+        "Removing duplicates",
+        "Generating new data"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which visualization is used for outlier detection?",
+      "options": [
+        "Pie chart",
+        "Bar graph",
+        "Box plot",
+        "Line plot"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does the Z-score measure in outlier detection?",
+      "options": [
+        "How many standard deviations a point is from the mean",
+        "The average value of the dataset",
+        "The median of the dataset",
+        "The maximum value in the dataset"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In the IQR method, what defines an outlier?",
+      "options": [
+        "Points within Q1 and Q3",
+        "Points below Q1 minus 1.5 times IQR or above Q3 plus 1.5 times IQR",
+        "Points equal to the mean",
+        "Points within 1 standard deviation"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which algorithm isolates outliers using random feature selection?",
+      "options": [
+        "DBSCAN",
+        "Isolation Forest",
+        "Z-score",
+        "Min-Max Scaling"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does DBSCAN identify as outliers?",
+      "options": [
+        "Points in high-density regions",
+        "Points in low-density regions",
+        "Points equal to the mean",
+        "Points with no variance"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the purpose of standardization in data transformation?",
+      "options": [
+        "To scale data between 0 and 1",
+        "To center data around zero with a standard deviation of one",
+        "To remove all outliers",
+        "To increase data variance"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which formula represents Z-score standardization?",
+      "options": [
+        "x_i' equals (x_i minus mean) divided by standard deviation",
+        "x_i' equals (x_i minus minimum) divided by (maximum minus minimum)",
+        "x_i' equals (x_i minus Q1) divided by (Q3 minus Q1)",
+        "x_i' equals x_i divided by norm"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does Min-Max Scaling do to data?",
+      "options": [
+        "Centers it around zero",
+        "Scales it between 0 and 1",
+        "Removes duplicates",
+        "Converts it to quartiles"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which formula is used for Min-Max Scaling?",
+      "options": [
+        "x_i' equals (x_i minus mean) divided by standard deviation",
+        "x_i' equals (x_i minus minimum) divided by (maximum minus minimum)",
+        "x_i' equals (x_i minus Q1) divided by (Q3 minus Q1)",
+        "x_i' equals x_i divided by norm"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does Robust Scaling use to scale data?",
+      "options": [
+        "Mean and standard deviation",
+        "Minimum and maximum values",
+        "Quartiles",
+        "Sum of squares"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In Normalizer, what is the norm based on?",
+      "options": [
+        "The mean of the data",
+        "The standard deviation",
+        "The square root of the sum of squares of all values",
+        "The median of the data"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which Python method corrects typos in a dataset?",
+      "options": [
+        ".drop_duplicates()",
+        ".replace()",
+        ".fillna()",
+        ".dropna()"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which library provides the SimpleImputer for handling missing values?",
+      "options": [
+        "Pandas",
+        "NumPy",
+        "Scikit-learn",
+        "Matplotlib"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does df.drop_duplicates() do in Python?",
+      "options": [
+        "Removes rows with missing values",
+        "Removes duplicate rows",
+        "Removes outliers",
+        "Removes entire columns"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How can you remove rows with missing values in Python?",
+      "options": [
+        "df.dropna()",
+        "df.fillna()",
+        "df.replace()",
+        "df.drop_duplicates()"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the main goal of dimensionality reduction?",
+      "options": [
+        "Increasing the number of features",
+        "Reducing features while retaining key information",
+        "Adding noise to the data",
+        "Increasing dataset size"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which technique is used for dimensionality reduction?",
+      "options": [
+        "Linear Regression",
+        "Principal Component Analysis (PCA)",
+        "K-Means Clustering",
+        "Decision Trees"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the first step in the PCA process?",
+      "options": [
+        "Project data onto principal components",
+        "Identify principal components",
+        "Standardize the data",
+        "Remove outliers"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What do principal components represent in PCA?",
+      "options": [
+        "Directions of maximum variance",
+        "Directions of minimum variance",
+        "Random directions",
+        "Directions with no variance"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which method is robust to outliers in scaling?",
+      "options": [
+        "Standard Scaling",
+        "Min-Max Scaling",
+        "Robust Scaling",
+        "Normalizer"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What does the Isolation Forest algorithm do?",
+      "options": [
+        "Clusters data points",
+        "Isolates outliers by random feature and split selection",
+        "Standardizes the data",
+        "Normalizes the data"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Why is data preprocessing important for machine learning?",
+      "options": [
+        "It slows down models",
+        "It improves model performance and reduces complexity",
+        "It adds noise to the data",
+        "It is optional for all models"
+      ],
+      "correct": 1
     }
   ]
 }
