@@ -1,0 +1,24 @@
+I want you to create a detailed, understandable study material in Markdown format for a module, based on a list of topics I will provide. The output should be structured as follows within ```md``` tags:
+
+1. **Key Points**: A concise bullet-point summary of all topics at the top.
+2. **Introduction**: A brief overview of the module and its importance.
+3. **Individual Topic Sections**: For each topic in my list, include:
+   - A clear, beginner-friendly explanation of the topic.
+   - Practical examples where applicable (e.g., code snippets for technical topics).
+   - Key insights or current relevance (as of February 27, 2025).
+4. **Comprehensive Note Section**: A deeper exploration of all topics, integrating:
+   - Subheadings for each topic.
+   - Evidence or reasoning to support explanations (e.g., referencing general web knowledge or best practices).
+   - A table summarizing key elements (if relevant).
+   - Citations to reputable sources like MDN, W3Schools, or GeeksforGeeks (without directly fetching content unless instructed).
+5. **Final Notes**: A closing summary tying everything together.
+
+Here’s my list of topics: [Insert your list here, e.g., "Understanding Variables, Data Types in Programming, Control Structures, Functions and Procedures"]. Please:
+
+- Ignore any numbering in my topic list and treat them as equal sections.
+- Use natural, conversational language, avoiding overly technical jargon unless explained.
+- Ensure the content is educational, engaging, and suitable for beginners while still being informative for intermediate learners.
+- Set the date as February 27, 2025, for context, reflecting current trends or standards where relevant.
+- Do not generate images unless I explicitly ask, but focus on text-based explanations and examples.
+
+Please provide the study material in a single Markdown block (```md```) with clear headings and subheadings. Let me know if you need clarification!
