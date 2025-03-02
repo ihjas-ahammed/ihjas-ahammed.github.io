@@ -4,7 +4,7 @@
             "title": "Data Science",
             "modules": [
                 {
-                    "text": "Module 1",
+                    "text": "Data",
                     "path": "/cs2/mod1.md",
                     "webview": false,
                     "qa": {
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "text": "Module 2",
+                    "text": "Exploratory Data Analysis (EDA)",
                     "path": "/cs2/mod2.md",
                     "webview": false,
                     "qa": {
@@ -24,7 +24,7 @@
                     }
                 },
                 {
-                    "text": "Module 3",
+                    "text": "Data Preprocessing",
                     "path": "/cs2/mod3.md",
                     "webview": false,
                     "qa": {
@@ -34,9 +34,9 @@
                     }
                 },
                 {
-                    "text": "Module 4",
+                    "text": "Introduction to Machine Learning",
                     "path": "/cs2/mod4.md",
-                    "webview": false,
+                    "webview": true,
                     "qa": {}
                 }
             ]
@@ -45,21 +45,21 @@
             "title": "Statistics",
             "modules": [
                 {
-                    "text": "Module 1",
+                    "text": "Discrete Random Variables",
                     "path": "/stat2/mod1",
                     "webview": false,
                     "qa": {}
                 },
                 {
-                    "text": "Module 2",
+                    "text": "Continuous Random Variables",
                     "path": "/stat2/mod2",
                     "webview": false,
                     "qa": {}
                 },
                 {
-                    "text": "Module 3",
+                    "text": "Correlation and Regression",
                     "path": "/stat2/mod3",
-                    "webview": false,
+                    "webview": true,
                     "qa": {}
                 }
             ]
