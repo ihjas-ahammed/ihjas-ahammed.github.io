@@ -1,0 +1,25 @@
+{
+      "question": "What is data?",
+      "options": [
+        "Any information stored in digital format",
+        "Information in analog format",
+        "Data stored only on paper",
+        "A set of random numbers"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What does Big Data refer to?",
+      "options": [
+        "Extremely large volumes of data that require innovative processing methods",
+        "Small, manageable datasets",
+        "Data stored only in spreadsheets",
+        "Data that is outdated"
+      ],
+      "correct": 0
+    }
+
+create  30 questions in above format in a json array for the notes below enough to help memorize the entire module
+
+
+

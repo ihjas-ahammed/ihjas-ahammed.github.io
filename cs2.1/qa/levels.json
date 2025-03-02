@@ -300,5 +300,609 @@
             ],
             "correct": 0
         }
+    ],
+    "2": [
+        {
+            "question": "What does HTML stand for?",
+            "options": [
+                "HyperText Markup Language",
+                "HighText Machine Language",
+                "Hyperlink and Text Markup Language",
+                "Home Tool Markup Language"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Is HTML a programming language?",
+            "options": [
+                "No, it is a markup language",
+                "Yes, it is a programming language",
+                "It is both a programming and markup language",
+                "It is not considered a language at all"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary purpose of HTML?",
+            "options": [
+                "To structure web pages",
+                "To style web pages",
+                "To perform computations",
+                "To store data in databases"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which version of HTML is the current standard as of February 27, 2025?",
+            "options": [
+                "HTML5",
+                "HTML4",
+                "XHTML",
+                "HTML6"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of the <!DOCTYPE html> declaration in an HTML document?",
+            "options": [
+                "To declare the document type and version of HTML",
+                "To define the title of the webpage",
+                "To link to external CSS files",
+                "To create comments in the code"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tag represents the root of an HTML document?",
+            "options": [
+                "<html>",
+                "<head>",
+                "<body>",
+                "<doctype>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the role of the <head> tag in an HTML document?",
+            "options": [
+                "It contains metadata, links, and title information",
+                "It displays visible content on the page",
+                "It defines the footer of the webpage",
+                "It is used to embed images"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tag encloses the visible content of a webpage?",
+            "options": [
+                "<body>",
+                "<head>",
+                "<footer>",
+                "<section>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How does CSS relate to HTML in web development?",
+            "options": [
+                "CSS styles and formats the HTML content",
+                "CSS structures the content",
+                "CSS collects user input",
+                "CSS stores data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tag is used for the main heading on a webpage?",
+            "options": [
+                "<h1>",
+                "<h2>",
+                "<p>",
+                "<title>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which HTML tag is used to create a paragraph of text?",
+            "options": [
+                "<p>",
+                "<div>",
+                "<span>",
+                "<paragraph>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tag is used to insert an image in an HTML document?",
+            "options": [
+                "<img>",
+                "<image>",
+                "<pic>",
+                "<src>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of the 'alt' attribute in an <img> tag?",
+            "options": [
+                "To provide alternative text for accessibility",
+                "To specify the image source",
+                "To define the image size",
+                "To link to a CSS file"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the function of the <a> tag in HTML?",
+            "options": [
+                "To create hyperlinks",
+                "To display images",
+                "To format text",
+                "To create lists"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How do you create an unordered list in HTML?",
+            "options": [
+                "Using the <ul> tag",
+                "Using the <ol> tag",
+                "Using the <li> tag alone",
+                "Using the <list> tag"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which attribute is used to uniquely identify an HTML element?",
+            "options": [
+                "id",
+                "class",
+                "src",
+                "alt"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which attribute is typically used to group elements for styling purposes?",
+            "options": [
+                "class",
+                "id",
+                "href",
+                "action"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tag is most commonly used to collect user input in a form?",
+            "options": [
+                "<input>",
+                "<form>",
+                "<button>",
+                "<label>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the <form> tag define in an HTML document?",
+            "options": [
+                "A container for user input elements",
+                "A table of data",
+                "An image gallery",
+                "A hyperlink section"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which attribute of the <form> tag specifies the URL to which the form data is sent?",
+            "options": [
+                "action",
+                "method",
+                "name",
+                "target"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of the 'method' attribute in a form element?",
+            "options": [
+                "To define the HTTP method (GET or POST) for data submission",
+                "To specify the URL for form submission",
+                "To set the form’s encoding type",
+                "To assign an identifier to the form"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which HTML element is used for multi-line text input?",
+            "options": [
+                "<textarea>",
+                "<input type='text'>",
+                "<select>",
+                "<div>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which element is used to create a drop-down list in an HTML form?",
+            "options": [
+                "<select>",
+                "<input>",
+                "<textarea>",
+                "<dropdown>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which HTML element is commonly used to create a clickable button in a form?",
+            "options": [
+                "<button>",
+                "<input>",
+                "<a>",
+                "<div>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary purpose of the <table> tag in HTML?",
+            "options": [
+                "To organize data into rows and columns",
+                "To format paragraphs",
+                "To create hyperlinks",
+                "To embed multimedia"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "In an HTML table, which tag is used to define a table row?",
+            "options": [
+                "<tr>",
+                "<td>",
+                "<th>",
+                "<row>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the 'colspan' attribute do in a table cell?",
+            "options": [
+                "It merges cells horizontally",
+                "It merges cells vertically",
+                "It defines the table header",
+                "It styles the table border"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is considered a semantic HTML element?",
+            "options": [
+                "<header>",
+                "<div>",
+                "<span>",
+                "<b>"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What are the benefits of using semantic HTML elements?",
+            "options": [
+                "Improves accessibility, SEO, and maintainability",
+                "Increases page load time",
+                "Restricts browser compatibility",
+                "Reduces styling options"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which semantic tag is typically used to contain the main content of a webpage?",
+            "options": [
+                "<main>",
+                "<header>",
+                "<footer>",
+                "<nav>"
+            ],
+            "correct": 0
+        }
+    ],
+    "3": [
+        {
+            "question": "What does CSS stand for?",
+            "options": [
+                "Cascading Style Sheets",
+                "Computer Style Syntax",
+                "Central Styling System",
+                "Coded Simple Sheets"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary purpose of CSS?",
+            "options": [
+                "To separate content from presentation",
+                "To add interactivity to web pages",
+                "To store data in databases",
+                "To process server-side logic"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method is used to include CSS from an external file?",
+            "options": [
+                "Linking a separate CSS file using the <link> tag",
+                "Using inline styles within HTML elements",
+                "Embedding styles within the <style> tag in HTML",
+                "Importing CSS using JavaScript"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a CSS selector?",
+            "options": [
+                "A pattern used to target HTML elements for styling",
+                "A function to change text color",
+                "A property that defines element spacing",
+                "A method for linking JavaScript files"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which CSS property controls the color of text?",
+            "options": [
+                "color",
+                "font-family",
+                "background-color",
+                "border-color"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which property is used to set the typeface for text?",
+            "options": [
+                "font-family",
+                "font-size",
+                "text-align",
+                "font-weight"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the 'margin' property control?",
+            "options": [
+                "The space outside an element's border",
+                "The space inside an element between the border and content",
+                "The thickness of an element's border",
+                "The background color of an element"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What elements are included in the CSS box model?",
+            "options": [
+                "Content, padding, border, and margin",
+                "Content, border, shadow, and margin",
+                "Padding, border, background, and shadow",
+                "Content, padding, background, and margin"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "In the box model, what does 'padding' refer to?",
+            "options": [
+                "The space between the content and the border",
+                "The space outside the border",
+                "The thickness of the border",
+                "The content area itself"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which property sets an element's border style?",
+            "options": [
+                "border",
+                "padding",
+                "margin",
+                "outline"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does 'position: absolute' do in CSS?",
+            "options": [
+                "Positions an element relative to its nearest positioned ancestor",
+                "Keeps the element in the normal document flow",
+                "Centers the element within its parent",
+                "Aligns the element to the viewport center"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which positioning value is the default for HTML elements?",
+            "options": [
+                "static",
+                "relative",
+                "absolute",
+                "fixed"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which property is used to control the stacking order of positioned elements?",
+            "options": [
+                "z-index",
+                "order",
+                "stack-level",
+                "position-index"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is Flexbox primarily used for?",
+            "options": [
+                "One-dimensional layout for arranging items in a row or column",
+                "Two-dimensional grid layouts",
+                "Animating elements on a page",
+                "Styling text only"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What layout method is ideal for creating two-dimensional designs?",
+            "options": [
+                "CSS Grid",
+                "Flexbox",
+                "Inline styling",
+                "Absolute positioning"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a media query in CSS used for?",
+            "options": [
+                "Applying styles based on device characteristics",
+                "Querying the server for data",
+                "Selecting media files for background",
+                "Creating animations"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which CSS property creates smooth transitions for property changes?",
+            "options": [
+                "transition",
+                "animation",
+                "transform",
+                "filter"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the '@keyframes' rule define in CSS?",
+            "options": [
+                "Animation states and keyframes",
+                "Media queries for responsive design",
+                "Custom properties (variables)",
+                "Font-face declarations"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which pseudo-class is used to apply styles when the mouse hovers over an element?",
+            "options": [
+                ":hover",
+                ":active",
+                ":focus",
+                ":visited"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is one main benefit of using an external CSS file?",
+            "options": [
+                "Reusability across multiple web pages",
+                "Faster inline styling",
+                "Reduced need for HTML",
+                "Automatic JavaScript integration"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does 'responsive design' mean?",
+            "options": [
+                "Design that adapts to various screen sizes and devices",
+                "Design that only works on desktop computers",
+                "A fixed-width layout for all devices",
+                "A design optimized only for mobile phones"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the function of the 'grid-gap' property in CSS Grid?",
+            "options": [
+                "It defines the spacing between grid items",
+                "It sets the overall width of the grid",
+                "It aligns grid items",
+                "It creates a border around grid cells"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which CSS method is commonly used for creating navigation bars?",
+            "options": [
+                "Flexbox",
+                "CSS Grid",
+                "Absolute positioning",
+                "Inline styling"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How can CSS be applied directly to an individual HTML element?",
+            "options": [
+                "By using the style attribute",
+                "By linking an external stylesheet",
+                "By placing styles in the head section",
+                "By importing CSS via @import"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which property sets the background color of an element?",
+            "options": [
+                "background-color",
+                "color",
+                "border-color",
+                "opacity"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does 'box-sizing: border-box' do?",
+            "options": [
+                "Includes padding and border in an element's total width and height",
+                "Adds extra margin to the element",
+                "Removes the border from the element",
+                "Centers the element within its container"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a primary benefit of using Bootstrap in web development?",
+            "options": [
+                "It provides pre-built responsive components and a grid system",
+                "It automatically generates HTML content",
+                "It optimizes server-side performance",
+                "It is used to write JavaScript functions"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which CSS framework was developed by Twitter?",
+            "options": [
+                "Bootstrap",
+                "Foundation",
+                "Bulma",
+                "Tailwind"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which property is commonly used to style text decoration like underlining?",
+            "options": [
+                "text-decoration",
+                "text-align",
+                "font-style",
+                "letter-spacing"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the main advantage of separating CSS from HTML?",
+            "options": [
+                "Easier maintenance and updates without affecting content",
+                "Faster HTML parsing",
+                "Increased server speed",
+                "Automatically optimized images"
+            ],
+            "correct": 0
+        }
     ]
 }
