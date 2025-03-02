@@ -35,7 +35,7 @@
                 },
                 {
                     "text": "Introduction to Machine Learning",
-                    "path": "/cs2/mod4.md",
+                    "path": "/cs2/mod4.html",
                     "webview": true,
                     "qa": {}
                 }
@@ -58,7 +58,7 @@
                 },
                 {
                     "text": "Correlation and Regression",
-                    "path": "/stat2/mod3",
+                    "path": "/stat2/mod3.html",
                     "webview": true,
                     "qa": {}
                 }
