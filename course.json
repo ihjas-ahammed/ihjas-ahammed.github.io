@@ -97,10 +97,14 @@
             "title": "Web Design",
             "modules": [
                 {
-                    "text": "Module 1",
+                    "text": "Introduction to Web Design",
                     "path": "/cs2.1/mod1.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {
+                        "name": "obj",
+                        "path": "cs2.1/qa/levels.json",
+                        "obj": 1
+                    }
                 },
                 {
                     "text": "Module 2",

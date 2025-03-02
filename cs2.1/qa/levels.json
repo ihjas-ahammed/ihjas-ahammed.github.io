@@ -1,0 +1,304 @@
+{
+    "1": [
+        {
+            "question": "What is web design?",
+            "options": [
+                "The process of creating visually appealing, functional, and user-friendly websites",
+                "Only writing HTML code",
+                "Designing offline print media",
+                "Managing online databases"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which protocol is essential for secure data transmission on websites?",
+            "options": [
+                "HTTPS",
+                "FTP",
+                "HTTP",
+                "SMTP"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "In a client-server system, what is the primary role of the client?",
+            "options": [
+                "To request resources from a web server",
+                "To host website data and logic",
+                "To manage website security",
+                "To store backup files"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which languages are primarily used to build websites?",
+            "options": [
+                "HTML, CSS, and JavaScript",
+                "Python, Java, and C++",
+                "SQL, XML, and JSON",
+                "PHP, Ruby, and Perl"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a key focus of modern web design trends as of 2025?",
+            "options": [
+                "User experience (UX) and accessibility",
+                "High-resolution images only",
+                "Desktop-only layouts",
+                "Static text content"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tool is commonly used for version control in web development?",
+            "options": [
+                "Git",
+                "Trello",
+                "Slack",
+                "Figma"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What innovative feature in web design uses augmented reality (AR)?",
+            "options": [
+                "Virtual try-ons for products",
+                "Animated GIFs",
+                "Static image galleries",
+                "Basic HTML forms"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How has web design evolved since the 1990s?",
+            "options": [
+                "From simple HTML pages to advanced UX, accessibility, and interactive technologies like AI and AR",
+                "From using AR and AI to basic HTML pages",
+                "It has remained unchanged",
+                "From desktop-only to tablet-only designs"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is NOT a key practice in internet security for web design?",
+            "options": [
+                "Implementing HTTPS for encrypted data transmission",
+                "Using firewalls to block unauthorized access",
+                "Designing websites without any encryption",
+                "Regularly updating software to patch vulnerabilities"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What does a minimalist design emphasize in modern web design?",
+            "options": [
+                "Clean layouts with ample white space",
+                "Crowded pages with numerous elements",
+                "Multiple fonts and vibrant colors in every section",
+                "Overuse of animations and effects"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which protocol does the World Wide Web primarily use for delivering web pages?",
+            "options": [
+                "HTTP/HTTPS",
+                "FTP",
+                "SMTP",
+                "TCP/IP"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which digital communication tool is commonly used for real-time online meetings?",
+            "options": [
+                "Video conferencing (e.g., Zoom)",
+                "Email",
+                "SMS",
+                "Static webpages"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does HTML stand for?",
+            "options": [
+                "HyperText Markup Language",
+                "Hyperlinks and Text Markup Language",
+                "Home Tool Markup Language",
+                "Hyper Transfer Markup Language"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is a primary function of CSS in web design?",
+            "options": [
+                "Styling and layout of web pages",
+                "Storing website data",
+                "Providing interactivity",
+                "Managing databases"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of JavaScript in website development?",
+            "options": [
+                "To add interactivity to web pages",
+                "To style web pages",
+                "To structure the content",
+                "To secure websites"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What role do firewalls play in internet security?",
+            "options": [
+                "They block unauthorized access to networks",
+                "They increase website loading speed",
+                "They improve graphic quality",
+                "They help design user interfaces"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is NOT typically a collaboration tool used in website development?",
+            "options": [
+                "Adobe Photoshop",
+                "Git",
+                "Trello",
+                "Slack"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is one benefit of a mobile-first design approach?",
+            "options": [
+                "It prioritizes the experience for the majority mobile audience",
+                "It only focuses on desktop design",
+                "It excludes tablet users",
+                "It eliminates the need for responsive design"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following best describes a responsive website?",
+            "options": [
+                "A website that adapts to different screen sizes and devices",
+                "A website that only works on desktops",
+                "A static website with fixed dimensions",
+                "A website that uses only one type of device layout"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How do AR and VR enhance website user experiences?",
+            "options": [
+                "By providing immersive and interactive content",
+                "By increasing the number of images",
+                "By reducing website security",
+                "By limiting content to text only"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the main purpose of using HTTPS on a website?",
+            "options": [
+                "To encrypt data and ensure secure communication",
+                "To improve website design",
+                "To increase the website’s speed",
+                "To allow more users to connect simultaneously"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What type of content does a minimalist design typically use?",
+            "options": [
+                "Clean layouts with ample white space",
+                "Multiple distracting elements",
+                "Overuse of animations",
+                "Heavy background images"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is a key component of user experience (UX) design?",
+            "options": [
+                "Ease of navigation",
+                "Excessive animations",
+                "Complex menus",
+                "Limited interaction"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does AI personalization in web design involve?",
+            "options": [
+                "Tailoring content and user experiences based on individual behavior",
+                "Displaying the same content to all users",
+                "Reducing the amount of content",
+                "Removing interactive elements"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tool is specifically known for enabling collaborative prototyping in web design?",
+            "options": [
+                "Figma",
+                "Git",
+                "Trello",
+                "Slack"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary function of the server in a client-server system?",
+            "options": [
+                "To host and manage website content",
+                "To request content from clients",
+                "To display content to users",
+                "To update client browsers"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following best represents a digital communication tool used for direct outreach?",
+            "options": [
+                "Email",
+                "CSS",
+                "HTML",
+                "JavaScript"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Why are regular software updates important for internet security?",
+            "options": [
+                "They patch vulnerabilities and protect against cyber threats",
+                "They add more design features",
+                "They increase advertisement revenue",
+                "They remove interactive content"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does AR in web design stand for?",
+            "options": [
+                "Augmented Reality",
+                "Automated Response",
+                "Artificial Rendering",
+                "Advanced Routing"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What impact does client-server architecture have on website performance?",
+            "options": [
+                "It enables efficient handling of multiple client requests",
+                "It slows down website performance",
+                "It only supports small websites",
+                "It prevents website updates"
+            ],
+            "correct": 0
+        }
+    ]
+}
