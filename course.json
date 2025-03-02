@@ -9,7 +9,7 @@
                     "webview": false,
                     "qa": {
                         "name": "obj",
-                        "path": "cs2/qa/js/levels.json",
+                        "path": "cs2/qa.json",
                         "obj": 1
                     }
                 },
@@ -19,7 +19,7 @@
                     "webview": false,
                     "qa": {
                         "name": "obj",
-                        "path": "cs2/qa/js/levels.json",
+                        "path": "cs2/qa.json",
                         "obj": 2
                     }
                 },
@@ -29,7 +29,7 @@
                     "webview": false,
                     "qa": {
                         "name": "obj",
-                        "path": "cs2/qa/js/levels.json",
+                        "path": "cs2/qa.json",
                         "obj": 3
                     }
                 },

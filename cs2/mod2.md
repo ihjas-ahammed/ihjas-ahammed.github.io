@@ -297,4 +297,268 @@ plt.show()
 
 Similarly you can create box plot using ```sns.boxplot()``` function
 
-<a href="mod2.2.html">Next part (Same module) </a>
+## Data Visualization
+
+
+Data visualization helps in understanding trends, distributions, and relationships in datasets.
+
+<table> <tr> <th>Plot Type</th> <th>Usage</th> </tr> <tr> <td>Histogram</td> <td>Displays frequency distribution</td> </tr> <tr> <td>Box Plot</td> <td>Identifies outliers and spread</td> </tr> <tr> <td>Scatter Plot</td> <td>Shows relationships between variables</td> </tr> <tr> <td>Pair Plot</td> <td>Visualizes multiple variable relationships</td> </tr> <tr> <td>Heatmap</td> <td>Displays correlation between variables</td> </tr> </table>
+
+# 1. Histogram
+
+- Displays the distribution of numerical data.
+- Helps identify skewness, spread, and outliers.
+- Useful in frequency distribution analysis.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+data = np.random.randn(1000)
+
+# Create histogram
+plt.hist(data, bins=30, color='skyblue', edgecolor='black', alpha=0.7)
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Histogram')
+plt.show()
+```
+
+- Tall bars indicate frequent values.
+- Skewness can be detected from the shape.
+
+
+# 2. Box Plot (Whisker Plot)
+
+- Shows median, quartiles, and outliers.
+- Helps compare data distributions.
+- Used in outlier detection.
+
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+data = np.random.randn(100)
+
+# Create box plot
+sns.boxplot(data=data, color='lightblue')
+plt.title('Box Plot')
+plt.show()
+```
+
+- Box = Interquartile Range (IQR).
+- Whiskers = Range excluding outliers.
+- Dots = Outliers.
+
+
+# 3. Quantile-Quantile (Q-Q) Plot
+
+- Compares a dataset against a theoretical distribution.
+- Used to check normality assumption.
+
+```python
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Generate normal data
+data = np.random.normal(1, 1, 1000)
+
+# Q-Q plot
+stats.probplot(data, dist="norm", plot=plt)
+plt.title('Q-Q Plot')
+plt.show()
+```
+
+- Straight diagonal line → Data follows normal distribution.
+- Curved pattern → Data is skewed or has heavy tails.
+
+# 4. Scatter Plot
+
+- Shows relationship between two numerical variables.
+- Used in correlation analysis.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+x = np.random.rand(100)
+y = x + np.random.normal(0, 0.1, 100)
+
+plt.scatter(x, y, color='blue', alpha=0.5)
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Scatter Plot')
+plt.show()
+```
+
+- Upward trend → Positive correlation.
+- Downward trend → Negative correlation.
+- No pattern → No correlation.
+
+
+# 5. Heatmap
+
+- Displays correlation between variables.
+- Used in feature selection.
+
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample dataset
+data = pd.DataFrame(np.random.rand(10, 10), columns=[f'Var{i}' for i in range(10)])
+
+# Create heatmap
+sns.heatmap(data.corr(), annot=True, cmap='coolwarm')
+plt.title('Heatmap')
+plt.show()
+```
+
+- Dark red/blue → Strong correlation.
+- Near zero → No correlation.
+
+# 6. Bubble Chart
+
+- Similar to scatter plot but size represents a third variable.
+- Used in business and economic analysis.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+# Sample data
+x = np.random.rand(50)
+y = np.random.rand(50)
+size = np.random.rand(50) * 1000
+
+plt.scatter(x, y, s=size, alpha=0.5, color='purple')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Bubble Chart')
+plt.show()
+```
+
+- Larger bubbles represent higher values of a third variable.
+
+# 7. Bar Chart
+
+- Represents categorical data.
+- Used for comparison.
+
+```python
+import matplotlib.pyplot as plt
+
+categories = ['A', 'B', 'C', 'D']
+values = [10, 20, 15, 25]
+
+plt.bar(categories, values, color='orange')
+plt.xlabel('Category')
+plt.ylabel('Value')
+plt.title('Bar Chart')
+plt.show()
+```
+
+- Taller bars indicate higher values.
+
+# 8. Distribution Plot
+
+- Displays probability distribution of a dataset.
+- Used in statistical analysis.
+
+```python
+import seaborn as sns
+import numpy as np
+
+data = np.random.normal(0, 1, 1000)
+
+sns.histplot(data, kde=True, color='green')
+plt.title('Distribution Plot')
+plt.show()
+```
+
+- Smooth curve (KDE) represents probability density function (PDF).
+
+# 9. Pair Plot
+
+- Shows scatter plots between multiple variables.
+- Used in feature relationships.
+
+```python
+import seaborn as sns
+
+df = sns.load_dataset('iris')
+
+# Pair plot
+sns.pairplot(df, hue='species')
+plt.show()
+```
+
+- Each subplot shows a scatter plot between two features.
+
+# 10. Line Graph
+
+- Represents trends over time.
+- Used in time series analysis.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(0, 11)
+y = np.sin(x)
+
+plt.plot(x, y, marker='o', linestyle='-', color='blue')
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Line Graph')
+plt.show()
+```
+
+- Upward trend → Increasing trend.
+- Downward trend → Decreasing trend.
+
+# 11. Pie Chart
+
+- Represents proportions of categorical data.
+- Used in market share analysis.
+
+```python
+import matplotlib.pyplot as plt
+
+labels = ['A', 'B', 'C', 'D']
+sizes = [20, 30, 25, 25]
+
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=['red', 'green', 'blue', 'yellow'])
+plt.title('Pie Chart')
+plt.show()
+```
+
+- Larger slices represent higher proportions.
+
+# 12. Area Chart
+
+- Similar to line graph but with a filled area.
+- Used to show cumulative trends.
+
+```python
+import matplotlib.pyplot as plt
+import numpy as np
+
+x = np.arange(0, 11)
+y = np.sin(x)
+
+plt.fill_between(x, y, color='blue', alpha=0.5)
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Area Chart')
+plt.show()
+```
+
+- Used for stacked visualizations to show total value accumulation.

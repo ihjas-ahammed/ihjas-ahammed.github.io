@@ -1,0 +1,918 @@
+{
+    "1": [
+        {
+            "question": "What is Data?",
+            "options": [
+                "Any information stored in digital format",
+                "Information in analog format",
+                "Data stored only on paper",
+                "A set of random numbers"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does Big Data refer to?",
+            "options": [
+                "Extremely large volumes of data that require innovative processing methods",
+                "Small, manageable datasets",
+                "Data stored only in spreadsheets",
+                "Data that is outdated"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How many types of data are there based on storage, organization, and analysis?",
+            "options": [
+                "Three",
+                "Two",
+                "Four",
+                "None"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What characterizes structured data?",
+            "options": [
+                "Data in tabular form with rows and columns",
+                "Data with a flexible schema",
+                "Data that is unorganized",
+                "Data that is only text"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which programming language is typically used with relational databases?",
+            "options": [
+                "SQL",
+                "Python",
+                "Java",
+                "C++"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is a pro of structured data?",
+            "options": [
+                "Requires less processing since it's easy to manage",
+                "Highly flexible schema",
+                "Automatically supports unstructured text",
+                "Scales without limitations"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is a con of structured data?",
+            "options": [
+                "Limited usability because it's predefined",
+                "Easy to modify schema",
+                "Effortless handling of complex relationships",
+                "Minimal storage overhead"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of these is a common use case for structured data?",
+            "options": [
+                "Business analytics and reporting",
+                "Video processing",
+                "Natural language processing",
+                "Audio streaming"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What defines semi-structured data?",
+            "options": [
+                "Incompletely structured data",
+                "Data in a fixed tabular format",
+                "Data that is fully unorganized",
+                "Data stored only in databases"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of these is an example of semi-structured data?",
+            "options": [
+                "XML",
+                "CSV",
+                "SQL table",
+                "Spreadsheet"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a pro of semi-structured data?",
+            "options": [
+                "Flexible schema allows for varying data structures",
+                "Easier querying than structured data",
+                "Uses minimal storage space",
+                "Has a fixed structure"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which is a con of semi-structured data?",
+            "options": [
+                "More complex to query compared to structured data",
+                "Requires less storage due to minimal tags",
+                "Always maintains a consistent format",
+                "Is natively supported by relational databases"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How is unstructured data defined?",
+            "options": [
+                "Data not organized in a predefined manner",
+                "Data organized in rows and columns",
+                "Data with a flexible schema",
+                "Data stored in relational databases"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which is a typical example of unstructured data?",
+            "options": [
+                "Video files",
+                "Excel spreadsheets",
+                "Relational database tables",
+                "JSON files"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the main challenge of analyzing unstructured data?",
+            "options": [
+                "It requires preprocessing before analysis",
+                "It is easy to query",
+                "It has a consistent structure",
+                "It always fits in a single computer's memory"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What are Data Streams?",
+            "options": [
+                "Data that is continuously updated in real time",
+                "Data stored on static databases",
+                "Historical data that does not change",
+                "Data that is archived"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does Statistical Data refer to?",
+            "options": [
+                "Qualitative facts gathered, organized, and analyzed systematically",
+                "Only numerical data from experiments",
+                "Data solely from digital sources",
+                "Unorganized data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is another name for qualitative data?",
+            "options": [
+                "Categorical data",
+                "Numerical data",
+                "Interval data",
+                "Ratio data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is an example of nominal data?",
+            "options": [
+                "Gender",
+                "Age",
+                "Height",
+                "Weight"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a key characteristic of ordinal data?",
+            "options": [
+                "Discrete ordered units with no consistent distance between categories",
+                "Continuous measurements",
+                "Data stored in rows",
+                "Data with equal intervals"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is an example of quantitative data?",
+            "options": [
+                "Height",
+                "Nationality",
+                "Gender",
+                "Hair color"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What differentiates discrete data from continuous data?",
+            "options": [
+                "Discrete data has distinct, separate values",
+                "Continuous data is always whole numbers",
+                "Discrete data is measured on a continuous scale",
+                "Continuous data is only in tables"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is an example of continuous data?",
+            "options": [
+                "Time measured on a 12-hour clock",
+                "Number of students",
+                "Categorical labels",
+                "Nominal classifications"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does an interval scale measure?",
+            "options": [
+                "Equal distances between adjacent units",
+                "Ratios and absolute zero",
+                "Only nominal data",
+                "Qualitative differences"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which scale can be multiplied or divided due to a true zero point?",
+            "options": [
+                "Ratio scale",
+                "Interval scale",
+                "Ordinal scale",
+                "Nominal scale"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the first step in the data analysis process?",
+            "options": [
+                "Collect",
+                "Organize",
+                "Analyze",
+                "Present"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which step in data analysis involves cleaning and transforming raw data?",
+            "options": [
+                "Data Cleaning",
+                "Data Mining",
+                "Data Presentation",
+                "Model Deployment"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which type of data analysis is used to gain insights before making assumptions?",
+            "options": [
+                "Exploratory analysis",
+                "Predictive analysis",
+                "Diagnostic analysis",
+                "Inferential analysis"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is Data Mining?",
+            "options": [
+                "Collecting data from different sources",
+                "Changing data into a standard format",
+                "Performing statistical analysis",
+                "Presenting data visually"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is one of the challenges in the Data Science process?",
+            "options": [
+                "Data quality and availability issues",
+                "Abundant high-quality data",
+                "Overly simple models",
+                "Lack of analysis techniques"
+            ],
+            "correct": 0
+        }
+    ],
+    "2": [
+        {
+            "question": "What is Exploratory Data Analysis (EDA)?",
+            "options": [
+                "The process of examining data to gain insights and understanding",
+                "A method to clean and preprocess data exclusively",
+                "A technique to store large volumes of data",
+                "A type of machine learning algorithm"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is one of the main purposes of EDA?",
+            "options": [
+                "To summarize main characteristics of datasets",
+                "To replace the need for data visualization",
+                "To perform high-level predictive modeling only",
+                "To secure data against unauthorized access"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which Python library is primarily used for data manipulation and creating data frames?",
+            "options": [
+                "pandas",
+                "matplotlib",
+                "seaborn",
+                "plotly"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which library is often used alongside matplotlib for statistical plotting in Python?",
+            "options": [
+                "seaborn",
+                "numPy",
+                "pandas",
+                "scipy"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a DataFrame in Python?",
+            "options": [
+                "A two-dimensional, labeled data structure",
+                "A one-dimensional array",
+                "A database management system",
+                "A machine learning model"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which graphical technique is best for displaying the frequency distribution of a variable?",
+            "options": [
+                "Histogram",
+                "Scatter plot",
+                "Box plot",
+                "Pie chart"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which plot is primarily used to detect outliers in a dataset?",
+            "options": [
+                "Box Plot",
+                "Line Graph",
+                "Histogram",
+                "Bubble Chart"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does a scatter plot show?",
+            "options": [
+                "The relationship between two numeric variables",
+                "The frequency distribution of a single variable",
+                "The summary statistics of a dataset",
+                "The proportions of categorical data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of a heatmap in data visualization?",
+            "options": [
+                "To display correlations between multiple variables using colors",
+                "To show the distribution of data values",
+                "To plot time series trends",
+                "To compare categorical data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which measure of central tendency represents the middle value of a dataset?",
+            "options": [
+                "Median",
+                "Mean",
+                "Mode",
+                "Range"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the mean represent in a dataset?",
+            "options": [
+                "The arithmetic average of the data",
+                "The most frequently occurring value",
+                "The middle value when sorted",
+                "The difference between the highest and lowest values"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the range of a dataset measure?",
+            "options": [
+                "The difference between the maximum and minimum values",
+                "The average value of the data",
+                "The spread of data around the mean",
+                "The most common data value"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does standard deviation quantify?",
+            "options": [
+                "The average deviation of data values from the mean",
+                "The middle value in a sorted dataset",
+                "The most frequently occurring data point",
+                "The difference between the maximum and minimum values"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is skewness in data analysis?",
+            "options": [
+                "A measure of asymmetry in the data distribution",
+                "A measure of the central tendency",
+                "A measure of data dispersion",
+                "A measure of correlation strength"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does kurtosis indicate in a distribution?",
+            "options": [
+                "The 'peakedness' or tail heaviness compared to a normal distribution",
+                "The average value of the dataset",
+                "The spread of the data values",
+                "The frequency of the most common value"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which technique reduces dimensionality while preserving essential information?",
+            "options": [
+                "Principal Component Analysis (PCA)",
+                "Correlation Matrix",
+                "Box Plot Analysis",
+                "Scatter Plot Visualization"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary role of descriptive statistics in EDA?",
+            "options": [
+                "To summarize data using measures of central tendency, dispersion, and shape",
+                "To perform predictive modeling",
+                "To secure the dataset",
+                "To automatically generate visualizations"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does a Q-Q plot help determine?",
+            "options": [
+                "Whether a dataset follows a theoretical distribution",
+                "The correlation between two variables",
+                "The frequency distribution of a single variable",
+                "The central tendency of a dataset"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which plot is best suited for displaying relationships among multiple variables in a dataset?",
+            "options": [
+                "Pair Plot",
+                "Pie Chart",
+                "Line Graph",
+                "Histogram"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of using a bubble chart?",
+            "options": [
+                "To represent three variables by encoding a third variable as bubble size",
+                "To display the frequency distribution of a dataset",
+                "To compare categorical data",
+                "To show time series trends"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which visualization is best for showing time series trends?",
+            "options": [
+                "Line Graph",
+                "Bar Chart",
+                "Histogram",
+                "Scatter Plot"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary use of a bar chart in data visualization?",
+            "options": [
+                "To compare categorical data",
+                "To show data distribution",
+                "To display correlation",
+                "To represent time series data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which Python library is used to create visualizations like histograms and scatter plots?",
+            "options": [
+                "matplotlib",
+                "pandas",
+                "numpy",
+                "seaborn"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "In a box plot, what does the box represent?",
+            "options": [
+                "The interquartile range (IQR)",
+                "The mean of the data",
+                "The full range of the dataset",
+                "The standard deviation"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does an outlier in a dataset represent?",
+            "options": [
+                "A data point that deviates significantly from the rest of the data",
+                "The average value of the data",
+                "The most common value in the dataset",
+                "The middle value when data is sorted"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the role of a correlation matrix in EDA?",
+            "options": [
+                "To show the relationship strength between multiple variables",
+                "To display data distribution",
+                "To compute the average of the dataset",
+                "To visualize time series trends"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the interquartile range (IQR) measure?",
+            "options": [
+                "The spread of the middle 50% of the data",
+                "The difference between the highest and lowest values",
+                "The average value of the dataset",
+                "The measure of skewness in the data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method is commonly used to check assumptions about data in EDA?",
+            "options": [
+                "Statistical or graphical analysis",
+                "Database indexing",
+                "Encryption techniques",
+                "Automated machine learning"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does multivariate graphical analysis primarily focus on?",
+            "options": [
+                "Visualizing relationships between two or more variables",
+                "Summarizing a single variable's distribution",
+                "Calculating summary statistics",
+                "Storing large amounts of data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which tool is used to create interactive visualizations in Python?",
+            "options": [
+                "plotly",
+                "seaborn",
+                "pandas",
+                "numpy"
+            ],
+            "correct": 0
+        }
+    ],
+    "3": [
+        {
+            "question": "What is data preprocessing?",
+            "options": [
+                "A process of preparing raw data for analysis",
+                "A method for data visualization",
+                "A data storage technique",
+                "A programming language"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Why is data preprocessing required?",
+            "options": [
+                "Because data is often incomplete, noisy, and inconsistent",
+                "Because data is always perfect",
+                "Because data preprocessing is optional",
+                "Because it increases data errors"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which of the following is an advantage of data preprocessing?",
+            "options": [
+                "Improved quality",
+                "Increased noise",
+                "Higher complexity",
+                "Inaccurate results"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which step is not part of data cleaning?",
+            "options": [
+                "Removing duplicate data",
+                "Correcting errors",
+                "Adding random data",
+                "Handling missing values"
+            ],
+            "correct": 2
+        },
+        {
+            "question": "What are outliers?",
+            "options": [
+                "Values that significantly deviate from the center",
+                "Values that are always correct",
+                "Data points with no variance",
+                "Values with minor differences"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method uses a boxplot to detect outliers?",
+            "options": [
+                "Interquartile Range (IQR) method",
+                "Standard Deviation method",
+                "Min-Max Scaling",
+                "Normalization"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which scaling method uses the formula x_i' = (x_i - μ)/σ?",
+            "options": [
+                "Standard Scaling",
+                "Min-Max Scaling",
+                "Robust Scaling",
+                "Normalization"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which scaling method uses the formula x_i' = (x_i - x_min)/(x_max - x_min)?",
+            "options": [
+                "Min-Max Scaling",
+                "Standard Scaling",
+                "Robust Scaling",
+                "Normalization"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method uses quartiles for scaling data?",
+            "options": [
+                "Robust Scaling",
+                "Standard Scaling",
+                "Min-Max Scaling",
+                "Normalization"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method normalizes data by dividing each element by the norm?",
+            "options": [
+                "Normalization",
+                "Min-Max Scaling",
+                "Standard Scaling",
+                "Robust Scaling"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of data transformation?",
+            "options": [
+                "To fix formats and units of data",
+                "To delete data",
+                "To increase noise",
+                "To add duplicates"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is data reduction?",
+            "options": [
+                "Reducing the number of features while retaining key information",
+                "Increasing the number of features",
+                "Eliminating data completely",
+                "Transforming data into text"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does PCA stand for?",
+            "options": [
+                "Principal Component Analysis",
+                "Primary Clustering Algorithm",
+                "Partial Correlation Adjustment",
+                "Principal Coding Assignment"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a key benefit of PCA?",
+            "options": [
+                "It reduces dimensions and prevents overfitting",
+                "It increases data redundancy",
+                "It lowers model performance",
+                "It adds noise to data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the main goal of noise identification in data preprocessing?",
+            "options": [
+                "To detect anomalies and outliers",
+                "To create duplicates",
+                "To add errors",
+                "To merge unrelated data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which Python method is used to correct typos in a dataframe column?",
+            "options": [
+                ".replace",
+                ".dropna()",
+                ".fillna()",
+                ".drop_duplicates()"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which sklearn class is used for imputing missing values?",
+            "options": [
+                "SimpleImputer",
+                "StandardScaler",
+                "KMeans",
+                "IsolationForest"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does df.drop_duplicates() do?",
+            "options": [
+                "Removes duplicate rows",
+                "Fills missing values",
+                "Replaces typos",
+                "Scales data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does df.dropna() do?",
+            "options": [
+                "Removes rows with missing values",
+                "Removes outliers",
+                "Removes duplicates",
+                "Fills missing values"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the filna function do in data cleaning?",
+            "options": [
+                "Replaces missing values",
+                "Removes duplicates",
+                "Transforms data types",
+                "Normalizes data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What z-score threshold is typically used for outlier removal?",
+            "options": [
+                "3",
+                "1",
+                "0",
+                "5"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which algorithm isolates observations by randomly selecting a feature for outlier detection?",
+            "options": [
+                "Isolation Forest",
+                "DBSCAN",
+                "PCA",
+                "SimpleImputer"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which clustering algorithm identifies low-density regions as outliers?",
+            "options": [
+                "DBSCAN",
+                "IQR method",
+                "Isolation Forest",
+                "Standard Scaling"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "In data transformation, what does scaling refer to?",
+            "options": [
+                "Converting data to a specific range",
+                "Deleting data",
+                "Merging data",
+                "Duplicating data"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which scaling method uses the formula x_i' = (x_i - Q1)/(Q3 - Q1)?",
+            "options": [
+                "Robust Scaling",
+                "Min-Max Scaling",
+                "Standard Scaling",
+                "Normalization"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method divides each value by the norm of the dataset to normalize data?",
+            "options": [
+                "Normalization",
+                "Robust Scaling",
+                "Min-Max Scaling",
+                "Standard Scaling"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does data cleaning ensure about the dataset?",
+            "options": [
+                "Accuracy, consistency, and reliability",
+                "Redundancy and errors",
+                "Noise and outliers",
+                "High complexity"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What type of data is typically processed in data preprocessing?",
+            "options": [
+                "Real-world data",
+                "Perfect data",
+                "Synthetic data only",
+                "Simulated data only"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is one key benefit of improved data quality in preprocessing?",
+            "options": [
+                "Enhanced model performance",
+                "Increased processing time",
+                "More noise",
+                "Reduced accuracy"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which data reduction technique helps prevent overfitting by reducing feature dimensions?",
+            "options": [
+                "Principal Component Analysis",
+                "Standard Scaling",
+                "SimpleImputer",
+                "DBSCAN"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which method uses visualizations to analyze anomalies in a dataset?",
+            "options": [
+                "Noise identification",
+                "Data cleaning",
+                "Data reduction",
+                "Data transformation"
+            ],
+            "correct": 0
+        }
+    ]
+}
