@@ -73,6 +73,22 @@
             ]
         },
         {
+            "title":"Electronics",
+            "modules":[
+                {
+                    "text":"Semiconductors",
+                    "path":"/electronics/mod1.md",
+                    "webview":false,
+                    "qa":{
+                        "name":"obj",
+                        "path":"electronics/qa.json",
+                        "obj":1
+                    }
+                }
+            ]
+        }
+        ,
+        {
             "title": "Arabic",
             "modules": [
                 {

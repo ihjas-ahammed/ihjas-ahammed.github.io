@@ -1,0 +1,304 @@
+{
+    "1": [
+        {
+            "question": "What is a semiconductor?",
+            "options": [
+                "A material with electrical conductivity between conductors and insulators",
+                "A perfect insulator",
+                "A perfect conductor",
+                "A material that does not conduct electricity"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which material is a common example of a semiconductor?",
+            "options": [
+                "Silicon",
+                "Copper",
+                "Glass",
+                "Rubber"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What key property makes semiconductors vital for electronic devices?",
+            "options": [
+                "Their ability to conduct electricity in a controlled manner",
+                "Their inability to conduct electricity",
+                "Their high thermal conductivity",
+                "Their magnetic properties"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What does the negative temperature coefficient in semiconductors mean?",
+            "options": [
+                "Resistance decreases as temperature increases",
+                "Resistance increases as temperature increases",
+                "Resistance remains constant with temperature",
+                "Resistance oscillates with temperature changes"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How does doping affect a semiconductor?",
+            "options": [
+                "It increases charge carriers and alters conductivity",
+                "It decreases charge carriers and reduces conductivity",
+                "It turns the semiconductor into an insulator",
+                "It has no effect on conductivity"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which element is not considered a semiconductor?",
+            "options": [
+                "Nichrome",
+                "Germanium",
+                "Silicon",
+                "Gallium arsenide"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the approximate band gap of germanium?",
+            "options": [
+                "0.67 eV",
+                "1.12 eV",
+                "2.0 eV",
+                "0.3 eV"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the approximate band gap of silicon?",
+            "options": [
+                "1.12 eV",
+                "0.67 eV",
+                "0.3 eV",
+                "2.3 eV"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What type of bonding is present in semiconductors like Ge and Si?",
+            "options": [
+                "Covalent bonds",
+                "Ionic bonds",
+                "Metallic bonds",
+                "Hydrogen bonds"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What crystal structure do germanium and silicon have?",
+            "options": [
+                "Diamond cubic lattice",
+                "Hexagonal close-packed",
+                "Body-centered cubic",
+                "Amorphous structure"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What happens in a semiconductor at absolute zero temperature?",
+            "options": [
+                "It behaves as an insulator with electrons bound in covalent bonds",
+                "It behaves as a perfect conductor",
+                "It emits light",
+                "It becomes magnetic"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which current is carried by electrons in semiconductors?",
+            "options": [
+                "Electron current",
+                "Hole current",
+                "Ionic current",
+                "No current flows"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is created in the valence band when an electron is excited to the conduction band?",
+            "options": [
+                "A hole",
+                "A photon",
+                "An ion",
+                "A defect"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What type of semiconductor is pure and without impurities?",
+            "options": [
+                "Intrinsic semiconductor",
+                "Extrinsic semiconductor",
+                "N-type semiconductor",
+                "P-type semiconductor"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which impurity type is used to create an n-type semiconductor?",
+            "options": [
+                "Pentavalent elements like arsenic",
+                "Trivalent elements like gallium",
+                "Divalent elements",
+                "No impurity is used"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which charge carriers are majority in an n-type semiconductor?",
+            "options": [
+                "Electrons",
+                "Holes",
+                "Both electrons and holes equally",
+                "Ions"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which impurity is used to create a p-type semiconductor?",
+            "options": [
+                "Trivalent elements like gallium",
+                "Pentavalent elements like arsenic",
+                "Divalent elements",
+                "No doping"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Which charge carriers are majority in a p-type semiconductor?",
+            "options": [
+                "Holes",
+                "Electrons",
+                "Both equally",
+                "Ions"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What forms at the interface of p-type and n-type semiconductors?",
+            "options": [
+                "p-n junction",
+                "Metal junction",
+                "Dielectric layer",
+                "Conductor-insulator boundary"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the barrier potential of a silicon p-n junction approximately?",
+            "options": [
+                "0.7 V",
+                "0.3 V",
+                "1.12 V",
+                "0.67 V"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What happens when a p-n junction is forward biased?",
+            "options": [
+                "Current flows by reducing the barrier potential",
+                "No current flows",
+                "The barrier potential increases",
+                "The junction breaks down immediately"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What happens when a p-n junction is reverse biased?",
+            "options": [
+                "The barrier potential increases and current is blocked",
+                "The barrier potential decreases",
+                "Current flows easily",
+                "It becomes a conductor"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the purpose of a Zener diode?",
+            "options": [
+                "To maintain a constant voltage by operating in reverse breakdown",
+                "To emit light when forward biased",
+                "To act as a simple resistor",
+                "To store electrical energy"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How does a Light-Emitting Diode (LED) work?",
+            "options": [
+                "It emits light due to electron-hole recombination",
+                "It heats up when current flows",
+                "It stores charge",
+                "It acts as a variable resistor"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What unique feature does a multicolour LED have?",
+            "options": [
+                "It has two p-n junctions emitting different colors based on bias",
+                "It emits a single color",
+                "It operates only in reverse bias",
+                "It does not require current to operate"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What are seven-segment displays used for?",
+            "options": [
+                "To display numerical characters using arranged LEDs",
+                "To amplify signals",
+                "To regulate voltage",
+                "To sense light intensity"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is a key difference between common anode and common cathode seven-segment displays?",
+            "options": [
+                "Connection of anodes or cathodes to power determines activation",
+                "They have different numbers of segments",
+                "One displays letters and one displays numbers",
+                "They use different materials"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "How does a photo-diode generate current?",
+            "options": [
+                "By generating electron-hole pairs when exposed to light",
+                "By heating up",
+                "By chemical reactions",
+                "By mechanical movement"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "Why are semiconductors essential in replacing vacuum tubes in electronics?",
+            "options": [
+                "They allow for compact, efficient devices with controlled conduction",
+                "They are larger and heavier",
+                "They require high power consumption",
+                "They do not conduct electricity"
+            ],
+            "correct": 0
+        },
+        {
+            "question": "What is the primary role of the depletion region in a p-n junction?",
+            "options": [
+                "It creates a barrier potential that regulates current flow",
+                "It stores electrical charge",
+                "It emits light",
+                "It acts as a conductor with no resistance"
+            ],
+            "correct": 0
+        }
+    ]
+}
