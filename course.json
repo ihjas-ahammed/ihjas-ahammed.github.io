@@ -76,14 +76,20 @@
             "title":"Electronics",
             "modules":[
                 {
-                    "text":"Semiconductors",
+                    "text":"Semiconductors Complete",
                     "path":"/electronics/mod1.md",
                     "webview":false,
                     "qa":{
                         "name":"obj",
-                        "path":"electronics/qa.json",
+                        "path":"electronics/qa2.json",
                         "obj":1
                     }
+                },
+                {
+                    "text":"Semiconductors Summary",
+                    "path":"/electronics/mod1.sum.md",
+                    "webview":false,
+                    "qa":{}
                 }
             ]
         }
