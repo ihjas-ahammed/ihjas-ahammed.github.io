@@ -83,6 +83,10 @@
                         "name":"obj",
                         "path":"electronics/qa4.json",
                         "obj":1
+                    },
+                    "qa2":{
+                        "path":"electronics/qa4.2.json",
+                        "obj":1
                     }
                 },
                 {

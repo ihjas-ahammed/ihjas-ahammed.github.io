@@ -1,0 +1,3132 @@
+{
+    "1": [
+        {
+            "name": "5.1 Semiconductors",
+            "qa": [
+                {
+                    "question": "How is a semiconductor generally defined based on electrical conductivity?",
+                    "options": [
+                        "A material with resistivity between conductors and insulators",
+                        "A material with zero resistivity",
+                        "A material with infinite resistivity",
+                        "A material identical to resistance materials",
+                        "A material with resistivity between conductors and insulators"
+                    ],
+                    "describe": "A semiconductor is defined based on its electrical conductivity as a material with resistivity between that of conductors (like copper) and insulators (like glass). This distinguishes it from materials with zero or infinite resistivity.",
+                    "correct": 0
+                },
+                {
+                    "question": "Why is germanium classified as a semiconductor and not a resistance material?",
+                    "options": [
+                        "Its resistivity is similar to copper",
+                        "Its resistivity is much lower than nichrome",
+                        "Its resistivity lies between conductors and insulators",
+                        "Its resistivity is higher than glass"
+                    ],
+                    "describe": "Germanium’s resistivity (0.6 Ω m) is much higher than conductors like copper (1.7 × 10⁻⁸ Ω m) but lower than insulators like glass (10¹⁰ Ω m). It is also significantly higher than resistance materials like nichrome (10⁻⁶ Ω m), making it a semiconductor, not a resistance material.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the resistivity of copper as a good conductor?",
+                    "options": [
+                        "1.7 × 10⁻⁸ Ω m",
+                        "0.6 Ω m",
+                        "10¹⁰ Ω m",
+                        "10⁻⁶ Ω m"
+                    ],
+                    "describe": "Copper, a good conductor, has a very low resistivity of 1.7 × 10⁻⁸ Ω m, as listed in the table comparing different materials.",
+                    "correct": 0
+                },
+                {
+                    "question": "What happens to the resistance of a semiconductor when temperature increases?",
+                    "options": [
+                        "It increases",
+                        "It remains constant",
+                        "It decreases",
+                        "It becomes infinite"
+                    ],
+                    "describe": "Semiconductors have a negative temperature coefficient of resistance, meaning their resistance decreases as temperature increases, unlike conductors which typically increase in resistance.",
+                    "correct": 2
+                },
+                {
+                    "question": "How does germanium behave at high temperatures?",
+                    "options": [
+                        "Becomes a good insulator",
+                        "Becomes a good conductor",
+                        "Remains unchanged",
+                        "Becomes a resistance material"
+                    ],
+                    "describe": "At high temperatures, germanium becomes a good conductor due to increased thermal energy breaking covalent bonds, releasing more free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What effect does adding a metallic impurity like arsenic have on a semiconductor?",
+                    "options": [
+                        "It decreases its resistivity",
+                        "It changes its conducting properties significantly",
+                        "It makes it an insulator",
+                        "It has no effect"
+                    ],
+                    "describe": "Adding a suitable metallic impurity, such as arsenic, to a semiconductor changes its current conducting properties appreciably by increasing the number of charge carriers, a key property discussed later.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the resistivity of glass as an insulator?",
+                    "options": [
+                        "1.7 × 10⁻⁸ Ω m",
+                        "0.6 Ω m",
+                        "10¹⁰ Ω m",
+                        "10⁻⁶ Ω m"
+                    ],
+                    "describe": "Glass, an insulator, has a very high resistivity of 10¹⁰ Ω m, as shown in the table, far exceeding that of semiconductors and conductors.",
+                    "correct": 2
+                },
+                {
+                    "question": "How does germanium behave at low temperatures?",
+                    "options": [
+                        "Becomes a good conductor",
+                        "Becomes a good insulator",
+                        "Remains a semiconductor",
+                        "Becomes a resistance material"
+                    ],
+                    "describe": "At low temperatures, germanium becomes a good insulator because the lack of thermal energy prevents the breaking of covalent bonds, leaving no free electrons for conduction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the resistivity of nichrome as a resistance material?",
+                    "options": [
+                        "1.7 × 10⁻⁸ Ω m",
+                        "0.6 Ω m",
+                        "10¹⁰ Ω m",
+                        "10⁻⁶ Ω m"
+                    ],
+                    "describe": "Nichrome, a resistance material, has a resistivity of 10⁻⁶ Ω m, which is much lower than that of germanium (0.6 Ω m), distinguishing it from semiconductors.",
+                    "correct": 3
+                },
+                {
+                    "question": "Why can’t semiconductors be considered conductors or insulators?",
+                    "options": [
+                        "Their resistivity matches conductors",
+                        "Their resistivity is between conductors and insulators",
+                        "Their resistivity matches insulators",
+                        "Their resistivity is zero"
+                    ],
+                    "describe": "Semiconductors cannot be considered conductors or insulators because their resistivity lies between that of conductors (low resistivity) and insulators (high resistivity), giving them unique electrical properties.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.2 Bonds in Semiconductors",
+            "qa": [
+                {
+                    "question": "What type of bond holds semiconductor atoms together?",
+                    "options": [
+                        "Ionic bond",
+                        "Covalent bond",
+                        "Metallic bond",
+                        "Hydrogen bond"
+                    ],
+                    "describe": "In semiconductors, atoms are held together by covalent bonds, formed by the sharing of valence electrons to achieve a stable configuration of 8 electrons in the outermost shell.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many valence electrons does a germanium atom have?",
+                    "options": [
+                        "2",
+                        "4",
+                        "6",
+                        "8"
+                    ],
+                    "describe": "A germanium atom has four valence electrons in its outermost shell, making it tetravalent and capable of forming four covalent bonds.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why do semiconductor atoms form covalent bonds?",
+                    "options": [
+                        "To lose electrons",
+                        "To gain electrons",
+                        "To share electrons and complete the valence shell",
+                        "To form ionic compounds"
+                    ],
+                    "describe": "Semiconductor atoms form covalent bonds by sharing valence electrons with neighboring atoms to complete their outermost shell with 8 electrons, achieving stability.",
+                    "correct": 2
+                },
+                {
+                    "question": "How many germanium atoms surround a central germanium atom in a covalent structure?",
+                    "options": [
+                        "2",
+                        "3",
+                        "4",
+                        "5"
+                    ],
+                    "describe": "Each germanium atom positions itself among four other germanium atoms, sharing one valence electron with each to form covalent bonds and complete its valence shell.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the stable electron configuration sought by atoms in covalent bonding?",
+                    "options": [
+                        "2 electrons",
+                        "4 electrons",
+                        "6 electrons",
+                        "8 electrons"
+                    ],
+                    "describe": "Atoms in semiconductors seek a stable configuration of 8 electrons in their valence shell, achieved through covalent bonding by sharing electrons.",
+                    "correct": 3
+                },
+                {
+                    "question": "What happens to valence electrons in a covalent bond?",
+                    "options": [
+                        "They are lost",
+                        "They are gained",
+                        "They are shared between atoms",
+                        "They become free electrons"
+                    ],
+                    "describe": "In a covalent bond, valence electrons are shared between adjacent atoms, pairing up to form a direct bond rather than being free or transferred.",
+                    "correct": 2
+                },
+                {
+                    "question": "Why are covalent bonds significant in semiconductors?",
+                    "options": [
+                        "They allow free electron movement",
+                        "They hold atoms together in a stable structure",
+                        "They create ionic charges",
+                        "They increase resistivity"
+                    ],
+                    "describe": "Covalent bonds are significant because they hold semiconductor atoms together in a stable structure by sharing valence electrons, forming the basis of their crystalline lattice.",
+                    "correct": 1
+                },
+                {
+                    "question": "What characteristic of valence electrons in covalent bonds distinguishes semiconductors?",
+                    "options": [
+                        "They are free to move",
+                        "They are associated with specific atoms",
+                        "They are transferred to other atoms",
+                        "They are absent"
+                    ],
+                    "describe": "In covalent bonds, valence electrons are associated with specific atoms rather than being free to move, which is a key characteristic distinguishing semiconductors from conductors.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many electrons does each atom contribute to a covalent bond?",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "describe": "Each atom in a covalent bond contributes an equal number of valence electrons, typically one per bond, to share with a neighboring atom, forming a pair.",
+                    "correct": 0
+                },
+                {
+                    "question": "What drives the formation of covalent bonds in semiconductors?",
+                    "options": [
+                        "High temperature",
+                        "Tendency to complete the outermost shell",
+                        "Impurity addition",
+                        "Electric field"
+                    ],
+                    "describe": "The formation of covalent bonds is driven by each atom’s tendency to complete its outermost electron shell with 8 electrons, achieved through sharing valence electrons.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.3 Crystals",
+            "qa": [
+                {
+                    "question": "What defines a crystal in semiconductors?",
+                    "options": [
+                        "Randomly arranged atoms",
+                        "Orderly, repetitive atomic arrangement",
+                        "A type of conductor",
+                        "A type of insulator"
+                    ],
+                    "describe": "A crystal is a substance where atoms or molecules are arranged in an orderly, repetitive pattern, which is a defining feature of all semiconductors like germanium.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is a piece of germanium typically referred to as?",
+                    "options": [
+                        "Germanium block",
+                        "Germanium crystal",
+                        "Germanium conductor",
+                        "Germanium insulator"
+                    ],
+                    "describe": "A piece of germanium, with its atoms surrounded by neighboring atoms in a repetitive manner, is generally referred to as a germanium crystal due to its crystalline structure.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why do semiconductors have a crystalline structure?",
+                    "options": [
+                        "To increase resistivity",
+                        "Due to random atomic placement",
+                        "Due to orderly arrangement of atoms",
+                        "To reduce conductivity"
+                    ],
+                    "describe": "Semiconductors have a crystalline structure because their atoms are arranged in an orderly, repetitive pattern, which supports the formation of covalent bonds and their unique electrical properties.",
+                    "correct": 2
+                },
+                {
+                    "question": "What type of bonds are facilitated by the crystalline structure in semiconductors?",
+                    "options": [
+                        "Ionic bonds",
+                        "Covalent bonds",
+                        "Metallic bonds",
+                        "Hydrogen bonds"
+                    ],
+                    "describe": "The crystalline structure in semiconductors facilitates the formation of covalent bonds, where atoms share valence electrons in an orderly arrangement.",
+                    "correct": 1
+                },
+                {
+                    "question": "How are atoms arranged in a semiconductor crystal?",
+                    "options": [
+                        "Randomly",
+                        "In a repetitive, orderly pattern",
+                        "In layers",
+                        "In clusters"
+                    ],
+                    "describe": "In a semiconductor crystal, atoms are arranged in an orderly, repetitive pattern, which is essential for its structural stability and electrical properties.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is an example of a semiconductor with a crystalline structure?",
+                    "options": [
+                        "Copper",
+                        "Germanium",
+                        "Glass",
+                        "Nichrome"
+                    ],
+                    "describe": "Germanium is an example of a semiconductor with a crystalline structure, where its atoms are arranged repetitively, unlike copper (conductor), glass (insulator), or nichrome (resistance material).",
+                    "correct": 1
+                },
+                {
+                    "question": "What role does the crystalline structure play in germanium?",
+                    "options": [
+                        "Increases its conductivity",
+                        "Supports covalent bonding",
+                        "Makes it an insulator",
+                        "Reduces its resistivity"
+                    ],
+                    "describe": "The crystalline structure in germanium supports covalent bonding by allowing atoms to be surrounded by neighbors in a repetitive pattern, forming a stable lattice.",
+                    "correct": 1
+                },
+                {
+                    "question": "Are all semiconductors crystalline in nature?",
+                    "options": [
+                        "No, some are amorphous",
+                        "Yes, all have a crystalline structure",
+                        "Only germanium is crystalline",
+                        "Only silicon is crystalline"
+                    ],
+                    "describe": "All semiconductors discussed, such as germanium and silicon, have a crystalline structure, characterized by an orderly, repetitive atomic arrangement.",
+                    "correct": 1
+                },
+                {
+                    "question": "What term describes the atomic arrangement in a crystal?",
+                    "options": [
+                        "Disordered",
+                        "Repetitive and orderly",
+                        "Irregular",
+                        "Scattered"
+                    ],
+                    "describe": "The atomic arrangement in a crystal is described as repetitive and orderly, which defines the crystalline structure of semiconductors.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is the term 'crystal' used for semiconductors like germanium?",
+                    "options": [
+                        "Due to high conductivity",
+                        "Due to the orderly atomic pattern",
+                        "Due to its color",
+                        "Due to its resistivity"
+                    ],
+                    "describe": "The term 'crystal' is used for semiconductors like germanium because their atoms are arranged in an orderly, repetitive pattern, forming a crystalline structure.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.4 Commonly Used Semiconductors",
+            "qa": [
+                {
+                    "question": "Which two semiconductors are most frequently used in electronics?",
+                    "options": [
+                        "Copper and nichrome",
+                        "Germanium and silicon",
+                        "Glass and germanium",
+                        "Silicon and copper"
+                    ],
+                    "describe": "Germanium and silicon are the two most frequently used semiconductors in electronics due to their practical applications and suitable electrical properties.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the atomic number of germanium?",
+                    "options": [
+                        "14",
+                        "32",
+                        "33",
+                        "51"
+                    ],
+                    "describe": "The atomic number of germanium is 32, indicating it has 32 protons and 32 electrons, with 4 in its valence shell.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many valence electrons does a silicon atom have?",
+                    "options": [
+                        "2",
+                        "4",
+                        "6",
+                        "8"
+                    ],
+                    "describe": "A silicon atom has four valence electrons in its outer orbit, making it tetravalent and capable of forming covalent bonds.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is germanium considered a model semiconductor?",
+                    "options": [
+                        "It has high resistivity",
+                        "It can be purified and crystallized easily",
+                        "It is a conductor",
+                        "It has no valence electrons"
+                    ],
+                    "describe": "Germanium is considered a model semiconductor because it can be purified relatively well and crystallized easily, making it ideal for study and application.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the source of silicon used as a semiconductor?",
+                    "options": [
+                        "Zinc smelters",
+                        "Coal ash",
+                        "Sand (silicon dioxide)",
+                        "Germanium dioxide"
+                    ],
+                    "describe": "Silicon is derived from sand (silicon dioxide), which is chemically reduced to 100% pure silicon for use as a semiconductor.",
+                    "correct": 2
+                },
+                {
+                    "question": "How many electrons are in the third orbit of a germanium atom?",
+                    "options": [
+                        "2",
+                        "8",
+                        "18",
+                        "4"
+                    ],
+                    "describe": "A germanium atom has 18 electrons in its third orbit, with 2 in the first, 8 in the second, and 4 in the fourth (valence) orbit.",
+                    "correct": 2
+                },
+                {
+                    "question": "What type of structure do silicon atoms form?",
+                    "options": [
+                        "Amorphous",
+                        "Crystalline",
+                        "Layered",
+                        "Random"
+                    ],
+                    "describe": "Silicon atoms are arranged in an orderly manner, forming a crystalline structure through covalent bonds, similar to germanium.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the energy gap for germanium?",
+                    "options": [
+                        "0.7 eV",
+                        "1.1 eV",
+                        "5 eV",
+                        "10 eV"
+                    ],
+                    "describe": "The energy gap for germanium is about 0.7 eV, which is small enough to allow some electrons to become free at room temperature.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is the atomic number of silicon?",
+                    "options": [
+                        "14",
+                        "32",
+                        "33",
+                        "51"
+                    ],
+                    "describe": "The atomic number of silicon is 14, indicating it has 14 protons and 14 electrons, with 4 in its valence shell.",
+                    "correct": 0
+                },
+                {
+                    "question": "How is germanium typically recovered?",
+                    "options": [
+                        "From sand",
+                        "From ash of coals or zinc smelter flue dust",
+                        "From rocks",
+                        "From copper ores"
+                    ],
+                    "describe": "Germanium is recovered from the ash of certain coals or from the flue dust of zinc smelters, initially as germanium dioxide powder, then reduced to pure germanium.",
+                    "correct": 1
+                },
+                {
+                    "question": "What type of bonds hold germanium atoms together?",
+                    "options": [
+                        "Ionic",
+                        "Covalent",
+                        "Metallic",
+                        "Hydrogen"
+                    ],
+                    "describe": "Germanium atoms are held together by covalent bonds, formed by sharing their four valence electrons in a crystalline structure.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the energy gap for silicon?",
+                    "options": [
+                        "0.7 eV",
+                        "1.1 eV",
+                        "5 eV",
+                        "10 eV"
+                    ],
+                    "describe": "The energy gap for silicon is about 1.1 eV, slightly larger than germanium’s, affecting its conductivity at room temperature.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.5 Energy Band Description of Semiconductors",
+            "qa": [
+                {
+                    "question": "What is the energy gap in semiconductors?",
+                    "options": [
+                        "The difference between valence and conduction bands",
+                        "The energy to break a covalent bond",
+                        "The energy released by free electrons",
+                        "The energy between two atoms"
+                    ],
+                    "describe": "The energy gap in semiconductors is the difference between the valence band (almost filled) and the conduction band (nearly empty), approximately 1 eV, separating these two bands.",
+                    "correct": 0
+                },
+                {
+                    "question": "Why is the energy gap in semiconductors small?",
+                    "options": [
+                        "To prevent electron movement",
+                        "To allow electrons to move to the conduction band",
+                        "To make them insulators",
+                        "To increase resistivity"
+                    ],
+                    "describe": "The energy gap is small (≈ 1 eV) to allow some valence electrons to gain sufficient energy at room temperature to enter the conduction band, becoming free electrons and enabling conductivity.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the state of the valence band in a semiconductor?",
+                    "options": [
+                        "Completely empty",
+                        "Almost filled",
+                        "Completely filled",
+                        "Half filled"
+                    ],
+                    "describe": "In a semiconductor, the valence band is almost filled, with a small energy gap to the nearly empty conduction band, defining its electrical properties.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to electrons at room temperature in a semiconductor?",
+                    "options": [
+                        "They remain in the valence band",
+                        "Some enter the conduction band",
+                        "They all become free",
+                        "They are trapped"
+                    ],
+                    "describe": "At room temperature, some valence electrons in a semiconductor acquire enough energy to cross the small energy gap (e.g., 0.7 eV for germanium) into the conduction band, becoming free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the energy gap value for silicon?",
+                    "options": [
+                        "0.7 eV",
+                        "1.1 eV",
+                        "5 eV",
+                        "10 eV"
+                    ],
+                    "describe": "The forbidden energy gap for silicon is 1.1 eV, as shown in the energy band diagrams, allowing limited electron movement at room temperature.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the state of the conduction band in a semiconductor?",
+                    "options": [
+                        "Completely filled",
+                        "Nearly empty",
+                        "Half filled",
+                        "Completely empty"
+                    ],
+                    "describe": "The conduction band in a semiconductor is nearly empty, separated from the almost filled valence band by a small energy gap, facilitating some electron movement.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are semiconductors neither good conductors nor insulators at room temperature?",
+                    "options": [
+                        "Due to a large energy gap",
+                        "Due to a small number of free electrons",
+                        "Due to no energy gap",
+                        "Due to high resistivity"
+                    ],
+                    "describe": "At room temperature, semiconductors have a small number of free electrons due to the small energy gap, making them neither good conductors (many free electrons) nor insulators (no free electrons).",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the energy gap value for germanium?",
+                    "options": [
+                        "0.7 eV",
+                        "1.1 eV",
+                        "5 eV",
+                        "10 eV"
+                    ],
+                    "describe": "The forbidden energy gap for germanium is 0.7 eV, smaller than silicon’s, allowing more electrons to become free at room temperature.",
+                    "correct": 0
+                },
+                {
+                    "question": "How does the energy band description help in understanding semiconductors?",
+                    "options": [
+                        "Explains atomic structure",
+                        "Describes current flow",
+                        "Shows crystal lattice",
+                        "Indicates impurity levels"
+                    ],
+                    "describe": "The energy band description is extremely helpful in understanding current flow through a semiconductor by illustrating how electrons move from the valence band to the conduction band.",
+                    "correct": 1
+                },
+                {
+                    "question": "What determines the conductivity of a semiconductor?",
+                    "options": [
+                        "Size of the crystal",
+                        "Energy gap between bands",
+                        "Number of atoms",
+                        "Type of bonds"
+                    ],
+                    "describe": "The conductivity of a semiconductor is determined by the energy gap between the valence and conduction bands, which controls the availability of free electrons.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.6 Effect of Temperature on Semiconductors",
+            "qa": [
+                {
+                    "question": "How does a semiconductor behave at absolute zero?",
+                    "options": [
+                        "As a conductor",
+                        "As an insulator",
+                        "As a superconductor",
+                        "As a resistor"
+                    ],
+                    "describe": "At absolute zero, a semiconductor behaves as a perfect insulator because there is no thermal energy to break covalent bonds, leaving no free electrons for conduction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What generates free electrons in a semiconductor above absolute zero?",
+                    "options": [
+                        "Breaking of covalent bonds",
+                        "Impurity addition",
+                        "Voltage application",
+                        "Light exposure"
+                    ],
+                    "describe": "Above absolute zero, thermal energy breaks some covalent bonds in the semiconductor, setting electrons free and creating holes, enabling conduction.",
+                    "correct": 0
+                },
+                {
+                    "question": "What happens to covalent bonds in a semiconductor as temperature rises?",
+                    "options": [
+                        "They strengthen",
+                        "Some break due to thermal energy",
+                        "They disappear",
+                        "They form ionic bonds"
+                    ],
+                    "describe": "As temperature rises, some covalent bonds in the semiconductor break due to thermal energy, releasing free electrons and creating holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why does a semiconductor act as an insulator at absolute zero?",
+                    "options": [
+                        "Due to a small energy gap",
+                        "Due to no free electrons",
+                        "Due to high conductivity",
+                        "Due to impurity addition"
+                    ],
+                    "describe": "At absolute zero, a semiconductor acts as an insulator because there are no free electrons available for conduction, as covalent bonds remain intact without thermal energy.",
+                    "correct": 1
+                },
+                {
+                    "question": "What constitutes electric current in a semiconductor above absolute zero?",
+                    "options": [
+                        "Only free electrons",
+                        "Only holes",
+                        "Free electrons and holes",
+                        "Impurity atoms"
+                    ],
+                    "describe": "Above absolute zero, electric current in a semiconductor is constituted by both free electrons, released from broken covalent bonds, and holes, which also contribute to current flow.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the state of the valence band at absolute zero?",
+                    "options": [
+                        "Empty",
+                        "Filled",
+                        "Half filled",
+                        "Nearly empty"
+                    ],
+                    "describe": "At absolute zero, the valence band is filled, and there is a large energy gap to the conduction band, with no electrons able to cross due to lack of thermal energy.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does temperature affect the conductivity of a semiconductor?",
+                    "options": [
+                        "It decreases",
+                        "It remains constant",
+                        "It increases",
+                        "It becomes zero"
+                    ],
+                    "describe": "The electrical conductivity of a semiconductor increases with temperature because more covalent bonds break, releasing more free electrons and holes.",
+                    "correct": 2
+                },
+                {
+                    "question": "What creates holes in a semiconductor above absolute zero?",
+                    "options": [
+                        "Impurity addition",
+                        "Breaking of covalent bonds",
+                        "Electric field",
+                        "Light exposure"
+                    ],
+                    "describe": "Holes are created in a semiconductor above absolute zero when thermal energy breaks covalent bonds, leaving vacancies that act as positive charge carriers.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to electrons in the conduction band above absolute zero?",
+                    "options": [
+                        "They remain stationary",
+                        "They move under an electric field",
+                        "They return to the valence band",
+                        "They disappear"
+                    ],
+                    "describe": "Above absolute zero, some valence electrons enter the conduction band due to thermal energy and move under the influence of an electric field, constituting current.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many semiconductor atoms provide a free electron at room temperature?",
+                    "options": [
+                        "1 out of 10",
+                        "1 out of 10⁸",
+                        "All atoms",
+                        "None"
+                    ],
+                    "describe": "Out of 10⁸ semiconductor atoms, only one provides a free electron at room temperature due to thermal energy breaking covalent bonds, indicating a small number of charge carriers.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.7 Hole Current",
+            "qa": [
+                {
+                    "question": "What is a hole in a semiconductor?",
+                    "options": [
+                        "A free electron",
+                        "A missing electron in a covalent bond",
+                        "A positive particle",
+                        "An impurity atom"
+                    ],
+                    "describe": "A hole is a missing electron in a covalent bond, created when thermal energy breaks the bond, leaving a vacancy that acts as a positive charge carrier.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is hole current generated in a semiconductor?",
+                    "options": [
+                        "By free electrons moving",
+                        "By valence electrons moving between bonds",
+                        "By impurity addition",
+                        "By applying light"
+                    ],
+                    "describe": "Hole current is generated by the movement of valence electrons from one covalent bond to another, effectively moving the hole in the opposite direction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What creates hole-electron pairs in a semiconductor?",
+                    "options": [
+                        "Impurity addition",
+                        "Thermal energy",
+                        "Electric field",
+                        "Light exposure"
+                    ],
+                    "describe": "Thermal energy at room temperature breaks some covalent bonds in pure semiconductors, creating hole-electron pairs, with one hole for each free electron.",
+                    "correct": 1
+                },
+                {
+                    "question": "In which direction do holes move under an electric field?",
+                    "options": [
+                        "Towards the positive terminal",
+                        "Towards the negative terminal",
+                        "Randomly",
+                        "They do not move"
+                    ],
+                    "describe": "Holes, being positively charged vacancies, move towards the negative terminal of the supply under an electric field, opposite to electron movement.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is it called hole current?",
+                    "options": [
+                        "Due to free electron movement",
+                        "Due to the presence of holes in covalent bonds",
+                        "Due to impurity atoms",
+                        "Due to high resistivity"
+                    ],
+                    "describe": "It is called hole current because the basic reason for current flow is the presence of holes in covalent bonds, which facilitate the movement of valence electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens in the energy band when an electron leaves the valence band?",
+                    "options": [
+                        "A hole is created in the valence band",
+                        "The conduction band empties",
+                        "The valence band fills",
+                        "No change occurs"
+                    ],
+                    "describe": "When an electron leaves the valence band to enter the conduction band due to thermal energy, a hole (vacancy) is created in the valence band at that location.",
+                    "correct": 0
+                },
+                {
+                    "question": "How do valence electrons contribute to hole current?",
+                    "options": [
+                        "By becoming free",
+                        "By moving from one bond to another",
+                        "By staying in place",
+                        "By combining with holes"
+                    ],
+                    "describe": "Valence electrons contribute to hole current by moving from one covalent bond to fill a hole in another, effectively moving the hole in the opposite direction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the relationship between free electrons and holes in a pure semiconductor?",
+                    "options": [
+                        "More electrons than holes",
+                        "More holes than electrons",
+                        "Equal numbers of each",
+                        "No holes exist"
+                    ],
+                    "describe": "In a pure semiconductor, thermal energy creates hole-electron pairs, resulting in an equal number of free electrons and holes.",
+                    "correct": 2
+                },
+                {
+                    "question": "What acts as a virtual charge in hole current?",
+                    "options": [
+                        "Free electrons",
+                        "Holes",
+                        "Impurity atoms",
+                        "Valence electrons"
+                    ],
+                    "describe": "Holes act as a virtual charge in hole current, though they have no physical charge, attracting electrons from neighboring atoms due to the semiconductor’s tendency to form covalent bonds.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does the energy band description explain hole movement?",
+                    "options": [
+                        "Holes move in the same direction as electrons",
+                        "Holes move opposite to valence electron movement",
+                        "Holes do not move",
+                        "Holes disappear"
+                    ],
+                    "describe": "In the energy band description, valence electrons move to fill holes, causing holes to appear to move in the opposite direction, such as from L to N while electrons move from N to L.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.8 Intrinsic Semiconductor",
+            "qa": [
+                {
+                    "question": "What is an intrinsic semiconductor?",
+                    "options": [
+                        "A pure semiconductor without impurities",
+                        "A semiconductor with impurities",
+                        "A conductor with high resistivity",
+                        "An insulator with low resistivity"
+                    ],
+                    "describe": "An intrinsic semiconductor is an extremely pure form of a semiconductor, like germanium or silicon, with no impurities, where conduction occurs due to thermally generated hole-electron pairs.",
+                    "correct": 0
+                },
+                {
+                    "question": "How does current conduction occur in an intrinsic semiconductor?",
+                    "options": [
+                        "By free electrons only",
+                        "By holes only",
+                        "By both free electrons and holes",
+                        "By impurity atoms"
+                    ],
+                    "describe": "In an intrinsic semiconductor, current conduction occurs by both free electrons, produced by breaking covalent bonds, and holes, created simultaneously, under an electric field.",
+                    "correct": 2
+                },
+                {
+                    "question": "What generates free electrons in an intrinsic semiconductor?",
+                    "options": [
+                        "Impurity addition",
+                        "Thermal energy",
+                        "Electric field",
+                        "Light exposure"
+                    ],
+                    "describe": "Thermal energy at room temperature breaks some covalent bonds in an intrinsic semiconductor, producing free electrons and creating holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to holes at the negative terminal in an intrinsic semiconductor?",
+                    "options": [
+                        "They combine with electrons",
+                        "They disappear",
+                        "They move to the positive terminal",
+                        "They remain stationary"
+                    ],
+                    "describe": "Holes reach the negative terminal, where electrons from the terminal enter the semiconductor and combine with holes, canceling them out.",
+                    "correct": 0
+                },
+                {
+                    "question": "How are new holes created near the positive terminal?",
+                    "options": [
+                        "By impurity atoms",
+                        "By electrons leaving atoms",
+                        "By thermal energy",
+                        "By hole movement"
+                    ],
+                    "describe": "Near the positive terminal, loosely held electrons are attracted away from their atoms into the terminal, creating new holes that drift towards the negative terminal.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the total current in an intrinsic semiconductor?",
+                    "options": [
+                        "Due to free electrons only",
+                        "Due to holes only",
+                        "Sum of free electron and hole currents",
+                        "Due to external wires"
+                    ],
+                    "describe": "The total current inside an intrinsic semiconductor is the sum of currents due to free electrons and holes, both contributing to conduction.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the nature of current in external wires of an intrinsic semiconductor?",
+                    "options": [
+                        "By holes",
+                        "By electrons",
+                        "By both electrons and holes",
+                        "By impurity atoms"
+                    ],
+                    "describe": "In the external wires connected to an intrinsic semiconductor, the current is carried by electrons, as holes do not exist outside the semiconductor crystal.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the relationship between free electrons and holes in an intrinsic semiconductor?",
+                    "options": [
+                        "More electrons than holes",
+                        "More holes than electrons",
+                        "Equal numbers",
+                        "No holes exist"
+                    ],
+                    "describe": "In an intrinsic semiconductor, the number of free electrons equals the number of holes because they are generated in pairs by thermal energy breaking covalent bonds.",
+                    "correct": 2
+                },
+                {
+                    "question": "Why do holes move towards the negative terminal?",
+                    "options": [
+                        "They are negatively charged",
+                        "They are positively charged",
+                        "They are attracted by electrons",
+                        "They are repelled by the positive terminal"
+                    ],
+                    "describe": "Holes, being positively charged vacancies, move towards the negative terminal of the supply under the influence of an electric field.",
+                    "correct": 1
+                },
+                {
+                    "question": "What role does thermal energy play in an intrinsic semiconductor?",
+                    "options": [
+                        "Increases resistivity",
+                        "Creates hole-electron pairs",
+                        "Adds impurities",
+                        "Reduces conductivity"
+                    ],
+                    "describe": "Thermal energy in an intrinsic semiconductor, even at room temperature, breaks covalent bonds, creating hole-electron pairs that enable current conduction.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.9 Extrinsic Semiconductor",
+            "qa": [
+                {
+                    "question": "What is an extrinsic semiconductor?",
+                    "options": [
+                        "A pure semiconductor",
+                        "A semiconductor with impurities added",
+                        "A conductor",
+                        "An insulator"
+                    ],
+                    "describe": "An extrinsic semiconductor is a pure semiconductor altered by adding a small amount of suitable impurity (doping) to significantly increase its conducting properties.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the process of adding impurities to a semiconductor called?",
+                    "options": [
+                        "Purification",
+                        "Doping",
+                        "Crystallization",
+                        "Bonding"
+                    ],
+                    "describe": "The process of adding impurities to a semiconductor during its preparation to enhance conductivity is known as doping.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the purpose of doping a semiconductor?",
+                    "options": [
+                        "To decrease conductivity",
+                        "To increase free electrons or holes",
+                        "To make it pure",
+                        "To reduce resistivity"
+                    ],
+                    "describe": "The purpose of doping is to increase either the number of free electrons or holes in the semiconductor crystal, thereby enhancing its conductivity.",
+                    "correct": 1
+                },
+                {
+                    "question": "What type of impurity creates an n-type semiconductor?",
+                    "options": [
+                        "Trivalent",
+                        "Pentavalent",
+                        "Tetravalent",
+                        "Divalent"
+                    ],
+                    "describe": "A pentavalent impurity, with 5 valence electrons, is added to create an n-type semiconductor, providing a large number of free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What type of impurity creates a p-type semiconductor?",
+                    "options": [
+                        "Trivalent",
+                        "Pentavalent",
+                        "Tetravalent",
+                        "Hexavalent"
+                    ],
+                    "describe": "A trivalent impurity, with 3 valence electrons, is added to create a p-type semiconductor, producing a large number of holes.",
+                    "correct": 0
+                },
+                {
+                    "question": "What does a pentavalent impurity increase in a semiconductor?",
+                    "options": [
+                        "Number of holes",
+                        "Number of free electrons",
+                        "Resistivity",
+                        "Insulation"
+                    ],
+                    "describe": "A pentavalent impurity increases the number of free electrons in the semiconductor by donating extra electrons beyond those needed for covalent bonds.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does a trivalent impurity increase in a semiconductor?",
+                    "options": [
+                        "Number of free electrons",
+                        "Number of holes",
+                        "Conductivity",
+                        "Resistivity"
+                    ],
+                    "describe": "A trivalent impurity increases the number of holes in the semiconductor by creating vacancies in covalent bonds that act as positive charge carriers.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the amount of impurity controlled in doping?",
+                    "options": [
+                        "Randomly",
+                        "Closely controlled",
+                        "Not controlled",
+                        "By temperature"
+                    ],
+                    "describe": "The amount and type of impurities added during doping must be closely controlled to achieve the desired conducting properties in the extrinsic semiconductor.",
+                    "correct": 1
+                },
+                {
+                    "question": "What are the two types of extrinsic semiconductors?",
+                    "options": [
+                        "Intrinsic and extrinsic",
+                        "n-type and p-type",
+                        "Conductor and insulator",
+                        "Pure and impure"
+                    ],
+                    "describe": "Extrinsic semiconductors are classified into n-type (electron-rich) and p-type (hole-rich) based on the type of impurity added.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is an intrinsic semiconductor altered to become extrinsic?",
+                    "options": [
+                        "To reduce its conductivity",
+                        "To significantly increase its conducting properties",
+                        "To make it an insulator",
+                        "To purify it"
+                    ],
+                    "describe": "An intrinsic semiconductor is altered by doping to become extrinsic to significantly increase its conducting properties by adding charge carriers.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.10 n-type Semiconductor",
+            "qa": [
+                {
+                    "question": "What defines an n-type semiconductor?",
+                    "options": [
+                        "Addition of trivalent impurity",
+                        "Addition of pentavalent impurity",
+                        "Pure semiconductor",
+                        "High resistivity"
+                    ],
+                    "describe": "An n-type semiconductor is defined by the addition of a small amount of pentavalent impurity to a pure semiconductor, providing a large number of free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does a pentavalent impurity provide in an n-type semiconductor?",
+                    "options": [
+                        "Holes",
+                        "Free electrons",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "A pentavalent impurity, like arsenic, provides a large number of free electrons in the semiconductor crystal by donating its fifth valence electron.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which is an example of a pentavalent impurity?",
+                    "options": [
+                        "Gallium",
+                        "Arsenic",
+                        "Indium",
+                        "Silicon"
+                    ],
+                    "describe": "Arsenic (atomic number 33) is a pentavalent impurity with 5 valence electrons, used to create n-type semiconductors by donating free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are pentavalent impurities called donor impurities?",
+                    "options": [
+                        "They accept electrons",
+                        "They donate electrons",
+                        "They create holes",
+                        "They increase resistance"
+                    ],
+                    "describe": "Pentavalent impurities are called donor impurities because they donate or provide free electrons to the semiconductor crystal, enhancing conductivity.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many valence electrons does an arsenic atom have?",
+                    "options": [
+                        "3",
+                        "4",
+                        "5",
+                        "6"
+                    ],
+                    "describe": "An arsenic atom, a pentavalent impurity, has 5 valence electrons, four of which form covalent bonds with germanium, leaving one free electron.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to the fifth electron of a pentavalent impurity in a germanium crystal?",
+                    "options": [
+                        "It forms a covalent bond",
+                        "It becomes free",
+                        "It creates a hole",
+                        "It disappears"
+                    ],
+                    "describe": "The fifth valence electron of a pentavalent impurity, like arsenic, finds no place in covalent bonds with germanium and becomes free, increasing electron density.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the majority carrier in an n-type semiconductor?",
+                    "options": [
+                        "Holes",
+                        "Free electrons",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "In an n-type semiconductor, free electrons are the majority carriers due to the large number provided by the pentavalent impurity, far exceeding holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is it called an n-type semiconductor?",
+                    "options": [
+                        "It has a negative charge",
+                        "It has more electrons than holes",
+                        "It is doped with nitrogen",
+                        "It has a neutral charge"
+                    ],
+                    "describe": "It is called n-type (n for negative) because it has a predominance of electrons over holes, due to the addition of pentavalent impurities.",
+                    "correct": 1
+                },
+                {
+                    "question": "What still generates a few hole-electron pairs in an n-type semiconductor?",
+                    "options": [
+                        "Impurity addition",
+                        "Thermal energy",
+                        "Electric field",
+                        "Light exposure"
+                    ],
+                    "describe": "Thermal energy at room temperature still generates a few hole-electron pairs in an n-type semiconductor, though these are outnumbered by impurity-provided electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does current flow in an n-type semiconductor?",
+                    "options": [
+                        "By holes",
+                        "By free electrons towards the positive terminal",
+                        "By protons",
+                        "By valence electrons"
+                    ],
+                    "describe": "Current in an n-type semiconductor flows predominantly by free electrons, donated by the impurity, moving towards the positive terminal under a potential difference.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.11 p-type Semiconductor",
+            "qa": [
+                {
+                    "question": "What defines a p-type semiconductor?",
+                    "options": [
+                        "Addition of pentavalent impurity",
+                        "Addition of trivalent impurity",
+                        "Pure semiconductor",
+                        "High conductivity"
+                    ],
+                    "describe": "A p-type semiconductor is defined by the addition of a small amount of trivalent impurity to a pure semiconductor, creating a large number of holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does a trivalent impurity provide in a p-type semiconductor?",
+                    "options": [
+                        "Free electrons",
+                        "Holes",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "A trivalent impurity, like gallium, provides a large number of holes in the semiconductor crystal by creating vacancies in covalent bonds.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which is an example of a trivalent impurity?",
+                    "options": [
+                        "Arsenic",
+                        "Gallium",
+                        "Antimony",
+                        "Silicon"
+                    ],
+                    "describe": "Gallium (atomic number 31) is a trivalent impurity with 3 valence electrons, used to create p-type semiconductors by generating holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are trivalent impurities called acceptor impurities?",
+                    "options": [
+                        "They donate electrons",
+                        "They accept electrons",
+                        "They create free electrons",
+                        "They increase resistance"
+                    ],
+                    "describe": "Trivalent impurities are called acceptor impurities because the holes they create can accept electrons from neighboring atoms, enhancing hole conductivity.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many valence electrons does a gallium atom have?",
+                    "options": [
+                        "3",
+                        "4",
+                        "5",
+                        "6"
+                    ],
+                    "describe": "A gallium atom, a trivalent impurity, has 3 valence electrons, which form covalent bonds with germanium, leaving a hole in the lattice.",
+                    "correct": 0
+                },
+                {
+                    "question": "What happens when a trivalent impurity is added to a germanium crystal?",
+                    "options": [
+                        "It adds free electrons",
+                        "It creates holes",
+                        "It forms five covalent bonds",
+                        "It increases resistivity"
+                    ],
+                    "describe": "Adding a trivalent impurity like gallium to a germanium crystal creates holes because it has only 3 valence electrons, leaving a vacancy in the fourth covalent bond.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the majority carrier in a p-type semiconductor?",
+                    "options": [
+                        "Free electrons",
+                        "Holes",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "In a p-type semiconductor, holes are the majority carriers due to the large number created by the trivalent impurity, outnumbering free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is it called a p-type semiconductor?",
+                    "options": [
+                        "It has a positive charge",
+                        "It has more holes than electrons",
+                        "It is doped with phosphorus",
+                        "It has a neutral charge"
+                    ],
+                    "describe": "It is called p-type (p for positive) because it has a predominance of holes over free electrons, due to the addition of trivalent impurities.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does current flow in a p-type semiconductor?",
+                    "options": [
+                        "By free electrons",
+                        "By holes towards the negative terminal",
+                        "By protons",
+                        "By impurity atoms"
+                    ],
+                    "describe": "Current in a p-type semiconductor flows predominantly by holes, which are shifted from one covalent bond to another towards the negative terminal under a potential difference.",
+                    "correct": 1
+                },
+                {
+                    "question": "What generates a few free electrons in a p-type semiconductor?",
+                    "options": [
+                        "Trivalent impurity",
+                        "Thermal energy",
+                        "Electric field",
+                        "Pentavalent impurity"
+                    ],
+                    "describe": "Thermal energy at room temperature generates a few free electrons in a p-type semiconductor by breaking covalent bonds, though holes predominate.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.12 Charge on n-type and p-type Semiconductors",
+            "qa": [
+                {
+                    "question": "Is an n-type semiconductor negatively charged?",
+                    "options": [
+                        "Yes",
+                        "No",
+                        "Only when biased",
+                        "Only at high temperatures"
+                    ],
+                    "describe": "An n-type semiconductor is not negatively charged; despite excess electrons, it remains electrically neutral because the donor impurity atoms are neutral, balancing the charge.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are extrinsic semiconductors electrically neutral?",
+                    "options": [
+                        "They have no charge carriers",
+                        "Excess carriers are balanced by impurity ions",
+                        "They are pure",
+                        "They have equal electrons and holes"
+                    ],
+                    "describe": "Extrinsic semiconductors are electrically neutral because the excess charge carriers (electrons in n-type, holes in p-type) are balanced by the ions of the neutral impurity atoms added.",
+                    "correct": 1
+                },
+                {
+                    "question": "What provides the excess electrons in an n-type semiconductor?",
+                    "options": [
+                        "Thermal energy",
+                        "Donor impurity atoms",
+                        "Trivalent impurities",
+                        "Electric field"
+                    ],
+                    "describe": "The excess electrons in an n-type semiconductor are provided by donor impurity atoms (pentavalent), which are electrically neutral, maintaining overall neutrality.",
+                    "correct": 1
+                },
+                {
+                    "question": "What misconception might arise about n-type semiconductors?",
+                    "options": [
+                        "They are positively charged",
+                        "They are negatively charged",
+                        "They have no charge carriers",
+                        "They are insulators"
+                    ],
+                    "describe": "A misconception might arise that n-type semiconductors are negatively charged due to excess electrons, but they are neutral because the donor atoms balance the charge.",
+                    "correct": 1
+                },
+                {
+                    "question": "What balances the holes in a p-type semiconductor?",
+                    "options": [
+                        "Free electrons",
+                        "Acceptor impurity ions",
+                        "Protons",
+                        "Thermal energy"
+                    ],
+                    "describe": "In a p-type semiconductor, the holes are balanced by the negative ions of the trivalent acceptor impurities, which are neutral atoms, keeping the material neutral.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why don’t p-type semiconductors have a net positive charge?",
+                    "options": [
+                        "They have excess electrons",
+                        "Holes are balanced by acceptor ions",
+                        "They are pure",
+                        "They have no holes"
+                    ],
+                    "describe": "P-type semiconductors don’t have a net positive charge because the holes created by trivalent impurities are balanced by the negative ions of those neutral impurity atoms.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does 'excess electrons' mean in an n-type semiconductor?",
+                    "options": [
+                        "More electrons than protons",
+                        "Electrons beyond covalent bond needs",
+                        "Electrons from thermal energy",
+                        "Electrons from holes"
+                    ],
+                    "describe": "‘Excess electrons’ refers to electrons beyond those needed to fill covalent bonds in the semiconductor crystal, provided by neutral donor impurities, not affecting overall charge.",
+                    "correct": 1
+                },
+                {
+                    "question": "Are the impurity atoms added to semiconductors charged?",
+                    "options": [
+                        "Yes, positively",
+                        "Yes, negatively",
+                        "No, they are neutral",
+                        "Only in n-type"
+                    ],
+                    "describe": "The impurity atoms (pentavalent or trivalent) added to semiconductors are electrically neutral, ensuring the extrinsic semiconductor remains neutral despite added carriers.",
+                    "correct": 2
+                },
+                {
+                    "question": "What maintains neutrality in an n-type semiconductor?",
+                    "options": [
+                        "Equal holes and electrons",
+                        "Neutral donor atoms",
+                        "High resistivity",
+                        "Thermal energy"
+                    ],
+                    "describe": "Neutrality in an n-type semiconductor is maintained by the neutral donor impurity atoms, whose extra electrons are balanced by their positive ions.",
+                    "correct": 1
+                },
+                {
+                    "question": "What maintains neutrality in a p-type semiconductor?",
+                    "options": [
+                        "Excess electrons",
+                        "Neutral acceptor atoms",
+                        "Free protons",
+                        "High conductivity"
+                    ],
+                    "describe": "Neutrality in a p-type semiconductor is maintained by neutral acceptor impurity atoms, whose holes are balanced by their negative ions.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.13 Majority and Minority Carriers",
+            "qa": [
+                {
+                    "question": "What are the majority carriers in an n-type semiconductor?",
+                    "options": [
+                        "Holes",
+                        "Free electrons",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "In an n-type semiconductor, free electrons are the majority carriers due to the large number provided by pentavalent impurities, outnumbering holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "What are the minority carriers in a p-type semiconductor?",
+                    "options": [
+                        "Holes",
+                        "Free electrons",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "In a p-type semiconductor, free electrons are the minority carriers, as holes predominate due to trivalent impurities, with fewer electrons from thermal energy.",
+                    "correct": 1
+                },
+                {
+                    "question": "What generates minority carriers in an n-type semiconductor?",
+                    "options": [
+                        "Pentavalent impurities",
+                        "Thermal energy",
+                        "Electric field",
+                        "Trivalent impurities"
+                    ],
+                    "describe": "Thermal energy at room temperature breaks some covalent bonds in an n-type semiconductor, generating a small number of holes as minority carriers.",
+                    "correct": 1
+                },
+                {
+                    "question": "What are the majority carriers in a p-type semiconductor?",
+                    "options": [
+                        "Free electrons",
+                        "Holes",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "In a p-type semiconductor, holes are the majority carriers due to the large number created by trivalent impurities, outnumbering free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What generates minority carriers in a p-type semiconductor?",
+                    "options": [
+                        "Trivalent impurities",
+                        "Thermal energy",
+                        "Pentavalent impurities",
+                        "Light exposure"
+                    ],
+                    "describe": "Thermal energy generates a small number of free electrons as minority carriers in a p-type semiconductor by breaking covalent bonds.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are electrons the majority carriers in n-type material?",
+                    "options": [
+                        "Due to thermal energy",
+                        "Due to pentavalent impurity",
+                        "Due to trivalent impurity",
+                        "Due to high resistivity"
+                    ],
+                    "describe": "Electrons are the majority carriers in n-type material because pentavalent impurities provide a large number of free electrons, far exceeding thermally generated holes.",
+                    "correct": 1
+                },
+                {
+                    "question": "What are the minority carriers in an n-type semiconductor?",
+                    "options": [
+                        "Free electrons",
+                        "Holes",
+                        "Protons",
+                        "Neutrons"
+                    ],
+                    "describe": "Holes are the minority carriers in an n-type semiconductor, generated in small numbers by thermal energy, overshadowed by impurity-provided electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "How are electron-hole pairs generated in extrinsic semiconductors?",
+                    "options": [
+                        "By doping",
+                        "By thermal energy",
+                        "By electric field",
+                        "By impurities alone"
+                    ],
+                    "describe": "Even in extrinsic semiconductors, thermal energy at room temperature breaks covalent bonds, generating a small number of electron-hole pairs as minority carriers.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are holes the majority carriers in p-type material?",
+                    "options": [
+                        "Due to pentavalent impurity",
+                        "Due to trivalent impurity",
+                        "Due to thermal energy",
+                        "Due to high conductivity"
+                    ],
+                    "describe": "Holes are the majority carriers in p-type material because trivalent impurities create a large number of holes, outnumbering thermally generated free electrons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What outnumbers the other in an n-type semiconductor?",
+                    "options": [
+                        "Holes outnumber electrons",
+                        "Electrons outnumber holes",
+                        "Protons outnumber electrons",
+                        "Neutrons outnumber holes"
+                    ],
+                    "describe": "In an n-type semiconductor, electrons outnumber holes due to the addition of pentavalent impurities, making electrons the majority carriers.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.14 p-n Junction",
+            "qa": [
+                {
+                    "question": "What is a p-n junction?",
+                    "options": [
+                        "A type of conductor",
+                        "The boundary between p-type and n-type semiconductors",
+                        "A pure semiconductor",
+                        "An insulator"
+                    ],
+                    "describe": "A p-n junction is the contact surface or boundary where a p-type semiconductor is suitably joined to an n-type semiconductor, crucial for semiconductor devices.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is the p-n junction important in semiconductor devices?",
+                    "options": [
+                        "It increases resistivity",
+                        "It acts as a control element for current flow",
+                        "It reduces conductivity",
+                        "It eliminates charge carriers"
+                    ],
+                    "describe": "The p-n junction is of great importance because it acts as the control element for current flow in semiconductor devices, enabling functions like rectification.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is a p-n junction typically formed?",
+                    "options": [
+                        "By placing p-type and n-type materials together",
+                        "By alloying or diffusion processes",
+                        "By applying voltage",
+                        "By cooling the materials"
+                    ],
+                    "describe": "A p-n junction is fabricated by special techniques like alloying or diffusion, not just by placing materials together, to ensure proper atomic arrangement.",
+                    "correct": 1
+                },
+                {
+                    "question": "What method is commonly used to make a p-n junction?",
+                    "options": [
+                        "Alloying",
+                        "Heating",
+                        "Random doping",
+                        "Crystallization"
+                    ],
+                    "describe": "One common method of making a p-n junction is alloying, where a trivalent impurity like indium is melted into an n-type semiconductor to form a single crystal.",
+                    "correct": 0
+                },
+                {
+                    "question": "What happens during the alloying process to form a p-n junction?",
+                    "options": [
+                        "The materials separate",
+                        "Indium atoms adjust into the crystal",
+                        "The crystal breaks",
+                        "No change occurs"
+                    ],
+                    "describe": "During alloying, indium atoms adjust into the germanium slab under controlled conditions to form a single crystal with a p-type region at the junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What temperature is used in the alloying process for a p-n junction?",
+                    "options": [
+                        "100°C",
+                        "500°C",
+                        "1000°C",
+                        "25°C"
+                    ],
+                    "describe": "The alloying process involves heating the system to about 500°C, where indium and germanium melt to form a mixture that solidifies into a p-n junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the role of indium in forming a p-n junction?",
+                    "options": [
+                        "It adds free electrons",
+                        "It creates a p-type region",
+                        "It acts as a conductor",
+                        "It increases resistivity"
+                    ],
+                    "describe": "Indium, a trivalent impurity, is used in alloying to overcome the excess electrons in n-type germanium, creating a p-type region at the junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What forms the base for soldering leads in a p-n junction?",
+                    "options": [
+                        "Germanium slab",
+                        "Indium button",
+                        "n-type region",
+                        "p-type region"
+                    ],
+                    "describe": "After alloying, the remaining indium forms a button frozen onto the crystallized portion, serving as a suitable base for soldering on leads.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why doesn’t simply placing p-type and n-type blocks together form a p-n junction?",
+                    "options": [
+                        "Lack of special techniques",
+                        "Too high resistivity",
+                        "No impurities",
+                        "Too much conductivity"
+                    ],
+                    "describe": "Simply placing p-type and n-type blocks together doesn’t form a p-n junction because special techniques like alloying are required for proper atomic integration and electrical properties.",
+                    "correct": 0
+                },
+                {
+                    "question": "What does the p-n junction control in devices?",
+                    "options": [
+                        "Temperature",
+                        "Current flow",
+                        "Resistivity",
+                        "Impurity levels"
+                    ],
+                    "describe": "The p-n junction controls current flow in semiconductor devices, making it a fundamental component for functions like diodes and transistors.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.16 Applying D.C. Voltage Across p-n Junction or Biasing",
+            "qa": [
+                {
+                    "question": "What is forward biasing of a p-n junction?",
+                    "options": [
+                        "Increasing the potential barrier",
+                        "Decreasing the potential barrier",
+                        "Making the junction neutral",
+                        "Breaking the junction"
+                    ],
+                    "describe": "Forward biasing applies a d.c. voltage that cancels the potential barrier, reducing it and permitting current flow across the p-n junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is forward bias applied to a p-n junction?",
+                    "options": [
+                        "Positive to n-type, negative to p-type",
+                        "Positive to p-type, negative to n-type",
+                        "Both terminals to p-type",
+                        "Both terminals to n-type"
+                    ],
+                    "describe": "Forward bias is applied by connecting the positive terminal of the battery to the p-type and the negative terminal to the n-type, reducing the barrier.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to the resistance in forward bias?",
+                    "options": [
+                        "It increases",
+                        "It decreases",
+                        "It remains the same",
+                        "It becomes infinite"
+                    ],
+                    "describe": "In forward bias, the junction resistance becomes almost zero (low forward resistance, Rf), establishing a low resistance path for current flow.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is reverse biasing of a p-n junction?",
+                    "options": [
+                        "Decreasing the potential barrier",
+                        "Increasing the potential barrier",
+                        "Allowing current flow",
+                        "Equalizing charge carriers"
+                    ],
+                    "describe": "Reverse biasing applies a d.c. voltage that increases the potential barrier, preventing current flow across the p-n junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is reverse bias applied to a p-n junction?",
+                    "options": [
+                        "Positive to p-type, negative to n-type",
+                        "Negative to p-type, positive to n-type",
+                        "Both terminals to p-type",
+                        "Both terminals to n-type"
+                    ],
+                    "describe": "Reverse bias is applied by connecting the negative terminal to the p-type and the positive terminal to the n-type, strengthening the barrier.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to the resistance in reverse bias?",
+                    "options": [
+                        "It decreases",
+                        "It increases",
+                        "It remains the same",
+                        "It becomes zero"
+                    ],
+                    "describe": "In reverse bias, the junction offers very high resistance (reverse resistance, Rr), establishing a high resistance path that prevents current flow.",
+                    "correct": 1
+                },
+                {
+                    "question": "What voltage is sufficient to eliminate the potential barrier in forward bias?",
+                    "options": [
+                        "0.1 to 0.3 V",
+                        "5 V",
+                        "10 V",
+                        "50 V"
+                    ],
+                    "describe": "A small forward voltage of 0.1 to 0.3 V is sufficient to completely eliminate the potential barrier, which is very small in a p-n junction.",
+                    "correct": 0
+                },
+                {
+                    "question": "Why does no current flow in reverse bias?",
+                    "options": [
+                        "Barrier is reduced",
+                        "Junction offers high resistance",
+                        "Charge carriers increase",
+                        "Junction is forward biased"
+                    ],
+                    "describe": "No current flows in reverse bias because the increased potential barrier creates a high resistance path (Rr), preventing charge carrier flow across the junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the applied voltage do in forward bias?",
+                    "options": [
+                        "Strengthens the barrier",
+                        "Weakens the barrier",
+                        "Removes all charge carriers",
+                        "Increases resistance"
+                    ],
+                    "describe": "In forward bias, the applied voltage establishes an electric field that acts against the potential barrier, weakening it and allowing current to flow.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the term 'bias' in electronics?",
+                    "options": [
+                        "Increasing temperature",
+                        "Using d.c. voltage to set operating conditions",
+                        "Adding impurities",
+                        "Reducing conductivity"
+                    ],
+                    "describe": "In electronics, 'bias' refers to the use of d.c. voltage to establish certain operating conditions for a device, such as forward or reverse biasing a p-n junction.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.17 Current Flow Across p-n Junction When Biased in Forward Direction",
+            "qa": [
+                {
+                    "question": "How do free electrons move in a forward-biased p-n junction?",
+                    "options": [
+                        "From p-type to n-type",
+                        "From n-type to p-type",
+                        "They do not move",
+                        "Randomly"
+                    ],
+                    "describe": "In a forward-biased p-n junction, free electrons in the n-type region move towards the p-type region across the junction, driven by the forward voltage.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to holes in a forward-biased p-n junction?",
+                    "options": [
+                        "They move from n-type to p-type",
+                        "They move from p-type to n-type",
+                        "They stay in the p-type region",
+                        "They disappear"
+                    ],
+                    "describe": "Holes in the p-type region move towards the n-type region in a forward-biased p-n junction, contributing to the current flow as they shift towards the junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What carries current in the n-type region in forward bias?",
+                    "options": [
+                        "Holes",
+                        "Free electrons",
+                        "Protons",
+                        "Valence electrons"
+                    ],
+                    "describe": "In the n-type region of a forward-biased p-n junction, current is carried by free electrons moving towards the junction from the negative terminal.",
+                    "correct": 1
+                },
+                {
+                    "question": "What carries current in the p-type region in forward bias?",
+                    "options": [
+                        "Free electrons",
+                        "Holes",
+                        "Protons",
+                        "Impurity atoms"
+                    ],
+                    "describe": "In the p-type region of a forward-biased p-n junction, current is carried by holes moving towards the n-type region, equivalent to valence electron movement.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to electrons when they reach the p-type region?",
+                    "options": [
+                        "They become valence electrons",
+                        "They return to the n-type",
+                        "They disappear",
+                        "They create holes"
+                    ],
+                    "describe": "When free electrons from the n-type reach the p-type region, they combine with holes and become valence electrons, continuing towards the positive terminal.",
+                    "correct": 0
+                },
+                {
+                    "question": "Where do valence electrons go after reaching the left end of the crystal?",
+                    "options": [
+                        "Back to the n-type",
+                        "Into the positive terminal",
+                        "Into the negative terminal",
+                        "They stay in the p-type"
+                    ],
+                    "describe": "Valence electrons in the p-type region, after moving through holes, reach the left end of the crystal and flow into the positive terminal of the battery.",
+                    "correct": 1
+                },
+                {
+                    "question": "What supplies electrons to the n-type region in forward bias?",
+                    "options": [
+                        "Positive terminal",
+                        "Negative terminal",
+                        "P-type region",
+                        "Thermal energy"
+                    ],
+                    "describe": "The negative terminal of the battery supplies more electrons to the n-type region in forward bias, replacing those that move towards the junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the mechanism of current flow in a forward-biased p-n junction?",
+                    "options": [
+                        "By free electrons only",
+                        "By holes only",
+                        "By both electrons and holes",
+                        "By impurity atoms"
+                    ],
+                    "describe": "Current in a forward-biased p-n junction flows by both free electrons moving from n-type to p-type and holes moving from p-type to n-type.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to atoms in the n-type region when electrons move?",
+                    "options": [
+                        "They become negatively charged",
+                        "They become positively charged",
+                        "They remain neutral",
+                        "They disappear"
+                    ],
+                    "describe": "When free electrons move from the n-type region towards the junction, they leave behind positively charged atoms, balanced by incoming electrons from the negative terminal.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is current carried in the external wires in forward bias?",
+                    "options": [
+                        "By holes",
+                        "By free electrons",
+                        "By protons",
+                        "By valence electrons"
+                    ],
+                    "describe": "In the external connecting wires of a forward-biased p-n junction, current is carried by free electrons, as holes do not exist outside the semiconductor.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "5.18 Volt-Ampere Characteristics of a pn Junction",
+            "qa": [
+                {
+                    "question": "What does the volt-ampere characteristic of a pn junction show?",
+                    "options": [
+                        "Voltage vs. resistance",
+                        "Voltage vs. current",
+                        "Power vs. current",
+                        "Temperature vs. voltage"
+                    ],
+                    "describe": "The volt-ampere characteristic of a pn junction is the curve showing the relationship between voltage across the junction and the circuit current.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens when no external voltage is applied to a pn junction?",
+                    "options": [
+                        "Current flows",
+                        "No current flows",
+                        "Infinite current flows",
+                        "Resistance decreases"
+                    ],
+                    "describe": "With zero external voltage (open circuit), the potential barrier at the junction prevents current flow, so the circuit current is zero.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does current behave in forward bias as voltage increases?",
+                    "options": [
+                        "Decreases",
+                        "Remains constant",
+                        "Increases exponentially",
+                        "Becomes zero"
+                    ],
+                    "describe": "In forward bias, the current increases exponentially with increasing forward voltage as the potential barrier is reduced, allowing easier flow.",
+                    "correct": 2
+                },
+                {
+                    "question": "What prevents current flow in reverse bias?",
+                    "options": [
+                        "Reduced barrier",
+                        "Increased barrier",
+                        "High conductivity",
+                        "Low resistance"
+                    ],
+                    "describe": "In reverse bias, the increased potential barrier prevents current flow, except for a small leakage current due to minority carriers.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the role of the current limiting resistor in the circuit?",
+                    "options": [
+                        "Increases voltage",
+                        "Prevents excessive current",
+                        "Changes resistance",
+                        "Reduces voltage"
+                    ],
+                    "describe": "The current limiting resistor (R) prevents the forward current from exceeding the permitted value, protecting the pn junction from damage.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens in the breakdown region of reverse bias?",
+                    "options": [
+                        "Current decreases",
+                        "Current increases suddenly",
+                        "Voltage decreases",
+                        "Resistance increases"
+                    ],
+                    "describe": "In the breakdown region of reverse bias, if voltage exceeds a limit, the junction fails, causing a sudden increase in current that can damage the diode.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the pn junction connected in forward bias in the circuit?",
+                    "options": [
+                        "Positive to n-side, negative to p-side",
+                        "Positive to p-side, negative to n-side",
+                        "Both to p-side",
+                        "Both to n-side"
+                    ],
+                    "describe": "In forward bias, the positive terminal of the voltage source is connected to the p-side and the negative to the n-side, reducing the barrier.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the graph show in reverse bias before breakdown?",
+                    "options": [
+                        "High current",
+                        "Small leakage current",
+                        "Exponential increase",
+                        "Zero voltage"
+                    ],
+                    "describe": "Before breakdown in reverse bias, the graph shows a small leakage current due to minority charge carriers, with little change as voltage increases.",
+                    "correct": 1
+                },
+                {
+                    "question": "What axes are used in the volt-ampere characteristic graph?",
+                    "options": [
+                        "Voltage (x), Current (y)",
+                        "Current (x), Voltage (y)",
+                        "Resistance (x), Voltage (y)",
+                        "Power (x), Current (y)"
+                    ],
+                    "describe": "The volt-ampere characteristic graph plots voltage along the x-axis and current along the y-axis, showing their relationship under different bias conditions.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is labeled as 'BREAKDOWN' on the graph?",
+                    "options": [
+                        "Start of forward bias",
+                        "Point of sudden current increase in reverse bias",
+                        "Zero voltage point",
+                        "Maximum current in forward bias"
+                    ],
+                    "describe": "‘BREAKDOWN’ on the graph labels the point in reverse bias where the voltage exceeds a limit, causing a sudden increase in current as the junction fails.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.1 Zener Diode",
+            "qa": [
+                {
+                    "question": "What is a Zener diode?",
+                    "options": [
+                        "A diode for forward bias only",
+                        "A diode designed for reverse breakdown",
+                        "A light-emitting diode",
+                        "A photo-diode"
+                    ],
+                    "describe": "A Zener diode is a specially designed diode that operates in the reverse breakdown region without damage, due to heavy doping, for voltage regulation.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the primary use of a Zener diode?",
+                    "options": [
+                        "Rectification",
+                        "Amplification",
+                        "Voltage regulation",
+                        "Light emission"
+                    ],
+                    "describe": "The primary application of a Zener diode is voltage regulation, as it maintains a nearly constant reverse voltage (Vz) in the breakdown region.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to current at the breakdown voltage (Vz) in a Zener diode?",
+                    "options": [
+                        "It decreases",
+                        "It remains constant",
+                        "It increases rapidly",
+                        "It becomes zero"
+                    ],
+                    "describe": "At the breakdown voltage (Vz), the current through a Zener diode increases rapidly, while the voltage across it remains nearly constant.",
+                    "correct": 2
+                },
+                {
+                    "question": "Why can a Zener diode operate in reverse breakdown?",
+                    "options": [
+                        "Due to light sensitivity",
+                        "Due to heavy doping",
+                        "Due to low resistivity",
+                        "Due to forward bias"
+                    ],
+                    "describe": "A Zener diode can operate in reverse breakdown due to heavy doping, which creates a thin depletion layer and a sharp breakdown voltage.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is a Zener diode connected in a circuit?",
+                    "options": [
+                        "Positive to p-side, negative to n-side",
+                        "Positive to n-side, negative to p-side",
+                        "Both to p-side",
+                        "Both to n-side"
+                    ],
+                    "describe": "In a circuit, a Zener diode is connected in reverse bias, with the positive terminal to the n-side (cathode) and negative to the p-side (anode).",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the graph of a Zener diode show in reverse bias?",
+                    "options": [
+                        "Exponential current increase",
+                        "Sharp current increase at Vz",
+                        "Constant current",
+                        "No current"
+                    ],
+                    "describe": "The graph shows a sharp vertical drop in reverse bias at Vz, indicating a rapid current increase while voltage remains constant, labeled as the Zener breakdown region.",
+                    "correct": 1
+                },
+                {
+                    "question": "What feature allows voltage regulation in a Zener diode?",
+                    "options": [
+                        "High forward current",
+                        "Constant voltage at breakdown",
+                        "Light emission",
+                        "High resistance"
+                    ],
+                    "describe": "The constant voltage across a Zener diode at breakdown (Vz) allows it to function as a voltage regulator, stabilizing voltage across a load.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the role of the series resistor in a Zener diode circuit?",
+                    "options": [
+                        "Increases voltage",
+                        "Limits current",
+                        "Emits light",
+                        "Reduces resistance"
+                    ],
+                    "describe": "The series resistor in a Zener diode circuit limits the current to prevent damage, ensuring safe operation in the reverse breakdown region.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does 'Vz' represent in a Zener diode?",
+                    "options": [
+                        "Forward voltage",
+                        "Breakdown voltage",
+                        "Maximum current",
+                        "Resistance"
+                    ],
+                    "describe": "‘Vz’ represents the breakdown voltage of a Zener diode, where current increases rapidly, and voltage remains nearly constant.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the Zener breakdown region on the graph?",
+                    "options": [
+                        "Forward bias area",
+                        "Reverse bias area post-breakdown",
+                        "Zero voltage point",
+                        "Leakage current area"
+                    ],
+                    "describe": "The Zener breakdown region on the graph is the reverse bias area after Vz, where current rises sharply but voltage stays constant, ideal for regulation.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.2 Light-Emitting Diode (LED)",
+            "qa": [
+                {
+                    "question": "What is a light-emitting diode (LED)?",
+                    "options": [
+                        "A diode that emits light in reverse bias",
+                        "A diode that emits light in forward bias",
+                        "A voltage regulator",
+                        "A rectifier diode"
+                    ],
+                    "describe": "An LED is a diode that gives off visible light when forward biased, due to electron-hole recombination releasing energy as light.",
+                    "correct": 1
+                },
+                {
+                    "question": "What materials are used to make LEDs?",
+                    "options": [
+                        "Copper and silicon",
+                        "Gallium, phosphorus, and arsenic",
+                        "Germanium and glass",
+                        "Nichrome and indium"
+                    ],
+                    "describe": "LEDs are made using elements like gallium, phosphorus, and arsenic, unlike germanium and silicon diodes, to produce visible light of various colors.",
+                    "correct": 1
+                },
+                {
+                    "question": "What determines the color of light emitted by an LED?",
+                    "options": [
+                        "Voltage applied",
+                        "Current through the LED",
+                        "Materials used",
+                        "Temperature"
+                    ],
+                    "describe": "The color of light emitted by an LED is determined by the materials used (e.g., gallium arsenide for red, gallium phosphide for green), varying the wavelength.",
+                    "correct": 2
+                },
+                {
+                    "question": "How does an LED produce light?",
+                    "options": [
+                        "By heating a filament",
+                        "By electron-hole recombination",
+                        "By gas ionization",
+                        "By photoelectric effect"
+                    ],
+                    "describe": "An LED produces light when forward biased, as electrons from the n-type recombine with holes in the p-type, releasing energy as visible photons.",
+                    "correct": 1
+                },
+                {
+                    "question": "What color does gallium arsenide produce in an LED?",
+                    "options": [
+                        "Green",
+                        "Red",
+                        "Blue",
+                        "Yellow"
+                    ],
+                    "describe": "When an LED is made using gallium arsenide, it produces a red light due to the specific energy released during recombination.",
+                    "correct": 1
+                },
+                {
+                    "question": "What color does gallium phosphide produce in an LED?",
+                    "options": [
+                        "Red",
+                        "Green",
+                        "Blue",
+                        "Yellow"
+                    ],
+                    "describe": "An LED made using gallium phosphide produces a green light, determined by the material’s properties affecting the emitted wavelength.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is an LED connected in a circuit?",
+                    "options": [
+                        "Positive to n-side, negative to p-side",
+                        "Positive to p-side, negative to n-side",
+                        "Both to n-side",
+                        "Both to p-side"
+                    ],
+                    "describe": "An LED is connected in forward bias, with the positive terminal to the p-side (anode) and negative to the n-side (cathode), to emit light.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is light emission insignificant in germanium diodes?",
+                    "options": [
+                        "High resistance",
+                        "Low photon energy",
+                        "No recombination",
+                        "High voltage"
+                    ],
+                    "describe": "In germanium and silicon diodes, the light energy emitted during recombination is insignificant because the number of photons is too low to produce intense visible light.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the graph of an LED show?",
+                    "options": [
+                        "Voltage vs. current",
+                        "Current vs. light intensity",
+                        "Voltage vs. resistance",
+                        "Temperature vs. current"
+                    ],
+                    "describe": "The graph plots current (x-axis) vs. radiated light intensity (y-axis), showing an exponential increase in light intensity with forward current.",
+                    "correct": 1
+                },
+                {
+                    "question": "What indicates light emission in an LED schematic?",
+                    "options": [
+                        "A circle",
+                        "Arrows pointing away",
+                        "A triangle",
+                        "A line"
+                    ],
+                    "describe": "In the LED schematic, arrows pointing away from the diode symbol indicate light emission when the device is forward biased.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.3 LED Voltage and Current",
+            "qa": [
+                {
+                    "question": "What is the typical forward voltage drop across an LED?",
+                    "options": [
+                        "0.7 V",
+                        "1.5 V to 3 V",
+                        "5 V",
+                        "10 V"
+                    ],
+                    "describe": "The forward voltage ratings of most LEDs range from 1.5 V to 3 V, depending on the color and material, higher than typical diodes like silicon (0.7 V).",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the typical forward current rating of an LED?",
+                    "options": [
+                        "1 mA to 10 mA",
+                        "20 mA to 100 mA",
+                        "200 mA to 500 mA",
+                        "1 A to 2 A"
+                    ],
+                    "describe": "The forward current ratings of LEDs typically range from 20 mA to 100 mA, requiring current limitation to operate safely.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is a series resistor used with an LED?",
+                    "options": [
+                        "To increase voltage",
+                        "To limit current",
+                        "To change color",
+                        "To reduce light"
+                    ],
+                    "describe": "A series resistor (Rs) is used with an LED to limit the current, preventing it from exceeding the safe rating and protecting the diode from damage.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the formula for the voltage across the series resistor Rs?",
+                    "options": [
+                        "Vs + VD",
+                        "Vs - VD",
+                        "VD / IF",
+                        "Vs / IF"
+                    ],
+                    "describe": "The voltage across the series resistor Rs is calculated as Vs - VD, where Vs is the supply voltage and VD is the LED’s forward voltage drop.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the current through an LED calculated?",
+                    "options": [
+                        "I = V / R",
+                        "I = (Vs - VD) / Rs",
+                        "I = VD / Rs",
+                        "I = Vs / Rs"
+                    ],
+                    "describe": "The current through an LED is calculated as I = (Vs - VD) / Rs, where Vs is the supply voltage, VD is the LED voltage, and Rs is the series resistance.",
+                    "correct": 1
+                },
+                {
+                    "question": "What Rs value limits current to 20 mA with Vs = 10 V and VD = 1.6 V?",
+                    "options": [
+                        "420 Ω",
+                        "500 Ω",
+                        "300 Ω",
+                        "200 Ω"
+                    ],
+                    "describe": "Rs = (Vs - VD) / IF = (10 - 1.6) / 0.02 = 8.4 / 0.02 = 420 Ω, required to limit current to 20 mA with given voltages.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is the current if Vs = 15 V, VD = 2 V, Rs = 2.2 kΩ?",
+                    "options": [
+                        "5.91 mA",
+                        "6.5 mA",
+                        "10 mA",
+                        "15 mA"
+                    ],
+                    "describe": "IF = (Vs - VD) / Rs = (15 - 2) / 2200 = 13 / 2200 = 0.00591 A = 5.91 mA, the current through the LED with given values.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is Rs also called in an LED circuit?",
+                    "options": [
+                        "Voltage divider",
+                        "Current-limiting resistor",
+                        "Light enhancer",
+                        "Resistance booster"
+                    ],
+                    "describe": "Rs is also called the current-limiting resistor because it ensures the LED operates safely within its forward current rating.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does VD represent in an LED circuit?",
+                    "options": [
+                        "Supply voltage",
+                        "Voltage across the resistor",
+                        "Forward voltage drop",
+                        "Reverse voltage"
+                    ],
+                    "describe": "VD represents the forward voltage drop across the LED, typically 1.5 V to 3 V, depending on the LED type.",
+                    "correct": 2
+                },
+                {
+                    "question": "How is the LED connected in the circuit?",
+                    "options": [
+                        "Positive to n-side",
+                        "Positive to p-side",
+                        "Negative to p-side",
+                        "Both to n-side"
+                    ],
+                    "describe": "The LED is connected with the positive terminal of the supply to the p-side (anode) and negative to the n-side (cathode) via Rs, for forward bias.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.4 Advantages of LED",
+            "qa": [
+                {
+                    "question": "What is a major advantage of LEDs over incandescent lamps?",
+                    "options": [
+                        "Higher power consumption",
+                        "Longer lifespan",
+                        "Brighter light",
+                        "Lower cost"
+                    ],
+                    "describe": "LEDs have a longer lifespan (more than 20 years) compared to incandescent lamps, making them more durable and a key advantage.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why are LEDs good for fast-switching applications?",
+                    "options": [
+                        "They turn on and off quickly",
+                        "They are cheaper",
+                        "They consume more power",
+                        "They are brighter"
+                    ],
+                    "describe": "LEDs are preferred for fast-switching applications because they have fast on-off switching capabilities, useful in digital displays and communication systems.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is the typical reverse voltage rating of an LED?",
+                    "options": [
+                        "5 V",
+                        "10 V",
+                        "20 V",
+                        "50 V"
+                    ],
+                    "describe": "A typical LED has a maximum reverse voltage rating of 5 V, beyond which it may be destroyed if reverse biased.",
+                    "correct": 0
+                },
+                {
+                    "question": "How can an LED be protected against reverse bias?",
+                    "options": [
+                        "By adding a series resistor",
+                        "By connecting a rectifier diode in parallel",
+                        "By increasing voltage",
+                        "By cooling it"
+                    ],
+                    "describe": "An LED can be protected against reverse bias by connecting a rectifier diode in parallel, which conducts if reverse voltage is applied, safeguarding the LED.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens if reverse voltage exceeds 5 V on an LED?",
+                    "options": [
+                        "It emits brighter light",
+                        "It may be destroyed",
+                        "It switches faster",
+                        "It becomes more efficient"
+                    ],
+                    "describe": "If reverse voltage exceeds the typical 5 V rating, the LED may be destroyed due to its low reverse voltage tolerance.",
+                    "correct": 1
+                },
+                {
+                    "question": "What type of light source is an LED?",
+                    "options": [
+                        "Gas-based",
+                        "Solid-state",
+                        "Filament-based",
+                        "Liquid-based"
+                    ],
+                    "describe": "An LED is a solid-state light source, relying on semiconductor properties rather than gas or filament, contributing to its advantages.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does the rectifier diode protect the LED?",
+                    "options": [
+                        "By increasing current",
+                        "By conducting in reverse bias",
+                        "By reducing forward voltage",
+                        "By emitting light"
+                    ],
+                    "describe": "The rectifier diode in parallel turns on if reverse voltage is applied, providing a path for current and protecting the LED from damage.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the resistance value in the protection circuit example?",
+                    "options": [
+                        "50 Ω",
+                        "100 Ω",
+                        "200 Ω",
+                        "500 Ω"
+                    ],
+                    "describe": "In the example circuit, a 100 Ω resistor is connected in series with the LED and a 5 V supply, limiting current in forward bias.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why have LEDs replaced incandescent lamps?",
+                    "options": [
+                        "Lower cost",
+                        "Long life and fast switching",
+                        "Higher power use",
+                        "Simpler design"
+                    ],
+                    "describe": "LEDs have replaced incandescent lamps due to their long life (over 20 years) and fast on-off switching, offering significant advantages.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the power supply voltage in the protection circuit?",
+                    "options": [
+                        "3 V",
+                        "5 V",
+                        "10 V",
+                        "15 V"
+                    ],
+                    "describe": "The circuit diagram shows a 5 V power supply connected to the LED and rectifier diode, matching the typical reverse voltage rating.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.5 Multicolour LEDs",
+            "qa": [
+                {
+                    "question": "What is a multicolour LED?",
+                    "options": [
+                        "An LED that changes color with temperature",
+                        "An LED that emits different colors based on bias direction",
+                        "An LED emitting white light",
+                        "An LED with one pn junction"
+                    ],
+                    "describe": "A multicolour LED emits one color when forward biased and another when reverse biased, due to two pn junctions connected in reverse-parallel.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many pn junctions are in a multicolour LED?",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "describe": "A multicolour LED contains two pn junctions connected in reverse-parallel, allowing it to emit different colors depending on bias direction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens when positive potential is applied to the top terminal?",
+                    "options": [
+                        "The right junction lights",
+                        "The left junction lights",
+                        "Both junctions light",
+                        "No light is emitted"
+                    ],
+                    "describe": "When positive potential is applied to the top terminal, the left pn junction is forward biased and lights, as current passes through it.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens when the polarity is reversed in a multicolour LED?",
+                    "options": [
+                        "The left junction lights",
+                        "The right junction lights",
+                        "No light is emitted",
+                        "Both junctions light"
+                    ],
+                    "describe": "When polarity is reversed, the right pn junction is forward biased and lights, as current passes through it in the opposite direction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What are the typical colors of a multicolour LED?",
+                    "options": [
+                        "Blue and yellow",
+                        "Red and green",
+                        "Green and blue",
+                        "Red and yellow"
+                    ],
+                    "describe": "Multicolour LEDs are typically red when biased in one direction and green in the other, common combinations for such devices.",
+                    "correct": 1
+                },
+                {
+                    "question": "How can a multicolour LED produce a third color?",
+                    "options": [
+                        "By increasing voltage",
+                        "By switching rapidly between polarities",
+                        "By reducing current",
+                        "By changing temperature"
+                    ],
+                    "describe": "A multicolour LED produces a third color, like yellow, by switching rapidly between forward and reverse bias, blending red and green light.",
+                    "correct": 1
+                },
+                {
+                    "question": "What third color is produced from a red-green multicolour LED?",
+                    "options": [
+                        "Blue",
+                        "Yellow",
+                        "White",
+                        "Purple"
+                    ],
+                    "describe": "A red-green multicolour LED, when switched fast between polarities, produces yellow light by combining the two emissions.",
+                    "correct": 1
+                },
+                {
+                    "question": "How are the pn junctions connected in a multicolour LED?",
+                    "options": [
+                        "In series",
+                        "In reverse-parallel",
+                        "In parallel",
+                        "Independently"
+                    ],
+                    "describe": "The two pn junctions in a multicolour LED are connected in reverse-parallel, with the anode of one to the cathode of the other, enabling dual-color operation.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does Rs do in the multicolour LED circuit?",
+                    "options": [
+                        "Changes color",
+                        "Limits current",
+                        "Increases voltage",
+                        "Reduces light"
+                    ],
+                    "describe": "The series resistor Rs in the multicolour LED circuit limits the current to prevent damage to the LED in either bias direction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What indicates light emission in the multicolour LED diagram?",
+                    "options": [
+                        "A circle",
+                        "Arrows",
+                        "A triangle",
+                        "A line"
+                    ],
+                    "describe": "Arrows in the circuit diagrams indicate light emission from the respective pn junctions of the multicolour LED when forward biased.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.6 Applications of LEDs",
+            "qa": [
+                {
+                    "question": "What is a common application of LEDs?",
+                    "options": [
+                        "Power generation",
+                        "Voltage regulation",
+                        "Indicator lights",
+                        "Heating"
+                    ],
+                    "describe": "LEDs are commonly used as indicator lights due to their low power consumption and long life, ideal for signaling power status or other conditions.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the power rating of an LED typically?",
+                    "options": [
+                        "Watts",
+                        "Milliwatts",
+                        "Kilowatts",
+                        "Megawatts"
+                    ],
+                    "describe": "The power rating of an LED is of the order of milliwatts, making it a low-power device suitable for indicators but not illumination.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does an LED indicate power status?",
+                    "options": [
+                        "By heating up",
+                        "By lighting when power is on",
+                        "By changing color",
+                        "By increasing resistance"
+                    ],
+                    "describe": "An LED indicates power status by lighting when the switch is closed and power is applied, with current flowing through it.",
+                    "correct": 1
+                },
+                {
+                    "question": "What limits current in an LED power indicator circuit?",
+                    "options": [
+                        "The switch",
+                        "The resistor Rs",
+                        "The power supply",
+                        "The LED itself"
+                    ],
+                    "describe": "The resistor Rs in series with the LED ensures that the current rating of the LED is not exceeded, protecting it in the power indicator circuit.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many segments are in a seven-segment display?",
+                    "options": [
+                        "5",
+                        "6",
+                        "7",
+                        "8"
+                    ],
+                    "describe": "A seven-segment display consists of 7 LEDs (A, B, C, D, E, F, G), arranged to form numbers or letters when specific segments are lit.",
+                    "correct": 2
+                },
+                {
+                    "question": "How does a seven-segment display show numbers?",
+                    "options": [
+                        "By changing colors",
+                        "By lighting specific LEDs",
+                        "By varying voltage",
+                        "By rotating segments"
+                    ],
+                    "describe": "A seven-segment display shows numbers by lighting specific LEDs (segments) in a figure-eight pattern, e.g., all except G for '0'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What type is the seven-segment display described?",
+                    "options": [
+                        "Common-cathode",
+                        "Common-anode",
+                        "Single-segment",
+                        "Dual-segment"
+                    ],
+                    "describe": "The described seven-segment display is common-anode type, with all anodes connected to +5 V, and cathodes grounded to light segments.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which segment is not lit to display the number 0?",
+                    "options": [
+                        "A",
+                        "B",
+                        "G",
+                        "F"
+                    ],
+                    "describe": "To display the number 0, all segments except G are lit, forming the shape of a zero in the seven-segment display.",
+                    "correct": 2
+                },
+                {
+                    "question": "What voltage powers the seven-segment display?",
+                    "options": [
+                        "3 V",
+                        "5 V",
+                        "10 V",
+                        "15 V"
+                    ],
+                    "describe": "The seven-segment display is powered by a common +5 V supply connected to the anodes, typical for such LED displays.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why isn’t an LED good for illumination?",
+                    "options": [
+                        "High power rating",
+                        "Low power rating",
+                        "Slow switching",
+                        "High cost"
+                    ],
+                    "describe": "An LED isn’t good for illumination because its power rating is in milliwatts, too low for significant light output compared to its use as an indicator.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.7 Photo-diode",
+            "qa": [
+                {
+                    "question": "What is a photo-diode?",
+                    "options": [
+                        "A diode that emits light",
+                        "A diode that detects light",
+                        "A voltage regulator",
+                        "A rectifier diode"
+                    ],
+                    "describe": "A photo-diode is a reverse-biased pn junction that detects light, with reverse current increasing as light intensity on the junction increases.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is a photo-diode typically biased?",
+                    "options": [
+                        "Forward biased",
+                        "Reverse biased",
+                        "No bias",
+                        "Alternating bias"
+                    ],
+                    "describe": "A photo-diode is typically reverse biased, allowing it to detect light by varying its reverse current with light intensity.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to reverse current in a photo-diode with light?",
+                    "options": [
+                        "It decreases",
+                        "It increases",
+                        "It remains constant",
+                        "It becomes zero"
+                    ],
+                    "describe": "The reverse current in a photo-diode increases with the intensity of light falling on its pn junction, due to more electron-hole pairs being created.",
+                    "correct": 1
+                },
+                {
+                    "question": "What creates more free electrons in a photo-diode?",
+                    "options": [
+                        "Heat",
+                        "Light photons",
+                        "Voltage",
+                        "Impurities"
+                    ],
+                    "describe": "Light photons falling on the pn junction impart energy to atoms, creating more free electrons and holes, increasing the reverse current.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the relationship between light intensity and reverse current?",
+                    "options": [
+                        "Inversely proportional",
+                        "Directly proportional",
+                        "No relationship",
+                        "Exponentially related"
+                    ],
+                    "describe": "The reverse current in a photo-diode is directly proportional to the intensity of light on its pn junction, increasing as light intensity rises.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to resistance as light intensity increases?",
+                    "options": [
+                        "It increases",
+                        "It decreases",
+                        "It remains constant",
+                        "It becomes infinite"
+                    ],
+                    "describe": "As light intensity increases, the resistance of the photo-diode decreases because the reverse current rises, reflecting higher conductivity.",
+                    "correct": 1
+                },
+                {
+                    "question": "What allows light to reach the pn junction in a photo-diode?",
+                    "options": [
+                        "A metal case",
+                        "A glass window",
+                        "A resistor",
+                        "A voltage source"
+                    ],
+                    "describe": "A glass window mounted on the metal case of the photo-diode allows incoming light to strike the pn junction, enabling light detection.",
+                    "correct": 1
+                },
+                {
+                    "question": "What causes reverse leakage current in a photo-diode without light?",
+                    "options": [
+                        "Light photons",
+                        "Thermally generated pairs",
+                        "High voltage",
+                        "Impurities"
+                    ],
+                    "describe": "Without light, a small reverse leakage current flows due to thermally generated electron-hole pairs, swept across the junction by the reverse voltage.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the photo-diode packaged?",
+                    "options": [
+                        "In a plastic case",
+                        "On an insulated substrate in a metal case",
+                        "In a glass tube",
+                        "In a ceramic shell"
+                    ],
+                    "describe": "The photo-diode is mounted on an insulated substrate and sealed inside a metal case, with a glass window for light entry.",
+                    "correct": 1
+                },
+                {
+                    "question": "What materials are used to make a photo-diode?",
+                    "options": [
+                        "Copper and glass",
+                        "Silicon or germanium",
+                        "Gallium and arsenic",
+                        "Nichrome and indium"
+                    ],
+                    "describe": "A photo-diode is a reverse-biased silicon or germanium pn junction, commonly used for their light-sensitive properties.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.8 Photo-diode Operation",
+            "qa": [
+                {
+                    "question": "What is dark current in a photo-diode?",
+                    "options": [
+                        "Current with light present",
+                        "Current with no light present",
+                        "Maximum current",
+                        "Saturation current"
+                    ],
+                    "describe": "Dark current is the extremely small reverse current that flows through a photo-diode when no light is incident on its pn junction.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is dark resistance in a photo-diode?",
+                    "options": [
+                        "Resistance with light",
+                        "Resistance without light",
+                        "Resistance at maximum current",
+                        "Resistance at saturation"
+                    ],
+                    "describe": "Dark resistance (Rd) is the resistance of the photo-diode with no incident light, calculated as V_R / I_R, where I_R is the dark current.",
+                    "correct": 1
+                },
+                {
+                    "question": "What increases reverse current in a photo-diode?",
+                    "options": [
+                        "Decreasing light",
+                        "Increasing light",
+                        "Increasing voltage",
+                        "Decreasing temperature"
+                    ],
+                    "describe": "When light is incident, its energy creates more free electrons and holes, increasing the reverse current in the photo-diode.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is saturation current in a photo-diode?",
+                    "options": [
+                        "Minimum current",
+                        "Maximum current with light",
+                        "Current without light",
+                        "Current at zero voltage"
+                    ],
+                    "describe": "Saturation current is the maximum reverse current in a photo-diode, achieved when light intensity increases to its highest level.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the resistor R do in a photo-diode circuit?",
+                    "options": [
+                        "Increases voltage",
+                        "Limits current",
+                        "Emits light",
+                        "Reduces sensitivity"
+                    ],
+                    "describe": "The resistor R in series with the reverse-biased photo-diode limits the current and allows measurement of the voltage drop varying with light.",
+                    "correct": 1
+                },
+                {
+                    "question": "What creates additional charge carriers in a photo-diode?",
+                    "options": [
+                        "Heat",
+                        "Light photons",
+                        "Voltage",
+                        "Impurities"
+                    ],
+                    "describe": "Light photons transfer energy to atoms in the pn junction, creating more free electrons and holes, increasing the reverse current.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is a photo-diode connected in its circuit?",
+                    "options": [
+                        "Positive to p-side",
+                        "Positive to n-side",
+                        "Negative to n-side",
+                        "No connection"
+                    ],
+                    "describe": "The photo-diode is reverse biased, with the positive terminal of the supply to the n-side (cathode) and negative to the p-side (anode) via resistor R.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens when no light is incident on a photo-diode?",
+                    "options": [
+                        "High reverse current",
+                        "Small reverse current",
+                        "No current",
+                        "Forward current"
+                    ],
+                    "describe": "When no light is incident, the reverse current (dark current) in a photo-diode is extremely small, due to thermal generation only.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the formula for dark resistance?",
+                    "options": [
+                        "Rd = V_R / I_R",
+                        "Rd = I_R / V_R",
+                        "Rd = V_R × I_R",
+                        "Rd = V_R + I_R"
+                    ],
+                    "describe": "Dark resistance is calculated as Rd = V_R / I_R, where V_R is the reverse voltage and I_R is the dark current without light.",
+                    "correct": 0
+                },
+                {
+                    "question": "What does light intensityaffect in a photo-diode?",
+                    "options": [
+                        "Voltage across the diode",
+                        "Reverse current",
+                        "Forward current",
+                        "Resistance of the supply"
+                    ],
+                    "describe": "Light intensity affects the reverse current in a photo-diode; as intensity increases, more electron-hole pairs are generated, increasing the reverse current.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.9 Characteristics of Photo-diode",
+            "qa": [
+                {
+                    "question": "What does the reverse current-illumination curve show?",
+                    "options": [
+                        "Voltage vs. current",
+                        "Reverse current vs. illumination",
+                        "Resistance vs. voltage",
+                        "Current vs. temperature"
+                    ],
+                    "describe": "The reverse current-illumination curve shows the relationship between reverse current (I_R) on the y-axis and illumination (E) on the x-axis, as a straight line through the origin.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the shape of the reverse current-illumination curve?",
+                    "options": [
+                        "Exponential",
+                        "Straight line",
+                        "Parabolic",
+                        "Horizontal"
+                    ],
+                    "describe": "The reverse current-illumination curve is a straight line passing through the origin, indicating a linear relationship where I_R = mE.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does 'm' represent in the photo-diode curve?",
+                    "options": [
+                        "Maximum current",
+                        "Sensitivity",
+                        "Voltage",
+                        "Resistance"
+                    ],
+                    "describe": "The quantity 'm' in I_R = mE is the sensitivity of the photo-diode, representing the increase in reverse current per unit of illumination.",
+                    "correct": 1
+                },
+                {
+                    "question": "What units measure illumination on the curve?",
+                    "options": [
+                        "Volts",
+                        "Amperes",
+                        "mW/cm²",
+                        "Ohms"
+                    ],
+                    "describe": "Illumination (E) on the reverse current-illumination curve is measured in mW/cm², indicating the light intensity incident on the photo-diode.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to reverse current as illumination increases?",
+                    "options": [
+                        "It decreases",
+                        "It increases",
+                        "It remains constant",
+                        "It becomes zero"
+                    ],
+                    "describe": "As illumination increases, the reverse current (I_R) increases linearly, as shown by the straight line on the reverse current-illumination curve.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the reverse current-reverse voltage curve show?",
+                    "options": [
+                        "Current vs. light",
+                        "Current vs. voltage for different illuminations",
+                        "Voltage vs. resistance",
+                        "Current vs. temperature"
+                    ],
+                    "describe": "The reverse current-reverse voltage curve shows reverse current (I_R) vs. reverse voltage (V_R) for various illumination levels, indicating higher current with higher light.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does reverse current vary with voltage at constant illumination?",
+                    "options": [
+                        "Increases exponentially",
+                        "Remains relatively constant",
+                        "Decreases linearly",
+                        "Becomes infinite"
+                    ],
+                    "describe": "For a given illumination, the reverse current remains relatively constant or increases slightly with reverse voltage, as seen in the curve for each illumination level.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the unit of reverse current on the graphs?",
+                    "options": [
+                        "mA",
+                        "µA",
+                        "V",
+                        "W"
+                    ],
+                    "describe": "Reverse current (I_R) is measured in microamperes (µA) on both the reverse current-illumination and reverse current-reverse voltage graphs.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does higher illumination do to the reverse current-reverse voltage curve?",
+                    "options": [
+                        "Shifts it downward",
+                        "Shifts it upward",
+                        "Flattens it",
+                        "Inverts it"
+                    ],
+                    "describe": "Higher illumination shifts the reverse current-reverse voltage curve upward, indicating higher reverse current for the same voltage due to more charge carriers.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the dark current on the reverse current-reverse voltage curve?",
+                    "options": [
+                        "Highest current",
+                        "Lowest current",
+                        "Average current",
+                        "Saturation current"
+                    ],
+                    "describe": "The dark current, with no illumination, is the lowest current on the reverse current-reverse voltage curve, showing minimal flow without light.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "7.10 Applications of Photo-diodes",
+            "qa": [
+                {
+                    "question": "What is one application of a photo-diode?",
+                    "options": [
+                        "Light emission",
+                        "Alarm system",
+                        "Voltage regulation",
+                        "Power indication"
+                    ],
+                    "describe": "A photo-diode is used in an alarm system, where interrupting a light beam drops the reverse current to dark current, triggering an alarm.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does a photo-diode work in an alarm circuit?",
+                    "options": [
+                        "Emits light when interrupted",
+                        "Drops current when light is blocked",
+                        "Increases current when light is blocked",
+                        "Regulates voltage"
+                    ],
+                    "describe": "In an alarm circuit, the photo-diode’s reverse current drops to dark current when the light beam is broken, signaling an intrusion and sounding the alarm.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is used with a photo-diode in a counter circuit?",
+                    "options": [
+                        "A voltage source",
+                        "A light source",
+                        "A resistor",
+                        "A switch"
+                    ],
+                    "describe": "A light source sends a beam to a photo-diode in a counter circuit across a conveyor; when an object breaks the beam, the count increases.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens in a counter circuit when an object passes?",
+                    "options": [
+                        "Current increases",
+                        "Current drops to dark current",
+                        "Voltage increases",
+                        "Resistance decreases"
+                    ],
+                    "describe": "When an object passes in a counter circuit, the light beam is broken, and the photo-diode’s reverse current drops to dark current, incrementing the counter.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the dark resistance if V_R = 10 V and I_R = 50 µA?",
+                    "options": [
+                        "200 kΩ",
+                        "100 kΩ",
+                        "500 kΩ",
+                        "50 kΩ"
+                    ],
+                    "describe": "Dark resistance Rd = V_R / I_R = 10 / (50 × 10⁻⁶) = 10 / 0.00005 = 200,000 Ω = 200 kΩ, calculated from the given example.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is I_R if E = 2.5 mW/cm² and m = 37.4 µA/mW/cm²?",
+                    "options": [
+                        "93.5 µA",
+                        "50 µA",
+                        "100 µA",
+                        "75 µA"
+                    ],
+                    "describe": "Reverse current I_R = m × E = 37.4 × 2.5 = 93.5 µA, calculated using the sensitivity and illumination from the example.",
+                    "correct": 0
+                },
+                {
+                    "question": "What detects the interruption in an alarm circuit?",
+                    "options": [
+                        "Light source",
+                        "Photo-diode",
+                        "Resistor",
+                        "Voltage supply"
+                    ],
+                    "describe": "The photo-diode detects the interruption in an alarm circuit by sensing the drop in reverse current when the light beam is broken.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the photo-diode biased in an alarm circuit?",
+                    "options": [
+                        "Forward",
+                        "Reverse",
+                        "No bias",
+                        "Alternating"
+                    ],
+                    "describe": "The photo-diode in an alarm circuit is reverse biased, allowing it to detect changes in light intensity through variations in reverse current.",
+                    "correct": 1
+                },
+                {
+                    "question": "What increments the count in a counter circuit?",
+                    "options": [
+                        "Increased current",
+                        "Decreased current",
+                        "Voltage change",
+                        "Light intensity"
+                    ],
+                    "describe": "The count in a counter circuit increments when the reverse current drops to dark current as an object interrupts the light beam to the photo-diode.",
+                    "correct": 1
+                },
+                {
+                    "question": "Where is the photo-diode placed in a counter circuit?",
+                    "options": [
+                        "On the conveyor",
+                        "Opposite the light source",
+                        "Next to the resistor",
+                        "Inside the voltage supply"
+                    ],
+                    "describe": "The photo-diode is placed opposite the light source across the conveyor in a counter circuit, detecting when objects block the light beam.",
+                    "correct": 1
+                }
+            ]
+        }
+    ]
+}
