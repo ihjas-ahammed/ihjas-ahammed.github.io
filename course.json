@@ -81,13 +81,29 @@
                     "webview":false,
                     "qa":{
                         "name":"obj",
-                        "path":"electronics/qa2.json",
+                        "path":"electronics/qa3.json",
                         "obj":1
                     }
                 },
                 {
                     "text":"Semiconductors Summary",
                     "path":"/electronics/mod1.sum.md",
+                    "webview":false,
+                    "qa":{}
+                },
+                {
+                    "text":"Rectifiers Complete",
+                    "path":"/electronics/mod2.md",
+                    "webview":false,
+                    "qa":{
+                        "name":"obj",
+                        "path":"electronics/qa3.json",
+                        "obj":2
+                    }
+                },
+                {
+                    "text":"Rectifiers Summary",
+                    "path":"/electronics/mod2.sum.md",
                     "webview":false,
                     "qa":{}
                 }
