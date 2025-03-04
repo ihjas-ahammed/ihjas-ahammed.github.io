@@ -9,8 +9,7 @@
                         "A material with resistivity between conductors and insulators",
                         "A material with zero resistivity",
                         "A material with infinite resistivity",
-                        "A material identical to resistance materials",
-                        "A material with resistivity between conductors and insulators"
+                        "A material identical to resistance materials"
                     ],
                     "describe": "A semiconductor is defined based on its electrical conductivity as a material with resistivity between that of conductors (like copper) and insulators (like glass). This distinguishes it from materials with zero or infinite resistivity.",
                     "correct": 0
