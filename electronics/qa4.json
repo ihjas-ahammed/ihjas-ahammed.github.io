@@ -1,0 +1,1916 @@
+{
+  "1": [
+    {
+      "question": "What is a semiconductor?",
+      "options": [
+        "A material with electrical conductivity between that of a conductor and an insulator",
+        "A material that is a good conductor of electricity",
+        "A material that does not conduct electricity at all",
+        "A material used only for resistance"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which material has the highest resistivity according to the table in section 5.1?",
+      "options": [
+        "Copper",
+        "Germanium",
+        "Glass",
+        "Nichrome"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What type of bond is formed in semiconductors?",
+      "options": [
+        "Ionic bond",
+        "Covalent bond",
+        "Metallic bond",
+        "Hydrogen bond"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a crystal in the context of semiconductors?",
+      "options": [
+        "A substance with atoms arranged in a random pattern",
+        "A substance with atoms arranged in an orderly, repetitive pattern",
+        "A type of semiconductor material",
+        "A device used to measure semiconductor properties"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a commonly used semiconductor?",
+      "options": [
+        "Copper",
+        "Silicon",
+        "Glass",
+        "Nichrome"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the atomic number of germanium?",
+      "options": [
+        "14",
+        "32",
+        "33",
+        "51"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the energy band gap for silicon?",
+      "options": [
+        "0.7 eV",
+        "1.1 eV",
+        "1.5 eV",
+        "2.0 eV"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How does a semiconductor behave at absolute zero?",
+      "options": [
+        "As a good conductor",
+        "As a superconductor",
+        "As a perfect insulator",
+        "As a resistor"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is a hole in a semiconductor?",
+      "options": [
+        "A free electron",
+        "A missing electron in the covalent bond",
+        "A proton",
+        "A neutron"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In an intrinsic semiconductor, what are the charge carriers?",
+      "options": [
+        "Only electrons",
+        "Only holes",
+        "Both electrons and holes",
+        "Ions"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is doping in semiconductors?",
+      "options": [
+        "Adding impurities to increase conductivity",
+        "Removing impurities to make it pure",
+        "Heating the semiconductor",
+        "Cooling the semiconductor"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What type of impurity is added to form an n-type semiconductor?",
+      "options": [
+        "Trivalent",
+        "Pentavalent",
+        "Divalent",
+        "Hexavalent"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In an n-type semiconductor, what are the majority carriers?",
+      "options": [
+        "Electrons",
+        "Holes",
+        "Both electrons and holes equally",
+        "Ions"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the overall charge of an n-type semiconductor?",
+      "options": [
+        "Positive",
+        "Negative",
+        "Neutral",
+        "Varies with temperature"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is a p-n junction?",
+      "options": [
+        "A junction between two n-type semiconductors",
+        "A junction between two p-type semiconductors",
+        "A junction between a p-type and an n-type semiconductor",
+        "A junction between a conductor and a semiconductor"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What happens to the potential barrier in forward biasing of a p-n junction?",
+      "options": [
+        "It increases",
+        "It decreases",
+        "It remains the same",
+        "It becomes zero immediately"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In reverse biasing, what happens to the current flow across a p-n junction?",
+      "options": [
+        "It increases",
+        "It decreases to almost zero",
+        "It remains constant",
+        "It becomes infinite"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the typical forward voltage drop for a silicon diode?",
+      "options": [
+        "0.3 V",
+        "0.7 V",
+        "1.1 V",
+        "1.5 V"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the main application of a Zener diode?",
+      "options": [
+        "Rectification",
+        "Amplification",
+        "Voltage regulation",
+        "Switching"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What happens to a Zener diode in the reverse breakdown region?",
+      "options": [
+        "It gets damaged",
+        "It conducts heavily with a nearly constant voltage",
+        "It stops conducting",
+        "It behaves like a normal diode"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is an LED?",
+      "options": [
+        "A diode that emits light when forward biased",
+        "A diode that absorbs light",
+        "A diode used for rectification",
+        "A diode used in reverse bias"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which materials are commonly used to make LEDs?",
+      "options": [
+        "Silicon and germanium",
+        "Gallium, phosphorus, and arsenic",
+        "Copper and aluminum",
+        "Carbon and sulfur"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the typical forward voltage rating of an LED?",
+      "options": [
+        "0.7 V",
+        "1 V to 3 V",
+        "5 V",
+        "10 V"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Why is a series resistor used with an LED?",
+      "options": [
+        "To increase the light intensity",
+        "To limit the current through the LED",
+        "To change the color of the light",
+        "To make it work in reverse bias"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a multicolour LED?",
+      "options": [
+        "An LED that emits multiple colors simultaneously",
+        "An LED that changes color with temperature",
+        "An LED that emits one color when forward biased and another when reverse biased",
+        "An LED that can be used in both AC and DC circuits"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How many LEDs are typically used in a seven-segment display?",
+      "options": [
+        "5",
+        "7",
+        "10",
+        "14"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a photo-diode?",
+      "options": [
+        "A diode that emits light",
+        "A diode that conducts current when exposed to light",
+        "A diode used for rectification",
+        "A diode used in reverse bias without light"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens to the reverse current in a photo-diode when light intensity increases?",
+      "options": [
+        "It decreases",
+        "It remains the same",
+        "It increases",
+        "It becomes zero"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is dark current in a photo-diode?",
+      "options": [
+        "The current when the diode is forward biased",
+        "The reverse current when no light is incident",
+        "The maximum current the diode can handle",
+        "The current when the diode is damaged"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the reverse current-illumination curve of a photo-diode look like?",
+      "options": [
+        "A straight line passing through the origin",
+        "A parabolic curve",
+        "An exponential curve",
+        "A horizontal line"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Calculate the series resistor needed for an LED with a 2 V forward voltage drop and 20 mA current when connected to a 12 V supply.",
+      "options": [
+        "500 Ω",
+        "600 Ω",
+        "700 Ω",
+        "800 Ω"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of doping in semiconductors?",
+      "options": [
+        "To increase the number of free electrons or holes",
+        "To make the semiconductor pure",
+        "To decrease the conductivity",
+        "To change the color of the semiconductor"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is a donor impurity?",
+      "options": [
+        "Gallium",
+        "Indium",
+        "Arsenic",
+        "Boron"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In a p-type semiconductor, what are the majority carriers?",
+      "options": [
+        "Electrons",
+        "Holes",
+        "Both electrons and holes equally",
+        "Ions"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the energy band gap for germanium?",
+      "options": [
+        "0.7 eV",
+        "1.1 eV",
+        "1.5 eV",
+        "2.0 eV"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In an intrinsic semiconductor at room temperature, the number of free electrons is:",
+      "options": [
+        "Equal to the number of holes",
+        "Greater than the number of holes",
+        "Less than the number of holes",
+        "Zero"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What process occurs when a valence electron moves to the conduction band, creating a hole?",
+      "options": [
+        "Doping",
+        "Recombination",
+        "Thermal generation",
+        "Ionization"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In an n-type semiconductor, the minority carriers are:",
+      "options": [
+        "Electrons",
+        "Holes",
+        "Both electrons and holes",
+        "Protons"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the potential barrier in a p-n junction?",
+      "options": [
+        "The voltage required to forward bias the junction",
+        "The voltage that prevents current flow across the junction",
+        "The maximum voltage the junction can withstand",
+        "The breakdown voltage"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In forward biasing, the width of the depletion layer:",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "Becomes infinite"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the typical reverse saturation current in a silicon diode?",
+      "options": [
+        "1 nA",
+        "1 µA",
+        "1 mA",
+        "1 A"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the breakdown voltage in a Zener diode?",
+      "options": [
+        "The voltage at which the diode starts conducting in forward bias",
+        "The voltage at which the diode starts conducting heavily in reverse bias",
+        "The maximum forward voltage the diode can handle",
+        "The voltage at which the diode stops conducting"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the main difference between a Zener diode and a regular diode?",
+      "options": [
+        "Zener diodes are used in forward bias only",
+        "Zener diodes are designed to operate in reverse breakdown",
+        "Zener diodes have a higher forward voltage drop",
+        "Zener diodes cannot be used in rectification"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In an LED, light is emitted due to:",
+      "options": [
+        "Recombination of electrons and holes",
+        "Thermal excitation",
+        "Photoelectric effect",
+        "Magnetic induction"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What determines the color of light emitted by an LED?",
+      "options": [
+        "The forward voltage",
+        "The current through the LED",
+        "The materials used in the pn junction",
+        "The size of the LED"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Why are LEDs more efficient than incandescent bulbs?",
+      "options": [
+        "They consume less power for the same light output",
+        "They have a longer lifespan",
+        "They can be switched on and off faster",
+        "All of the above"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "In a photo-diode, the reverse current increases with:",
+      "options": [
+        "Increase in temperature",
+        "Increase in light intensity",
+        "Increase in forward voltage",
+        "Decrease in reverse voltage"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the sensitivity of a photo-diode?",
+      "options": [
+        "The ratio of reverse current to illumination",
+        "The maximum reverse voltage it can withstand",
+        "The forward current rating",
+        "The dark current value"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a seven-segment display, which segments are lit to display the number 8?",
+      "options": [
+        "A, B, C, D, E, F",
+        "A, B, C, D, E, F, G",
+        "A, C, E, G",
+        "B, C, F, G"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the function of the current-limiting resistor in an LED circuit?",
+      "options": [
+        "To increase the brightness of the LED",
+        "To protect the LED from excessive current",
+        "To change the color of the light",
+        "To stabilize the voltage across the LED"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a p-n junction, the depletion layer is formed due to:",
+      "options": [
+        "Diffusion of majority carriers",
+        "Drift of minority carriers",
+        "Recombination of electrons and holes",
+        "Thermal generation of carriers"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the effect of increasing temperature on the conductivity of a semiconductor?",
+      "options": [
+        "It decreases",
+        "It increases",
+        "It remains the same",
+        "It becomes zero"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a trivalent impurity?",
+      "options": [
+        "Phosphorus",
+        "Antimony",
+        "Boron",
+        "Arsenic"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In an extrinsic semiconductor, the conductivity is primarily due to:",
+      "options": [
+        "Thermally generated carriers",
+        "Impurity atoms",
+        "Both equally",
+        "None of the above"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the Fermi level in a semiconductor?",
+      "options": [
+        "The energy level where the probability of finding an electron is 50%",
+        "The top of the valence band",
+        "The bottom of the conduction band",
+        "The energy gap between valence and conduction bands"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In an n-type semiconductor, the Fermi level is:",
+      "options": [
+        "Closer to the conduction band",
+        "Closer to the valence band",
+        "In the middle of the energy gap",
+        "At the top of the conduction band"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the main charge carrier in a p-type semiconductor?",
+      "options": [
+        "Electrons",
+        "Holes",
+        "Both electrons and holes",
+        "Ions"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "When a p-n junction is forward biased, the current is due to:",
+      "options": [
+        "Majority carriers",
+        "Minority carriers",
+        "Both majority and minority carriers",
+        "Only holes"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In reverse bias, the current in a p-n junction is due to:",
+      "options": [
+        "Majority carriers",
+        "Minority carriers",
+        "Both majority and minority carriers",
+        "Only electrons"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the knee voltage in a diode's forward characteristic?",
+      "options": [
+        "The voltage at which current starts to increase rapidly",
+        "The maximum forward voltage",
+        "The reverse breakdown voltage",
+        "The voltage at which the diode stops conducting"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For a germanium diode, the knee voltage is approximately:",
+      "options": [
+        "0.3 V",
+        "0.7 V",
+        "1.1 V",
+        "1.5 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the dynamic resistance of a diode?",
+      "options": [
+        "The resistance when the diode is off",
+        "The ratio of change in voltage to change in current in the forward bias region",
+        "The reverse resistance",
+        "The resistance at zero bias"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a Zener diode, the breakdown mechanism depends on:",
+      "options": [
+        "Avalanche breakdown only",
+        "Zener breakdown only",
+        "Both, depending on the doping level",
+        "Thermal breakdown"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the primary use of a photo-diode?",
+      "options": [
+        "To emit light",
+        "To detect light",
+        "To regulate voltage",
+        "To amplify signals"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a photo-diode, the reverse current is directly proportional to:",
+      "options": [
+        "The reverse voltage",
+        "The temperature",
+        "The light intensity",
+        "The forward current"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the typical reverse voltage rating for an LED?",
+      "options": [
+        "5 V",
+        "10 V",
+        "15 V",
+        "20 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How can an LED be protected against reverse bias?",
+      "options": [
+        "By connecting a rectifier diode in series",
+        "By connecting a rectifier diode in parallel",
+        "By using a higher voltage supply",
+        "By reducing the current"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a multicolour LED, how are the two pn junctions connected?",
+      "options": [
+        "In series",
+        "In parallel",
+        "In reverse-parallel",
+        "Independently"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What color light does a gallium arsenide LED typically emit?",
+      "options": [
+        "Red",
+        "Green",
+        "Blue",
+        "Yellow"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of the glass window in a photo-diode package?",
+      "options": [
+        "To protect the diode from dust",
+        "To allow light to reach the pn junction",
+        "To enhance the reverse current",
+        "To increase the reverse voltage rating"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a seven-segment display, which segment is typically in the middle?",
+      "options": [
+        "A",
+        "B",
+        "G",
+        "F"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the dark resistance of a photo-diode?",
+      "options": [
+        "The resistance when light is incident",
+        "The resistance when no light is incident",
+        "The forward resistance",
+        "The reverse resistance under illumination"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Calculate the reverse current in a photo-diode with sensitivity 40 µA/mW/cm² and illumination 3 mW/cm².",
+      "options": [
+        "120 µA",
+        "40 µA",
+        "12 µA",
+        "3 µA"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In an n-type semiconductor, donor atoms are:",
+      "options": [
+        "Positively charged",
+        "Negatively charged",
+        "Neutral",
+        "Varies with temperature"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of the depletion layer in a p-n junction?",
+      "options": [
+        "It allows current to flow freely",
+        "It prevents current flow under no bias",
+        "It generates heat",
+        "It emits light"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "When a p-n junction is reverse biased, the depletion layer:",
+      "options": [
+        "Widens",
+        "Narrows",
+        "Remains the same",
+        "Disappears"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the diffusion current in a p-n junction?",
+      "options": [
+        "Current due to majority carriers crossing the junction",
+        "Current due to minority carriers crossing the junction",
+        "Current due to thermal generation",
+        "Current due to recombination"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a forward-biased p-n junction, the drift current is:",
+      "options": [
+        "Greater than the diffusion current",
+        "Equal to the diffusion current",
+        "Less than the diffusion current",
+        "Zero"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the ideality factor in the diode equation?",
+      "options": [
+        "A constant that accounts for non-ideal behavior",
+        "The forward voltage drop",
+        "The reverse saturation current",
+        "The breakdown voltage"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For a silicon diode, the reverse saturation current doubles for every:",
+      "options": [
+        "5°C rise in temperature",
+        "10°C rise in temperature",
+        "15°C rise in temperature",
+        "20°C rise in temperature"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the cut-in voltage for a germanium diode?",
+      "options": [
+        "0.3 V",
+        "0.7 V",
+        "1.1 V",
+        "1.5 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a Zener diode, the Zener breakdown occurs when:",
+      "options": [
+        "The electric field is strong enough to pull electrons from the valence band",
+        "The junction is forward biased",
+        "The temperature increases",
+        "The diode is connected in series with a resistor"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the main advantage of using a Zener diode in voltage regulation?",
+      "options": [
+        "It can handle high currents",
+        "It maintains a nearly constant voltage over a wide range of currents",
+        "It has a low forward voltage drop",
+        "It is inexpensive"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In an LED, the light intensity is proportional to:",
+      "options": [
+        "The forward voltage",
+        "The reverse current",
+        "The forward current",
+        "The temperature"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the typical power rating of an LED?",
+      "options": [
+        "Milliwatts",
+        "Watts",
+        "Kilowatts",
+        "Microwatts"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a photo-diode, the reverse current increases with light intensity because:",
+      "options": [
+        "More electron-hole pairs are generated",
+        "The depletion layer widens",
+        "The potential barrier decreases",
+        "The temperature increases"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the spectral response of a photo-diode?",
+      "options": [
+        "The range of wavelengths it can detect",
+        "The reverse current at different voltages",
+        "The forward voltage drop",
+        "The breakdown voltage"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a seven-segment display, how many segments are lit to display the number 1?",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the common cathode configuration in a seven-segment display?",
+      "options": [
+        "All cathodes are connected together",
+        "All anodes are connected together",
+        "Each segment has its own cathode",
+        "Each segment has its own anode"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a photo-diode alarm circuit, what happens when the light beam is interrupted?",
+      "options": [
+        "The reverse current increases",
+        "The reverse current decreases to dark current level",
+        "The forward current increases",
+        "The diode stops conducting"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the typical response time of a photo-diode?",
+      "options": [
+        "Nanoseconds",
+        "Milliseconds",
+        "Seconds",
+        "Minutes"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In an extrinsic semiconductor, the conductivity can be controlled by:",
+      "options": [
+        "Temperature",
+        "Light intensity",
+        "Doping concentration",
+        "All of the above"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the Hall effect in semiconductors?",
+      "options": [
+        "The generation of a voltage across a conductor due to a magnetic field",
+        "The increase in resistance due to temperature",
+        "The decrease in conductivity due to light",
+        "The breakdown of the pn junction"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which of the following is not a semiconductor device?",
+      "options": [
+        "Diode",
+        "Transistor",
+        "Resistor",
+        "LED"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the main difference between a Schottky diode and a pn junction diode?",
+      "options": [
+        "Schottky diodes have a higher forward voltage drop",
+        "Schottky diodes have a lower reverse recovery time",
+        "Schottky diodes cannot be used in rectification",
+        "Schottky diodes are made from germanium"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a semiconductor, the mobility of charge carriers is:",
+      "options": [
+        "The speed at which they move",
+        "The ease with which they move under an electric field",
+        "The number of charge carriers",
+        "The energy required to move them"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the recombination process in semiconductors?",
+      "options": [
+        "When an electron and a hole combine",
+        "When two electrons combine",
+        "When two holes combine",
+        "When an electron moves to a higher energy level"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the effect of increasing the doping concentration in a semiconductor?",
+      "options": [
+        "The conductivity increases",
+        "The conductivity decreases",
+        "The energy band gap increases",
+        "The energy band gap decreases"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the purpose of a heat sink in semiconductor devices?",
+      "options": [
+        "To increase the temperature",
+        "To dissipate heat and prevent overheating",
+        "To provide mechanical support",
+        "To enhance light emission"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a p-n junction, the forward current is exponentially related to:",
+      "options": [
+        "The reverse voltage",
+        "The forward voltage",
+        "The temperature",
+        "The light intensity"
+      ],
+      "correct": 1
+    }
+  ],
+  "2": [
+    {
+      "question": "What is Peak Inverse Voltage (PIV) in a diode?",
+      "options": [
+        "The maximum forward voltage a diode can withstand",
+        "The maximum reverse voltage a diode can withstand without junction breakdown",
+        "The voltage at which the diode starts conducting",
+        "The average voltage across the diode"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens if the reverse voltage exceeds a diode's PIV?",
+      "options": [
+        "The diode conducts more efficiently",
+        "The junction breaks down due to excessive heat",
+        "The diode becomes forward-biased",
+        "The reverse current decreases"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Why is PIV important in rectifier circuits?",
+      "options": [
+        "It determines the forward current",
+        "It prevents damage during reverse bias",
+        "It increases rectifier efficiency",
+        "It reduces the input voltage"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the typical PIV range for diodes?",
+      "options": [
+        "10 V to 10 kV",
+        "1 V to 100 V",
+        "100 kV to 1 MV",
+        "0.1 V to 1 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is reverse current in a diode?",
+      "options": [
+        "Current due to majority carriers in forward bias",
+        "Current due to minority carriers in reverse bias",
+        "Current when the diode is unbiased",
+        "Current equal to forward current"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How does reverse current compare in silicon vs. germanium diodes?",
+      "options": [
+        "Silicon has higher reverse current",
+        "Germanium has higher reverse current",
+        "Both have equal reverse current",
+        "Neither has reverse current"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the typical reverse current for a silicon diode?",
+      "options": [
+        "Less than 1 μA",
+        "Around 100 μA",
+        "1 mA",
+        "10 mA"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the primary purpose of crystal diode rectifiers?",
+      "options": [
+        "To convert DC to AC",
+        "To convert AC to DC",
+        "To amplify signals",
+        "To store energy"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which of the following is a type of rectifier circuit?",
+      "options": [
+        "Half-wave rectifier",
+        "Voltage multiplier",
+        "Inverter",
+        "Amplifier"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What advantage does a transformer provide in a rectifier circuit?",
+      "options": [
+        "It increases the frequency",
+        "It steps up/down voltage and isolates the circuit",
+        "It reduces the PIV",
+        "It eliminates ripple"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a half-wave rectifier, when does the diode conduct?",
+      "options": [
+        "During positive half-cycles",
+        "During negative half-cycles",
+        "During both half-cycles",
+        "When unbiased"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the output frequency of a half-wave rectifier with a 50 Hz input?",
+      "options": [
+        "25 Hz",
+        "50 Hz",
+        "100 Hz",
+        "200 Hz"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the maximum efficiency of a half-wave rectifier?",
+      "options": [
+        "40.6%",
+        "81.2%",
+        "50%",
+        "100%"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why is elaborate filtering required in a half-wave rectifier?",
+      "options": [
+        "To increase output voltage",
+        "To smooth pulsating DC output",
+        "To reduce input frequency",
+        "To protect the diode"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a disadvantage of a half-wave rectifier?",
+      "options": [
+        "It uses both half-cycles",
+        "It delivers power only half the time",
+        "It has high efficiency",
+        "It requires no transformer"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the formula for DC output current in a half-wave rectifier?",
+      "options": [
+        "I_m / π",
+        "2 I_m / π",
+        "I_m",
+        "I_m / 2"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a half-wave rectifier, what is the RMS current?",
+      "options": [
+        "I_m / 2",
+        "I_m / √2",
+        "I_m",
+        "I_m / π"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the PIV of a diode in a half-wave rectifier?",
+      "options": [
+        "V_m",
+        "2 V_m",
+        "V_m / 2",
+        "V_m / √2"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For a half-wave rectifier with V_m = 50 V, r_f = 20 Ω, R_L = 800 Ω, what is I_m?",
+      "options": [
+        "61 mA",
+        "50 mA",
+        "30.5 mA",
+        "19.4 mA"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the DC output voltage for the above half-wave rectifier?",
+      "options": [
+        "15.52 V",
+        "50 V",
+        "25 V",
+        "31.8 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How many diodes are used in a centre-tap full-wave rectifier?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How many diodes are used in a full-wave bridge rectifier?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the main advantage of a full-wave rectifier over a half-wave rectifier?",
+      "options": [
+        "Lower cost",
+        "Utilizes both half-cycles",
+        "Simpler circuit",
+        "Higher PIV"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the output frequency of a full-wave rectifier with a 50 Hz input?",
+      "options": [
+        "50 Hz",
+        "100 Hz",
+        "25 Hz",
+        "200 Hz"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the PIV for each diode in a centre-tap full-wave rectifier?",
+      "options": [
+        "V_m",
+        "2 V_m",
+        "V_m / 2",
+        "V_m / √2"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the PIV for each diode in a full-wave bridge rectifier?",
+      "options": [
+        "V_m",
+        "2 V_m",
+        "V_m / 2",
+        "V_m / √2"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why is a centre-tap full-wave rectifier less preferred than a bridge rectifier?",
+      "options": [
+        "It uses fewer diodes",
+        "It requires a centre-tapped transformer",
+        "It has lower efficiency",
+        "It has lower PIV"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the formula for DC output current in a full-wave rectifier?",
+      "options": [
+        "I_m / π",
+        "2 I_m / π",
+        "I_m",
+        "I_m / 2"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the maximum efficiency of a full-wave rectifier?",
+      "options": [
+        "40.6%",
+        "81.2%",
+        "50%",
+        "100%"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "For a full-wave rectifier with V_m = 100 V, R_L = 1 kΩ, what is V_dc?",
+      "options": [
+        "31.8 V",
+        "63.6 V",
+        "100 V",
+        "70.7 V"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "In a bridge rectifier, how many diodes conduct per half-cycle?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is a disadvantage of a bridge rectifier?",
+      "options": [
+        "It requires a centre-tapped transformer",
+        "Higher voltage drop due to two diodes in series",
+        "Lower efficiency",
+        "Higher PIV"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens if one diode shorts in a centre-tap full-wave rectifier?",
+      "options": [
+        "Output becomes half-wave",
+        "Primary fuse blows",
+        "Output increases",
+        "Transformer opens"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "If one diode opens in a bridge rectifier, what is the output?",
+      "options": [
+        "Zero",
+        "Half-wave rectified",
+        "Full-wave rectified",
+        "Double voltage"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What indicates a shorted transformer winding?",
+      "options": [
+        "High output voltage",
+        "Primary fuse blows",
+        "Half-wave output",
+        "No output"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "How can you test for a transformer winding short to the frame?",
+      "options": [
+        "Measure resistance between winding and casing",
+        "Check output voltage",
+        "Measure input current",
+        "Test diode resistance"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the nature of a rectifier's output?",
+      "options": [
+        "Pure DC",
+        "Pulsating DC",
+        "AC",
+        "Square wave"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does the ripple factor measure?",
+      "options": [
+        "Efficiency of the rectifier",
+        "Ratio of AC to DC components in the output",
+        "Peak inverse voltage",
+        "Output frequency"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the ripple factor for a half-wave rectifier?",
+      "options": [
+        "0.48",
+        "1.21",
+        "0.812",
+        "0.406"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the ripple factor for a full-wave rectifier?",
+      "options": [
+        "0.48",
+        "1.21",
+        "0.812",
+        "0.406"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why is a lower ripple factor desirable?",
+      "options": [
+        "It increases PIV",
+        "It indicates a more effective rectifier",
+        "It reduces efficiency",
+        "It increases AC output"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the formula for ripple factor?",
+      "options": [
+        "√((I_rms / I_dc)^2 - 1)",
+        "I_rms / I_dc",
+        "I_dc / I_rms",
+        "I_rms - I_dc"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which rectifier has the highest efficiency?",
+      "options": [
+        "Half-wave",
+        "Centre-tap full-wave",
+        "Bridge full-wave",
+        "Both B and C"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which rectifier requires a centre-tapped transformer?",
+      "options": [
+        "Half-wave",
+        "Centre-tap full-wave",
+        "Bridge full-wave",
+        "None"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which rectifier has the lowest PIV for the same output?",
+      "options": [
+        "Half-wave",
+        "Centre-tap full-wave",
+        "Bridge full-wave",
+        "All are equal"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the purpose of a filter circuit in a rectifier?",
+      "options": [
+        "To increase voltage",
+        "To remove AC components from the output",
+        "To reduce frequency",
+        "To protect diodes"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which component in a filter passes AC but blocks DC?",
+      "options": [
+        "Resistor",
+        "Inductor",
+        "Capacitor",
+        "Diode"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Where is the capacitor placed in a capacitor filter?",
+      "options": [
+        "In series with the load",
+        "In parallel with the load",
+        "Before the rectifier",
+        "After the diode"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is an advantage of a capacitor filter?",
+      "options": [
+        "Low cost and small size",
+        "High current capacity",
+        "No need for a transformer",
+        "High efficiency"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the role of the choke in a choke input filter?",
+      "options": [
+        "Blocks AC, passes DC",
+        "Blocks DC, passes AC",
+        "Increases voltage",
+        "Reduces current"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "How many capacitors are used in a π-filter?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which filter is best for small load currents?",
+      "options": [
+        "Capacitor filter",
+        "Choke input filter",
+        "π-filter",
+        "All are equal"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is a voltage multiplier?",
+      "options": [
+        "A circuit that multiplies the peak input voltage",
+        "A circuit that reduces voltage",
+        "A circuit that converts DC to AC",
+        "A filter circuit"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the output voltage of a voltage doubler?",
+      "options": [
+        "V_m",
+        "2 V_m",
+        "V_m / 2",
+        "3 V_m"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Does a voltage multiplier violate energy conservation?",
+      "options": [
+        "Yes",
+        "No",
+        "Sometimes",
+        "Only for large multipliers"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens to the peak input current in a voltage multiplier?",
+      "options": [
+        "Increases",
+        "Decreases",
+        "Remains the same",
+        "Becomes zero"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the primary function of a diode in a rectifier?",
+      "options": [
+        "Allows current in one direction",
+        "Blocks current entirely",
+        "Amplifies signals",
+        "Filters output"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "For a half-wave rectifier with 230 V RMS input and 10:1 transformer, what is V_sm?",
+      "options": [
+        "23 V",
+        "32.53 V",
+        "230 V",
+        "325.3 V"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is V_dc for the above half-wave rectifier (ideal diode)?",
+      "options": [
+        "10.36 V",
+        "32.53 V",
+        "23 V",
+        "16.27 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the efficiency if AC input is 100 W and DC output is 40 W?",
+      "options": [
+        "40%",
+        "80%",
+        "50%",
+        "60%"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the RMS value of load current in a full-wave rectifier?",
+      "options": [
+        "I_m / 2",
+        "I_m / √2",
+        "I_m",
+        "2 I_m / π"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "For a bridge rectifier with V_m = 240√2 V, r_f = 1 Ω, R_L = 480 Ω, what is I_dc?",
+      "options": [
+        "0.45 A",
+        "0.7 A",
+        "1.4 A",
+        "0.35 A"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the power dissipated in each diode in the above bridge rectifier?",
+      "options": [
+        "0.123 W",
+        "0.245 W",
+        "0.061 W",
+        "0.5 W"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a capacitor filter, what happens during the positive half-cycle?",
+      "options": [
+        "Capacitor charges to peak voltage",
+        "Capacitor discharges fully",
+        "Capacitor blocks DC",
+        "Capacitor remains unchanged"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why is the π-filter more effective than a capacitor filter?",
+      "options": [
+        "It has lower cost",
+        "It uses two capacitors and an inductor",
+        "It is smaller",
+        "It increases voltage"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "For a full-wave rectifier with V_p(m) = 14.9 V, f = 120 Hz, R_L = 2.2 kΩ, C = 50 μF, what is V_dc?",
+      "options": [
+        "14.3 V",
+        "9.91 V",
+        "15.57 V",
+        "16.97 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the DC output voltage formula for a rectifier?",
+      "options": [
+        "I_dc × R_L",
+        "V_m / π",
+        "V_rms × √2",
+        "I_rms × R_L"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the transformer turn ratio if primary is 230 V RMS and secondary is 46 V RMS?",
+      "options": [
+        "5:1",
+        "1:5",
+        "10:1",
+        "1:10"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What component in a choke input filter bypasses AC?",
+      "options": [
+        "Choke",
+        "Capacitor",
+        "Resistor",
+        "Diode"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "For a centre-tap rectifier with V_m = 32.5 V per half-winding, what is PIV?",
+      "options": [
+        "32.5 V",
+        "65 V",
+        "16.25 V",
+        "46 V"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is V_dc for a bridge rectifier with 12 V RMS input and silicon diodes?",
+      "options": [
+        "9.91 V",
+        "15.57 V",
+        "16.97 V",
+        "12 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the ripple frequency in a full-wave rectifier with 50 Hz input?",
+      "options": [
+        "50 Hz",
+        "100 Hz",
+        "25 Hz",
+        "200 Hz"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which rectifier does not require a transformer inherently?",
+      "options": [
+        "Half-wave",
+        "Centre-tap full-wave",
+        "Bridge full-wave",
+        "Both A and C"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the DC component of a full-wave rectifier output?",
+      "options": [
+        "V_m / π",
+        "2 V_m / π",
+        "V_m",
+        "V_m / 2"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What happens if a transformer primary winding opens?",
+      "options": [
+        "Fuse blows",
+        "Output drops to zero",
+        "Output becomes half-wave",
+        "Transformer overheats"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the ripple factor of a power supply with 10 V DC and 0.5 V RMS ripple?",
+      "options": [
+        "5%",
+        "0.5%",
+        "50%",
+        "10%"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Which rectifier has the highest number of diodes?",
+      "options": [
+        "Half-wave",
+        "Centre-tap full-wave",
+        "Bridge full-wave",
+        "All have the same"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the output voltage of a voltage tripler?",
+      "options": [
+        "V_m",
+        "2 V_m",
+        "3 V_m",
+        "4 V_m"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the purpose of the centre tap in a full-wave rectifier?",
+      "options": [
+        "Increases voltage",
+        "Divides secondary winding into two halves",
+        "Reduces ripple",
+        "Protects diodes"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What components are typically used in a voltage multiplier?",
+      "options": [
+        "Diodes and capacitors",
+        "Inductors and resistors",
+        "Transistors and diodes",
+        "Capacitors and resistors"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why is the bridge rectifier preferred for large rectifiers?",
+      "options": [
+        "No centre-tapped transformer needed",
+        "Lower PIV",
+        "High efficiency",
+        "All of the above"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the efficiency formula for a rectifier?",
+      "options": [
+        "P_dc / P_ac",
+        "P_ac / P_dc",
+        "I_dc / I_rms",
+        "V_dc / V_rms"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is V_m if V_dc = 50 V, R_L = 800 Ω, r_f = 25 Ω in a half-wave rectifier?",
+      "options": [
+        "162 V",
+        "50 V",
+        "100 V",
+        "80 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "In a π-filter, which component is in series?",
+      "options": [
+        "C_1",
+        "L",
+        "C_2",
+        "R_L"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the effect of increasing capacitance in a capacitor filter?",
+      "options": [
+        "Increases ripple",
+        "Reduces ripple",
+        "Decreases voltage",
+        "No effect"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "For a choke filter with V_m = 25.7 V, R_choke = 25 Ω, R_L = 750 Ω, what is V_dc?",
+      "options": [
+        "15.9 V",
+        "16.4 V",
+        "25.7 V",
+        "12 V"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "What is the main disadvantage of a half-wave rectifier?",
+      "options": [
+        "High efficiency",
+        "Low output due to half-cycle use",
+        "Low ripple factor",
+        "Complex circuit"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What indicates a better power supply?",
+      "options": [
+        "Higher ripple factor",
+        "Lower ripple factor",
+        "Higher PIV",
+        "Lower efficiency"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the DC output power formula?",
+      "options": [
+        "I_dc^2 × R_L",
+        "I_rms^2 × R_L",
+        "V_m × I_m",
+        "P_ac / η"
+      ],
+      "correct": 0
+    },
+    {
+      "question": "Why does a bridge rectifier have a higher voltage drop?",
+      "options": [
+        "Uses one diode",
+        "Two diodes in series",
+        "Higher PIV",
+        "Centre-tapped transformer"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the AC power input formula for a rectifier?",
+      "options": [
+        "I_rms^2 × (r_f + R_L)",
+        "I_dc^2 × R_L",
+        "V_m × I_m",
+        "P_dc × η"
+      ],
+      "correct": 0
+    }
+  ]
+}

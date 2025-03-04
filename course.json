@@ -81,7 +81,7 @@
                     "webview":false,
                     "qa":{
                         "name":"obj",
-                        "path":"electronics/qa3.json",
+                        "path":"electronics/qa4.json",
                         "obj":1
                     }
                 },
@@ -97,7 +97,7 @@
                     "webview":false,
                     "qa":{
                         "name":"obj",
-                        "path":"electronics/qa3.json",
+                        "path":"electronics/qa4.json",
                         "obj":2
                     }
                 },
