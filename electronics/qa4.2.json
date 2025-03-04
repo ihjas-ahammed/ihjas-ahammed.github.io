@@ -3127,5 +3127,697 @@
                 }
             ]
         }
+    ],
+    "2": [
+        {
+            "name": "Crystal Diode Rectifiers",
+            "qa": [
+                {
+                    "question": "Why is a.c. power typically rectified to d.c. using crystal diodes?",
+                    "options": [
+                        "Because a.c. is more efficient for all applications",
+                        "Because electronic circuits often require a d.c. supply",
+                        "Because d.c. is cheaper to generate",
+                        "Because crystal diodes only work with a.c."
+                    ],
+                    "describe": "The module states that while a.c. power is used for lighting, heating, and motors due to economic generation and transmission reasons, many applications like electronic circuits require a d.c. supply, which is obtained by rectifying the mains a.c. supply using crystal diodes.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the typical frequency of the a.c. supply mentioned in the module?",
+                    "options": [
+                        "60 Hz",
+                        "50 Hz",
+                        "100 Hz",
+                        "120 Hz"
+                    ],
+                    "describe": "The module specifies that the a.c. supply voltage varies sinusoidally with a frequency of 50 Hz.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which of the following is NOT a type of rectifier circuit mentioned?",
+                    "options": [
+                        "Half-wave rectifier",
+                        "Full-wave rectifier",
+                        "Quarter-wave rectifier",
+                        "Bridge rectifier"
+                    ],
+                    "describe": "The module lists two main rectifier circuits: half-wave rectifier and full-wave rectifier, with full-wave including centre-tap and bridge configurations. Quarter-wave rectifier is not mentioned.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the primary purpose of using a transformer in rectifier circuits?",
+                    "options": [
+                        "To increase the frequency of the a.c. supply",
+                        "To step up or down the voltage and isolate the circuit",
+                        "To filter out the a.c. component",
+                        "To reverse the current direction"
+                    ],
+                    "describe": "The module explains that a transformer in rectifier circuits allows stepping up or down the a.c. input voltage and isolates the rectifier circuit from the power line, reducing electric shock risk.",
+                    "correct": 1
+                },
+                {
+                    "question": "In which applications is d.c. supply typically required?",
+                    "options": [
+                        "Lighting and heating",
+                        "Electric motors",
+                        "Electronic circuits",
+                        "Power transmission"
+                    ],
+                    "describe": "The module notes that while a.c. is used for lighting, heating, and motors, d.c. supply is needed for applications like electronic circuits.",
+                    "correct": 2
+                },
+                {
+                    "question": "What type of voltage does the a.c. supply provide?",
+                    "options": [
+                        "Constant voltage",
+                        "Pulsating voltage",
+                        "Sinusoidal voltage",
+                        "Square wave voltage"
+                    ],
+                    "describe": "The module describes the a.c. supply voltage as varying sinusoidally with a frequency of 50 Hz.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the main economic advantage of using a.c. power?",
+                    "options": [
+                        "Ease of generation and transmission",
+                        "Higher efficiency in electronic circuits",
+                        "Lower cost of diodes",
+                        "Simpler rectification process"
+                    ],
+                    "describe": "The module states that a.c. power is used due to the economics of generation and transmission.",
+                    "correct": 0
+                },
+                {
+                    "question": "Which component in a rectifier circuit helps reduce the risk of electric shock?",
+                    "options": [
+                        "Diode",
+                        "Load resistance",
+                        "Transformer",
+                        "Capacitor"
+                    ],
+                    "describe": "The module mentions that the transformer isolates the rectifier circuit from the power line, reducing the risk of electric shock.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to the a.c. supply in a rectifier circuit?",
+                    "options": [
+                        "It is amplified",
+                        "It is converted to d.c.",
+                        "It remains unchanged",
+                        "It is filtered out completely"
+                    ],
+                    "describe": "The module explains that the mains a.c. supply is rectified using crystal diodes to produce a d.c. supply.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many rectifier circuits are primarily discussed in the module?",
+                    "options": [
+                        "One",
+                        "Two",
+                        "Three",
+                        "Four"
+                    ],
+                    "describe": "The module lists two main rectifier circuits: half-wave and full-wave rectifiers.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Half-Wave Rectifier",
+            "qa": [
+                {
+                    "question": "What does a half-wave rectifier do during the negative half-cycles of the a.c. supply?",
+                    "options": [
+                        "Conducts current",
+                        "Suppresses the negative half-cycles",
+                        "Inverts the negative half-cycles",
+                        "Doubles the voltage"
+                    ],
+                    "describe": "The module states that in half-wave rectification, the rectifier conducts current only during positive half-cycles, and the negative half-cycles are suppressed, with no current conducted and no voltage across the load.",
+                    "correct": 1
+                },
+                {
+                    "question": "In a half-wave rectifier circuit, how does current flow through the load?",
+                    "options": [
+                        "In both directions alternately",
+                        "In one direction (d.c.)",
+                        "Only during negative half-cycles",
+                        "Randomly"
+                    ],
+                    "describe": "The module explains that current always flows in one direction (i.e., d.c.) through the load in a half-wave rectifier, though it occurs only during positive half-cycles.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the role of the transformer in a half-wave rectifier circuit?",
+                    "options": [
+                        "To filter the output",
+                        "To step up/down voltage and isolate the circuit",
+                        "To reverse the polarity",
+                        "To increase the frequency"
+                    ],
+                    "describe": "The module notes that the transformer permits stepping up or down the a.c. input voltage and isolates the rectifier circuit from the power line, reducing shock risk.",
+                    "correct": 1
+                },
+                {
+                    "question": "What type of output does a half-wave rectifier produce across the load?",
+                    "options": [
+                        "Pure d.c.",
+                        "Pulsating d.c.",
+                        "Sinusoidal a.c.",
+                        "Square wave"
+                    ],
+                    "describe": "The module describes the output across the load in a half-wave rectifier as pulsating d.c., with pulses occurring every half-cycle.",
+                    "correct": 1
+                },
+                {
+                    "question": "During which half-cycle does the diode in a half-wave rectifier conduct?",
+                    "options": [
+                        "Positive half-cycle",
+                        "Negative half-cycle",
+                        "Both half-cycles",
+                        "Neither half-cycle"
+                    ],
+                    "describe": "The module states that during the positive half-cycle, the diode is forward-biased and conducts current, while it is reverse-biased and blocks current during the negative half-cycle.",
+                    "correct": 0
+                },
+                {
+                    "question": "What happens to the diode when the a.c. voltage makes end A negative in a half-wave rectifier?",
+                    "options": [
+                        "It becomes forward-biased",
+                        "It becomes reverse-biased",
+                        "It conducts more current",
+                        "It doubles the voltage"
+                    ],
+                    "describe": "The module explains that during the negative half-cycle, when end A is negative with respect to end B, the diode is reverse-biased and conducts no current.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is elaborate filtering required in a half-wave rectifier?",
+                    "options": [
+                        "Due to high efficiency",
+                        "Due to the alternating component in the pulsating current",
+                        "Due to transformer isolation",
+                        "Due to low input frequency"
+                    ],
+                    "describe": "The module lists as a disadvantage that the pulsating current contains an alternating component with the supply frequency, requiring elaborate filtering to produce steady d.c.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is a key disadvantage of the half-wave rectifier related to power delivery?",
+                    "options": [
+                        "High cost of components",
+                        "Power is delivered only half the time",
+                        "Complex circuit design",
+                        "High peak inverse voltage"
+                    ],
+                    "describe": "The module notes that a main disadvantage is that the a.c. supply delivers power only half the time, resulting in low output.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the a.c. supply typically applied in a half-wave rectifier circuit?",
+                    "options": [
+                        "Directly to the diode",
+                        "In series with the diode and load via a transformer",
+                        "In parallel with the load",
+                        "Through a capacitor"
+                    ],
+                    "describe": "The module describes the circuit where the a.c. supply is applied in series with the diode and load resistance, generally through a transformer.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the output voltage graph of a half-wave rectifier show?",
+                    "options": [
+                        "A sinusoidal wave",
+                        "Positive half-cycles with negative cycles suppressed",
+                        "A flat d.c. line",
+                        "Negative half-cycles only"
+                    ],
+                    "describe": "The module’s diagram description shows the output voltage across the load as a series of positive half-cycles with negative half-cycles suppressed, forming a pulsating d.c. waveform.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Output Frequency and Efficiency of Half-Wave Rectifier",
+            "qa": [
+                {
+                    "question": "What is the output frequency of a half-wave rectifier compared to the input frequency?",
+                    "options": [
+                        "Half the input frequency",
+                        "Equal to the input frequency",
+                        "Double the input frequency",
+                        "Triple the input frequency"
+                    ],
+                    "describe": "The module states that the output frequency of a half-wave rectifier is equal to the input frequency (e.g., 50 Hz input results in 50 Hz output), as one output cycle corresponds to one input cycle.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is rectifier efficiency defined?",
+                    "options": [
+                        "Ratio of a.c. power to d.c. power",
+                        "Ratio of d.c. power output to a.c. power input",
+                        "Ratio of input frequency to output frequency",
+                        "Ratio of diode resistance to load resistance"
+                    ],
+                    "describe": "The module defines rectifier efficiency as the ratio of d.c. power output to the applied input a.c. power.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the maximum efficiency of a half-wave rectifier when diode resistance is negligible?",
+                    "options": [
+                        "81.2%",
+                        "40.6%",
+                        "50%",
+                        "25%"
+                    ],
+                    "describe": "The module calculates that the maximum rectifier efficiency of a half-wave rectifier is 40.6% when the diode resistance (r_f) is negligible compared to the load resistance (R_L).",
+                    "correct": 1
+                },
+                {
+                    "question": "In a half-wave rectifier, what is the formula for average d.c. current (I_dc)?",
+                    "options": [
+                        "I_m / 2",
+                        "I_m / π",
+                        "2 I_m / π",
+                        "I_m / √2"
+                    ],
+                    "describe": "The module derives I_dc = I_m / π, where I_m is the maximum current, calculated as the average of the current over one full cycle, considering conduction only during the positive half-cycle.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the RMS current (I_rms) for a half-wave rectified wave?",
+                    "options": [
+                        "I_m / π",
+                        "I_m / 2",
+                        "I_m / √2",
+                        "2 I_m / π"
+                    ],
+                    "describe": "The module states that for a half-wave rectified wave, I_rms = I_m / 2, reflecting the effective value over the entire cycle with conduction only in the positive half.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to the rectification efficiency as the diode resistance (r_f) increases relative to R_L?",
+                    "options": [
+                        "It increases",
+                        "It decreases",
+                        "It remains constant",
+                        "It doubles"
+                    ],
+                    "describe": "The module’s efficiency formula η = 0.406 / (1 + r_f / R_L) shows that as r_f increases relative to R_L, the denominator grows, reducing the efficiency.",
+                    "correct": 1
+                },
+                {
+                    "question": "If the input frequency to a half-wave rectifier is 100 Hz, what is the output frequency?",
+                    "options": [
+                        "50 Hz",
+                        "100 Hz",
+                        "200 Hz",
+                        "150 Hz"
+                    ],
+                    "describe": "The module provides an example: if the input frequency is 100 Hz, the output frequency of a half-wave rectifier is also 100 Hz, as f_out = f_in.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the d.c. power output formula for a half-wave rectifier?",
+                    "options": [
+                        "(I_m / π)^2 × R_L",
+                        "(I_m / 2)^2 × R_L",
+                        "(I_m / √2)^2 × R_L",
+                        "I_m^2 × R_L"
+                    ],
+                    "describe": "The module calculates P_dc = I_dc^2 × R_L, where I_dc = I_m / π, so P_dc = (I_m / π)^2 × R_L.",
+                    "correct": 0
+                },
+                {
+                    "question": "In Example 6.12, why is the rectification efficiency 40% and not 80%?",
+                    "options": [
+                        "Because 60% of power is lost in the diode",
+                        "Because only positive half-cycles are converted",
+                        "Because the transformer consumes power",
+                        "Because filtering reduces efficiency"
+                    ],
+                    "describe": "The module explains that although 100 W a.c. is supplied, only 50 W from positive half-cycles is used, yielding 40 W d.c., so efficiency is 40% (40/100), not 80% (40/50), which is power efficiency.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the peak inverse voltage (PIV) in Example 6.13 for a half-wave rectifier with a 230 V a.c. supply and 10:1 transformer?",
+                    "options": [
+                        "32.53 V",
+                        "325.3 V",
+                        "65 V",
+                        "16.26 V"
+                    ],
+                    "describe": "The module calculates the maximum secondary voltage as 32.53 V, and since the diode is reverse-biased during the negative half-cycle, the PIV equals this value, 32.53 V.",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Full-Wave Rectifier Concepts",
+            "qa": [
+                {
+                    "question": "How does a full-wave rectifier utilize the input a.c. voltage compared to a half-wave rectifier?",
+                    "options": [
+                        "Only positive half-cycles",
+                        "Only negative half-cycles",
+                        "Both half-cycles",
+                        "Neither half-cycle"
+                    ],
+                    "describe": "The module explains that a full-wave rectifier utilizes both half-cycles of the input a.c. voltage to produce d.c. output, unlike the half-wave rectifier, which uses only positive half-cycles.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the key difference in diode usage between centre-tap and bridge full-wave rectifiers?",
+                    "options": [
+                        "Centre-tap uses 1 diode, bridge uses 2",
+                        "Centre-tap uses 2 diodes, bridge uses 4",
+                        "Centre-tap uses 4 diodes, bridge uses 2",
+                        "Both use 1 diode"
+                    ],
+                    "describe": "The module states that the centre-tap full-wave rectifier uses two diodes, while the bridge rectifier uses four diodes in a bridge configuration.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the output frequency of a full-wave rectifier if the input frequency is 50 Hz?",
+                    "options": [
+                        "50 Hz",
+                        "100 Hz",
+                        "25 Hz",
+                        "150 Hz"
+                    ],
+                    "describe": "The module notes that the output frequency of a full-wave rectifier is double the input frequency, so for a 50 Hz input, f_out = 2 × 50 = 100 Hz.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the maximum efficiency of a full-wave rectifier?",
+                    "options": [
+                        "40.6%",
+                        "81.2%",
+                        "50%",
+                        "100%"
+                    ],
+                    "describe": "The module calculates that the maximum efficiency of a full-wave rectifier is 81.2% when diode resistance is negligible compared to load resistance.",
+                    "correct": 1
+                },
+                {
+                    "question": "In a centre-tap full-wave rectifier, what happens during the positive half-cycle?",
+                    "options": [
+                        "D_2 conducts, D_1 does not",
+                        "D_1 conducts, D_2 does not",
+                        "Both diodes conduct",
+                        "Neither diode conducts"
+                    ],
+                    "describe": "The module explains that during the positive half-cycle, end A becomes positive, making D_1 forward-biased to conduct, while D_2 is reverse-biased and does not conduct.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the peak inverse voltage (PIV) for a centre-tap full-wave rectifier?",
+                    "options": [
+                        "V_m",
+                        "2 V_m",
+                        "V_m / 2",
+                        "√2 V_m"
+                    ],
+                    "describe": "The module states that in a centre-tap rectifier, the PIV is twice the maximum voltage across the half-secondary winding, i.e., PIV = 2 V_m.",
+                    "correct": 1
+                },
+                {
+                    "question": "In a bridge rectifier, how many diodes conduct during each half-cycle?",
+                    "options": [
+                        "One",
+                        "Two",
+                        "Three",
+                        "Four"
+                    ],
+                    "describe": "The module describes that during each half-cycle of a bridge rectifier, two diodes conduct in series (e.g., D_1 and D_3 for positive, D_2 and D_4 for negative).",
+                    "correct": 1
+                },
+                {
+                    "question": "What is a disadvantage of the centre-tap full-wave rectifier?",
+                    "options": [
+                        "Requires four diodes",
+                        "Difficult to locate centre tap",
+                        "Low efficiency",
+                        "No transformer needed"
+                    ],
+                    "describe": "The module lists as a disadvantage that it is difficult to locate the centre tap on the secondary winding of the transformer in a centre-tap rectifier.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the PIV of each diode in a bridge rectifier?",
+                    "options": [
+                        "V_m",
+                        "2 V_m",
+                        "V_m / 2",
+                        "√2 V_m"
+                    ],
+                    "describe": "The module explains that the peak inverse voltage of each diode in a bridge rectifier equals the maximum secondary voltage, i.e., PIV = V_m.",
+                    "correct": 0
+                },
+                {
+                    "question": "Why does a bridge rectifier eliminate the need for a centre-tapped transformer?",
+                    "options": [
+                        "It uses fewer diodes",
+                        "It uses a bridge configuration of four diodes",
+                        "It only conducts during one half-cycle",
+                        "It has higher efficiency"
+                    ],
+                    "describe": "The module notes that the bridge rectifier uses four diodes in a bridge configuration, allowing it to rectify both half-cycles without requiring a centre-tapped transformer.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Ripple Factor and Comparison of Rectifiers",
+            "qa": [
+                {
+                    "question": "What does the ripple factor measure in a rectifier output?",
+                    "options": [
+                        "Ratio of d.c. to a.c. power",
+                        "Ratio of r.m.s. a.c. component to d.c. component",
+                        "Frequency of the output",
+                        "Efficiency of rectification"
+                    ],
+                    "describe": "The module defines the ripple factor as the ratio of the r.m.s. value of the a.c. component to the d.c. component in the rectifier output.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the ripple factor for a half-wave rectifier?",
+                    "options": [
+                        "0.48",
+                        "1.21",
+                        "0.812",
+                        "0.406"
+                    ],
+                    "describe": "The module calculates the ripple factor for half-wave rectification as 1.21, indicating a high a.c. component relative to d.c.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the ripple factor for a full-wave rectifier?",
+                    "options": [
+                        "1.21",
+                        "0.48",
+                        "0.812",
+                        "0.406"
+                    ],
+                    "describe": "The module calculates the ripple factor for full-wave rectification as 0.48, showing a lower a.c. component compared to half-wave.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is a full-wave rectifier more effective than a half-wave rectifier?",
+                    "options": [
+                        "Higher ripple factor",
+                        "Lower ripple factor and less pulsation",
+                        "Uses fewer diodes",
+                        "No transformer required"
+                    ],
+                    "describe": "The module explains that a full-wave rectifier has a ripple factor of 0.48 versus 1.21 for half-wave, resulting in less pulsation and a more effective d.c. output.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many diodes does a bridge rectifier use compared to a half-wave rectifier?",
+                    "options": [
+                        "1 vs. 4",
+                        "4 vs. 1",
+                        "2 vs. 2",
+                        "4 vs. 2"
+                    ],
+                    "describe": "The module’s comparison table shows that a bridge rectifier uses 4 diodes, while a half-wave rectifier uses 1 diode.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which rectifier requires a transformer with a centre tap?",
+                    "options": [
+                        "Half-wave",
+                        "Centre-tap full-wave",
+                        "Bridge full-wave",
+                        "All of them"
+                    ],
+                    "describe": "The module’s comparison table indicates that the centre-tap full-wave rectifier requires a transformer (with a centre tap), unlike half-wave and bridge types.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the output frequency of a bridge rectifier with a 50 Hz input?",
+                    "options": [
+                        "50 Hz",
+                        "100 Hz",
+                        "25 Hz",
+                        "150 Hz"
+                    ],
+                    "describe": "The module states that the output frequency of a full-wave rectifier (including bridge type) is double the input frequency, so 2 × 50 Hz = 100 Hz.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which rectifier has the highest maximum efficiency?",
+                    "options": [
+                        "Half-wave",
+                        "Centre-tap full-wave",
+                        "Bridge full-wave",
+                        "Both centre-tap and bridge"
+                    ],
+                    "describe": "The module’s comparison table shows that both centre-tap and bridge full-wave rectifiers have a maximum efficiency of 81.2%, higher than the half-wave’s 40.6%.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the PIV of a half-wave rectifier compared to a centre-tap rectifier?",
+                    "options": [
+                        "V_m vs. 2 V_m",
+                        "2 V_m vs. V_m",
+                        "V_m vs. V_m",
+                        "2 V_m vs. 2 V_m"
+                    ],
+                    "describe": "The module’s comparison table lists the PIV as V_m for half-wave and 2 V_m for centre-tap full-wave rectifiers.",
+                    "correct": 0
+                },
+                {
+                    "question": "Why is the bridge rectifier preferred when transformer cost is a concern?",
+                    "options": [
+                        "It uses fewer diodes",
+                        "It does not require a centre-tapped transformer",
+                        "It has a lower ripple factor",
+                        "It has a higher PIV"
+                    ],
+                    "describe": "The module notes that the bridge circuit is preferred when transformer cost is a main consideration because it eliminates the need for a centre-tapped transformer.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Filter Circuits",
+            "qa": [
+                {
+                    "question": "What is the primary purpose of a filter circuit in a rectifier?",
+                    "options": [
+                        "To increase the voltage",
+                        "To remove the a.c. component and allow d.c. to the load",
+                        "To amplify the output",
+                        "To invert the polarity"
+                    ],
+                    "describe": "The module states that a filter circuit removes the a.c. component from the rectifier output and allows only the d.c. component to reach the load.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which components are typically used in a filter circuit?",
+                    "options": [
+                        "Diodes and resistors",
+                        "Inductors and capacitors",
+                        "Transformers and diodes",
+                        "Resistors and capacitors"
+                    ],
+                    "describe": "The module explains that a filter circuit is generally a combination of inductors (L) and capacitors (C).",
+                    "correct": 1
+                },
+                {
+                    "question": "How does a capacitor behave in a filter circuit?",
+                    "options": [
+                        "Passes d.c., blocks a.c.",
+                        "Passes a.c., blocks d.c.",
+                        "Blocks both a.c. and d.c.",
+                        "Amplifies the signal"
+                    ],
+                    "describe": "The module notes that a capacitor passes a.c. readily but does not pass d.c. at all, aiding in filtering out the a.c. component.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the role of an inductor in a filter circuit?",
+                    "options": [
+                        "Opposes d.c., allows a.c.",
+                        "Opposes a.c., allows d.c.",
+                        "Increases ripple",
+                        "Reduces efficiency"
+                    ],
+                    "describe": "The module states that an inductor opposes a.c. but allows d.c. to pass through it, helping to filter out the a.c. component.",
+                    "correct": 1
+                },
+                {
+                    "question": "What happens to the capacitor in a capacitor filter during the rectifier voltage peak?",
+                    "options": [
+                        "It discharges completely",
+                        "It charges to the peak value",
+                        "It blocks the voltage",
+                        "It inverts the voltage"
+                    ],
+                    "describe": "The module explains that in a capacitor filter, as the rectifier voltage increases, the capacitor charges to the peak value (V_m) of the rectifier voltage.",
+                    "correct": 1
+                },
+                {
+                    "question": "In a choke input filter, where does most of the a.c. component appear?",
+                    "options": [
+                        "Across the load",
+                        "Across the choke",
+                        "Across the capacitor",
+                        "In the d.c. output"
+                    ],
+                    "describe": "The module states that the choke offers high opposition to a.c., so most of the a.c. component appears across the choke, while d.c. passes through to the load.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many capacitors are used in a π-filter?",
+                    "options": [
+                        "One",
+                        "Two",
+                        "Three",
+                        "None"
+                    ],
+                    "describe": "The module describes the π-filter as having two capacitors (C_1 across the rectifier output and C_2 across the load) with a choke (L) in between.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is a key advantage of a capacitor filter?",
+                    "options": [
+                        "High cost",
+                        "Large size",
+                        "Low cost and small size",
+                        "Low efficiency"
+                    ],
+                    "describe": "The module highlights that the capacitor filter is popular due to its low cost, small size, little weight, and good characteristics.",
+                    "correct": 2
+                },
+                {
+                    "question": "In a π-filter, what does the second capacitor (C_2) do?",
+                    "options": [
+                        "Blocks d.c.",
+                        "Bypasses remaining a.c. component",
+                        "Increases ripple",
+                        "Charges to twice the peak voltage"
+                    ],
+                    "describe": "The module explains that C_2 bypasses the a.c. component that the choke fails to block, ensuring only d.c. reaches the load.",
+                    "correct": 1
+                },
+                {
+                    "question": "For what type of load current is a capacitor filter preferred?",
+                    "options": [
+                        "High load currents (>100 mA)",
+                        "Small load currents (up to 50 mA)",
+                        "Variable load currents",
+                        "No load currents"
+                    ],
+                    "describe": "The module notes that the capacitor filter is preferred for small load currents (say up to 50 mA), such as in transistor radio battery eliminators.",
+                    "correct": 1
+                }
+            ]
+        }
     ]
 }
