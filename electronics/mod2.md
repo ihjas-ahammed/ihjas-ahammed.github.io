@@ -1,16 +1,5 @@
 # Semiconductor Diode
 
-## 87 - Peak Inverse Voltage and Reverse Current
-
-### (ii) Peak Inverse Voltage
-It is the maximum reverse voltage that a diode can withstand without destroying the junction.
-
-If the reverse voltage across a diode exceeds this value, the reverse current increases sharply and breaks down the junction due to excessive heat. Peak inverse voltage (PIV) is extremely important when a diode is used as a rectifier. In rectifier service, it must be ensured that the reverse voltage across the diode does not exceed its PIV during the negative half-cycle of input a.c. voltage. PIV consideration is generally the deciding factor in diode rectifier circuits. The peak inverse voltage may be between $10 \mathrm{~V}$ and $10 \mathrm{kV}$ depending on the type of diode.
-
-### (iii) Reverse Current or Leakage Current
-It is the current that flows through a reverse-biased diode. This current is due to minority carriers. Under normal operating voltages, the reverse current is quite small. Its value is extremely small ($<1 \mu \mathrm{A}$) for silicon diodes but appreciable ($\approx 100 \mu \mathrm{A}$) for germanium diodes.
-
-It may be noted that the reverse current is usually very small compared with forward current. For example, the forward current for a typical diode might range up to $100 \mathrm{~mA}$ while the reverse current might be only a few $\mu \mathrm{A}$—a ratio of many thousands between forward and reverse currents.
 
 ## 6.7 Crystal Diode Rectifiers
 
