@@ -1,0 +1,3578 @@
+{
+    "1":[
+        {
+          "name": "Random Variable and Probability Distribution",
+          "qa": [
+            {
+              "question": "What is a random variable?",
+              "options": [
+                "A variable that takes fixed values",
+                "A function from a sample space to the real numbers",
+                "A constant number",
+                "A parameter in a probability distribution"
+              ],
+              "describe": "A random variable is defined as a function that assigns a real number to every outcome in the sample space.",
+              "correct": 1
+            },
+            {
+              "question": "In a two-coin toss experiment, if x is defined as the number of heads, what does x represent?",
+              "options": [
+                "The total number of tosses",
+                "The difference between heads and tails",
+                "The number of heads observed",
+                "The number of tails observed"
+              ],
+              "describe": "x represents the count of heads in the experiment.",
+              "correct": 2
+            },
+            {
+              "question": "What is the sample space for tossing two coins?",
+              "options": [
+                "{H, T}",
+                "{HH, TT}",
+                "{HH, HT, TH, TT}",
+                "{H, T, HH, TT}"
+              ],
+              "describe": "The sample space for two coins is all possible outcomes: HH, HT, TH, TT.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following best describes a probability distribution?",
+              "options": [
+                "A list of distinct outcomes with their associated probabilities",
+                "A function mapping outcomes to frequencies",
+                "A graph showing outcomes over time",
+                "A constant function over the sample space"
+              ],
+              "describe": "A probability distribution lists the distinct values of the random variable and their probabilities.",
+              "correct": 0
+            },
+            {
+              "question": "How is the expectation E(x) of a random variable defined?",
+              "options": [
+                "The sum of all outcomes",
+                "The weighted average of the outcomes",
+                "The product of outcomes and probabilities",
+                "The maximum outcome"
+              ],
+              "describe": "E(x) is the sum of each outcome multiplied by its probability.",
+              "correct": 1
+            },
+            {
+              "question": "What is the expected value E(x) in the coin toss example where outcomes are 0, 1, or 2 heads?",
+              "options": [
+                "0",
+                "1",
+                "2",
+                "0.5"
+              ],
+              "describe": "Using the probabilities 1/4, 1/2, and 1/4 for 0, 1, and 2 heads respectively, E(x) = 1.",
+              "correct": 1
+            },
+            {
+              "question": "Which operations on random variables yield a random variable?",
+              "options": [
+                "Multiplying a random variable by a constant",
+                "Adding two random variables",
+                "Taking the maximum of two random variables",
+                "All of the above"
+              ],
+              "describe": "All the listed operations result in a new random variable.",
+              "correct": 3
+            },
+            {
+              "question": "What is another common name for a random variable?",
+              "options": [
+                "Deterministic variable",
+                "Chance variable",
+                "Fixed variable",
+                "Standard variable"
+              ],
+              "describe": "Random variables are also known as chance or stochastic variables.",
+              "correct": 1
+            },
+            {
+              "question": "If X and Y are random variables, is X+Y also a random variable?",
+              "options": [
+                "Yes",
+                "No",
+                "Only if they are independent",
+                "Only if they have the same distribution"
+              ],
+              "describe": "The sum of two random variables is itself a random variable.",
+              "correct": 0
+            },
+            {
+              "question": "What is the primary role of a random variable in probability theory?",
+              "options": [
+                "To map outcomes to numerical values",
+                "To determine the sample size",
+                "To measure variability directly",
+                "To calculate the mean only"
+              ],
+              "describe": "A random variable assigns a number to each outcome, which facilitates further analysis.",
+              "correct": 0
+            },
+            {
+              "question": "In the two-coin toss, which outcome corresponds to x = 0?",
+              "options": [
+                "HH",
+                "HT",
+                "TH",
+                "TT"
+              ],
+              "describe": "The outcome TT (both tails) yields 0 heads.",
+              "correct": 3
+            },
+            {
+              "question": "Which outcomes in the coin toss experiment result in x = 1?",
+              "options": [
+                "HT and TH",
+                "HH and TT",
+                "HT only",
+                "TH only"
+              ],
+              "describe": "HT and TH both yield one head.",
+              "correct": 0
+            },
+            {
+              "question": "What is the probability of obtaining two heads (x = 2) in the coin toss experiment?",
+              "options": [
+                "1/2",
+                "1/4",
+                "1/3",
+                "1"
+              ],
+              "describe": "The probability for two heads (HH) is 1/4.",
+              "correct": 1
+            },
+            {
+              "question": "What does 'discrete' imply when referring to discrete random variables?",
+              "options": [
+                "They can take any value in an interval",
+                "They are countable",
+                "They follow a continuous distribution",
+                "They have no associated probabilities"
+              ],
+              "describe": "Discrete random variables take on countable values.",
+              "correct": 1
+            },
+            {
+              "question": "Which option best defines a probability distribution?",
+              "options": [
+                "A function assigning probabilities to outcomes",
+                "A graph of the cumulative frequency",
+                "A list of outcomes with associated probabilities",
+                "A constant function over the sample space"
+              ],
+              "describe": "A probability distribution is a list of distinct values along with their probabilities.",
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "name": "Probability Mass Functions",
+          "qa": [
+            {
+              "question": "What does PMF stand for?",
+              "options": [
+                "Probability Mass Function",
+                "Probability Mean Function",
+                "Probability Moment Function",
+                "Probability Mapping Function"
+              ],
+              "describe": "PMF stands for Probability Mass Function.",
+              "correct": 0
+            },
+            {
+              "question": "For a function to be a valid PMF, what must be true about f(x)?",
+              "options": [
+                "f(x) can be negative",
+                "f(x) must be non-negative",
+                "f(x) can be greater than 1",
+                "f(x) must be a constant"
+              ],
+              "describe": "A PMF must assign non-negative probabilities to each outcome.",
+              "correct": 1
+            },
+            {
+              "question": "What is the sum of all probabilities in a PMF?",
+              "options": [
+                "0",
+                "1",
+                "Depends on the random variable",
+                "Infinity"
+              ],
+              "describe": "The sum of probabilities over all possible outcomes in a PMF is 1.",
+              "correct": 1
+            },
+            {
+              "question": "How can a PMF be visually represented?",
+              "options": [
+                "Line graph",
+                "Histogram",
+                "Pie chart",
+                "Scatter plot"
+              ],
+              "describe": "A PMF for a discrete random variable is often represented as a histogram.",
+              "correct": 1
+            },
+            {
+              "question": "In the coin toss example, what is P(x = 1)?",
+              "options": [
+                "1/4",
+                "1/2",
+                "3/4",
+                "0"
+              ],
+              "describe": "Since there are two outcomes (HT and TH) that yield one head, P(x = 1) = 1/2.",
+              "correct": 1
+            },
+            {
+              "question": "Which condition must be satisfied by any PMF?",
+              "options": [
+                "The sum of probabilities equals 1",
+                "Each probability equals 0",
+                "The probabilities sum to more than 1",
+                "All outcomes have equal probability"
+              ],
+              "describe": "A fundamental property of a PMF is that the sum of all probabilities is 1.",
+              "correct": 0
+            },
+            {
+              "question": "If P(x = 2) = 1/4 in a coin toss, what does this probability represent?",
+              "options": [
+                "Probability of getting two heads",
+                "Probability of getting one head",
+                "Probability of getting no heads",
+                "Probability of getting one tail"
+              ],
+              "describe": "P(x = 2) represents the probability of obtaining two heads.",
+              "correct": 0
+            },
+            {
+              "question": "Which notation is used to represent a PMF?",
+              "options": [
+                "f(x)",
+                "F(x)",
+                "M_X(t)",
+                "E(x)"
+              ],
+              "describe": "The PMF is typically denoted by f(x) or P(X = x).",
+              "correct": 0
+            },
+            {
+              "question": "If an outcome has f(x) = 0 in a PMF, what does that imply?",
+              "options": [
+                "The outcome is impossible",
+                "The outcome is certain",
+                "The outcome has probability 1",
+                "The outcome is equally likely as others"
+              ],
+              "describe": "An outcome with probability 0 is considered impossible.",
+              "correct": 0
+            },
+            {
+              "question": "What is the primary difference between a PMF and a probability density function (PDF)?",
+              "options": [
+                "PMF is for discrete variables; PDF is for continuous variables",
+                "PMF is for continuous variables; PDF is for discrete variables",
+                "They are identical",
+                "PMF and PDF both require integration"
+              ],
+              "describe": "A PMF applies to discrete random variables, whereas a PDF applies to continuous ones.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is a property of a PMF?",
+              "options": [
+                "f(x) can be negative",
+                "f(x) must be non-negative",
+                "The sum of f(x) over all x is greater than 1",
+                "f(x) is undefined for discrete values"
+              ],
+              "describe": "A PMF must assign non-negative values and sum to 1.",
+              "correct": 1
+            },
+            {
+              "question": "In the coin toss example, which probability is not part of the PMF?",
+              "options": [
+                "P(x = 0)",
+                "P(x = 1)",
+                "P(x = 2)",
+                "P(x = 3)"
+              ],
+              "describe": "Since the random variable x counts heads in two tosses, it cannot take the value 3.",
+              "correct": 3
+            },
+            {
+              "question": "The PMF provides probabilities for what type of outcomes?",
+              "options": [
+                "Continuous outcomes",
+                "Discrete outcomes",
+                "Both continuous and discrete outcomes",
+                "Only theoretical outcomes"
+              ],
+              "describe": "A PMF is defined only for discrete outcomes.",
+              "correct": 1
+            },
+            {
+              "question": "How is the PMF related to a frequency distribution?",
+              "options": [
+                "The PMF is a probability version of a frequency distribution",
+                "They are completely different concepts",
+                "The frequency distribution always sums to more than 1",
+                "The PMF is only used for continuous data"
+              ],
+              "describe": "A PMF assigns probabilities to outcomes similar to how a frequency distribution assigns frequencies.",
+              "correct": 0
+            },
+            {
+              "question": "In a fair coin toss, what is the PMF for the random variable that counts the number of heads?",
+              "options": [
+                "0: 1/4, 1: 1/2, 2: 1/4",
+                "0: 1/2, 1: 1/2",
+                "0: 1/3, 1: 1/3, 2: 1/3",
+                "0: 1, 1: 0"
+              ],
+              "describe": "For two fair coin tosses, the PMF is 1/4 for 0 heads, 1/2 for 1 head, and 1/4 for 2 heads.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Distribution Functions",
+          "qa": [
+            {
+              "question": "What does CDF stand for?",
+              "options": [
+                "Cumulative Distribution Function",
+                "Continuous Distribution Function",
+                "Cumulative Density Function",
+                "Cumulative Derivative Function"
+              ],
+              "describe": "CDF stands for Cumulative Distribution Function.",
+              "correct": 0
+            },
+            {
+              "question": "How is the cumulative distribution function F(x) defined?",
+              "options": [
+                "F(x) = P(X = x)",
+                "F(x) = P(X < x)",
+                "F(x) = P(X ≤ x)",
+                "F(x) = E(X)"
+              ],
+              "describe": "The CDF is defined as F(x) = P(X ≤ x).",
+              "correct": 2
+            },
+            {
+              "question": "What is the range of a CDF?",
+              "options": [
+                "0 to 0.5",
+                "0 to 1",
+                "Negative infinity to positive infinity",
+                "1 to infinity"
+              ],
+              "describe": "A CDF always takes values between 0 and 1.",
+              "correct": 1
+            },
+            {
+              "question": "For discrete random variables, how is the graph of F(x) typically represented?",
+              "options": [
+                "Smooth curve",
+                "Step function",
+                "Linear line",
+                "Parabolic curve"
+              ],
+              "describe": "The CDF of a discrete random variable is a step function.",
+              "correct": 1
+            },
+            {
+              "question": "In the coin toss example, what is F(0)?",
+              "options": [
+                "1/4",
+                "1/2",
+                "3/4",
+                "1"
+              ],
+              "describe": "F(0) equals the probability that x ≤ 0, which is P(x = 0) = 1/4.",
+              "correct": 0
+            },
+            {
+              "question": "In the coin toss example, what is F(1)?",
+              "options": [
+                "1/4",
+                "1/2",
+                "3/4",
+                "1"
+              ],
+              "describe": "F(1) is the cumulative probability for outcomes ≤ 1: 1/4 + 1/2 = 3/4.",
+              "correct": 2
+            },
+            {
+              "question": "In the coin toss example, what is F(2)?",
+              "options": [
+                "1/2",
+                "3/4",
+                "1",
+                "0"
+              ],
+              "describe": "F(2) includes all outcomes, so F(2) = 1.",
+              "correct": 2
+            },
+            {
+              "question": "Which property is true for any CDF?",
+              "options": [
+                "It is always decreasing",
+                "It is non-decreasing",
+                "It can take negative values",
+                "It always equals 0 at some point"
+              ],
+              "describe": "A CDF is a non-decreasing function.",
+              "correct": 1
+            },
+            {
+              "question": "What is the value of F(x) as x approaches negative infinity?",
+              "options": [
+                "0",
+                "1",
+                "0.5",
+                "Undefined"
+              ],
+              "describe": "By definition, F(-∞) = 0.",
+              "correct": 0
+            },
+            {
+              "question": "What is the value of F(x) as x approaches positive infinity?",
+              "options": [
+                "0",
+                "1",
+                "Undefined",
+                "Depends on the random variable"
+              ],
+              "describe": "By definition, F(∞) = 1.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following best describes the CDF for a discrete random variable?",
+              "options": [
+                "A continuous curve",
+                "A step function that jumps at each value",
+                "A straight line",
+                "A bell-shaped curve"
+              ],
+              "describe": "The CDF for a discrete variable is a step function with jumps at the possible values.",
+              "correct": 1
+            },
+            {
+              "question": "How do you obtain the CDF from a given PMF?",
+              "options": [
+                "Differentiate the PMF",
+                "Integrate the PMF",
+                "Sum the probabilities for all outcomes ≤ x",
+                "Multiply the probabilities"
+              ],
+              "describe": "The CDF is the cumulative sum of probabilities up to x.",
+              "correct": 2
+            },
+            {
+              "question": "If a random variable X takes values 1, 2, and 3, what is F(2)?",
+              "options": [
+                "P(X = 2)",
+                "P(X = 1) + P(X = 2)",
+                "P(X = 2) + P(X = 3)",
+                "P(X = 1) + P(X = 2) + P(X = 3)"
+              ],
+              "describe": "F(2) is the sum of probabilities for outcomes 1 and 2.",
+              "correct": 1
+            },
+            {
+              "question": "For a discrete random variable, the CDF at a point where no new outcome occurs is:",
+              "options": [
+                "Undefined",
+                "The same as the previous jump value",
+                "Zero",
+                "Always 1"
+              ],
+              "describe": "At points without a jump, the CDF retains the previous value.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following statements is true regarding the determination of a probability distribution?",
+              "options": [
+                "Only the CDF uniquely determines the distribution",
+                "Only the PMF uniquely determines the distribution",
+                "Both the CDF and PMF uniquely determine the distribution",
+                "Neither uniquely determines the distribution"
+              ],
+              "describe": "Both the CDF and PMF uniquely characterize the probability distribution.",
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "name": "Mathematical Expectation",
+          "qa": [
+            {
+              "question": "How is the expectation E(X) of a random variable defined?",
+              "options": [
+                "The sum of the outcomes",
+                "The sum of outcomes weighted by their probabilities",
+                "The product of outcomes and probabilities",
+                "The difference between maximum and minimum outcomes"
+              ],
+              "describe": "E(X) is calculated as the weighted average of the outcomes, where weights are the probabilities.",
+              "correct": 1
+            },
+            {
+              "question": "What does E(X) represent in a probability distribution?",
+              "options": [
+                "Variance",
+                "Mean",
+                "Median",
+                "Mode"
+              ],
+              "describe": "E(X) represents the mean (or expected value) of the distribution.",
+              "correct": 1
+            },
+            {
+              "question": "What is the expectation of a constant C?",
+              "options": [
+                "0",
+                "C",
+                "1",
+                "Undefined"
+              ],
+              "describe": "The expectation of a constant is the constant itself.",
+              "correct": 1
+            },
+            {
+              "question": "Which property of expectation is illustrated by the equation E(aX + b) = aE(X) + b?",
+              "options": [
+                "Linearity of expectation",
+                "Non-linearity of expectation",
+                "Independence of expectation",
+                "Normalization of expectation"
+              ],
+              "describe": "This property is known as the linearity of expectation.",
+              "correct": 0
+            },
+            {
+              "question": "What is the correct expression for E(C * g(X))?",
+              "options": [
+                "C * E(g(X))",
+                "E(g(X)) / C",
+                "E(g(X)) - C",
+                "E(g(X))"
+              ],
+              "describe": "Multiplying a function by a constant scales the expectation by that constant.",
+              "correct": 0
+            },
+            {
+              "question": "How is E(g(X)) computed for a function g(X) of a discrete random variable?",
+              "options": [
+                "By summing g(x) over all x",
+                "By summing the probabilities",
+                "By summing g(x) multiplied by P(x) for all x",
+                "By calculating g(E(X))"
+              ],
+              "describe": "The expectation E(g(X)) is the sum over all outcomes of g(x) times its probability P(x).",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following statements is true regarding expectation?",
+              "options": [
+                "E(X) + E(X) is not defined",
+                "E(2X + 3) = 2E(X) + 3",
+                "E(X - 2) = E(X) + 2",
+                "Only independent variables can be added"
+              ],
+              "describe": "The linearity of expectation gives E(2X + 3) = 2E(X) + 3.",
+              "correct": 1
+            },
+            {
+              "question": "What does the linearity of expectation imply about the sum of expectations?",
+              "options": [
+                "It holds only for independent random variables",
+                "E(X + Y) = E(X) + E(Y) regardless of independence",
+                "It only applies to identically distributed variables",
+                "It is valid only for constant multiples"
+              ],
+              "describe": "Linearity of expectation holds without any independence assumptions.",
+              "correct": 1
+            },
+            {
+              "question": "Which formula correctly represents the expectation of a discrete random variable X?",
+              "options": [
+                "E(X) = ∑ x",
+                "E(X) = ∑ x · P(x)",
+                "E(X) = ∏ x · P(x)",
+                "E(X) = ∑ P(x)"
+              ],
+              "describe": "The expectation is the sum of each outcome multiplied by its probability.",
+              "correct": 1
+            },
+            {
+              "question": "If g(X) = X², how do you compute E(g(X))?",
+              "options": [
+                "∑ x²",
+                "∑ x² · P(x)",
+                "∑ x · P(x)",
+                "x²"
+              ],
+              "describe": "E(X²) is computed as the sum of each outcome squared times its probability.",
+              "correct": 1
+            },
+            {
+              "question": "Is the expectation always equal to the most likely outcome?",
+              "options": [
+                "Yes",
+                "No",
+                "Only for symmetric distributions",
+                "Only for normal distributions"
+              ],
+              "describe": "The expectation is a weighted average and may differ from the most probable value.",
+              "correct": 1
+            },
+            {
+              "question": "If X takes values 1, 2, 3 with probabilities 0.2, 0.5, and 0.3 respectively, what is E(X)?",
+              "options": [
+                "5",
+                "1.7",
+                "2.1",
+                "1.8"
+              ],
+              "describe": "E(X) = 1×0.2 + 2×0.5 + 3×0.3 = 2.1.",
+              "correct": 2
+            },
+            {
+              "question": "What does the expectation operator E( ) essentially do?",
+              "options": [
+                "Averages the outcomes weighted by their probabilities",
+                "Calculates the variance",
+                "Computes the median",
+                "Sums up the outcomes directly"
+              ],
+              "describe": "The expectation operator computes the weighted average of all outcomes.",
+              "correct": 0
+            },
+            {
+              "question": "Why do we multiply each outcome by its probability in the expectation formula?",
+              "options": [
+                "To normalize the outcome",
+                "To weigh each outcome by its likelihood",
+                "To cancel out the probabilities",
+                "To obtain the maximum outcome"
+              ],
+              "describe": "Multiplying by the probability gives more weight to outcomes that are more likely to occur.",
+              "correct": 1
+            },
+            {
+              "question": "Which two components are essential when computing the expectation of a function of X?",
+              "options": [
+                "Summing over all outcomes",
+                "Multiplying by the corresponding probability",
+                "Integrating over X",
+                "Both A and B"
+              ],
+              "describe": "You need to sum over all outcomes and multiply each by its probability.",
+              "correct": 3
+            }
+          ]
+        },
+        {
+          "name": "Moments",
+          "qa": [
+            {
+              "question": "What is the r-th raw moment about the origin?",
+              "options": [
+                "E[(X - 0)^r]",
+                "E(X^r)",
+                "Both Option 1 and Option 2",
+                "E[(X - E(X))^r]"
+              ],
+              "describe": "For raw moments about the origin, x0 = 0 so E[(X - 0)^r] = E(X^r).",
+              "correct": 2
+            },
+            {
+              "question": "What is the first raw moment of a random variable X?",
+              "options": [
+                "E(X)",
+                "Variance",
+                "E(X^2)",
+                "0"
+              ],
+              "describe": "The first raw moment is the mean, E(X).",
+              "correct": 0
+            },
+            {
+              "question": "How is the r-th central moment defined?",
+              "options": [
+                "E(X^r)",
+                "E[(X - E(X))^r]",
+                "E[(X - 0)^r]",
+                "E(X)"
+              ],
+              "describe": "Central moments are calculated about the mean: E[(X - E(X))^r].",
+              "correct": 1
+            },
+            {
+              "question": "What is the value of the first central moment?",
+              "options": [
+                "E(X)",
+                "0",
+                "1",
+                "E(X)^2"
+              ],
+              "describe": "The first central moment is always 0 since it represents the deviation from the mean.",
+              "correct": 1
+            },
+            {
+              "question": "The second central moment is equivalent to which statistical measure?",
+              "options": [
+                "Mean",
+                "Variance",
+                "Standard deviation",
+                "Skewness"
+              ],
+              "describe": "The second central moment is the variance of the distribution.",
+              "correct": 1
+            },
+            {
+              "question": "How is variance expressed in terms of raw moments?",
+              "options": [
+                "Variance = E(X^2)",
+                "Variance = E(X^2) - [E(X)]^2",
+                "Variance = [E(X)]^2 - E(X^2)",
+                "Variance = E(X)^2"
+              ],
+              "describe": "Variance is computed as E(X^2) minus the square of E(X).",
+              "correct": 1
+            },
+            {
+              "question": "What kind of information do moments provide about a distribution?",
+              "options": [
+                "Location",
+                "Spread",
+                "Shape",
+                "All of the above"
+              ],
+              "describe": "Moments give information about the central tendency, dispersion, and shape of a distribution.",
+              "correct": 3
+            },
+            {
+              "question": "Which moment is most commonly used to measure skewness?",
+              "options": [
+                "First moment",
+                "Second moment",
+                "Third moment",
+                "Fourth moment"
+              ],
+              "describe": "Skewness is measured using the third central moment.",
+              "correct": 2
+            },
+            {
+              "question": "If μ'_r denotes the r-th raw moment, what does μ'_1 equal?",
+              "options": [
+                "E(X)",
+                "E(X^2)",
+                "0",
+                "1"
+              ],
+              "describe": "The first raw moment μ'_1 is the expected value, E(X).",
+              "correct": 0
+            },
+            {
+              "question": "How is the second raw moment represented?",
+              "options": [
+                "E(X^2)",
+                "E[(X - E(X))^2]",
+                "E(X)",
+                "Variance"
+              ],
+              "describe": "The second raw moment is E(X^2).",
+              "correct": 0
+            },
+            {
+              "question": "What do central moments measure?",
+              "options": [
+                "Absolute values of outcomes",
+                "Deviations from the mean",
+                "Moments about the origin",
+                "None of the above"
+              ],
+              "describe": "Central moments measure the deviations of outcomes from the mean.",
+              "correct": 1
+            },
+            {
+              "question": "Why is the first central moment always zero?",
+              "options": [
+                "Because the deviations cancel out",
+                "It is defined that way",
+                "Because the distribution is symmetric",
+                "Due to normalization"
+              ],
+              "describe": "The deviations from the mean sum to zero, making the first central moment 0.",
+              "correct": 0
+            },
+            {
+              "question": "Which moment is most directly related to the spread of a distribution?",
+              "options": [
+                "First moment",
+                "Second moment",
+                "Third moment",
+                "Fourth moment"
+              ],
+              "describe": "The second moment (variance) is most directly related to the spread of the distribution.",
+              "correct": 1
+            },
+            {
+              "question": "What does the term 'raw moment' refer to?",
+              "options": [
+                "Moments calculated about the origin",
+                "Moments calculated about the mean",
+                "Central moments",
+                "Standardized moments"
+              ],
+              "describe": "Raw moments are moments calculated about the origin.",
+              "correct": 0
+            },
+            {
+              "question": "The formula relating central moments to raw moments shows what relationship?",
+              "options": [
+                "It only computes the variance",
+                "It shows how central moments can be derived from raw moments",
+                "It indicates that moments are independent",
+                "It proves raw moments are always greater"
+              ],
+              "describe": "The relationship expresses central moments in terms of the raw moments.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Moment Generating Function (MGF)",
+          "qa": [
+            {
+              "question": "What is the definition of the moment generating function (MGF) of a random variable X?",
+              "options": [
+                "M_X(t) = E(e^(tX))",
+                "M_X(t) = E(tX)",
+                "M_X(t) = e^(tE(X))",
+                "M_X(t) = Var(e^(tX))"
+              ],
+              "describe": "The MGF is defined as M_X(t) = E(e^(tX)).",
+              "correct": 0
+            },
+            {
+              "question": "What is the value of M_X(0) for any random variable X?",
+              "options": [
+                "0",
+                "1",
+                "E(X)",
+                "Undefined"
+              ],
+              "describe": "By definition, M_X(0) = 1.",
+              "correct": 1
+            },
+            {
+              "question": "How do you obtain the r-th raw moment from the MGF?",
+              "options": [
+                "Differentiate M_X(t) r times and evaluate at t = 0",
+                "Integrate M_X(t)",
+                "Take the logarithm of M_X(t)",
+                "Set t = 1"
+              ],
+              "describe": "The r-th raw moment is obtained by differentiating the MGF r times and evaluating at t = 0.",
+              "correct": 0
+            },
+            {
+              "question": "What is a key property of the MGF regarding the probability distribution?",
+              "options": [
+                "It is always positive",
+                "It exists for all random variables",
+                "It uniquely determines the distribution if it exists",
+                "It is always differentiable"
+              ],
+              "describe": "If the MGF exists, it uniquely determines the probability distribution.",
+              "correct": 2
+            },
+            {
+              "question": "What is the MGF of a constant multiple cX in terms of M_X(t)?",
+              "options": [
+                "M_X(t) = M_(cX)(t/c)",
+                "M_(cX)(t) = M_X(ct)",
+                "M_(cX)(t) = c * M_X(t)",
+                "M_(cX)(t) = M_X(t) / c"
+              ],
+              "describe": "For a constant c, the MGF of cX is given by M_(cX)(t) = M_X(ct).",
+              "correct": 1
+            },
+            {
+              "question": "For independent random variables X and Y, how is the MGF of X + Y expressed?",
+              "options": [
+                "M_(X+Y)(t) = M_X(t) + M_Y(t)",
+                "M_(X+Y)(t) = M_X(t) * M_Y(t)",
+                "M_(X+Y)(t) = M_X(t) - M_Y(t)",
+                "M_(X+Y)(t) = M_X(t) / M_Y(t)"
+              ],
+              "describe": "The MGF of the sum of independent random variables is the product of their MGFs.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is a primary use of the MGF?",
+              "options": [
+                "MGF always exists for every random variable",
+                "MGF is not unique",
+                "MGF can be used to compute all moments of the random variable",
+                "MGF equals the CDF"
+              ],
+              "describe": "The MGF is useful because it can be used to compute all the moments of a random variable.",
+              "correct": 2
+            },
+            {
+              "question": "How do you compute the first moment (mean) from the MGF?",
+              "options": [
+                "Differentiate once and evaluate at t = 0",
+                "Differentiate twice and evaluate at t = 0",
+                "Integrate M_X(t)",
+                "Take the logarithm of M_X(t)"
+              ],
+              "describe": "The first derivative of the MGF at t = 0 gives the first raw moment (mean).",
+              "correct": 0
+            },
+            {
+              "question": "If the MGF is given by M_X(t) = e^(λ(e^t - 1)), which distribution does X follow?",
+              "options": [
+                "Binomial",
+                "Poisson",
+                "Normal",
+                "Exponential"
+              ],
+              "describe": "This MGF is characteristic of the Poisson distribution.",
+              "correct": 1
+            },
+            {
+              "question": "What is the effect on the MGF if a constant b is added to X?",
+              "options": [
+                "M_(X+b)(t) = e^(bt) M_X(t)",
+                "M_(X+b)(t) = M_X(t)",
+                "M_(X+b)(t) = M_X(t) + b",
+                "M_(X+b)(t) = e^(t) M_X(t)"
+              ],
+              "describe": "Adding a constant b to X multiplies the MGF by e^(bt).",
+              "correct": 0
+            },
+            {
+              "question": "In the expression M_X(t) = E(e^(tX)), what does the exponent tX represent?",
+              "options": [
+                "A linear transformation of X",
+                "A completely new random variable",
+                "A scaling of X by the parameter t",
+                "An irrelevant term"
+              ],
+              "describe": "The term tX represents the scaling of the random variable X by t.",
+              "correct": 2
+            },
+            {
+              "question": "Why is the MGF particularly useful in probability theory?",
+              "options": [
+                "It simplifies the calculation of moments",
+                "It replaces the need for a PMF",
+                "It is easier to integrate than other functions",
+                "It does not require any differentiation"
+              ],
+              "describe": "The MGF simplifies the calculation of moments by turning them into derivatives at t = 0.",
+              "correct": 0
+            },
+            {
+              "question": "What does it mean when we say the MGF uniquely determines the probability distribution?",
+              "options": [
+                "Two different distributions cannot have the same MGF",
+                "The MGF can be any arbitrary function",
+                "The distribution is arbitrary",
+                "It only determines the mean and variance"
+              ],
+              "describe": "A unique MGF implies that no two different distributions share the same MGF.",
+              "correct": 0
+            },
+            {
+              "question": "What is the r-th derivative of the MGF at t = 0 equal to?",
+              "options": [
+                "E(X)",
+                "Variance",
+                "The r-th raw moment",
+                "The r-th central moment"
+              ],
+              "describe": "The r-th derivative of the MGF at t = 0 yields the r-th raw moment of the distribution.",
+              "correct": 2
+            },
+            {
+              "question": "If the MGF of a random variable X is known, what can be determined about X?",
+              "options": [
+                "Only the mean",
+                "Only the variance",
+                "All moments of X",
+                "Only the CDF"
+              ],
+              "describe": "Knowing the MGF allows us to determine all moments of the random variable X.",
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "name": "Properties of Variance",
+          "qa": [
+            {
+              "question": "How is the variance V(X) of a random variable X defined?",
+              "options": [
+                "E(X)",
+                "E[(X - E(X))^2]",
+                "E[(X - 0)^2]",
+                "E(X^2)"
+              ],
+              "describe": "Variance is defined as the expected value of the squared deviation from the mean.",
+              "correct": 1
+            },
+            {
+              "question": "What is the variance of a random variable aX, where a is a constant?",
+              "options": [
+                "a · V(X)",
+                "a² · V(X)",
+                "V(X) / a",
+                "V(X)"
+              ],
+              "describe": "Multiplying a random variable by a constant scales the variance by the square of that constant.",
+              "correct": 1
+            },
+            {
+              "question": "For two independent random variables X and Y, what is V(X + Y)?",
+              "options": [
+                "V(X) + V(Y)",
+                "V(X) - V(Y)",
+                "V(X) * V(Y)",
+                "V(X) + V(Y) + 2Cov(X, Y)"
+              ],
+              "describe": "For independent variables, the variance of their sum is the sum of their variances.",
+              "correct": 0
+            },
+            {
+              "question": "If X and Y are not independent, which term appears in the formula for V(X + Y)?",
+              "options": [
+                "None",
+                "Cov(X, Y)",
+                "2Cov(X, Y)",
+                "V(X) - V(Y)"
+              ],
+              "describe": "When X and Y are dependent, the variance of the sum includes a 2Cov(X, Y) term.",
+              "correct": 2
+            },
+            {
+              "question": "What is the variance of a random variable multiplied by 0?",
+              "options": [
+                "0",
+                "1",
+                "V(X)",
+                "Undefined"
+              ],
+              "describe": "Multiplying a random variable by 0 results in a constant (0), which has zero variance.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is NOT a property of variance?",
+              "options": [
+                "V(aX) = a²V(X)",
+                "V(X + Y) = V(X) + V(Y) for independent variables",
+                "Variance can be negative",
+                "Variance measures the spread of a distribution"
+              ],
+              "describe": "Variance is always non-negative, so it cannot be negative.",
+              "correct": 2
+            },
+            {
+              "question": "How can variance be expressed in terms of raw moments?",
+              "options": [
+                "V(X) = E(X^2) - [E(X)]^2",
+                "V(X) = E(X)^2 - E(X^2)",
+                "V(X) = E(X^2) + [E(X)]^2",
+                "V(X) = E(X) - [E(X)]^2"
+              ],
+              "describe": "Variance is the difference between the second raw moment and the square of the first moment.",
+              "correct": 0
+            },
+            {
+              "question": "What does variance measure in a probability distribution?",
+              "options": [
+                "Central tendency",
+                "Dispersion or spread",
+                "Skewness",
+                "Kurtosis"
+              ],
+              "describe": "Variance measures how spread out the values of a random variable are.",
+              "correct": 1
+            },
+            {
+              "question": "If V(X) = 9, what is V(3X)?",
+              "options": [
+                "9",
+                "3",
+                "27",
+                "81"
+              ],
+              "describe": "Scaling by 3 multiplies the variance by 3², so V(3X) = 9 * 9 = 81.",
+              "correct": 3
+            },
+            {
+              "question": "Which formula correctly represents the variance of the sum of two random variables X and Y?",
+              "options": [
+                "V(X + Y) = V(X) + V(Y)",
+                "V(X + Y) = V(X) + V(Y) + 2Cov(X, Y)",
+                "V(X + Y) = V(X) - V(Y)",
+                "V(X + Y) = V(X) * V(Y)"
+              ],
+              "describe": "In general, V(X + Y) = V(X) + V(Y) + 2Cov(X, Y).",
+              "correct": 1
+            },
+            {
+              "question": "For independent random variables, what is the value of Cov(X, Y)?",
+              "options": [
+                "V(X)",
+                "0",
+                "1",
+                "V(Y)"
+              ],
+              "describe": "Independent random variables have a covariance of 0.",
+              "correct": 1
+            },
+            {
+              "question": "Which statement is true regarding variance?",
+              "options": [
+                "Variance is always positive or zero",
+                "Variance can be negative",
+                "Variance is always less than the mean",
+                "Variance is always equal to the mean"
+              ],
+              "describe": "Variance cannot be negative; it is always non-negative.",
+              "correct": 0
+            },
+            {
+              "question": "When a random variable is scaled by a constant a, how is its variance affected?",
+              "options": [
+                "It is scaled by a",
+                "It is scaled by a²",
+                "It remains unchanged",
+                "It is divided by a"
+              ],
+              "describe": "Scaling a random variable by a multiplies its variance by a².",
+              "correct": 1
+            },
+            {
+              "question": "Which property of variance simplifies the computation for sums of independent random variables?",
+              "options": [
+                "Additivity of variance",
+                "Multiplicativity of variance",
+                "Linearity of variance",
+                "Non-negativity of variance"
+              ],
+              "describe": "The additivity of variance for independent variables simplifies computations.",
+              "correct": 0
+            },
+            {
+              "question": "If E(X) = μ and E(X²) = μ², what is V(X)?",
+              "options": [
+                "0",
+                "μ",
+                "μ²",
+                "Undefined"
+              ],
+              "describe": "If E(X²) equals [E(X)]², then the variance V(X) = 0.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Covariance",
+          "qa": [
+            {
+              "question": "How is the covariance of random variables X and Y defined?",
+              "options": [
+                "Cov(X, Y) = E(XY)",
+                "Cov(X, Y) = E[(X - E(X))(Y - E(Y))]",
+                "Cov(X, Y) = E(X)E(Y)",
+                "Cov(X, Y) = E(X + Y)"
+              ],
+              "describe": "Covariance is defined as the expected product of the deviations of X and Y from their means.",
+              "correct": 1
+            },
+            {
+              "question": "What is the covariance of two independent random variables?",
+              "options": [
+                "0",
+                "1",
+                "E(X)E(Y)",
+                "Var(X)"
+              ],
+              "describe": "If X and Y are independent, their covariance is 0.",
+              "correct": 0
+            },
+            {
+              "question": "Which expression is equivalent to the definition of covariance?",
+              "options": [
+                "E(XY) - E(X)E(Y)",
+                "E(X) + E(Y)",
+                "E(X - Y)",
+                "E(X²)"
+              ],
+              "describe": "Cov(X, Y) is equivalently expressed as E(XY) - E(X)E(Y).",
+              "correct": 0
+            },
+            {
+              "question": "What does a covariance of zero imply about the relationship between X and Y?",
+              "options": [
+                "The variables are independent",
+                "The variables are uncorrelated",
+                "They have the same mean",
+                "They are identical"
+              ],
+              "describe": "A zero covariance indicates that the variables are uncorrelated, though not necessarily independent.",
+              "correct": 1
+            },
+            {
+              "question": "Can covariance be negative?",
+              "options": [
+                "Yes",
+                "No",
+                "Only for independent variables",
+                "Only for strictly positive variables"
+              ],
+              "describe": "Covariance can be negative, indicating an inverse relationship between X and Y.",
+              "correct": 0
+            },
+            {
+              "question": "If Cov(X, Y) is positive, what does that imply about the relationship between X and Y?",
+              "options": [
+                "As X increases, Y tends to decrease",
+                "As X increases, Y tends to increase",
+                "There is no relationship",
+                "X and Y are independent"
+              ],
+              "describe": "A positive covariance suggests that X and Y tend to increase together.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is NOT true about covariance?",
+              "options": [
+                "Covariance is symmetric",
+                "Cov(X, Y) = Cov(Y, X)",
+                "Covariance always lies between -1 and 1",
+                "Covariance can be any real number"
+              ],
+              "describe": "Covariance is not restricted to the range [-1, 1].",
+              "correct": 2
+            },
+            {
+              "question": "What does covariance measure?",
+              "options": [
+                "The degree to which two variables vary together",
+                "The difference between two variables",
+                "The sum of two variables",
+                "The average of two variables"
+              ],
+              "describe": "Covariance measures how two variables change together.",
+              "correct": 0
+            },
+            {
+              "question": "If X and Y are independent, what is E(XY)?",
+              "options": [
+                "E(X)E(Y)",
+                "0",
+                "E(X) + E(Y)",
+                "Cannot be determined"
+              ],
+              "describe": "For independent variables, the expectation of the product is the product of the expectations.",
+              "correct": 0
+            },
+            {
+              "question": "Covariance is a measure of which type of relationship?",
+              "options": [
+                "Linear relationship",
+                "Non-linear relationship",
+                "Causal relationship",
+                "No relationship"
+              ],
+              "describe": "Covariance measures the degree of linear relationship between two variables.",
+              "correct": 0
+            },
+            {
+              "question": "Which formula correctly computes covariance using deviations from the mean?",
+              "options": [
+                "Cov(X, Y) = E[(X - E(X))(Y - E(Y))]",
+                "Cov(X, Y) = E[(X + E(X))(Y + E(Y))]",
+                "Cov(X, Y) = E(X - Y)",
+                "Cov(X, Y) = E(X / E(Y))"
+              ],
+              "describe": "The correct formula for covariance is E[(X - E(X))(Y - E(Y))].",
+              "correct": 0
+            },
+            {
+              "question": "Which statement is true regarding the effect of scaling on covariance?",
+              "options": [
+                "Covariance is unaffected by changes in scale",
+                "Covariance is affected by changes in scale",
+                "Covariance is always standardized",
+                "Covariance cannot be computed for discrete variables"
+              ],
+              "describe": "Covariance changes when the scale of the variables is altered.",
+              "correct": 1
+            },
+            {
+              "question": "How does covariance relate to the correlation coefficient?",
+              "options": [
+                "Correlation is the standardized form of covariance",
+                "They are identical",
+                "Covariance is the square of correlation",
+                "They are unrelated"
+              ],
+              "describe": "The correlation coefficient is the covariance normalized by the product of the standard deviations.",
+              "correct": 0
+            },
+            {
+              "question": "If Cov(X, Y) = 0, does it guarantee that X and Y are independent?",
+              "options": [
+                "Yes",
+                "No, only for normally distributed variables",
+                "Yes, always",
+                "No, they might still be dependent"
+              ],
+              "describe": "Zero covariance means uncorrelated but does not necessarily imply independence.",
+              "correct": 3
+            },
+            {
+              "question": "Which property of covariance indicates its symmetry?",
+              "options": [
+                "Cov(X, Y) = Cov(Y, X)",
+                "Cov(X, Y) = -Cov(Y, X)",
+                "Cov(X, Y) is always positive",
+                "Cov(X, Y) is always zero"
+              ],
+              "describe": "Covariance is symmetric, meaning Cov(X, Y) = Cov(Y, X).",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Binomial Distribution",
+          "qa": [
+            {
+              "question": "What is the probability mass function (PMF) of a binomial random variable?",
+              "options": [
+                "P(X = x) = e^(-λ) λ^x / x!",
+                "P(X = x) = (n choose x) p^x (1-p)^(n-x)",
+                "P(X = x) = (1/n)^x",
+                "P(X = x) = p^x"
+              ],
+              "describe": "The binomial PMF is given by (n choose x) p^x (1-p)^(n-x).",
+              "correct": 1
+            },
+            {
+              "question": "In a binomial distribution, what does the parameter n represent?",
+              "options": [
+                "The number of trials",
+                "The probability of success",
+                "The mean of the distribution",
+                "The variance of the distribution"
+              ],
+              "describe": "Parameter n represents the total number of independent trials.",
+              "correct": 0
+            },
+            {
+              "question": "In a binomial distribution, what does the parameter p represent?",
+              "options": [
+                "The number of failures",
+                "The probability of success in each trial",
+                "The total number of trials",
+                "The variance"
+              ],
+              "describe": "Parameter p is the probability of success on a single trial.",
+              "correct": 1
+            },
+            {
+              "question": "How is the mean of a binomial distribution calculated?",
+              "options": [
+                "n * p",
+                "n * (1-p)",
+                "n * p * (1-p)",
+                "n + p"
+              ],
+              "describe": "The mean of a binomial distribution is given by n * p.",
+              "correct": 0
+            },
+            {
+              "question": "How is the variance of a binomial distribution calculated?",
+              "options": [
+                "n * p",
+                "n * p * (1-p)",
+                "n² * p²",
+                "n * (1-p)"
+              ],
+              "describe": "The variance is given by n * p * (1-p), where (1-p) is often denoted as q.",
+              "correct": 1
+            },
+            {
+              "question": "In a binomial distribution, what is q equal to?",
+              "options": [
+                "q = p",
+                "q = 1/p",
+                "q = 1 - p",
+                "q = p - 1"
+              ],
+              "describe": "q is defined as 1 - p, the probability of failure.",
+              "correct": 2
+            },
+            {
+              "question": "For a binomial distribution, what are the possible values that the random variable X can take?",
+              "options": [
+                "0, 1, 2, ..., n",
+                "1, 2, 3, ..., n",
+                "0, 1, 2, ..., ∞",
+                "All real numbers"
+              ],
+              "describe": "A binomial random variable can take integer values from 0 up to n.",
+              "correct": 0
+            },
+            {
+              "question": "What is the moment generating function (MGF) of a binomial random variable?",
+              "options": [
+                "M_X(t) = (1 - p + p e^t)^n",
+                "M_X(t) = e^(λ(e^t-1))",
+                "M_X(t) = e^(tnp)",
+                "M_X(t) = 1"
+              ],
+              "describe": "The MGF of a binomial random variable is given by (1 - p + p e^t)^n.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is true about a binomial random variable?",
+              "options": [
+                "It is continuous",
+                "It is discrete",
+                "It can take any real value",
+                "It has infinite support"
+              ],
+              "describe": "A binomial random variable is discrete.",
+              "correct": 1
+            },
+            {
+              "question": "How do you compute the binomial coefficient in the PMF?",
+              "options": [
+                "n! / (x! (n-x)!)",
+                "n! / x!",
+                "n! / (n-x)!",
+                "x! / n!"
+              ],
+              "describe": "The binomial coefficient is calculated as n! / (x! (n-x)!).",
+              "correct": 0
+            },
+            {
+              "question": "If a binomial random variable has parameters n = 10 and p = 0.5, what is its mean?",
+              "options": [
+                "5",
+                "10",
+                "2.5",
+                "7.5"
+              ],
+              "describe": "The mean is n * p = 10 * 0.5 = 5.",
+              "correct": 0
+            },
+            {
+              "question": "For a binomial distribution, if n increases while p remains constant, what happens to the variance?",
+              "options": [
+                "It decreases",
+                "It remains constant",
+                "It increases",
+                "It becomes zero"
+              ],
+              "describe": "Since variance is n * p * (1-p), increasing n increases the variance.",
+              "correct": 2
+            },
+            {
+              "question": "Which parameter(s) control the spread of a binomial distribution?",
+              "options": [
+                "n only",
+                "p only",
+                "Both n and p",
+                "Neither n nor p"
+              ],
+              "describe": "Both n and p (through the term p(1-p)) determine the spread of the binomial distribution.",
+              "correct": 2
+            },
+            {
+              "question": "In the binomial PMF, what does the term p^x represent?",
+              "options": [
+                "The probability of x failures",
+                "The probability of x successes",
+                "The total probability",
+                "The mean"
+              ],
+              "describe": "p^x represents the probability of achieving x successes in the trials.",
+              "correct": 1
+            },
+            {
+              "question": "What does the binomial PMF calculate?",
+              "options": [
+                "It calculates the probability of x successes using combinations and probability factors",
+                "It sums up all probabilities",
+                "It integrates the density function",
+                "None of the above"
+              ],
+              "describe": "The PMF of a binomial distribution calculates the probability of exactly x successes.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Poisson Distribution",
+          "qa": [
+            {
+              "question": "What is the PMF of a Poisson random variable?",
+              "options": [
+                "P(X = x) = (n choose x) p^x (1-p)^(n-x)",
+                "P(X = x) = e^(-λ) λ^x / x!",
+                "P(X = x) = λ^x / x!",
+                "P(X = x) = e^(-λ) x^λ / x!"
+              ],
+              "describe": "The Poisson PMF is given by e^(-λ) λ^x / x! for x = 0, 1, 2, ...",
+              "correct": 1
+            },
+            {
+              "question": "Which parameter characterizes a Poisson distribution?",
+              "options": [
+                "n",
+                "p",
+                "λ (lambda)",
+                "μ (mu)"
+              ],
+              "describe": "The Poisson distribution is characterized by the parameter λ, the average rate of occurrence.",
+              "correct": 2
+            },
+            {
+              "question": "What is the mean of a Poisson distribution?",
+              "options": [
+                "λ",
+                "λ²",
+                "1/λ",
+                "0"
+              ],
+              "describe": "Both the mean and variance of a Poisson distribution are equal to λ.",
+              "correct": 0
+            },
+            {
+              "question": "What is the variance of a Poisson distribution?",
+              "options": [
+                "λ",
+                "λ²",
+                "2λ",
+                "0"
+              ],
+              "describe": "The variance of a Poisson distribution is equal to λ.",
+              "correct": 0
+            },
+            {
+              "question": "For a Poisson random variable, what are the possible values of X?",
+              "options": [
+                "0, 1, 2, ...",
+                "1, 2, 3, ...",
+                "Negative values",
+                "Any real number"
+              ],
+              "describe": "A Poisson random variable takes non-negative integer values starting at 0.",
+              "correct": 0
+            },
+            {
+              "question": "What is the moment generating function (MGF) of a Poisson random variable?",
+              "options": [
+                "M_X(t) = (1 - p + p e^t)^n",
+                "M_X(t) = e^(λ(e^t - 1))",
+                "M_X(t) = e^(λt)",
+                "M_X(t) = e^(tλ)"
+              ],
+              "describe": "The MGF of a Poisson distribution is given by e^(λ(e^t - 1)).",
+              "correct": 1
+            },
+            {
+              "question": "For what type of scenario is the Poisson distribution typically used?",
+              "options": [
+                "Modeling the number of events in a fixed interval",
+                "Modeling continuous data",
+                "Modeling proportions",
+                "Modeling binary outcomes"
+              ],
+              "describe": "The Poisson distribution models the number of events occurring in a fixed interval of time or space.",
+              "correct": 0
+            },
+            {
+              "question": "If λ = 3, what is the probability of observing 0 events?",
+              "options": [
+                "e^(-3)",
+                "3e^(-3)",
+                "1 - e^(-3)",
+                "e^(-3)/3"
+              ],
+              "describe": "When λ = 3, P(X = 0) = e^(-3).",
+              "correct": 0
+            },
+            {
+              "question": "What must the sum of the probabilities of a Poisson distribution equal?",
+              "options": [
+                "0",
+                "λ",
+                "1",
+                "Infinity"
+              ],
+              "describe": "The sum of the probabilities for all values of X in any probability distribution is 1.",
+              "correct": 2
+            },
+            {
+              "question": "Which property distinguishes the Poisson distribution from the binomial distribution?",
+              "options": [
+                "It has infinite support",
+                "It uses factorials in its PMF",
+                "It involves the parameter λ",
+                "It is discrete"
+              ],
+              "describe": "The Poisson distribution has infinite support (x can be any non-negative integer), unlike the binomial.",
+              "correct": 0
+            },
+            {
+              "question": "How does the Poisson PMF behave as x increases for a fixed λ?",
+              "options": [
+                "It always increases",
+                "It first increases then decreases",
+                "It remains constant",
+                "It oscillates"
+              ],
+              "describe": "For a fixed λ, the PMF of a Poisson distribution first increases to a mode and then decreases.",
+              "correct": 1
+            },
+            {
+              "question": "What happens to the Poisson distribution when λ is large?",
+              "options": [
+                "It approximates a normal distribution",
+                "It becomes uniform",
+                "It remains unchanged",
+                "It approximates an exponential distribution"
+              ],
+              "describe": "For large λ, the Poisson distribution can be approximated by a normal distribution.",
+              "correct": 0
+            },
+            {
+              "question": "What is the role of the term x! in the Poisson PMF?",
+              "options": [
+                "It acts as a normalization factor",
+                "It scales the mean",
+                "It is irrelevant",
+                "It determines the variance"
+              ],
+              "describe": "The factorial x! in the denominator normalizes the PMF so that the probabilities sum to 1.",
+              "correct": 0
+            },
+            {
+              "question": "In the Poisson PMF, which factor ensures that the total probability sums to 1?",
+              "options": [
+                "e^(-λ)",
+                "λ^x",
+                "x!",
+                "None of the above"
+              ],
+              "describe": "The factor e^(-λ) is essential in ensuring that the sum of the PMF over all x equals 1.",
+              "correct": 0
+            },
+            {
+              "question": "Which distribution has the moment generating function M_X(t) = e^(λ(e^t - 1))?",
+              "options": [
+                "Binomial",
+                "Normal",
+                "Poisson",
+                "Exponential"
+              ],
+              "describe": "The MGF e^(λ(e^t - 1)) is the signature of the Poisson distribution.",
+              "correct": 2
+            }
+          ]
+        }
+      ],
+    "2":[
+        {
+          "name": "Continuous Random Variables",
+          "qa": [
+            {
+              "question": "What best describes a continuous random variable?",
+              "options": [
+                "A variable that takes a finite number of values",
+                "A variable that takes any value within an interval",
+                "A variable that is always integer-valued",
+                "A variable that is discrete"
+              ],
+              "describe": "A continuous random variable can assume any value within an interval, meaning there are infinitely many possible outcomes within a range.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is an example of a continuous random variable?",
+              "options": [
+                "The number of cars in a parking lot",
+                "The number of students in a classroom",
+                "The height of a person",
+                "The outcome of rolling a die"
+              ],
+              "describe": "Measurements such as height can take on any value in an interval, making them continuous.",
+              "correct": 2
+            },
+            {
+              "question": "Continuous random variables can assume an infinite number of values within:",
+              "options": [
+                "A set of discrete points",
+                "A finite list",
+                "An interval",
+                "A countable sequence"
+              ],
+              "describe": "They can take any value in a continuum (an interval) rather than a countable set.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following intervals could represent the range of a continuous random variable?",
+              "options": [
+                "[1, 10]",
+                "{1, 2, 3, ..., 10}",
+                "The set of natural numbers",
+                "A finite list of values"
+              ],
+              "describe": "An interval such as [1, 10] is continuous, while the others represent discrete sets.",
+              "correct": 0
+            },
+            {
+              "question": "Why are continuous random variables not countable?",
+              "options": [
+                "Because they can be listed",
+                "Because they have gaps",
+                "Because they take infinitely many values",
+                "Because they are always integers"
+              ],
+              "describe": "Continuous random variables can assume any value within an interval, resulting in an uncountable infinity of outcomes.",
+              "correct": 2
+            },
+            {
+              "question": "Continuous random variables are typically used to model:",
+              "options": [
+                "Counting events",
+                "Quantitative measurements",
+                "Discrete outcomes",
+                "Binary results"
+              ],
+              "describe": "They are ideal for modeling measurements like height, weight, and temperature, which can vary continuously.",
+              "correct": 1
+            },
+            {
+              "question": "Which measurement is most likely to be modeled as a continuous random variable?",
+              "options": [
+                "The number of books on a shelf",
+                "Temperature",
+                "The number of phone calls received",
+                "The number of cars passing by"
+              ],
+              "describe": "Temperature is a continuous measurement since it can take any value within a given range.",
+              "correct": 1
+            },
+            {
+              "question": "Continuous random variables can assume values from:",
+              "options": [
+                "A set of isolated points",
+                "A finite set",
+                "An interval on the real line",
+                "A discrete set of outcomes"
+              ],
+              "describe": "They are defined on intervals, meaning any value within that interval is possible.",
+              "correct": 2
+            },
+            {
+              "question": "In probability theory, a variable that can take on any value in an interval is known as:",
+              "options": [
+                "A discrete variable",
+                "A categorical variable",
+                "A continuous variable",
+                "A deterministic variable"
+              ],
+              "describe": "By definition, a continuous variable takes on any value within a range, unlike discrete variables.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following is not a property of continuous random variables?",
+              "options": [
+                "They have a probability density function",
+                "They assume discrete values",
+                "They can model measurements",
+                "They have infinitely many possible outcomes within an interval"
+              ],
+              "describe": "Continuous random variables are not discrete; they do not take isolated, countable values.",
+              "correct": 1
+            },
+            {
+              "question": "What is a key difference between continuous and discrete random variables?",
+              "options": [
+                "Discrete variables have gaps between values",
+                "Continuous variables are countable",
+                "Continuous variables take any value in a continuum",
+                "Discrete variables can take any real number"
+              ],
+              "describe": "Continuous variables can assume any value in a continuum, whereas discrete variables take on countable values.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following is a typical example of a continuous variable in real-world measurements?",
+              "options": [
+                "Time",
+                "Number of items",
+                "Outcome of a dice roll",
+                "Count of accidents"
+              ],
+              "describe": "Time is measured continuously and can assume any value within an interval.",
+              "correct": 0
+            },
+            {
+              "question": "A continuous random variable's set of outcomes is:",
+              "options": [
+                "Finite",
+                "Infinite and uncountable",
+                "Only integers",
+                "Only natural numbers"
+              ],
+              "describe": "Its outcomes form an uncountable set, typically an interval on the real line.",
+              "correct": 1
+            },
+            {
+              "question": "The concept of continuity in random variables implies that:",
+              "options": [
+                "Any two outcomes are separated by a gap",
+                "Outcomes can be arbitrarily close",
+                "The variable can only be measured in whole numbers",
+                "Outcomes are always rational numbers"
+              ],
+              "describe": "Continuity means outcomes can be as close to each other as desired, with no gaps in between.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following best illustrates a continuous random variable?",
+              "options": [
+                "The roll of a die",
+                "The exact weight of a fruit",
+                "The number of cars in a parking lot",
+                "The number of students in a classroom"
+              ],
+              "describe": "The weight of a fruit can vary continuously and is not restricted to countable values.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Probability Density Function (PDF)",
+          "qa": [
+            {
+              "question": "What does the probability density function (PDF) represent for a continuous random variable?",
+              "options": [
+                "The probability at a specific point",
+                "The probability per unit interval",
+                "The cumulative probability",
+                "The frequency of outcomes"
+              ],
+              "describe": "The PDF provides the probability per unit interval and helps compute probabilities over intervals.",
+              "correct": 1
+            },
+            {
+              "question": "Which property must a probability density function satisfy?",
+              "options": [
+                "f(x) can be negative",
+                "f(x) must integrate to 0 over its domain",
+                "f(x) must be non-negative for all x",
+                "f(x) is always constant"
+              ],
+              "describe": "A valid PDF cannot be negative; it represents densities that integrate to 1 over the entire space.",
+              "correct": 2
+            },
+            {
+              "question": "For a valid PDF, the integral from negative infinity to infinity must equal:",
+              "options": [
+                "0",
+                "0.5",
+                "1",
+                "Infinity"
+              ],
+              "describe": "The total area under the PDF curve must be 1, representing total probability.",
+              "correct": 2
+            },
+            {
+              "question": "The probability that a continuous random variable lies between a and b is given by:",
+              "options": [
+                "f(a) + f(b)",
+                "f(a) * f(b)",
+                "∫_a^b f(x) dx",
+                "f((a+b)/2)"
+              ],
+              "describe": "The probability is computed by integrating the PDF over the interval [a, b].",
+              "correct": 2
+            },
+            {
+              "question": "According to the PDF definition, what is the probability that the variable equals exactly a given value?",
+              "options": [
+                "Depends on f(a)",
+                "Always 0",
+                "Always 1",
+                "f(a) dx"
+              ],
+              "describe": "For continuous random variables, the probability of taking on any specific single value is 0.",
+              "correct": 1
+            },
+            {
+              "question": "In the expression p(x ≤ X ≤ x+dx) = f(x) dx, dx represents:",
+              "options": [
+                "A finite interval",
+                "A probability",
+                "An infinitesimal interval",
+                "The density"
+              ],
+              "describe": "Here, dx is an infinitesimally small interval over which the probability is computed.",
+              "correct": 2
+            },
+            {
+              "question": "The PDF f(x) must be non-negative because:",
+              "options": [
+                "Probabilities cannot be negative",
+                "The area under the curve must be zero",
+                "The function represents frequencies",
+                "It is derived from discrete probabilities"
+              ],
+              "describe": "Since probabilities are never negative, the PDF must be non-negative for all x.",
+              "correct": 0
+            },
+            {
+              "question": "The condition ∫₋∞^∞ f(x) dx = 1 ensures that:",
+              "options": [
+                "f(x) is a proper PDF",
+                "The variable is continuous",
+                "The expected value is 1",
+                "The variance is 1"
+              ],
+              "describe": "This condition guarantees that the total probability over the entire range is 1.",
+              "correct": 0
+            },
+            {
+              "question": "If f(x) is a probability density function, then p(x = a) is:",
+              "options": [
+                "f(a)",
+                "f(a)*dx",
+                "0",
+                "1"
+              ],
+              "describe": "For continuous distributions, the probability at any single point is 0.",
+              "correct": 2
+            },
+            {
+              "question": "What does the area under the PDF curve represent?",
+              "options": [
+                "The probability of a specific outcome",
+                "The total probability over the entire range",
+                "The value of f(x) at a point",
+                "The variance of the distribution"
+              ],
+              "describe": "The area under the PDF curve over a given interval gives the probability that the variable falls within that interval.",
+              "correct": 1
+            },
+            {
+              "question": "In continuous distributions, probabilities are found by:",
+              "options": [
+                "Summing discrete points",
+                "Integrating the PDF",
+                "Multiplying probabilities",
+                "Averaging outcomes"
+              ],
+              "describe": "For continuous random variables, integration is used to compute probabilities over intervals.",
+              "correct": 1
+            },
+            {
+              "question": "The PDF is defined in such a way that its value:",
+              "options": [
+                "Can exceed 1",
+                "Is always between 0 and 1",
+                "Is a probability",
+                "Is an area"
+              ],
+              "describe": "Although the PDF can be greater than 1 for narrow intervals, the area (integral) under it is always 1.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is a characteristic of a probability density function?",
+              "options": [
+                "Its value at a point gives the probability",
+                "Its integral over an interval gives the probability",
+                "It is always a constant function",
+                "It has a discrete sum of probabilities"
+              ],
+              "describe": "Only the integral of the PDF over an interval gives the probability of the variable falling within that interval.",
+              "correct": 1
+            },
+            {
+              "question": "In the expression f(x) dx, dx represents a:",
+              "options": [
+                "Probability",
+                "Width of the interval",
+                "Density",
+                "Mean of the distribution"
+              ],
+              "describe": "Here, dx indicates the width of the infinitesimal interval over which f(x) is multiplied to yield a probability.",
+              "correct": 1
+            },
+            {
+              "question": "The result p(a ≤ x ≤ b) = ∫ₐᵇ f(x) dx is known as:",
+              "options": [
+                "Law of large numbers",
+                "Result 1",
+                "Central limit theorem",
+                "Bayes' theorem"
+              ],
+              "describe": "This result, often labeled as 'Result 1', shows how probabilities are computed for continuous variables.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Distribution Function (CDF)",
+          "qa": [
+            {
+              "question": "What is the definition of the distribution function (CDF) for a continuous random variable?",
+              "options": [
+                "F(x) = f(x)",
+                "F(x) = P(X = x)",
+                "F(x) = P(X ≤ x)",
+                "F(x) = ∫ₓ^∞ f(t) dt"
+              ],
+              "describe": "The CDF is defined as F(x) = P(X ≤ x), which gives the cumulative probability up to x.",
+              "correct": 2
+            },
+            {
+              "question": "The CDF is obtained by integrating the PDF from:",
+              "options": [
+                "x to ∞",
+                "0 to x",
+                "−∞ to x",
+                "x to −∞"
+              ],
+              "describe": "The CDF is the integral of the PDF from negative infinity up to x.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following is true for any CDF?",
+              "options": [
+                "It is non-decreasing",
+                "It is always constant",
+                "It is decreasing",
+                "It oscillates"
+              ],
+              "describe": "A CDF is a non-decreasing function as probability accumulates as x increases.",
+              "correct": 0
+            },
+            {
+              "question": "As x approaches infinity, the CDF F(x) approaches:",
+              "options": [
+                "0",
+                "0.5",
+                "1",
+                "Infinity"
+              ],
+              "describe": "Since the total probability is 1, the CDF tends to 1 as x approaches infinity.",
+              "correct": 2
+            },
+            {
+              "question": "At x = -∞, the CDF F(x) is:",
+              "options": [
+                "0",
+                "1",
+                "Undefined",
+                "Depends on the distribution"
+              ],
+              "describe": "By definition, as x approaches negative infinity, the cumulative probability is 0.",
+              "correct": 0
+            },
+            {
+              "question": "How is the CDF related to the PDF?",
+              "options": [
+                "By differentiation",
+                "By integration",
+                "By multiplication",
+                "By taking the square root"
+              ],
+              "describe": "The CDF is obtained by integrating the PDF, and conversely, differentiating the CDF yields the PDF.",
+              "correct": 1
+            },
+            {
+              "question": "The CDF gives the probability that a random variable is:",
+              "options": [
+                "Equal to x",
+                "Less than or equal to x",
+                "Greater than x",
+                "Between two values"
+              ],
+              "describe": "It provides the cumulative probability up to and including x.",
+              "correct": 1
+            },
+            {
+              "question": "If F(x) is the CDF, then the probability that X falls between a and b is:",
+              "options": [
+                "F(b) - F(a)",
+                "F(a) - F(b)",
+                "F(b) + F(a)",
+                "F(b) * F(a)"
+              ],
+              "describe": "The probability that X is between a and b is given by F(b) - F(a).",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following properties is true for a CDF?",
+              "options": [
+                "It can be negative",
+                "It is always increasing",
+                "It is always between 0 and 1",
+                "It can exceed 1"
+              ],
+              "describe": "A CDF always takes values between 0 and 1 as it represents cumulative probabilities.",
+              "correct": 2
+            },
+            {
+              "question": "The derivative of the CDF with respect to x gives the:",
+              "options": [
+                "Variance",
+                "PDF",
+                "Mean",
+                "Standard deviation"
+              ],
+              "describe": "Differentiating the CDF with respect to x yields the PDF of the distribution.",
+              "correct": 1
+            },
+            {
+              "question": "A CDF is useful because it provides:",
+              "options": [
+                "Exact probabilities for single points",
+                "Cumulative probabilities up to x",
+                "Only the mode of the distribution",
+                "The moment generating function"
+              ],
+              "describe": "The CDF gives cumulative probabilities, making it useful for determining the likelihood of a variable falling below a certain value.",
+              "correct": 1
+            },
+            {
+              "question": "Which operation connects the PDF and the CDF?",
+              "options": [
+                "Addition",
+                "Integration",
+                "Differentiation",
+                "Subtraction"
+              ],
+              "describe": "The CDF is the integral of the PDF, linking the two functions.",
+              "correct": 1
+            },
+            {
+              "question": "What is F(μ) for a symmetric distribution?",
+              "options": [
+                "0.25",
+                "0.5",
+                "1",
+                "0"
+              ],
+              "describe": "In a symmetric distribution, the mean, median, and mode coincide, so F(μ) equals 0.5.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following best describes the graph of a CDF?",
+              "options": [
+                "A step function",
+                "A smooth curve that starts at 0 and increases to 1",
+                "A bell-shaped curve",
+                "A horizontal line"
+              ],
+              "describe": "The CDF is a smooth, non-decreasing curve that starts at 0 and asymptotically approaches 1.",
+              "correct": 1
+            },
+            {
+              "question": "The CDF is used to calculate:",
+              "options": [
+                "Probability density at a point",
+                "Probability over an interval",
+                "Variance",
+                "Standard deviation"
+              ],
+              "describe": "By taking differences of CDF values, one can calculate the probability over a specified interval.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Moments of Continuous Probability Distribution",
+          "qa": [
+            {
+              "question": "How is the arithmetic mean of a continuous distribution defined?",
+              "options": [
+                "E(x)=∫ f(x) dx",
+                "E(x)=∫ x f(x) dx",
+                "E(x)=∫ x² f(x) dx",
+                "E(x)=f(x) dx"
+              ],
+              "describe": "The arithmetic mean is computed as the integral of x multiplied by its PDF over the entire range.",
+              "correct": 1
+            },
+            {
+              "question": "The median of a continuous distribution is defined as the value M such that:",
+              "options": [
+                "P(X < M) = 1",
+                "P(X ≤ M) = 0.5",
+                "P(X = M) = 0.5",
+                "P(X > M) = 0.5"
+              ],
+              "describe": "The median is the value at which the cumulative probability is 0.5.",
+              "correct": 1
+            },
+            {
+              "question": "The rth central moment is defined by:",
+              "options": [
+                "∫ (x - E(x))^r f(x) dx",
+                "∫ x^r f(x) dx",
+                "E(x^r)",
+                "∫ (x - median)^r f(x) dx"
+              ],
+              "describe": "It is computed by integrating the rth power of the deviation of x from the mean, weighted by the PDF.",
+              "correct": 0
+            },
+            {
+              "question": "The variance of a continuous distribution is equivalent to:",
+              "options": [
+                "The first central moment",
+                "The second central moment",
+                "The third central moment",
+                "The fourth central moment"
+              ],
+              "describe": "Variance is defined as the second central moment, measuring the spread of the distribution.",
+              "correct": 1
+            },
+            {
+              "question": "The variance measures:",
+              "options": [
+                "The center of the distribution",
+                "The spread of the distribution",
+                "The skewness",
+                "The mode of the distribution"
+              ],
+              "describe": "Variance quantifies how much the values of a distribution deviate from the mean.",
+              "correct": 1
+            },
+            {
+              "question": "To find the first quartile Q1, you solve for Q1 in:",
+              "options": [
+                "∫_(Q1)^∞ f(x) dx = 0.75",
+                "∫₋∞^(Q1) f(x) dx = 0.25",
+                "∫₋∞^(Q1) f(x) dx = 0.5",
+                "∫_(Q1)^∞ f(x) dx = 0.5"
+              ],
+              "describe": "Q1 is the value where the cumulative probability reaches 0.25.",
+              "correct": 1
+            },
+            {
+              "question": "Which moment is used to calculate the skewness of a distribution?",
+              "options": [
+                "First moment",
+                "Second moment",
+                "Third central moment",
+                "Fourth central moment"
+              ],
+              "describe": "Skewness is based on the third central moment, which measures asymmetry.",
+              "correct": 2
+            },
+            {
+              "question": "The mean, median, and mode are equal in a symmetric distribution. This is often observed in:",
+              "options": [
+                "Exponential distributions",
+                "Normal distributions",
+                "Rectangular distributions",
+                "Poisson distributions"
+              ],
+              "describe": "In symmetric distributions like the normal distribution, the mean, median, and mode coincide.",
+              "correct": 1
+            },
+            {
+              "question": "Central moments are computed about:",
+              "options": [
+                "Zero",
+                "The median",
+                "The mean",
+                "The mode"
+              ],
+              "describe": "Central moments measure deviations from the mean.",
+              "correct": 2
+            },
+            {
+              "question": "Which expression represents the second central moment?",
+              "options": [
+                "∫ (x - E(x)) f(x) dx",
+                "∫ (x - E(x))² f(x) dx",
+                "∫ x² f(x) dx",
+                "∫ (x - median)² f(x) dx"
+              ],
+              "describe": "The second central moment is the integral of (x - mean)² multiplied by the PDF, which equals the variance.",
+              "correct": 1
+            },
+            {
+              "question": "Quartiles divide a probability distribution into how many equal parts?",
+              "options": [
+                "Two",
+                "Three",
+                "Four",
+                "Five"
+              ],
+              "describe": "Quartiles split the distribution into four equal parts.",
+              "correct": 2
+            },
+            {
+              "question": "What is the importance of moments in probability distributions?",
+              "options": [
+                "They provide measures of location, spread, and shape",
+                "They only provide the mean",
+                "They are only used in discrete distributions",
+                "They are irrelevant in statistics"
+              ],
+              "describe": "Moments (such as the mean, variance, skewness, etc.) describe various characteristics of the distribution.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is true about the median in a symmetric distribution?",
+              "options": [
+                "It is greater than the mean",
+                "It is less than the mean",
+                "It is equal to the mean",
+                "It is not defined"
+              ],
+              "describe": "In a symmetric distribution, the median equals the mean.",
+              "correct": 2
+            },
+            {
+              "question": "The rth central moment is useful in determining:",
+              "options": [
+                "Variance only",
+                "Skewness and kurtosis",
+                "Mean only",
+                "None of the above"
+              ],
+              "describe": "Higher-order central moments (like the third and fourth) are used to measure skewness and kurtosis respectively.",
+              "correct": 1
+            },
+            {
+              "question": "To calculate the mean of a continuous distribution, you must integrate over:",
+              "options": [
+                "A finite range",
+                "The entire range from −∞ to ∞",
+                "Only the positive side",
+                "Only the negative side"
+              ],
+              "describe": "The mean is computed by integrating x f(x) over the entire real line.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Rectangular Distributions",
+          "qa": [
+            {
+              "question": "What is the probability density function for a rectangular distribution on the interval [a, b]?",
+              "options": [
+                "f(x) = 1/(b-a) for a ≤ x ≤ b",
+                "f(x) = (b-a) for a ≤ x ≤ b",
+                "f(x) = 1 for all x",
+                "f(x) = 0 for a ≤ x ≤ b"
+              ],
+              "describe": "For a rectangular (uniform) distribution, the PDF is constant over the interval [a, b] and equals 1/(b-a).",
+              "correct": 0
+            },
+            {
+              "question": "For a rectangular distribution, what is the value of f(x) outside the interval [a, b]?",
+              "options": [
+                "1/(b-a)",
+                "0",
+                "1",
+                "Undefined"
+              ],
+              "describe": "The PDF is zero outside the interval where the distribution is defined.",
+              "correct": 1
+            },
+            {
+              "question": "What is the mean of a rectangular distribution with parameters a and b?",
+              "options": [
+                "(a+b)/2",
+                "(a+b)/2 + 1",
+                "a * b",
+                "b - a"
+              ],
+              "describe": "The mean of a uniform (rectangular) distribution is the midpoint of the interval, (a+b)/2.",
+              "correct": 0
+            },
+            {
+              "question": "According to the module, the variance of a rectangular distribution is:",
+              "options": [
+                "(b-a)²/12",
+                "(b-a)²/2",
+                "b-a",
+                "1/(b-a)"
+              ],
+              "describe": "Based on the module notes, the variance is given as ((b-a)²)/2.",
+              "correct": 1
+            },
+            {
+              "question": "The rectangular distribution is an example of a:",
+              "options": [
+                "Continuous distribution",
+                "Discrete distribution",
+                "Binomial distribution",
+                "Poisson distribution"
+              ],
+              "describe": "The rectangular distribution is a continuous distribution with a constant density over its interval.",
+              "correct": 0
+            },
+            {
+              "question": "In a rectangular distribution, the probability is uniformly distributed over the interval:",
+              "options": [
+                "a to b",
+                "0 to 1",
+                "−∞ to ∞",
+                "b to a"
+              ],
+              "describe": "All outcomes between a and b are equally likely in a rectangular distribution.",
+              "correct": 0
+            },
+            {
+              "question": "What does the rectangular distribution assume about the likelihood of outcomes?",
+              "options": [
+                "Outcomes near a are more likely",
+                "All outcomes within [a, b] are equally likely",
+                "Outcomes near b are more likely",
+                "Only the endpoints are likely"
+              ],
+              "describe": "The key characteristic is uniformity: every outcome in [a, b] has the same probability density.",
+              "correct": 1
+            },
+            {
+              "question": "The term 'rectangular' in the distribution refers to:",
+              "options": [
+                "The shape of the PDF",
+                "The range of the data",
+                "The calculation of the mean",
+                "The linearity of the function"
+              ],
+              "describe": "The constant value of the PDF over [a, b] gives it a rectangular shape when graphed.",
+              "correct": 0
+            },
+            {
+              "question": "Which property does a rectangular distribution satisfy?",
+              "options": [
+                "Skewed distribution",
+                "Uniform probability",
+                "Exponential decay",
+                "Bell-shaped curve"
+              ],
+              "describe": "A rectangular distribution is uniform; all outcomes within the interval are equally probable.",
+              "correct": 1
+            },
+            {
+              "question": "If a = 2 and b = 8 in a rectangular distribution, the mean is:",
+              "options": [
+                "5",
+                "4",
+                "6",
+                "10"
+              ],
+              "describe": "The mean is calculated as (2+8)/2 = 5.",
+              "correct": 0
+            },
+            {
+              "question": "For a rectangular distribution, the constant value of the PDF is determined by:",
+              "options": [
+                "The difference b-a",
+                "The sum a+b",
+                "The product a*b",
+                "The ratio a/b"
+              ],
+              "describe": "Since the total area must be 1, the constant is 1/(b-a), which depends on the width (b-a).",
+              "correct": 0
+            },
+            {
+              "question": "The variance of a rectangular distribution depends on:",
+              "options": [
+                "The difference between a and b",
+                "The sum of a and b",
+                "The square of a",
+                "The square of b"
+              ],
+              "describe": "Variance is related to the spread of the interval, which is determined by (b-a).",
+              "correct": 0
+            },
+            {
+              "question": "Uniform distribution is another name for:",
+              "options": [
+                "Rectangular distribution",
+                "Exponential distribution",
+                "Normal distribution",
+                "Binomial distribution"
+              ],
+              "describe": "The rectangular distribution is commonly referred to as the uniform distribution.",
+              "correct": 0
+            },
+            {
+              "question": "The area under the PDF curve for a rectangular distribution is:",
+              "options": [
+                "(b-a)/2",
+                "1",
+                "b-a",
+                "0"
+              ],
+              "describe": "The total area under the PDF must equal 1, which is ensured by the choice of the constant 1/(b-a).",
+              "correct": 1
+            },
+            {
+              "question": "In a rectangular distribution, the likelihood of an outcome is:",
+              "options": [
+                "Variable",
+                "Constant",
+                "Increasing",
+                "Decreasing"
+              ],
+              "describe": "Every outcome within the interval [a, b] has the same likelihood, meaning the PDF is constant.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Exponential Distribution",
+          "qa": [
+            {
+              "question": "What is the probability density function of an exponential distribution?",
+              "options": [
+                "f(x) = θe^(–θx)",
+                "f(x) = e^(–x)",
+                "f(x) = xe^(–θx)",
+                "f(x) = θx e^(–θx)"
+              ],
+              "describe": "The exponential distribution is defined by f(x) = θe^(–θx) for x ≥ 0.",
+              "correct": 0
+            },
+            {
+              "question": "For the exponential distribution, what parameter controls the rate of decay?",
+              "options": [
+                "μ",
+                "σ",
+                "θ",
+                "λ"
+              ],
+              "describe": "The parameter θ (or sometimes λ) determines how rapidly the exponential function decays.",
+              "correct": 2
+            },
+            {
+              "question": "What is the mean of an exponential distribution with parameter θ?",
+              "options": [
+                "θ",
+                "1/θ",
+                "θ²",
+                "1/θ²"
+              ],
+              "describe": "The mean of an exponential distribution is given by 1/θ.",
+              "correct": 1
+            },
+            {
+              "question": "What is the variance of an exponential distribution with parameter θ?",
+              "options": [
+                "θ",
+                "1/θ",
+                "1/θ²",
+                "θ²"
+              ],
+              "describe": "The variance is given by 1/θ².",
+              "correct": 2
+            },
+            {
+              "question": "The exponential distribution is primarily used to model:",
+              "options": [
+                "Time until an event occurs",
+                "Height of individuals",
+                "Number of occurrences",
+                "Grades"
+              ],
+              "describe": "It is widely used to model waiting times or the time until an event occurs, such as failure of a device.",
+              "correct": 0
+            },
+            {
+              "question": "For an exponential distribution, the PDF is defined for:",
+              "options": [
+                "All real numbers",
+                "x ≥ 0",
+                "x > 1",
+                "x < 0"
+              ],
+              "describe": "The exponential distribution is only defined for non-negative values (x ≥ 0).",
+              "correct": 1
+            },
+            {
+              "question": "The parameter θ in the exponential distribution must be:",
+              "options": [
+                "Negative",
+                "Zero",
+                "Positive",
+                "Any real number"
+              ],
+              "describe": "θ must be positive to ensure the PDF is valid and integrates to 1.",
+              "correct": 2
+            },
+            {
+              "question": "The exponential distribution is a special case of which distribution?",
+              "options": [
+                "Uniform",
+                "Normal",
+                "Gamma",
+                "Rectangular"
+              ],
+              "describe": "The exponential distribution is a gamma distribution with a shape parameter equal to 1.",
+              "correct": 2
+            },
+            {
+              "question": "If θ increases, the mean of the exponential distribution:",
+              "options": [
+                "Increases",
+                "Decreases",
+                "Stays the same",
+                "Doubles"
+              ],
+              "describe": "Since the mean is 1/θ, an increase in θ results in a decrease in the mean.",
+              "correct": 1
+            },
+            {
+              "question": "In an exponential distribution, the probability of an event occurring in a very short time interval is approximately:",
+              "options": [
+                "Proportional to the length of the interval",
+                "Zero",
+                "One",
+                "θ times the square of the interval"
+              ],
+              "describe": "For very small intervals, the probability is roughly proportional to the interval's length.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is a property of the exponential distribution?",
+              "options": [
+                "Memoryless property",
+                "Symmetry",
+                "Bimodal",
+                "Uniformity"
+              ],
+              "describe": "The exponential distribution is known for its memoryless property, meaning past events do not affect future probabilities.",
+              "correct": 0
+            },
+            {
+              "question": "The exponential distribution's PDF is given by f(x) = θe^(–θx). What is f(0)?",
+              "options": [
+                "0",
+                "θ",
+                "1",
+                "e^(–θ)"
+              ],
+              "describe": "At x = 0, f(0) = θe^(0) = θ.",
+              "correct": 1
+            },
+            {
+              "question": "For an exponential distribution, the probability that X is exactly equal to a particular value is:",
+              "options": [
+                "θ",
+                "e^(–θx)",
+                "0",
+                "1/θ"
+              ],
+              "describe": "Like all continuous distributions, the probability at a specific point is 0.",
+              "correct": 2
+            },
+            {
+              "question": "What does the exponential distribution model in reliability analysis?",
+              "options": [
+                "The number of failures",
+                "Time until failure",
+                "The average lifespan",
+                "The variance of failure times"
+              ],
+              "describe": "It is commonly used to model the time until a failure occurs.",
+              "correct": 1
+            },
+            {
+              "question": "As x increases in an exponential distribution, the value of the PDF:",
+              "options": [
+                "Increases",
+                "Remains constant",
+                "Decreases",
+                "Oscillates"
+              ],
+              "describe": "The PDF decreases exponentially as x increases.",
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "name": "Normal Distribution",
+          "qa": [
+            {
+              "question": "What is the probability density function of a normal distribution?",
+              "options": [
+                "f(x) = θe^(–θx)",
+                "f(x) = 1/(σ√(2π)) e^(-((x-μ)²/(2σ²)))",
+                "f(x) = 1/(b-a)",
+                "f(x) = e^(–x²)"
+              ],
+              "describe": "The normal distribution is defined by its bell-shaped PDF with parameters μ and σ.",
+              "correct": 1
+            },
+            {
+              "question": "In the notation N(μ, σ²), what does μ represent?",
+              "options": [
+                "Variance",
+                "Mean",
+                "Standard deviation",
+                "Median"
+              ],
+              "describe": "μ is the mean (center) of the normal distribution.",
+              "correct": 1
+            },
+            {
+              "question": "In a normal distribution, what is the variance?",
+              "options": [
+                "σ",
+                "σ²",
+                "μ",
+                "√σ"
+              ],
+              "describe": "The variance is the square of the standard deviation, σ².",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is true for the normal distribution?",
+              "options": [
+                "It is skewed",
+                "It is symmetric about μ",
+                "It has heavy tails",
+                "It is uniform"
+              ],
+              "describe": "The normal distribution is symmetric about its mean μ.",
+              "correct": 1
+            },
+            {
+              "question": "The normal distribution is often referred to as the:",
+              "options": [
+                "Exponential curve",
+                "Bell curve",
+                "Rectangular curve",
+                "Step function"
+              ],
+              "describe": "Because of its bell-shaped curve, the normal distribution is commonly called the bell curve.",
+              "correct": 1
+            },
+            {
+              "question": "What is the role of the parameter σ in the normal distribution?",
+              "options": [
+                "It determines the mean",
+                "It determines the spread",
+                "It is the mode",
+                "It is irrelevant"
+              ],
+              "describe": "The standard deviation σ controls the spread or dispersion of the distribution.",
+              "correct": 1
+            },
+            {
+              "question": "Which transformation standardizes a normal variable?",
+              "options": [
+                "Z = X + μ",
+                "Z = (X-μ)/σ",
+                "Z = σ(X-μ)",
+                "Z = X/σ"
+              ],
+              "describe": "The standardization process converts X to a standard normal variable using Z = (X-μ)/σ.",
+              "correct": 1
+            },
+            {
+              "question": "The moment generating function (MGF) of a normal variable X ~ N(μ, σ²) is:",
+              "options": [
+                "e^(μt)",
+                "e^((σt)²/2)",
+                "e^(μt + (σ² t²)/2)",
+                "e^(t²)"
+              ],
+              "describe": "The MGF of a normal distribution is e^(μt + (σ² t²)/2), which can be used to derive its moments.",
+              "correct": 2
+            },
+            {
+              "question": "In a normal distribution, what is the probability that X equals a specific value?",
+              "options": [
+                "Depends on μ",
+                "Depends on σ",
+                "0",
+                "1"
+              ],
+              "describe": "For any continuous distribution, including the normal, the probability at a single point is 0.",
+              "correct": 2
+            },
+            {
+              "question": "For a normal distribution, which of the following is not a property?",
+              "options": [
+                "Mean, median, and mode are equal",
+                "It is symmetric",
+                "It has an infinite range",
+                "It is discrete"
+              ],
+              "describe": "The normal distribution is continuous, not discrete.",
+              "correct": 3
+            },
+            {
+              "question": "The parameter σ in a normal distribution must be:",
+              "options": [
+                "Any real number",
+                "Positive",
+                "Zero",
+                "Negative"
+              ],
+              "describe": "Standard deviation σ must be positive for the distribution to be valid.",
+              "correct": 1
+            },
+            {
+              "question": "A variable X is normally distributed with parameters μ and σ. Which of the following represents its distribution?",
+              "options": [
+                "X ∼ N(σ, μ²)",
+                "X ∼ N(μ, σ²)",
+                "X ∼ N(μ, σ)",
+                "X ∼ N(σ², μ)"
+              ],
+              "describe": "The correct notation is X ∼ N(μ, σ²), where μ is the mean and σ² is the variance.",
+              "correct": 1
+            },
+            {
+              "question": "What is the shape of the normal distribution curve?",
+              "options": [
+                "Skewed to the right",
+                "Skewed to the left",
+                "Symmetrical bell-shaped",
+                "Uniform"
+              ],
+              "describe": "The normal distribution is symmetric and bell-shaped.",
+              "correct": 2
+            },
+            {
+              "question": "The normal distribution's MGF is used to:",
+              "options": [
+                "Compute probabilities directly",
+                "Generate random numbers",
+                "Derive moments of the distribution",
+                "Determine the median"
+              ],
+              "describe": "The moment generating function is a tool to derive the moments (mean, variance, etc.) of the distribution.",
+              "correct": 2
+            },
+            {
+              "question": "If a normal distribution has a larger σ, the distribution:",
+              "options": [
+                "Becomes narrower",
+                "Becomes wider",
+                "Does not change",
+                "Shifts to the right"
+              ],
+              "describe": "An increase in σ results in a wider spread of the distribution.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Properties of Normal Distribution",
+          "qa": [
+            {
+              "question": "The normal curve is symmetric about which point?",
+              "options": [
+                "x = 0",
+                "x = μ",
+                "x = σ",
+                "x = 1"
+              ],
+              "describe": "The curve is symmetric about the mean, which is x = μ.",
+              "correct": 1
+            },
+            {
+              "question": "In a normal distribution, the mean, median, and mode are:",
+              "options": [
+                "All different",
+                "All equal",
+                "Mean > median > mode",
+                "Median > mean > mode"
+              ],
+              "describe": "For a normal distribution, these three measures of central tendency coincide.",
+              "correct": 1
+            },
+            {
+              "question": "At what point does the normal distribution reach its maximum value?",
+              "options": [
+                "x = μ",
+                "x = μ ± σ",
+                "x = 0",
+                "x = ∞"
+              ],
+              "describe": "The maximum value of the PDF is attained at x = μ.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is the maximum value of the normal PDF?",
+              "options": [
+                "1/(σ√(2π))",
+                "σ√(2π)",
+                "μ",
+                "e^(–μ)"
+              ],
+              "describe": "The peak of the normal distribution is 1/(σ√(2π)) at x = μ.",
+              "correct": 0
+            },
+            {
+              "question": "The points of inflection of the normal curve occur at:",
+              "options": [
+                "x = μ",
+                "x = μ ± σ",
+                "x = μ ± 2σ",
+                "x = 0"
+              ],
+              "describe": "The curve changes concavity at x = μ ± σ, which are the inflection points.",
+              "correct": 1
+            },
+            {
+              "question": "All odd-order central moments of a normal distribution are:",
+              "options": [
+                "Positive",
+                "Negative",
+                "Zero",
+                "Equal to the mean"
+              ],
+              "describe": "Due to symmetry, all odd-order central moments (about the mean) vanish (are zero).",
+              "correct": 2
+            },
+            {
+              "question": "The even-order central moments of a normal distribution are given by:",
+              "options": [
+                "1, 3, 5, ...",
+                "Products of odd numbers times σ^(2r)",
+                "Always zero",
+                "They do not exist"
+              ],
+              "describe": "They are expressed as the product 1×3×5×...×(2r-1) multiplied by σ^(2r).",
+              "correct": 1
+            },
+            {
+              "question": "The skewness (β₁) of a normal distribution is:",
+              "options": [
+                "0",
+                "1",
+                "−1",
+                "3"
+              ],
+              "describe": "The normal distribution has a skewness of 0, indicating perfect symmetry.",
+              "correct": 0
+            },
+            {
+              "question": "The kurtosis (β₂) of a normal distribution is:",
+              "options": [
+                "0",
+                "1",
+                "3",
+                "Not defined"
+              ],
+              "describe": "According to the module, the normal distribution has a kurtosis of 3.",
+              "correct": 2
+            },
+            {
+              "question": "Which property of the normal distribution ensures that the odd-order moments vanish?",
+              "options": [
+                "Its symmetry",
+                "Its mean",
+                "Its variance",
+                "Its standard deviation"
+              ],
+              "describe": "The symmetry about the mean is what causes all odd-order central moments to be zero.",
+              "correct": 0
+            },
+            {
+              "question": "For a normal distribution, the second central moment is equal to:",
+              "options": [
+                "σ",
+                "σ²",
+                "μ",
+                "μ²"
+              ],
+              "describe": "The second central moment is the variance, which is σ².",
+              "correct": 1
+            },
+            {
+              "question": "The fact that the normal curve extends from −∞ to +∞ implies that:",
+              "options": [
+                "It has bounded support",
+                "It has infinite support",
+                "It is discrete",
+                "It is periodic"
+              ],
+              "describe": "The normal distribution is defined over the entire real line, meaning its support is infinite.",
+              "correct": 1
+            },
+            {
+              "question": "The even-order central moment M₂ᵣ for a normal distribution is expressed as:",
+              "options": [
+                "σ^(2r)",
+                "1×3×5... (2r-1) σ^(2r)",
+                "0",
+                "rσ²"
+              ],
+              "describe": "It is given by the product of odd numbers up to (2r-1) times σ^(2r).",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following statements is true about the normal distribution?",
+              "options": [
+                "It is not symmetric",
+                "It has a skewness of 0",
+                "Its mode is not equal to its mean",
+                "Its variance is always 1"
+              ],
+              "describe": "A normal distribution is symmetric, hence its skewness is 0.",
+              "correct": 1
+            },
+            {
+              "question": "The maximum ordinate of the normal curve occurs at x = μ and is given by:",
+              "options": [
+                "1/σ",
+                "1/(σ√(2π))",
+                "σ/√(2π)",
+                "√(2π)/σ"
+              ],
+              "describe": "At x = μ, the normal PDF attains its maximum value of 1/(σ√(2π)).",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Additive and Linear Combination of Independent Normal Variables",
+          "qa": [
+            {
+              "question": "If X and Y are independent normal variables with means μ₁ and μ₂, the sum X+Y is distributed as:",
+              "options": [
+                "N(μ₁+μ₂, σ₁+σ₂)",
+                "N(μ₁+μ₂, σ₁²+σ₂²)",
+                "N(μ₁+μ₂, σ₁σ₂)",
+                "Not normally distributed"
+              ],
+              "describe": "The sum of independent normals is normally distributed with mean μ₁+μ₂ and variance σ₁²+σ₂².",
+              "correct": 1
+            },
+            {
+              "question": "The moment generating function (MGF) of a sum of independent normal variables is:",
+              "options": [
+                "The product of their MGFs",
+                "The sum of their MGFs",
+                "The difference of their MGFs",
+                "Not defined"
+              ],
+              "describe": "Since the variables are independent, the MGF of the sum equals the product of their individual MGFs.",
+              "correct": 0
+            },
+            {
+              "question": "For independent normal variables, the variance of their sum is:",
+              "options": [
+                "The sum of the variances",
+                "The product of the variances",
+                "The sum of the standard deviations",
+                "Zero"
+              ],
+              "describe": "Variances add for independent random variables.",
+              "correct": 0
+            },
+            {
+              "question": "In a linear combination Y = Σ aᵢ Xᵢ, where Xᵢ are independent normal variables, Y is:",
+              "options": [
+                "Not normally distributed",
+                "Normally distributed",
+                "Uniformly distributed",
+                "Exponentially distributed"
+              ],
+              "describe": "Any linear combination of independent normal variables is also normally distributed.",
+              "correct": 1
+            },
+            {
+              "question": "The mean of the linear combination Y = Σ aᵢ Xᵢ is given by:",
+              "options": [
+                "Σ aᵢ",
+                "Σ aᵢ μᵢ",
+                "Σ μᵢ",
+                "Σ aᵢ² μᵢ"
+              ],
+              "describe": "The mean is the weighted sum of the individual means, with weights aᵢ.",
+              "correct": 1
+            },
+            {
+              "question": "The variance of Y = Σ aᵢ Xᵢ, where Xᵢ are independent normal variables, is:",
+              "options": [
+                "Σ aᵢ² σᵢ²",
+                "Σ aᵢ σᵢ",
+                "Σ σᵢ",
+                "Σ aᵢ μᵢ"
+              ],
+              "describe": "The variance of a linear combination is the sum of aᵢ² σᵢ², assuming independence.",
+              "correct": 0
+            },
+            {
+              "question": "The additive property of normal distributions states that:",
+              "options": [
+                "The sum of independent normals is normal",
+                "The product of independent normals is normal",
+                "The difference of independent normals is exponential",
+                "The sum of normals is uniform"
+              ],
+              "describe": "An essential property is that the sum of independent normal variables is also normal.",
+              "correct": 0
+            },
+            {
+              "question": "Which theorem supports that the sum of independent normal variables is normally distributed?",
+              "options": [
+                "Central Limit Theorem",
+                "Law of Large Numbers",
+                "Theorem 2",
+                "Theorem 3"
+              ],
+              "describe": "Theorem 2 in the module explicitly states the sum of independent normals is normal.",
+              "correct": 2
+            },
+            {
+              "question": "In the linear combination Y = Σ aᵢ Xᵢ, if all aᵢ = 1, then Y represents:",
+              "options": [
+                "The average of the Xᵢ",
+                "The sum of the Xᵢ",
+                "The product of the Xᵢ",
+                "The difference of the Xᵢ"
+              ],
+              "describe": "If all weights are 1, Y is simply the sum of the Xᵢ.",
+              "correct": 1
+            },
+            {
+              "question": "If X ~ N(μ₁, σ₁²) and Y ~ N(μ₂, σ₂²) are independent, then E(X+Y) equals:",
+              "options": [
+                "μ₁μ₂",
+                "μ₁ + μ₂",
+                "μ₁ − μ₂",
+                "σ₁ + σ₂"
+              ],
+              "describe": "The expected value of the sum is the sum of the expected values.",
+              "correct": 1
+            },
+            {
+              "question": "The linear combination property implies that any linear function of independent normal variables is:",
+              "options": [
+                "Normal",
+                "Exponential",
+                "Uniform",
+                "Binomial"
+              ],
+              "describe": "Any linear combination of independent normal variables results in a normally distributed variable.",
+              "correct": 0
+            },
+            {
+              "question": "The moment generating function of a normal variable is of the form:",
+              "options": [
+                "e^(μt + (σ²t²)/2)",
+                "e^(t²)",
+                "e^(μt)",
+                "e^(σt)"
+              ],
+              "describe": "The MGF of a normal variable is e^(μt + (σ²t²)/2).",
+              "correct": 0
+            },
+            {
+              "question": "If X₁, X₂, ..., Xₙ are independent normals, then Y = X₁ + X₂ + ... + Xₙ is:",
+              "options": [
+                "Normally distributed",
+                "Uniformly distributed",
+                "Exponential",
+                "Binomial"
+              ],
+              "describe": "The sum of independent normal variables is normally distributed.",
+              "correct": 0
+            },
+            {
+              "question": "The variance of a sum of independent normal variables is computed by:",
+              "options": [
+                "Summing the variances",
+                "Multiplying the variances",
+                "Taking the square root of the sum of variances",
+                "Averaging the variances"
+              ],
+              "describe": "For independent variables, the variances add.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is necessary for the additive property of normals to hold?",
+              "options": [
+                "Independence of variables",
+                "Equal means",
+                "Equal variances",
+                "Nonlinearity of combination"
+              ],
+              "describe": "Independence is key to ensuring that variances add and the sum remains normally distributed.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Standard Normal Distribution and Standardization",
+          "qa": [
+            {
+              "question": "What is the definition of a standard normal variable?",
+              "options": [
+                "A normal variable with any mean and variance",
+                "A normal variable with mean 0 and variance 1",
+                "A uniform variable",
+                "A variable with exponential distribution"
+              ],
+              "describe": "A standard normal variable is defined as having a mean of 0 and a variance of 1.",
+              "correct": 1
+            },
+            {
+              "question": "The transformation Z = (X - μ)/σ is used to:",
+              "options": [
+                "Normalize data",
+                "Standardize a normal variable",
+                "Change the distribution to uniform",
+                "Scale the data arbitrarily"
+              ],
+              "describe": "This transformation standardizes a normal variable, converting it to a standard normal form.",
+              "correct": 1
+            },
+            {
+              "question": "The probability density function of the standard normal distribution is:",
+              "options": [
+                "1/(σ√(2π)) e^(–z²/(2σ²))",
+                "1/√(2π) e^(–z²/2)",
+                "θe^(–θz)",
+                "1/(b-a)"
+              ],
+              "describe": "For a standard normal variable Z, the PDF is 1/√(2π) e^(–z²/2).",
+              "correct": 1
+            },
+            {
+              "question": "A standard normal variable Z has a mean of:",
+              "options": [
+                "0",
+                "1",
+                "μ",
+                "σ"
+              ],
+              "describe": "By definition, the mean of the standard normal distribution is 0.",
+              "correct": 0
+            },
+            {
+              "question": "A standard normal variable Z has a variance of:",
+              "options": [
+                "1",
+                "0",
+                "σ²",
+                "μ²"
+              ],
+              "describe": "The variance of the standard normal distribution is 1.",
+              "correct": 0
+            },
+            {
+              "question": "Standardizing a normal variable helps in using:",
+              "options": [
+                "The rectangular distribution table",
+                "The standard normal table",
+                "The exponential distribution table",
+                "The Poisson table"
+              ],
+              "describe": "Standardization converts a normal variable to a form where the standard normal table can be used.",
+              "correct": 1
+            },
+            {
+              "question": "After standardization, the variable Z is distributed as:",
+              "options": [
+                "N(0,1)",
+                "N(μ,σ²)",
+                "Uniform(0,1)",
+                "Exponential(1)"
+              ],
+              "describe": "Standardization results in a standard normal distribution, N(0,1).",
+              "correct": 0
+            },
+            {
+              "question": "The process of converting X to Z = (X-μ)/σ is called:",
+              "options": [
+                "Normalization",
+                "Standardization",
+                "Transformation",
+                "Scaling"
+              ],
+              "describe": "This specific conversion is known as standardization.",
+              "correct": 1
+            },
+            {
+              "question": "The standard normal table provides the area under the curve for:",
+              "options": [
+                "Negative z values only",
+                "Positive z values only",
+                "Both positive and negative z values",
+                "Only z = 0"
+              ],
+              "describe": "According to the module, the standard normal table typically gives the probability between 0 and any positive z value.",
+              "correct": 1
+            },
+            {
+              "question": "What is the value of the standard normal density at z = 0?",
+              "options": [
+                "0",
+                "1/√(2π)",
+                "1",
+                "e^(–1/2)"
+              ],
+              "describe": "At z = 0, the standard normal PDF is 1/√(2π).",
+              "correct": 1
+            },
+            {
+              "question": "To find probabilities for a normal variable, why do we standardize?",
+              "options": [
+                "To simplify calculations using a common table",
+                "To change the mean",
+                "To alter the variance",
+                "To avoid integration"
+              ],
+              "describe": "Standardization simplifies the process by allowing the use of the standard normal table.",
+              "correct": 0
+            },
+            {
+              "question": "Standardization of a normal variable does not change:",
+              "options": [
+                "Its shape",
+                "Its mean",
+                "Its variance",
+                "Its mode"
+              ],
+              "describe": "Although the parameters change, the overall bell shape of the normal distribution is preserved.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is a step in standardizing a normal variable?",
+              "options": [
+                "Subtract the mean",
+                "Divide by the variance",
+                "Multiply by σ",
+                "Add the mean"
+              ],
+              "describe": "The first step is subtracting the mean from the variable.",
+              "correct": 0
+            },
+            {
+              "question": "The formula Z = (X - μ)/σ transforms any normal variable into:",
+              "options": [
+                "A uniform variable",
+                "A standard normal variable",
+                "An exponential variable",
+                "A discrete variable"
+              ],
+              "describe": "This transformation converts X into a standard normal variable.",
+              "correct": 1
+            },
+            {
+              "question": "The standard normal distribution is also known as:",
+              "options": [
+                "The bell curve",
+                "The uniform distribution",
+                "The exponential distribution",
+                "The rectangular distribution"
+              ],
+              "describe": "The standard normal distribution is commonly referred to as the bell curve due to its shape.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Area Under the Normal Probability Curve",
+          "qa": [
+            {
+              "question": "To find the probability that a normal variable lies between two values, one must:",
+              "options": [
+                "Integrate the PDF",
+                "Use the standard normal table",
+                "Compute the median",
+                "Multiply the probabilities"
+              ],
+              "describe": "Calculating the area under the curve between two points involves using the standard normal table after standardizing.",
+              "correct": 1
+            },
+            {
+              "question": "When converting a normal variable to a standard normal variable, which substitution is used?",
+              "options": [
+                "Z = (X-μ)/σ",
+                "Z = X/σ",
+                "Z = (X-σ)/μ",
+                "Z = (X+μ)/σ"
+              ],
+              "describe": "The correct substitution for standardization is Z = (X-μ)/σ.",
+              "correct": 0
+            },
+            {
+              "question": "The standard normal table provides the area under the curve for:",
+              "options": [
+                "From 0 to z",
+                "From −∞ to z",
+                "From z to ∞",
+                "From 0 to ∞"
+              ],
+              "describe": "According to the module, the table gives the probability of the variable lying between 0 and a positive value z.",
+              "correct": 0
+            },
+            {
+              "question": "The area under the standard normal curve from −∞ to ∞ is:",
+              "options": [
+                "0",
+                "0.5",
+                "1",
+                "2"
+              ],
+              "describe": "The total area under the standard normal curve represents the total probability, which is 1.",
+              "correct": 2
+            },
+            {
+              "question": "When using the standard normal table, the value found corresponds to the probability between 0 and:",
+              "options": [
+                "z",
+                "μ",
+                "σ",
+                "∞"
+              ],
+              "describe": "For positive z, the table provides the area from 0 to z.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following steps is NOT involved in finding the area under the normal curve?",
+              "options": [
+                "Standardizing the variable",
+                "Consulting the standard normal table",
+                "Integrating the standard normal PDF manually",
+                "Using the cumulative distribution function"
+              ],
+              "describe": "Typically, one uses the table rather than manually integrating the standard normal PDF.",
+              "correct": 2
+            },
+            {
+              "question": "To compute P(a ≤ X ≤ b) for a normal variable X, one should:",
+              "options": [
+                "Use the CDF of X",
+                "Standardize both a and b",
+                "Subtract the probabilities corresponding to a and b",
+                "All of the above"
+              ],
+              "describe": "All these steps are involved in determining the probability over an interval.",
+              "correct": 3
+            },
+            {
+              "question": "According to the module notes, the standard normal table typically gives the probability for the variable lying between 0 and any positive value of Z. This means the table provides the area from:",
+              "options": [
+                "0 to z",
+                "−∞ to z",
+                "z to ∞",
+                "−z to z"
+              ],
+              "describe": "The module states that the table gives the probability between 0 and z for positive z values.",
+              "correct": 0
+            },
+            {
+              "question": "What is the significance of converting values to the standard normal variable when calculating areas under the curve?",
+              "options": [
+                "It simplifies the calculation",
+                "It changes the distribution",
+                "It eliminates the mean",
+                "It eliminates the variance"
+              ],
+              "describe": "Standardization simplifies the process by allowing the use of universal standard normal tables.",
+              "correct": 0
+            },
+            {
+              "question": "The total area under the standard normal curve corresponds to the probability of:",
+              "options": [
+                "0",
+                "0.5",
+                "1",
+                "∞"
+              ],
+              "describe": "Since the total probability is 1, the entire area under the curve equals 1.",
+              "correct": 2
+            },
+            {
+              "question": "If you want to find the probability that X is less than a certain value in a normal distribution, you would:",
+              "options": [
+                "Subtract the area from 1",
+                "Directly read the area from the standard normal table after standardizing",
+                "Multiply by the density",
+                "Use the mode"
+              ],
+              "describe": "After standardizing, the cumulative probability can be directly obtained from the standard normal table.",
+              "correct": 1
+            },
+            {
+              "question": "When standardizing a value from a normal distribution, the resulting z‐score represents:",
+              "options": [
+                "The number of standard deviations from the mean",
+                "The probability",
+                "The mean of the distribution",
+                "The variance of the distribution"
+              ],
+              "describe": "The z‐score indicates how many standard deviations an observation is from the mean.",
+              "correct": 0
+            },
+            {
+              "question": "The process of finding the area under the normal curve is essential for:",
+              "options": [
+                "Estimating probabilities",
+                "Determining the median",
+                "Calculating the mode",
+                "Finding the maximum value"
+              ],
+              "describe": "Calculating areas under the curve is key to determining probabilities for normally distributed variables.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is a common tool for finding areas under the standard normal curve?",
+              "options": [
+                "T-distribution table",
+                "Chi-square table",
+                "Standard normal table",
+                "F-distribution table"
+              ],
+              "describe": "The standard normal table is specifically designed to provide areas under the standard normal curve.",
+              "correct": 2
+            },
+            {
+              "question": "The probability that a standard normal variable falls between 0 and 1 is approximately:",
+              "options": [
+                "0.3413",
+                "0.6826",
+                "0.1587",
+                "0.5"
+              ],
+              "describe": "Approximately 34.13% of the area under the standard normal curve lies between 0 and 1.",
+              "correct": 0
+            }
+          ]
+        }
+      ]
+      
+      
+}
