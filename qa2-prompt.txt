@@ -9,7 +9,7 @@
         "option3",
         "option4"
       ],
-      "describe":"answer explanation"
+      "describe":"answer explanation",
       "correct": 0
 },
 {
@@ -20,13 +20,13 @@
         "option3",
         "option4"
       ],
-      "describe":"answer explanation"
+      "describe":"answer explanation",
       "correct": 0
 }
     ]
 }
 
 
-create 10-20 questions for each section  in above format in a json array for the notes below enough to help memorize the entire module, take answer explanation as said in modu
+create 15-20 questions for each section  in above format in a json array for the notes below enough to help memorize the entire module, take answer explanation as said in modu
 
 

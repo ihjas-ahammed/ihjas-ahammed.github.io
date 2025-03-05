@@ -13,7 +13,7 @@
                         "obj": 1
                     },
                     "qa2":{
-                        "path":"cs2/qa2.json",
+                        "path":"cs2/qa2.1.json",
                         "obj":1
                     }
                 },
@@ -25,6 +25,10 @@
                         "name": "obj",
                         "path": "cs2/qa.json",
                         "obj": 2
+                    },
+                    "qa2":{
+                        "path":"cs2/qa2.1.json",
+                        "obj":2
                     }
                 },
                 {
@@ -35,6 +39,10 @@
                         "name": "obj",
                         "path": "cs2/qa.json",
                         "obj": 3
+                    },
+                    "qa2":{
+                        "path":"cs2/qa2.1.json",
+                        "obj":3
                     }
                 },
                 {
