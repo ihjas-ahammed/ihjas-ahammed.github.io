@@ -11,6 +11,10 @@
                         "name": "obj",
                         "path": "cs2/qa.json",
                         "obj": 1
+                    },
+                    "qa2":{
+                        "path":"cs2/qa2.json",
+                        "obj":1
                     }
                 },
                 {
@@ -76,7 +80,7 @@
             "title":"Electronics",
             "modules":[
                 {
-                    "text":"Semiconductors Complete",
+                    "text":"Semiconductors",
                     "path":"/electronics/mod1.md",
                     "webview":false,
                     "qa":{
@@ -90,13 +94,7 @@
                     }
                 },
                 {
-                    "text":"Semiconductors Summary",
-                    "path":"/electronics/mod1.sum.md",
-                    "webview":false,
-                    "qa":{}
-                },
-                {
-                    "text":"Rectifiers Complete",
+                    "text":"Rectifiers",
                     "path":"/electronics/mod2.md",
                     "webview":false,
                     "qa":{
@@ -108,12 +106,6 @@
                         "path":"electronics/qa4.2.json",
                         "obj":2
                     }
-                },
-                {
-                    "text":"Rectifiers Summary",
-                    "path":"/electronics/mod2.sum.md",
-                    "webview":false,
-                    "qa":{}
                 }
             ]
         }
