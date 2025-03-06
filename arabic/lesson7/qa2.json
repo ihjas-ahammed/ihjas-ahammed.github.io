@@ -1,0 +1,544 @@
+{
+    "1":[
+        {
+            "name": "أسئلة حول الصداقة والتسامح",
+            "qa": [
+                {
+                    "question": "ما هو المفرد لكلمة \"أسرار\"؟",
+                    "options": ["سر", "سرير", "سار", "أسر"],
+                    "describe": "secret",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"رسل\"؟",
+                    "options": ["رسول", "رسالة", "مرسل", "رسلان"],
+                    "describe": "messenger",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"أنبياء\"؟",
+                    "options": ["نبي", "نبأ", "منبأ", "نبوة"],
+                    "describe": "prophet",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"مجتمعات\"؟",
+                    "options": ["مجتمع", "اجتماع", "مجتمعة", "مجتم"],
+                    "describe": "society",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"أشخاص\"؟",
+                    "options": ["شخص", "شخيص", "مشخاص", "شخوص"],
+                    "describe": "person",
+                    "correct": 0
+                },
+                {
+                    "question": "حسب علي، من هو الصديق؟",
+                    "options": ["الشخص الذي يعرف جميع أسرارك", "الشخص الذي يحسدك", "الشخص الذي يبعدك عن الله", "الشخص الذي لا يخبرك بمشاعره"],
+                    "describe": "the person who knows all your secrets",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي إحدى صفات الصديق الصالح حسب علي؟",
+                    "options": ["يحسدك", "يخاف عليك", "يبعدك عن الله", "يتمنى لك الشر"],
+                    "describe": "he fears for you",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا قال النبي عليه الصلاة والسلام عن اختيار الصديق؟",
+                    "options": ["المرء على دين خليله", "الصديق وقت الضيق", "لا تصاحب إلا مؤمناً", "الصداقة أساس المجتمع"],
+                    "describe": "A person is upon the religion of his close friend",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو التسامح حسب الأم؟",
+                    "options": ["رد الإساءة بالإساءة", "العفو عند المقدرة", "إيقاع الأذى بالآخرين", "عدم احترام آراء الآخرين"],
+                    "describe": "forgiveness when able",
+                    "correct": 1
+                },
+                {
+                    "question": "ما هي إحدى فوائد التسامح حسب الأم؟",
+                    "options": ["زيادة الخلافات", "تحقيق الوحدة والتماسك", "الابتعاد عن الأخلاق الحميدة", "عدم احترام الآخرين"],
+                    "describe": "achieving unity and cohesion",
+                    "correct": 1
+                },
+                {
+                    "question": "ما هو سبب عدم وجود التسامح في الوقت الحالي حسب الأم؟",
+                    "options": ["الالتزام بالأخلاق الحميدة", "عدم الالتزام بالأخلاق الحميدة", "الاحترام المتبادل", "التقيد بالنهج النبوي"],
+                    "describe": "not adhering to good morals",
+                    "correct": 1
+                },
+                {
+                    "question": "ما معنى كلمة \"الألفة\" في النص؟",
+                    "options": ["الصداقة", "المعرفة", "الانسجام والتقارب", "الخلاف"],
+                    "describe": "harmony and closeness",
+                    "correct": 2
+                },
+                {
+                    "question": "ما معنى كلمة \"التماسك\" في النص؟",
+                    "options": ["الانقسام", "الوحدة والترابط", "الضعف", "الاختلاف"],
+                    "describe": "unity and cohesion",
+                    "correct": 1
+                },
+                {
+                    "question": "ما معنى كلمة \"الإساءة\" في النص؟",
+                    "options": ["الخير", "الأذى", "الاحترام", "التسامح"],
+                    "describe": "harm",
+                    "correct": 1
+                },
+                {
+                    "question": "من سأل عن التسامح؟",
+                    "options": ["علي", "المعلم", "منى", "الأم"],
+                    "describe": "Mona",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Fill in and answer",
+            "qa": [
+                {
+                    "question": "الصديق هو الشخص الذي يعرف .....................",
+                    "options": ["أسرارك", "اسمك", "عمرك", "هواياتك"],
+                    "describe": "your secrets",
+                    "correct": 0
+                },
+                {
+                    "question": "العلاقة بين الأصدقاء قائمة على .....................",
+                    "options": ["الود والألفة", "المصلحة", "المنافسة", "الخلاف"],
+                    "describe": "love and affection",
+                    "correct": 0
+                },
+                {
+                    "question": "..................... هو يدفعك لعمل الخير.",
+                    "options": ["الصديق الصالح", "العدو", "الجار", "الأخ"],
+                    "describe": "the good friend",
+                    "correct": 0
+                },
+                {
+                    "question": "المرء على دين .....................",
+                    "options": ["خليله", "أبيه", "أمه", "معلمه"],
+                    "describe": "his friend",
+                    "correct": 0
+                },
+                {
+                    "question": "..................... هو العفو عند المقدرة.",
+                    "options": ["التسامح", "الكرم", "الشجاعة", "الصبر"],
+                    "describe": "tolerance",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا سأل المعلم علي في البداية؟",
+                    "options": ["ما الصداقة؟", "من هو صديقك المفضل؟", "ما هو التسامح؟", "كيف تختار صديقاً؟"],
+                    "describe": "What is friendship?",
+                    "correct": 0
+                },
+                {
+                    "question": "وفقاً لعلي، الصديق الصالح هو من:",
+                    "options": ["يعرف جميع أسرارك", "يدفعك لعمل الخير", "يكون دائماً معك", "يشاركك اهتماماتك"],
+                    "describe": "pushes you to do good deeds",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا قال النبي عن الأصدقاء؟",
+                    "options": ["المرء على دين خليله", "يجب اختيار الأصدقاء بناءً على الثروة", "يجب أن يكون الأصدقاء من نفس القبيلة", "الأصدقاء ليسوا مهمين"],
+                    "describe": "A person is on the religion of his friend",
+                    "correct": 0
+                },
+                {
+                    "question": "وفقاً للأم، التسامح هو:",
+                    "options": ["العفو عند المقدرة", "أن تكون صارماً مع الآخرين", "تجاهل أخطاء الآخرين", "تجنب الصراعات"],
+                    "describe": "forgiving when able",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي إحدى فوائد التسامح التي ذكرتها الأم؟",
+                    "options": ["يساعد على تحقيق الوحدة والتماسك في المجتمعات", "يجعل الناس أثرياء", "يزيد المنافسة", "يقلل الحاجة إلى القوانين"],
+                    "describe": "It helps in achieving unity and cohesion in societies",
+                    "correct": 0
+                },
+                {
+                    "question": "وفقاً للأم، ما هو سبب عدم وجود التسامح في الوقت الحالي؟",
+                    "options": ["عدم الالتزام بالأخلاق الحميدة والنهج النبوي", "كثرة التكنولوجيا", "المشاكل الاقتصادية", "الصراعات السياسية"],
+                    "describe": "Lack of adherence to good morals and the Prophetic way",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يتضمن التسامح وفقاً للأم؟",
+                    "options": ["احترام ثقافة وعقيدة وقيم وآراء الآخرين", "فرض معتقداتك على الآخرين", "تجنب التفاعل مع الأشخاص المختلفين", "تحمل فقط من يتفق معك"],
+                    "describe": "Respecting others' cultures, beliefs, values, and opinions",
+                    "correct": 0
+                },
+                {
+                    "question": "من روج لمفهوم التسامح؟",
+                    "options": ["كافة الرسل والأنبياء", "فقط النبي محمد", "الفلاسفة المعاصرون", "القادة السياسيون"],
+                    "describe": "All messengers and prophets",
+                    "correct": 0
+                },
+                {
+                    "question": "على ماذا تقوم العلاقة بين الأصدقاء وفقاً لعلي؟",
+                    "options": ["الود والألفة", "المصالح المتبادلة", "المنافسة", "الهوايات المشتركة"],
+                    "describe": "Love and affection",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يجب أن ينظر الإنسان عند اختيار صديق وفقاً لقول النبي؟",
+                    "options": ["دين وخلق الصديق", "مكانة الصديق الاجتماعية", "مظهر الصديق", "ثروة الصديق"],
+                    "describe": "The friend's religion and character",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Friendship and Tolerance",
+            "qa": [
+                {
+                    "question": "ما صفات الصديق كما يبيّن الكاتب؟",
+                    "options": [
+                        "الشخص الذي يعرف جميع أسرارك فقط",
+                        "الشخص الذي يتمنى لك كل الخير ويخبرك بكل ما يشعر به",
+                        "الشخص الذي العلاقة معه قائمة على الود والألفة",
+                        "الشخص الذي يجمع كل الصفات السابقة مع معرفة أسرارك"
+                    ],
+                    "describe": "The friend is someone who knows all your secrets, wishes you all the best, tells you everything they feel, and the relationship is based on affection and familiarity.",
+                    "correct": 3
+                },
+                {
+                    "question": "من الصديق الصالح؟",
+                    "options": [
+                        "من يدفعك لعمل الخير فقط",
+                        "من يقربك من الله ويخاف عليك",
+                        "من لا يحسدك",
+                        "من يجمع كل هذه الصفات"
+                    ],
+                    "describe": "A good friend is one who encourages you to do good deeds, draws you closer to God, fears for you, and does not envy you.",
+                    "correct": 3
+                },
+                {
+                    "question": "ماذا قال النبيّ عليه الصلاة والسلام عن الصديق؟",
+                    "options": [
+                        "\"المرء على دين خليله، فلينظر أحدكم من يخالل\"",
+                        "\"الصديق وقت الضيق\"",
+                        "\"الصداقة أساس المجتمع\"",
+                        "\"التسامح من صفات المؤمن\""
+                    ],
+                    "describe": "The Prophet said: 'A person is upon the religion of his friend, so let one of you look at whom he befriends.'",
+                    "correct": 0
+                },
+                {
+                    "question": "ما المراد بالتسامح؟",
+                    "options": [
+                        "العفو عند المقدرة فقط",
+                        "عدم رد الإساءة بالإساءة",
+                        "مفهوم أخلاقي دعا إليه الأنبياء",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance is forgiving when able, not returning harm for harm, and a moral concept advocated by all messengers and prophets.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما فائدة التسامح؟",
+                    "options": [
+                        "تحقيق الوحدة والتماسك بين المجتمعات",
+                        "القضاء على الخلافات فقط",
+                        "احترام ثقافة الآخرين فقط",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance helps achieve unity and cohesion in societies, eliminates disputes, and means respecting others' cultures, beliefs, values, and opinions.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما سبب عدم وجود التسامح في المجتمع؟",
+                    "options": [
+                        "عدم الالتزام بالأخلاق الحميدة",
+                        "عدم اتباع النهج النبوي",
+                        "عدم الالتزام بالأخلاق الحميدة والنهج النبوي",
+                        "الاختلافات بين الناس"
+                    ],
+                    "describe": "The main reason is the lack of commitment to good morals and the prophetic approach.",
+                    "correct": 2
+                },
+                {
+                    "question": "من يسأل عن الصداقة في الحوار؟",
+                    "options": [
+                        "علي",
+                        "المعلم",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "The teacher is the one asking about friendship in the dialogue.",
+                    "correct": 1
+                },
+                {
+                    "question": "من يسأل عن التسامح في الحوار؟",
+                    "options": [
+                        "علي",
+                        "المعلم",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "Mona is the one asking about tolerance in the dialogue.",
+                    "correct": 2
+                },
+                {
+                    "question": "لماذا يجب اختيار الصديق بعناية حسب قول النبي؟",
+                    "options": [
+                        "لأنه يؤثر على دينك",
+                        "لأنه يساعدك في الحياة",
+                        "لأنه يعلمك أشياء جديدة",
+                        "لأنه يكون معك وقت الشدة"
+                    ],
+                    "describe": "Because a friend influences your religion, as per the Prophet's saying.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما الذي يشمل التسامح حسب الأم؟",
+                    "options": [
+                        "العفو عند المقدرة فقط",
+                        "احترام آراء الآخرين",
+                        "التخلي عن الأذى والعفو و احترام الآخرين",
+                        "مساعدة الآخرين"
+                    ],
+                    "describe": "Tolerance includes forgiving when able, respecting others' opinions, and abandoning the desire to harm them.",
+                    "correct": 2
+                },
+                {
+                    "question": "كيف يساعد التسامح المجتمع؟",
+                    "options": [
+                        "بتقليل الخلافات",
+                        "بتعزيز الاحترام المتبادل",
+                        "بتشجيع العفو",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance helps society by reducing disputes, promoting mutual respect, and encouraging forgiveness.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما المفهوم الأخلاقي المرتبط بالتسامح؟",
+                    "options": [
+                        "العدالة",
+                        "الصدق",
+                        "العفو",
+                        "الشجاعة"
+                    ],
+                    "describe": "The moral concept related to tolerance is forgiveness.",
+                    "correct": 2
+                },
+                {
+                    "question": "ما الذي يجعلنا بشراً حسب الأم؟",
+                    "options": [
+                        "الصداقة",
+                        "التسامح",
+                        "العلم",
+                        "القوة"
+                    ],
+                    "describe": "Tolerance is what makes us human in the end, according to the mother.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما الصفة التي لا يمتلكها الصديق الصالح؟",
+                    "options": [
+                        "الخوف عليك",
+                        "الحسد",
+                        "التشجيع على الخير",
+                        "التقرب من الله"
+                    ],
+                    "describe": "A good friend does not have envy.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما الهدف من التسامح حسب الأم؟",
+                    "options": [
+                        "تحقيق الوحدة فقط",
+                        "القضاء على الخلافات فقط",
+                        "احترام الآخرين فقط",
+                        "تحقيق الوحدة والتماسك والاحترام"
+                    ],
+                    "describe": "The purpose of tolerance is to achieve unity, cohesion, and respect for others.",
+                    "correct": 3
+                }
+            ]
+        },
+        {
+            "name": "Understanding Friendship and Tolerance",
+            "qa": [
+                {
+                    "question": "ما هو تعريف الصديق وفقاً للنص؟",
+                    "options": [
+                        "الشخص الذي يعرف جميع أسرارك.",
+                        "الشخص الذي يتمنى لك كل الخير.",
+                        "الشخص الذي يخبرك بكل ما يشعر به.",
+                        "جميع ما سبق."
+                    ],
+                    "describe": "The friend is the person who knows all your secrets, wishes you all the best, and tells you everything he feels.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هي أساس العلاقة بين الأصدقاء وفقاً للنص؟",
+                    "options": [
+                        "الود والألفة",
+                        "المصلحة المتبادلة",
+                        "المنافسة الشريفة",
+                        "التباهي والتفاخر"
+                    ],
+                    "describe": "The relationship between friends is based on affection and familiarity.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي صفات الصديق الصالح وفقاً للنص؟",
+                    "options": [
+                        "يدفعك لعمل الخير",
+                        "يقربك من الله",
+                        "يخاف عليك ولا يحسدك",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "A good friend pushes you to do good, brings you closer to God, fears for you, and does not envy you.",
+                    "correct": 3
+                },
+                {
+                    "question": "ماذا قال النبي عن اختيار الصديق؟",
+                    "options": [
+                        "\"المرء على دين خليله، فَلْيَنْظُرْ أحدكم من يخالل\"",
+                        "\"اختر الصديق قبل الطريق\"",
+                        "\"الصديق وقت الضيق\"",
+                        "\"لا تصاحب إلا مؤمناً\""
+                    ],
+                    "describe": "The Prophet said, 'A person is upon the religion of his close friend, so let one of you look at whom he befriends.'",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو تعريف التسامح وفقاً للنص؟",
+                    "options": [
+                        "العفو عند المقدرة",
+                        "عدم رد الإساءة بالإساءة",
+                        "مفهوم أخلاقي دعا إليه الرسل والأنبياء",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance is forgiving when able, not returning harm with harm, and it is a moral concept called for by messengers and prophets.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هي فوائد التسامح المذكورة في النص؟",
+                    "options": [
+                        "تحقيق الوحدة والتماسك بين المجتمعات",
+                        "القضاء على الخلافات",
+                        "احترام ثقافة وعقيدة وقيم وآراء الآخرين",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance helps achieve unity and cohesion in societies, eliminate disputes, and respect others' cultures, beliefs, values, and opinions.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هو السبب الرئيسي لعدم وجود التسامح في الوقت الحالي وفقاً للنص؟",
+                    "options": [
+                        "عدم الالتزام بالأخلاق الحميدة والنهج النبوي",
+                        "الجهل وعدم الوعي",
+                        "التعصب والتطرف",
+                        "الفقر والحرمان"
+                    ],
+                    "describe": "The main reason is the lack of adherence to good morals and the Prophetic approach.",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يتضمن التسامح وفقاً للنص؟",
+                    "options": [
+                        "احترام ثقافة الآخرين",
+                        "احترام عقيدة الآخرين",
+                        "التخلي عن رغبة إيقاع الأذى",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance includes respecting others' cultures and beliefs and abandoning the desire to harm them.",
+                    "correct": 3
+                },
+                {
+                    "question": "من يسأل عن تعريف الصداقة في النص؟",
+                    "options": [
+                        "المعلم",
+                        "علي",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "The teacher asks Ali about the definition of friendship.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو الهدف من التسامح وفقاً للنص؟",
+                    "options": [
+                        "تحقيق السلام العالمي",
+                        "جعلنا بشراً في النهاية",
+                        "القضاء على جميع الاختلافات",
+                        "زيادة الثروة والازدهار"
+                    ],
+                    "describe": "Tolerance is what makes us human in the end.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Fit words",
+            "qa": [
+                {
+                    "question": "_____ الصداقة يا علي؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What is friendship, Ali?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ هو الصديق الصالح يا علي؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "Who is the good friend, Ali?",
+                    "correct": 4
+                },
+                {
+                    "question": "_____ قال النبي عليه أفضل الصلاة والتسليم عن اختيار الصديق؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What did the Prophet (peace be upon him) say about choosing a friend?",
+                    "correct": 1
+                },
+                {
+                    "question": "_____ يمكننا الحديث معاً عن التسامح؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "Can we talk together about tolerance?",
+                    "correct": 2
+                },
+                {
+                    "question": "_____ فائدة التسامح يا أمي؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What is the benefit of tolerance, Mom?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ سبب عدم وجود هذه الصفة الحميدة",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What is the reason for the absence of this good quality?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ يعرف الصديق؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What does the friend know?",
+                    "correct": 1
+                },
+                {
+                    "question": "_____ يدفعك الصديق الصالح؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What does the good friend push you to?",
+                    "correct": 1
+                },
+                {
+                    "question": "_____ هو التسامح؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "What is tolerance?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ يجب أن يخالل الإنسان؟",
+                    "options": ["كيف", "ماذا", "هل", "ما", "من", "متى"],
+                    "describe": "Whom should a person befriend?",
+                    "correct": 4
+                }
+            ]
+        }
+    ]
+}

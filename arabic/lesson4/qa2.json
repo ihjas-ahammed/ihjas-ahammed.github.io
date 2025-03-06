@@ -1,0 +1,141 @@
+{
+    "1":[
+        {
+            "name": "Morals: An Enduring Treasure",
+            "qa": [
+              {
+                "question": "ما هو تعريف الخُلُق وفقاً للكاتب؟",
+                "options": [
+                  "الشعور بالمسؤولية أمام الضمير عن الواجب.",
+                  "الخوف من العقاب أو القانون.",
+                  "الرغبة في الحصول على مكافأة.",
+                  "الامتثال لأوامر الآخرين."
+                ],
+                "describe": "The author defines morals as the feeling of responsibility before one's conscience regarding what one ought to do.",
+                "correct": 0
+              },
+              {
+                "question": "ما المثال الذي يقدمه الكاتب للكرم؟",
+                "options": [
+                  "البكاء عند رؤية البؤس.",
+                  "استواء صدقة السر وصدقة العلانية.",
+                  "الحكم على النفس كالآخرين.",
+                  "الصدق في الأفعال والأقوال."
+                ],
+                "describe": "The example of generosity is treating secret charity and public charity equally.",
+                "correct": 1
+              },
+              {
+                "question": "ما الذي ينفع المرء حسب الكاتب؟",
+                "options": [
+                  "خوفه من عذاب النار.",
+                  "خوفه من القانون.",
+                  "ضميره كقائد ومنار.",
+                  "رغبته في الثناء من الناس."
+                ],
+                "describe": "What benefits a person is having their conscience as their guide and beacon.",
+                "correct": 2
+              },
+              {
+                "question": "ما النصيحة التي يقدمها الكاتب لتعليم مكارم الأخلاق؟",
+                "options": [
+                  "إحياء الضمائر وتثبيت الرغبة في الفضيلة.",
+                  "تعليم القوانين والأنظمة.",
+                  "ترسيخ الخوف من العقاب.",
+                  "تشجيع السعي وراء المكافآت."
+                ],
+                "describe": "The advice is to revive consciences and instill a desire for virtue and aversion to vice.",
+                "correct": 0
+              },
+              {
+                "question": "ما هو جمع كلمة 'عين' من النص؟",
+                "options": [
+                  "عيون.",
+                  "أعين.",
+                  "عينان.",
+                  "عينات."
+                ],
+                "describe": "The plural of 'eye' in the text is 'eyes,' which is 'عيون' in Arabic.",
+                "correct": 0
+              },
+              {
+                "question": "ما هو جمع كلمة 'منظر' من النص؟",
+                "options": [
+                  "مناظير.",
+                  "مناظر.",
+                  "مشاهد.",
+                  "مناظرة."
+                ],
+                "describe": "The plural of 'scene' in the text is 'scenes,' which is 'مناظر' in Arabic.",
+                "correct": 1
+              },
+              {
+                "question": "ما هو جمع كلمة 'نتيجة' من النص؟",
+                "options": [
+                  "نتائج.",
+                  "نتيجات.",
+                  "ناتج.",
+                  "نواتج."
+                ],
+                "describe": "The plural of 'result' in the text is 'results,' which is 'نتائج' in Arabic.",
+                "correct": 0
+              },
+              {
+                "question": "ما هو جمع كلمة 'ضمير' من النص؟",
+                "options": [
+                  "ضمائر.",
+                  "أضمار.",
+                  "ضميرات.",
+                  "ضميرون."
+                ],
+                "describe": "The plural of 'conscience' in the text is 'consciences,' which is 'ضمائر' in Arabic.",
+                "correct": 0
+              },
+              {
+                "question": "ما هو جمع كلمة 'نفس' من النص؟",
+                "options": [
+                  "نفوس.",
+                  "أنفس.",
+                  "نفسات.",
+                  "أنفاس."
+                ],
+                "describe": "The plural of 'self' in the text is 'selves,' which is 'نفوس' in Arabic.",
+                "correct": 0
+              },
+              {
+                "question": "ما هو جمع كلمة 'خُلق' من النص؟",
+                "options": [
+                  "خلوق.",
+                  "أخلاق.",
+                  "خُلقان.",
+                  "خلائق."
+                ],
+                "describe": "The plural of 'moral' in the text is 'morals,' which is 'أخلاق' in Arabic.",
+                "correct": 1
+              },
+              {
+                "question": "ما هو اسم الكاتب؟",
+                "options": [
+                  "مصطفى لطفي المنفلوطي.",
+                  "أحمد شوقي.",
+                  "طه حسين.",
+                  "نجيب محفوظ."
+                ],
+                "describe": "The author's name is Mustafa Lutfi al-Manfaluti.",
+                "correct": 0
+              },
+              {
+                "question": "متى ولد الكاتب؟",
+                "options": [
+                  "١٨٧٦م.",
+                  "١٨٨٦م.",
+                  "١٨٩٦م.",
+                  "١٩٠٦م."
+                ],
+                "describe": "The author was born in 1876 AD.",
+                "correct": 0
+              }
+            ]
+          }
+    ]
+}

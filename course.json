@@ -163,19 +163,31 @@
                     "text": "Morality",
                     "path": "/arabic/lesson4/",
                     "webview": true,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"arabic/lesson4/qa2.json",
+                        "obj":1
+                    }
                 },
                 {
                     "text": "The Patient's Clinic",
                     "path": "/arabic/lesson5/",
                     "webview": true,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"arabic/lesson5/qa2.json",
+                        "obj":1
+                    }
                 },
                 {
                     "text": "Friendship",
                     "path": "/arabic/lesson7/",
                     "webview": true,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"arabic/lesson7/qa2.json",
+                        "obj":1
+                    }
                 }
             ]
         },
