@@ -143,7 +143,11 @@
                     "text": "Nature",
                     "path": "/arabic/lesson2/",
                     "webview": true,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"arabic/lesson2/qa2.json",
+                        "obj":1
+                    }
                 },
                 {
                     "text": "The Father and Son",

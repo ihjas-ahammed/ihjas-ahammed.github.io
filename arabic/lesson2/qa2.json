@@ -1,0 +1,141 @@
+{
+    "1":[
+        {
+            "name": "Comprehension Questions on 'That is Nature' by Ahmad Shawqi",
+            "qa": [
+                {
+                    "question": "ماذا يصف الشاعر؟",
+                    "options": [
+                        "جمال الطبيعة",
+                        "قوة الله",
+                        "شك الناس",
+                        "علم العلماء"
+                    ],
+                    "correct": 0,
+                    "describe": "The poet describes the beauty of nature as a testament to God's creation."
+                },
+                {
+                    "question": "ما سبب اهتزاز الأرض والسماء؟",
+                    "options": [
+                        "بسبب الزلازل",
+                        "بسبب جمال المناظر",
+                        "بسبب روائع الآيات والآثار",
+                        "بسبب إعجاب الشاعر"
+                    ],
+                    "correct": 2,
+                    "describe": "The earth and sky tremble because of the magnificent signs and relics of God's creation."
+                },
+                {
+                    "question": "بمَ يُشبّه الشاعر جمال الطبيعة؟",
+                    "options": [
+                        "بالقرآن",
+                        "بالمرآة",
+                        "بالنساء المزينات",
+                        "بالوجه الضاحك"
+                    ],
+                    "correct": 0,
+                    "describe": "The poet compares the beauty of nature to the Quran, as both reveal the majesty of God."
+                },
+                {
+                    "question": "علامَ يدلّ الظواهر الطبيعية؟",
+                    "options": [
+                        "على مهارة الشاعر",
+                        "على جمال العالم",
+                        "على وجود الله",
+                        "على علم العلماء"
+                    ],
+                    "correct": 2,
+                    "describe": "The natural phenomena indicate the existence and majesty of God."
+                },
+                {
+                    "question": "ماذا يقول الشاعر لمن له شك وإنكار؟",
+                    "options": [
+                        "يجب أن يقرأ القرآن",
+                        "يجب أن ينظر إلى الطبيعة",
+                        "يجب أن يستشير العلماء",
+                        "يجب أن يتجاهل شكوكه"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet suggests that those who doubt should look at God's creation, as it will remove their doubts."
+                },
+                {
+                    "question": "كيف يصف الشاعر الخمائل؟",
+                    "options": [
+                        "كأماكن منعزلة",
+                        "كأنها مزينة بالحلي مثل النساء",
+                        "كمصادر للماء",
+                        "كمساكن للحيوانات"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet describes the groves as containing elements that are like women adorned with anklets and bracelets, symbolizing their beauty."
+                },
+                {
+                    "question": "بمَ يُشبّه الشاعر الغدير والنبات؟",
+                    "options": [
+                        "بلوحة فنية",
+                        "بمرآة مزينة بإطار",
+                        "بجوهرة",
+                        "بكتاب"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet compares the stream and the plants to a mirror adorned with a frame, likely due to the reflection of the surroundings in the water."
+                },
+                {
+                    "question": "ما المراد بـ'ضحوك سن'؟",
+                    "options": [
+                        "الأزهار الساطعة",
+                        "الشمس المشرقة",
+                        "الماء المتلألئ",
+                        "الأوراق الخضراء"
+                    ],
+                    "correct": 0,
+                    "describe": "'ضحوك سن' likely refers to the bright, smiling flowers that fill the world with their beauty and light."
+                },
+                {
+                    "question": "كيف يبدو الغدير؟",
+                    "options": [
+                        "كأنه نهر جار",
+                        "كأنه بئر عميق",
+                        "كأنه مرآة بإطار",
+                        "كأنه بركة مظلمة"
+                    ],
+                    "correct": 2,
+                    "describe": "The stream appears like a mirror adorned with a frame because of the reflection of the surrounding plants."
+                },
+                {
+                    "question": "مَنْ يُخاطِبُ الشَّاعِرُ في السَّطْرِ الأَوَّلِ؟",
+                    "options": [
+                        "صديق",
+                        "سائح أو مرشد",
+                        "الله",
+                        "القارئ"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet is addressing a traveler or guide, asking him to stop so he can show him the beauty of nature."
+                },
+                {
+                    "question": "مَاذَا يَقُولُ الشَّاعِرُ عَنِ الدَّلِيلِ الَّذِي تُقَدِّمُهُ الطَّبِيعَةُ؟",
+                    "options": [
+                        "إنه غير كاف",
+                        "إنه أكثر إقناعاً من أدلة العلماء",
+                        "إنه مساوٍ لأدلة العلماء",
+                        "إنه يتعارض مع أدلة العلماء"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet says that nature's evidence of God's existence is so clear that it leaves no need for the evidence provided by jurists and scholars."
+                },
+                {
+                    "question": "مَا هِيَ الرِّسَالَةُ العَامَّةُ لِلْقَصِيدَةِ؟",
+                    "options": [
+                        "الطبيعة جميلة ويجب الاستمتاع بها",
+                        "الله هو خالق الطبيعة، وجمالها دليل على وجوده",
+                        "العلماء غير ضروريين لأن الطبيعة تقدم كل الأدلة",
+                        "الشك والإنكار خطايا يمكن محوها بالنظر إلى الطبيعة"
+                    ],
+                    "correct": 1,
+                    "describe": "The overall message is that the beauty of nature serves as clear evidence of God's existence and majesty."
+                }
+            ]
+        }
+    ]
+}

@@ -32,15 +32,25 @@ as for section name give english of the title of problems like what to do in the
 
 problem
 
-here we have a problme to create question, so make a statment and write four different questions as options and we ought to chose the right question
+د) الفهم والاستيعاب:
 
+١. ماذا يصف الشاعر؟
 
-ه) هات أسئلة للإجابات الآتية :
+٢. ما سبب اهتزاز الأرض والسماء؟
 
-١. هي في العاشرة من عمرها
-٢. رجعت فاطمة من الكلية مساء
-٣. سليم يعمل في دولة عربية
-٤. يبذل الطلاب جهودهم في الدراسة :
+٣. بمَ يُشبّه الشاعر جمال الطبيعة؟
+
+٤. علامَ يدلّ الظواهر الطبيعية؟
+
+٥. ماذا يقول الشاعر لمن له شك وإنكار؟
+
+٦. كيف يصف الشاعر الخمائل؟
+
+٧. بمَ يُشبّه الشاعر الينابيع والأنهار؟
+
+٨. ما المراد بـ"ضحوك من"؟
+
+٩. كيف يبدو الغدير؟
 
 
 content
