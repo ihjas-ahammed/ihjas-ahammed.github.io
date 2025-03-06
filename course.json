@@ -130,12 +130,12 @@
             "title": "Arabic",
             "modules": [
                 {
-                    "text": "Arabic Litrature",
+                    "text": "To My Daughter",
                     "path": "/arabic/lesson1/",
                     "webview": true,
                     "qa": {},
                     "qa2":{
-                        "path":"arabic/lesson1/qa2.2.json",
+                        "path":"arabic/lesson1/qa2.3.json",
                         "obj":1
                     }
                 },
