@@ -1,0 +1,2753 @@
+{
+    "1": [
+        {
+            "name": "Fill the blanks",
+            "qa": [
+                {
+                    "question": "إني لأعرف أن في قلبك _________ ولينا",
+                    "options": [
+                        "سليمة",
+                        "قاسية",
+                        "ضعيفة",
+                        "كبيرة"
+                    ],
+                    "describe": "I know that in your heart there is purity and gentleness.",
+                    "correct": 0
+                },
+                {
+                    "question": "_________ الأمر كما أقول؟",
+                    "options": [
+                        "أليس",
+                        "أهو",
+                        "ألا",
+                        "أما"
+                    ],
+                    "describe": "Is not the matter as I say?",
+                    "correct": 0
+                },
+                {
+                    "question": "هذه السن يعجب فيها الأطفال بـ _________",
+                    "options": [
+                        "آبائهم",
+                        "أصدقائهم",
+                        "معلميهم",
+                        "ألعابهم"
+                    ],
+                    "describe": "This is the age in which children admire their fathers.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتكلف الآباء من _________ ما يُطيق ومالا يُطيق",
+                    "options": [
+                        "المشقة",
+                        "الجهد",
+                        "العمل",
+                        "المال"
+                    ],
+                    "describe": "Fathers endure hardship, what they can bear and what they cannot.",
+                    "correct": 0
+                },
+                {
+                    "question": "إنك يا ابنتي لـ _________ سليمة القلب طيبة النفس",
+                    "options": [
+                        "ساذجة",
+                        "ذكية",
+                        "شجاعة",
+                        "جميلة"
+                    ],
+                    "describe": "You, my daughter, are naive, pure of heart, and kind of soul.",
+                    "correct": 0
+                },
+                {
+                    "question": "أنتِ في _________ من عُمرك",
+                    "options": [
+                        "التاسعة",
+                        "الثامنة",
+                        "العاشرة",
+                        "السابعة"
+                    ],
+                    "describe": "You are in the ninth year of your age.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتخذونهم _________ في الحياة",
+                    "options": [
+                        "مثلا عليا",
+                        "أصدقاء",
+                        "معلمين",
+                        "قادة"
+                    ],
+                    "describe": "They take them as higher examples in life.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتأثرونهم في _________ والعمل",
+                    "options": [
+                        "القول",
+                        "السلوك",
+                        "التفكير",
+                        "اللباس"
+                    ],
+                    "describe": "They are influenced by them in speech and action.",
+                    "correct": 0
+                },
+                {
+                    "question": "يحاولون أن يكونوا _________ في كل شيء",
+                    "options": [
+                        "مثلهم",
+                        "أفضل منهم",
+                        "مختلفين عنهم",
+                        "بعيدين عنهم"
+                    ],
+                    "describe": "They try to be like them in everything.",
+                    "correct": 0
+                },
+                {
+                    "question": "يفاخرون _________ إذا تحدثوا إلى أقرانهم",
+                    "options": [
+                        "بهم",
+                        "بأنفسهم",
+                        "بألعابهم",
+                        "بملابسهم"
+                    ],
+                    "describe": "They boast about them when they talk to their peers.",
+                    "correct": 0
+                },
+                {
+                    "question": "يخيل إليهم أنهم كانوا أثناء _________ كما هم الآن",
+                    "options": [
+                        "طفولتهم",
+                        "شبابهم",
+                        "كهولتهم",
+                        "شيخوختهم"
+                    ],
+                    "describe": "It seems to them that they were during their childhood as they are now.",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ ترين أن أباكِ _________ الرجال وأكرمهم؟",
+                    "options": [
+                        "خير",
+                        "شر",
+                        "أقوى",
+                        "أغنى"
+                    ],
+                    "describe": "Do you not see that your father is the best and most honorable of men?",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ مقتنعة أنه كان يعيش _________ مما تعيشين؟",
+                    "options": [
+                        "خيرا",
+                        "أسوأ",
+                        "مثلا",
+                        "أقل"
+                    ],
+                    "describe": "Are you not convinced that he lived better than you live?",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ تحبين أن تعيشي الآن كما كان يعيش أبوكِ حين كان في _________ من عمره؟",
+                    "options": [
+                        "الثامنة",
+                        "التاسعة",
+                        "العاشرة",
+                        "السابعة"
+                    ],
+                    "describe": "Do you not love to live now as your father lived when he was in the eighth year of his age?",
+                    "correct": 0
+                },
+                {
+                    "question": "ومع ذلك فإن أباكِ يبذل من الجهد ما يملك وما _________",
+                    "options": [
+                        "لايملك",
+                        "يملك",
+                        "يستطيع",
+                        "يحب"
+                    ],
+                    "describe": "Nevertheless, your father exerts effort, what he possesses and what he does not possess.",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Rewrite in order as a sentence",
+            "qa": [
+                {
+                    "question": "القلب - سليمة - ابنتي - النفس - طيبة",
+                    "options": [
+                        "ابنتي سليمة القلب طيبة النفس",
+                        "سليمة ابنتي القلب طيبة النفس",
+                        "القلب سليمة ابنتي طيبة النفس",
+                        "طيبة النفس سليمة القلب ابنتي"
+                    ],
+                    "describe": "My daughter has a sound heart and a good soul.",
+                    "correct": 0
+                },
+                {
+                    "question": "أنت - من عمرك - التاسعة - في",
+                    "options": [
+                        "أنتِ في التاسعة من عمرك",
+                        "في التاسعة أنت من عمرك",
+                        "من عمرك أنت في التاسعة",
+                        "التاسعة من عمرك في أنت"
+                    ],
+                    "describe": "You are nine years old.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما يملك - من الجهد - يبذل - إن أباك",
+                    "options": [
+                        "إن أباكِ يبذل من الجهد ما يملك",
+                        "ما يملك إن أباك يبذل من الجهد",
+                        "يبذل إن أباك من الجهد ما يملك",
+                        "من الجهد يبذل إن أباك ما يملك"
+                    ],
+                    "describe": "Indeed, your father exerts effort to the best of his ability.",
+                    "correct": 0
+                },
+                {
+                    "question": "من الحياة - هذا الطور - اللذيذ - أنت في",
+                    "options": [
+                        "أنتِ في هذا الطور اللذيذ من الحياة",
+                        "من الحياة أنت في هذا الطور اللذيذ",
+                        "هذا الطور اللذيذ أنت في من الحياة",
+                        "اللذيذ من الحياة أنت في هذا الطور"
+                    ],
+                    "describe": "You are in this delightful stage of life.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتخذونهم - مثلا - عليا - في - الحياة",
+                    "options": [
+                        "يتخذونهم مثلا عليا في الحياة",
+                        "مثلا عليا يتخذونهم في الحياة",
+                        "في الحياة يتخذونهم مثلا عليا",
+                        "عليا في الحياة يتخذونهم مثلا"
+                    ],
+                    "describe": "They take them as highest examples in life.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتأثرونهم - في - القول - والعمل",
+                    "options": [
+                        "يتأثرونهم في القول والعمل",
+                        "في القول والعمل يتأثرونهم",
+                        "القول والعمل في يتأثرونهم",
+                        "يتأثرونهم القول في والعمل"
+                    ],
+                    "describe": "They are influenced by them in speech and action.",
+                    "correct": 0
+                },
+                {
+                    "question": "ويحاولون - أن - يكونوا - مثلهم - في - كل - شيء",
+                    "options": [
+                        "ويحاولون أن يكونوا مثلهم في كل شيء",
+                        "أن يكونوا ويحاولون مثلهم في كل شيء",
+                        "في كل شيء ويحاولون أن يكونوا مثلهم",
+                        "مثلهم في كل شيء ويحاولون أن يكونوا"
+                    ],
+                    "describe": "And they try to be like them in everything.",
+                    "correct": 0
+                },
+                {
+                    "question": "يفاخرون - بهم - إذا - تحدثوا - إلى - أقرانهم",
+                    "options": [
+                        "يفاخرون بهم إذا تحدثوا إلى أقرانهم",
+                        "إذا تحدثوا إلى أقرانهم يفاخرون بهم",
+                        "بهم يفاخرون إذا تحدثوا إلى أقرانهم",
+                        "تحدثوا إلى أقرانهم إذا يفاخرون بهم"
+                    ],
+                    "describe": "They boast about them when they speak to their peers.",
+                    "correct": 0
+                },
+                {
+                    "question": "يخيل - إليهم - أنهم - كانوا - كما - هم - الآن",
+                    "options": [
+                        "يخيل إليهم أنهم كانوا كما هم الآن",
+                        "أنهم كانوا يخيل إليهم كما هم الآن",
+                        "كما هم الآن يخيل إليهم أنهم كانوا",
+                        "الآن كما هم كانوا أنهم يخيل إليهم"
+                    ],
+                    "describe": "It seems to them that they (the parents) were as they are now.",
+                    "correct": 0
+                },
+                {
+                    "question": "الأمر - كما - أقول - أليس",
+                    "options": [
+                        "أليس الأمر كما أقول",
+                        "كما أقول أليس الأمر",
+                        "الأمر أليس كما أقول",
+                        "أقول كما الأمر أليس"
+                    ],
+                    "describe": "Is not the matter as I say?",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ - ترين - أن - أباكِ - خير - الرجال - وأكرمهم",
+                    "options": [
+                        "ألستِ ترين أن أباكِ خير الرجال وأكرمهم",
+                        "ترين ألستِ أن أباكِ خير الرجال وأكرمهم",
+                        "أن أباكِ خير الرجال وأكرمهم ألستِ ترين",
+                        "خير الرجال وأكرمهم ألستِ ترين أن أباكِ"
+                    ],
+                    "describe": "Do you not see that your father is the best and most honorable of men?",
+                    "correct": 0
+                },
+                {
+                    "question": "ولد - في - محافظة - المنيا - بمصر - عام - ١٨٨٩م",
+                    "options": [
+                        "ولد في محافظة المنيا بمصر عام ١٨٨٩م",
+                        "في محافظة المنيا ولد بمصر عام ١٨٨٩م",
+                        "عام ١٨٨٩م ولد في محافظة المنيا بمصر",
+                        "بمصر ولد في محافظة المنيا عام ١٨٨٩م"
+                    ],
+                    "describe": "He was born in the province of Minya in Egypt in the year 1889.",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Answer the questions",
+            "qa": [
+                {
+                    "question": "لمن يخاطب طه حسين؟",
+                    "options": [
+                        "إلى زوجته",
+                        "إلى ابنه",
+                        "إلى ابنته",
+                        "إلى صديقه"
+                    ],
+                    "describe": "To his daughter",
+                    "correct": 2
+                },
+                {
+                    "question": "ما صفات ابنة الكاتب؟",
+                    "options": [
+                        "ساذجة وسليمة القلب وطيبة النفس",
+                        "ذكية ومثابرة",
+                        "شجاعة وقوية",
+                        "كسولة ومهملة"
+                    ],
+                    "describe": "Naive, pure-hearted, and kind-spirited",
+                    "correct": 0
+                },
+                {
+                    "question": "فيم يتخذ الأطفال آباءهم مثلا عليا؟",
+                    "options": [
+                        "في القول والعمل",
+                        "في اللباس والمظهر",
+                        "في الهوايات والاهتمامات",
+                        "في الدراسة والعمل"
+                    ],
+                    "describe": "In speech and action",
+                    "correct": 0
+                },
+                {
+                    "question": "لماذا يبذل الآباء الجهد والمشقة في حياتهم؟",
+                    "options": [
+                        "ليجنبوا أطفالهم حياتهم الصعبة",
+                        "ليكسبوا المال والثروة",
+                        "ليحققوا أحلامهم الشخصية",
+                        "ليكونوا مشهورين ومعروفين"
+                    ],
+                    "describe": "To spare their children their difficult lives",
+                    "correct": 0
+                },
+                {
+                    "question": "كم عمر ابنة طه حسين؟",
+                    "options": [
+                        "سبع سنوات",
+                        "ثماني سنوات",
+                        "تسع سنوات",
+                        "عشر سنوات"
+                    ],
+                    "describe": "Nine years",
+                    "correct": 2
+                },
+                {
+                    "question": "كيف ينظر الأطفال إلى آبائهم في هذا العمر؟",
+                    "options": [
+                        "يعجبون بهم ويتخذونهم مثلا عليا",
+                        "يخافون منهم ويطيعونهم",
+                        "يتجاهلونهم ولا يهتمون بهم",
+                        "ينافسونهم ويحاولون التفوق عليهم"
+                    ],
+                    "describe": "They admire them and take them as role models",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يعتقد طه حسين عن طفولته؟",
+                    "options": [
+                        "كانت طفولته سعيدة ومثالية",
+                        "كانت طفولته صعبة ومليئة بالتحديات",
+                        "كانت طفولته عادية ولا تختلف عن الآخرين",
+                        "كانت طفولته مليئة بالمغامرات والإثارة"
+                    ],
+                    "describe": "His childhood was difficult and full of challenges",
+                    "correct": 1
+                },
+                {
+                    "question": "لماذا لا يريد طه حسين أن يحدث ابنته عن طفولته الآن؟",
+                    "options": [
+                        "لأنها صغيرة ولا تفهم",
+                        "لأنه يخجل من طفولته",
+                        "لأنه يريد أن يحافظ على صورته المثالية في عينيها",
+                        "لأنه ينتظر حتى تكبر وتستطيع أن تفهم وتحكم"
+                    ],
+                    "describe": "Because he is waiting until she grows up and can understand and judge",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هو الهدف من جهود طه حسين لابنته؟",
+                    "options": [
+                        "ليجعلها تعيش حياة أفضل من حياته",
+                        "ليعلّمها دروس الحياة",
+                        "ليحميها من المخاطر",
+                        "ليجعلها مشهورة وناجحة"
+                    ],
+                    "describe": "To make her live a better life than his",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو الكتاب الذي اقتبس منه هذا النص؟",
+                    "options": [
+                        "الأيام",
+                        "دعاء الكروان",
+                        "المعذبون في الأرض",
+                        "حديث الأربعاء"
+                    ],
+                    "describe": "The Days",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو اللقب الذي اشتهر به طه حسين؟",
+                    "options": [
+                        "عميد الأدب العربي",
+                        "شيخ الأزهر",
+                        "أمير الشعراء",
+                        "المفكر العربي"
+                    ],
+                    "describe": "The Dean of Arabic Literature",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو أحد مؤلفات طه حسين الأخرى؟",
+                    "options": [
+                        "دعاء الكروان",
+                        "رواية البؤساء",
+                        "ديوان المتنبي",
+                        "كتاب الأغاني"
+                    ],
+                    "describe": "The Call of the Curlew",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Choosing the Correct Question",
+            "qa": [
+                {
+                    "question": "أنتِ في التاسعة من عُمرك",
+                    "options": [
+                        "كم عمركِ؟",
+                        "كم عمر أبيكِ؟",
+                        "في أي سنة ولدتِ؟",
+                        "كم عمر أخيكِ؟"
+                    ],
+                    "describe": "You are in your ninth year",
+                    "correct": 0
+                },
+                {
+                    "question": "الأطفال يعجبون بآبائهم وأمهاتهم",
+                    "options": [
+                        "بمن يعجب الأطفال؟",
+                        "بمن يعجب الآباء؟",
+                        "ماذا يحب الأطفال؟",
+                        "من يعجب بالأطفال؟"
+                    ],
+                    "describe": "Children admire their fathers and mothers",
+                    "correct": 0
+                },
+                {
+                    "question": "الأطفال يتخذونهم مثلا عليا في الحياة",
+                    "options": [
+                        "من يتخذ الأطفال مثلا عليا؟",
+                        "ماذا يتخذ الآباء مثلا عليا؟",
+                        "لماذا يتخذ الأطفال آباءهم مثلا؟",
+                        "كيف يتخذ الأطفال آباءهم مثلا؟"
+                    ],
+                    "describe": "Children take them as role models in life",
+                    "correct": 0
+                },
+                {
+                    "question": "أبوكِ يبذل من الجهد ما يملك وما لايملك",
+                    "options": [
+                        "ماذا يفعل أبوكِ؟",
+                        "أين يعمل أبوكِ؟",
+                        "من هو أبوكِ؟",
+                        "لماذا يحبكِ أبوكِ؟"
+                    ],
+                    "describe": "Your father exerts effort to the best of his ability and beyond",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين ولد في محافظة المنيا",
+                    "options": [
+                        "أين ولد طه حسين؟",
+                        "أين درس طه حسين؟",
+                        "أين عاش طه حسين؟",
+                        "أين توفي طه حسين؟"
+                    ],
+                    "describe": "Taha Hussein was born in Minya Governorate",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين أصيب بمرض في عينيه وهو صغير",
+                    "options": [
+                        "ماذا أصاب طه حسين وهو صغير؟",
+                        "متى أصيب طه حسين بمرض في عينيه؟",
+                        "لماذا أصيب طه حسين بمرض في عينيه؟",
+                        "كيف أصيب طه حسين بمرض في عينيه؟"
+                    ],
+                    "describe": "Taha Hussein contracted a disease in his eyes when he was young",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين فقد بصره",
+                    "options": [
+                        "ماذا فقد طه حسين؟",
+                        "لماذا فقد طه حسين بصره؟",
+                        "متى فقد طه حسين بصره؟",
+                        "كيف فقد طه حسين بصره؟"
+                    ],
+                    "describe": "Taha Hussein lost his sight",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين التحق بكتاب قريته",
+                    "options": [
+                        "أين التحق طه حسين في بداية تعليمه؟",
+                        "متى التحق طه حسين بكتاب قريته؟",
+                        "لماذا التحق طه حسين بكتاب قريته؟",
+                        "ماذا درس طه حسين في كتاب قريته؟"
+                    ],
+                    "describe": "Taha Hussein joined the village kuttab",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين سافر إلى جامعة الأزهر",
+                    "options": [
+                        "إلى أين سافر طه حسين ليكمل دراسته؟",
+                        "متى سافر طه حسين إلى جامعة الأزهر؟",
+                        "لماذا سافر طه حسين إلى جامعة الأزهر؟",
+                        "ماذا درس طه حسين في جامعة الأزهر؟"
+                    ],
+                    "describe": "Taha Hussein traveled to Al-Azhar University",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين التحق بالجامعة المصرية",
+                    "options": [
+                        "بأي جامعة التحق طه حسين بعد الأزهر؟",
+                        "متى التحق طه حسين بالجامعة المصرية؟",
+                        "لماذا التحق طه حسين بالجامعة المصرية؟",
+                        "ماذا درس طه حسين في الجامعة المصرية؟"
+                    ],
+                    "describe": "Taha Hussein joined the Egyptian University",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين كتب رسالة الدكتوراه عن أبي العلاء المعري",
+                    "options": [
+                        "عن من كتب طه حسين رسالة الدكتوراه؟",
+                        "متى كتب طه حسين رسالة الدكتوراه؟",
+                        "لماذا كتب طه حسين رسالة الدكتوراه عن أبي العلاء المعري؟",
+                        "أين كتب طه حسين رسالة الدكتوراه؟"
+                    ],
+                    "describe": "Taha Hussein wrote his doctoral thesis on Abu al-Ala al-Ma'arri",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين تزوج السيدة 'سوزان'",
+                    "options": [
+                        "من تزوج طه حسين؟",
+                        "متى تزوج طه حسين؟",
+                        "لماذا تزوج طه حسين السيدة سوزان؟",
+                        "أين تزوج طه حسين؟"
+                    ],
+                    "describe": "Taha Hussein married Mrs. Suzanne",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Choosing the Correct Plural Form",
+            "qa": [
+                {
+                    "question": "What is the plural of قرين?",
+                    "options": [
+                        "أقران",
+                        "قرائن",
+                        "قرون",
+                        "قرناء"
+                    ],
+                    "describe": "أقران means 'companions'.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is the plural of طفل?",
+                    "options": [
+                        "طفول",
+                        "أطفال",
+                        "أطفلة",
+                        "طفال"
+                    ],
+                    "describe": "أطفال means 'children'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the plural of أب?",
+                    "options": [
+                        "أباء",
+                        "أبوة",
+                        "آباء",
+                        "أبون"
+                    ],
+                    "describe": "آباء means 'fathers'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the plural of أم?",
+                    "options": [
+                        "أمات",
+                        "أماء",
+                        "أموم",
+                        "أمهات"
+                    ],
+                    "describe": "أمهات means 'mothers'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the plural of قلب?",
+                    "options": [
+                        "قلوب",
+                        "قلبان",
+                        "قلوبت",
+                        "قلاب"
+                    ],
+                    "describe": "قلوب means 'hearts'.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is the plural of نفس?",
+                    "options": [
+                        "أنفاس",
+                        "نفوس",
+                        "أنفس",
+                        "نفساء"
+                    ],
+                    "describe": "أنفس means 'souls' or 'selves'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the plural of ابن?",
+                    "options": [
+                        "ابنان",
+                        "أبنة",
+                        "ابنون",
+                        "أبناء"
+                    ],
+                    "describe": "أبناء means 'sons'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the plural of رجل?",
+                    "options": [
+                        "رجال",
+                        "رجول",
+                        "رجلان",
+                        "رجالة"
+                    ],
+                    "describe": "رجال means 'men'.",
+                    "correct": 0
+                },
+                {
+                    "question": "What is the plural of صبي?",
+                    "options": [
+                        "صبوة",
+                        "صبيانة",
+                        "صبوان",
+                        "صبيان"
+                    ],
+                    "describe": "صبيان means 'boys'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the plural of طور?",
+                    "options": [
+                        "طوار",
+                        "طوران",
+                        "أطوار",
+                        "طوران"
+                    ],
+                    "describe": "أطوار means 'phases' or 'stages'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the plural of باب?",
+                    "options": [
+                        "بابات",
+                        "بابان",
+                        "أباب",
+                        "أبواب"
+                    ],
+                    "describe": "أبواب means 'doors'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the plural of كتاب?",
+                    "options": [
+                        "كتابات",
+                        "كتابان",
+                        "أكتاب",
+                        "كتب"
+                    ],
+                    "describe": "كتب means 'books'.",
+                    "correct": 3
+                }
+            ]
+        }
+    ],
+    "2": [
+        {
+            "name": "Comprehension Questions on 'That is Nature' by Ahmad Shawqi",
+            "qa": [
+                {
+                    "question": "ماذا يصف الشاعر؟",
+                    "options": [
+                        "جمال الطبيعة",
+                        "قوة الله",
+                        "شك الناس",
+                        "علم العلماء"
+                    ],
+                    "correct": 0,
+                    "describe": "The poet describes the beauty of nature as a testament to God's creation."
+                },
+                {
+                    "question": "ما سبب اهتزاز الأرض والسماء؟",
+                    "options": [
+                        "بسبب الزلازل",
+                        "بسبب جمال المناظر",
+                        "بسبب روائع الآيات والآثار",
+                        "بسبب إعجاب الشاعر"
+                    ],
+                    "correct": 2,
+                    "describe": "The earth and sky tremble because of the magnificent signs and relics of God's creation."
+                },
+                {
+                    "question": "بمَ يُشبّه الشاعر جمال الطبيعة؟",
+                    "options": [
+                        "بالقرآن",
+                        "بالمرآة",
+                        "بالنساء المزينات",
+                        "بالوجه الضاحك"
+                    ],
+                    "correct": 0,
+                    "describe": "The poet compares the beauty of nature to the Quran, as both reveal the majesty of God."
+                },
+                {
+                    "question": "علامَ يدلّ الظواهر الطبيعية؟",
+                    "options": [
+                        "على مهارة الشاعر",
+                        "على جمال العالم",
+                        "على وجود الله",
+                        "على علم العلماء"
+                    ],
+                    "correct": 2,
+                    "describe": "The natural phenomena indicate the existence and majesty of God."
+                },
+                {
+                    "question": "ماذا يقول الشاعر لمن له شك وإنكار؟",
+                    "options": [
+                        "يجب أن يقرأ القرآن",
+                        "يجب أن ينظر إلى الطبيعة",
+                        "يجب أن يستشير العلماء",
+                        "يجب أن يتجاهل شكوكه"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet suggests that those who doubt should look at God's creation, as it will remove their doubts."
+                },
+                {
+                    "question": "كيف يصف الشاعر الخمائل؟",
+                    "options": [
+                        "كأماكن منعزلة",
+                        "كأنها مزينة بالحلي مثل النساء",
+                        "كمصادر للماء",
+                        "كمساكن للحيوانات"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet describes the groves as containing elements that are like women adorned with anklets and bracelets, symbolizing their beauty."
+                },
+                {
+                    "question": "بمَ يُشبّه الشاعر الغدير والنبات؟",
+                    "options": [
+                        "بلوحة فنية",
+                        "بمرآة مزينة بإطار",
+                        "بجوهرة",
+                        "بكتاب"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet compares the stream and the plants to a mirror adorned with a frame, likely due to the reflection of the surroundings in the water."
+                },
+                {
+                    "question": "ما المراد بـ'ضحوك سن'؟",
+                    "options": [
+                        "الأزهار الساطعة",
+                        "الشمس المشرقة",
+                        "الماء المتلألئ",
+                        "الأوراق الخضراء"
+                    ],
+                    "correct": 0,
+                    "describe": "'ضحوك سن' likely refers to the bright, smiling flowers that fill the world with their beauty and light."
+                },
+                {
+                    "question": "كيف يبدو الغدير؟",
+                    "options": [
+                        "كأنه نهر جار",
+                        "كأنه بئر عميق",
+                        "كأنه مرآة بإطار",
+                        "كأنه بركة مظلمة"
+                    ],
+                    "correct": 2,
+                    "describe": "The stream appears like a mirror adorned with a frame because of the reflection of the surrounding plants."
+                },
+                {
+                    "question": "مَنْ يُخاطِبُ الشَّاعِرُ في السَّطْرِ الأَوَّلِ؟",
+                    "options": [
+                        "صديق",
+                        "سائح أو مرشد",
+                        "الله",
+                        "القارئ"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet is addressing a traveler or guide, asking him to stop so he can show him the beauty of nature."
+                },
+                {
+                    "question": "مَاذَا يَقُولُ الشَّاعِرُ عَنِ الدَّلِيلِ الَّذِي تُقَدِّمُهُ الطَّبِيعَةُ؟",
+                    "options": [
+                        "إنه غير كاف",
+                        "إنه أكثر إقناعاً من أدلة العلماء",
+                        "إنه مساوٍ لأدلة العلماء",
+                        "إنه يتعارض مع أدلة العلماء"
+                    ],
+                    "correct": 1,
+                    "describe": "The poet says that nature's evidence of God's existence is so clear that it leaves no need for the evidence provided by jurists and scholars."
+                },
+                {
+                    "question": "مَا هِيَ الرِّسَالَةُ العَامَّةُ لِلْقَصِيدَةِ؟",
+                    "options": [
+                        "الطبيعة جميلة ويجب الاستمتاع بها",
+                        "الله هو خالق الطبيعة، وجمالها دليل على وجوده",
+                        "العلماء غير ضروريين لأن الطبيعة تقدم كل الأدلة",
+                        "الشك والإنكار خطايا يمكن محوها بالنظر إلى الطبيعة"
+                    ],
+                    "correct": 1,
+                    "describe": "The overall message is that the beauty of nature serves as clear evidence of God's existence and majesty."
+                }
+            ]
+        }
+    ],
+    "3": [
+        {
+            "name": "Understanding and Comprehension",
+            "qa": [
+                {
+                    "question": "أين جلس الأب العجوز؟",
+                    "options": [
+                        "بجوار الباب",
+                        "بجوار النافذة",
+                        "على الكرسي",
+                        "في الحديقة"
+                    ],
+                    "describe": "The old father sat by the window.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا سمع الأب؟",
+                    "options": [
+                        "صوت الريح",
+                        "صوت المطر",
+                        "صوت بلبل جميل",
+                        "صوت السيارات"
+                    ],
+                    "describe": "The father heard the sound of a beautiful nightingale.",
+                    "correct": 2
+                },
+                {
+                    "question": "من يجلس بجانب الأب؟",
+                    "options": [
+                        "زوجته",
+                        "ابنه",
+                        "جاره",
+                        "صديقه"
+                    ],
+                    "describe": "His son is sitting next to the father.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا يفعل الابن؟",
+                    "options": [
+                        "يقرأ كتابًا",
+                        "يشاهد التلفاز",
+                        "يلعب بالهاتف",
+                        "يحدق في شاشة الحاسوب"
+                    ],
+                    "describe": "The son is staring at the laptop screen.",
+                    "correct": 3
+                },
+                {
+                    "question": "ماذا سأل الأب ابنه مرارًا؟",
+                    "options": [
+                        "ما هذا الصوت؟",
+                        "أين أنت؟",
+                        "ماذا تفعل؟",
+                        "هل أنت جائع؟"
+                    ],
+                    "describe": "The father repeatedly asked, 'What is this sound?'",
+                    "correct": 0
+                },
+                {
+                    "question": "كيف كان رد فعل الابن عندما سأله الأب نفس السؤال عدة مرات؟",
+                    "options": [
+                        "فرح",
+                        "امتعض",
+                        "ضحك",
+                        "بكى"
+                    ],
+                    "describe": "The son was annoyed.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا طلب الأب من ابنه أن يحضره؟",
+                    "options": [
+                        "كتابه",
+                        "مفكرته القديمة",
+                        "هاتفه",
+                        "نظارته"
+                    ],
+                    "describe": "The father asked his son to bring his old notebook.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا كان مكتوبًا في المفكرة؟",
+                    "options": [
+                        "عن يوم في المدرسة",
+                        "عن يوم في الحديقة مع الابن",
+                        "عن يوم في العمل",
+                        "عن يوم في السوق"
+                    ],
+                    "describe": "It was about a day in the park with the son.",
+                    "correct": 1
+                },
+                {
+                    "question": "كم كان عمر الابن عندما حدثت الواقعة المذكورة في المفكرة؟",
+                    "options": [
+                        "سنة واحدة",
+                        "ثلاثة أعوام",
+                        "خمسة أعوام",
+                        "عشرة أعوام"
+                    ],
+                    "describe": "The son was three years old.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا فعل الأب والابن في الحديقة وفقًا للمفكرة؟",
+                    "options": [
+                        "أكلا الطعام",
+                        "لعبوا وضحكوا",
+                        "قرأوا كتابًا",
+                        "ناموا"
+                    ],
+                    "describe": "They played and laughed.",
+                    "correct": 1
+                },
+                {
+                    "question": "كم مرة سأل الابن عن الطائر في المفكرة؟",
+                    "options": [
+                        "مرة واحدة",
+                        "مرتين",
+                        "عشر مرات",
+                        "ما يقارب من عشرين مرة"
+                    ],
+                    "describe": "The son asked about the bird about twenty times.",
+                    "correct": 3
+                },
+                {
+                    "question": "لماذا طلب الأب من ابنه قراءة المفكرة؟",
+                    "options": [
+                        "ليتذكر الأب اليوم",
+                        "ليذكر الابن بصبر الأب عليه",
+                        "ليقرأ الابن قصة",
+                        "ليضحكوا معًا"
+                    ],
+                    "describe": "To remind the son of the father's patience with him when he was young.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Translation of sentences from 'The Father and His Son'",
+            "qa": [
+                {
+                    "question": "جلس الأب العجوز بجوار النافذة فسمع صوت بلبل جميل",
+                    "options": [
+                        "The old father sat by the window and heard a beautiful nightingale's sound.",
+                        "The old father sat near the door and heard a beautiful bird's sound.",
+                        "The young father sat by the window and saw a beautiful nightingale.",
+                        "The old man stood by the window and heard a loud nightingale's sound."
+                    ],
+                    "describe": "The old father sat by the window and heard a beautiful nightingale's sound.",
+                    "correct": 0
+                },
+                {
+                    "question": "كان الابن يجلس إلى جانب الأب محدقاً في شاشة جهاز الحاسوب المحمول",
+                    "options": [
+                        "The son was sitting next to the father, staring at the screen of the laptop.",
+                        "The son was standing next to the father, looking at the computer screen.",
+                        "The father was sitting next to the son, staring at the laptop screen.",
+                        "The son was sitting next to the father, playing on the laptop."
+                    ],
+                    "describe": "The son was sitting next to the father, staring at the screen of the laptop.",
+                    "correct": 0
+                },
+                {
+                    "question": "أجاب الابن دون أن يرفع رأسه: إنه صوت بلبل يا أبي.",
+                    "options": [
+                        "The son answered without raising his head: It's the sound of a nightingale, father.",
+                        "The son replied without looking up: It's a bird's sound, father.",
+                        "The son answered while raising his head: It's the sound of a nightingale, father.",
+                        "The father answered: It's the sound of a nightingale, my son."
+                    ],
+                    "describe": "The son answered without raising his head: It's the sound of a nightingale, father.",
+                    "correct": 0
+                },
+                {
+                    "question": "صمت الأب قليلاً ثم كرّر السؤال قائلاً: ما هذا الصوت في الخارج؟",
+                    "options": [
+                        "The father was silent for a little while then repeated the question saying: What is this sound outside?",
+                        "The father spoke for a little while then asked again: What is this sound outside?",
+                        "The son was silent for a little while then repeated the question: What is this sound outside?",
+                        "The father was silent and then said: What is that noise outside?"
+                    ],
+                    "describe": "The father was silent for a little while then repeated the question saying: What is this sound outside?",
+                    "correct": 0
+                },
+                {
+                    "question": "ذهب الابن وأحضر المفكرة، ففتحها الأب على صفحة وطلب من ابنه قراءتها.",
+                    "options": [
+                        "The son went and brought the notebook, so the father opened it to a page and asked his son to read it.",
+                        "The son went and brought the book, so the father opened it and read it himself.",
+                        "The father went and brought the notebook, then asked his son to open it and read it.",
+                        "The son brought the notebook, and the father asked him to write in it."
+                    ],
+                    "describe": "The son went and brought the notebook, so the father opened it to a page and asked his son to read it.",
+                    "correct": 0
+                },
+                {
+                    "question": "فسأل الأب : ما هذا الصوت يا بني؟",
+                    "options": [
+                        "So the father asked: What is this sound, my son?",
+                        "So the father said: What is this noise, my son?",
+                        "So the son asked: What is this sound, father?",
+                        "So the father asked: Who is making this sound, my son?"
+                    ],
+                    "describe": "So the father asked: What is this sound, my son?",
+                    "correct": 0
+                },
+                {
+                    "question": "بعد فترة قصيرة سأل الأب ثانية : ما هذا الصوت يا بني؟",
+                    "options": [
+                        "After a short period, the father asked again: What is this sound, my son?",
+                        "After a long time, the father asked again: What is this sound, my son?",
+                        "After a short period, the son asked again: What is this sound, father?",
+                        "After a short period, the father asked: What is that noise, my son?"
+                    ],
+                    "describe": "After a short period, the father asked again: What is this sound, my son?",
+                    "correct": 0
+                },
+                {
+                    "question": "فأجاب الابن : إنه صوت البلبل.",
+                    "options": [
+                        "So the son answered: It's the sound of the nightingale.",
+                        "So the son said: It's a bird's sound.",
+                        "So the father answered: It's the sound of the nightingale.",
+                        "So the son answered: It's the sound of a sparrow."
+                    ],
+                    "describe": "So the son answered: It's the sound of the nightingale.",
+                    "correct": 0
+                },
+                {
+                    "question": "فرد الابن عليه متعضاً : إنه صوت بلبل، ألم أقل لك هذا من قبل؟!",
+                    "options": [
+                        "So the son replied to him annoyed: It's the sound of a nightingale, didn't I tell you this before?!",
+                        "So the son answered happily: It's the sound of a nightingale, I told you this before.",
+                        "So the father replied annoyed: It's the sound of a nightingale, didn't I tell you this before?!",
+                        "So the son replied: It's a bird's sound, didn't I tell you this earlier?"
+                    ],
+                    "describe": "So the son replied to him annoyed: It's the sound of a nightingale, didn't I tell you this before?!",
+                    "correct": 0
+                },
+                {
+                    "question": "فصمت الأب وبعد مدة قليلة قال حزيناً : أحضر لي مفكرتي القديمة من الغرفة لو سمحت.",
+                    "options": [
+                        "So the father was silent and after a little while said sadly: Bring me my old notebook from the room, please.",
+                        "So the father spoke and after a while said happily: Bring me my new notebook from the room, please.",
+                        "So the son was silent and after a little while said sadly: Bring me my old notebook from the room, please.",
+                        "So the father was silent and then said: Give me my old notebook from the room."
+                    ],
+                    "describe": "So the father was silent and after a little while said sadly: Bring me my old notebook from the room, please.",
+                    "correct": 0
+                },
+                {
+                    "question": "فقرأ الابن: في هذا اليوم أتم ابني ثلاثة أعوام.",
+                    "options": [
+                        "So the son read: On this day, my son turned three years old.",
+                        "So the son read: Today, my son is three years old.",
+                        "So the father read: On this day, my son turned three years old.",
+                        "So the son read: On this day, I turned three years old."
+                    ],
+                    "describe": "So the son read: On this day, my son turned three years old.",
+                    "correct": 0
+                },
+                {
+                    "question": "وقد أخذته إلى الحديقة، فرأى بلبلاً وسألني ما هذا الطائر يا أبي؟",
+                    "options": [
+                        "And I took him to the garden, so he saw a nightingale and asked me what is this bird, father?",
+                        "And I took him to the park, so he saw a bird and asked me what is this animal, father?",
+                        "And he took me to the garden, so I saw a nightingale and asked him what is this bird?",
+                        "And I took him to the garden, so he heard a nightingale and asked me what is this sound, father?"
+                    ],
+                    "describe": "And I took him to the garden, so he saw a nightingale and asked me what is this bird, father?",
+                    "correct": 0
+                },
+                {
+                    "question": "فأجبته بأنه بلبل،",
+                    "options": [
+                        "So I answered him that it's a nightingale,",
+                        "So I told him it's a bird,",
+                        "So he answered me that it's a nightingale,",
+                        "So I answered him that it's a sparrow,"
+                    ],
+                    "describe": "So I answered him that it's a nightingale,",
+                    "correct": 0
+                },
+                {
+                    "question": "وظل يكرر السؤال نفسه وأجيبه دون ملل ما يقارب من عشرين مرة،",
+                    "options": [
+                        "And he kept repeating the same question and I answered him without boredom about twenty times,",
+                        "And he kept asking different questions and I answered him patiently about twenty times,",
+                        "And I kept repeating the same answer without him asking, about twenty times,",
+                        "And he kept repeating the question and I got bored after twenty times,"
+                    ],
+                    "describe": "And he kept repeating the same question and I answered him without boredom about twenty times,",
+                    "correct": 0
+                },
+                {
+                    "question": "وظللنا نضحك ونمرح ونلعب سوياً حتى أنهكه التعب وعدنا إلى المنزل.",
+                    "options": [
+                        "And we kept laughing and having fun and playing together until he was exhausted and we returned home.",
+                        "And we kept laughing and playing until I was tired and we went back home.",
+                        "And he kept laughing and playing alone until he was exhausted and came back home.",
+                        "And we kept working and studying together until he was tired and we returned home."
+                    ],
+                    "describe": "And we kept laughing and having fun and playing together until he was exhausted and we returned home.",
+                    "correct": 0
+                }
+            ]
+        }
+    ],
+    "4": [
+        {
+            "name": "Morals: An Enduring Treasure",
+            "qa": [
+                {
+                    "question": "ما هو تعريف الخُلُق وفقاً للكاتب؟",
+                    "options": [
+                        "الشعور بالمسؤولية أمام الضمير عن الواجب.",
+                        "الخوف من العقاب أو القانون.",
+                        "الرغبة في الحصول على مكافأة.",
+                        "الامتثال لأوامر الآخرين."
+                    ],
+                    "describe": "The author defines morals as the feeling of responsibility before one's conscience regarding what one ought to do.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما المثال الذي يقدمه الكاتب للكرم؟",
+                    "options": [
+                        "البكاء عند رؤية البؤس.",
+                        "استواء صدقة السر وصدقة العلانية.",
+                        "الحكم على النفس كالآخرين.",
+                        "الصدق في الأفعال والأقوال."
+                    ],
+                    "describe": "The example of generosity is treating secret charity and public charity equally.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما الذي ينفع المرء حسب الكاتب؟",
+                    "options": [
+                        "خوفه من عذاب النار.",
+                        "خوفه من القانون.",
+                        "ضميره كقائد ومنار.",
+                        "رغبته في الثناء من الناس."
+                    ],
+                    "describe": "What benefits a person is having their conscience as their guide and beacon.",
+                    "correct": 2
+                },
+                {
+                    "question": "ما النصيحة التي يقدمها الكاتب لتعليم مكارم الأخلاق؟",
+                    "options": [
+                        "إحياء الضمائر وتثبيت الرغبة في الفضيلة.",
+                        "تعليم القوانين والأنظمة.",
+                        "ترسيخ الخوف من العقاب.",
+                        "تشجيع السعي وراء المكافآت."
+                    ],
+                    "describe": "The advice is to revive consciences and instill a desire for virtue and aversion to vice.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو جمع كلمة 'عين' من النص؟",
+                    "options": [
+                        "عيون.",
+                        "أعين.",
+                        "عينان.",
+                        "عينات."
+                    ],
+                    "describe": "The plural of 'eye' in the text is 'eyes,' which is 'عيون' in Arabic.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو جمع كلمة 'منظر' من النص؟",
+                    "options": [
+                        "مناظير.",
+                        "مناظر.",
+                        "مشاهد.",
+                        "مناظرة."
+                    ],
+                    "describe": "The plural of 'scene' in the text is 'scenes,' which is 'مناظر' in Arabic.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما هو جمع كلمة 'نتيجة' من النص؟",
+                    "options": [
+                        "نتائج.",
+                        "نتيجات.",
+                        "ناتج.",
+                        "نواتج."
+                    ],
+                    "describe": "The plural of 'result' in the text is 'results,' which is 'نتائج' in Arabic.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو جمع كلمة 'ضمير' من النص؟",
+                    "options": [
+                        "ضمائر.",
+                        "أضمار.",
+                        "ضميرات.",
+                        "ضميرون."
+                    ],
+                    "describe": "The plural of 'conscience' in the text is 'consciences,' which is 'ضمائر' in Arabic.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو جمع كلمة 'نفس' من النص؟",
+                    "options": [
+                        "نفوس.",
+                        "أنفس.",
+                        "نفسات.",
+                        "أنفاس."
+                    ],
+                    "describe": "The plural of 'self' in the text is 'selves,' which is 'نفوس' in Arabic.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو جمع كلمة 'خُلق' من النص؟",
+                    "options": [
+                        "خلوق.",
+                        "أخلاق.",
+                        "خُلقان.",
+                        "خلائق."
+                    ],
+                    "describe": "The plural of 'moral' in the text is 'morals,' which is 'أخلاق' in Arabic.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما هو اسم الكاتب؟",
+                    "options": [
+                        "مصطفى لطفي المنفلوطي.",
+                        "أحمد شوقي.",
+                        "طه حسين.",
+                        "نجيب محفوظ."
+                    ],
+                    "describe": "The author's name is Mustafa Lutfi al-Manfaluti.",
+                    "correct": 0
+                },
+                {
+                    "question": "متى ولد الكاتب؟",
+                    "options": [
+                        "١٨٧٦م.",
+                        "١٨٨٦م.",
+                        "١٨٩٦م.",
+                        "١٩٠٦م."
+                    ],
+                    "describe": "The author was born in 1876 AD.",
+                    "correct": 0
+                }
+            ]
+        }
+    ],
+    "5": [
+        {
+            "name": "Fill in the Blanks with Prepositions",
+            "qa": [
+                {
+                    "question": "ما حَضَر حسين _____ المدرسة.",
+                    "options": [
+                        "إلى",
+                        "من",
+                        "في",
+                        "على"
+                    ],
+                    "describe": "from",
+                    "correct": 1
+                },
+                {
+                    "question": "سأل حامد أخاه عليًّا _____ السبب.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "عن",
+                        "في"
+                    ],
+                    "describe": "about",
+                    "correct": 2
+                },
+                {
+                    "question": "ذهب حامد _____ بيت حسين.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "على",
+                        "في"
+                    ],
+                    "describe": "to",
+                    "correct": 1
+                },
+                {
+                    "question": "دنا حامد _____ صديقه حسين.",
+                    "options": [
+                        "إلى",
+                        "على",
+                        "من",
+                        "في"
+                    ],
+                    "describe": "from",
+                    "correct": 2
+                },
+                {
+                    "question": "عزم حامد _____ أن يعود صديقه.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "في",
+                        "على"
+                    ],
+                    "describe": "on",
+                    "correct": 3
+                },
+                {
+                    "question": "أوصى الطبيب أباه _____ يحمي حسينا.",
+                    "options": [
+                        "ب",
+                        "من",
+                        "إلى",
+                        "على"
+                    ],
+                    "describe": "with",
+                    "correct": 0
+                },
+                {
+                    "question": "حضر الطبيب وامتحن الصدر _____ السماعة.",
+                    "options": [
+                        "في",
+                        "على",
+                        "من",
+                        "ب"
+                    ],
+                    "describe": "with",
+                    "correct": 3
+                },
+                {
+                    "question": "ذَهَبَ حَامِدٌ _____ الْمَدْرَسَةِ.",
+                    "options": [
+                        "من",
+                        "في",
+                        "إلى",
+                        "على"
+                    ],
+                    "describe": "to",
+                    "correct": 2
+                },
+                {
+                    "question": "حُسَيْنٌ مَا حَضَرَ _____ الْمَدْرَسَةِ.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "على",
+                        "في"
+                    ],
+                    "describe": "in",
+                    "correct": 3
+                },
+                {
+                    "question": "سَلَّمَ حَامِدٌ _____ حُسَيْنٍ.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "على",
+                        "في"
+                    ],
+                    "describe": "upon",
+                    "correct": 2
+                },
+                {
+                    "question": "خَفَّتْ الحُمَّى _____ اللَّيْلِ.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "في",
+                        "على"
+                    ],
+                    "describe": "in",
+                    "correct": 2
+                },
+                {
+                    "question": "امْتَحَنَ الطَّبِيبُ الصَّدْرَ _____ السَّمَّاعَةِ.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "على",
+                        "ب"
+                    ],
+                    "describe": "with",
+                    "correct": 3
+                },
+                {
+                    "question": "غَيَّرَ الطَّبِيبُ _____ الوَصْفَةِ.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "في",
+                        "على"
+                    ],
+                    "describe": "in",
+                    "correct": 2
+                },
+                {
+                    "question": "أَوْصَى بِأَنْ يَجْنِيَ حُسَيْنَا _____ الْمَاءِ.",
+                    "options": [
+                        "إلى",
+                        "من",
+                        "في",
+                        "على"
+                    ],
+                    "describe": "from",
+                    "correct": 1
+                },
+                {
+                    "question": "إِذَا أَطَالَ الْجُلُوسَ عِنْدَ الْمَرِيضِ، شَقَّ _____هِ.",
+                    "options": [
+                        "من",
+                        "إلى",
+                        "على",
+                        "في"
+                    ],
+                    "describe": "on",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Fill in the Blank",
+            "qa": [
+                {
+                    "question": "عزم حامد على أن ______ صديقه في الرجوع من المدرسة.",
+                    "options": [
+                        "يزور",
+                        "يساعد",
+                        "يعود",
+                        "يلتقي"
+                    ],
+                    "describe": "to visit",
+                    "correct": 2
+                },
+                {
+                    "question": "إنه أصابته ______ يوم الخميس.",
+                    "options": [
+                        "الحمى",
+                        "الصُّدَاع",
+                        "الدُّوَار",
+                        "الزُّكَام"
+                    ],
+                    "describe": "the fever",
+                    "correct": 0
+                },
+                {
+                    "question": "إني ______ أن أعود صديقي حسين.",
+                    "options": [
+                        "أستطيع",
+                        "أريد",
+                        "أنوي",
+                        "أحب"
+                    ],
+                    "describe": "I want",
+                    "correct": 1
+                },
+                {
+                    "question": "حضر الطبيب فجس ______ حسين.",
+                    "options": [
+                        "نبض",
+                        "يد",
+                        "جسم",
+                        "رأس"
+                    ],
+                    "describe": "hand",
+                    "correct": 1
+                },
+                {
+                    "question": "إن العائد إذا أطال ______ عند المريض.",
+                    "options": [
+                        "البقاء",
+                        "الجلوس",
+                        "الوقوف",
+                        "الحديث"
+                    ],
+                    "describe": "sitting",
+                    "correct": 1
+                },
+                {
+                    "question": "ذهب حامد إلى المدرسة يوم ______.",
+                    "options": [
+                        "الأحد",
+                        "السبت",
+                        "الخميس",
+                        "الجمعة"
+                    ],
+                    "describe": "Saturday",
+                    "correct": 1
+                },
+                {
+                    "question": "سأل حامد أخاه عليا عن ______.",
+                    "options": [
+                        "الحال",
+                        "السبب",
+                        "المرض",
+                        "الوقت"
+                    ],
+                    "describe": "the reason",
+                    "correct": 1
+                },
+                {
+                    "question": "قال علي: إنه ______ من يوم الخميس.",
+                    "options": [
+                        "مريض",
+                        "محموم",
+                        "ضعيف",
+                        "متعب"
+                    ],
+                    "describe": "feverish",
+                    "correct": 1
+                },
+                {
+                    "question": "ذهب حامد إلى ______ حسين.",
+                    "options": [
+                        "مدرسة",
+                        "بيت",
+                        "غرفة",
+                        "سوق"
+                    ],
+                    "describe": "house",
+                    "correct": 1
+                },
+                {
+                    "question": "خرج أبو ______ إلى حامد.",
+                    "options": [
+                        "حسين",
+                        "حامد",
+                        "علي",
+                        "الطبيب"
+                    ],
+                    "describe": "Hussain",
+                    "correct": 0
+                },
+                {
+                    "question": "قال أبوه: نعم إنه أصابته الحمى يوم ______.",
+                    "options": [
+                        "الجمعة",
+                        "الخميس",
+                        "السبت",
+                        "الأحد"
+                    ],
+                    "describe": "Thursday",
+                    "correct": 1
+                },
+                {
+                    "question": "دخل حامد ______ حسين.",
+                    "options": [
+                        "بيت",
+                        "غرفة",
+                        "مدرسة",
+                        "حديقة"
+                    ],
+                    "describe": "room",
+                    "correct": 1
+                },
+                {
+                    "question": "رأى حامد حسينا ______.",
+                    "options": [
+                        "جالسا",
+                        "مضطجعا",
+                        "واقفا",
+                        "نائما"
+                    ],
+                    "describe": "lying down",
+                    "correct": 1
+                },
+                {
+                    "question": "سلم حامد على حسين ______.",
+                    "options": [
+                        "بسرعة",
+                        "بلطف",
+                        "بصوت عال",
+                        "بحزن"
+                    ],
+                    "describe": "gently",
+                    "correct": 1
+                },
+                {
+                    "question": "قال حسين: قد أصابتني الحمى يوم الخميس، وصارت ______ يوم الجمعة.",
+                    "options": [
+                        "خفيفة",
+                        "شديدة",
+                        "متوسطة",
+                        "غائبة"
+                    ],
+                    "describe": "severe",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Arranging Sentences from 'Visiting the Sick'",
+            "qa": [
+                {
+                    "question": "يوم السبت - إلى - المدرسة - حامد - ذهب",
+                    "options": [
+                        "ذَهَبَ حَامِد إِلى الْمَدْرَسَةِ يَوْمَ السَّبْتِ",
+                        "حَامِد ذَهَبَ إِلى الْمَدْرَسَةِ يَوْمَ السَّبْتِ",
+                        "إِلى الْمَدْرَسَةِ يَوْمَ السَّبْتِ حَامِد ذَهَبَ",
+                        "يَوْمَ السَّبْتِ إِلى الْمَدْرَسَةِ ذَهَبَ حَامِد"
+                    ],
+                    "describe": "Hamid went to school on Saturday",
+                    "correct": 0
+                },
+                {
+                    "question": "ما حضر - أن صديقه - حسينا - في المدرسة",
+                    "options": [
+                        "أَنَّ صَدِيقَهُ حُسَيْنًا مَا حَضَرَ فِي الْمَدْرَسَةِ",
+                        "مَا حَضَرَ أَنَّ صَدِيقَهُ حُسَيْنًا فِي الْمَدْرَسَةِ",
+                        "فِي الْمَدْرَسَةِ أَنَّ صَدِيقَهُ حُسَيْنًا مَا حَضَرَ",
+                        "حُسَيْنًا مَا حَضَرَ أَنَّ صَدِيقَهُ فِي الْمَدْرَسَةِ"
+                    ],
+                    "describe": "That his friend Hussain did not attend school",
+                    "correct": 0
+                },
+                {
+                    "question": "على - حامد - عزم - أن يعوده",
+                    "options": [
+                        "عَزَمَ حَامِد عَلَى أَنْ يَعُودَهُ",
+                        "حَامِد عَزَمَ أَنْ يَعُودَهُ عَلَى",
+                        "عَلَى أَنْ يَعُودَهُ حَامِد عَزَمَ",
+                        "أَنْ يَعُودَهُ عَلَى حَامِد عَزَمَ"
+                    ],
+                    "describe": "Hamid decided to visit him",
+                    "correct": 0
+                },
+                {
+                    "question": "إني - صديقي - أن أعود - أريد - حسينا",
+                    "options": [
+                        "إِنِّي أُرِيدُ أَنْ أَعُودَ صَدِيقِي حُسَيْنًا",
+                        "أُرِيدُ إِنِّي أَنْ أَعُودَ صَدِيقِي حُسَيْنًا",
+                        "صَدِيقِي حُسَيْنًا إِنِّي أُرِيدُ أَنْ أَعُودَ",
+                        "أَنْ أَعُودَ إِنِّي أُرِيدُ صَدِيقِي حُسَيْنًا"
+                    ],
+                    "describe": "I want to visit my friend Hussain",
+                    "correct": 0
+                },
+                {
+                    "question": "ولم - حامد - إلا - يجلس - قليلا",
+                    "options": [
+                        "وَلَمْ يَجْلِسْ حَامِد إِلَّا قَلِيلًا",
+                        "حَامِد وَلَمْ يَجْلِسْ إِلَّا قَلِيلًا",
+                        "إِلَّا قَلِيلًا وَلَمْ يَجْلِسْ حَامِد",
+                        "يَجْلِسْ حَامِد وَلَمْ إِلَّا قَلِيلًا"
+                    ],
+                    "describe": "And Hamid sat only a little",
+                    "correct": 0
+                },
+                {
+                    "question": "فَسَأَلَ - أَخَاهُ - عَلِيًّا - عَنِ - السَّبَبِ",
+                    "options": [
+                        "فَسَأَلَ أَخَاهُ عَلِيًّا عَنِ السَّبَبِ",
+                        "أَخَاهُ عَلِيًّا فَسَأَلَ عَنِ السَّبَبِ",
+                        "عَنِ السَّبَبِ فَسَأَلَ أَخَاهُ عَلِيًّا",
+                        "فَسَأَلَ عَنِ السَّبَبِ أَخَاهُ عَلِيًّا"
+                    ],
+                    "describe": "So he asked his brother Ali about the reason",
+                    "correct": 0
+                },
+                {
+                    "question": "فَقَالَ - إِنَّهُ - مَحْمُومٌ - مِنْ - يَوْمِ - الْخَمِيسِ",
+                    "options": [
+                        "فَقَالَ إِنَّهُ مَحْمُومٌ مِنْ يَوْمِ الْخَمِيسِ",
+                        "إِنَّهُ مَحْمُومٌ فَقَالَ مِنْ يَوْمِ الْخَمِيسِ",
+                        "مِنْ يَوْمِ الْخَمِيسِ فَقَالَ إِنَّهُ مَحْمُومٌ",
+                        "فَقَالَ مَحْمُومٌ إِنَّهُ مِنْ يَوْمِ الْخَمِيسِ"
+                    ],
+                    "describe": "He said that he has been feverish since Thursday",
+                    "correct": 0
+                },
+                {
+                    "question": "ذَهَبَ - حَامِد - إِلى - بَيْتِ - حُسَيْنٍ",
+                    "options": [
+                        "ذَهَبَ حَامِد إِلى بَيْتِ حُسَيْنٍ",
+                        "حَامِد ذَهَبَ إِلى بَيْتِ حُسَيْنٍ",
+                        "إِلى بَيْتِ حُسَيْنٍ ذَهَبَ حَامِد",
+                        "بَيْتِ حُسَيْنٍ إِلى ذَهَبَ حَامِد"
+                    ],
+                    "describe": "Hamid went to Hussain’s house",
+                    "correct": 0
+                },
+                {
+                    "question": "فَخَرَجَ - أَبُو - حُسَيْنٍ",
+                    "options": [
+                        "فَخَرَجَ أَبُو حُسَيْنٍ",
+                        "أَبُو حُسَيْنٍ فَخَرَجَ",
+                        "حُسَيْنٍ أَبُو فَخَرَجَ",
+                        "فَخَرَجَ حُسَيْنٍ أَبُو"
+                    ],
+                    "describe": "Then Hussain’s father came out",
+                    "correct": 0
+                },
+                {
+                    "question": "فَقَدْ - أَخْبَرَنِي - عَلِيٌّ - أَنَّهُ - مَرِيضٌ",
+                    "options": [
+                        "فَقَدْ أَخْبَرَنِي عَلِيٌّ أَنَّهُ مَرِيضٌ",
+                        "أَخْبَرَنِي فَقَدْ عَلِيٌّ أَنَّهُ مَرِيضٌ",
+                        "عَلِيٌّ أَخْبَرَنِي فَقَدْ أَنَّهُ مَرِيضٌ",
+                        "أَنَّهُ مَرِيضٌ فَقَدْ أَخْبَرَنِي عَلِيٌّ"
+                    ],
+                    "describe": "For Ali told me that he is sick",
+                    "correct": 0
+                },
+                {
+                    "question": "إِنَّهُ - أَصَابَتْهُ - الْحُمَّى - يَوْمَ - الْخَمِيسِ",
+                    "options": [
+                        "إِنَّهُ أَصَابَتْهُ الْحُمَّى يَوْمَ الْخَمِيسِ",
+                        "أَصَابَتْهُ إِنَّهُ الْحُمَّى يَوْمَ الْخَمِيسِ",
+                        "الْحُمَّى يَوْمَ الْخَمِيسِ إِنَّهُ أَصَابَتْهُ",
+                        "يَوْمَ الْخَمِيسِ الْحُمَّى أَصَابَتْهُ إِنَّهُ"
+                    ],
+                    "describe": "That fever struck him on Thursday",
+                    "correct": 0
+                },
+                {
+                    "question": "دَخَلَ - حَامِدٌ - غُرْفَةَ - حُسَيْنٍ",
+                    "options": [
+                        "دَخَلَ حَامِدٌ غُرْفَةَ حُسَيْنٍ",
+                        "حَامِدٌ دَخَلَ غُرْفَةَ حُسَيْنٍ",
+                        "غُرْفَةَ حُسَيْنٍ دَخَلَ حَامِدٌ",
+                        "حُسَيْنٍ غُرْفَةَ دَخَلَ حَامِدٌ"
+                    ],
+                    "describe": "Hamid entered Hussain’s room",
+                    "correct": 0
+                },
+                {
+                    "question": "فَرَأَى - حُسَيْنًا - مُضْطَجِعًا",
+                    "options": [
+                        "فَرَأَى حُسَيْنًا مُضْطَجِعًا",
+                        "حُسَيْنًا مُضْطَجِعًا فَرَأَى",
+                        "مُضْطَجِعًا فَرَأَى حُسَيْنًا",
+                        "فَرَأَى مُضْطَجِعًا حُسَيْنًا"
+                    ],
+                    "describe": "He saw Hussain lying down",
+                    "correct": 0
+                },
+                {
+                    "question": "فَسَلَّمَ - عَلَيْهِ - بِلُطْفٍ",
+                    "options": [
+                        "فَسَلَّمَ عَلَيْهِ بِلُطْفٍ",
+                        "عَلَيْهِ فَسَلَّمَ بِلُطْفٍ",
+                        "بِلُطْفٍ فَسَلَّمَ عَلَيْهِ",
+                        "فَسَلَّمَ بِلُطْفٍ عَلَيْهِ"
+                    ],
+                    "describe": "He greeted him kindly",
+                    "correct": 0
+                },
+                {
+                    "question": "قَالَ - لَهُ - كَيْفَ - حَالُكَ - يَا - أَخِي",
+                    "options": [
+                        "قَالَ لَهُ كَيْفَ حَالُكَ يَا أَخِي",
+                        "كَيْفَ حَالُكَ يَا أَخِي قَالَ لَهُ",
+                        "لَهُ قَالَ كَيْفَ حَالُكَ يَا أَخِي",
+                        "يَا أَخِي كَيْفَ حَالُكَ قَالَ لَهُ"
+                    ],
+                    "describe": "He said to him: How are you, my brother",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Comprehension and Understanding",
+            "qa": [
+                {
+                    "question": "إلى أين ذهب حامد؟",
+                    "options": [
+                        "إلى المدرسة",
+                        "إلى بيت حسين",
+                        "إلى المستشفى",
+                        "إلى السوق"
+                    ],
+                    "describe": "Hamed went to Hussein's house.",
+                    "correct": 1
+                },
+                {
+                    "question": "متى ذهب حامد إلى المدرسة؟",
+                    "options": [
+                        "يوم الخميس",
+                        "يوم الجمعة",
+                        "يوم السبت",
+                        "يوم الأحد"
+                    ],
+                    "describe": "Hamed went to school on Saturday.",
+                    "correct": 2
+                },
+                {
+                    "question": "ما اسم أخي حسين؟",
+                    "options": [
+                        "حامد",
+                        "علي",
+                        "محمد",
+                        "أحمد"
+                    ],
+                    "describe": "The name of Hussein's brother is Ali.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا أصاب حسين؟",
+                    "options": [
+                        "كسرت يده",
+                        "أصابته الحمى",
+                        "جرح رأسه",
+                        "كسرت رجله"
+                    ],
+                    "describe": "Hussein had a fever.",
+                    "correct": 1
+                },
+                {
+                    "question": "لماذا قرر حامد زيارة حسين؟",
+                    "options": [
+                        "لأنه أراد أن يلعب معه",
+                        "لأنه علم أنه مريض",
+                        "لأنه أراد أن يذاكر معه",
+                        "لأنه أراد أن يعطيه هدية"
+                    ],
+                    "describe": "Hamed decided to visit Hussein because he learned that he was sick.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا قال حامد عندما دخل غرفة حسين؟",
+                    "options": [
+                        "كيف حالك يا أخي؟ عافاك الله",
+                        "أين كنت يا حسين؟",
+                        "هل أنت بخير؟",
+                        "متى ستعود إلى المدرسة؟"
+                    ],
+                    "describe": "Hamed said, 'How are you, my brother? May Allah heal you!'",
+                    "correct": 0
+                },
+                {
+                    "question": "كيف وصف حسين حالته؟",
+                    "options": [
+                        "أصابته الحمى ويشكو من الصداع والدوار",
+                        "أصابته الحمى ويشكو من ألم في البطن",
+                        "أصابته الحمى ويشكو من السعال",
+                        "أصابته الحمى ويشكو من الإسهال"
+                    ],
+                    "describe": "Hussein described that he had a fever and complains of headache and dizziness.",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا فعل الطبيب عندما زار حسين؟",
+                    "options": [
+                        "جس يده وقاس الحرارة وامتحن الصدر بالسماعة",
+                        "أعطاه حقنة ووصف له دواء",
+                        "نصحه بالراحة وشرب السوائل",
+                        "أجرى له عملية جراحية"
+                    ],
+                    "describe": "The doctor checked Hussein's pulse, measured his temperature, and examined his chest with a stethoscope.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي النصيحة التي أعطاها الطبيب لأبي حسين؟",
+                    "options": [
+                        "أن يجني حسينا من الماء البارد والزيت والخروج في الهواء والتعب، وأن يسقيه اللبن وماء الشعير وعصير الفواكه",
+                        "أن يأخذ حسينا إلى المستشفى",
+                        "أن يعطي حسينا أدوية جديدة",
+                        "أن يترك حسينا يستريح في السرير"
+                    ],
+                    "describe": "The doctor advised Hussein's father to keep him away from cold water, oil, going out in the air, and exertion, and to give him milk, barley water, and fruit juice.",
+                    "correct": 0
+                },
+                {
+                    "question": "لماذا قرر حامد المغادرة بعد زيارة قصيرة؟",
+                    "options": [
+                        "لأنه كان مشغولاً",
+                        "لأنه لا يريد أن يزعج المريض وأهله",
+                        "لأنه كان متعباً",
+                        "لأنه أراد أن يعود إلى المدرسة"
+                    ],
+                    "describe": "Hamed decided to leave because he didn’t want to burden the sick person and his family.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا وعد حامد بفعله في اليوم التالي؟",
+                    "options": [
+                        "أن يعود لزيارة حسين",
+                        "أن يذهب إلى المدرسة",
+                        "أن يلعب مع أصدقائه",
+                        "أن يساعد والده"
+                    ],
+                    "describe": "Hamed promised to come back to visit Hussein the next day.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو تقييم الطبيب لحالة حسين؟",
+                    "options": [
+                        "أنه يتحسن بحمد الله",
+                        "أنه في حالة خطيرة",
+                        "أنه يحتاج إلى عملية جراحية",
+                        "أنه يجب أن يبقى في المستشفى"
+                    ],
+                    "describe": "The doctor assessed that Hussein is recovering, praise be to Allah.",
+                    "correct": 0
+                },
+                {
+                    "question": "مما يشكو حسين إلى جانب الحمى؟",
+                    "options": [
+                        "الصداع والدوار",
+                        "ألم في البطن",
+                        "السعال",
+                        "الإسهال"
+                    ],
+                    "describe": "Hussein complains of headache and dizziness besides the fever.",
+                    "correct": 0
+                },
+                {
+                    "question": "كيف حيا حامد حسين عند دخوله الغرفة؟",
+                    "options": [
+                        "سلم عليه بلطف وقال: كيف حالك يا أخي؟ عافاك الله",
+                        "سأله عن سبب مرضه",
+                        "أعطاه هدية",
+                        "طلب منه أن يستريح"
+                    ],
+                    "describe": "Hamed greeted Hussein kindly and said, 'How are you, my brother? May Allah heal you!'",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا قال حامد عن الجلوس طويلاً عند المريض؟",
+                    "options": [
+                        "أنه يشق على المريض وأهل بيته",
+                        "أنه يساعد المريض على الشفاء",
+                        "أنه يجب أن يفعله الزائر",
+                        "أنه لا يؤثر على المريض"
+                    ],
+                    "describe": "Hamed said that staying too long with the sick person becomes hard for him and his family.",
+                    "correct": 0
+                }
+            ]
+        }
+    ],
+    "7": [
+        {
+            "name": "أسئلة حول الصداقة والتسامح",
+            "qa": [
+                {
+                    "question": "ما هو المفرد لكلمة \"أسرار\"؟",
+                    "options": [
+                        "سر",
+                        "سرير",
+                        "سار",
+                        "أسر"
+                    ],
+                    "describe": "secret",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"رسل\"؟",
+                    "options": [
+                        "رسول",
+                        "رسالة",
+                        "مرسل",
+                        "رسلان"
+                    ],
+                    "describe": "messenger",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"أنبياء\"؟",
+                    "options": [
+                        "نبي",
+                        "نبأ",
+                        "منبأ",
+                        "نبوة"
+                    ],
+                    "describe": "prophet",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"مجتمعات\"؟",
+                    "options": [
+                        "مجتمع",
+                        "اجتماع",
+                        "مجتمعة",
+                        "مجتم"
+                    ],
+                    "describe": "society",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو المفرد لكلمة \"أشخاص\"؟",
+                    "options": [
+                        "شخص",
+                        "شخيص",
+                        "مشخاص",
+                        "شخوص"
+                    ],
+                    "describe": "person",
+                    "correct": 0
+                },
+                {
+                    "question": "حسب علي، من هو الصديق؟",
+                    "options": [
+                        "الشخص الذي يعرف جميع أسرارك",
+                        "الشخص الذي يحسدك",
+                        "الشخص الذي يبعدك عن الله",
+                        "الشخص الذي لا يخبرك بمشاعره"
+                    ],
+                    "describe": "the person who knows all your secrets",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي إحدى صفات الصديق الصالح حسب علي؟",
+                    "options": [
+                        "يحسدك",
+                        "يخاف عليك",
+                        "يبعدك عن الله",
+                        "يتمنى لك الشر"
+                    ],
+                    "describe": "he fears for you",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا قال النبي عليه الصلاة والسلام عن اختيار الصديق؟",
+                    "options": [
+                        "المرء على دين خليله",
+                        "الصديق وقت الضيق",
+                        "لا تصاحب إلا مؤمناً",
+                        "الصداقة أساس المجتمع"
+                    ],
+                    "describe": "A person is upon the religion of his close friend",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو التسامح حسب الأم؟",
+                    "options": [
+                        "رد الإساءة بالإساءة",
+                        "العفو عند المقدرة",
+                        "إيقاع الأذى بالآخرين",
+                        "عدم احترام آراء الآخرين"
+                    ],
+                    "describe": "forgiveness when able",
+                    "correct": 1
+                },
+                {
+                    "question": "ما هي إحدى فوائد التسامح حسب الأم؟",
+                    "options": [
+                        "زيادة الخلافات",
+                        "تحقيق الوحدة والتماسك",
+                        "الابتعاد عن الأخلاق الحميدة",
+                        "عدم احترام الآخرين"
+                    ],
+                    "describe": "achieving unity and cohesion",
+                    "correct": 1
+                },
+                {
+                    "question": "ما هو سبب عدم وجود التسامح في الوقت الحالي حسب الأم؟",
+                    "options": [
+                        "الالتزام بالأخلاق الحميدة",
+                        "عدم الالتزام بالأخلاق الحميدة",
+                        "الاحترام المتبادل",
+                        "التقيد بالنهج النبوي"
+                    ],
+                    "describe": "not adhering to good morals",
+                    "correct": 1
+                },
+                {
+                    "question": "ما معنى كلمة \"الألفة\" في النص؟",
+                    "options": [
+                        "الصداقة",
+                        "المعرفة",
+                        "الانسجام والتقارب",
+                        "الخلاف"
+                    ],
+                    "describe": "harmony and closeness",
+                    "correct": 2
+                },
+                {
+                    "question": "ما معنى كلمة \"التماسك\" في النص؟",
+                    "options": [
+                        "الانقسام",
+                        "الوحدة والترابط",
+                        "الضعف",
+                        "الاختلاف"
+                    ],
+                    "describe": "unity and cohesion",
+                    "correct": 1
+                },
+                {
+                    "question": "ما معنى كلمة \"الإساءة\" في النص؟",
+                    "options": [
+                        "الخير",
+                        "الأذى",
+                        "الاحترام",
+                        "التسامح"
+                    ],
+                    "describe": "harm",
+                    "correct": 1
+                },
+                {
+                    "question": "من سأل عن التسامح؟",
+                    "options": [
+                        "علي",
+                        "المعلم",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "Mona",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Fill in and answer",
+            "qa": [
+                {
+                    "question": "الصديق هو الشخص الذي يعرف .....................",
+                    "options": [
+                        "أسرارك",
+                        "اسمك",
+                        "عمرك",
+                        "هواياتك"
+                    ],
+                    "describe": "your secrets",
+                    "correct": 0
+                },
+                {
+                    "question": "العلاقة بين الأصدقاء قائمة على .....................",
+                    "options": [
+                        "الود والألفة",
+                        "المصلحة",
+                        "المنافسة",
+                        "الخلاف"
+                    ],
+                    "describe": "love and affection",
+                    "correct": 0
+                },
+                {
+                    "question": "..................... هو يدفعك لعمل الخير.",
+                    "options": [
+                        "الصديق الصالح",
+                        "العدو",
+                        "الجار",
+                        "الأخ"
+                    ],
+                    "describe": "the good friend",
+                    "correct": 0
+                },
+                {
+                    "question": "المرء على دين .....................",
+                    "options": [
+                        "خليله",
+                        "أبيه",
+                        "أمه",
+                        "معلمه"
+                    ],
+                    "describe": "his friend",
+                    "correct": 0
+                },
+                {
+                    "question": "..................... هو العفو عند المقدرة.",
+                    "options": [
+                        "التسامح",
+                        "الكرم",
+                        "الشجاعة",
+                        "الصبر"
+                    ],
+                    "describe": "tolerance",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا سأل المعلم علي في البداية؟",
+                    "options": [
+                        "ما الصداقة؟",
+                        "من هو صديقك المفضل؟",
+                        "ما هو التسامح؟",
+                        "كيف تختار صديقاً؟"
+                    ],
+                    "describe": "What is friendship?",
+                    "correct": 0
+                },
+                {
+                    "question": "وفقاً لعلي، الصديق الصالح هو من:",
+                    "options": [
+                        "يعرف جميع أسرارك",
+                        "يدفعك لعمل الخير",
+                        "يكون دائماً معك",
+                        "يشاركك اهتماماتك"
+                    ],
+                    "describe": "pushes you to do good deeds",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا قال النبي عن الأصدقاء؟",
+                    "options": [
+                        "المرء على دين خليله",
+                        "يجب اختيار الأصدقاء بناءً على الثروة",
+                        "يجب أن يكون الأصدقاء من نفس القبيلة",
+                        "الأصدقاء ليسوا مهمين"
+                    ],
+                    "describe": "A person is on the religion of his friend",
+                    "correct": 0
+                },
+                {
+                    "question": "وفقاً للأم، التسامح هو:",
+                    "options": [
+                        "العفو عند المقدرة",
+                        "أن تكون صارماً مع الآخرين",
+                        "تجاهل أخطاء الآخرين",
+                        "تجنب الصراعات"
+                    ],
+                    "describe": "forgiving when able",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي إحدى فوائد التسامح التي ذكرتها الأم؟",
+                    "options": [
+                        "يساعد على تحقيق الوحدة والتماسك في المجتمعات",
+                        "يجعل الناس أثرياء",
+                        "يزيد المنافسة",
+                        "يقلل الحاجة إلى القوانين"
+                    ],
+                    "describe": "It helps in achieving unity and cohesion in societies",
+                    "correct": 0
+                },
+                {
+                    "question": "وفقاً للأم، ما هو سبب عدم وجود التسامح في الوقت الحالي؟",
+                    "options": [
+                        "عدم الالتزام بالأخلاق الحميدة والنهج النبوي",
+                        "كثرة التكنولوجيا",
+                        "المشاكل الاقتصادية",
+                        "الصراعات السياسية"
+                    ],
+                    "describe": "Lack of adherence to good morals and the Prophetic way",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يتضمن التسامح وفقاً للأم؟",
+                    "options": [
+                        "احترام ثقافة وعقيدة وقيم وآراء الآخرين",
+                        "فرض معتقداتك على الآخرين",
+                        "تجنب التفاعل مع الأشخاص المختلفين",
+                        "تحمل فقط من يتفق معك"
+                    ],
+                    "describe": "Respecting others' cultures, beliefs, values, and opinions",
+                    "correct": 0
+                },
+                {
+                    "question": "من روج لمفهوم التسامح؟",
+                    "options": [
+                        "كافة الرسل والأنبياء",
+                        "فقط النبي محمد",
+                        "الفلاسفة المعاصرون",
+                        "القادة السياسيون"
+                    ],
+                    "describe": "All messengers and prophets",
+                    "correct": 0
+                },
+                {
+                    "question": "على ماذا تقوم العلاقة بين الأصدقاء وفقاً لعلي؟",
+                    "options": [
+                        "الود والألفة",
+                        "المصالح المتبادلة",
+                        "المنافسة",
+                        "الهوايات المشتركة"
+                    ],
+                    "describe": "Love and affection",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يجب أن ينظر الإنسان عند اختيار صديق وفقاً لقول النبي؟",
+                    "options": [
+                        "دين وخلق الصديق",
+                        "مكانة الصديق الاجتماعية",
+                        "مظهر الصديق",
+                        "ثروة الصديق"
+                    ],
+                    "describe": "The friend's religion and character",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Friendship and Tolerance",
+            "qa": [
+                {
+                    "question": "ما صفات الصديق كما يبيّن الكاتب؟",
+                    "options": [
+                        "الشخص الذي يعرف جميع أسرارك فقط",
+                        "الشخص الذي يتمنى لك كل الخير ويخبرك بكل ما يشعر به",
+                        "الشخص الذي العلاقة معه قائمة على الود والألفة",
+                        "الشخص الذي يجمع كل الصفات السابقة مع معرفة أسرارك"
+                    ],
+                    "describe": "The friend is someone who knows all your secrets, wishes you all the best, tells you everything they feel, and the relationship is based on affection and familiarity.",
+                    "correct": 3
+                },
+                {
+                    "question": "من الصديق الصالح؟",
+                    "options": [
+                        "من يدفعك لعمل الخير فقط",
+                        "من يقربك من الله ويخاف عليك",
+                        "من لا يحسدك",
+                        "من يجمع كل هذه الصفات"
+                    ],
+                    "describe": "A good friend is one who encourages you to do good deeds, draws you closer to God, fears for you, and does not envy you.",
+                    "correct": 3
+                },
+                {
+                    "question": "ماذا قال النبيّ عليه الصلاة والسلام عن الصديق؟",
+                    "options": [
+                        "\"المرء على دين خليله، فلينظر أحدكم من يخالل\"",
+                        "\"الصديق وقت الضيق\"",
+                        "\"الصداقة أساس المجتمع\"",
+                        "\"التسامح من صفات المؤمن\""
+                    ],
+                    "describe": "The Prophet said: 'A person is upon the religion of his friend, so let one of you look at whom he befriends.'",
+                    "correct": 0
+                },
+                {
+                    "question": "ما المراد بالتسامح؟",
+                    "options": [
+                        "العفو عند المقدرة فقط",
+                        "عدم رد الإساءة بالإساءة",
+                        "مفهوم أخلاقي دعا إليه الأنبياء",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance is forgiving when able, not returning harm for harm, and a moral concept advocated by all messengers and prophets.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما فائدة التسامح؟",
+                    "options": [
+                        "تحقيق الوحدة والتماسك بين المجتمعات",
+                        "القضاء على الخلافات فقط",
+                        "احترام ثقافة الآخرين فقط",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance helps achieve unity and cohesion in societies, eliminates disputes, and means respecting others' cultures, beliefs, values, and opinions.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما سبب عدم وجود التسامح في المجتمع؟",
+                    "options": [
+                        "عدم الالتزام بالأخلاق الحميدة",
+                        "عدم اتباع النهج النبوي",
+                        "عدم الالتزام بالأخلاق الحميدة والنهج النبوي",
+                        "الاختلافات بين الناس"
+                    ],
+                    "describe": "The main reason is the lack of commitment to good morals and the prophetic approach.",
+                    "correct": 2
+                },
+                {
+                    "question": "من يسأل عن الصداقة في الحوار؟",
+                    "options": [
+                        "علي",
+                        "المعلم",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "The teacher is the one asking about friendship in the dialogue.",
+                    "correct": 1
+                },
+                {
+                    "question": "من يسأل عن التسامح في الحوار؟",
+                    "options": [
+                        "علي",
+                        "المعلم",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "Mona is the one asking about tolerance in the dialogue.",
+                    "correct": 2
+                },
+                {
+                    "question": "لماذا يجب اختيار الصديق بعناية حسب قول النبي؟",
+                    "options": [
+                        "لأنه يؤثر على دينك",
+                        "لأنه يساعدك في الحياة",
+                        "لأنه يعلمك أشياء جديدة",
+                        "لأنه يكون معك وقت الشدة"
+                    ],
+                    "describe": "Because a friend influences your religion, as per the Prophet's saying.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما الذي يشمل التسامح حسب الأم؟",
+                    "options": [
+                        "العفو عند المقدرة فقط",
+                        "احترام آراء الآخرين",
+                        "التخلي عن الأذى والعفو و احترام الآخرين",
+                        "مساعدة الآخرين"
+                    ],
+                    "describe": "Tolerance includes forgiving when able, respecting others' opinions, and abandoning the desire to harm them.",
+                    "correct": 2
+                },
+                {
+                    "question": "كيف يساعد التسامح المجتمع؟",
+                    "options": [
+                        "بتقليل الخلافات",
+                        "بتعزيز الاحترام المتبادل",
+                        "بتشجيع العفو",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance helps society by reducing disputes, promoting mutual respect, and encouraging forgiveness.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما المفهوم الأخلاقي المرتبط بالتسامح؟",
+                    "options": [
+                        "العدالة",
+                        "الصدق",
+                        "العفو",
+                        "الشجاعة"
+                    ],
+                    "describe": "The moral concept related to tolerance is forgiveness.",
+                    "correct": 2
+                },
+                {
+                    "question": "ما الذي يجعلنا بشراً حسب الأم؟",
+                    "options": [
+                        "الصداقة",
+                        "التسامح",
+                        "العلم",
+                        "القوة"
+                    ],
+                    "describe": "Tolerance is what makes us human in the end, according to the mother.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما الصفة التي لا يمتلكها الصديق الصالح؟",
+                    "options": [
+                        "الخوف عليك",
+                        "الحسد",
+                        "التشجيع على الخير",
+                        "التقرب من الله"
+                    ],
+                    "describe": "A good friend does not have envy.",
+                    "correct": 1
+                },
+                {
+                    "question": "ما الهدف من التسامح حسب الأم؟",
+                    "options": [
+                        "تحقيق الوحدة فقط",
+                        "القضاء على الخلافات فقط",
+                        "احترام الآخرين فقط",
+                        "تحقيق الوحدة والتماسك والاحترام"
+                    ],
+                    "describe": "The purpose of tolerance is to achieve unity, cohesion, and respect for others.",
+                    "correct": 3
+                }
+            ]
+        },
+        {
+            "name": "Understanding Friendship and Tolerance",
+            "qa": [
+                {
+                    "question": "ما هو تعريف الصديق وفقاً للنص؟",
+                    "options": [
+                        "الشخص الذي يعرف جميع أسرارك.",
+                        "الشخص الذي يتمنى لك كل الخير.",
+                        "الشخص الذي يخبرك بكل ما يشعر به.",
+                        "جميع ما سبق."
+                    ],
+                    "describe": "The friend is the person who knows all your secrets, wishes you all the best, and tells you everything he feels.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هي أساس العلاقة بين الأصدقاء وفقاً للنص؟",
+                    "options": [
+                        "الود والألفة",
+                        "المصلحة المتبادلة",
+                        "المنافسة الشريفة",
+                        "التباهي والتفاخر"
+                    ],
+                    "describe": "The relationship between friends is based on affection and familiarity.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هي صفات الصديق الصالح وفقاً للنص؟",
+                    "options": [
+                        "يدفعك لعمل الخير",
+                        "يقربك من الله",
+                        "يخاف عليك ولا يحسدك",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "A good friend pushes you to do good, brings you closer to God, fears for you, and does not envy you.",
+                    "correct": 3
+                },
+                {
+                    "question": "ماذا قال النبي عن اختيار الصديق؟",
+                    "options": [
+                        "\"المرء على دين خليله، فَلْيَنْظُرْ أحدكم من يخالل\"",
+                        "\"اختر الصديق قبل الطريق\"",
+                        "\"الصديق وقت الضيق\"",
+                        "\"لا تصاحب إلا مؤمناً\""
+                    ],
+                    "describe": "The Prophet said, 'A person is upon the religion of his close friend, so let one of you look at whom he befriends.'",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو تعريف التسامح وفقاً للنص؟",
+                    "options": [
+                        "العفو عند المقدرة",
+                        "عدم رد الإساءة بالإساءة",
+                        "مفهوم أخلاقي دعا إليه الرسل والأنبياء",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance is forgiving when able, not returning harm with harm, and it is a moral concept called for by messengers and prophets.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هي فوائد التسامح المذكورة في النص؟",
+                    "options": [
+                        "تحقيق الوحدة والتماسك بين المجتمعات",
+                        "القضاء على الخلافات",
+                        "احترام ثقافة وعقيدة وقيم وآراء الآخرين",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance helps achieve unity and cohesion in societies, eliminate disputes, and respect others' cultures, beliefs, values, and opinions.",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هو السبب الرئيسي لعدم وجود التسامح في الوقت الحالي وفقاً للنص؟",
+                    "options": [
+                        "عدم الالتزام بالأخلاق الحميدة والنهج النبوي",
+                        "الجهل وعدم الوعي",
+                        "التعصب والتطرف",
+                        "الفقر والحرمان"
+                    ],
+                    "describe": "The main reason is the lack of adherence to good morals and the Prophetic approach.",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يتضمن التسامح وفقاً للنص؟",
+                    "options": [
+                        "احترام ثقافة الآخرين",
+                        "احترام عقيدة الآخرين",
+                        "التخلي عن رغبة إيقاع الأذى",
+                        "جميع ما سبق"
+                    ],
+                    "describe": "Tolerance includes respecting others' cultures and beliefs and abandoning the desire to harm them.",
+                    "correct": 3
+                },
+                {
+                    "question": "من يسأل عن تعريف الصداقة في النص؟",
+                    "options": [
+                        "المعلم",
+                        "علي",
+                        "منى",
+                        "الأم"
+                    ],
+                    "describe": "The teacher asks Ali about the definition of friendship.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو الهدف من التسامح وفقاً للنص؟",
+                    "options": [
+                        "تحقيق السلام العالمي",
+                        "جعلنا بشراً في النهاية",
+                        "القضاء على جميع الاختلافات",
+                        "زيادة الثروة والازدهار"
+                    ],
+                    "describe": "Tolerance is what makes us human in the end.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Fit words",
+            "qa": [
+                {
+                    "question": "_____ الصداقة يا علي؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What is friendship, Ali?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ هو الصديق الصالح يا علي؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "Who is the good friend, Ali?",
+                    "correct": 4
+                },
+                {
+                    "question": "_____ قال النبي عليه أفضل الصلاة والتسليم عن اختيار الصديق؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What did the Prophet (peace be upon him) say about choosing a friend?",
+                    "correct": 1
+                },
+                {
+                    "question": "_____ يمكننا الحديث معاً عن التسامح؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "Can we talk together about tolerance?",
+                    "correct": 2
+                },
+                {
+                    "question": "_____ فائدة التسامح يا أمي؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What is the benefit of tolerance, Mom?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ سبب عدم وجود هذه الصفة الحميدة",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What is the reason for the absence of this good quality?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ يعرف الصديق؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What does the friend know?",
+                    "correct": 1
+                },
+                {
+                    "question": "_____ يدفعك الصديق الصالح؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What does the good friend push you to?",
+                    "correct": 1
+                },
+                {
+                    "question": "_____ هو التسامح؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "What is tolerance?",
+                    "correct": 3
+                },
+                {
+                    "question": "_____ يجب أن يخالل الإنسان؟",
+                    "options": [
+                        "كيف",
+                        "ماذا",
+                        "هل",
+                        "ما",
+                        "من",
+                        "متى"
+                    ],
+                    "describe": "Whom should a person befriend?",
+                    "correct": 4
+                }
+            ]
+        }
+    ]
+}
