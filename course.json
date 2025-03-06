@@ -135,7 +135,7 @@
                     "webview": true,
                     "qa": {},
                     "qa2":{
-                        "path":"arabic/lesson1/qa2.json",
+                        "path":"arabic/lesson1/qa2.1.json",
                         "obj":1
                     }
                 },
