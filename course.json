@@ -162,37 +162,61 @@
                     "text": "The Fouth State of Matter",
                     "path": "/eng/mod1.1.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":1
+                    }
                 },
                 {
                     "text": "Relativity",
                     "path": "/eng/mod1.2.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":2
+                    }
                 },
                 {
                     "text": "The Cure",
                     "path": "/eng/mod1.3.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":3
+                    }
                 },
                 {
                     "text": "Only an Axe Away",
                     "path": "/eng/mod1.4.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":4
+                    }
                 },
                 {
                     "text": "Nanoclay",
                     "path": "/eng/mod4.1.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":5
+                    }
                 },
                 {
                     "text": "Preface to The Reader",
                     "path": "/eng/mod4.2.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":6
+                    }
                 },
                 {
                     "text": "A Trip to Inifinity",
@@ -204,7 +228,11 @@
                     "text": "Scientific Temper by Indian Scientists",
                     "path": "/eng/mod4.4.md",
                     "webview": false,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"eng/qa2.json",
+                        "obj":7
+                    }
                 }
             ]
         },
