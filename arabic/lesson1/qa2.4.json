@@ -1,0 +1,662 @@
+{
+    "1": [
+        {
+            "name": "Fill the blanks",
+            "qa": [
+                {
+                    "question": "إني لأعرف أن في قلبك _________ ولينا",
+                    "options": [
+                        "سليمة",
+                        "قاسية",
+                        "ضعيفة",
+                        "كبيرة"
+                    ],
+                    "describe": "I know that in your heart there is purity and gentleness.",
+                    "correct": 0
+                },
+                {
+                    "question": "_________ الأمر كما أقول؟",
+                    "options": [
+                        "أليس",
+                        "أهو",
+                        "ألا",
+                        "أما"
+                    ],
+                    "describe": "Is not the matter as I say?",
+                    "correct": 0
+                },
+                {
+                    "question": "هذه السن يعجب فيها الأطفال بـ _________",
+                    "options": [
+                        "آبائهم",
+                        "أصدقائهم",
+                        "معلميهم",
+                        "ألعابهم"
+                    ],
+                    "describe": "This is the age in which children admire their fathers.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتكلف الآباء من _________ ما يُطيق ومالا يُطيق",
+                    "options": [
+                        "المشقة",
+                        "الجهد",
+                        "العمل",
+                        "المال"
+                    ],
+                    "describe": "Fathers endure hardship, what they can bear and what they cannot.",
+                    "correct": 0
+                },
+                {
+                    "question": "إنك يا ابنتي لـ _________ سليمة القلب طيبة النفس",
+                    "options": [
+                        "ساذجة",
+                        "ذكية",
+                        "شجاعة",
+                        "جميلة"
+                    ],
+                    "describe": "You, my daughter, are naive, pure of heart, and kind of soul.",
+                    "correct": 0
+                },
+                {
+                    "question": "أنتِ في _________ من عُمرك",
+                    "options": [
+                        "التاسعة",
+                        "الثامنة",
+                        "العاشرة",
+                        "السابعة"
+                    ],
+                    "describe": "You are in the ninth year of your age.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتخذونهم _________ في الحياة",
+                    "options": [
+                        "مثلا عليا",
+                        "أصدقاء",
+                        "معلمين",
+                        "قادة"
+                    ],
+                    "describe": "They take them as higher examples in life.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتأثرونهم في _________ والعمل",
+                    "options": [
+                        "القول",
+                        "السلوك",
+                        "التفكير",
+                        "اللباس"
+                    ],
+                    "describe": "They are influenced by them in speech and action.",
+                    "correct": 0
+                },
+                {
+                    "question": "يحاولون أن يكونوا _________ في كل شيء",
+                    "options": [
+                        "مثلهم",
+                        "أفضل منهم",
+                        "مختلفين عنهم",
+                        "بعيدين عنهم"
+                    ],
+                    "describe": "They try to be like them in everything.",
+                    "correct": 0
+                },
+                {
+                    "question": "يفاخرون _________ إذا تحدثوا إلى أقرانهم",
+                    "options": [
+                        "بهم",
+                        "بأنفسهم",
+                        "بألعابهم",
+                        "بملابسهم"
+                    ],
+                    "describe": "They boast about them when they talk to their peers.",
+                    "correct": 0
+                },
+                {
+                    "question": "يخيل إليهم أنهم كانوا أثناء _________ كما هم الآن",
+                    "options": [
+                        "طفولتهم",
+                        "شبابهم",
+                        "كهولتهم",
+                        "شيخوختهم"
+                    ],
+                    "describe": "It seems to them that they were during their childhood as they are now.",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ ترين أن أباكِ _________ الرجال وأكرمهم؟",
+                    "options": [
+                        "خير",
+                        "شر",
+                        "أقوى",
+                        "أغنى"
+                    ],
+                    "describe": "Do you not see that your father is the best and most honorable of men?",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ مقتنعة أنه كان يعيش _________ مما تعيشين؟",
+                    "options": [
+                        "خيرا",
+                        "أسوأ",
+                        "مثلا",
+                        "أقل"
+                    ],
+                    "describe": "Are you not convinced that he lived better than you live?",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ تحبين أن تعيشي الآن كما كان يعيش أبوكِ حين كان في _________ من عمره؟",
+                    "options": [
+                        "الثامنة",
+                        "التاسعة",
+                        "العاشرة",
+                        "السابعة"
+                    ],
+                    "describe": "Do you not love to live now as your father lived when he was in the eighth year of his age?",
+                    "correct": 0
+                },
+                {
+                    "question": "ومع ذلك فإن أباكِ يبذل من الجهد ما يملك وما _________",
+                    "options": [
+                        "لايملك",
+                        "يملك",
+                        "يستطيع",
+                        "يحب"
+                    ],
+                    "describe": "Nevertheless, your father exerts effort, what he possesses and what he does not possess.",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Rewrite in order as a sentence",
+            "qa": [
+                {
+                    "question": "القلب - سليمة - ابنتي - النفس - طيبة",
+                    "options": [
+                        "ابنتي سليمة القلب طيبة النفس",
+                        "سليمة ابنتي القلب طيبة النفس",
+                        "القلب سليمة ابنتي طيبة النفس",
+                        "طيبة النفس سليمة القلب ابنتي"
+                    ],
+                    "describe": "My daughter has a sound heart and a good soul.",
+                    "correct": 0
+                },
+                {
+                    "question": "أنت - من عمرك - التاسعة - في",
+                    "options": [
+                        "أنتِ في التاسعة من عمرك",
+                        "في التاسعة أنت من عمرك",
+                        "من عمرك أنت في التاسعة",
+                        "التاسعة من عمرك في أنت"
+                    ],
+                    "describe": "You are nine years old.",
+                    "correct": 0
+                },
+                {
+                    "question": "ما يملك - من الجهد - يبذل - إن أباك",
+                    "options": [
+                        "إن أباكِ يبذل من الجهد ما يملك",
+                        "ما يملك إن أباك يبذل من الجهد",
+                        "يبذل إن أباك من الجهد ما يملك",
+                        "من الجهد يبذل إن أباك ما يملك"
+                    ],
+                    "describe": "Indeed, your father exerts effort to the best of his ability.",
+                    "correct": 0
+                },
+                {
+                    "question": "من الحياة - هذا الطور - اللذيذ - أنت في",
+                    "options": [
+                        "أنتِ في هذا الطور اللذيذ من الحياة",
+                        "من الحياة أنت في هذا الطور اللذيذ",
+                        "هذا الطور اللذيذ أنت في من الحياة",
+                        "اللذيذ من الحياة أنت في هذا الطور"
+                    ],
+                    "describe": "You are in this delightful stage of life.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتخذونهم - مثلا - عليا - في - الحياة",
+                    "options": [
+                        "يتخذونهم مثلا عليا في الحياة",
+                        "مثلا عليا يتخذونهم في الحياة",
+                        "في الحياة يتخذونهم مثلا عليا",
+                        "عليا في الحياة يتخذونهم مثلا"
+                    ],
+                    "describe": "They take them as highest examples in life.",
+                    "correct": 0
+                },
+                {
+                    "question": "يتأثرونهم - في - القول - والعمل",
+                    "options": [
+                        "يتأثرونهم في القول والعمل",
+                        "في القول والعمل يتأثرونهم",
+                        "القول والعمل في يتأثرونهم",
+                        "يتأثرونهم القول في والعمل"
+                    ],
+                    "describe": "They are influenced by them in speech and action.",
+                    "correct": 0
+                },
+                {
+                    "question": "ويحاولون - أن - يكونوا - مثلهم - في - كل - شيء",
+                    "options": [
+                        "ويحاولون أن يكونوا مثلهم في كل شيء",
+                        "أن يكونوا ويحاولون مثلهم في كل شيء",
+                        "في كل شيء ويحاولون أن يكونوا مثلهم",
+                        "مثلهم في كل شيء ويحاولون أن يكونوا"
+                    ],
+                    "describe": "And they try to be like them in everything.",
+                    "correct": 0
+                },
+                {
+                    "question": "يفاخرون - بهم - إذا - تحدثوا - إلى - أقرانهم",
+                    "options": [
+                        "يفاخرون بهم إذا تحدثوا إلى أقرانهم",
+                        "إذا تحدثوا إلى أقرانهم يفاخرون بهم",
+                        "بهم يفاخرون إذا تحدثوا إلى أقرانهم",
+                        "تحدثوا إلى أقرانهم إذا يفاخرون بهم"
+                    ],
+                    "describe": "They boast about them when they speak to their peers.",
+                    "correct": 0
+                },
+                {
+                    "question": "يخيل - إليهم - أنهم - كانوا - كما - هم - الآن",
+                    "options": [
+                        "يخيل إليهم أنهم كانوا كما هم الآن",
+                        "أنهم كانوا يخيل إليهم كما هم الآن",
+                        "كما هم الآن يخيل إليهم أنهم كانوا",
+                        "الآن كما هم كانوا أنهم يخيل إليهم"
+                    ],
+                    "describe": "It seems to them that they (the parents) were as they are now.",
+                    "correct": 0
+                },
+                {
+                    "question": "الأمر - كما - أقول - أليس",
+                    "options": [
+                        "أليس الأمر كما أقول",
+                        "كما أقول أليس الأمر",
+                        "الأمر أليس كما أقول",
+                        "أقول كما الأمر أليس"
+                    ],
+                    "describe": "Is not the matter as I say?",
+                    "correct": 0
+                },
+                {
+                    "question": "ألستِ - ترين - أن - أباكِ - خير - الرجال - وأكرمهم",
+                    "options": [
+                        "ألستِ ترين أن أباكِ خير الرجال وأكرمهم",
+                        "ترين ألستِ أن أباكِ خير الرجال وأكرمهم",
+                        "أن أباكِ خير الرجال وأكرمهم ألستِ ترين",
+                        "خير الرجال وأكرمهم ألستِ ترين أن أباكِ"
+                    ],
+                    "describe": "Do you not see that your father is the best and most honorable of men?",
+                    "correct": 0
+                },
+                {
+                    "question": "ولد - في - محافظة - المنيا - بمصر - عام - ١٨٨٩م",
+                    "options": [
+                        "ولد في محافظة المنيا بمصر عام ١٨٨٩م",
+                        "في محافظة المنيا ولد بمصر عام ١٨٨٩م",
+                        "عام ١٨٨٩م ولد في محافظة المنيا بمصر",
+                        "بمصر ولد في محافظة المنيا عام ١٨٨٩م"
+                    ],
+                    "describe": "He was born in the province of Minya in Egypt in the year 1889.",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Answer the questions",
+            "qa": [
+                {
+                    "question": "لمن يخاطب طه حسين؟",
+                    "options": [
+                        "إلى زوجته",
+                        "إلى ابنه",
+                        "إلى ابنته",
+                        "إلى صديقه"
+                    ],
+                    "describe": "To his daughter",
+                    "correct": 2
+                },
+                {
+                    "question": "ما صفات ابنة الكاتب؟",
+                    "options": [
+                        "ساذجة وسليمة القلب وطيبة النفس",
+                        "ذكية ومثابرة",
+                        "شجاعة وقوية",
+                        "كسولة ومهملة"
+                    ],
+                    "describe": "Naive, pure-hearted, and kind-spirited",
+                    "correct": 0
+                },
+                {
+                    "question": "فيم يتخذ الأطفال آباءهم مثلا عليا؟",
+                    "options": [
+                        "في القول والعمل",
+                        "في اللباس والمظهر",
+                        "في الهوايات والاهتمامات",
+                        "في الدراسة والعمل"
+                    ],
+                    "describe": "In speech and action",
+                    "correct": 0
+                },
+                {
+                    "question": "لماذا يبذل الآباء الجهد والمشقة في حياتهم؟",
+                    "options": [
+                        "ليجنبوا أطفالهم حياتهم الصعبة",
+                        "ليكسبوا المال والثروة",
+                        "ليحققوا أحلامهم الشخصية",
+                        "ليكونوا مشهورين ومعروفين"
+                    ],
+                    "describe": "To spare their children their difficult lives",
+                    "correct": 0
+                },
+                {
+                    "question": "كم عمر ابنة طه حسين؟",
+                    "options": [
+                        "سبع سنوات",
+                        "ثماني سنوات",
+                        "تسع سنوات",
+                        "عشر سنوات"
+                    ],
+                    "describe": "Nine years",
+                    "correct": 2
+                },
+                {
+                    "question": "كيف ينظر الأطفال إلى آبائهم في هذا العمر؟",
+                    "options": [
+                        "يعجبون بهم ويتخذونهم مثلا عليا",
+                        "يخافون منهم ويطيعونهم",
+                        "يتجاهلونهم ولا يهتمون بهم",
+                        "ينافسونهم ويحاولون التفوق عليهم"
+                    ],
+                    "describe": "They admire them and take them as role models",
+                    "correct": 0
+                },
+                {
+                    "question": "ماذا يعتقد طه حسين عن طفولته؟",
+                    "options": [
+                        "كانت طفولته سعيدة ومثالية",
+                        "كانت طفولته صعبة ومليئة بالتحديات",
+                        "كانت طفولته عادية ولا تختلف عن الآخرين",
+                        "كانت طفولته مليئة بالمغامرات والإثارة"
+                    ],
+                    "describe": "His childhood was difficult and full of challenges",
+                    "correct": 1
+                },
+                {
+                    "question": "لماذا لا يريد طه حسين أن يحدث ابنته عن طفولته الآن؟",
+                    "options": [
+                        "لأنها صغيرة ولا تفهم",
+                        "لأنه يخجل من طفولته",
+                        "لأنه يريد أن يحافظ على صورته المثالية في عينيها",
+                        "لأنه ينتظر حتى تكبر وتستطيع أن تفهم وتحكم"
+                    ],
+                    "describe": "Because he is waiting until she grows up and can understand and judge",
+                    "correct": 3
+                },
+                {
+                    "question": "ما هو الهدف من جهود طه حسين لابنته؟",
+                    "options": [
+                        "ليجعلها تعيش حياة أفضل من حياته",
+                        "ليعلّمها دروس الحياة",
+                        "ليحميها من المخاطر",
+                        "ليجعلها مشهورة وناجحة"
+                    ],
+                    "describe": "To make her live a better life than his",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو الكتاب الذي اقتبس منه هذا النص؟",
+                    "options": [
+                        "الأيام",
+                        "دعاء الكروان",
+                        "المعذبون في الأرض",
+                        "حديث الأربعاء"
+                    ],
+                    "describe": "The Days",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو اللقب الذي اشتهر به طه حسين؟",
+                    "options": [
+                        "عميد الأدب العربي",
+                        "شيخ الأزهر",
+                        "أمير الشعراء",
+                        "المفكر العربي"
+                    ],
+                    "describe": "The Dean of Arabic Literature",
+                    "correct": 0
+                },
+                {
+                    "question": "ما هو أحد مؤلفات طه حسين الأخرى؟",
+                    "options": [
+                        "دعاء الكروان",
+                        "رواية البؤساء",
+                        "ديوان المتنبي",
+                        "كتاب الأغاني"
+                    ],
+                    "describe": "The Call of the Curlew",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Choosing the Correct Question",
+            "qa": [
+                {
+                    "question": "أنتِ في التاسعة من عُمرك",
+                    "options": [
+                        "كم عمركِ؟",
+                        "كم عمر أبيكِ؟",
+                        "في أي سنة ولدتِ؟",
+                        "كم عمر أخيكِ؟"
+                    ],
+                    "describe": "You are in your ninth year",
+                    "correct": 0
+                },
+                {
+                    "question": "الأطفال يعجبون بآبائهم وأمهاتهم",
+                    "options": [
+                        "بمن يعجب الأطفال؟",
+                        "بمن يعجب الآباء؟",
+                        "ماذا يحب الأطفال؟",
+                        "من يعجب بالأطفال؟"
+                    ],
+                    "describe": "Children admire their fathers and mothers",
+                    "correct": 0
+                },
+                {
+                    "question": "الأطفال يتخذونهم مثلا عليا في الحياة",
+                    "options": [
+                        "من يتخذ الأطفال مثلا عليا؟",
+                        "ماذا يتخذ الآباء مثلا عليا؟",
+                        "لماذا يتخذ الأطفال آباءهم مثلا؟",
+                        "كيف يتخذ الأطفال آباءهم مثلا؟"
+                    ],
+                    "describe": "Children take them as role models in life",
+                    "correct": 0
+                },
+                {
+                    "question": "أبوكِ يبذل من الجهد ما يملك وما لايملك",
+                    "options": [
+                        "ماذا يفعل أبوكِ؟",
+                        "أين يعمل أبوكِ؟",
+                        "من هو أبوكِ؟",
+                        "لماذا يحبكِ أبوكِ؟"
+                    ],
+                    "describe": "Your father exerts effort to the best of his ability and beyond",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين ولد في محافظة المنيا",
+                    "options": [
+                        "أين ولد طه حسين؟",
+                        "أين درس طه حسين؟",
+                        "أين عاش طه حسين؟",
+                        "أين توفي طه حسين؟"
+                    ],
+                    "describe": "Taha Hussein was born in Minya Governorate",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين أصيب بمرض في عينيه وهو صغير",
+                    "options": [
+                        "ماذا أصاب طه حسين وهو صغير؟",
+                        "متى أصيب طه حسين بمرض في عينيه؟",
+                        "لماذا أصيب طه حسين بمرض في عينيه؟",
+                        "كيف أصيب طه حسين بمرض في عينيه؟"
+                    ],
+                    "describe": "Taha Hussein contracted a disease in his eyes when he was young",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين فقد بصره",
+                    "options": [
+                        "ماذا فقد طه حسين؟",
+                        "لماذا فقد طه حسين بصره؟",
+                        "متى فقد طه حسين بصره؟",
+                        "كيف فقد طه حسين بصره؟"
+                    ],
+                    "describe": "Taha Hussein lost his sight",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين التحق بكتاب قريته",
+                    "options": [
+                        "أين التحق طه حسين في بداية تعليمه؟",
+                        "متى التحق طه حسين بكتاب قريته؟",
+                        "لماذا التحق طه حسين بكتاب قريته؟",
+                        "ماذا درس طه حسين في كتاب قريته؟"
+                    ],
+                    "describe": "Taha Hussein joined the village kuttab",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين سافر إلى جامعة الأزهر",
+                    "options": [
+                        "إلى أين سافر طه حسين ليكمل دراسته؟",
+                        "متى سافر طه حسين إلى جامعة الأزهر؟",
+                        "لماذا سافر طه حسين إلى جامعة الأزهر؟",
+                        "ماذا درس طه حسين في جامعة الأزهر؟"
+                    ],
+                    "describe": "Taha Hussein traveled to Al-Azhar University",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين التحق بالجامعة المصرية",
+                    "options": [
+                        "بأي جامعة التحق طه حسين بعد الأزهر؟",
+                        "متى التحق طه حسين بالجامعة المصرية؟",
+                        "لماذا التحق طه حسين بالجامعة المصرية؟",
+                        "ماذا درس طه حسين في الجامعة المصرية؟"
+                    ],
+                    "describe": "Taha Hussein joined the Egyptian University",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين كتب رسالة الدكتوراه عن أبي العلاء المعري",
+                    "options": [
+                        "عن من كتب طه حسين رسالة الدكتوراه؟",
+                        "متى كتب طه حسين رسالة الدكتوراه؟",
+                        "لماذا كتب طه حسين رسالة الدكتوراه عن أبي العلاء المعري؟",
+                        "أين كتب طه حسين رسالة الدكتوراه؟"
+                    ],
+                    "describe": "Taha Hussein wrote his doctoral thesis on Abu al-Ala al-Ma'arri",
+                    "correct": 0
+                },
+                {
+                    "question": "طه حسين تزوج السيدة 'سوزان'",
+                    "options": [
+                        "من تزوج طه حسين؟",
+                        "متى تزوج طه حسين؟",
+                        "لماذا تزوج طه حسين السيدة سوزان؟",
+                        "أين تزوج طه حسين؟"
+                    ],
+                    "describe": "Taha Hussein married Mrs. Suzanne",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Choosing the Correct Plural Form",
+            "qa": [
+              {
+                "question": "What is the plural of قرين?",
+                "options": ["أقران", "قرائن", "قرون", "قرناء"],
+                "describe": "أقران means 'companions'.",
+                "correct": 0
+              },
+              {
+                "question": "What is the plural of طفل?",
+                "options": ["طفول", "أطفال", "أطفلة", "طفال"],
+                "describe": "أطفال means 'children'.",
+                "correct": 1
+              },
+              {
+                "question": "What is the plural of أب?",
+                "options": ["أباء", "أبوة", "آباء", "أبون"],
+                "describe": "آباء means 'fathers'.",
+                "correct": 2
+              },
+              {
+                "question": "What is the plural of أم?",
+                "options": ["أمات", "أماء", "أموم", "أمهات"],
+                "describe": "أمهات means 'mothers'.",
+                "correct": 3
+              },
+              {
+                "question": "What is the plural of قلب?",
+                "options": ["قلوب", "قلبان", "قلوبت", "قلاب"],
+                "describe": "قلوب means 'hearts'.",
+                "correct": 0
+              },
+              {
+                "question": "What is the plural of نفس?",
+                "options": ["أنفاس", "نفوس", "أنفس", "نفساء"],
+                "describe": "أنفس means 'souls' or 'selves'.",
+                "correct": 2
+              },
+              {
+                "question": "What is the plural of ابن?",
+                "options": ["ابنان", "أبنة", "ابنون", "أبناء"],
+                "describe": "أبناء means 'sons'.",
+                "correct": 3
+              },
+              {
+                "question": "What is the plural of رجل?",
+                "options": ["رجال", "رجول", "رجلان", "رجالة"],
+                "describe": "رجال means 'men'.",
+                "correct": 0
+              },
+              {
+                "question": "What is the plural of صبي?",
+                "options": ["صبوة", "صبيانة", "صبوان", "صبيان"],
+                "describe": "صبيان means 'boys'.",
+                "correct": 3
+              },
+              {
+                "question": "What is the plural of طور?",
+                "options": ["طوار", "طوران", "أطوار", "طوران"],
+                "describe": "أطوار means 'phases' or 'stages'.",
+                "correct": 2
+              },
+              {
+                "question": "What is the plural of باب?",
+                "options": ["بابات", "بابان", "أباب", "أبواب"],
+                "describe": "أبواب means 'doors'.",
+                "correct": 3
+              },
+              {
+                "question": "What is the plural of كتاب?",
+                "options": ["كتابات", "كتابان", "أكتاب", "كتب"],
+                "describe": "كتب means 'books'.",
+                "correct": 3
+              }
+            ]
+          }
+    ]
+}

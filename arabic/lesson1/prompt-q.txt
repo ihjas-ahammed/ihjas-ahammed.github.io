@@ -27,22 +27,23 @@
 }
 
 
-create 12 questions like below from the content given below including the 4 quetions below and write a json file in above format, in the describe part simply give the english meaning of the answer:
-as for section name give english of the title of questions
+create 12 problems like below from the content given below including the 4 quetions below and write a json file in above format, in the describe part simply give the english meaning of the answer:
+as for section name give english of the title of problems like what to do in them  keep signs in arabic for better reading
 
-questions
-د) أجب عن الأسئلة الآتية :
+problem
 
 
-١. لمن يخاطب طه حسين ؟
+**ز) اكتب الجموع للمفردات الآتية:**
 
-٢. ما صفات ابنة الكاتب ؟
+**قرين، طفل، أب، أم، قلب، نفس، ابن، رجل، صبي، طور، باب**
 
-٣. فيم يتخذ الأطفال آباءهم مثلا عليا ؟
 
-٤. لماذا يبذل الآباء الجهد والمشقة في حياتهم ؟
+The exercise requires you to provide the **plural forms** of these Arabic words.
+ask them with options in our json no new words are needed just these 
+
 
 content
+
 
 الوحدة الأولى
 
