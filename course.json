@@ -153,7 +153,11 @@
                     "text": "The Father and Son",
                     "path": "/arabic/lesson3/",
                     "webview": true,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"arabic/lesson3/qa2.json",
+                        "obj":1
+                    }
                 },
                 {
                     "text": "Morality",

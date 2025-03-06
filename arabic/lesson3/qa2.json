@@ -1,0 +1,311 @@
+{
+    "1": [
+        {
+            "name": "Understanding and Comprehension",
+            "qa": [
+                {
+                    "question": "أين جلس الأب العجوز؟",
+                    "options": [
+                        "بجوار الباب",
+                        "بجوار النافذة",
+                        "على الكرسي",
+                        "في الحديقة"
+                    ],
+                    "describe": "The old father sat by the window.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا سمع الأب؟",
+                    "options": [
+                        "صوت الريح",
+                        "صوت المطر",
+                        "صوت بلبل جميل",
+                        "صوت السيارات"
+                    ],
+                    "describe": "The father heard the sound of a beautiful nightingale.",
+                    "correct": 2
+                },
+                {
+                    "question": "من يجلس بجانب الأب؟",
+                    "options": [
+                        "زوجته",
+                        "ابنه",
+                        "جاره",
+                        "صديقه"
+                    ],
+                    "describe": "His son is sitting next to the father.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا يفعل الابن؟",
+                    "options": [
+                        "يقرأ كتابًا",
+                        "يشاهد التلفاز",
+                        "يلعب بالهاتف",
+                        "يحدق في شاشة الحاسوب"
+                    ],
+                    "describe": "The son is staring at the laptop screen.",
+                    "correct": 3
+                },
+                {
+                    "question": "ماذا سأل الأب ابنه مرارًا؟",
+                    "options": [
+                        "ما هذا الصوت؟",
+                        "أين أنت؟",
+                        "ماذا تفعل؟",
+                        "هل أنت جائع؟"
+                    ],
+                    "describe": "The father repeatedly asked, 'What is this sound?'",
+                    "correct": 0
+                },
+                {
+                    "question": "كيف كان رد فعل الابن عندما سأله الأب نفس السؤال عدة مرات؟",
+                    "options": [
+                        "فرح",
+                        "امتعض",
+                        "ضحك",
+                        "بكى"
+                    ],
+                    "describe": "The son was annoyed.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا طلب الأب من ابنه أن يحضره؟",
+                    "options": [
+                        "كتابه",
+                        "مفكرته القديمة",
+                        "هاتفه",
+                        "نظارته"
+                    ],
+                    "describe": "The father asked his son to bring his old notebook.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا كان مكتوبًا في المفكرة؟",
+                    "options": [
+                        "عن يوم في المدرسة",
+                        "عن يوم في الحديقة مع الابن",
+                        "عن يوم في العمل",
+                        "عن يوم في السوق"
+                    ],
+                    "describe": "It was about a day in the park with the son.",
+                    "correct": 1
+                },
+                {
+                    "question": "كم كان عمر الابن عندما حدثت الواقعة المذكورة في المفكرة؟",
+                    "options": [
+                        "سنة واحدة",
+                        "ثلاثة أعوام",
+                        "خمسة أعوام",
+                        "عشرة أعوام"
+                    ],
+                    "describe": "The son was three years old.",
+                    "correct": 1
+                },
+                {
+                    "question": "ماذا فعل الأب والابن في الحديقة وفقًا للمفكرة؟",
+                    "options": [
+                        "أكلا الطعام",
+                        "لعبوا وضحكوا",
+                        "قرأوا كتابًا",
+                        "ناموا"
+                    ],
+                    "describe": "They played and laughed.",
+                    "correct": 1
+                },
+                {
+                    "question": "كم مرة سأل الابن عن الطائر في المفكرة؟",
+                    "options": [
+                        "مرة واحدة",
+                        "مرتين",
+                        "عشر مرات",
+                        "ما يقارب من عشرين مرة"
+                    ],
+                    "describe": "The son asked about the bird about twenty times.",
+                    "correct": 3
+                },
+                {
+                    "question": "لماذا طلب الأب من ابنه قراءة المفكرة؟",
+                    "options": [
+                        "ليتذكر الأب اليوم",
+                        "ليذكر الابن بصبر الأب عليه",
+                        "ليقرأ الابن قصة",
+                        "ليضحكوا معًا"
+                    ],
+                    "describe": "To remind the son of the father's patience with him when he was young.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Translation of sentences from 'The Father and His Son'",
+            "qa": [
+                {
+                    "question": "جلس الأب العجوز بجوار النافذة فسمع صوت بلبل جميل",
+                    "options": [
+                        "The old father sat by the window and heard a beautiful nightingale's sound.",
+                        "The old father sat near the door and heard a beautiful bird's sound.",
+                        "The young father sat by the window and saw a beautiful nightingale.",
+                        "The old man stood by the window and heard a loud nightingale's sound."
+                    ],
+                    "describe": "The old father sat by the window and heard a beautiful nightingale's sound.",
+                    "correct": 0
+                },
+                {
+                    "question": "كان الابن يجلس إلى جانب الأب محدقاً في شاشة جهاز الحاسوب المحمول",
+                    "options": [
+                        "The son was sitting next to the father, staring at the screen of the laptop.",
+                        "The son was standing next to the father, looking at the computer screen.",
+                        "The father was sitting next to the son, staring at the laptop screen.",
+                        "The son was sitting next to the father, playing on the laptop."
+                    ],
+                    "describe": "The son was sitting next to the father, staring at the screen of the laptop.",
+                    "correct": 0
+                },
+                {
+                    "question": "أجاب الابن دون أن يرفع رأسه: إنه صوت بلبل يا أبي.",
+                    "options": [
+                        "The son answered without raising his head: It's the sound of a nightingale, father.",
+                        "The son replied without looking up: It's a bird's sound, father.",
+                        "The son answered while raising his head: It's the sound of a nightingale, father.",
+                        "The father answered: It's the sound of a nightingale, my son."
+                    ],
+                    "describe": "The son answered without raising his head: It's the sound of a nightingale, father.",
+                    "correct": 0
+                },
+                {
+                    "question": "صمت الأب قليلاً ثم كرّر السؤال قائلاً: ما هذا الصوت في الخارج؟",
+                    "options": [
+                        "The father was silent for a little while then repeated the question saying: What is this sound outside?",
+                        "The father spoke for a little while then asked again: What is this sound outside?",
+                        "The son was silent for a little while then repeated the question: What is this sound outside?",
+                        "The father was silent and then said: What is that noise outside?"
+                    ],
+                    "describe": "The father was silent for a little while then repeated the question saying: What is this sound outside?",
+                    "correct": 0
+                },
+                {
+                    "question": "ذهب الابن وأحضر المفكرة، ففتحها الأب على صفحة وطلب من ابنه قراءتها.",
+                    "options": [
+                        "The son went and brought the notebook, so the father opened it to a page and asked his son to read it.",
+                        "The son went and brought the book, so the father opened it and read it himself.",
+                        "The father went and brought the notebook, then asked his son to open it and read it.",
+                        "The son brought the notebook, and the father asked him to write in it."
+                    ],
+                    "describe": "The son went and brought the notebook, so the father opened it to a page and asked his son to read it.",
+                    "correct": 0
+                },
+                {
+                    "question": "فسأل الأب : ما هذا الصوت يا بني؟",
+                    "options": [
+                        "So the father asked: What is this sound, my son?",
+                        "So the father said: What is this noise, my son?",
+                        "So the son asked: What is this sound, father?",
+                        "So the father asked: Who is making this sound, my son?"
+                    ],
+                    "describe": "So the father asked: What is this sound, my son?",
+                    "correct": 0
+                },
+                {
+                    "question": "بعد فترة قصيرة سأل الأب ثانية : ما هذا الصوت يا بني؟",
+                    "options": [
+                        "After a short period, the father asked again: What is this sound, my son?",
+                        "After a long time, the father asked again: What is this sound, my son?",
+                        "After a short period, the son asked again: What is this sound, father?",
+                        "After a short period, the father asked: What is that noise, my son?"
+                    ],
+                    "describe": "After a short period, the father asked again: What is this sound, my son?",
+                    "correct": 0
+                },
+                {
+                    "question": "فأجاب الابن : إنه صوت البلبل.",
+                    "options": [
+                        "So the son answered: It's the sound of the nightingale.",
+                        "So the son said: It's a bird's sound.",
+                        "So the father answered: It's the sound of the nightingale.",
+                        "So the son answered: It's the sound of a sparrow."
+                    ],
+                    "describe": "So the son answered: It's the sound of the nightingale.",
+                    "correct": 0
+                },
+                {
+                    "question": "فرد الابن عليه متعضاً : إنه صوت بلبل، ألم أقل لك هذا من قبل؟!",
+                    "options": [
+                        "So the son replied to him annoyed: It's the sound of a nightingale, didn't I tell you this before?!",
+                        "So the son answered happily: It's the sound of a nightingale, I told you this before.",
+                        "So the father replied annoyed: It's the sound of a nightingale, didn't I tell you this before?!",
+                        "So the son replied: It's a bird's sound, didn't I tell you this earlier?"
+                    ],
+                    "describe": "So the son replied to him annoyed: It's the sound of a nightingale, didn't I tell you this before?!",
+                    "correct": 0
+                },
+                {
+                    "question": "فصمت الأب وبعد مدة قليلة قال حزيناً : أحضر لي مفكرتي القديمة من الغرفة لو سمحت.",
+                    "options": [
+                        "So the father was silent and after a little while said sadly: Bring me my old notebook from the room, please.",
+                        "So the father spoke and after a while said happily: Bring me my new notebook from the room, please.",
+                        "So the son was silent and after a little while said sadly: Bring me my old notebook from the room, please.",
+                        "So the father was silent and then said: Give me my old notebook from the room."
+                    ],
+                    "describe": "So the father was silent and after a little while said sadly: Bring me my old notebook from the room, please.",
+                    "correct": 0
+                },
+                {
+                    "question": "فقرأ الابن: في هذا اليوم أتم ابني ثلاثة أعوام.",
+                    "options": [
+                        "So the son read: On this day, my son turned three years old.",
+                        "So the son read: Today, my son is three years old.",
+                        "So the father read: On this day, my son turned three years old.",
+                        "So the son read: On this day, I turned three years old."
+                    ],
+                    "describe": "So the son read: On this day, my son turned three years old.",
+                    "correct": 0
+                },
+                {
+                    "question": "وقد أخذته إلى الحديقة، فرأى بلبلاً وسألني ما هذا الطائر يا أبي؟",
+                    "options": [
+                        "And I took him to the garden, so he saw a nightingale and asked me what is this bird, father?",
+                        "And I took him to the park, so he saw a bird and asked me what is this animal, father?",
+                        "And he took me to the garden, so I saw a nightingale and asked him what is this bird?",
+                        "And I took him to the garden, so he heard a nightingale and asked me what is this sound, father?"
+                    ],
+                    "describe": "And I took him to the garden, so he saw a nightingale and asked me what is this bird, father?",
+                    "correct": 0
+                },
+                {
+                    "question": "فأجبته بأنه بلبل،",
+                    "options": [
+                        "So I answered him that it's a nightingale,",
+                        "So I told him it's a bird,",
+                        "So he answered me that it's a nightingale,",
+                        "So I answered him that it's a sparrow,"
+                    ],
+                    "describe": "So I answered him that it's a nightingale,",
+                    "correct": 0
+                },
+                {
+                    "question": "وظل يكرر السؤال نفسه وأجيبه دون ملل ما يقارب من عشرين مرة،",
+                    "options": [
+                        "And he kept repeating the same question and I answered him without boredom about twenty times,",
+                        "And he kept asking different questions and I answered him patiently about twenty times,",
+                        "And I kept repeating the same answer without him asking, about twenty times,",
+                        "And he kept repeating the question and I got bored after twenty times,"
+                    ],
+                    "describe": "And he kept repeating the same question and I answered him without boredom about twenty times,",
+                    "correct": 0
+                },
+                {
+                    "question": "وظللنا نضحك ونمرح ونلعب سوياً حتى أنهكه التعب وعدنا إلى المنزل.",
+                    "options": [
+                        "And we kept laughing and having fun and playing together until he was exhausted and we returned home.",
+                        "And we kept laughing and playing until I was tired and we went back home.",
+                        "And he kept laughing and playing alone until he was exhausted and came back home.",
+                        "And we kept working and studying together until he was tired and we returned home."
+                    ],
+                    "describe": "And we kept laughing and having fun and playing together until he was exhausted and we returned home.",
+                    "correct": 0
+                }
+            ]
+        }
+    ]
+}
