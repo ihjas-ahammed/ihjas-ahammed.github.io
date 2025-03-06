@@ -130,25 +130,37 @@
             "title": "Arabic",
             "modules": [
                 {
-                    "text": "Lesson 1",
+                    "text": "Arabic Litrature",
                     "path": "/arabic/lesson1/",
                     "webview": true,
                     "qa": {}
                 },
                 {
-                    "text": "Lesson 2",
+                    "text": "Nature",
                     "path": "/arabic/lesson2/",
                     "webview": true,
                     "qa": {}
                 },
                 {
-                    "text": "Lesson 5",
+                    "text": "The Father and Son",
+                    "path": "/arabic/lesson3/",
+                    "webview": true,
+                    "qa": {}
+                },
+                {
+                    "text": "Morality",
+                    "path": "/arabic/lesson4/",
+                    "webview": true,
+                    "qa": {}
+                },
+                {
+                    "text": "The Patient's Clinic",
                     "path": "/arabic/lesson5/",
                     "webview": true,
                     "qa": {}
                 },
                 {
-                    "text": "Lesson 7",
+                    "text": "Friendship",
                     "path": "/arabic/lesson7/",
                     "webview": true,
                     "qa": {}

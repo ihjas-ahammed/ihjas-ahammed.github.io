@@ -1,0 +1,52 @@
+[
+  {
+    "sentence": "الوحدة الأولى",
+    "meaning": "Unit One",
+    "words": [
+      {
+        "word": "الوحدة",
+        "meaning": "Unit"
+      },
+      {
+        "word": "الأولى",
+        "meaning": "First"
+      }
+    ]
+  },
+  {
+    "sentence": "إلى ابنتي - طه حسين",
+    "meaning": "To my daughter - Taha Hussein",
+    "words": [
+      {
+        "word": "ابنتي",
+        "meaning": "my daughter"
+      },
+      {
+        "word": "طه حسين",
+        "meaning": "Taha Hussein"
+      }
+    ]
+  },
+  {
+    "sentence": "إنك يا ابنتي لساذجة سليمة القلب طيبة النفس",
+    "meaning": "My daughter, you are naive, pure of heart, and good-natured",
+    "words": [
+      {
+        "word": "لساذجة",
+        "meaning": "naive"
+      },
+      {
+        "word": "سليمة القلب",
+        "meaning": "pure of heart"
+      },
+      {
+        "word": "طيبة النفس",
+        "meaning": "good-natured"
+      }
+    ]
+  }
+  
+]
+
+create a json in above format for the following:
+

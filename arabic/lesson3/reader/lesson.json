@@ -1,0 +1,180 @@
+[
+  {
+    "sentence": "الوحدة :٣",
+    "meaning": "Unit: 3",
+    "words": [
+      {
+        "word": "الوحدة",
+        "meaning": "Unit"
+      },
+      {
+        "word": "٣",
+        "meaning": "3"
+      }
+    ]
+  },
+  {
+    "sentence": "الأَبُ وَابْنُهُ",
+    "meaning": "The Father and His Son",
+    "words": [
+      {
+        "word": "الأَبُ",
+        "meaning": "The father"
+      },
+      {
+        "word": "وَابْنُهُ",
+        "meaning": "and his son"
+      }
+    ]
+  },
+  {
+    "sentence": "جلس الأب العجوز بجوار النافذة فسمع صوت بلبل جميل، وكان ابنه يجلس إلى جانبه مُحْدِفًا في شاشة جهاز الحاسوب المحمول، فسأل الأب : مَا هَذا الصوت يا بني؟",
+    "meaning": "The old father sat by the window and heard the beautiful sound of a nightingale, while his son sat beside him staring at the laptop screen, so the father asked: What is this sound, my son?",
+    "words": [
+      {
+        "word": "الأب العجوز",
+        "meaning": "the old father"
+      },
+      {
+        "word": "بجوار النافذة",
+        "meaning": "by the window"
+      },
+      {
+        "word": "صوت بلبل جميل",
+        "meaning": "the beautiful sound of a nightingale"
+      },
+      {
+        "word": "مُحْدِفًا في شاشة",
+        "meaning": "staring at the screen"
+      },
+      {
+        "word": "ما هذا الصوت",
+        "meaning": "what is this sound"
+      }
+    ]
+  },
+  {
+    "sentence": "فَأَجَاب الابن دون أن يرفع رأسه : إنه صوت بلبل يا أبي.",
+    "meaning": "The son answered without lifting his head: It’s the sound of a nightingale, father.",
+    "words": [
+      {
+        "word": "دون أن يرفع رأسه",
+        "meaning": "without lifting his head"
+      },
+      {
+        "word": "إنه صوت بلبل",
+        "meaning": "it’s the sound of a nightingale"
+      }
+    ]
+  },
+  {
+    "sentence": "بعد فترة قصيرة سأل الأب ثانية : مَا هَذا الصوت يا بني؟",
+    "meaning": "After a short while, the father asked again: What is this sound, my son?",
+    "words": [
+      {
+        "word": "بعد فترة قصيرة",
+        "meaning": "after a short while"
+      },
+      {
+        "word": "سأل ثانية",
+        "meaning": "asked again"
+      }
+    ]
+  },
+  {
+    "sentence": "فَأَجَاب الابن : إنه صوت البلبل.",
+    "meaning": "The son answered: It’s the sound of the nightingale.",
+    "words": [
+      {
+        "word": "إنه صوت البلبل",
+        "meaning": "it’s the sound of the nightingale"
+      }
+    ]
+  },
+  {
+    "sentence": "بعد قليل كرر السؤال قائلًا : ما هذا الصوت في الخارج؟",
+    "meaning": "Shortly after, he repeated the question, saying: What is this sound outside?",
+    "words": [
+      {
+        "word": "بعد قليل",
+        "meaning": "shortly after"
+      },
+      {
+        "word": "في الخارج",
+        "meaning": "outside"
+      }
+    ]
+  },
+  {
+    "sentence": "فرَدَّ الابن عليه مُمتعضًا : إنه صوت بلبل، ألم أقل لك هذا من قبل؟!",
+    "meaning": "The son replied to him, annoyed: It’s the sound of a nightingale, didn’t I tell you that before?!",
+    "words": [
+      {
+        "word": "مُمتعضًا",
+        "meaning": "annoyed"
+      },
+      {
+        "word": "ألم أقل لك",
+        "meaning": "didn’t I tell you"
+      }
+    ]
+  },
+  {
+    "sentence": "فصمت الأب وبعد مدة قليلة قال حزينًا : أَحْضِرٍ لي مُفَكِّرَتي القديمة من الغرفة لو سمحت.",
+    "meaning": "The father fell silent, and after a little while, he said sadly: Please bring me my old notebook from the room.",
+    "words": [
+      {
+        "word": "فصمت",
+        "meaning": "fell silent"
+      },
+      {
+        "word": "حزينًا",
+        "meaning": "sadly"
+      },
+      {
+        "word": "مُفَكِّرَتي القديمة",
+        "meaning": "my old notebook"
+      }
+    ]
+  },
+  {
+    "sentence": "ذهب الابن وأحضر المفكرة، فَفَتَحها الأب على صفحة وطلب من ابنه قراءتها.",
+    "meaning": "The son went and brought the notebook, then the father opened it to a page and asked his son to read it.",
+    "words": [
+      {
+        "word": "أحضر المفكرة",
+        "meaning": "brought the notebook"
+      },
+      {
+        "word": "وطلب من ابنه",
+        "meaning": "and asked his son"
+      }
+    ]
+  },
+  {
+    "sentence": "فقرأ الابن: في هذا اليوم أَتَمَّ ابني ثلاثة أعوام. وقد أَخَذْتُهُ إلى الحديقة، فرأى بُلبُلًا وسألني ما هذا الطائر يا أبي؟ فأجبته بأنه بلبل، وظل يكرر السؤال نفسه وأجيبه دون ملل ما يُقارب من عشرين مرة، وظللنا نضحك ونمرح ونلعب سويًا حتى أَنْهَكَه التعب وعدنا إلى المنزل.",
+    "meaning": "So the son read: On this day, my son turned three years old. I took him to the garden, and he saw a nightingale and asked me, ‘What is this bird, father?’ I answered that it was a nightingale, and he kept repeating the same question, and I answered him without getting tired about twenty times. We kept laughing, playing, and having fun together until he was exhausted, and we returned home.",
+    "words": [
+      {
+        "word": "أَتَمَّ ابني ثلاثة أعوام",
+        "meaning": "my son turned three years old"
+      },
+      {
+        "word": "أَخَذْتُهُ إلى الحديقة",
+        "meaning": "I took him to the garden"
+      },
+      {
+        "word": "ما هذا الطائر",
+        "meaning": "what is this bird"
+      },
+      {
+        "word": "دون ملل",
+        "meaning": "without getting tired"
+      },
+      {
+        "word": "نضحك ونمرح ونلعب",
+        "meaning": "laughing, playing, and having fun"
+      }
+    ]
+  }
+]
