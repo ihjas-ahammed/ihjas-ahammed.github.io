@@ -1,0 +1,172 @@
+{
+    "1":{
+        "name": "Arabic Quiz",
+        "qa": [
+            {
+                "question": "إني لأعرف أن في قلبك _________ ولينا",
+                "options": [
+                    "سليمة",
+                    "قاسية",
+                    "ضعيفة",
+                    "كبيرة"
+                ],
+                "describe": "I know that in your heart there is purity and gentleness.",
+                "correct": 0
+            },
+            {
+                "question": "_________ الأمر كما أقول؟",
+                "options": [
+                    "أليس",
+                    "أهو",
+                    "ألا",
+                    "أما"
+                ],
+                "describe": "Is not the matter as I say?",
+                "correct": 0
+            },
+            {
+                "question": "هذه السن يعجب فيها الأطفال بـ _________",
+                "options": [
+                    "آبائهم",
+                    "أصدقائهم",
+                    "معلميهم",
+                    "ألعابهم"
+                ],
+                "describe": "This is the age in which children admire their fathers.",
+                "correct": 0
+            },
+            {
+                "question": "يتكلف الآباء من _________ ما يُطيق ومالا يُطيق",
+                "options": [
+                    "المشقة",
+                    "الجهد",
+                    "العمل",
+                    "المال"
+                ],
+                "describe": "Fathers endure hardship, what they can bear and what they cannot.",
+                "correct": 0
+            },
+            {
+                "question": "إنك يا ابنتي لـ _________ سليمة القلب طيبة النفس",
+                "options": [
+                    "ساذجة",
+                    "ذكية",
+                    "شجاعة",
+                    "جميلة"
+                ],
+                "describe": "You, my daughter, are naive, pure of heart, and kind of soul.",
+                "correct": 0
+            },
+            {
+                "question": "أنتِ في _________ من عُمرك",
+                "options": [
+                    "التاسعة",
+                    "الثامنة",
+                    "العاشرة",
+                    "السابعة"
+                ],
+                "describe": "You are in the ninth year of your age.",
+                "correct": 0
+            },
+            {
+                "question": "يتخذونهم _________ في الحياة",
+                "options": [
+                    "مثلا عليا",
+                    "أصدقاء",
+                    "معلمين",
+                    "قادة"
+                ],
+                "describe": "They take them as higher examples in life.",
+                "correct": 0
+            },
+            {
+                "question": "يتأثرونهم في _________ والعمل",
+                "options": [
+                    "القول",
+                    "السلوك",
+                    "التفكير",
+                    "اللباس"
+                ],
+                "describe": "They are influenced by them in speech and action.",
+                "correct": 0
+            },
+            {
+                "question": "يحاولون أن يكونوا _________ في كل شيء",
+                "options": [
+                    "مثلهم",
+                    "أفضل منهم",
+                    "مختلفين عنهم",
+                    "بعيدين عنهم"
+                ],
+                "describe": "They try to be like them in everything.",
+                "correct": 0
+            },
+            {
+                "question": "يفاخرون _________ إذا تحدثوا إلى أقرانهم",
+                "options": [
+                    "بهم",
+                    "بأنفسهم",
+                    "بألعابهم",
+                    "بملابسهم"
+                ],
+                "describe": "They boast about them when they talk to their peers.",
+                "correct": 0
+            },
+            {
+                "question": "يخيل إليهم أنهم كانوا أثناء _________ كما هم الآن",
+                "options": [
+                    "طفولتهم",
+                    "شبابهم",
+                    "كهولتهم",
+                    "شيخوختهم"
+                ],
+                "describe": "It seems to them that they were during their childhood as they are now.",
+                "correct": 0
+            },
+            {
+                "question": "ألستِ ترين أن أباكِ _________ الرجال وأكرمهم؟",
+                "options": [
+                    "خير",
+                    "شر",
+                    "أقوى",
+                    "أغنى"
+                ],
+                "describe": "Do you not see that your father is the best and most honorable of men?",
+                "correct": 0
+            },
+            {
+                "question": "ألستِ مقتنعة أنه كان يعيش _________ مما تعيشين؟",
+                "options": [
+                    "خيرا",
+                    "أسوأ",
+                    "مثلا",
+                    "أقل"
+                ],
+                "describe": "Are you not convinced that he lived better than you live?",
+                "correct": 0
+            },
+            {
+                "question": "ألستِ تحبين أن تعيشي الآن كما كان يعيش أبوكِ حين كان في _________ من عمره؟",
+                "options": [
+                    "الثامنة",
+                    "التاسعة",
+                    "العاشرة",
+                    "السابعة"
+                ],
+                "describe": "Do you not love to live now as your father lived when he was in the eighth year of his age?",
+                "correct": 0
+            },
+            {
+                "question": "ومع ذلك فإن أباكِ يبذل من الجهد ما يملك وما _________",
+                "options": [
+                    "لايملك",
+                    "يملك",
+                    "يستطيع",
+                    "يحب"
+                ],
+                "describe": "Nevertheless, your father exerts effort, what he possesses and what he does not possess.",
+                "correct": 0
+            }
+        ]
+    }
+}

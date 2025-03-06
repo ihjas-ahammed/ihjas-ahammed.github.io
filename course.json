@@ -133,7 +133,11 @@
                     "text": "Arabic Litrature",
                     "path": "/arabic/lesson1/",
                     "webview": true,
-                    "qa": {}
+                    "qa": {},
+                    "qa2":{
+                        "path":"arabic/lesson1/qa2.json",
+                        "obj":1
+                    }
                 },
                 {
                     "text": "Nature",
