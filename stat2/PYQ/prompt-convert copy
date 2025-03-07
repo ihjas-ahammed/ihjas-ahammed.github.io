@@ -1,0 +1,1695 @@
+PYQ
+**C 4404 (Pages : 2)**
+
+**Name....................................**
+
+**Reg. No.................................**
+
+**SECOND SEMESTER (CBCSS—UG) DEGREE EXAMINATION**
+
+**APRIL 2021**
+
+**Statistics**
+
+**STA 2C 03—REGRESSION ANALYSIS AND TIME SERIES**
+
+**Time : Two Hours**
+
+**Maximum : 60 Marks**
+
+*Use of calculator and Statistical table are permitted.*
+
+**Section A (Short Answer Type Questions)**
+
+*Answer at least **eight** questions.*
+
+*Each question carries 3 marks.*
+
+*All questions can be attended.*
+
+*Overall Ceiling 24.*
+
+1.  Define regression analysis.
+
+2.  What type of linear relation is between $x$ and $y$ when the co-efficient of correlation between them is (i) $-1$ ; and (ii) $+1$.
+
+3.  Define qualitative variable.
+
+4.  What is the meaning of zero correlation between $x$ and $y$ ?
+
+5.  Define rank correlation.
+
+6.  Write modified formula of co-efficient of rank correlation when tied rank appears.
+
+7.  The regression line $x$ on $y$ is $2x - 3y + 5 = 0$. Identify the regression co-efficient $x$ on $y$.
+
+8.  The line of regression $x$ on $y$ is $x - 0.3y - 35 = 0$. Identify the value of $x$ when $y = 6$.
+
+9.  Define non-linear regression.
+
+10. What is the principle of least squares?
+
+11. State any two uses of time series ?
+
+12. What is the graphical method of measuring trend in a time series ?
+
+$(8 \times 3 = 24 \text{ marks})$
+
+---
+
+**Turn over**
+---
+
+**2**
+
+**C 4404**
+
+**Section B (Short Essay/Paragraph Type Questions)**
+
+*Answer at least **five** questions.*
+
+*Each question carries 5 marks.*
+
+*All questions can be attended.*
+
+*Overall Ceiling 25.*
+
+13. Explain how the scatter diagram helps in correlation and regression analysis.
+
+14. Calculate Pearson's co-efficient of correlation using the following data :
+
+    | $x$ | 1 | 2 | 3 | 4 | 5 |
+    |-----|---|---|---|---|---|
+    | $y$ | 3 | 5 | 12 | 15 | 20 |
+
+15. Explain the two types of regression lines. What are their uses ?
+
+16. Define regression co-efficients. Prove that the geometric mean of regression co-efficient gives the absolute value of the co-efficient of correlation.
+
+17. The lines of regression $x$ on $y$ and $y$ on $x$ are $3x - 2y + 5 = 0$ and $5x - 4y + 4 = 0$. Find the means of $x$ and $y$.
+
+18. Explain the method of fitting of regression equation of the form $y = ab^x$ using the data $(x_1, y_1), (x_2, y_2) \dots (x_n, y_n)$.
+
+19. Explain the method of semi-average to measure trend in a time series.
+
+$(5 \times 5 = 25 \text{ marks})$
+
+---
+
+**Section C (Essay Type Questions)**
+
+*Answer any **one** question.*
+
+*The question carries 11 marks.*
+
+20. Fit a straight line of the form $y = ax + b$ using the following data :
+
+    | $x$ | 2 | 4 | 6 | 8 | 10 | 12 |
+    |-----|---|---|---|---|----|----|
+    | $y$ | 9 | 12 | 18 | 30 | 34 | 42 |
+
+21. Define time series. Explain various components of time series with suitable examples.
+
+$(1 \times 11 = 11 \text{ marks})$
+
+---
+**C 4403 (Pages : 3)**
+
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CBCSS—UG) DEGREE EXAMINATION, APRIL 2021**
+
+**Statistics**
+
+**STA 2C 02—REGRESSION ANALYSIS AND PROBABILITY THEORY**
+
+**Time : Two Hours**
+
+**Maximum : 60 Marks**
+**Section A**
+
+*Answer at least **eight** questions.*
+*Each question carries 3 marks.*
+*All questions can be attended.*
+*Overall Ceiling 24.*
+
+1.  Define rank correlation coefficient.
+2.  What are the limits for Pearson's coefficient of correlation?
+3.  If $b_{XY} = -0.90$ and $b_{YX} = -0.40$, find the value of the correlation coefficient.
+4.  The two lines of regression are $x + 2y - 5 = 0$ and $2x + 3y = 8$. Find the means of $x$ and $y$.
+5.  The coefficient of correlation between $X$ and $Y$ is $0.60$. Their covariance is $4.80$ and variance of $X$ is $9$. Find the standard deviation of $Y$.
+6.  If $r_{12} = r_{23} = r_{13} = r$, find the value of $r_{12.3}$.
+7.  Define discrete and continuous sample space.
+8.  Give axiomatic definition of probability.
+9.  State multiplication theorem of probability for three events.
+10. If A and B are two independent event, then $P(A \cap B)=$__________.
+11. For two mutually exclusive events A and B, given that $P(A \cup B) = \frac{3}{8}$ and $P(B) = \frac{1}{4}$. Find $P(\bar{A})$.
+12. State any two properties of distribution function of a discrete random variable.
+$(8 \times 3 = 24 \text{ marks})$
+---
+**Turn Over**
+---
+**(Page 4 is part of C4403)**
+**3 C4403**
+
+21. (i) The probability that a student passes Statistics test is $\frac{2}{3}$, the probability that he passes both Statistics and Mathematics test is $\frac{14}{45}$. The probability that he passes at least one test is $\frac{4}{5}$. What is the probability that he passes the Mathematics test?
+(ii) A problem in Statistics is given to three students A, B and C whose chances of solving it are $\frac{1}{2}, \frac{3}{4}$ and $\frac{1}{4}$ respectively. What is the probability that the problem will be solved, if all of them try independently?
+
+$$(1 \times 11= 11 \text{ marks})$$
+
+---
+
+**(Page 5 is part of C4403)**
+
+**2 C4403**
+
+**Section B**
+
+*Answer at least **five** questions.*
+
+*Each question carries 5 marks.*
+
+*All questions can be attended*
+
+*Overall Cieling 25.*
+
+13. Define correlation and explain different types of correlation.
+14. Explain the concept of regression and write down the equations of lines of regression. When do these lines coincide ?
+15. Define independent and mutually exclusive events. Can two events be independent and mutually exclusive simultaneously ? Support your answer with an example.
+16.  On each of 30 items, two measurements X and Y are made and following data were obtained :
+    $$\sum X = 120, \sum Y = 90, \sum X^2 = 600, \sum Y^2 = 300, \sum XY = 330$$
+    Calculate the product moment correlation coefficient and the slope of regression line of Y on X.
+
+17. The ranks of 16 students in Mathematics and Physics are as follows. The numbers within the brackets denote the rank of students in Mathematics and Physics in order.
+    (1, 1), (2, 10), (3, 3), (4, 4), (5, 5), (6, 7), (7, 2), (8, 6), (9, 8), (10, 11), (11, 15), (12, 9), (13, 14), (14, 12), (15, 16), (16, 13). Calculate the rank correlation coefficient.
+
+18. From a group eight children, five boys and three girls, three children are selected at random. Calculate the probabilities that the selected group contains (i) no girl, (ii) at least one girl and (iii) more girls than boys.
+
+19. A random variable X has the following probability mass function :
+
+    | x     | 0  | 1   | 2   | 3   | 4  | 5   | 6   | 7   | 8   |
+    | :---- | :- | :-: | :-: | :-: | :- | :-: | :-: | :-: | :-: |
+    | f(x) | a  | 3a  | 5a  | 7a  | 9a | 11a | 13a | 15a | 17a |
+Find the value of a.
+Find $P(X\leq3)$ and $P(0\leq X \leq 5)$.
+
+$$(5 \times 5=25 \text{ marks})$$
+
+---
+**Section C**
+*Answer any **one** question.*
+*The question carries 11 marks*
+
+20. The equations of two lines of regression are $3x+12y-10=0$ and $3y+9x-46=0$.
+ (i) Identify the regression lines.
+ (ii) Obtain the value of $x$, when $y = 10$ and the value of $y$, when $x = 3$.
+ (iii) If variance of X is 9, find the standard deviation of Y.
+
+---
+
+**C 4402-A (Pages : 4)**
+
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CBCSS—UG) DEGREE EXAMINATION**
+**APRIL 2021**
+**Statistics**
+**STA 2C 02—PROBABILITY THEORY**
+**(Multiple Choice Questions for SDE Candidates)**
+
+**Time : 15 Minutes**
+**Total No. of Questions : 15**
+**Maximum : 15 Marks**
+**INSTRUCTIONS TO THE CANDIDATE**
+
+1.  This Question Paper carries Multiple Choice Questions from 1 to 15.
+2.  The candidate should check that the question paper supplied to him/her contains all the 15 questions in serial order.
+3.  Each question is provided with choices (a), (b), (c) and (d) having one correct answer. Choose the correct answer and enter it in the main answer-book.
+4.  The MCQ question paper will be supplied after the completion of the descriptive examination.
+
+---
+**(Page 7 is part of 4402-A)**
+**3 C4402**
+
+**Section C (Essay Type Questions)**
+
+*Answer any **one** question.*
+*The question carries 11 marks.*
+20. (a) If A and B are two independent events prove that $A^c$ and $B^c$ are also independent.
+(b) Define the mutual independence of three events A, B and C. Also illustrate that the pairwise independence of A, B and C need not imply their mutual independence.
+21. (a) Cauchy-Schwartz Inequality for two random variables X and Y.
+(b) Using this inequality prove $-1 \leq r_{XY} \leq +1$, where $r_{XY}$ is the coefficient of correlation between X and Y.
+$$(1 \times 11 = 11 \text{ marks})$$
+---
+**(Page 8 is part of 4402-A)**
+
+**2 C4402-A**
+
+**STA 2C 02—PROBABILITY THEORY**
+**(Multiple Choice Questions for SDE Candidates)**
+
+1.  Mangoes numbered 1 through 18 are placed in a bag for delivery. Two mangoes are drawn out of the bag without replacement. Find the probability such that all the mangoes have even numbers on them ?
+    (A) 43.7 %.
+    (B) 34 %.
+    (C) 6.8 %.
+    (D) 9.3 %.
+
+2.  Two *t*-shirts are drawn at random in succession without replacement from a drawer containing 5 red *t*-shirts and 8 white *t*-shirts. Find the probabilities of all the possible outcomes :
+    (A) 1.
+    (B) 13.
+    (C) 40.
+    (D) 346.
+
+3.  A random variable X can take only two values, 2 and 4 *i.e.*, $P(2) = 0.45$ and $P(4) = 0.97$. What is the Expected value of X ?
+    (A) 3.8.
+    (B) 2.9.
+    (C) 4.78.
+    (D) 5.32.
+
+4.  A man is dealt 4 spade cards from an ordinary deck of 52 cards. He is given 2 more cards. Let x be the probability that they both are the same suit. Which is true ?
+    (A) $0.2 < x \leq 0.3$.
+    (B) $0 < x \leq 0.1$.
+    (C) $0.1 < x \leq 0.2$.
+    (D) $0.3 < x \leq 0.4$.
+
+5.  Let A and B be events with $P(A) = 6/15$, $P(B) = 8/15$, and $P((A \cup B)^C) = 3/15$. What is $P(A \cap B)$ ?
+    (A) 1/15.
+    (B) 2/15.
+    (C) 3/15.
+    (D) 4/15.
+---
+**(Page 9 is part of 4402-A)**
+
+**3 C4402-A**
+
+6.  A pair of fair dice is tossed. Find the probability that the greatest common divisor of the two numbers is one.
+    (A) 12/36.
+    (B) 15/36.
+    (C) 17/36.
+    (D) 23/36.
+
+7.  Given $E(X) = 5$ and $E(Y) = -2$, then $E(X - Y)$ is :
+    (A) 3.
+    (B) 5.
+    (C) 7.
+    (D) -2.
+
+8.  If C is a constant (non-random variable), then $E(C)$ is :
+    (A) 0.
+    (B) 1.
+    (C) $cf(c)$.
+    (D) $c$.
+
+9.  A probability density function be represented by :
+    (A) Table.
+    (B) Graph.
+    (C) Mathematical equation.
+    (D) Both (b) and (c).
+
+10. A fair die is rolled. Probability of getting even face or face more than 4 is :
+    (A) 1/3.
+    (B) 2/3.
+    (C) 1/2.
+    (D) 5/6.
+
+11. If A and B are two not-independent events, then the probability that both A and B will happen together is :
+    (A) $P(A \cup B) = P(A)P(B/A)$.
+    (B) $P(A \cup B) = P(A)P(B)$.
+    (C) $P(A \cup B) = P(A) + P(B)$.
+    (D) $P(A \cup B) = P(A)$.
+
+12. A random variable is said to be ___________ if its range set is either finite or countably infinite.
+    (A) Continuous.
+    (B) Discrete.
+    (C) Both (a) and (b).
+    (D) None of these.
+
+---
+**Turn over**
+**(Page 10 is part of 4402-A)**
+
+**4 C4402-A**
+
+13. If X is the number of heads obtained in tossing 3 coins, $E(X)$ is :
+    (A) 1.
+    (B) 2.
+    (C) 1.5.
+    (D) None of these.
+
+14. The distribution of a random variable X where X takes values 0 and 1 with probabilities $p$ and $q$ respectively such that $p + q = 1$ is called :
+    (A) Bernoulli Distribution.
+    (B) Binomial distribution.
+    (C) Poisson distribution.
+    (D) None of these.
+
+15. If X and Y are two random variables, then $E(X + Y)$ is
+    (A) $E(X)E(Y)$.
+    (B) $E(X) + E(Y)$.
+    (C) $E(X) + E(Y) - E(X, Y)$.
+    (D) $E(X) + E(Y) - E(X)E(Y)$.
+
+---
+**C 4402 (Pages : 3)**
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CBCSS—UG) DEGREE EXAMINATION**
+**APRIL 2021**
+**Statistics**
+**STA 2C 02—PROBABILITY THEORY**
+
+**Time : Two Hours**
+**Maximum : 60 Marks**
+*Use of Calculator and Statistical table are permitted*
+
+**Section A (Short Answer Type Questions)**
+*Answer at least **eight** questions.*
+*Each question carries 3 marks.*
+*All questions can be attended.*
+*Overall Ceiling 24.*
+
+1.  Define (a) Random experiment ; (b) Event.
+2.  If the events $A = \{1, 2, 3, 4, 5\}$ and $B = \{4, 5, 6, 7\}$ are exhaustive events, identify the events :
+    (i) $A \cap B^c$; (ii) $(A \cup B)^c$.
+3.  If $P(A) = 0.4, P(B) = 0.5$ and $P(A \cup B) = 0.7$. Find $P(A/B^c)$
+4.  State multiplication theorem on probability for two events A and B. If $P(A/B) = P(A) = P(B) = 0.4$. Find $P(A \cup B)$.
+5.  Define probability density function and state any *two* of its properties.
+6.  Obtain the distribution function of X, with p.d.f. $f(x) = 3x^2$, for $0 < x < 1$.
+7.  Find the value of $k$, if $f(x) = \binom{k}{2}^x$, for $x = 1, 2, 3...$ is the probability mass function of X.
+8. If $E(X)=2, E(X^2)=8$, find $V(3X-2)$.
+9. Obtain the mean and the variance of a random variable X with m.g.f $M_X(t)=(1-t)^{-1}, t<1$
+10. Define characteristic function of a random variable and state its advantage over m.g.f.
+
+**Turn Over**
+---
+
+**(Page 12 is part of 4402)**
+
+**2 C4402**
+
+11. Find $c$, if $f(x, y) = c(x + 2y)$, for $x = 1, 2 ; -y = 0, 1$ is the joint p.m.f. of $(X, Y)$.
+12. Define independence of two random variables X and Y.
+
+$(8 \times 3 = 24 \text{ marks})$
+
+**Section B (Short Essay/Paragraph Type Questions)**
+
+*Answer at least **five** questions.*
+
+*Each question carries 5 marks.*
+
+*All questions can be attended.*
+
+*Overall Ceiling 25.*
+
+13. Mentioning the underlying assumptions clearly, state axiomatic definition of probability.
+
+    Using this definition establish $0 \leq P(A) \leq 1$ for an event A.
+
+14. A box contains 3 blue and 2 red balls. Another box contains 2 blue and 3 green balls. One of the identical boxes is selected and two balls were drawn without replacement. It is found that the two balls are blue. What is the probability that only green balls to remain in the selected box ?
+
+15. The p.m.f. of X, $f(x) = \frac{2x^2 - 1}{k}$, for $x = 1, 2, 3, 4$ and $f(x) = 0$ *elsewhere* (i) Find $k$ ; (ii) Write the distribution function $F(x)$.
+
+16. Given the p.d.f. of X as $f(x) = 1$, for $0 < x < 1$. Find the p.d.f. of $Y = -2 \log_e X$.
+
+17. In a game three balls are drawn from a box containing 5 white and 7 black balls. 10 points are given for each white ball drawn and 5 points are given for each black ball drawn. Calculated the expected points per game for a long run of the game.
+
+18. For X with p.d.f. $f(x) = kx(2 - x)$, for $0 < x < 1 ; f(x) = 0$, elsewhere. Obtain (a) $k$ ; (b) Mean and variance of X.
+
+19. For two random variables X and Y, prove that (i) $V(X - Y) = V(X) + V(Y) - 2Cov(X, Y)$ ; (ii) $Cov(X - a, Y - b) = Cov(X, Y)$, where $a$ and $b$ are two constants.
+
+$(5 \times 5 = 25 \text{ marks})$
+---
+**(Page 13 is part of 4402)**
+**3 C4402**
+
+**Section C (Essay Type Questions)**
+*Answer any **one** question.*
+*The question carries 11 marks.*
+
+20.  (a) If A and B are two independent events prove that $A^c$ and $B^c$ are also independent.
+(b) Define the mutual independence of three events A, B and C. Also illustrate that the pairwise independence of A, B and C need not imply their mutual independence.
+
+21. (a) Cauchy-Schwartz Inequality for two random variables X and Y.
+    (b) Using this inequality prove $-1 \leq r_{XY} \leq +1$, where $r_{XY}$ is the coefficient of correlation between X and Y.
+$(1 \times 11 = 11 \text{ marks})$
+---
+**C 4401 (Pages : 3)**
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CBCSS—UG) DEGREE EXAMINATION**
+**APRIL 2021**
+**Statistics**
+**STA 2B 02—BIVARIATE RANDOM VARIABLE AND PROBABILITY DISTRIBUTIONS**
+
+**Time : Two Hours and a Half**
+**Maximum : 80 Marks**
+*Use of Calculator and Statistical table are permitted.*
+**Section A (Short Answer Type Questions)**
+
+*Answer at least **ten** questions.*
+*Each question carries 3 marks.*
+*All questions can be attended.*
+*Overall Ceiling 30.*
+
+1.  What is the expected profit for a seller per item, if he is selling a large number of this item per day with various profits Rs. 2, 3 or 4 according to the buyer with a probability 0.2, 0.35 and 0.45 respectively ?
+2.  For any random variable X, show that $V(X)$ is always non-negative.
+3.  Define characteristic function of a random variable X.
+4.  Define the conditional probability mass function $X/Y = y$, for two discrete random variables X and Y.
+5.  Find $c$ if the joint p.d.f of $(X, Y)$ is given by $f(x, y) = c, 0 < x < 1, 0 < y < 1$.
+6.  List any *two* properties of joint p.m.f. $f(x, y)$ of two discrete random variables X and Y.
+7.  For two independent random variables X and Y, show that $V(X - Y) = V(X) + V(Y)$.
+8. For random variables $X$, show that $Cov(X,X)=V(X)$.
+9.  Define a Bernoulli random variable.
+10. Identify the parameters of X following binomial distribution with mean 12 and variance 3.
+11. Obtain the m.g.f. of X following geometric distribution with parameter $p$.
+
+---
+**Turn over**
+
+**(Page 15 is part of 4401)**
+
+**2 C4401**
+
+12. If X is the number shown when an unbiased die is thrown. Name the probability distribution of X. Write the p.m.f. of X and find $E(X)$.
+13. If the variance of X following Poisson distribution is 5, find $P(X = 5)$.
+14. Define negative binomial distribution.
+15. State Bernoulli's law of large numbers.
+
+$(10 \times 3 = 30 \text{ marks})$
+
+**Section B (Short Essay/Paragraph Type Questions)**
+
+*Answer at least **five** questions.*
+*Each question carries 6 marks.*
+*All questions can be attended.*
+*Overall Ceiling 30.*
+
+16. If X and Y are two independent random variables, prove that $Cov(X, Y) = 0$. Establish that the converse need not true.
+17. Explain two methods of finding raw moments of X, when moment generating function of X exists.
+18. If $\phi_X(t)$ is the characteristic function of X, prove that $|\phi_X(t)| \leq 1$.
+19. Find $h$, if $f(x,y)=\frac{x+y}{k}; x=0,1,2;y=1,2$ is a joint p.m.f. of (X,Y). Verify whether X and Y are independent.
+20. If $f(x,y) = \begin{cases}
+e^{-(x+y)}; & x>0;y>0 \\
+0, & \text{elsewhere}
+\end{cases}$
+is the joint p.d.f. of (X, Y), obtain the conditional p.d.fs of X given Y and Y given X.
+21. State and prove the additive property of binomial distribution.
+22. Define hyper geometric distribution. Find the mean of X following this distribution with parameters N, M and *n* where M is not exceeding N.
+23. If $P(X=2) = P(X=3)$, where X follows Poisson distribution, find the m.g.f. of X.
+$$(5 \times 6 = 30 \text{ marks})$$
+
+---
+**(Page 16 is part of 4401)**
+
+**3 C 4401**
+
+**Section C (Essay Type Questions)**
+*Answer any **two** questions.*
+*Each question carries 10 marks.*
+
+24. State and prove Cauchy-Schwartz inequality. Using this, prove that $0 \leq r_{X,Y} \leq 1$, where $r_{X,Y}$ is the co-efficient of correlation between X and Y.
+
+25. Given the joint p.d.f. of two random variables X and Y as ;
+
+    $$f(x, y) = \begin{cases}
+    c(2x + y), & \text{for } 2 < x < 6 ; 0 < y < 5 \\
+    0, & \text{otherwise}
+    \end{cases}$$
+
+    Find (a) $c$ ; (b) $P(3 < X < 4, Y > 2)$ ; (c) $P(X + Y > 4)$ ; and (iv) $f_{X/Y}(x/y)$.
+
+26. State the limiting conditions and prove that under the stated conditions binomial distribution approaches to Poisson distribution.
+
+27. State and prove Chebycheve's inequality. Also find a lower bound to $P(2 < X < 6)$ where the mean and variance of X are 4 and 3 respectively.
+
+$(2 \times 10 = 20 \text{ marks})$
+---
+**C 4187 (Pages : 4)**
+**Name....................................**
+
+**Reg. No.................................**
+
+**SECOND SEMESTER (CUCBCSS—UG) DEGREE EXAMINATION**
+**APRIL 2021**
+**Statistics**
+**SG 2C 02—REGRESSION ANALYSIS, TIME SERIES AND INDEX NUMBERS**
+
+**Time : Three Hours**
+**Maximum : 80 Marks**
+
+**Section A (One Word Questions)**
+
+*Answer **all** questions.*
+*Each question carries 1 mark.*
+1.  __________ is the GM of Laspeyer's and Paasche's index numbers.
+2.  If $\rho(x, y) = -1$, there is __________.
+    a) Negative correlation.
+    b) Perfect negative correlation.
+    c) Non correlation.
+    d) None of the above.
+3.  Regression equation of $x$ on $y$ is __________.
+4.  __________ index number no consideration is given to the quantity.
+    a) Unweighted index number.
+    b) Paasche's index number.
+    c) Weighted index number.
+    d) Fisher's index number.
+5.  Spearman's rank correlation co-efficient is __________.
+6.  Simplest method of correlation analysis is __________.
+    a) Karl Pearson's correlation method.
+    b) Scatter diagram.
+    c) Spearman's rank correlation method.
+    d) None of the above.
+7.  __________ index number which satisfies both time reversal and factor reversal test.
+8.  The regression co-efficient $b_{xy} = 0.2$ and the correlation coefficient between $x$ and $y$ $0.4$.Then regression co-efficient $b_{yx} =$
+    a) 0.2.
+    b) 0.6.
+    c) 0.8.
+    d) 0.4.
+
+---
+**Turn over**
+**(Page 18 is part of 4187)**
+
+**2 C 4187**
+
+9.  Correlation between two variables means they are __________.
+
+10. Accurate method of trend analysis :
+
+    a) Graphical method.
+
+    b) Semi average method.
+
+    c) Moving average method.
+
+    d) Principle of least square method.
+
+$(10 \times 1 = 10 \text{ marks})$
+
+**Section B (One Sentence Questions)**
+
+*Answer **all** questions.*
+
+*Each question carries 2 marks.*
+
+11. What is positive correlation ?
+
+12. Define index number.
+
+13. What is multiplicative model ?
+
+14. Compare Laspeyer's and Paasche's method.
+
+15. Define Karl Pearson's co-efficient of correlation.
+
+16. What are the components of time series ?
+
+17. Define time reversal test.
+
+$(7 \times 2 = 14 \text{ marks})$
+
+**Section C (Paragraph Questions)**
+
+*Answer any **three** questions.*
+
+*Each question carries 4 marks.*
+
+18. Explain scatter diagram.
+
+19. Use the economic data to construct unweighted index number :
+
+    | Articles | A  | B  | C  | D  | E  | F  |
+    | :------- | :- | :- | :- | :- | :- | :- |
+    | Price    |    |    |    |    |    |    |
+    | 2003     | 15 | 17 | 14 | 10 | 11 | 13 |
+    | 2006     | 12 | 13 | 14 | 9  | 12 | 10 |
+
+20. Distinguish between correlation and regression.
+
+21. The two regression lines in a bivariate study is as follows $3x + 12y = 19$ and $3y + 9x = 46$. Obtain $\bar{x}, \bar{y}$ and $r(x, y)$.
+
+22. Explain the models of time series.
+
+$(3 \times 4 = 12 \text{ marks})$
+
+---
+**(Page 19 is part of 4187)**
+**4 C4187**
+30. Calculate correlation co-efficient for the following data:
+    | X   | 65 | 66 | 67 | 67 | 68 | 69 |
+    | --- | -- | -- | -- | -- | -- | -- |
+    | Y   | 67 | 68 | 65 | 68 | 72 | 72 |
+31. Explain the construction of cost of living index numbers.
+32. Explain the moving average method. Also give its merits and Demerits.
+$(2 \times 10 = 20 \text{ marks} )$
+---
+**(Page 20 is part of 4187)**
+
+**3 C 4187**
+
+**Section D (Short Essay Questions)**
+
+*Answer any **four** questions.*
+
+*Each question carries 6 marks.*
+
+23. Explain the importance of index numbers.
+
+24. Obtain the best fitted parabola for the following data :
+
+    | X | 0 | 1   | 2   | 3   | 4   |
+    | - | - | --- | --- | --- | --- |
+    | Y | 1 | 1.8 | 3.3 | 2.5 | 6.3 |
+
+25. Find the unweighted index number for the year 1980 based on the year 1970
+
+    | Commodity | A | B | C | D  | E |
+    | :-------- | - | - | - | -- | - |
+    | Price     |   |   |   |    |   |
+    | 1970      | 6 | 2 | 4 | 10 | 8 |
+    | 198You are right! I missed completing the extraction from the later pages. Here's the continuation, picking up where I left off (and incorporating the parts I missed):
+
+**(Page 20 is part of 4187) - Continuing from previous response**
+
+26. Discuss briefly the methods of correlation analysis.
+
+27. Fit a trend line and estimate the production in the year 1990 for the following data :
+
+    | Year                 | 1982 | 1984 | 1986 | 1988 | 1990 | 1992 | 1994 |
+    | :------------------- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+    | Production (in units) | 77   | 81   | 88   | 94   | 94  |96    |98     |
+
+28. Illustrate how moving average is calculated for even periods.
+
+$(4 \times 6 = 24 \text{ marks})$
+
+**Section E (Essay question)**
+
+*Answer any **two** questions.*
+
+*Each question carries 10 marks.*
+
+29. Calculate price index number for 2008 with 2004 as base from the following data :
+
+    1)  Marshall-Edge worth method.
+
+    2)  Fisher's method.
+
+    | Commodity |       | 2004      |       | 2008      |
+    | :-------- | :---- | :-------- | :---- | :-------- |
+    |           | Price | Quantity | Price | Quantity |
+    | A         | 4     | 2        | 18    | 6        |
+    | B         | 3     | 5        | 2     | 2        |
+    | C         | 8     | 7        | 24    | 4        |
+
+---
+
+**Turn over**
+
+---
+**C 4185-A (Pages : 4)**
+
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CUCBCSS—UG) DEGREE EXAMINATION, APRIL 2021**
+**Statistics**
+**STS 2C 02—PROBABILITY DISTRIBUTIONS**
+**(Multiple Choice Questions for SDE Candidates)**
+
+**Time : 15 Minutes**
+**Total No. of Questions : 20**
+**Maximum : 20 Marks**
+
+**INSTRUCTIONS TO THE CANDIDATE**
+
+1.  This Question Paper carries Multiple Choice Questions from 1 to 20.
+2.  The candidate should check that the question paper supplied to him/her contains all the 20 questions in serial order.
+3.  Each question is provided with choices (A), (B), (C) and (D) having one correct answer. Choose the correct answer and enter it in the main answer-book.
+4.  The MCQ question paper will be supplied after the completion of the descriptive examination.
+
+---
+
+**(Page 22 is part of 4185-A)**
+**2 C4185-A**
+
+**STS 2C 02—PROBABILITY DISTRIBUTIONS**
+**(Multiple Choice Questions for SDE Candidates)**
+1. Let x denote the number of heads obtained when a fair coin is tossed thrice ; then $P(x=1)$ is:
+    (A) $\frac{3}{8}$
+    (B) $\frac{6}{8}$
+    (C) $\frac{2}{8}$
+    (D) None of these.
+2. Two dice are rolled. Let x be the maximum of the numbers that turn-up then $P(x=5)=$
+   (A)  $\frac{3}{36}$
+   (B) $\frac{7}{36}$
+   (C) $\frac{11}{36}$
+   (D) None of these.
+3. If x is the number of heads obtained in tossing 3 coins, $E(x)=$
+   (A) 1.
+   (B) 2.
+   (C) 1.5.
+   (D) None of these.
+4. For a binomial distribution $P(x)={n \choose x}p^xq^{n-x}, x=0,1,2,...,n$, which of the following is incorrect:
+  (A) $\mu_1'=np$.
+  (B) $\mu_2=n(n-1)p^2+np$.
+  (C) $\mu_2=np$.
+  (D) $\mu_1=0$.
+5. The measure of skewness $\beta_1$ is related to the central moments as :
+ (A)  $\beta_1 = \frac{\mu_3^3}{\mu_2^2}$
+ (B) $\beta_1 = \frac{\mu_2}{\mu_3}$
+ (C)  $\beta_1 = \frac{\mu_3^2}{\mu_2^3}$
+ (D) $\beta_1 = \frac{\mu_2^3}{\mu_3^2}$
+6. The curve is said to be leptokurtic if:
+ (A) $\frac{\mu_4}{(\mu_2)^2}-3>0$.
+ (B) $\frac{\mu_4}{(\mu_2)^2}-3<0$.
+ (C) $\frac{\mu_4}{(\mu_2)^2}-3=0$.
+ (D) None of these.
+
+---
+**(Page 23 is part of 4185-A)**
+
+**3 C 4185-A**
+
+7.  In binomial distribution, the variance $\sigma^2$ and mean $\mu$ are related by :
+    (A) $\sigma^2 = q\mu$.
+    (B) $\sigma^2 = \frac{\mu}{q}$.
+    (C) $q^2\sigma^2 = \mu$.
+    (D) None of these.
+
+8.  The range of the Bernoulli random variable is the set :
+    (A) $\mathbb{R}$.
+    (B) $\{0, 1\}$.
+    (C) Integers.
+    (D) None of these.
+
+9.  The variance of the uniform (discrete) probability distribution is given by :
+    (A) $\sum \frac{(x - \mu)^2}{k^2}$.
+    (B) $\sum \frac{X_i}{k^2}$.
+    (C) $\sum X_i$.
+    (D) $k$.
+
+10. Following is the probability distribution of a discrete random variable $x$. What is $E(2x + 3)$?
+
+    | $x$      | -3   | -2   | -1   | 0  | 1    | 2    | 3    |
+    | :------- | :--- | :--- | :--- | :- | :--- | :--- | :--- |
+    | $P(x)$   | 0.05 | 0.10 | 0.30 | 0  | 0.30 | 0.15 | 0.10 |
+
+    (A) 0.25.
+    (B) 3.25
+    (C) 3.5.
+    (D) 0.50.
+
+11. For the probability distribution given in problem (10), what is $V(2x + 3)$?
+    (A) 2.8875.
+    (B) 11.5500.
+    (C) 14.5600.
+    (D) None of these.
+
+12. Let $x$ be the number of heads obtained in four tosses of a fair coin. Find $E(x)$ :
+    (A) $\frac{16}{16}$.
+    (B) $\frac{32}{16}$.
+    (C) $\frac{33}{16}$.
+    (D) None of these.
+
+13. If $f(x,y) = \frac{1}{8}(6-x-y), 0<x<2; 2<y<4$. Then marginal probability density of x is :
+    $=0$, otherwise
+
+ (A) $\frac{1}{4}(5-x)$.
+ (B) $\frac{1}{8}(4-x)$.
+ (C) $\frac{1}{4}(3-x)$.
+ (D) $\frac{1}{8}(4-y)$.
+---
+**(Page 24 is part of 4185-A)**
+
+**4 C 4185-A**
+
+14. If $f(x, y) = 2, 0 < x < y < 1$ then marginal probability density function of y is :
+    $= 0$, otherwise,
+    (A) $2, 0 < x < y$.
+    (B) $2y, 0 < y < 1$.
+    (C) 0.
+    (D) 1.
+
+15. Joint cumulative distribution function $F(x, y)$ lies within the values :
+    (A) -1 and +1.
+    (B) -1 and 0.
+    (C) $-\infty$ and 0.
+    (D) 0 and 1.
+
+16. If X and Y are two independent random variables, the cumulative distribution function $F(x, y)$ is equal to :
+    (A) $F_1(x) \cdot F_2(y)$.
+    (B) $P(x \leq x, y \leq y)$.
+    (C) Both (A) and (B).
+    (D) Neither (A) nor (B).
+
+17. If X and Y have joint p.d.f. given by $f(x,y)=\frac{x+y}{21}, x=1,2,3; y=1,2$. What is $\rho_{xy}$?
+  (A) $0.027$.
+  (B) $-0.027$.
+  (C) $-0.0346$.
+  (D) $0.0346$.
+
+18. Variance of an exponential distribution is:
+(A) $\frac{1}{\theta}$.
+(B) $\frac{1}{\theta^2}$
+(C) $\theta.e^{-\theta x}$
+(D) None of these
+
+19. Which of the following holds true about a Cauchy Distribution ?
+    (A) Mean does exist.
+    (B) Mean does not exist.
+    (C) Variance does exist.
+    (D) None of these.
+
+20. Which of the following of a Pareto Distribution exist ?
+    (A) Mean.
+    (B) M.g.f.
+    (C) Both (A) and (B).
+    (D) None of these.
+
+---
+**C 4185 (Pages : 3)**
+
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CUCBCSS—UG) DEGREE EXAMINATION, APRIL 2021**
+**Statistics**
+**STS 2C 02—PROBABILITY DISTRIBUTIONS**
+
+**Time : Three Hours**
+**Maximum : 80 Marks**
+**Section A**
+*Answer **all** questions **in one word.***
+*Each question carries 1 mark.*
+Name the following :
+
+1.  The coefficient of $\frac{(it)^r}{r!}$ in the expansion of characteristic function.
+2.  The discrete distribution having memoryless property.
+3.  The distribution of $\frac{X_1}{X_2}$ where $X_1$ and $X_2$ are independent gamma variables with parameters $n_1$ and $n_2$ respectively.
+
+Fill up the blanks :
+
+4.  If X and Y are two independent variables, the conditional distribution of X given $Y = y, f(x|y) =$ __________.
+5.  If $X \sim B(n, p)$, the distribution of $y = n - X$ is __________.
+6.  If $X \sim N(\mu, \sigma^2)$, the points of inflexion of normal curve are __________.
+7.  The variance of the rectangular distribution $f(x) = \frac{1}{b - a} ; a \leq x \leq b$ is equal to __________.
+
+Write true or false :
+
+8.  If X, Y and Z are three random variables, then $cov(X + Y, Z) = cov(X, Z) + cov(Y, Z)$.
+9.  For a geometric distribution mean is always less than the variance.
+10. The existence of variances of the random variables is not necessary for applying weak law of large numbers.
+
+$(10 \times 1 = 10 \text{ marks})$
+
+**Turn over**
+
+---
+**(Page 26 is part of 4185)**
+
+**2 C 4185**
+
+**Section B**
+
+*Answer **all** questions **in one sentence each.***
+
+*Each question carries 2 marks.*
+
+11. Define mathematical expectation of a random variable.
+
+12. What are the properties of moment generating function ?
+
+13. Define conditional variance.
+
+14. Define joint raw moments for the bivariate distribution.
+
+15. Define geometric distribution.
+
+16. If a random variable $X \sim N(40, 5^2)$, find $P(32 < X \leq 50)$.
+
+17. Define convergence in probability.
+
+$(7 \times 2 = 14 \text{ marks})$
+
+**Section C**
+
+*Answer any **three** questions.*
+
+*Each question carries 4 marks.*
+
+18. State and prove the addition theorem of expectation.
+
+19. What are the physical conditions for which binomial distribution is used ?
+
+20. Show that in a Poisson distribution with unit mean, mean deviation about mean is $\frac{2}{e}$ times the standard deviation.
+
+21. Define beta distributions of Type I and Type II. Give the relation between them.
+
+22. State and prove Bernoulli's weak law of large numbers.
+
+$(3 \times 4 = 12 \text{ marks})$
+
+**Section D**
+
+*Answer any **four** questions.*
+
+*Each question carries 6 marks.*
+
+23. What is the expectation of the number of failures before the first success in an infinite series of independent trials with constant probability $p$ of success in each trial ?
+
+24. Two random variables X and Y have the following joint probability density function :
+
+    $$f(x, y) = \begin{cases}
+    2 - x - y, & 0 \leq x \leq 1, 0 \leq y \leq 1 \\
+    0, & \text{otherwise}
+    \end{cases}$$
+
+    Find the covariance between X and Y.
+---
+
+**(Page 27 is part of 4185)**
+
+**3 C4185**
+
+25. Find the m.g.f. of the random variables whose moments are (i) $\mu_r'$, $(r+1)!2^r$ and (ii) $\mu_r, r!$
+26.  A car hire firm has two cars which it hires out day by day. The number of demands for a car on each day is distributed as Poisson variate with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused
+27.  In a distribution exactly normal, 7% of the items are under 35 and 89% are under 63. What are the mean and standard deviation of the distribution ?
+28.  Let $X_i$ Assume the values $+1$ and $-1$ with equal probabilities, show that law of large numbers cannot be applied to the independent variables $X_1,X_2,...$
+$(4 \times 6 = 24 \text{ marks})$
+**Section E**
+*Answer any two questions*
+*Each questions carries 10 marks*
+29. Prove that characteristic function is uniformly continuous.
+30. Derive Poisson distribution as a limiting case of binomial distribution.
+31. Explain the properties of Normal Distribution
+32. State and prove the Chebychev's inequality.
+$(2 \times 10 = 20 \text{ marks})$
+---
+
+**C 4184 (Pages : 3)**
+
+**Name....................................**
+
+**Reg. No.................................**
+**SECOND SEMESTER (CUCBCSS—UG) DEGREE EXAMINATION, APRIL 2021**
+**Statistics**
+**STS 2B 02—BIVARIATE RANDOM VARIABLE AND PROBABILITY DISTRIBUTIONS**
+
+**Time : Three Hours**
+**Maximum : 80 Marks**
+*Use of Calculator and Statistical tables are permitted.*
+
+**Section A (One Word Questions)**
+
+*Answer **all** questions.*
+*Each question carries 1 mark.*
+1.  For the bivariate distribution function $(X,Y), F_{(X,Y)}(\infty,\infty)=$__________.
+2.  If X and Y two independent random variables, $E(X/Y)=$__________.
+3.  For the bivariate distribution function $(X,Y), M_{X,Y}(t_1,t_2)=$__________.
+4. The first and second moments of $X$ about 5 is 2 and 6, then $V(X)=$
+5. For two random variables $X$ and $Y, V(\alpha X -bY)=$__________.
+6. $Cov(\bar{X}+a,Y+b)=$__________.
+7.  Expectation of a Bernoulli random variable with parameter $p$ is__________.
+8.  For a geometric random variable $X, P(X=x+1)=$__________$ \times P(X=x)$.
+9.  Random variable following gamma distribution ranges in between __________.
+10. If $X$ follow $N(0,1), P(X^2<1)=$__________.
+$(10 \times 1 = 10 \text{ marks})$
+
+**Section B (One Sentence Questions)**
+
+*Answer all questions*
+*Each questions carries 2 marks*
+
+11. Show that the 1st central moment about of a random variable $X$ is zero.
+12. Define independence of two random variables $X$ and $Y$
+13. Show that the characteristic function $\phi_x(t)/t=0$ is equal to $1$.
+14. Define the coefficient of kurtosis based on moments.
+---
+**(Page 29 is part of 4184)**
+**2 C 4184**
+15. Find the values of the parameters of a binomial random variable with mean 4 and variance 3.
+16. Find $P(X=0)$ for a Poisson random variable with mean 5.
+17. If $X ~ N(\mu, \sigma)$, suggest the variable following log normal distribution.
+$(7 \times 2 = 14 \text{ marks})$
+
+**Section C (Paragraph Questions)**
+
+*Answer any **three** questions.*
+*Each questions carries 4 marks*
+18. State and prove multiplication theorem on expectation.
+19. Find the m.g.f. of $X$ with p.d.f $f(x)=\frac{1}{2}e^{-|x|}, -\infty < x < \infty$.
+20. $X$ and $Y$ are independent random variables following Poisson distribution with parameters $\lambda$ and $\mu$ respectively, where $V(X)=2$ and $V(Y)=3$. Find $P(X+Y>0)$.
+21. If $X$ follow $U[-a,a]$, find $a$ such that $P[X>-1]=0.7$.
+22. Obtain the mean of $X$ follow beta distribution of first kind with parameters $p$ and $q$.
+$(3 \times 4 = 12 \text{ marks})$
+
+**Section D (Short Essay Questions)**
+
+*Answer any **four** questions.*
+
+*Each questions carries 6 marks.*
+
+23. The joint p.m.f. of $X$ and $Y, f(x,y)=k(2x+3y), x=0,1,2; y=1,2,3$. Find (i) $k$; (ii) conditional distribution of $X$ given $Y=1$
+24. For a random variable $X$, prove that $E(X)=E[E(X|Y)]$.
+25. The bivariate m.g.f. of $X$ and $Y$, with joint p.d.f. $f(x,y)=e^{-x-y}, x>0; y>0$. Verify whether $X$ and $Y$ are independent.
+26. Obtain the mode of $X$ following binomial distribution with parameters $n$ and $p$.
+27. If $X \sim P(\lambda)$; prove that $\mu_{r+1}=r\lambda\mu_{r-1}+\lambda\frac{d}{d\lambda}\mu_r$, where $\mu_{r-1}, \mu_r, \mu_{r+1}$ respectively be the $(r-1)^{th}, r^{th}$ and $(r+1)^{th}$ central moments of $X$.
+---
+**(Page 30 is part of 4184)**
+**3 C4184**
+28.  600 students are appearing a test independently with a probability of success 0.40. Using normal approximation, find the probability of the number of students passes :
+    (i) Between 260 and 280 inclusive.
+    (ii) Exactly 250.
+    (iii) Fewer than 230 and more than 250.
+$(4 \times 6 = 24 \text{ marks})$
+**Section E (Essay Questions)**
+*Answer any **two** questions.*
+*Each questions carries 10 marks.*
+29. Let X and Y are two random variables with joint p.m.f. $f(x,y)=\begin{cases} 2; 0<x<y<1 \\ 0; \text{ elsewhere}\end{cases}$.
+
+    Find Correlation between X and Y.
+30. If X and Y independent random variables such that $P(X=r)=P(Y=r)=q^rp, r=0,1,2,...$
+where, $p$ and $q$ are positive numbers such that $p+q=1$. Find (i) the distribution of $X+Y$; (ii) The conditionai distribution of $X$ given $X+Y$.
+31. Obtain the m.g.f. of $X$ following (i) Exponential distribution with parameter $\lambda$. (ii) Gamma distribution with parameters $\lambda$ and $n$. Hence prove that sum of $n$ independent and identical exponential random variables follow gamma distribution.
+32. Define standard normal distribution. Show that the quartile deviation of $X-N(\mu, \sigma)$ is $0.6745\sigma$.
+$(2 \times 10 = 20 \text{ marks})$
+
+TEXT
+
+# Continuous Random Variables and Their Probability Distributions
+## Continuous Random Variables
+Random variables which can assume infinite number of values from an interval of the form [a,b], e.g.: Height, Temperature, Weight etc.
+
+## Probability Density Function
+$p(x \leq X \leq x+dx) = f(x) dx$ is the PDF for a continuous random variable $x$
+
+It satisfies:
+
+1. $f(x) \geq 0$ for all $x$
+2. $$\int_{-\infty}^{\infty} f(x) dx = 1$$
+
+### Result 1
+$$p(a \leq x \leq b) = p(a \leq x < b) = p(a < x < b) = \int_{a}^{b} f(x) dx$$
+
+
+### Result 2
+
+$$p(x = a) = 0$$
+
+## Distribution Function
+
+$$F_x(x) = p(X \leq x) = \int_{-\infty}^{x} f(t) dt$$
+
+
+## Moments of Continuous Probability Distribution
+
+ ### Arithmetic Mean
+
+$$E(x) = \int_{-\infty}^{\infty} xf(x)dx$$
+
+### Median
+
+$$\int_{-\infty}^{M} f(x)dx = \frac{1}{2} = \int_{M}^{\infty} f(x)dx$$
+
+$M$ is determined by solving the equation $f'(x) = 0$ and verifying whether $f''(x) < 0$ at mode
+
+### r<sup>th</sup> Central Moment
+
+$$\mu_r = \int_{-\infty}^{\infty} (x-E(x))^r f(x)dx$$
+
+### Variance as 2<sup>nd</sup> Central Moment
+$$\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2 f(x)dx$$
+    
+### Quartiles
+$$\int_{-\infty}^{Q_1} f(x) dx = \frac{1}{4}$$
+$$\int_{-\infty}^{Q_3} f(x) dx = \frac{3}{4}$$
+
+## Rectangular Distributions
+$$\ f(x) = \begin{cases} \frac{1}{b-a} & a\leq x \leq b \\ 0 & otherwise\end{cases}$$
+ Here a and b are parameters
+### Mean
+$$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{a+b} 2$$
+### Variance
+$$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{(a-b)^2} 2 $$    
+    
+* One must try to prove all of these!
+
+## Exponential Distribution
+$$\ f(x) = \theta e^{-\theta x}$$
+Here $\theta$ is a parameter 
+### Mean
+$$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{1} \theta$$
+### Variance
+$$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{1} {{\theta}^2} $$
+
+## Normal Distribution
+
+A random variable $X$ is defined to be normally distributed if its probability density function is given by
+
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+
+where the parameters are $-\infty < \mu < \infty$ and $\sigma > 0$.
+
+When $X$ follows a normal distribution, we write $X \sim N(\mu, \sigma^2)$.
+
+### Moments
+
+#### Mean
+
+$$E(x) = \int_{-\infty}^{\infty} x f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x-\mu+\mu) f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x-\mu) f(x) dx + \int_{-\infty}^{\infty} \mu f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x-\mu) \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx + \mu \int_{-\infty}^{\infty} f(x) dx$$
+
+Let $z = \frac{x-\mu}{\sigma}$, then $x-\mu = \sigma z$ and $dx = \sigma dz$.
+
+$$= \int_{-\infty}^{\infty} \sigma z \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{z^2}{2}} \sigma dz + \mu \cdot 1$$
+
+$$= \frac{\sigma}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z e^{-\frac{z^2}{2}} dz + \mu$$
+
+$$= 0 + \mu$$
+
+$$= \mu$$
+
+#### Variance
+
+$$V(x) = E[(x - E(x))^2]$$
+
+$$= E[(x - \mu)^2]$$
+
+$$= \int_{-\infty}^{\infty} (x - \mu)^2 f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x - \mu)^2 \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx$$
+
+Put $\frac{x-\mu}{\sigma} = z$, then $(x-\mu) = \sigma z$ and $dx = \sigma dz$.
+
+When $x = -\infty$, $z = -\infty$.
+When $x = \infty$, $z = \infty$.
+
+$$= \int_{-\infty}^{\infty} (\sigma z)^2 \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{z^2}{2}} \sigma dz$$
+
+$$= \frac{\sigma^2}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z^2 e^{-\frac{z^2}{2}} dz$$
+
+$$= \frac{2\sigma^2}{\sqrt{2\pi}} \int_{0}^{\infty} z^2 e^{-\frac{z^2}{2}} dz$$
+
+Put $\frac{z^2}{2} = u$, then $z^2 = 2u$ and $2z dz = 2 du$, so $dz = \frac{du}{z} = \frac{du}{\sqrt{2u}}$.
+
+When $z = 0$, $u = 0$.
+When $z = \infty$, $u = \infty$.
+
+$$= \frac{2\sigma^2}{\sqrt{2\pi}} \int_{0}^{\infty} 2u e^{-u} \frac{du}{\sqrt{2u}}$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \int_{0}^{\infty} \sqrt{u} e^{-u} du$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \int_{0}^{\infty} u^{\frac{1}{2}} e^{-u} du$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \Gamma(\frac{3}{2})$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \cdot \frac{1}{2} \Gamma(\frac{1}{2})$$
+
+$$= \frac{\sigma^2}{\sqrt{\pi}} \cdot \sqrt{\pi}$$
+
+$$= \sigma^2$$
+
+
+### Moment Generating Function:
+
+$$
+M_X(t) = E(e^{tX})
+$$
+$$= \int_{-\infty}^{\infty} e^{tx} f(x) \, dx$$
+
+
+For a normal distribution:
+
+$$
+= \int_{-\infty}^{\infty} e^{tx} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
+$$
+
+Using substitution:
+
+$$
+x - \mu = z\sigma, \quad dx = \sigma dz
+$$
+
+$$
+= \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{\infty} e^{t(\mu+z\sigma)} e^{-z^2/2} \sigma dz
+$$
+
+$$
+= \frac{e^{t\mu}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{t\sigma z - z^2/2} \, dz
+$$
+
+$$
+= \frac{e^{\mu t}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-\frac{1}{2} (z^2 - 2t\sigma z + t^2\sigma^2) + \frac{1}{2}t^2\sigma^2} \, dz
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-\frac{1}{2} (z - t\sigma)^2} \, dz
+$$
+
+Using the substitution:
+
+$$
+z - t\sigma = u, \quad dz = du
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \int_{0}^{\infty} e^{-\frac{u^2}{2}} \, du
+$$
+
+Rewriting:
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \times 2 \int_{0}^{\infty} e^{-u^2/2} \, du
+$$
+
+Using substitution:
+
+$$
+u^2 = 2v \quad \Rightarrow \quad 2udu = dv, \quad du = \frac{dv}{2u}
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \times 2 \int_{0}^{\infty} v^{-1/2} e^{-v} \, dv
+$$
+
+Using the Gamma function property:
+
+$$
+\int_{0}^{\infty} e^{-x} x^{p-1} \, dx = \Gamma(p)
+$$
+
+For $ p = \frac{1}{2} $:
+
+$$
+\Gamma(1/2) = \sqrt{\pi}
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{\pi}} \times \sqrt{\pi}
+$$
+
+$$
+= e^{\mu t + \frac{1}{2} t^2 \sigma^2}
+$$
+
+### Properties of Normal Distribution
+
+To find diagrams of the normal distribution curve, search for:
+**"Normal distribution curve graph"** or **"Bell curve diagram"** on Google Images.
+
+### Properties of the Normal Curve
+
+The following are some of the properties of the normal curve:
+
+1. The normal curve is symmetrical about the ordinate at $x = \mu$.
+
+2. The mean, median, and mode are identical.
+
+3. The normal curve $f(x)$ has a maximum at $x = \mu$, and the maximum value of the ordinate is:
+   $$
+   \frac{1}{\sigma \sqrt{2\pi}}
+   $$
+
+4. The normal curve extends from $-\infty$ to $+\infty$.
+
+5. All odd-order central moments vanish:
+   $$
+   M_{2r+1} = 0, \quad r = 0,1,2,\dots
+   $$
+
+6. The even-order central moments are given by:
+   $$
+   M_{2r} = 1 \cdot 3 \cdot 5 \dots (2r - 1) \sigma^{2r}
+   $$
+
+7. For a normal distribution:
+   $$
+   \beta_1 = 0 \quad \text{and} \quad \beta_2 = 3
+   $$
+
+8. The points of inflection of the curve are at $x = \mu \pm \sigma$.
+### Odd-Order Moments About Mean
+
+The odd-order moments about the mean are given by:
+
+$$
+M_{2r+1} = \int_{-\infty}^{\infty} (x - \mu)^{2r+1} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx
+$$
+
+Substituting $z = \frac{x - \mu}{\sigma}$, we get:
+
+$$
+M_{2r+1} = \frac{\sigma^{2r+1}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z^{2r+1} e^{-z^2/2} dz
+$$
+
+Since the integral of an odd function over a symmetric interval is zero:
+
+$$
+M_{2r+1} = 0, \quad r = 0,1,2,\dots
+$$
+
+---
+
+### Even-Order Central Moment
+
+The even-order central moment is given by:
+
+$$
+M_{2r} = \int_{-\infty}^{\infty} (x - \mu)^{2r} f(x) dx
+$$
+
+Substituting $z = \frac{x - \mu}{\sigma}$:
+
+$$
+M_{2r} = \frac{\sigma^{2r}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z^{2r} e^{-z^2/2} dz
+$$
+
+Using the transformation $z^2 = u$ and $dz = \frac{du}{2\sqrt{u}}$, we get:
+
+$$
+M_{2r} = \frac{2\sigma^{2r}}{\sqrt{2\pi}} \int_{0}^{\infty} u^r e^{-u/2} \frac{du}{\sqrt{2u}}
+$$
+
+Applying the Gamma function properties, this simplifies to:
+
+$$
+M_{2r} = 1 \cdot 3 \cdot 5 \dots (2r - 1) \sigma^{2r}
+$$
+Using the Gamma function:
+
+$$
+M_{2r} = \frac{2^r \sigma^{2r}}{\sqrt{\pi}} \int_0^\infty u^{r - \frac{1}{2}} e^{-u} du
+$$
+
+Since:
+
+$$
+\int_0^\infty u^{r - \frac{1}{2}} e^{-u} du = \Gamma(r + \frac{1}{2})
+$$
+
+We get:
+
+$$
+M_{2r} = \frac{2^r \sigma^{2r}}{\sqrt{\pi}} \Gamma(r + \frac{1}{2})
+$$
+
+Using the property:
+
+$$
+\Gamma(r + \frac{1}{2}) = (r - \frac{1}{2})(r - \frac{3}{2}) \dots \frac{1}{2} \Gamma(\frac{1}{2})
+$$
+
+And knowing:
+
+$$
+\Gamma(\frac{1}{2}) = \sqrt{\pi}
+$$
+
+We simplify:
+
+$$
+M_{2r} = \frac{2^r \sigma^{2r}}{\sqrt{\pi}} \cdot \sqrt{\pi} \cdot (r - \frac{1}{2})(r - \frac{3}{2}) \dots \frac{1}{2}
+$$
+
+Rewriting:
+
+$$
+M_{2r} = \sigma^{2r} (2r - 1)(2r - 3) \dots 3 \cdot 1
+$$
+
+Thus:
+
+$$
+M_{2r} = 1 \cdot 3 \cdot 5 \dots (2r - 3)(2r - 1) \sigma^{2r}
+$$
+
+---
+
+### Additive Property of Normal Distributions
+
+1. If 
+
+$$
+X_1 \sim N(\mu_1, \sigma_1^2) \quad \text{and} \quad X_2 \sim N(\mu_2, \sigma_2^2)
+$$
+
+and if $X_1$ and $X_2$ are independent, then:
+
+$$
+X_1 + X_2 \sim N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)
+$$
+
+#### Proof:
+
+Since:
+
+$$
+X_1 \sim N(\mu_1, \sigma_1^2)
+$$
+
+Its moment generating function (MGF) is:
+
+$$
+M_{X_1}(t) = e^{\mu_1 t + \frac{1}{2} t^2 \sigma_1^2}
+$$
+
+Similarl
+
+### Sum of Independent Normal Variables
+
+#### Theorem 2:
+If $ X_i $, where $ i = 1, 2, \dots, n $, are $ n $ independent normal variables with mean $ \mu_i $ and standard deviation $ \sigma_i $, then the variable:
+
+$$
+Y = \sum_{i=1}^{n} X_i
+$$
+
+is also normally distributed with mean:
+
+$$
+\sum_{i=1}^{n} \mu_i
+$$
+
+and variance:
+
+$$
+\sum_{i=1}^{n} \sigma_i^2
+$$
+
+### Proof:
+
+Given:
+
+$$
+X_i \sim N(\mu_i, \sigma_i^2), \quad i = 1, 2, \dots, n
+$$
+
+The moment generating function (MGF) of $ Y $ is:
+
+$$
+M_Y(t) = M_{\sum X_i}(t) = \prod_{i=1}^{n} M_{X_i}(t)
+$$
+
+Since the MGF of a normal variable $ X_i $ is:
+
+$$
+M_{X_i}(t) = e^{\mu_i t + \frac{1}{2} t^2 \sigma_i^2}
+$$
+
+We get:
+
+$$
+M_Y(t) = \prod_{i=1}^{n} e^{\mu_i t + \frac{1}{2} t^2 \sigma_i^2}
+$$
+
+$$
+= e^{\sum_{i=1}^{n} (\mu_i t + \frac{1}{2} t^2 \sigma_i^2)}
+$$
+
+$$
+= e^{\sum_{i=1}^{n} \mu_i t + \frac{1}{2} t^2 \sum_{i=1}^{n} \sigma_i^2}
+$$
+
+This is the MGF of a normal variable with mean $ \sum_{i=1}^{n} \mu_i $ and variance $ \sum_{i=1}^{n} \sigma_i^2 $, proving that:
+
+$$
+Y = \sum_{i=1}^{n} X_i \sim N\left( \sum_{i=1}^{n} \mu_i, \sum_{i=1}^{n} \sigma_i^2 \right)
+$$
+
+---
+
+### Linear Combination of Independent Normal Variables
+
+### Theorem 3:
+If $ X_i $, where $ i = 1, 2, \dots, n $, are $ n $ independent normal variables with mean $ \mu_i $ and standard deviation $ \sigma_i $, then the variable:
+
+$$
+Y = \sum_{i=1}^{n} a_i X_i
+$$
+
+(where $ a_i $ are constants) is also normally distributed with mean:
+
+$$
+\sum_{i=1}^{n} a_i \mu_i
+$$
+
+and variance:
+
+$$
+\sum_{i=1}^{n} a_i^2 \sigma_i^2
+$$
+
+#### Proof:
+
+Given:
+
+$$
+X_i \sim N(\mu_i, \sigma_i^2), \quad i = 1, 2, \dots, n
+$$
+
+The moment generating function (MGF) of $ X_i $ is:
+
+$$
+M_{X_i}(t) = e^{\mu_i t + \frac{1}{2} t^2 \sigma_i^2}
+$$
+
+For the linear combination:
+
+$$
+Y = \sum_{i=1}^{n} a_i X_i
+$$
+
+the MGF is:
+
+$$
+M_Y(t) = M_{\sum a_i X_i}(t) = \prod_{i=1}^{n} M_{X_i}(a_i t)
+$$
+
+Substituting the MGF:
+
+$$
+M_Y(t) = \prod_{i=1}^{n} e^{\mu_i (a_i t) + \frac{1}{2} (a_i t)^2 \sigma_i^2}
+$$
+
+$$
+= e^{\sum (a_i \mu_i t) + \frac{1}{2} \sum (a_i^2 t^2 \sigma_i^2)}
+$$
+
+$$
+= e^{(\sum a_i \mu_i) t + \frac{1}{2} t^2 (\sum a_i^2 \sigma_i^2)}
+$$
+
+The right-hand side is the MGF of a normal variable with mean:
+
+$$
+\sum_{i=1}^{n} a_i \mu_i
+$$
+
+and variance:
+
+$$
+\sum_{i=1}^{n} a_i^2 \sigma_i^2
+$$
+
+Thus:
+
+$$
+Y = \sum_{i=1}^{n} a_i X_i \sim N\left( \sum_{i=1}^{n} a_i \mu_i, \sum_{i=1}^{n} a_i^2 \sigma_i^2 \right)
+$$
+
+---
+
+## Standard Normal Distribution
+
+For a normally distributed variable:
+
+$$
+X \sim N(\mu, \sigma^2)
+$$
+
+its probability density function (PDF) is:
+
+$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \quad -\infty < x < \infty
+$$
+
+### Standardization:
+
+Define:
+
+$$
+Z = \frac{X - \mu}{\sigma}
+$$
+
+By changing the variable, the PDF of $ Z $ is given by:
+
+$$
+f(z) = f(x) \left| \frac{dx}{dz} \right|
+$$
+
+Since:
+
+$$
+\frac{dx}{dz} = \sigma
+$$
+
+we get:
+
+$$
+f(z) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \cdot \sigma
+$$
+
+$$
+= \frac{1}{\sqrt{2\pi}} e^{-\frac{z^2}{2}}, \quad -\infty < z < \infty
+$$
+
+which is the standard normal distribution.
+
+## Standard Normal Distribution
+
+### Definition
+
+A random variable (rv) is said to be a **standard normal variable** if its probability density function (PDF) is given by:
+
+$$
+f(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}, \quad -\infty < z < \infty
+$$
+
+The corresponding probability distribution is called the **standard normal distribution**.
+
+- **Mean**: $ E(Z) = 0 $
+- **Variance**: $ \text{Var}(Z) = 1 $
+
+We write:
+
+$$
+Z \sim N(0,1)
+$$
+
+---
+
+## Area Under the Normal Probability Curve
+
+In a normal distribution, to find the probability of the variable lying between two values, say $ a $ and $ b $, we first change these values in terms of the **standard normal variable** by using the substitution:
+
+$$
+Z = \frac{X - \mu}{\sigma}
+$$
+
+### Standard Normal Table
+
+The table for the area under the **standard normal curve** gives the probability of the variable lying between 0 and any positive value of $ Z $. 
+
+
+from PYQ filter out questions only neede for TEXT and rewrite them in markdown using mathjax with 
+ and $

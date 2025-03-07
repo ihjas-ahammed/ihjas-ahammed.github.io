@@ -1,0 +1,6 @@
+PYQ
+
+TEXT
+
+from PYQ filter out questions only neede for TEXT and rewrite them in markdown using mathjax with 
+ and $
