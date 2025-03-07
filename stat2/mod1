@@ -294,3 +294,42 @@ $$ V(X) = E(X^2) - [E(X)]^2 = (\lambda^2 + \lambda) - \lambda^2 = \lambda $$
 ## Moment Generating Function
 
 $$ M_X(t) = E(e^{tX}) = \sum_{x=0}^\infty e^{tx} \frac{e^{-\lambda} \lambda^x}{x!} = e^{-\lambda} \sum_{x=0}^\infty \frac{(\lambda e^t)^x}{x!} = e^{-\lambda} e^{\lambda e^t} = e^{\lambda (e^t - 1)} $$
+
+## Moments: Poisson Distribution
+
+### Moment-Generating Function
+The moment-generating function (MGF) for a random variable \( X \) is given as:
+$$ M_X(t) = e^{-\lambda} e^{\lambda e^t} $$
+This is the MGF of a Poisson random variable \( X \) with parameter \( \lambda \).
+
+### First Derivative
+The first derivative of the MGF is computed to find the mean:
+$$ M'_X(t) = \frac{d}{dt} M_X(t) = e^{-\lambda} e^{\lambda e^t} \cdot \lambda e^t $$
+Evaluating at \( t = 0 \):
+$$ M'_X(0) = e^{-\lambda} e^{\lambda} \cdot \lambda = \lambda $$
+Thus, the mean of the distribution is:
+$$ E[X] = \lambda $$
+
+### Second Derivative
+The second derivative of the MGF is computed to find the second moment:
+$$ M''_X(t) = \frac{d}{dt} \left( e^{-\lambda} e^{\lambda e^t} \cdot \lambda e^t \right) $$
+Using the product rule:
+- Let \( u = e^{\lambda e^t} \), \( v = \lambda e^t \)
+- Derivatives:
+  $$ \frac{du}{dt} = e^{\lambda e^t} \cdot \lambda e^t $$
+  $$ \frac{dv}{dt} = \lambda e^t $$
+- Applying the product rule:
+  $$ \frac{d}{dt} (u \cdot v) = u' v + u v' = (e^{\lambda e^t} \cdot \lambda e^t) \cdot (\lambda e^t) + e^{\lambda e^t} \cdot (\lambda e^t) $$
+  $$ = e^{\lambda e^t} \cdot \lambda e^t \left( \lambda e^t + 1 \right) $$
+Thus:
+$$ M''_X(t) = e^{-\lambda} \left[ (e^{\lambda e^t} \cdot \lambda e^t) \cdot \lambda e^t + e^{\lambda e^t} \cdot \lambda e^t \right] $$
+Evaluating at \( t = 0 \):
+$$ M''_X(0) = e^{-\lambda} \left[ e^{\lambda} \cdot \lambda^2 + e^{\lambda} \cdot \lambda \right] = e^{-\lambda} e^{\lambda} (\lambda^2 + \lambda) = \lambda^2 + \lambda $$
+So, the second moment is:
+$$ E[X^2] = \lambda^2 + \lambda $$
+
+### Variance Calculation
+The variance is calculated using the formula:
+$$ V(X) = E[X^2] - (E[X])^2 $$
+Substituting the values:
+$$ V(X) = (\lambda^2 + \lambda) - \lambda^2 = \lambda $$
