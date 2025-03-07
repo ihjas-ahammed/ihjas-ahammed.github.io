@@ -168,40 +168,6 @@
           "describe": "Covariance measures how two random variables vary together from their expected values.",
           "correct": 0
         }
-      ],
-      "sample":[
-        {
-          "name": "Section A",
-          "marks": 3,
-          "questions": [
-            "Define a random variable.",
-            "What is the probability mass function (PMF) of a discrete random variable?",
-            "Calculate the expected value of a random variable X with possible values 1, 2, 3 and probabilities 0.3, 0.4, 0.3 respectively.",
-            "State two properties of the cumulative distribution function (CDF).",
-            "What is the mean and variance of a binomial distribution with parameters n and p?",
-            "What is the relationship between the mean and variance in a Poisson distribution?",
-            "If X follows a binomial distribution with parameters n and p, what is the distribution of Y = n - X?",
-            "What is the expected profit for a seller per item, if he sells a large number of items per day with profits Rs. 2, 3, or 4 with probabilities 0.2, 0.35, and 0.45 respectively?"
-          ]
-        },
-        {
-          "name": "Section B",
-          "marks": 5,
-          "questions": [
-            "Show that the variance of a random variable X is always non-negative.",
-            "Obtain the moment generating function of a geometric distribution with parameter p.",
-            "For a Poisson distribution with mean λ, derive the variance.",
-            "A random variable X follows a binomial distribution with mean 12 and variance 3. Find the parameters n and p.",
-            "A car hire firm has two cars, and the daily demand follows a Poisson distribution with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused."
-          ]
-        },
-        {
-          "name": "Section C",
-          "marks": 10,
-          "questions": [
-            "Derive the Poisson distribution as a limiting case of the binomial distribution."
-          ]
-        }
       ]
     },
     {
@@ -2054,6 +2020,155 @@
         }
       ]
     }
-  ]
-  
+  ],
+  "sample": {
+    "topics": [
+      "Random Variables and Probability Distributions",
+      "Probability Mass Function (PMF) and Cumulative Distribution Function (CDF)",
+      "Mathematical Expectation",
+      "Moments",
+      "Moment Generating Function (MGF)",
+      "Binomial Distribution",
+      "Poisson Distribution",
+      "General Probability Concepts"
+    ],
+    "sections": [
+      {
+        "name": "Section A",
+        "marks": 3,
+        "questions": [
+          "What is the expected profit for a seller per item when profits are Rs. 2, 3, or 4 with probabilities 0.2, 0.35, and 0.45 respectively?",
+          "When an unbiased die is thrown, what is the probability distribution of X and its p.m.f.?",
+          "Show that for any random variable X, the variance V(X) is always non-negative.",
+          "Prove that the 1st central moment of a random variable X is zero.",
+          "Define the coefficient of kurtosis based on moments.",
+          "Prove that the absolute value of the characteristic function |φ_X(t)| is at most 1.",
+          "Identify the parameters of a binomial distribution if its mean is 12 and variance is 3.",
+          "What are the physical conditions for using the binomial distribution?",
+          "Find the mode of a binomial distribution given its parameters n and p.",
+          "If a Poisson random variable X has variance 5, find P(X = 5).",
+          "Define the negative binomial distribution.",
+          "Define a random experiment and an event.",
+          "Define a Bernoulli random variable.",
+          "Define the characteristic function of a random variable.",
+          "Name the discrete distribution that has the memoryless property.",
+          "If X follows a binomial distribution, what is the distribution of Y = n - X?",
+          "For two independent variables X and Y, what is the conditional distribution f(x|y)?",
+          "For a geometric distribution, is the mean always less than the variance? Justify your answer.",
+          "Define the mathematical expectation of a random variable.",
+          "List the properties of the moment generating function.",
+          "Define conditional variance.",
+          "Define the geometric distribution.",
+          "What is the expectation of the number of failures before the first success in repeated trials?",
+          "Define the variance of a random variable.",
+          "Explain the difference between raw moments and central moments.",
+          "Define the probability mass function (PMF) and state its two conditions.",
+          "Define the cumulative distribution function (CDF) and mention one key property.",
+          "What is the sum of probabilities in a probability mass function?",
+          "List two properties of the mathematical expectation.",
+          "Differentiate between discrete and continuous random variables.",
+          "What is the role of a moment generating function in probability theory?",
+          "State one advantage of using the moment generating function to compute moments."
+        ],
+        "topicNo": [
+          1,
+          2,
+          3,
+          4,
+          4,
+          5,
+          6,
+          6,
+          6,
+          7,
+          7,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          8,
+          3,
+          4,
+          2,
+          2,
+          2,
+          8,
+          8,
+          5,
+          5
+        ]
+      },
+      {
+        "name": "Section B",
+        "marks": 5,
+        "questions": [
+          "Explain two methods of finding raw moments of X when the moment generating function exists.",
+          "Obtain the moment generating function of a geometric distribution with parameter p.",
+          "State and prove the additive property of the binomial distribution.",
+          "Show that in a Poisson distribution with unit mean, the mean deviation about the mean is (2/e) times the standard deviation.",
+          "For a car hire firm with two cars and Poisson demand with mean 1.5, calculate the proportion of days when (i) neither car is used and (ii) some demand is refused.",
+          "State and prove the addition theorem of expectation.",
+          "Find the moment generating function of a random variable whose moments are given by μ_r' = (r+1)!2^r and μ_r = r!.",
+          "Derive the expression for the variance of a binomial distribution starting from its definition.",
+          "Using the definition of expectation, prove that E[aX+b] = aE[X] + b.",
+          "Derive the moment generating function for a binomial distribution.",
+          "Prove that the moment generating function uniquely determines the probability distribution of a random variable.",
+          "Show that the sum of two independent Poisson random variables is also Poisson distributed and determine its parameter.",
+          "Explain the concept of the characteristic function and how it differs from the moment generating function.",
+          "Using the definition of a cumulative distribution function, prove that it is non-decreasing.",
+          "Establish the relationship between the cumulative distribution function and the probability mass function for a discrete random variable.",
+          "Prove that for any constant C, the expectation E[C] equals C.",
+          "Using the moment generating function, derive the first two moments of a Poisson distribution.",
+          "Prove that if X and Y are independent, then Var(X+Y) = Var(X) + Var(Y).",
+          "Using the moment generating function, derive the variance of a geometric distribution.",
+          "Derive the moment generating function of the sum of two independent random variables given their individual MGFs."
+        ],
+        "topicNo": [
+          4,
+          5,
+          6,
+          7,
+          7,
+          8,
+          8,
+          6,
+          8,
+          6,
+          5,
+          7,
+          8,
+          2,
+          2,
+          8,
+          7,
+          8,
+          5,
+          5
+        ]
+      },
+      {
+        "name": "Section C",
+        "marks": 10,
+        "questions": [
+          "If P(X=2) equals P(X=3) for a Poisson distribution, find the moment generating function of X.",
+          "Derive the Poisson distribution as a limiting case of the binomial distribution.",
+          "Derive the expression for the moment generating function of a random variable from its probability mass function and use it to compute the first three moments.",
+          "Using properties of expectation and variance, derive and prove the law of total variance."
+        ],
+        "topicNo": [
+          7,
+          7,
+          5,
+          8
+        ]
+      }
+    ]
+  }
 }
