@@ -1,6 +1,24 @@
 PYQ
 
+END OF PYQ
+
 TEXT
 
-from PYQ filter out questions only neede for TEXT and rewrite them in markdown using mathjax with 
- and $
+from PYQ filter out questions only need for TEXT and rewrite them in markdown using mathjax with 
+ and $  
+
+
+ make sure to take questions that can only be answered using TEXT
+
+ write in format
+
+ # 1. Topic Name
+
+ 1. Question (x marks)
+2. 
+
+...
+
+# 2. Topic 
+
+...

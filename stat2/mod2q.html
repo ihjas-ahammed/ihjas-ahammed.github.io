@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Continuous Random Variables and Their Probability Distributions</title>
+    <title>Discrete Random Variables and Their Probability Distribution</title>
     <!-- GitHub Markdown CSS -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
@@ -27,18 +27,18 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/github-dark.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
     <style>
-        body {
-            padding: 0;
-            display: flex;
-            margin:0;
-            justify-content: center;
-        }
+      body {
+          padding: 0;
+          display: flex;
+          margin:0;
+          justify-content: center;
+      }
 
-        .markdown-body {
-            max-width: 100%;
-            padding: 30px;
-            overflow-x: scroll;
-        }
+      .markdown-body {
+          max-width: 100%;
+          padding: 30px;
+          overflow-x: scroll;
+      }
     </style>
 </head>
 
@@ -48,7 +48,7 @@
         // Custom Showdown extension for KaTeX rendering, supporting inline math like $x$
         
         // Fetch and render Markdown with KaTeX math rendering
-        fetch("mod1q.md") // Replace with your Markdown file path
+        fetch("mod2q.md") // Replace with your Markdown file path
             .then(response => response.text())
             .then(md => {
                 let converter = new showdown.Converter({

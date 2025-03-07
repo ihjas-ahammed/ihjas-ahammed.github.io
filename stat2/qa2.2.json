@@ -168,6 +168,40 @@
           "describe": "Covariance measures how two random variables vary together from their expected values.",
           "correct": 0
         }
+      ],
+      "sample":[
+        {
+          "name": "Section A",
+          "marks": 3,
+          "questions": [
+            "Define a random variable.",
+            "What is the probability mass function (PMF) of a discrete random variable?",
+            "Calculate the expected value of a random variable X with possible values 1, 2, 3 and probabilities 0.3, 0.4, 0.3 respectively.",
+            "State two properties of the cumulative distribution function (CDF).",
+            "What is the mean and variance of a binomial distribution with parameters n and p?",
+            "What is the relationship between the mean and variance in a Poisson distribution?",
+            "If X follows a binomial distribution with parameters n and p, what is the distribution of Y = n - X?",
+            "What is the expected profit for a seller per item, if he sells a large number of items per day with profits Rs. 2, 3, or 4 with probabilities 0.2, 0.35, and 0.45 respectively?"
+          ]
+        },
+        {
+          "name": "Section B",
+          "marks": 5,
+          "questions": [
+            "Show that the variance of a random variable X is always non-negative.",
+            "Obtain the moment generating function of a geometric distribution with parameter p.",
+            "For a Poisson distribution with mean λ, derive the variance.",
+            "A random variable X follows a binomial distribution with mean 12 and variance 3. Find the parameters n and p.",
+            "A car hire firm has two cars, and the daily demand follows a Poisson distribution with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused."
+          ]
+        },
+        {
+          "name": "Section C",
+          "marks": 10,
+          "questions": [
+            "Derive the Poisson distribution as a limiting case of the binomial distribution."
+          ]
+        }
       ]
     },
     {
