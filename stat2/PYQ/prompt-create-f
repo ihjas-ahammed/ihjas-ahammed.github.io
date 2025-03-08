@@ -43,6 +43,9 @@
     ]
 }
 
+the topics and topicNo are a mapping from each question to the topic get topic names from the module
+
+
 Section A must have 32 unique qs, secion B 20, section C, 
 4
 
@@ -72,13 +75,6 @@ take approprate question fir given mark from below also create new questions fro
 
 1. Explain two methods of finding raw moments of $X$, when the moment generating function of $X$ exists.
 2. Show that the 1st central moment of a random variable $X$ is zero.
-3.  Define the coefficient of kurtosis based on moments.
-
-
-# 5. Moment Generating Function (MGF)
-
-1. Obtain the m.g.f. of $X$ following a geometric distribution with parameter $p$. (Refer to the properties of MGF for sums of random variables)  
-2. If $\phi_X(t)$ is the characteristic function of $X$, prove that $|\phi_X(t)| \leq 1$. (Use the properties of expectation and complex numbers.)
 
 
 # 6. Binomial Distribution
@@ -87,13 +83,11 @@ take approprate question fir given mark from below also create new questions fro
 2. State and prove the additive property of binomial distribution. (This requires using the definition of binomial distribution and potentially the MGF)
 3. If $P(X=2) = P(X=3)$, where $X$ follows a Poisson distribution, find the m.g.f. of $X$. (Use the PMF of the Poisson distribution and the definition of MGF)
 4. What are the physical conditions for which the binomial distribution is used?
-5. Find the mode of  following binomial distribution with parameters  and .
 
 
 # 7. Poisson Distribution
 
 1. If the variance of $X$ following a Poisson distribution is 5, find $P(X = 5)$. (Use the fact that mean and variance are equal in a Poisson distribution)  
-2. Define negative binomial distribution. (Relate it to the binomial distribution and describe its properties)
 3. Show that in a Poisson distribution with unit mean, the mean deviation about the mean is $\frac{
     2
 }{e
@@ -104,19 +98,14 @@ take approprate question fir given mark from below also create new questions fro
   
 # 8. General Probability Concepts
 
-1. Define (a) Random experiment ; (b) Event.
-2. Define Bernoulli random variable.
-3. Define characteristic function of a random variable.
+1. Define (a) Random variable ; (b) Event.
 4. Name the discrete distribution having the memoryless property. (Recall the unique property of one of the discussed distributions)
 5. If $X \sim B(n, p)$, the distribution of $y = n - X$ is __________. (Think about the properties of the binomial distribution and transformations)
 6. If $X$ and $Y$ are two independent variables, the conditional distribution of $X$ given $Y = y, f(x|y) =$ __________. (Consider the meaning of independence in terms of conditional probabilities)
-7.  For a geometric distribution, the mean is always less than the variance.  (True or False, justify using formulas)
 8. Define mathematical expectation of a random variable.
 9. What are the properties of the moment generating function?
-10. Define conditional variance.
-11. Define geometric distribution.
+11. Define binomial distribution.
 12. State and prove the addition theorem of expectation.
-13. What is the expectation of the number of failures before the first success in an infinite series of independent trials with constant probability  of success in each trial?
 14. Find the m.g.f. of the random variables whose moments are (i) $\mu_r' = (r+1)!2^r$ and (ii) $\mu_r = r!$  (Use the relationship between moments and the MGF).
 
 
