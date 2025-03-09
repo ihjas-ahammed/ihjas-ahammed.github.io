@@ -1,0 +1,31 @@
+
+# 1. Exploratory Data Analysis (EDA)
+
+1.  Why is EDA a significant component of Data Science? (3 marks)
+2.  Summarize the philosophy of EDA. (5 marks)
+
+# 2. Types of EDA
+
+1.  Differentiate the Graphical vs. Non-graphical methods in EDA (In context of two way cross classification) (Implied - combining information)
+2.  What is the difference between Univariate and Multivariate EDA? (Implied - Combining information)
+
+# 3. Descriptive Statistics
+
+1. What are Measures of Central Tendency. List them? (Implied 3 marks)
+2.  What are measures of dispersion? List them (3 Marks)
+3. Explain skewness and give it's formula. (implied)
+4. Expalin kurtosis and give it's formula (implied)
+
+# 4. Python Libraries for EDA
+
+1.  List any four data visualization tools. (From the "Tools Used in Python" section - this is borderline, as it's a list, but the tools are directly named in the text) (3 marks)
+2.  What is a dataframe in python? (3 marks)
+3. Write short note on Dataframe Features? (implied 3 marks)
+
+# 5. Data Visualization
+
+1.  List any four data visualization tools. (3 marks)
+2. Explain Box Plot. (Implied - it's defined in the text)
+3. Explain Scatter Plot. (Implied - defined)
+4. Explain Heatmap. (Implied - defined)
+5. What is a Bubble Chart. (Implied- Defined)
