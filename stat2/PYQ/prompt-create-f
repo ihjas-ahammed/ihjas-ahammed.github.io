@@ -53,678 +53,657 @@ the topics and topicNo are a mapping from each question to the topic get topic n
 
 take approprate question fir given mark from below also create new questions from the notes given below the model questions based on the model questions if needed and recreate the json
 
+# 1. Probability Density Function (PDF)
 
-# 1. Random Variables and Probability Distributions
-
-1. What is the expected profit for a seller per item, if he is selling a large number of this item per day with various profits Rs. 2,
-3 or 4 according to the buyer with a probability 0.2,
-0.35 and 0.45 respectively?
+1. Define the probability density function (PDF) of a continuous random variable and state any two of its properties. (5 marks)
 
 
-# 2. Probability Mass Function (PMF) and Cumulative Distribution Function (CDF)
+# 2. Cumulative Distribution Function (CDF)
 
-1. If the number shown when an unbiased die is thrown. Name the probability distribution of X. Write the p.m.f. of X.  
-
-
-# 3. Mathematical Expectation
-
-1.  For any random variable $X$, show that $V(X)$ is always non-negative. (Hint: Use the definition of variance in terms of expectation)
+1. Given the probability density function (PDF) of a random variable $X$ as $f(x) = 3x^2$ for $0 < x < 1$, find the cumulative distribution function (CDF), $F(x)$.  (This question requires calculation, but defining what a CDF is would come from the text.)
 
 
-# 4. Moments
+# 3.  Moments and Moment Generating Functions
 
-1. Explain two methods of finding raw moments of $X$, when the moment generating function of $X$ exists.
-2. Show that the 1st central moment of a random variable $X$ is zero.
+1. Define the Mathematical Expectation of a random variable. (3 marks)
 
-
-# 6. Binomial Distribution
-
-1. Identify the parameters of $X$ following a binomial distribution with mean 12 and variance 3. (Use the formulas for mean and variance of a binomial distribution)
-2. State and prove the additive property of binomial distribution. (This requires using the definition of binomial distribution and potentially the MGF)
-3. If $P(X=2) = P(X=3)$, where $X$ follows a Poisson distribution, find the m.g.f. of $X$. (Use the PMF of the Poisson distribution and the definition of MGF)
-4. What are the physical conditions for which the binomial distribution is used?
-
-
-# 7. Poisson Distribution
-
-1. If the variance of $X$ following a Poisson distribution is 5, find $P(X = 5)$. (Use the fact that mean and variance are equal in a Poisson distribution)  
-3. Show that in a Poisson distribution with unit mean, the mean deviation about the mean is $\frac{
-    2
-}{e
-}$ times the standard deviation. (This involves calculating the mean deviation and relating it to the standard deviation, using the PMF of the Poisson distribution.)
-4.  A car hire firm has two cars which it hires out day by day. The number of demands for a car on each day is distributed as a Poisson variate with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused. (Apply the Poisson distribution to a real-world scenario).
-5. Derive the Poisson distribution as a limiting case of the binomial distribution. (This requires a detailed mathematical derivation using limits.)
-
-  
-# 8. General Probability Concepts
-
-1. Define (a) Random variable ; (b) Event.
-4. Name the discrete distribution having the memoryless property. (Recall the unique property of one of the discussed distributions)
-5. If $X \sim B(n, p)$, the distribution of $y = n - X$ is __________. (Think about the properties of the binomial distribution and transformations)
-6. If $X$ and $Y$ are two independent variables, the conditional distribution of $X$ given $Y = y, f(x|y) =$ __________. (Consider the meaning of independence in terms of conditional probabilities)
-8. Define mathematical expectation of a random variable.
-9. What are the properties of the moment generating function?
-11. Define binomial distribution.
-12. State and prove the addition theorem of expectation.
-14. Find the m.g.f. of the random variables whose moments are (i) $\mu_r' = (r+1)!2^r$ and (ii) $\mu_r = r!$  (Use the relationship between moments and the MGF).
+2. What are the properties of a Moment Generating Function? (3 marks)
+3. Explain the two methods of obtaining the *raw moments* of X using the moment generating function of X. (10 marks)
 
 
 
-# Discrete Random Variables and Their Probability Distribution
+# 5.  Variance and Covariance
 
-## 1. Random Variable and Probability Distribution
+1. Prove that for any random variable $X$, the variance $V(X)$ is always non-negative. (3 marks)
+   
+2. Show that for any Random Variable $X$ that $Cov(X,X)=V(X)$. (3 marks)
 
-A random variable is a function from a sample space to a real number.
 
-For example, consider tossing two coins at the same time. The sample space is:
+# 6. Independence and Covariance
 
-$$ S = \{HH, HT, TH, TT\
-} $$
+1. If X and Y are two independent random variables, prove that their covariance, $Cov(X,Y)$, is equal to 0.  Show that the converse is not necessarily true (i.e., $Cov(X,Y) = 0$ does not always imply independence). (10 marks)
 
-Let’s define a random variable $ x $ as the number of heads. The values of $ x $ and their probabilities are:
 
-|       | HH  | HT  | TH  | TT  |
-|-------|-----|-----|-----|-----|
-| $ x $ | 2   | 1   | 1   | 0   |
-| $ p $ | $ P(x=2) = \frac{
-    1
-}{
-    4
-} $ | $ P(x=1) = \frac{
-    1
-}{
-    2
-} $ | $ P(x=1) = \frac{
-    1
-}{
-    2
-} $ | $ P(x=0) = \frac{
-    1
-}{
-    4
-} $ |
 
-This table represents the **probability distribution** (similar to a frequency distribution).
+# 8. Uniform Distribution
 
-The **expectation** of $ x $, denoted $ E(x) $, is the mean of the probability distribution:
+1. Find the variance of the continuous uniform (rectangular) distribution with probability density function (PDF) $f(x) = \frac{1}{b-a}$ for $a \leq x \leq b$. (Requires calculation, but understanding the variance formula in relation to a PDF comes from the text.) (3 marks)
 
-$$ E(x) = \sum x_i P(x = x_i) $$
 
-In this case:
 
-$$ E(x) = 2 \cdot \frac{
-    1
-}{
-    4
-} + 1 \cdot \frac{
-    1
-}{
-    2
-} + 1 \cdot \frac{
-    1
-}{
-    2
-} + 0 \cdot \frac{
-    1
-}{
-    4
-} = 0.5 + 0.5 + 0.5 + 0 = 1 $$
+# 10.  Normal Distribution
 
-Random variables are also called *chance variables* or *stochastic variables*. If $ x_1 $ and $ x_2 $ are random variables and $ c $ is a constant, then:
+1. Explain the properties of the Normal Distribution. (10 marks)
 
-1. $ c x_1 $ is a random variable
-2. $ x_1 + x_2 $ is a random variable
-3. $ x_1 - x_2 $ is a random variable
-4. $ \max(x_1, x_2) $ is a random variable
-5. $ \min(x_1, x_2) $ is a random variable
+
+
+
+
+# Continuous Random Variables and Their Probability Distributions
+## Continuous Random Variables
+Random variables which can assume infinite number of values from an interval of the form [a,b], e.g.: Height, Temperature, Weight etc.
+
+## Probability Density Function
+$p(x \leq X \leq x+dx) = f(x) dx$ is the PDF for a continuous random variable $x$
+
+It satisfies:
+
+1. $f(x) \geq 0$ for all $x$
+2. $$\int_{-\infty}^{\infty} f(x) dx = 1$$
+
+### Result 1
+$$p(a \leq x \leq b) = p(a \leq x < b) = p(a < x < b) = \int_{a}^{b} f(x) dx$$
+
+
+### Result 2
+
+$$p(x = a) = 0$$
+
+## Distribution Function
+
+$$F_x(x) = p(X \leq x) = \int_{-\infty}^{x} f(t) dt$$
+
+
+## Moments of Continuous Probability Distribution
+
+ ### Arithmetic Mean
+
+$$E(x) = \int_{-\infty}^{\infty} xf(x)dx$$
+
+### Median
+
+$$\int_{-\infty}^{M} f(x)dx = \frac{1}{2} = \int_{M}^{\infty} f(x)dx$$
+
+$M$ is determined by solving the equation $f'(x) = 0$ and verifying whether $f''(x) < 0$ at mode
+
+### r<sup>th</sup> Central Moment
+
+$$\mu_r = \int_{-\infty}^{\infty} (x-E(x))^r f(x)dx$$
+
+### Variance as 2<sup>nd</sup> Central Moment
+$$\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2 f(x)dx$$
+    
+### Quartiles
+$$\int_{-\infty}^{Q_1} f(x) dx = \frac{1}{4}$$
+$$\int_{-\infty}^{Q_3} f(x) dx = \frac{3}{4}$$
+
+## Rectangular Distributions
+$$\ f(x) = \begin{cases} \frac{1}{b-a} & a\leq x \leq b \\ 0 & otherwise\end{cases}$$
+ Here a and b are parameters
+### Mean
+$$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{a+b} 2$$
+### Variance
+$$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{(a-b)^2} 2 $$    
+    
+* One must try to prove all of these!
+
+## Exponential Distribution
+$$\ f(x) = \theta e^{-\theta x}$$
+Here $\theta$ is a parameter 
+### Mean
+$$ E(x) = \int_{-\infty}^{\infty} xf(x) dx = \frac{1} \theta$$
+### Variance
+$$ V(x) =\mu_2 = \int_{-\infty}^{\infty} (x-E(x))^2f(x) dx = \frac{1} {{\theta}^2} $$
+
+## Normal Distribution
+
+A random variable $X$ is defined to be normally distributed if its probability density function is given by
+
+$$f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}}$$
+
+where the parameters are $-\infty < \mu < \infty$ and $\sigma > 0$.
+
+When $X$ follows a normal distribution, we write $X \sim N(\mu, \sigma^2)$.
+
+### Moments
+
+#### Mean
+
+$$E(x) = \int_{-\infty}^{\infty} x f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x-\mu+\mu) f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x-\mu) f(x) dx + \int_{-\infty}^{\infty} \mu f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x-\mu) \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx + \mu \int_{-\infty}^{\infty} f(x) dx$$
+
+Let $z = \frac{x-\mu}{\sigma}$, then $x-\mu = \sigma z$ and $dx = \sigma dz$.
+
+$$= \int_{-\infty}^{\infty} \sigma z \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{z^2}{2}} \sigma dz + \mu \cdot 1$$
+
+$$= \frac{\sigma}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z e^{-\frac{z^2}{2}} dz + \mu$$
+
+$$= 0 + \mu$$
+
+$$= \mu$$
+
+#### Variance
+
+$$V(x) = E[(x - E(x))^2]$$
+
+$$= E[(x - \mu)^2]$$
+
+$$= \int_{-\infty}^{\infty} (x - \mu)^2 f(x) dx$$
+
+$$= \int_{-\infty}^{\infty} (x - \mu)^2 \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx$$
+
+Put $\frac{x-\mu}{\sigma} = z$, then $(x-\mu) = \sigma z$ and $dx = \sigma dz$.
+
+When $x = -\infty$, $z = -\infty$.
+When $x = \infty$, $z = \infty$.
+
+$$= \int_{-\infty}^{\infty} (\sigma z)^2 \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{z^2}{2}} \sigma dz$$
+
+$$= \frac{\sigma^2}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z^2 e^{-\frac{z^2}{2}} dz$$
+
+$$= \frac{2\sigma^2}{\sqrt{2\pi}} \int_{0}^{\infty} z^2 e^{-\frac{z^2}{2}} dz$$
+
+Put $\frac{z^2}{2} = u$, then $z^2 = 2u$ and $2z dz = 2 du$, so $dz = \frac{du}{z} = \frac{du}{\sqrt{2u}}$.
+
+When $z = 0$, $u = 0$.
+When $z = \infty$, $u = \infty$.
+
+$$= \frac{2\sigma^2}{\sqrt{2\pi}} \int_{0}^{\infty} 2u e^{-u} \frac{du}{\sqrt{2u}}$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \int_{0}^{\infty} \sqrt{u} e^{-u} du$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \int_{0}^{\infty} u^{\frac{1}{2}} e^{-u} du$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \Gamma(\frac{3}{2})$$
+
+$$= \frac{2\sigma^2}{\sqrt{\pi}} \cdot \frac{1}{2} \Gamma(\frac{1}{2})$$
+
+$$= \frac{\sigma^2}{\sqrt{\pi}} \cdot \sqrt{\pi}$$
+
+$$= \sigma^2$$
+
+
+### Moment Generating Function:
+
+$$
+M_X(t) = E(e^{tX})
+$$
+$$= \int_{-\infty}^{\infty} e^{tx} f(x) \, dx$$
+
+
+For a normal distribution:
+
+$$
+= \int_{-\infty}^{\infty} e^{tx} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} \, dx
+$$
+
+Using substitution:
+
+$$
+x - \mu = z\sigma, \quad dx = \sigma dz
+$$
+
+$$
+= \frac{1}{\sigma \sqrt{2\pi}} \int_{-\infty}^{\infty} e^{t(\mu+z\sigma)} e^{-z^2/2} \sigma dz
+$$
+
+$$
+= \frac{e^{t\mu}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{t\sigma z - z^2/2} \, dz
+$$
+
+$$
+= \frac{e^{\mu t}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-\frac{1}{2} (z^2 - 2t\sigma z + t^2\sigma^2) + \frac{1}{2}t^2\sigma^2} \, dz
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-\frac{1}{2} (z - t\sigma)^2} \, dz
+$$
+
+Using the substitution:
+
+$$
+z - t\sigma = u, \quad dz = du
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \int_{0}^{\infty} e^{-\frac{u^2}{2}} \, du
+$$
+
+Rewriting:
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \times 2 \int_{0}^{\infty} e^{-u^2/2} \, du
+$$
+
+Using substitution:
+
+$$
+u^2 = 2v \quad \Rightarrow \quad 2udu = dv, \quad du = \frac{dv}{2u}
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{2\pi}} \times 2 \int_{0}^{\infty} v^{-1/2} e^{-v} \, dv
+$$
+
+Using the Gamma function property:
+
+$$
+\int_{0}^{\infty} e^{-x} x^{p-1} \, dx = \Gamma(p)
+$$
+
+For $ p = \frac{1}{2} $:
+
+$$
+\Gamma(1/2) = \sqrt{\pi}
+$$
+
+$$
+= \frac{e^{\mu t + \frac{1}{2} t^2 \sigma^2}}{\sqrt{\pi}} \times \sqrt{\pi}
+$$
+
+$$
+= e^{\mu t + \frac{1}{2} t^2 \sigma^2}
+$$
+
+### Properties of Normal Distribution
+
+To find diagrams of the normal distribution curve, search for:
+**"Normal distribution curve graph"** or **"Bell curve diagram"** on Google Images.
+
+### Properties of the Normal Curve
+
+The following are some of the properties of the normal curve:
+
+1. The normal curve is symmetrical about the ordinate at $x = \mu$.
+
+2. The mean, median, and mode are identical.
+
+3. The normal curve $f(x)$ has a maximum at $x = \mu$, and the maximum value of the ordinate is:
+   $$
+   \frac{1}{\sigma \sqrt{2\pi}}
+   $$
+
+4. The normal curve extends from $-\infty$ to $+\infty$.
+
+5. All odd-order central moments vanish:
+   $$
+   M_{2r+1} = 0, \quad r = 0,1,2,\dots
+   $$
+
+6. The even-order central moments are given by:
+   $$
+   M_{2r} = 1 \cdot 3 \cdot 5 \dots (2r - 1) \sigma^{2r}
+   $$
+
+7. For a normal distribution:
+   $$
+   \beta_1 = 0 \quad \text{and} \quad \beta_2 = 3
+   $$
+
+8. The points of inflection of the curve are at $x = \mu \pm \sigma$.
+### Odd-Order Moments About Mean
+
+The odd-order moments about the mean are given by:
+
+$$
+M_{2r+1} = \int_{-\infty}^{\infty} (x - \mu)^{2r+1} \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x-\mu)^2}{2\sigma^2}} dx
+$$
+
+Substituting $z = \frac{x - \mu}{\sigma}$, we get:
+
+$$
+M_{2r+1} = \frac{\sigma^{2r+1}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z^{2r+1} e^{-z^2/2} dz
+$$
+
+Since the integral of an odd function over a symmetric interval is zero:
+
+$$
+M_{2r+1} = 0, \quad r = 0,1,2,\dots
+$$
 
 ---
 
-## 2. Probability Mass Functions
-
-The probability distribution of a discrete random variable $ X $ is a list of distinct values $ x_i $ with their associated probabilities. The function $ f(x_i) $ or $ P(X = x_i) $ is called the **probability mass function (PMF)**, provided:
-
-1. $ f(x_i) \geq 0 $
-2. $ \sum f(x_i) = 1 $
-
-A probability mass function can be represented as a histogram.
-
-For the coin toss example, the PMF is:
-
-- $ P(x = 0) = \frac{
-    1
-}{
-    4
-} $
-- $ P(x = 1) = \frac{
-    1
-}{
-    2
-} $ (since $ P(HT) + P(TH) = \frac{
-    1
-}{
-    4
-} + \frac{
-    1
-}{
-    4
-} = \frac{
-    1
-}{
-    2
-} $ )
-- $ P(x = 2) = \frac{
-    1
-}{
-    4
-} $
+### Even-Order Central Moment
 
----
+The even-order central moment is given by:
 
-## 3. Distribution Functions
+$$
+M_{2r} = \int_{-\infty}^{\infty} (x - \mu)^{2r} f(x) dx
+$$
 
-For any random variable $ X $, the **cumulative distribution function (CDF)** is defined as:
+Substituting $z = \frac{x - \mu}{\sigma}$:
 
-$$ F(x) = P(X \leq x) $$
+$$
+M_{2r} = \frac{\sigma^{2r}}{\sqrt{2\pi}} \int_{-\infty}^{\infty} z^{2r} e^{-z^2/2} dz
+$$
 
-If $ X $ is a discrete random variable with PMF $ P(x) $, then:
+Using the transformation $z^2 = u$ and $dz = \frac{du}{2\sqrt{u}}$, we get:
 
-$$ F(x) = P(X \leq x) = \sum_{x_i \leq x
-} P(x_i) $$
+$$
+M_{2r} = \frac{2\sigma^{2r}}{\sqrt{2\pi}} \int_{0}^{\infty} u^r e^{-u/2} \frac{du}{\sqrt{2u}}
+$$
 
-### Properties
+Applying the Gamma function properties, this simplifies to:
 
-If $ F(x) $ is the CDF of $ X $:
+$$
+M_{2r} = 1 \cdot 3 \cdot 5 \dots (2r - 1) \sigma^{2r}
+$$
+Using the Gamma function:
 
-1. It is defined for all real values of $ x $.
-2. $ 0 \leq F(x) \leq 1 $.
-3. $ F(-\infty) = 0 $ and $ F(\infty) = 1 $.
-4. If $ a < b $, then $ F(a) \leq F(b) $ (i.e., $ F $ is non-decreasing).
-5. For discrete random variables, the graph of $ F(x) $ is a step function.
+$$
+M_{2r} = \frac{2^r \sigma^{2r}}{\sqrt{\pi}} \int_0^\infty u^{r - \frac{1}{2}} e^{-u} du
+$$
 
-For the coin toss example:
+Since:
 
-- $ F(0) = P(x \leq 0) = P(x = 0) = \frac{
-    1
-}{
-    4
-} $
-- $ F(1) = P(x \leq 1) = P(x = 0) + P(x = 1) = \frac{
-    1
-}{
-    4
-} + \frac{
-    1
-}{
-    2
-} = \frac{
-    3
-}{
-    4
-} $
-- $ F(2) = P(x \leq 2) = P(x = 0) + P(x = 1) + P(x = 2) = \frac{
-    1
-}{
-    4
-} + \frac{
-    1
-}{
-    2
-} + \frac{
-    1
-}{
-    4
-} = 1 $
+$$
+\int_0^\infty u^{r - \frac{1}{2}} e^{-u} du = \Gamma(r + \frac{1}{2})
+$$
 
----
+We get:
 
-## 4. Mathematical Expectation
+$$
+M_{2r} = \frac{2^r \sigma^{2r}}{\sqrt{\pi}} \Gamma(r + \frac{1}{2})
+$$
 
-Every distribution of a random variable has associated parameters. The distribution function $ F(x) $ or the mass function $ f(x) $ completely characterizes the behavior of $ X $.
+Using the property:
 
-### Expectation of a Function of a Random Variable
+$$
+\Gamma(r + \frac{1}{2}) = (r - \frac{1}{2})(r - \frac{3}{2}) \dots \frac{1}{2} \Gamma(\frac{1}{2})
+$$
 
-Let $ g(x) $ be a function of a discrete random variable $ X $. The expected value is:
+And knowing:
 
-$$ E(g(x)) = \sum g(x_i) P(x_i) $$
+$$
+\Gamma(\frac{1}{2}) = \sqrt{\pi}
+$$
 
-### Properties of Expectation
+We simplify:
 
-1. **If $ C $ is a constant, $ E(C) = C $:**
+$$
+M_{2r} = \frac{2^r \sigma^{2r}}{\sqrt{\pi}} \cdot \sqrt{\pi} \cdot (r - \frac{1}{2})(r - \frac{3}{2}) \dots \frac{1}{2}
+$$
 
-   $$ E(C) = \sum C P(x_i) = C \sum P(x_i) = C \cdot 1 = C $$
+Rewriting:
 
-2. **If $ g(x) $ is a function of $ X $ and $ C $ is a constant, then $ E[C g(x)
-] = C E[g(x)
-] $:**
-
-   $$ E(C g(x)) = \sum C g(x_i) P(x_i) = C \sum g(x_i) P(x_i) = C E(g(x)) $$
-
-3. **If $ a $ and $ b $ are constants, then $ E[aX + b
-] = a E(X) + b $:**
-
-   $$ E(aX + b) = \sum (a x_i + b) P(x_i) = a \sum x_i P(x_i) + b \sum P(x_i) = a E(X) + b $$
-
-4. **If $ g(x) $ and $ h(x) $ are functions of $ X $, then $ E[g(x) + h(x)
-] = E[g(x)
-] + E[h(x)
-] $:**
-
-   $$ E(g(x) + h(x)) = \sum (g(x_i) + h(x_i)) P(x_i) = \sum g(x_i) P(x_i) + \sum h(x_i) P(x_i) = E(g(x)) + E(h(x)) $$
-
----
-
-## 5. Moments
-
-### Raw Moments
-
-The $ r $-th raw moment about a value $ x_0 $ is:
-
-$$ \mu_r' = E[(X - x_0)^r
-] = \sum (x_i - x_0)^r P(x_i) $$
-
-If $ x_0 = 0 $, the $ r $-th raw moment about the origin is:
-
-$$ \mu_r' = E(X^r) = \sum x_i^r P(x_i) $$
-
-For $ r = 1 $:
-
-$$ \mu_1' = E(X) = \sum x_i P(x_i) $$
-
-This is the mean of the random variable $ X $.
-
-### Central Moments
-
-The $ r $-th central moment (about the expected value) is:
-
-$$ \mu_r = E[(X - E(X))^r
-] $$
-
-- For $ r = 1 $:
-
-  $$ \mu_1 = E(X - E(X)) = E(X) - E(X) = 0 $$
-
-- For $ r = 2 $:
-
-  $$ \mu_2 = E[(X - E(X))^2
-] $$
-
-  This is the **variance** of $ X $.
-
-### Relation Between Raw and Central Moments
-
-The $ r $-th central moment can be expressed in terms of raw moments:
-
-$$ \mu_r = \mu_r' - \binom{r
-}{
-    1
-} \mu_{r-1
-}' \mu_1' + \binom{r
-}{
-    2
-} \mu_{r-2
-}' (\mu_1')^2 + \cdots + (-1)^r (\mu_1')^r $$
-
-- For $ r = 1 $:
-
-  $$ \mu_1 = \mu_1' - \binom{
-    1
-}{
-    1
-} \mu_0' \mu_1' = \mu_1' - 1 \cdot 1 \cdot \mu_1' = 0 $$
-
-- For $ r = 2 $:
-
-  $$ \mu_2 = \mu_2' - \binom{
-    2
-}{
-    1
-} \mu_1' \mu_1' + \binom{
-    2
-}{
-    2
-} \mu_0' (\mu_1')^2 = \mu_2' - 2 (\mu_1')^2 + 1 \cdot (\mu_1')^2 = \mu_2' - (\mu_1')^2 $$
-
-  This is the variance.
-
-- For $ r = 3 $:
-
-  $$ \mu_3 = \mu_3' - \binom{
-    3
-}{
-    1
-} \mu_2' \mu_1' + \binom{
-    3
-}{
-    2
-} \mu_1' (\mu_1')^2 - \binom{
-    3
-}{
-    3
-} (\mu_1')^3 = \mu_3' - 3 \mu_2' \mu_1' + 3 (\mu_1')^3 - (\mu_1')^3 = \mu_3' - 3 \mu_2' \mu_1' + 2 (\mu_1')^3 $$
-
----
-
-## 6. Moment Generating Function (MGF)
-
-The moment generating function of a random variable $ X $ is:
-
-$$ M_X(t) = E(e^{tX
-}) = \sum e^{t x_i
-} P(x_i) $$
-
-### Properties
-
-1. If $ c $ is a constant: $ M_{cX
-}(t) = M_X(ct) $
-2. If $ a $ and $ b $ are constants: $ M_{aX+b
-}(t) = e^{bt
-} M_X(at) $
-3. For independent $ X $ and $ Y $: $ M_{X+Y
-}(t) = M_X(t) \cdot M_Y(t) $
-4. $ M_X(0) = 1 $
-5. The MGF uniquely determines the probability distribution (if it exists).
-6. The $ r $-th raw moment is: $ \mu_r' = \frac{d^r
-}{dt^r
-} M_X(t) \big|_{t=0
-} $
-
-   - $ \frac{d
-}{dt
-} M_X(t) \big|_{t=0
-} = \mu_1' $
-   - $ \frac{d^2
-}{dt^2
-} M_X(t) \big|_{t=0
-} = \mu_2' $
-
-### Variance Relations
-
-- $ \mu_2 = \mu_2' - (\mu_1')^2 $
-- $ \mu_2 = E[(X - E(X))^2
-] $
-- $ V(aX) = a^2 V(X) $
-
----
-
-## 7. Properties of Variance
-
-1. $ V(aX) = E[(aX - E(aX))^2
-] = a^2 V(X) $
-2. For random variables $ X $ and $ Y $:
-
-   $$ V(X + Y) = V(X) + V(Y) + 2 \text{Cov
-}(X, Y) $$
-
-3. If $ X $ and $ Y $ are independent:
-
-   $$ V(X + Y) = V(X) + V(Y) $$
-
----
-
-## 8. Covariance
-
-The covariance of $ X $ and $ Y $ is:
-
-$$ \text{Cov
-}(X, Y) = E[(X - E(X))(Y - E(Y))
-] = E(XY) - E(X)E(Y) $$
-
-### Proof for Independent Variables
-
-If $ X $ and $ Y $ are independent:
-
-$$ E(XY) = E(X)E(Y) $$
+$$
+M_{2r} = \sigma^{2r} (2r - 1)(2r - 3) \dots 3 \cdot 1
+$$
 
 Thus:
 
-$$ \text{Cov
-}(X, Y) = E(XY) - E(X)E(Y) = E(X)E(Y) - E(X)E(Y) = 0 $$
+$$
+M_{2r} = 1 \cdot 3 \cdot 5 \dots (2r - 3)(2r - 1) \sigma^{2r}
+$$
 
 ---
 
-## 9. Binomial Distribution
+### Additive Property of Normal Distributions
 
-A discrete random variable $ X $ follows a binomial distribution if its PMF is:
+1. If 
 
-$$ P(X = x) = \binom{n
-}{x
-} p^x q^{n-x
-}, \quad x = 0,
-1,
-2, \ldots, n $$
+$$
+X_1 \sim N(\mu_1, \sigma_1^2) \quad \text{and} \quad X_2 \sim N(\mu_2, \sigma_2^2)
+$$
 
-where $ q = 1 - p $, and otherwise $ P(X = x) = 0 $. Here, $ n $ and $ p $ are the parameters of the binomial distribution. We denote this as:
+and if $X_1$ and $X_2$ are independent, then:
 
-$$ X \sim B(n, p) $$
+$$
+X_1 + X_2 \sim N(\mu_1 + \mu_2, \sigma_1^2 + \sigma_2^2)
+$$
 
-## Mean
+#### Proof:
 
-$$ E(X) = \sum_{x=0
-}^n x P(x) = \sum_{x=0
-}^n x \binom{n
-}{x
-} p^x q^{n-x
-} $$
+Since:
 
-Simplify:
+$$
+X_1 \sim N(\mu_1, \sigma_1^2)
+$$
 
-$$ E(X) = \sum_{x=1
-}^n x \frac{n!
-}{x! (n-x)!
-} p^x q^{n-x
-} = \sum_{x=1
-}^n n \frac{(n-1)!
-}{(x-1)! (n-x)!
-} p^x q^{n-x
-} $$
+Its moment generating function (MGF) is:
 
-Let $ k = x - 1 $:
+$$
+M_{X_1}(t) = e^{\mu_1 t + \frac{1}{2} t^2 \sigma_1^2}
+$$
 
-$$ E(X) = n p \sum_{k=0
-}^{n-1
-} \binom{n-1
-}{k
-} p^k q^{n-1-k
-} = n p (p + q)^{n-1
-} = n p \cdot 1 = n p $$
+Similarl
 
-**Mean = $ n p $**
+### Sum of Independent Normal Variables
 
-## 10. Variance
+#### Theorem 2:
+If $ X_i $, where $ i = 1, 2, \dots, n $, are $ n $ independent normal variables with mean $ \mu_i $ and standard deviation $ \sigma_i $, then the variable:
 
-$$ V(X) = E(X^2) - [E(X)
-]^2 $$
+$$
+Y = \sum_{i=1}^{n} X_i
+$$
 
-First, compute $ E(X^2) $:
+is also normally distributed with mean:
 
-$$ E(X^2) = \sum_{x=0
-}^n x^2 P(x) = \sum_{x=0
-}^n [x(x-1) + x
-] P(x) = \sum_{x=0
-}^n x(x-1) P(x) + \sum_{x=0
-}^n x P(x) $$
+$$
+\sum_{i=1}^{n} \mu_i
+$$
 
-$$ = \sum_{x=2
-}^n x(x-1) \binom{n
-}{x
-} p^x q^{n-x
-} + n p $$
+and variance:
 
-$$ = n(n-1) p^2 \sum_{x=2
-}^n \binom{n-2
-}{x-2
-} p^{x-2
-} q^{n-x
-} + n p = n(n-1) p^2 (p + q)^{n-2
-} + n p = n(n-1) p^2 + n p $$
+$$
+\sum_{i=1}^{n} \sigma_i^2
+$$
 
-Then:
+### Proof:
 
-$$ V(X) = E(X^2) - [E(X)
-]^2 = [n(n-1) p^2 + n p
-] - (n p)^2 = n^2 p^2 - n p^2 + n p - n^2 p^2 = n p (1 - p) = n p q $$
+Given:
 
-**Variance = $ n p q $**
+$$
+X_i \sim N(\mu_i, \sigma_i^2), \quad i = 1, 2, \dots, n
+$$
 
-## 11. Moment Generating Function
+The moment generating function (MGF) of $ Y $ is:
 
-$$ M_X(t) = E(e^{tX
-}) = \sum_{x=0
-}^n e^{tx
-} \binom{n
-}{x
-} p^x q^{n-x
-} = \sum_{x=0
-}^n \binom{n
-}{x
-} (p e^t)^x q^{n-x
-} = (q + p e^t)^n $$
+$$
+M_Y(t) = M_{\sum X_i}(t) = \prod_{i=1}^{n} M_{X_i}(t)
+$$
+
+Since the MGF of a normal variable $ X_i $ is:
+
+$$
+M_{X_i}(t) = e^{\mu_i t + \frac{1}{2} t^2 \sigma_i^2}
+$$
+
+We get:
+
+$$
+M_Y(t) = \prod_{i=1}^{n} e^{\mu_i t + \frac{1}{2} t^2 \sigma_i^2}
+$$
+
+$$
+= e^{\sum_{i=1}^{n} (\mu_i t + \frac{1}{2} t^2 \sigma_i^2)}
+$$
+
+$$
+= e^{\sum_{i=1}^{n} \mu_i t + \frac{1}{2} t^2 \sum_{i=1}^{n} \sigma_i^2}
+$$
+
+This is the MGF of a normal variable with mean $ \sum_{i=1}^{n} \mu_i $ and variance $ \sum_{i=1}^{n} \sigma_i^2 $, proving that:
+
+$$
+Y = \sum_{i=1}^{n} X_i \sim N\left( \sum_{i=1}^{n} \mu_i, \sum_{i=1}^{n} \sigma_i^2 \right)
+$$
 
 ---
 
-## 12. Poisson Distribution
+### Linear Combination of Independent Normal Variables
 
-A random variable $ X $ follows a Poisson distribution if its PMF is:
+### Theorem 3:
+If $ X_i $, where $ i = 1, 2, \dots, n $, are $ n $ independent normal variables with mean $ \mu_i $ and standard deviation $ \sigma_i $, then the variable:
 
-$$ P(X = x) = \frac{e^{-\lambda
-    } \lambda^x
-}{x!
-}, \quad x = 0,
-1,
-2, \ldots $$
+$$
+Y = \sum_{i=1}^{n} a_i X_i
+$$
 
-otherwise, $ P(X = x) = 0 $. Here, $ \lambda $ is the parameter.
+(where $ a_i $ are constants) is also normally distributed with mean:
 
-### Mean and Variance
+$$
+\sum_{i=1}^{n} a_i \mu_i
+$$
 
-$$ E(X) = \sum_{x=0
-}^\infty x \frac{e^{-\lambda
-    } \lambda^x
-}{x!
-} = e^{-\lambda
-} \sum_{x=1
-}^\infty \frac{\lambda^x
-}{(x-1)!
-} = e^{-\lambda
-} \lambda \sum_{k=0
-}^\infty \frac{\lambda^k
-}{k!
-} = e^{-\lambda
-} \lambda e^\lambda = \lambda $$
+and variance:
 
-**Mean = $ \lambda $**
+$$
+\sum_{i=1}^{n} a_i^2 \sigma_i^2
+$$
 
-$$ E(X^2) = \sum_{x=0
-}^\infty x^2 \frac{e^{-\lambda
-    } \lambda^x
-}{x!
-} = \sum_{x=0
-}^\infty [x(x-1) + x
-] \frac{e^{-\lambda
-    } \lambda^x
-}{x!
-} = e^{-\lambda
-} \lambda^2 \sum_{x=2
-}^\infty \frac{\lambda^{x-2
-    }
-}{(x-2)!
-} + \lambda = \lambda^2 + \lambda $$
+#### Proof:
 
-$$ V(X) = E(X^2) - [E(X)
-]^2 = (\lambda^2 + \lambda) - \lambda^2 = \lambda $$
+Given:
 
-**Variance = $ \lambda $**
+$$
+X_i \sim N(\mu_i, \sigma_i^2), \quad i = 1, 2, \dots, n
+$$
 
-###  Moment Generating Function
+The moment generating function (MGF) of $ X_i $ is:
 
-$$ M_X(t) = E(e^{tX
-}) = \sum_{x=0
-}^\infty e^{tx
-} \frac{e^{-\lambda
-    } \lambda^x
-}{x!
-} = e^{-\lambda
-} \sum_{x=0
-}^\infty \frac{(\lambda e^t)^x
-}{x!
-} = e^{-\lambda
-} e^{\lambda e^t
-} = e^{\lambda (e^t - 1)
-} $$
+$$
+M_{X_i}(t) = e^{\mu_i t + \frac{1}{2} t^2 \sigma_i^2}
+$$
 
-###  Moments: Poisson Distribution
+For the linear combination:
 
-#### Moment-Generating Function
-The moment-generating function (MGF) for a random variable \( X \) is given as:
-$$ M_X(t) = e^{-\lambda
-} e^{\lambda e^t
-} $$
-This is the MGF of a Poisson random variable \( X \) with parameter \( \lambda \).
+$$
+Y = \sum_{i=1}^{n} a_i X_i
+$$
 
-#### First Derivative
-The first derivative of the MGF is computed to find the mean:
-$$ M'_X(t) = \frac{d
-}{dt
-} M_X(t) = e^{-\lambda
-} e^{\lambda e^t
-} \cdot \lambda e^t $$
-Evaluating at \( t = 0 \):
-$$ M'_X(0) = e^{-\lambda
-} e^{\lambda
-} \cdot \lambda = \lambda $$
-Thus, the mean of the distribution is:
-$$ E[X
-] = \lambda $$
+the MGF is:
 
-#### Second Derivative
-The second derivative of the MGF is computed to find the second moment:
-$$ M''_X(t) = \frac{d
-}{dt
-} \left( e^{-\lambda
-} e^{\lambda e^t
-} \cdot \lambda e^t \right) $$
-Using the product rule:
-- Let \( u = e^{\lambda e^t
-} \), \( v = \lambda e^t \)
-- Derivatives:
-  $$ \frac{du
-}{dt
-} = e^{\lambda e^t
-} \cdot \lambda e^t $$
-  $$ \frac{dv
-}{dt
-} = \lambda e^t $$
-- Applying the product rule:
-  $$ \frac{d
-}{dt
-} (u \cdot v) = u' v + u v' = (e^{\lambda e^t
-} \cdot \lambda e^t) \cdot (\lambda e^t) + e^{\lambda e^t
-} \cdot (\lambda e^t) $$
-  $$ = e^{\lambda e^t
-} \cdot \lambda e^t \left( \lambda e^t + 1 \right) $$
+$$
+M_Y(t) = M_{\sum a_i X_i}(t) = \prod_{i=1}^{n} M_{X_i}(a_i t)
+$$
+
+Substituting the MGF:
+
+$$
+M_Y(t) = \prod_{i=1}^{n} e^{\mu_i (a_i t) + \frac{1}{2} (a_i t)^2 \sigma_i^2}
+$$
+
+$$
+= e^{\sum (a_i \mu_i t) + \frac{1}{2} \sum (a_i^2 t^2 \sigma_i^2)}
+$$
+
+$$
+= e^{(\sum a_i \mu_i) t + \frac{1}{2} t^2 (\sum a_i^2 \sigma_i^2)}
+$$
+
+The right-hand side is the MGF of a normal variable with mean:
+
+$$
+\sum_{i=1}^{n} a_i \mu_i
+$$
+
+and variance:
+
+$$
+\sum_{i=1}^{n} a_i^2 \sigma_i^2
+$$
+
 Thus:
-$$ M''_X(t) = e^{-\lambda
-} \left[ (e^{\lambda e^t
-    } \cdot \lambda e^t) \cdot \lambda e^t + e^{\lambda e^t
-    } \cdot \lambda e^t \right
-] $$
-Evaluating at \( t = 0 \):
-$$ M''_X(0) = e^{-\lambda
-} \left[ e^{\lambda
-    } \cdot \lambda^2 + e^{\lambda
-    } \cdot \lambda \right
-] = e^{-\lambda
-} e^{\lambda
-} (\lambda^2 + \lambda) = \lambda^2 + \lambda $$
-So, the second moment is:
-$$ E[X^2
-] = \lambda^2 + \lambda $$
 
-#### Variance Calculation
-The variance is calculated using the formula:
-$$ V(X) = E[X^2
-] - (E[X
-])^2 $$
-Substituting the values:
-$$ V(X) = (\lambda^2 + \lambda) - \lambda^2 = \lambda $$
+$$
+Y = \sum_{i=1}^{n} a_i X_i \sim N\left( \sum_{i=1}^{n} a_i \mu_i, \sum_{i=1}^{n} a_i^2 \sigma_i^2 \right)
+$$
+
+---
+
+## Standard Normal Distribution
+
+For a normally distributed variable:
+
+$$
+X \sim N(\mu, \sigma^2)
+$$
+
+its probability density function (PDF) is:
+
+$$
+f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}}, \quad -\infty < x < \infty
+$$
+
+### Standardization:
+
+Define:
+
+$$
+Z = \frac{X - \mu}{\sigma}
+$$
+
+By changing the variable, the PDF of $ Z $ is given by:
+
+$$
+f(z) = f(x) \left| \frac{dx}{dz} \right|
+$$
+
+Since:
+
+$$
+\frac{dx}{dz} = \sigma
+$$
+
+we get:
+
+$$
+f(z) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{(x - \mu)^2}{2\sigma^2}} \cdot \sigma
+$$
+
+$$
+= \frac{1}{\sqrt{2\pi}} e^{-\frac{z^2}{2}}, \quad -\infty < z < \infty
+$$
+
+which is the standard normal distribution.
+
+## Standard Normal Distribution
+
+### Definition
+
+A random variable (rv) is said to be a **standard normal variable** if its probability density function (PDF) is given by:
+
+$$
+f(z) = \frac{1}{\sqrt{2\pi}} e^{-z^2/2}, \quad -\infty < z < \infty
+$$
+
+The corresponding probability distribution is called the **standard normal distribution**.
+
+- **Mean**: $ E(Z) = 0 $
+- **Variance**: $ \text{Var}(Z) = 1 $
+
+We write:
+
+$$
+Z \sim N(0,1)
+$$
+
+---
+
+## Area Under the Normal Probability Curve
+
+In a normal distribution, to find the probability of the variable lying between two values, say $ a $ and $ b $, we first change these values in terms of the **standard normal variable** by using the substitution:
+
+$$
+Z = \frac{X - \mu}{\sigma}
+$$
+
+### Standard Normal Table
+
+The table for the area under the **standard normal curve** gives the probability of the variable lying between 0 and any positive value of $ Z $. 
