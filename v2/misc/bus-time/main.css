@@ -1,0 +1,471 @@
+:root {
+    --primary: #3a86ff;
+    --secondary: #ff006e;
+    --background: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2b2d42;
+    --light-text: #8d99ae;
+    --border-radius: 16px;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 1.5rem;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    body {
+        padding: 1rem;
+    }
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin-bottom: 1rem;
+}
+
+.current-time {
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary);
+    color: white;
+    border-radius: 50px;
+    display: inline-block;
+}
+
+.location-select {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.location-select select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .current-time {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+.mobile-nav {
+    display: none;
+    width: 100%;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+}
+
+.nav-tabs {
+    display: flex;
+    width: 100%;
+}
+
+.nav-tab {
+    flex: 1;
+    text-align: center;
+    padding: 0.8rem 0;
+    font-weight: bold;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.nav-tab.active {
+    color: var(--primary);
+    border-bottom-color: var(--primary);
+}
+
+.nav-tab:nth-child(2).active {
+    color: var(--secondary);
+    border-bottom-color: var(--secondary);
+}
+
+.nav-tab:nth-child(3).active {
+    color: #555;
+    border-bottom-color: #555;
+}
+
+@media (max-width: 768px) {
+    .mobile-nav {
+        display: block;
+    }
+}
+
+.card {
+    flex: 1;
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+        transition: none;
+        transform: none !important;
+        display: block;
+    }
+
+    .card:not(.active) {
+        display: none;
+    }
+}
+
+@media (min-width: 769px) {
+    .card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+}
+
+.card.edavannappara::before {
+    background-color: var(--primary);
+}
+
+.card.areekode::before {
+    background-color: var(--secondary);
+}
+
+.card.track-bus::before {
+    background-color: #555;
+}
+
+.destination {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    padding-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .destination {
+        font-size: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+}
+
+.edavannappara .destination {
+    color: var(--primary);
+}
+
+.areekode .destination {
+    color: var(--secondary);
+}
+
+.track-bus .destination {
+    color: #555;
+}
+
+.next-bus {
+    background-color: rgba(0, 0, 0, 0.03);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+@media (max-width: 480px) {
+    .next-bus {
+        padding: 1.2rem;
+    }
+}
+
+.next-bus-label {
+    font-size: 1rem;
+    color: var(--light-text);
+    margin-bottom: 0.5rem;
+}
+
+.next-bus-time {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .next-bus-time {
+        font-size: 2rem;
+    }
+}
+
+.edavannappara .next-bus-time {
+    color: var(--primary);
+}
+
+.areekode .next-bus-time {
+    color: var(--secondary);
+}
+
+.countdown {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 480px) {
+    .countdown {
+        font-size: 1.3rem;
+    }
+}
+
+.upcoming-label {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+@media (max-width: 480px) {
+    .upcoming-label {
+        font-size: 1.1rem;
+    }
+}
+
+.upcoming-buses {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.upcoming-buses li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 480px) {
+    .upcoming-buses li {
+        padding: 0.6rem 0;
+    }
+}
+
+.time {
+    font-weight: 600;
+}
+
+.remaining {
+    color: var(--light-text);
+}
+
+.status-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.status-soon {
+    background-color: #ffd166;
+}
+
+.status-upcoming {
+    background-color: #06d6a0;
+}
+
+.refresh-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0.75rem;
+    background-color: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: middle;
+    color: white;
+    transition: transform 0.3s ease;
+}
+
+.refresh-button:hover {
+    transform: rotate(180deg);
+}
+
+.pull-indicator {
+    display: none;
+    text-align: center;
+    padding: 1rem;
+    color: var(--light-text);
+    font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+    .pull-indicator {
+        display: block;
+    }
+}
+
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--light-text);
+    font-size: 0.9rem;
+    padding-bottom: 1rem;
+}
+
+.quick-actions {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .quick-actions {
+        display: flex;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--card-bg);
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 100;
+    }
+
+    .quick-action {
+        flex: 1;
+        text-align: center;
+        padding: 0.8rem 0;
+        color: var(--text);
+        font-weight: 500;
+        font-size: 0.9rem;
+    }
+
+    .quick-action.edavannappara {
+        color: var(--primary);
+        border-top: 3px solid var(--primary);
+    }
+
+    .quick-action.areekode {
+        color: var(--secondary);
+        border-top: 3px solid var(--secondary);
+    }
+
+    footer {
+        margin-bottom: 3rem;
+    }
+}
+
+.theme-toggle {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--card-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow);
+    cursor: pointer;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .theme-toggle {
+        top: 1rem;
+        right: 1rem;
+        width: 36px;
+        height: 36px;
+    }
+}
+
+.dark-mode {
+    --primary: #4dabff;
+    --secondary: #ff4694;
+    --background: #121212;
+    --card-bg: #1e1e1e;
+    --text: #e0e0e0;
+    --light-text: #9e9e9e;
+}
+
+.track-bus-content select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.track-bus-content p {
+    margin-bottom: 0.5rem;
+    color: var(--light-text);
+}
+
+#track-status {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+#track-progress {
+    margin-top: 1rem;
+}

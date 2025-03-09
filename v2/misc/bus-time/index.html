@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>S.S College Bus Schedule</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>S.S College Bus Schedule</h1>
+      <p class="subtitle">Real-time bus schedule tracker</p>
+      <div>
+        <span class="current-time" id="current-time">Current Time: 00:00:00</span>
+        <button class="refresh-button" id="refresh-button" title="Refresh data">↻</button>
+      </div>
+    </header>
+    
+    <div class="location-select">
+      <select id="current-location">
+        <option value="ss-college">S.S College</option>
+        <option value="edavannappara">Edavannappara</option>
+        <option value="areekode">Areekode</option>
+        <option value="on-bus-edavannappara">On Bus to Edavannappara</option>
+        <option value="on-bus-areekode">On Bus to Areekode</option>
+      </select>
+    </div>
+    
+    <div class="mobile-nav">
+      <div class="nav-tabs">
+        <div class="nav-tab active location" data-target="edavannappara">Edavannappara</div>
+        <div class="nav-tab location" data-target="areekode">Areekode</div>
+        <div class="nav-tab track-bus" data-target="track-bus">Track Bus</div>
+      </div>
+    </div>
+    
+    <div class="pull-indicator" style="display: none;">Pull down to refresh</div>
+    
+    <div class="cards-container">
+      <div class="card edavannappara active">
+        <div class="destination">Edavannappara</div>
+        <div class="next-bus">
+          <div class="next-bus-label">Next bus at:</div>
+          <div class="next-bus-time" id="edavannappara-next-time">--:--</div>
+          <div class="countdown" id="edavannappara-countdown">-- : -- : --</div>
+        </div>
+        <div class="upcoming-label">Upcoming Buses</div>
+        <ul class="upcoming-buses" id="edavannappara-upcoming"></ul>
+      </div>
+      
+      <div class="card areekode">
+        <div class="destination">Areekode</div>
+        <div class="next-bus">
+          <div class="next-bus-label">Next bus at:</div>
+          <div class="next-bus-time" id="areekode-next-time">--:--</div>
+          <div class="countdown" id="areekode-countdown">-- : -- : --</div>
+        </div>
+        <div class="upcoming-label">Upcoming Buses</div>
+        <ul class="upcoming-buses" id="areekode-upcoming"></ul>
+      </div>
+      
+      <div class="card track-bus">
+        <div class="destination">Track My Bus</div>
+        <div class="track-bus-content">
+          <p>Your bus progress will appear here when you select 'On Bus' above.</p>
+          <div id="track-status"></div>
+          <div id="track-progress"></div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="theme-toggle" id="theme-toggle" title="Toggle dark mode">🌓</div>
+  </div>
+  
+  <div class="quick-actions" style="display: none;">
+    <div class="quick-action edavannappara" data-target="edavannappara">Edavannappara</div>
+    <div class="quick-action areekode" data-target="areekode">Areekode</div>
+  </div>
+  
+  <footer>
+    <p>© 2025 S.S College Bus Tracker | Updated on March 9, 2025</p>
+  </footer>
+
+  <script src="main.js">
+</script>
+</body>
+</html>
