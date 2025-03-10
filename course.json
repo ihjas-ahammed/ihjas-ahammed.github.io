@@ -50,6 +50,12 @@
                     "path": "/cs2/mod4.html",
                     "webview": true,
                     "qa": {}
+                },
+                {
+                    "text": "Summary: Data Science",
+                    "path": "/cs2/sum.md",
+                    "webview": false,
+                    "qa": {}
                 }
             ]
         },
