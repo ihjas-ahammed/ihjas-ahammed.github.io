@@ -183,3 +183,198 @@ Key points in these examples:
     *   `sklearn.neighbors`: For k-NN.
     *   `sklearn.cluster`: For k-means.
     *  `sklearn.metrics`: For evaluation metrics.
+
+
+**16. Linear Regression**
+
+*   **Concept:** (HKP Chapter 9, OS Chapter 5, CS 3.8)
+    *   Models a *linear* relationship between a dependent (response) variable, *y*, and one or more independent (predictor) variables, *x*.
+    *   Finds the "best-fit" line (or hyperplane in higher dimensions) that minimizes the sum of squared errors between the predicted and actual values.
+*   **Simple Linear Regression:** One predictor variable.
+    *   Model: *y = β0 + β1x + ε*
+        *   β0: Intercept (value of y when x = 0).
+        *   β1: Slope (change in y for a one-unit change in x).
+        *    ε: Error term (accounts for the variability not explained by the linear relationship).
+*   **Multiple Linear Regression:**  Multiple predictor variables.
+    *   Model: *y = β0 + β1x1 + β2x2 + ... + βpxp + ε*
+*   **Assumptions:**
+    *   Linearity: A linear relationship exists between the independent and dependent variables.
+    *   Independence of errors: Errors (residuals) are independent of each other.
+    *   Homoscedasticity: The variance of the errors is constant across all levels of the independent variables.
+    *   Normality: The errors are normally distributed.
+*   **Model Evaluation:**
+    *   R-squared (coefficient of determination): Proportion of variance in the dependent variable explained by the model.  Ranges from 0 to 1; higher values indicate a better fit.
+    *   Adjusted R-squared:  Modifies R-squared to account for the number of predictors in the model.  Penalizes models with unnecessary predictors.
+    *   p-values:  Assess the statistical significance of the coefficients.  A low p-value (typically < 0.05) suggests that the corresponding predictor is significantly related to the response.
+    *   Residual plots:  Used to check the assumptions of linearity, constant variance, and normality of errors.
+
+**Python Example (Linear Regression):**
+
+```python
+import numpy as np
+import pandas as pd
+import statsmodels.api as sm
+from sklearn.model_selection import train_test_split
+
+# Load data (assuming a CSV file with columns 'x' and 'y')
+data = pd.read_csv('your_data.csv')
+X = data['x']  # Predictor variable
+y = data['y']  # Response variable
+
+# Split data into training and testing sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Add a constant term to the predictor variable (for the intercept)
+X_train = sm.add_constant(X_train)
+X_test = sm.add_constant(X_test)
+
+# Create and fit the model (Ordinary Least Squares)
+model = sm.OLS(y_train, X_train)
+results = model.fit()
+
+# Print model summary
+print(results.summary())
+
+# Make predictions on the test set
+y_pred = results.predict(X_test)
+
+# Evaluate (using R-squared as an example)
+print("R-squared:", results.rsquared) #using the training data
+from sklearn.metrics import r2_score
+print("Test R-squared", r2_score(y_test, y_pred))
+
+# You can also examine residuals:
+# residuals = y_test - y_pred
+# (Plotting residuals can help assess model assumptions)
+```
+
+**17. k-Nearest Neighbors (k-NN)**
+
+*   **Concept:** (HKP 9.5, OS Chapter 8, CS 9.4)
+    *   A *lazy learner* (instance-based learning):  Doesn't build a model explicitly during training.  Instead, it stores the training data.
+    *   Classification: For a new data point, find the k nearest training data points ("neighbors") and assign the most frequent class label among those neighbors.
+    *   Regression: For a new data point, average the values of the k nearest neighbors.
+*   **Key Components:**
+    *   **k:** The number of neighbors to consider.  A tuning parameter.
+    *   **Distance Metric:**  How to measure the "closeness" between data points (e.g., Euclidean distance, Manhattan distance, cosine similarity).
+*   **Advantages:**
+    *   Simple to implement.
+    *   No training phase (for basic implementation).
+    *   Can adapt to new data easily.
+*   **Disadvantages:**
+    *   Computationally expensive for large datasets (needs to calculate distances to all training points for each prediction).
+    *   Sensitive to the choice of k and the distance metric.
+    *   Sensitive to irrelevant features and the curse of dimensionality.
+    *   Does not provide an explicit model (no coefficients to interpret).
+
+**Python Example (k-NN):**  (Provided in previous response, includes classification. Regression is similar, using `KNeighborsRegressor`.)
+
+**18. k-means Clustering**
+
+*   **Concept:** (HKP 10.2.1, OS Chapter 8, CS 10.3.1)
+    *   An *unsupervised* learning method.
+    *   Partitions data into k clusters, where each data point belongs to the cluster with the nearest mean (centroid).
+    *   Iterative algorithm that aims to minimize the within-cluster sum of squares (WCSS).
+*   **Algorithm:**
+    1.  Choose k initial cluster centroids (randomly or using a smarter initialization method like k-means++).
+    2.  Assign each data point to the closest centroid (using Euclidean distance or another distance metric).
+    3.  Recalculate the centroids of each cluster (by taking the mean of the points in the cluster).
+    4.  Repeat steps 2 and 3 until convergence (cluster assignments no longer change or a maximum number of iterations is reached).
+*   **Advantages:**
+    *   Relatively simple and efficient.
+    *   Scalable to large datasets.
+*   **Disadvantages:**
+    *   Requires specifying k in advance.
+    *   Sensitive to initial centroid selection (can converge to local optima).
+    *   Assumes clusters are spherical and equally sized, which is often not the case.
+    *   Sensitive to outliers.
+
+**Python Example (k-means):** (Provided in previous response)
+
+**19. Naive Bayes**
+
+*   **Concept:** (HKP 8.3, OS Chapter 4)
+    *   A probabilistic classifier based on Bayes' theorem.
+    *   "Naive" assumption:  Features are conditionally independent given the class label.  This simplifies the calculations.
+*   **Bayes' Theorem:**
+    P(C|X) = (P(X|C) * P(C)) / P(X)
+    *   P(C|X): Posterior probability of class C given data X.
+    *   P(X|C): Likelihood of the data X given class C.
+    *   P(C): Prior probability of class C.
+    *   P(X): Evidence (probability of the data).
+*   **Naive Bayes Classifier:**
+    1.  For a given data point X = (x1, x2, ..., xn), calculate P(X|Ci)P(Ci) for each class Ci
+        .
+    2.  Predict the class label with the highest probability.
+    3.  Because of the conditional independence assumption:
+        P(X|Ci) = P(x1|Ci) * P(x2|Ci) * ... * P(xn|Ci)
+*   **Advantages:**
+    *   Simple and fast.
+    *   Works well with high-dimensional data.
+    *   Performs well even when the independence assumption is violated.
+*   **Disadvantages:**
+    *   The independence assumption is often unrealistic.
+    *   Can be affected by zero probabilities (use Laplace smoothing).
+
+**Python Example**
+
+```python
+
+# (Using a simplified text example and scikit-learn)
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.naive_bayes import MultinomialNB
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+
+# Sample email data
+emails = [
+    "Get a free iPhone now!",
+    "Meeting reminder for tomorrow",
+    "Win a lottery prize",
+    "Project update and deadlines",
+    "Claim your free gift card",
+    "Team meeting agenda"
+]
+labels = [1, 0, 1, 0, 1, 0]  # 1: spam, 0: ham
+
+# Preprocess text (tokenization and counting)
+vectorizer = CountVectorizer()
+X_email = vectorizer.fit_transform(emails)
+
+# Split data
+X_train_email, X_test_email, y_train_email, y_test_email = train_test_split(X_email, labels, test_size=0.3, random_state=42)
+
+# Train Naive Bayes classifier
+nb_classifier = MultinomialNB()
+nb_classifier.fit(X_train_email, y_train_email)
+
+# Predict and evaluate
+y_pred_email = nb_classifier.predict(X_test_email)
+accuracy_email = accuracy_score(y_test_email, y_pred_email)
+print(f"Spam Filter (Naive Bayes) Accuracy: {accuracy_email}")
+```
+
+**20. Application of Naive Bayes - Spam Filtering**
+     * Text Classification.
+     * Convert the text into vectors.
+
+**21. Singular Value Decomposition**
+
+* Mathematical tool and is related to Principal component analysis and factor analysis.
+* Is used in data compression, noise reduction, and dimensionality reduction.
+
+**22. Applications of Supervised, Unsupervised and Reinforcement Learning**
+   * Applications of supervised learning includes:
+      * Text Categorization
+      * Fraud detection
+      * Image recognition
+      * Medical Diagnosis
+   * Applications of unsupervised learning includes:
+       * Customer Segmentation
+       * Anomaly detection
+       * Data visualization
+       * Gene expression data analysis
+   * Applications of reinforcement learning includes:
+      * Game Playing
+      * Robotics
+
