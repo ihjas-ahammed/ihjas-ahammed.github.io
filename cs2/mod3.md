@@ -154,20 +154,13 @@ df_cleaned = df[(z_score < 3).all(axios = 1)]
 ```
 ## Methods for handling noisy data
 
-### Smoothing data using oving average
+* Smoothing data using oving average
+* By clustering similar values
+* Using filters
 
-```python
-import pandas as pd
+## Data Integration
 
-data = {'Temperature':[30,31,32,50,33,29,28,30,27,32,31,39,35]}
-df = pd.DataFrame(data)
-
-df['Smoothed'] = df['Temperature'].rolling(window=3,center=True).mean()
-
-print(df)
-```
-
-
+The process of combining data from various sources intto one unified dataset. Data transformation is done along with integration because data from various format can be of various dimensions.
 
 ## Data Reduction: Dimensionality Reduction
 - Reducing the number of features in a dataset while retaining most of its key information.
