@@ -1,0 +1,51 @@
+
+
+# 1. Data Preprocessing - General Concepts
+
+1.  What are the advantages of preprocessing data? (Mention at least three) (Assumed 3 marks - based on typical PYQ structure)
+2.  Why is data preprocessing necessary for real-world data? (Explain the common issues with real-world data.) (Assumed 3 marks)
+3. What is data cleaning. (3 marks)
+4. Explain data cleaning as a process.(3 marks)
+
+# 2. Missing Values
+
+1.  List *four* different methods for handling missing values in a dataset. Briefly describe each. (Assumed 5 marks - combining several sub-points)
+2. What is noisy data? (3 marks)
+3. How can noisy data be handled? mention *four* techniques.(5 marks)
+
+# 3. Outlier Detection
+
+1.  What is an outlier? (3 marks)
+2.  Describe *two* statistical methods and *two* algorithmic methods for outlier detection. (5 marks)
+3. Explain how the Interquartile Range (IQR) is used to identify outliers. Include the formulas for calculating the upper and lower bounds. (5 marks)
+
+# 4. Data Integration
+
+1.  What is data integration? (3 marks)
+2. List the four challenges in data intergration. (3 Marks)
+
+# 5. Data Transformation
+
+1.  What is data transformation, and why is it performed during data integration? (3 marks)
+2.  Explain the difference between standardization and normalization in data transformation. (5 marks)
+3.  Write the formula for *standard scaling* (Z-score standardization). Explain each term in the formula. (5 marks)
+4.  Write the formula for *Min-Max scaling*. Explain each term in the formula. (5 marks)
+5.  Write the formula for *Robust scaling*. Explain each term, and why it's considered robust. (5 marks)
+6.  What is the formula for normalizer in data transformation. (3 marks)
+7. What is Discretization? Mention its method.(5 marks)
+
+# 6. Data Cleaning in Python (Practical)
+
+1.  Using Python's Pandas library, show how to replace specific incorrect string values (typos) in a DataFrame column named `'column_name'` with their correct counterparts.  Provide a code example.  (Assume `mutible` should be `immutable`, and `erro` should be `error`.) (3 marks)
+2.  Show how to use scikit-learn's `SimpleImputer` to impute missing values in a DataFrame column named `'column_name'` using the *mean* strategy. Provide a complete code example. (3 marks)
+3.  Provide the Pandas code to remove duplicate rows from a DataFrame named `df`. (3 marks)
+4. How to remove rows having missing values using Pandas? (3 marks)
+5.  Show how to use the `fillna()` method in Pandas to replace missing values in the `'Age'` column of a DataFrame with the *mean* age. (3 marks)
+6.  Provide Python code (using `scipy.stats` and NumPy) to remove outliers from a DataFrame's `'Age'` column based on the Z-score.  Keep only rows where the Z-score is less than 3. (5 marks)
+
+# 7. Data Reduction
+
+1.  What is dimensionality reduction, and what are its benefits? (Mention at least three benefits). (5 marks)
+2. Briefly describe Principal Component Analysis (PCA). What is its main goal? (5 marks)
+3. What are the two types of numerosity reduction?(3 marks)
+4. Differentiate between lossy and lossless data compression. (3 marks)

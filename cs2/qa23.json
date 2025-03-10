@@ -1,0 +1,1310 @@
+{
+    "3":[
+        {
+          "name": "Data Preprocessing",
+          "qa": [
+            {
+              "question": "What is data preprocessing?",
+              "options": [
+                "The process of integrating, transforming, and reducing raw data for analysis",
+                "A method for visualizing data",
+                "A type of data storage technique",
+                "An algorithm for model training"
+              ],
+              "describe": "Data preprocessing is the whole process of integrating, transforming, and reducing data to prepare it for analysis.",
+              "correct": 0
+            },
+            {
+              "question": "Why is data preprocessing necessary in real-world datasets?",
+              "options": [
+                "Because real-world data is complete and error-free",
+                "Because real-world data is often incomplete, noisy, and inconsistent",
+                "Because data preprocessing increases data redundancy",
+                "Because it slows down the model training process"
+              ],
+              "describe": "Real-world data is typically incomplete, noisy (with errors and outliers), and inconsistent (with duplicates), which necessitates preprocessing.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is NOT a component of data preprocessing?",
+              "options": [
+                "Handling missing values",
+                "Removing outliers",
+                "Visualizing data patterns",
+                "Data transformation"
+              ],
+              "describe": "Data preprocessing involves handling missing values, removing outliers, integrating, transforming, and reducing data. Visualizing data patterns is generally part of exploratory analysis.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following is an advantage of data preprocessing?",
+              "options": [
+                "Reduced model interpretability",
+                "Enhanced model performance",
+                "Increased data complexity",
+                "Higher computational cost"
+              ],
+              "describe": "One advantage of data preprocessing is enhanced model performance through improved quality and reduced noise.",
+              "correct": 1
+            },
+            {
+              "question": "Data preprocessing helps in making data _______ for analysis.",
+              "options": [
+                "Raw and unstructured",
+                "Inconsistent and noisy",
+                "Accurate, consistent, and reliable",
+                "Redundant and duplicated"
+              ],
+              "describe": "The process ensures that the data used for analysis is accurate, consistent, and reliable.",
+              "correct": 2
+            },
+            {
+              "question": "Which step in data preprocessing deals with fixing formats and units?",
+              "options": [
+                "Data cleaning",
+                "Data transformation",
+                "Data reduction",
+                "Noise identification"
+              ],
+              "describe": "Data transformation refers to fixing formats or units of data during integration.",
+              "correct": 1
+            },
+            {
+              "question": "What does integration in data preprocessing involve?",
+              "options": [
+                "Mixing data from different sources",
+                "Deleting duplicate entries",
+                "Imputing missing values",
+                "Isolating outliers"
+              ],
+              "describe": "Integration involves mixing or combining data from various sources as a step in preprocessing.",
+              "correct": 0
+            },
+            {
+              "question": "Which process in data preprocessing is used to select specific parts of the data needed for analysis?",
+              "options": [
+                "Data integration",
+                "Data transformation",
+                "Data reduction",
+                "Data cleaning"
+              ],
+              "describe": "Data reduction involves extracting or selecting the specific parts of data required for analysis.",
+              "correct": 2
+            },
+            {
+              "question": "Outliers are defined as values that make big deviations in the measures of _______.",
+              "options": [
+                "Data volume",
+                "Central tendency",
+                "Data consistency",
+                "Data integration"
+              ],
+              "describe": "Outliers are values that make significant deviations in measures of center, such as the mean or median.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is NOT a benefit of data preprocessing?",
+              "options": [
+                "Improved data quality",
+                "Enhanced model performance",
+                "Reduced data noise",
+                "Increased data errors"
+              ],
+              "describe": "Preprocessing improves quality and performance, and reduces noise; it does not increase errors.",
+              "correct": 3
+            },
+            {
+              "question": "Data preprocessing includes all the following steps except:",
+              "options": [
+                "Data integration",
+                "Data transformation",
+                "Data replication",
+                "Data reduction"
+              ],
+              "describe": "Data replication is not a step in data preprocessing; the focus is on integration, transformation, and reduction.",
+              "correct": 2
+            },
+            {
+              "question": "Which term best describes the overall process of preparing raw data for analysis?",
+              "options": [
+                "Data preprocessing",
+                "Data visualization",
+                "Data mining",
+                "Data warehousing"
+              ],
+              "describe": "The overall process of integrating, cleaning, and transforming raw data is known as data preprocessing.",
+              "correct": 0
+            },
+            {
+              "question": "How does data preprocessing facilitate model interpretability?",
+              "options": [
+                "By increasing the number of features",
+                "By creating more noise in the data",
+                "By cleaning and transforming data, making it easier to analyze",
+                "By eliminating all data variation"
+              ],
+              "describe": "Preprocessing cleans and transforms data, thereby facilitating easier analysis and interpretation of model outcomes.",
+              "correct": 2
+            },
+            {
+              "question": "Which of the following is an example of noise in a dataset?",
+              "options": [
+                "Correctly formatted values",
+                "Values with typographical errors",
+                "Standardized measurements",
+                "Integrated data from multiple sources"
+              ],
+              "describe": "Noise can include values with typographical errors or other anomalies that distort the data.",
+              "correct": 1
+            },
+            {
+              "question": "Data preprocessing is critical because it helps in:",
+              "options": [
+                "Increasing data complexity",
+                "Enhancing analysis quality",
+                "Creating duplicates",
+                "Distorting data relationships"
+              ],
+              "describe": "Preprocessing is critical as it enhances the quality of analysis by ensuring clean, reliable data.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Data Cleaning",
+          "qa": [
+            {
+              "question": "What is the primary goal of data cleaning?",
+              "options": [
+                "To transform raw data into a format suitable for analysis",
+                "To increase data redundancy",
+                "To add noise to the dataset",
+                "To scale the data"
+              ],
+              "describe": "Data cleaning transforms raw data into a format suitable for analysis by correcting errors and inconsistencies.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following is NOT a data cleaning technique?",
+              "options": [
+                "Handling missing values",
+                "Correcting errors",
+                "Removing duplicates",
+                "Integrating data from multiple sources"
+              ],
+              "describe": "Data cleaning focuses on handling missing values, correcting errors, and removing duplicates; integration is part of preprocessing.",
+              "correct": 3
+            },
+            {
+              "question": "What does the process of correcting errors in data cleaning involve?",
+              "options": [
+                "Ignoring the mistakes",
+                "Identifying and fixing inaccuracies",
+                "Removing all data",
+                "Scaling data values"
+              ],
+              "describe": "Correcting errors means identifying inaccuracies in the dataset and fixing them to improve data quality.",
+              "correct": 1
+            },
+            {
+              "question": "Which data cleaning technique ensures that repeated data entries are removed?",
+              "options": [
+                "Handling missing values",
+                "Removing duplicates",
+                "Type conversion",
+                "Data reduction"
+              ],
+              "describe": "Removing duplicates is the process used to eliminate repeated data entries.",
+              "correct": 1
+            },
+            {
+              "question": "What is type conversion in data cleaning?",
+              "options": [
+                "Changing data types to appropriate formats",
+                "Removing errors",
+                "Detecting outliers",
+                "Normalizing data"
+              ],
+              "describe": "Type conversion involves converting data to the correct data type or format to ensure consistency.",
+              "correct": 0
+            },
+            {
+              "question": "Which of the following ensures data is accurate and reliable?",
+              "options": [
+                "Data cleaning",
+                "Data replication",
+                "Data encryption",
+                "Data integration"
+              ],
+              "describe": "Data cleaning ensures that the dataset is accurate, consistent, and reliable.",
+              "correct": 0
+            },
+            {
+              "question": "Handling missing values is a part of which process?",
+              "options": [
+                "Data transformation",
+                "Data cleaning",
+                "Data reduction",
+                "Data visualization"
+              ],
+              "describe": "Handling missing values is a key step in the data cleaning process.",
+              "correct": 1
+            },
+            {
+              "question": "What can be the result of not performing data cleaning on raw data?",
+              "options": [
+                "Improved model performance",
+                "More accurate analysis",
+                "Erroneous and inconsistent data",
+                "Enhanced data integration"
+              ],
+              "describe": "Without cleaning, raw data remains erroneous and inconsistent, leading to poor analysis outcomes.",
+              "correct": 2
+            },
+            {
+              "question": "Which step is essential in data cleaning for removing irrelevant rows?",
+              "options": [
+                "Imputation",
+                "Dropping missing value rows",
+                "Replacing values",
+                "Scaling data"
+              ],
+              "describe": "Dropping rows with missing values is essential to remove irrelevant or incomplete data.",
+              "correct": 1
+            },
+            {
+              "question": "Data cleaning is applied based on:",
+              "options": [
+                "The random selection of data",
+                "The nature of the data",
+                "The data's storage location",
+                "The color of the data"
+              ],
+              "describe": "Data cleaning techniques are applied based on the specific nature and characteristics of the data.",
+              "correct": 1
+            },
+            {
+              "question": "Correcting typos in data cleaning can be performed using:",
+              "options": [
+                "A .replace method",
+                "A drop_duplicates function",
+                "A normalization process",
+                "A clustering algorithm"
+              ],
+              "describe": "Typos are corrected using the .replace() method in Python.",
+              "correct": 0
+            },
+            {
+              "question": "What ensures the data used for analysis is consistent?",
+              "options": [
+                "Data duplication",
+                "Data cleaning",
+                "Data noise",
+                "Data scaling"
+              ],
+              "describe": "Data cleaning removes errors and duplicates, ensuring consistency in the dataset.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is a benefit of proper data cleaning?",
+              "options": [
+                "Enhanced model interpretability",
+                "Increased data errors",
+                "More missing values",
+                "Reduced data quality"
+              ],
+              "describe": "Proper data cleaning enhances model interpretability and overall data quality.",
+              "correct": 0
+            },
+            {
+              "question": "Removing duplicates in a dataset helps in:",
+              "options": [
+                "Increasing dataset size unnecessarily",
+                "Ensuring data accuracy",
+                "Introducing more noise",
+                "Changing data formats"
+              ],
+              "describe": "Removing duplicates ensures that the dataset remains accurate and free from redundant information.",
+              "correct": 1
+            },
+            {
+              "question": "Type conversion in data cleaning is important because:",
+              "options": [
+                "It adds noise to data",
+                "It converts data to a uniform format for analysis",
+                "It increases the number of features",
+                "It removes outliers"
+              ],
+              "describe": "Type conversion ensures that all data is in a uniform format suitable for analysis.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Noise Identification",
+          "qa": [
+            {
+              "question": "What is the purpose of noise identification in a dataset?",
+              "options": [
+                "To increase data noise",
+                "To detect anomalies and errors",
+                "To remove duplicate data",
+                "To standardize data formats"
+              ],
+              "describe": "Noise identification is used to detect anomalies, errors, and deviations that may affect data quality.",
+              "correct": 1
+            },
+            {
+              "question": "Which visualization method is mentioned for identifying outliers?",
+              "options": [
+                "Scatter plot",
+                "Histogram",
+                "Boxplot",
+                "Pie chart"
+              ],
+              "describe": "Boxplots are mentioned as a tool for outlier detection.",
+              "correct": 2
+            },
+            {
+              "question": "What statistical measure is used to find deviations from the mean?",
+              "options": [
+                "Mean absolute error",
+                "Z-score",
+                "Correlation coefficient",
+                "Variance"
+              ],
+              "describe": "The Z-score is used to determine how many standard deviations a data point is from the mean.",
+              "correct": 1
+            },
+            {
+              "question": "Outlier detection using boxplots relies on which statistical method?",
+              "options": [
+                "Interquartile Range (IQR) method",
+                "Linear regression",
+                "Clustering",
+                "Decision trees"
+              ],
+              "describe": "The IQR method is used with boxplots to detect outliers by identifying points outside Q1 - 1.5×IQR and Q3 + 1.5×IQR.",
+              "correct": 0
+            },
+            {
+              "question": "Data points beyond how many standard deviations from the mean are typically considered outliers?",
+              "options": [
+                "1 standard deviation",
+                "2 standard deviations",
+                "3 standard deviations",
+                "4 standard deviations"
+              ],
+              "describe": "Data points beyond 3 standard deviations from the mean are generally considered outliers.",
+              "correct": 2
+            },
+            {
+              "question": "Which algorithm is mentioned as effective for outlier detection by isolating observations?",
+              "options": [
+                "Isolation Forest",
+                "Linear Regression",
+                "K-Means",
+                "Random Forest"
+              ],
+              "describe": "Isolation Forest is an algorithm that isolates observations by randomly selecting features and split values, making outliers easier to detect.",
+              "correct": 0
+            },
+            {
+              "question": "What is the primary concept behind the Isolation Forest algorithm?",
+              "options": [
+                "Clustering data points into groups",
+                "Isolating outliers by randomly selecting features and split values",
+                "Scaling data values",
+                "Converting data formats"
+              ],
+              "describe": "The algorithm isolates outliers by randomly selecting a feature and split value, leading to shorter path lengths for anomalies.",
+              "correct": 1
+            },
+            {
+              "question": "Which density-based clustering algorithm is mentioned for outlier detection?",
+              "options": [
+                "K-Means",
+                "DBSCAN",
+                "Hierarchical clustering",
+                "Gaussian Mixture Models"
+              ],
+              "describe": "DBSCAN is mentioned as a clustering algorithm that identifies points in low-density regions as outliers.",
+              "correct": 1
+            },
+            {
+              "question": "How is the Z-score used in noise identification?",
+              "options": [
+                "To measure how far a data point is from the mean in terms of standard deviations",
+                "To remove duplicate entries",
+                "To integrate multiple data sources",
+                "To convert data types"
+              ],
+              "describe": "The Z-score quantifies how many standard deviations a data point deviates from the mean, which is useful in detecting anomalies.",
+              "correct": 0
+            },
+            {
+              "question": "The Interquartile Range (IQR) method considers data points outside of which range as outliers?",
+              "options": [
+                "Below Q1 - 1.5×IQR and above Q3 + 1.5×IQR",
+                "Below Q1 - 3×IQR and above Q3 + 3×IQR",
+                "Below Q2 - 1×IQR and above Q2 + 1×IQR",
+                "Below Q1 and above Q3"
+              ],
+              "describe": "Data points falling below Q1 - 1.5×IQR or above Q3 + 1.5×IQR are considered outliers using the IQR method.",
+              "correct": 0
+            },
+            {
+              "question": "What role do visualizations play in noise identification?",
+              "options": [
+                "They automatically correct errors",
+                "They help analyze and detect anomalies in the dataset",
+                "They remove duplicates from the dataset",
+                "They standardize data"
+              ],
+              "describe": "Visualizations assist in analyzing the data and identifying anomalies or noise within the dataset.",
+              "correct": 1
+            },
+            {
+              "question": "Why is noise identification important before data analysis?",
+              "options": [
+                "To ignore the errors in data",
+                "To ensure that only clean and accurate data is used",
+                "To add more data variability",
+                "To merge data sources"
+              ],
+              "describe": "Identifying and handling noise ensures that the analysis is performed on clean and accurate data.",
+              "correct": 1
+            },
+            {
+              "question": "Which statistical method is NOT mentioned for outlier detection?",
+              "options": [
+                "Z-score method",
+                "IQR method",
+                "Standard deviation method",
+                "Bayesian inference"
+              ],
+              "describe": "Bayesian inference is not mentioned as a method for outlier detection in the module.",
+              "correct": 3
+            },
+            {
+              "question": "Noise in data can be caused by:",
+              "options": [
+                "Consistent and error-free data entry",
+                "Data anomalies and errors",
+                "Uniform data values",
+                "Accurate measurements"
+              ],
+              "describe": "Noise is typically caused by anomalies and errors that occur during data collection or entry.",
+              "correct": 1
+            },
+            {
+              "question": "The Z-score method is based on:",
+              "options": [
+                "Deviation from the median",
+                "Deviation from the mean",
+                "Data integration",
+                "Duplicate removal"
+              ],
+              "describe": "The Z-score measures the deviation of a data point from the mean in terms of standard deviations.",
+              "correct": 1
+            }
+          ]
+        },
+        {
+          "name": "Data Transformation",
+          "qa": [
+            {
+              "question": "What does data transformation involve?",
+              "options": [
+                "Fixing formats or units of data",
+                "Adding noise to the data",
+                "Removing duplicates",
+                "Visualizing data patterns"
+              ],
+              "describe": "Data transformation involves fixing the formats or units of data, often during the integration process.",
+              "correct": 0
+            },
+            {
+              "question": "Which technique standardizes data using mean and standard deviation?",
+              "options": [
+                "Min-Max Scaling",
+                "Robust Scaling",
+                "Standard Scaling / Z-Score",
+                "Normalization"
+              ],
+              "describe": "Standard Scaling, also known as Z-score, uses the mean and standard deviation for standardization.",
+              "correct": 2
+            },
+            {
+              "question": "What is the formula for Standard Scaling (Z-score)?",
+              "options": [
+                "x' = (x - μ) / σ",
+                "x' = (x - x_min) / (x_max - x_min)",
+                "x' = (x - Q1) / (Q3 - Q1)",
+                "x' = x / ||x||"
+              ],
+              "describe": "The Z-score formula is: x' = (x - μ) / σ, where μ is the mean and σ is the standard deviation.",
+              "correct": 0
+            },
+            {
+              "question": "Which scaling technique converts data values to a range between 0 and 1?",
+              "options": [
+                "Standard Scaling",
+                "Min-Max Scaling",
+                "Robust Scaling",
+                "Normalization"
+              ],
+              "describe": "Min-Max Scaling converts data values into a range between 0 and 1 using the minimum and maximum values.",
+              "correct": 1
+            },
+            {
+              "question": "What is the formula for Min-Max Scaling?",
+              "options": [
+                "x' = (x - μ) / σ",
+                "x' = (x - x_min) / (x_max - x_min)",
+                "x' = (x - Q1) / (Q3 - Q1)",
+                "x' = x / ||x||"
+              ],
+              "describe": "The Min-Max Scaling formula is: x' = (x - x_min) / (x_max - x_min).",
+              "correct": 1
+            },
+            {
+              "question": "Which scaling method is robust to outliers?",
+              "options": [
+                "Standard Scaling",
+                "Min-Max Scaling",
+                "Robust Scaling",
+                "Normalization"
+              ],
+              "describe": "Robust Scaling is less affected by outliers because it uses the interquartile range (quartiles).",
+              "correct": 2
+            },
+            {
+              "question": "What is the formula for Robust Scaling?",
+              "options": [
+                "x' = (x - μ) / σ",
+                "x' = (x - x_min) / (x_max - x_min)",
+                "x' = (x - Q1) / (Q3 - Q1)",
+                "x' = x / ||x||"
+              ],
+              "describe": "The formula for Robust Scaling is: x' = (x - Q1) / (Q3 - Q1), where Q1 and Q3 are the first and third quartiles.",
+              "correct": 2
+            },
+            {
+              "question": "Which technique is used to normalize data by dividing by the norm?",
+              "options": [
+                "Standard Scaling",
+                "Min-Max Scaling",
+                "Robust Scaling",
+                "Normalizer"
+              ],
+              "describe": "The Normalizer technique scales data by dividing each value by the norm (typically the square root of the sum of squares).",
+              "correct": 3
+            },
+            {
+              "question": "What does the normalizer formula look like?",
+              "options": [
+                "x' = (x - μ) / σ",
+                "x' = (x - x_min) / (x_max - x_min)",
+                "x' = (x - Q1) / (Q3 - Q1)",
+                "x' = x / ||x||"
+              ],
+              "describe": "The normalizer formula is: x' = x / ||x||, where ||x|| represents the norm of x.",
+              "correct": 3
+            },
+            {
+              "question": "Data transformation is applied during which process?",
+              "options": [
+                "Data preprocessing",
+                "Data visualization",
+                "Data modeling",
+                "Data storage"
+              ],
+              "describe": "Data transformation is a key step in the overall data preprocessing process.",
+              "correct": 0
+            },
+            {
+              "question": "Which scaling technique would you use if you want to standardize the distribution of the data?",
+              "options": [
+                "Min-Max Scaling",
+                "Standard Scaling",
+                "Robust Scaling",
+                "Normalization"
+              ],
+              "describe": "Standard Scaling is used to standardize data by adjusting it according to its mean and standard deviation.",
+              "correct": 1
+            },
+            {
+              "question": "When is Min-Max Scaling most appropriate?",
+              "options": [
+                "When data contains extreme outliers",
+                "When a specific range of data is required",
+                "When data needs to be standardized",
+                "When using the Isolation Forest algorithm"
+              ],
+              "describe": "Min-Max Scaling is most suitable when the data needs to be scaled to a specific range, typically between 0 and 1.",
+              "correct": 1
+            },
+            {
+              "question": "What is the key advantage of using Robust Scaling?",
+              "options": [
+                "It is highly sensitive to outliers",
+                "It uses statistical measures that are not affected by extreme values",
+                "It maximizes the data range",
+                "It normalizes data to unit length"
+              ],
+              "describe": "Robust Scaling is advantageous because it uses quartiles, which are less affected by extreme outliers.",
+              "correct": 1
+            },
+            {
+              "question": "Normalization scales data based on:",
+              "options": [
+                "Mean and standard deviation",
+                "Minimum and maximum values",
+                "The norm (square root of the sum of squares)",
+                "Interquartile range"
+              ],
+              "describe": "Normalization scales data by dividing by the norm, which is the square root of the sum of squares of the values.",
+              "correct": 2
+            },
+            {
+              "question": "Which data transformation technique would you choose to convert varying units into a common scale?",
+              "options": [
+                "Data reduction",
+                "Data cleaning",
+                "Data transformation",
+                "Noise identification"
+              ],
+              "describe": "Data transformation is used to convert different units and formats into a common scale suitable for analysis.",
+              "correct": 2
+            }
+          ]
+        },
+        {
+          "name": "Data Cleaning using Python",
+          "qa": [
+            {
+              "question": "Which Python method is used to replace typos in a DataFrame column?",
+              "options": [
+                ".replace()",
+                ".drop_duplicates()",
+                ".fillna()",
+                ".dropna()"
+              ],
+              "describe": "The .replace() method is used to substitute incorrect values or typos with correct ones.",
+              "correct": 0
+            },
+            {
+              "question": "What is the purpose of the SimpleImputer from sklearn?",
+              "options": [
+                "To impute missing values",
+                "To drop duplicates",
+                "To replace typos",
+                "To scale data"
+              ],
+              "describe": "SimpleImputer is used to impute or fill missing values, for example using the mean strategy.",
+              "correct": 0
+            },
+            {
+              "question": "Which strategy is used in the provided code snippet with SimpleImputer?",
+              "options": [
+                "Median",
+                "Most frequent",
+                "Mean",
+                "Constant"
+              ],
+              "describe": "The code snippet uses strategy='mean' to replace missing values with the mean of the column.",
+              "correct": 2
+            },
+            {
+              "question": "What does df.drop_duplicates() do?",
+              "options": [
+                "Removes rows with missing values",
+                "Removes duplicate rows",
+                "Replaces missing values",
+                "Transforms data types"
+              ],
+              "describe": "The df.drop_duplicates() method removes duplicate rows from the DataFrame.",
+              "correct": 1
+            },
+            {
+              "question": "Which method is used to remove rows with missing values?",
+              "options": [
+                "drop_duplicates()",
+                "dropna()",
+                "fillna()",
+                "replace()"
+              ],
+              "describe": "The dropna() method is used to remove rows that contain missing values.",
+              "correct": 1
+            },
+            {
+              "question": "What does the fillna() function do in a DataFrame?",
+              "options": [
+                "Fills missing values with a specified value",
+                "Drops missing values",
+                "Detects outliers",
+                "Replaces duplicate rows"
+              ],
+              "describe": "The fillna() function fills in missing values with a specified replacement value.",
+              "correct": 0
+            },
+            {
+              "question": "In the example provided, what value is used to replace missing values in the 'Age' column?",
+              "options": [
+                "Median",
+                "Mean",
+                "Mode",
+                "Constant value"
+              ],
+              "describe": "The provided example replaces missing values in the 'Age' column with the mean of the column.",
+              "correct": 1
+            },
+            {
+              "question": "How can you remove duplicate entries from a DataFrame?",
+              "options": [
+                "Using df.drop_duplicates()",
+                "Using df.fillna()",
+                "Using df.replace()",
+                "Using df.dropna()"
+              ],
+              "describe": "Duplicate entries in a DataFrame can be removed using the df.drop_duplicates() method.",
+              "correct": 0
+            },
+            {
+              "question": "What is the function of the .replace() method in data cleaning?",
+              "options": [
+                "To impute missing values",
+                "To correct typos and errors",
+                "To remove outliers",
+                "To scale data"
+              ],
+              "describe": "The .replace() method is used to correct typos and errors by substituting wrong strings with correct ones.",
+              "correct": 1
+            },
+            {
+              "question": "In data cleaning, which method would you use to drop rows with missing values?",
+              "options": [
+                "df.drop_duplicates()",
+                "df.dropna()",
+                "df.fillna()",
+                "df.replace()"
+              ],
+              "describe": "To remove rows with missing values, you would use the df.dropna() method.",
+              "correct": 1
+            },
+            {
+              "question": "Which Python library is used for data imputation in the provided code?",
+              "options": [
+                "pandas",
+                "numpy",
+                "sklearn.impute",
+                "scipy.stats"
+              ],
+              "describe": "The provided code uses the SimpleImputer from the sklearn.impute module for data imputation.",
+              "correct": 2
+            },
+            {
+              "question": "What does the inplace=True parameter do in fillna()?",
+              "options": [
+                "Returns a new DataFrame",
+                "Modifies the existing DataFrame",
+                "Creates a copy of the DataFrame",
+                "Deletes the DataFrame"
+              ],
+              "describe": "Setting inplace=True modifies the existing DataFrame directly without creating a new one.",
+              "correct": 1
+            },
+            {
+              "question": "Which method would you use to replace multiple typos in a column?",
+              "options": [
+                ".replace({'typo1': 'correct1', 'typo2': 'correct2'})",
+                ".dropna()",
+                ".fillna()",
+                ".drop_duplicates()"
+              ],
+              "describe": "The .replace() method can accept a dictionary to replace multiple typos in one call.",
+              "correct": 0
+            },
+            {
+              "question": "What is the typical use of imputation in data cleaning?",
+              "options": [
+                "To remove missing values",
+                "To fill in missing data with estimated values",
+                "To detect outliers",
+                "To convert data types"
+              ],
+              "describe": "Imputation is used to fill in missing data with estimated values, such as the mean or median.",
+              "correct": 1
+            },
+            {
+              "question": "When using SimpleImputer, which function is used to apply the imputer on a column?",
+              "options": [
+                "fit_transform()",
+                "dropna()",
+                "replace()",
+                "fillna()"
+              ],
+              "describe": "The fit_transform() method is used with SimpleImputer to compute and apply imputation on the data.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Data Reduction",
+          "qa": [
+            {
+              "question": "What is data reduction?",
+              "options": [
+                "Increasing the number of features",
+                "Reducing the number of features while retaining key information",
+                "Eliminating all noise from data",
+                "Transforming data formats"
+              ],
+              "describe": "Data reduction involves reducing the number of features in a dataset while preserving its most important information.",
+              "correct": 1
+            },
+            {
+              "question": "One benefit of data reduction is:",
+              "options": [
+                "Increased noise in data",
+                "Speeding up data processing",
+                "Creating more complex models",
+                "Enhancing data redundancy"
+              ],
+              "describe": "By reducing the number of features, data reduction speeds up processing and simplifies model building.",
+              "correct": 1
+            },
+            {
+              "question": "How does data reduction help in preventing overfitting?",
+              "options": [
+                "By adding more noise",
+                "By reducing the number of features",
+                "By increasing data variance",
+                "By duplicating data"
+              ],
+              "describe": "Reducing the number of features helps prevent overfitting by removing redundant and irrelevant information.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following is NOT a benefit of data reduction?",
+              "options": [
+                "Aiding visualization",
+                "Removing noise",
+                "Increasing processing speed",
+                "Increasing model complexity"
+              ],
+              "describe": "Data reduction simplifies models and aids visualization; it does not increase model complexity.",
+              "correct": 3
+            },
+            {
+              "question": "Data reduction is particularly useful for:",
+              "options": [
+                "Datasets with a small number of features",
+                "High-dimensional datasets",
+                "Datasets with no noise",
+                "Datasets with perfect accuracy"
+              ],
+              "describe": "High-dimensional datasets benefit most from data reduction as it simplifies the feature space.",
+              "correct": 1
+            },
+            {
+              "question": "Reducing the number of features in a dataset primarily helps in:",
+              "options": [
+                "Increasing training time",
+                "Aiding visualization",
+                "Complicating data interpretation",
+                "Introducing more errors"
+              ],
+              "describe": "By reducing the number of features, data reduction aids in visualization and simplifies interpretation.",
+              "correct": 1
+            },
+            {
+              "question": "What does dimensionality reduction aim to achieve?",
+              "options": [
+                "Increase the number of dimensions",
+                "Retain most of the important information while reducing features",
+                "Eliminate all data",
+                "Normalize data values"
+              ],
+              "describe": "Dimensionality reduction seeks to retain key information while reducing the overall number of features.",
+              "correct": 1
+            },
+            {
+              "question": "Which process can help in removing noise from data?",
+              "options": [
+                "Data reduction",
+                "Data duplication",
+                "Data enrichment",
+                "Data storage"
+              ],
+              "describe": "Data reduction can help remove noise by eliminating irrelevant or less important features.",
+              "correct": 0
+            },
+            {
+              "question": "What is a key benefit of data reduction in terms of model performance?",
+              "options": [
+                "Enhanced model performance due to less irrelevant information",
+                "Slower training time",
+                "Higher model complexity",
+                "Increased noise"
+              ],
+              "describe": "By reducing irrelevant features, data reduction enhances model performance.",
+              "correct": 0
+            },
+            {
+              "question": "Data reduction contributes to easier visualization by:",
+              "options": [
+                "Increasing the number of dimensions",
+                "Simplifying the dataset",
+                "Adding more data points",
+                "Complicating data relationships"
+              ],
+              "describe": "Simplifying the dataset through data reduction makes visualization much easier.",
+              "correct": 1
+            },
+            {
+              "question": "What is the main goal of data reduction?",
+              "options": [
+                "To create new data points",
+                "To reduce feature space while preserving key patterns",
+                "To add more features",
+                "To integrate data sources"
+              ],
+              "describe": "The main goal of data reduction is to decrease the feature space while keeping the most important patterns intact.",
+              "correct": 1
+            },
+            {
+              "question": "Which benefit is associated with data reduction?",
+              "options": [
+                "Increased processing speed",
+                "More complex algorithms",
+                "Higher risk of overfitting",
+                "Increased data redundancy"
+              ],
+              "describe": "Reducing the number of features speeds up processing and reduces computational complexity.",
+              "correct": 0
+            },
+            {
+              "question": "Data reduction can help in mitigating the risk of:",
+              "options": [
+                "Overfitting",
+                "Underfitting",
+                "Data augmentation",
+                "Data cleaning"
+              ],
+              "describe": "By reducing irrelevant features, data reduction mitigates the risk of overfitting in models.",
+              "correct": 0
+            },
+            {
+              "question": "How does data reduction affect noise in a dataset?",
+              "options": [
+                "It increases noise",
+                "It helps remove irrelevant noise",
+                "It has no impact on noise",
+                "It duplicates noise"
+              ],
+              "describe": "Data reduction can help eliminate irrelevant noise by filtering out non-essential features.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following best describes the process of data reduction?",
+              "options": [
+                "Filtering and selecting the most informative features",
+                "Adding more features to the dataset",
+                "Replacing missing values with noise",
+                "Transforming data into a different format"
+              ],
+              "describe": "Data reduction involves filtering and selecting only the most informative features from the dataset.",
+              "correct": 0
+            }
+          ]
+        },
+        {
+          "name": "Principal Component Analysis (PCA)",
+          "qa": [
+            {
+              "question": "What is the primary purpose of Principal Component Analysis (PCA)?",
+              "options": [
+                "To increase the number of features",
+                "To reduce dimensions by creating principal components",
+                "To clean data",
+                "To visualize outliers"
+              ],
+              "describe": "PCA is used to reduce dimensions by creating new features called principal components that capture most of the variance.",
+              "correct": 1
+            },
+            {
+              "question": "What is the first step in applying PCA?",
+              "options": [
+                "Standardizing the data",
+                "Removing duplicates",
+                "Imputing missing values",
+                "Applying the Z-score method"
+              ],
+              "describe": "The first step in PCA is to standardize the data so that each feature has a mean of 0 and variance of 1.",
+              "correct": 0
+            },
+            {
+              "question": "In PCA, what are principal components?",
+              "options": [
+                "The original features in the dataset",
+                "New features created as combinations of original features",
+                "The missing values",
+                "Outliers in the dataset"
+              ],
+              "describe": "Principal components are new features formed as linear combinations of the original features that capture the maximum variance.",
+              "correct": 1
+            },
+            {
+              "question": "How does PCA help in reducing noise?",
+              "options": [
+                "By discarding components that capture less variance",
+                "By adding more outliers",
+                "By increasing feature space",
+                "By replicating data"
+              ],
+              "describe": "PCA reduces noise by discarding principal components that account for very little variance, effectively filtering out noise.",
+              "correct": 0
+            },
+            {
+              "question": "What key idea does PCA rely on?",
+              "options": [
+                "Retaining the most variance in the data",
+                "Eliminating all variance",
+                "Duplicating features",
+                "Increasing data complexity"
+              ],
+              "describe": "PCA retains the components that have the highest variance, which are considered the most important patterns in the data.",
+              "correct": 0
+            },
+            {
+              "question": "After standardizing data, what is the next step in PCA?",
+              "options": [
+                "Projecting data onto principal components",
+                "Removing missing values",
+                "Normalizing data",
+                "Cleaning data"
+              ],
+              "describe": "Once data is standardized, PCA projects the data onto the principal components to reduce dimensions.",
+              "correct": 0
+            },
+            {
+              "question": "PCA is particularly useful for which type of datasets?",
+              "options": [
+                "Low-dimensional and uncorrelated datasets",
+                "High-dimensional and correlated datasets",
+                "Datasets with no missing values",
+                "Datasets with no noise"
+              ],
+              "describe": "PCA is especially effective for high-dimensional datasets where features are highly correlated.",
+              "correct": 1
+            },
+            {
+              "question": "What does standardizing data mean in the context of PCA?",
+              "options": [
+                "Setting the mean to 0 and variance to 1",
+                "Scaling data to a range between 0 and 1",
+                "Removing outliers",
+                "Imputing missing values"
+              ],
+              "describe": "Standardizing data means adjusting the data so that it has a mean of 0 and a variance of 1, an essential step before applying PCA.",
+              "correct": 0
+            },
+            {
+              "question": "Which step in PCA involves identifying directions of maximum variance?",
+              "options": [
+                "Standardization",
+                "Projection",
+                "Component identification",
+                "Noise removal"
+              ],
+              "describe": "PCA identifies the principal components as the directions along which the variance in the data is maximized.",
+              "correct": 2
+            },
+            {
+              "question": "Why is PCA important for visualization?",
+              "options": [
+                "It increases the number of dimensions for visualization",
+                "It reduces dimensions making visualization easier",
+                "It adds noise to the dataset",
+                "It complicates data interpretation"
+              ],
+              "describe": "By reducing dimensions, PCA makes it easier to visualize high-dimensional data in 2D or 3D plots.",
+              "correct": 1
+            },
+            {
+              "question": "What happens to the less important components in PCA?",
+              "options": [
+                "They are retained",
+                "They are discarded",
+                "They are used for data cleaning",
+                "They are transformed into noise"
+              ],
+              "describe": "PCA discards components that capture minimal variance as they are considered less important for representing the data.",
+              "correct": 1
+            },
+            {
+              "question": "How does PCA improve model performance?",
+              "options": [
+                "By adding irrelevant features",
+                "By reducing the dimensionality and focusing on key patterns",
+                "By increasing data noise",
+                "By ignoring the variance"
+              ],
+              "describe": "By reducing the number of features and emphasizing the key patterns, PCA can lead to improved model performance.",
+              "correct": 1
+            },
+            {
+              "question": "Which process in PCA involves combining features to form new components?",
+              "options": [
+                "Data integration",
+                "Projection",
+                "Component analysis",
+                "Feature extraction"
+              ],
+              "describe": "PCA performs feature extraction by combining original features to form new, uncorrelated principal components.",
+              "correct": 3
+            },
+            {
+              "question": "What is a key use case for PCA?",
+              "options": [
+                "Cleaning data errors",
+                "High-dimensional data visualization and analysis",
+                "Correcting typos",
+                "Replacing missing values"
+              ],
+              "describe": "PCA is primarily used for analyzing and visualizing high-dimensional, correlated data by reducing its dimensionality.",
+              "correct": 1
+            },
+            {
+              "question": "Which of the following best describes PCA?",
+              "options": [
+                "A clustering algorithm",
+                "A dimensionality reduction technique that creates new features",
+                "A data cleaning method",
+                "A data imputation strategy"
+              ],
+              "describe": "PCA is a dimensionality reduction technique that creates new features (principal components) based on the variance in the data.",
+              "correct": 1
+            }
+          ]
+        }
+      ],
+    "sample":{
+        "topics": [
+          "Data Preprocessing - General Concepts",
+          "Missing Values",
+          "Outlier Detection",
+          "Data Integration",
+          "Data Transformation",
+          "Data Cleaning in Python (Practical)",
+          "Data Reduction"
+        ],
+        "sections": [
+          {
+            "name": "Section A",
+            "marks": 3,
+            "questions": [
+              "What are the advantages of preprocessing data? (Mention at least three)",
+              "Why is data preprocessing necessary for real-world data? (Explain the common issues with real-world data.)",
+              "What is data cleaning?",
+              "Explain data cleaning as a process.",
+              "List two ways in which preprocessing improves model interpretability.",
+              "What role does data preprocessing play in reducing computational complexity?",
+              "How does data cleaning contribute to enhanced model performance?",
+              "What is the significance of removing duplicates during data preprocessing?",
+              "What is noisy data?",
+              "Why is handling missing values critical before applying machine learning algorithms?",
+              "What is the impact of ignoring missing values on data analysis outcomes?",
+              "What is an outlier?",
+              "How do outliers affect statistical analysis?",
+              "Why is it important to identify outliers before data modeling?",
+              "What is data integration?",
+              "List the four challenges in data integration.",
+              "What strategies can be used to resolve schema conflicts during data integration?",
+              "What is data transformation, and why is it performed during data integration?",
+              "What is the formula for normalizer in data transformation.",
+              "How does data transformation contribute to reducing data redundancy?",
+              "What challenges might arise during data transformation when dealing with heterogeneous data sources?",
+              "Using Python's Pandas library, show how to replace specific incorrect string values (typos) in a DataFrame column named 'column_name' with their correct counterparts. Provide a code example.",
+              "Show how to use scikit-learn's SimpleImputer to impute missing values in a DataFrame column named 'column_name' using the mean strategy. Provide a complete code example.",
+              "Provide the Pandas code to remove duplicate rows from a DataFrame named df.",
+              "How to remove rows having missing values using Pandas?",
+              "Show how to use the fillna() method in Pandas to replace missing values in the 'Age' column of a DataFrame with the mean age.",
+              "What are common pitfalls when cleaning data using Pandas?",
+              "How can you validate that data cleaning operations in Python were successful?",
+              "What are the two types of numerosity reduction?",
+              "Differentiate between lossy and lossless data compression.",
+              "What role does dimensionality reduction play in mitigating overfitting?",
+              "How does data reduction improve computational efficiency in large datasets?"
+            ],
+            "topicNo": [
+              1, 1, 1, 1, 1, 1, 1, 1,
+              2, 2, 2,
+              3, 3, 3,
+              4, 4, 4,
+              5, 5, 5, 5,
+              6, 6, 6, 6, 6, 6, 6,
+              7, 7, 7, 7
+            ]
+          },
+          {
+            "name": "Section B",
+            "marks": 5,
+            "questions": [
+              "List four different methods for handling missing values in a dataset. Briefly describe each.",
+              "How can noisy data be handled? Mention four techniques.",
+              "Describe two statistical methods and two algorithmic methods for outlier detection.",
+              "Explain how the Interquartile Range (IQR) is used to identify outliers, including the formulas for calculating the upper and lower bounds.",
+              "Explain the difference between standardization and normalization in data transformation.",
+              "Write the formula for standard scaling (Z-score standardization) and explain each term in the formula.",
+              "Write the formula for Min-Max scaling and explain each term in the formula.",
+              "Write the formula for Robust scaling, explain each term, and why it's considered robust.",
+              "What is Discretization? Mention its method.",
+              "Provide Python code (using scipy.stats and NumPy) to remove outliers from a DataFrame's 'Age' column based on the Z-score, keeping only rows where the Z-score is less than 3.",
+              "What is dimensionality reduction, and what are its benefits? Mention at least three benefits.",
+              "Briefly describe Principal Component Analysis (PCA) and its main goal.",
+              "Discuss the impact of data preprocessing on model accuracy and efficiency.",
+              "Compare and contrast the effectiveness of different imputation methods for missing data.",
+              "Evaluate the pros and cons of algorithmic versus statistical methods in outlier detection.",
+              "Analyze the challenges of integrating data from diverse sources and propose solutions.",
+              "Assess how different scaling techniques impact the performance of machine learning algorithms.",
+              "Explain how Min-Max scaling can distort data distributions and suggest alternatives.",
+              "Demonstrate how to automate a complete data cleaning pipeline using Python libraries.",
+              "Discuss the limitations of using SimpleImputer for handling missing values in real-world datasets."
+            ],
+            "topicNo": [
+              2, 2,
+              3, 3,
+              5, 5, 5, 5, 5,
+              6,
+              7, 7,
+              1,
+              2,
+              3,
+              4,
+              5, 5,
+              6, 6
+            ]
+          },
+          {
+            "name": "Section C",
+            "marks": 10,
+            "questions": [
+              "Develop a comprehensive data preprocessing plan for a real-world dataset, addressing missing values, noisy data, outliers, integration, transformation, and reduction, and justify each step.",
+              "Critically evaluate the role of data cleaning in improving the reliability of machine learning models, including practical Python examples to support your analysis.",
+              "Design a data integration strategy for merging heterogeneous data sources, discussing challenges, conflict resolution, and schema alignment in detail.",
+              "Propose a detailed methodology for detecting and handling outliers in a high-dimensional dataset, incorporating both statistical and algorithmic techniques, and discuss potential pitfalls."
+            ],
+            "topicNo": [
+              1,
+              6,
+              4,
+              3
+            ]
+          }
+        ]
+      }
+      
+}

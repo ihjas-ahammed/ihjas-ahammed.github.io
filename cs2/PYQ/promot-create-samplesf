@@ -57,698 +57,270 @@ every subheading is a topic ofc give more than two topics
 
 questions
 
-# 1. Exploratory Data Analysis (EDA)
 
-1.  Why is EDA a significant component of Data Science? (3 marks)
-2.  Summarize the philosophy of EDA. (5 marks)
+# 1. Data Preprocessing - General Concepts
 
-# 2. Types of EDA
+1.  What are the advantages of preprocessing data? (Mention at least three) (Assumed 3 marks - based on typical PYQ structure)
+2.  Why is data preprocessing necessary for real-world data? (Explain the common issues with real-world data.) (Assumed 3 marks)
+3. What is data cleaning. (3 marks)
+4. Explain data cleaning as a process.(3 marks)
 
-1.  Differentiate the Graphical vs. Non-graphical methods in EDA (In context of two way cross classification) (Implied - combining information)
-2.  What is the difference between Univariate and Multivariate EDA? (Implied - Combining information)
+# 2. Missing Values
 
-# 3. Descriptive Statistics
+1.  List *four* different methods for handling missing values in a dataset. Briefly describe each. (Assumed 5 marks - combining several sub-points)
+2. What is noisy data? (3 marks)
+3. How can noisy data be handled? mention *four* techniques.(5 marks)
 
-1. What are Measures of Central Tendency. List them? (Implied 3 marks)
-2.  What are measures of dispersion? List them (3 Marks)
-3. Explain skewness and give it's formula. (implied)
-4. Expalin kurtosis and give it's formula (implied)
+# 3. Outlier Detection
 
-# 4. Python Libraries for EDA
+1.  What is an outlier? (3 marks)
+2.  Describe *two* statistical methods and *two* algorithmic methods for outlier detection. (5 marks)
+3. Explain how the Interquartile Range (IQR) is used to identify outliers. Include the formulas for calculating the upper and lower bounds. (5 marks)
 
-1.  List any four data visualization tools. (From the "Tools Used in Python" section - this is borderline, as it's a list, but the tools are directly named in the text) (3 marks)
-2.  What is a dataframe in python? (3 marks)
-3. Write short note on Dataframe Features? (implied 3 marks)
+# 4. Data Integration
 
-# 5. Data Visualization
+1.  What is data integration? (3 marks)
+2. List the four challenges in data intergration. (3 Marks)
 
-1.  List any four data visualization tools. (3 marks)
-2. Explain Box Plot. (Implied - it's defined in the text)
-3. Explain Scatter Plot. (Implied - defined)
-4. Explain Heatmap. (Implied - defined)
-5. What is a Bubble Chart. (Implied- Defined)
+# 5. Data Transformation
 
+1.  What is data transformation, and why is it performed during data integration? (3 marks)
+2.  Explain the difference between standardization and normalization in data transformation. (5 marks)
+3.  Write the formula for *standard scaling* (Z-score standardization). Explain each term in the formula. (5 marks)
+4.  Write the formula for *Min-Max scaling*. Explain each term in the formula. (5 marks)
+5.  Write the formula for *Robust scaling*. Explain each term, and why it's considered robust. (5 marks)
+6.  What is the formula for normalizer in data transformation. (3 marks)
+7. What is Discretization? Mention its method.(5 marks)
+
+# 6. Data Cleaning in Python (Practical)
+
+1.  Using Python's Pandas library, show how to replace specific incorrect string values (typos) in a DataFrame column named `'column_name'` with their correct counterparts.  Provide a code example.  (Assume `mutible` should be `immutable`, and `erro` should be `error`.) (3 marks)
+2.  Show how to use scikit-learn's `SimpleImputer` to impute missing values in a DataFrame column named `'column_name'` using the *mean* strategy. Provide a complete code example. (3 marks)
+3.  Provide the Pandas code to remove duplicate rows from a DataFrame named `df`. (3 marks)
+4. How to remove rows having missing values using Pandas? (3 marks)
+5.  Show how to use the `fillna()` method in Pandas to replace missing values in the `'Age'` column of a DataFrame with the *mean* age. (3 marks)
+6.  Provide Python code (using `scipy.stats` and NumPy) to remove outliers from a DataFrame's `'Age'` column based on the Z-score.  Keep only rows where the Z-score is less than 3. (5 marks)
+
+# 7. Data Reduction
+
+1.  What is dimensionality reduction, and what are its benefits? (Mention at least three benefits). (5 marks)
+2. Briefly describe Principal Component Analysis (PCA). What is its main goal? (5 marks)
+3. What are the two types of numerosity reduction?(3 marks)
+4. Differentiate between lossy and lossless data compression. (3 marks)
 
 module
 
+# Data Preprocessing
 
+We're diving into *data preprocessing*, that crucial step before you can do any cool analysis. It's all about handling missing values, noisy data (stuff with errors), and those pesky *outliers* (values that are way out there, deviating a *lot* from the center). We also integrate (combine), transform (fix formats, units), and reduce data (getting just what we need).
 
-# Exploratory Data Analysis (EDA)
+Why bother? Because real-world data is a mess! It's:
 
-It is the process of *examining* data to *gain insights* and *understanding*. It can be done either by *statistical* or *graphical* methods. Think of it like being a data detective!
+*   **Incomplete:** Missing stuff.
+*   **Noisy:** Full of errors and outliers.
+*   **Inconsistent:** Duplicates, different formats... you name it.
+*   **Redundant:** Contains unnecessary, repeated attributes.
 
-*   **Purpose:**
-    *   *Summarize* main characteristics of datasets (get the gist!).
-    *   *Identify problems* within the data (spot the weird stuff).
-    *   Determine data *readiness* for analysis (is it good to go?).
-    *   *Inform* data preparation techniques (what cleaning needs to be done?).
-    *   *Influence* the choice of algorithms for training machine learning (ML) models (pick the right tool!).
+### Advantages of Preprocessing (Why We Do This!)
 
-*   **Tools Used in Python:**
-    *   `pandas` (for data manipulation)
-    *   `numPy` (for numerical operations)
-    *   `matplotlib` (for basic plotting)
-    *   `seaborn` (for pretty, statistical plots)
-    *   `plotly` (for interactive visualizations)
+*   **Improved Quality:** Better data, better results!
+*   **Enhanced Model Performance:** Your models will thank you.
+*   **Reduce Complexity:** Less data, faster processing.
+*   **Facilitate Model Interpretability:** Makes it easier to understand what's going on and get better predictions.
 
-*   **Objectives:**
-    *   Detection of *mistakes* in the data (typos, errors, etc.).
-    *   Checking of *assumptions* about the data (is it normal?).
-    *   Preliminary *selection* of appropriate models (what might work?).
-    *   Determining *relationships* among explanatory variables (what goes together?).
-    *   Assessing the *direction* and *rough size* of relationships between explanatory and outcome variables (what affects what?).
+## Data Cleaning
 
-*   **Techniques:**
-    *   Work by selectively *highlighting* certain aspects of the data while *hiding* others to reveal patterns and insights.  It's like shining a light on different parts of the data.
+This is where we transform raw data into a usable format. We:
 
-## Types of EDA
+*   **Handle Missing Values:** Fill 'em in or get rid of 'em (carefully!).
+*   **Correct Errors:** Fix those typos and mistakes.
+*   **Remove Duplicates:** Get rid of the repeats.
+*   **Type Conversion:** Make sure everything is the right data type.
 
-*   **Two-way Cross-Classification:** This is just a fancy way of saying we can categorize EDA methods in two ways:
+We pick the right technique based on what the data looks like. The goal? *Accurate, consistent, and reliable* data for analysis.
 
-    *   **Graphical vs. Non-graphical:**
-        *   **Non-graphical:** Involve calculating *summary statistics* (numbers that describe the data).
-        *   **Graphical:** Summarize data *visually* using diagrams or pictures (much easier to understand!).
+### Dealing with missing values
+* **Ignore the tuple** Not good, it will cause data loss.
+* **Fill Manually** time consuming.
+* **Global Constant** All missing values are replaced with a constant. But can be misleading.
+* **Use mean or median.**
+* **Predict most probale value** Effective, but complex
 
-    *   **Univariate vs. Multivariate (usually Bivariate):**
-        *   **Univariate:** Analyze a *single* variable at a time (look at one thing).
-        *   **Multivariate:** Analyze *multiple* variables simultaneously, often focusing on the relationship between *two* variables (bivariate) (see how things relate).
+### Noisy Data
 
-### Univariate Non-Graphical
+* Definition: random error or variance.
 
-*   Understanding the underlying *distribution* of a **single variable** and making inferences about the population based on a sample.  Also includes *outlier detection* (finding the weird data points).
+### Dealing with Noisy Data
 
-*   **Categorical Data:** (like colors, types of fruit) Analysis centers on the *range* of values and their *frequencies* (how often each value appears).
+*   **Binning:** Sorting into bins.
+*   **Regression:** Fit to a curve.
+*   **Clustering:** Find the outliers.
+* **Combine human-computer power.**
 
-*   **Quantitative Data:** (numbers!)
-    *   Preliminary assessments of the population distribution are made using the sample data.
-    *   Characteristics inferred include:
-        *   **Center:** Measures like *mean*, *median*, and *mode*.  Mean is most common, but the median is preferred for *skewed* distributions or when *outliers* are a concern.
-        *   **Spread:** Measures like *variance*, *standard deviation*, and *interquartile range (IQR)*.  Spread indicates how far data values are likely to be from the center.
-        *   **Modality:** *Number of peaks* in the distribution (unimodal = one peak, bimodal = two peaks, etc.).
-        *   **Shape:** Overall form of the distribution (symmetric, skewed, etc.).
-        *   **Outliers:** *Extreme values* that deviate significantly from the rest of the data.
-    *   **Skewness:** Measure of *asymmetry* in the distribution.
-    *   **Kurtosis:** Measure of the *"peakedness"* of the distribution relative to a normal (Gaussian) distribution.
+### Data cleaning as a process
 
-### Multivariate Non-Graphical Analysis
+1. **Detect discrepancy:** Detect problem using domain knowledge.
 
-Analyzing *multiple* variables *without* using graphs.
+   *   Metadata
+   *   Overloading
+   *   Rules
+   *   Tools
+2.  **Transform Data:** Correct detected problems
+    * ETL
+    *  Scripts
 
-#### Methods:
+## Noise Identification
 
-*   **Cross-Tabulation (Contingency Tables):**  For categorical variables. Shows how many data points fall into each combination of categories.
-*   **Correlation Matrix:** Shows the *relationship strength* between multiple *numeric* variables (how much they change together).
-*  **Covariance:** Similar to correlation but not standardized.
-*   **Multivariate Regression:** Examines how multiple *independent* variables affect a *dependent* variable (more advanced).
-*   **Factor Analysis:** Identifies *underlying relationships* among variables (grouping variables).
-*   **Principal Component Analysis (PCA):** *Reduces dimensionality* while preserving essential information (simplifying complex data).
+*   **Visualizations:** Use graphs (like boxplots!) to see anomalies.
+*   **Z-Score:** How far is a value from the mean? Big Z-score = potential outlier!
 
-### Univariate Graphical Analysis
+### Outlier Detection Methods:
 
-This involves analyzing a *single* variable using *visual representations* to understand its distribution, central tendency, and spread.
+*   **Statistical Methods:** Z-score, Standard Deviation.  If it's more than 3 standard deviations away, it's probably an outlier.
+*   **Interquartile Range (IQR):** Box plots!  Anything outside the "whiskers" (Q1 - 1.5\*IQR or Q3 + 1.5\*IQR) is an outlier.  It's *robust* (not easily fooled by extreme values).
+*   **Isolation Forest:**  This fancy algorithm isolates outliers – they're easier to "separate" from the rest.
+*   **DBSCAN:**  Finds points in low-density areas – those are your outliers. Good when outliers aren't defined by overall stats, but by how "lonely" they are.
 
-#### Key Graphical Techniques:
+## Data Integration
 
-*   **Histogram:** Shows the *frequency distribution* of a variable (how often each value or range of values occurs).
-*   **Box Plot:** Displays the *median*, *quartiles*, and *outliers* (great for spotting weird data).
-* **Quantile Plot:**  Shows the quantiles of a distribution.
-* **Stem-and-leaf plots**
+Combining data from different places (databases, files, etc.) into one big, happy dataset. We also do *data transformation* here, because different sources might have different formats and units.
+### Challenges:
+* **Identify:** Matching identical entities across different sources.
+* **Redundancy:** Find and removing duplicate attributes.
+* **Conflict:** Resolving differences in data representations.
+* **Schema:** Matching attributes of various structures.
+* **Tuple Duplication**
 
-### Multivariate Graphical Analysis
+## Data Transformation
 
-This involves visualizing the *relationships* between *two or more* variables using graphs.
+Fixing formats and units during integration. A key part is *standardization* and *normalization*.
 
-#### Key Graphical Techniques:
+### Standardization and Normalization
 
-*   **Scatter Plot:** Shows the *relationship* between *two numeric* variables (dots on a graph).
-*   **Heatmap:** Displays *correlations* between multiple variables using *colors* (like a weather map for data!).
-*   **Bubble Chart:** Similar to a scatter plot but with an added dimension (size of bubbles represents a *third* variable).
-*  **Conditional Plots:** Show how a variable changes across different groups (e.g. boxplot for different categories).
-*   **Scatter Plot Matrix/Pair Plot:** Shows scatter plots for *all pairs* of variables in a dataset.
+We're converting units to a new dimension, within a specific range, using the mean and standard deviation. Think of it like scaling everything to be between 0 and 1, no matter how big or small the original values were.
 
----
+#### Standard Scaling / Z-Score:
 
-## Methods of EDA
-
-EDA primarily involves:
-
-1.  **Descriptive Statistics** – *Numerical* summaries of data (numbers!).
-2.  **Data Visualization** – *Graphical* representations to identify trends and relationships (pictures!).
-
-### Common Visualization Techniques:
-
--   **Histograms** – Show data distribution (frequency of values).
--   **Boxplots** – Display quartiles and detect outliers (spot the weirdos!).
--   **Scatter Plots** – Explore relationships between two variables (dots!).
--   **Heatmaps** – Represent correlations between variables (colored squares!).
--   **Bubble Charts** - Scatter plots with a third dimension (bubble size).
--   **Line Graphs** - Show trends over time.
--   **Pie Charts** - Show proportions of categories.
--   **Area Charts** - Like line graphs, but filled in.
--  **Pair Plots** – show relationships between every pair of variables.
--   **Quantile plots**
--   **Quantile-Quantile plots**
--   **Icon based plots**
--   **Hierarchical plot**
-
----
-
-## Descriptive Statistics
-
-Descriptive statistics *summarize* data using measures of *central tendency*, *dispersion*, and *shape*.
-
-### Measures of Central Tendency
-
-These describe the *"center"* of the data distribution:
-
-#### Mean (Arithmetic Average):
-The sum of all values divided by the number of values.
-
-$$
-\mu = \frac{1}{N} \sum_{i=1}^{N} x_i
-$$
-
-#### Weighted Mean:
-A mean where each value has a different "weight" (importance).
-
-#### Median
--   *Middle value* when the data is sorted.  Good for skewed data!
--   If **𝑛** is odd:
-    $$
-    \text{M} = x_{\frac{n+1}{2}}
-    $$
--   If **𝑛** is even:
-    $$
-    \text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
-    $$
-
-#### Mode
--   Most *frequently occurring* value in a dataset.  Can have more than one!
-
-#### Midrange:
-  Average of min and max.
-
-### Measures of Dispersion
-
-Dispersion quantifies how *spread out* the data is.
-
-#### Range
-$$
-\text{Range} = \max(x) - \min(x)
-$$
-
-#### Variance (Spread of Data):
--   **Population Variance (𝜎²):**
-    $$
-    \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2
-    $$
--   **Sample Variance (𝑠²):**  Uses (n-1) to get an unbiased estimate.
-    $$
-    s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
-    $$
-
-#### Standard Deviation (Average Deviation from Mean):
--   **Population Standard Deviation (𝜎):**
-    $$
-    \sigma = \sqrt{\sigma^2}
-    $$
--   **Sample Standard Deviation (𝑠):**
-    $$
-    s = \sqrt{s^2}
-    $$
-#### Mean Absolute Deviation
-The average distance from the mean
-
-#### Interquartile Range (IQR)
-$$
-\text{IQR} = Q_3 - Q_1
-$$
--   **Q1**: 25th percentile (first quartile).
--   **Q3**: 75th percentile (third quartile).
--   IQR helps detect outliers (more robust than the range).
-
-#### Five-Number Summary:
-    Min, Q1, Median, Q3, Max.  A quick summary of the distribution.
-
----
-
-### Skewness and Kurtosis
-
-These describe the *shape* of the data distribution.
-
-#### Skewness (Measure of Asymmetry)
-$$
-\text{Skewness} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^3
-$$
-Here ```s``` is Standard devaition
-
--   **Positive Skew** (Right-Skewed): Tail extends to the *right*. (mode < median < mean)
--   **Negative Skew** (Left-Skewed): Tail extends to the *left*. (mean < median < mode)
--   **Zero Skew**: *Symmetrical* distribution. (mean ≈ median ≈ mode)
-
-#### Kurtosis (Measure of Tailedness)
-
-$$
-\text{Kurtosis} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^4
-$$
-
--   **Excess Kurtosis:**
-    $$
-    \text{Excess Kurtosis} = \text{Kurtosis} - 3
-    $$
-    -   **Mesokurtic (≈ 0):** *Normal* distribution.
-    -   **Leptokurtic (> 0):** *Heavy tails* (more outliers).
-    -   **Platykurtic (< 0):** *Light tails* (fewer outliers).
-
-## Introduction to Python Libraries
-
-Let's imagine some data:
-
-<table>
-    <tr>
-            <th>Name</th>
-            <th>Age</th>
-            <th>Salary</th>
-    </tr>
-    <tr>
-            <td>Alice</td>
-            <td>24</td>
-            <td>50,000</td>
-    </tr>
-    <tr>
-            <td>Bob</td>
-            <td>27</td>
-            <td>60,000</td>
-    </tr>
-    <tr>
-            <td>Charlie</td>
-            <td>22</td>
-            <td>55,000</td>
-    </tr>
-    <tr>
-            <td>David</td>
-            <td>32</td>
-            <td>70,000</td>
-    </tr>
-    <tr>
-            <td>Eve</td>
-            <td>29</td>
-            <td>65,000</td>
-    </tr>
-</table>
-
-In Python, we can represent this using *dictionaries*:
-
-```python
-data = {
-    "name": ["Alice","Bob","Charlie","David","Eve"],
-    "age": [24,27,22,32,29],
-    "salary": [50000,60000,50000,30000,65000]
-}
+```
+x_i' = (x_i - μ) / σ
 ```
 
-We use Python libraries like:
+*   `x_i'` is the new, standardized value.
+*   `x_i` is the original value.
+*   `μ` is the mean.
+*   `σ` is the standard deviation.
 
-1.  `pandas`
-2.  `matplotlib`
-3.  `seaborn`
+#### Min-Max Scaling:
 
-To work on the data, first by converting it into a ***data frame*** using `pandas`:
-
-```python
-import pandas as pd
-df = pd.DataFrame(data)
+```
+x_i' = (x_i - x_min) / (x_max - x_min)
 ```
 
-### Data Frame
+*   `x_i'` is the scaled value.
+*   `x_min` and `x_max` are the minimum and maximum values.
 
-It is a *2D data structure* in Python with *rows* and *columns* (like a spreadsheet).
+#### Robust Scaling (Good for Outliers!):
 
-#### Features
-
-*   Two Dimensional (rows and columns)
-*   Labeled Axes (column names, row indices)
-*   Flexible and Powerful (lots of built-in functions)
-
-#### Finding Measures using DataFrame
-
-Since a DataFrame is built on dictionaries, you can find measures like this:
-
-```python
-meanAge = df["age"].mean()  # Calculate the mean of the 'age' column
-medianAge = df["age"].median() # Calculate the median of the 'age' column
+```
+x_i' = (x_i - Q1) / (Q3 - Q1)
 ```
 
-Similarly, we have functions for `mode()`, `var()`, `std()`, etc.
+*   `Q1` and `Q3` are the quartiles (like in a box plot).
 
-### Visualizations
+#### Normalizer:
 
-For graphical representation, we use `matplotlib` and `seaborn`.
-
-*   `matplotlib` is used to *show the screen* and set the *screen size* (the foundation).
-*   `seaborn` is used to *plot the type of graph*, like a histogram or boxplot (the pretty stuff).
-
-Example:
-
-```python
-# Import matplotlib and seaborn (assuming we already have pandas as pd)
-
-import matplotlib.pyplot as plt
-import seaborn as sns
-
-# Create the screen using figure() from matplotlib
-plt.figure(figsize=(8, 6))  # Specify width and height (optional)
-
-# Plot Histogram using seaborn
-sns.histplot(data=df, x="age", bins=5)  # x is the column, bins is the number of bars
-
-# Add a title and show the plot
-plt.title("Histogram of Age")
-plt.xlabel("Age") # Add x label
-plt.ylabel("Frequency") # Add y label
-plt.show()
+```
+x_i' = x_i / x
 ```
 
-Similarly, you can create a box plot using `sns.boxplot(data=df, x="age")`.
+*  `x` is square root of sum of all square values.
 
-## Data Visualization (Detailed Examples)
+### Other transformation methods:
+* **Smoothing**
+* **Attribute Construction**
+* **Aggregation**
+* **Discretization:** convert numeric to categorical data.
+   * Binning
+   * Histogram
+   * Clustering
+   * Decision Tree
+   * Correlation
+* **Concept Hierarchy:** Replace with high-level concepts.
 
-Data visualization helps in understanding *trends*, *distributions*, and *relationships* in datasets. It makes the data *talk* to you!
+## Data Cleaning in Python
 
-| Plot Type        | Usage                                      |
-| ---------------- | ------------------------------------------ |
-| Histogram        | Displays frequency distribution             |
-| Box Plot         | Identifies outliers and spread             |
-| Scatter Plot     | Shows relationships between variables    |
-| Pair Plot        | Visualizes multiple variable relationships |
-| Heatmap          | Displays correlation between variables   |
-| Bubble Chart     | Scatter plot with a third dimension       |
-| Line Graph       | Shows trends over time                    |
-| Pie Chart        | Shows proportions of categories          |
-| Area Chart       | Like a line graph, but filled in          |
-| Quantile Plot     | Displays the quantiles of a distribution          |
-| Q-Q Plot     | Compare dataset with a theoretical distribution          |
-|Icon-Based plot     | Use icons to display multi-dimensional data          |
-| Hierarchical plot  | Displays data hierachies
-
-# 1. Histogram
-
--   Displays the *distribution* of *numerical* data.
--   Helps identify *skewness*, *spread*, and *outliers*.
--   Useful in *frequency distribution* analysis.
+### Correcting Typos with `.replace()`:
 
 ```python
-import matplotlib.pyplot as plt
+df['column_name'] = df['column_name'].replace({'mutible': 'immutable', 'erro': 'error'})
+```
+
+### Imputation (Dealing with Missing Values) using scikit-learn:
+
+```python
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(strategy='mean') # Load a mean imputer
+df['column_name'] = imputer.fit_transform(df[['column_name']]) #Replace missing values with mean. Use [['']] for 2D arrays.
+```
+
+### Removing Duplicates:
+
+```python
+df = df.drop_duplicates()
+```
+### Remove rows with missing values.
+
+```python
+df = df.dropna()
+```
+
+### Using `fillna()`:
+
+```python
+df['column_name'].fillna(replace_with, inplace=True)
+# Example: Replace missing 'Age' with the mean age:
+df['Age'].fillna(df['Age'].mean(), inplace=True)
+```
+
+### Removing Outliers using Z-score:
+
+```python
+from scipy import stats
 import numpy as np
 
-# Sample data (normally distributed)
-data = np.random.randn(1000)
-
-# Create histogram
-plt.hist(data, bins=30, color='skyblue', edgecolor='black', alpha=0.7) #alpha is the transparency
-plt.xlabel('Value')
-plt.ylabel('Frequency')
-plt.title('Histogram')
-plt.show()
+z_score = np.abs(stats.z_score(df[['Age']])) # Z-scores for 'Age'
+df_cleaned = df[(z_score < 3).all(axis=1)]  # Keep rows where ALL Z-scores are less than 3
 ```
 
--   Tall bars indicate *frequent* values.
--   Skewness can be detected from the *shape*.
-
-# 2. Box Plot (Whisker Plot)
-
--   Shows *median*, *quartiles*, and *outliers*.
--   Helps *compare* data distributions.
--   Used in *outlier detection*.
-
-```python
-import seaborn as sns
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Sample data
-data = np.random.randn(100)
-
-# Create box plot
-sns.boxplot(data=data, color='lightblue')
-plt.title('Box Plot')
-plt.show()
-```
-
--   Box = *Interquartile Range (IQR)* (middle 50% of the data).
--   Whiskers = Range *excluding outliers*.
--   Dots = *Outliers* (usually defined as 1.5 * IQR beyond the box).
-
-# 3. Quantile-Quantile (Q-Q) Plot
-
--   Compares a dataset against a *theoretical distribution* (often the normal distribution).
--   Used to check the *normality assumption*.
-
-```python
-import scipy.stats as stats
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Generate normally distributed data
-data = np.random.normal(0, 1, 1000)
-
-# Q-Q plot
-stats.probplot(data, dist="norm", plot=plt)
-plt.title('Q-Q Plot')
-plt.show()
-```
-
--   *Straight diagonal line* → Data follows the normal distribution.
--   *Curved pattern* → Data is *skewed* or has *heavy tails* (not normal).
-
-# 4. Scatter Plot
-
--   Shows *relationship* between *two numerical* variables.
--   Used in *correlation analysis*.
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Sample data
-x = np.random.rand(100)
-y = x + np.random.normal(0, 0.1, 100) # Add some noise
-
-plt.scatter(x, y, color='blue', alpha=0.5)
-plt.xlabel('X axis')
-plt.ylabel('Y axis')
-plt.title('Scatter Plot')
-plt.show()
-```
-
--   *Upward trend* → *Positive* correlation (as x increases, y increases).
--   *Downward trend* → *Negative* correlation (as x increases, y decreases).
--   *No pattern* → *No correlation*.
-
-# 5. Heatmap
-
--   Displays *correlation* between variables (using colors).
--   Used in *feature selection* (finding important variables).
-
-```python
-import seaborn as sns
-import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Sample dataset (create a DataFrame)
-data = pd.DataFrame(np.random.rand(10, 10), columns=[f'Var{i}' for i in range(10)])
-
-# Create heatmap
-sns.heatmap(data.corr(), annot=True, cmap='coolwarm') # annot shows the numbers, cmap is the color scheme
-plt.title('Heatmap')
-plt.show()
-```
-
--   Dark red/blue → *Strong* correlation.
--   Near zero → *No* correlation.
-
-# 6. Bubble Chart
-
--   Similar to a scatter plot, but *size* represents a *third* variable.
--   Used in business and economic analysis.
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-# Sample data
-x = np.random.rand(50)
-y = np.random.rand(50)
-size = np.random.rand(50) * 1000 # Sizes of the bubbles
-
-plt.scatter(x, y, s=size, alpha=0.5, color='purple') # s is the size
-plt.xlabel('X axis')
-plt.ylabel('Y axis')
-plt.title('Bubble Chart')
-plt.show()
-```
-
--   *Larger bubbles* represent *higher values* of the third variable.
-
-# 7. Bar Chart
-
--   Represents *categorical* data.
--   Used for *comparison*.
-
-```python
-import matplotlib.pyplot as plt
-
-categories = ['A', 'B', 'C', 'D']
-values = [10, 20, 15, 25]
-
-plt.bar(categories, values, color='orange')
-plt.xlabel('Category')
-plt.ylabel('Value')
-plt.title('Bar Chart')
-plt.show()
-```
-
--   *Taller bars* indicate *higher values*.
-
-# 8. Distribution Plot
-
--   Displays the *probability distribution* of a dataset.
--   Used in statistical analysis (often combines a histogram with a KDE).
-
-```python
-import seaborn as sns
-import numpy as np
-
-data = np.random.normal(0, 1, 1000)
-
-sns.histplot(data, kde=True, color='green') # kde adds the smooth curve
-plt.title('Distribution Plot')
-plt.show()
-```
-
--   Smooth curve (KDE - Kernel Density Estimate) represents the *probability density function (PDF)*.
-
-# 9. Pair Plot
-
--   Shows *scatter plots* between *multiple variables*.
--   Used in exploring *feature relationships*.
-
-```python
-import seaborn as sns
-
-# Load a sample dataset (iris dataset)
-df = sns.load_dataset('iris')
-
-# Pair plot
-sns.pairplot(df, hue='species') # hue colors by category
-plt.show()
-```
-
--   Each subplot shows a scatter plot between *two features*.  The diagonal shows the distribution of each feature.
-
-# 10. Line Graph
-
--   Represents *trends over time* (or another continuous variable).
--   Used in *time series analysis*.
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.arange(0, 11)
-y = np.sin(x)
-
-plt.plot(x, y, marker='o', linestyle='-', color='blue') # marker adds points, linestyle connects them
-plt.xlabel('X axis')
-plt.ylabel('Y axis')
-plt.title('Line Graph')
-plt.show()
-```
-
--   *Upward trend* → *Increasing* trend.
--   *Downward trend* → *Decreasing* trend.
-
-# 11. Pie Chart
-
--   Represents *proportions* of *categorical* data.
--   Used in *market share analysis*.
-
-```python
-import matplotlib.pyplot as plt
-
-labels = ['A', 'B', 'C', 'D']
-sizes = [20, 30, 25, 25]
-
-plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=['red', 'green', 'blue', 'yellow']) # autopct shows percentages
-plt.title('Pie Chart')
-plt.show()
-```
-
--   *Larger slices* represent *higher proportions*.  (Often, it's better to use a bar chart instead).
-
-# 12. Area Chart
-
--   Similar to a line graph, but with a *filled area* below the line.
--   Used to show *cumulative trends*.
-
-```python
-import matplotlib.pyplot as plt
-import numpy as np
-
-x = np.arange(0, 11)
-y = np.sin(x)
-
-plt.fill_between(x, y, color='blue', alpha=0.5) # fill_between fills the area
-plt.xlabel('X-axis')
-plt.ylabel('Y-axis')
-plt.title('Area Chart')
-plt.show()
-```
-
-- Used for stacked visualizations to show *total value accumulation*.
-
-# 13. Quantile Plot
-
-```
-import numpy as np
-import matplotlib.pyplot as plt
-import statsmodels.api as sm
-
-data = np.random.normal(0, 1, 1000)
-sm.qqplot(data, line='45')
-plt.show()
-
-```
-- Displays the quantiles.
-
-# 14. Hierarchical plot
-   -Treemap
-
-```
-!pip install squarify
-import matplotlib.pyplot as plt
-import squarify
-import pandas as pd
-
-data = pd.DataFrame({'values': [1, 2, 3], 'labels': ['A', 'B', 'C']})
-squarify.plot(data['values'], label=data['labels'], alpha=0.7)
-plt.show()
-
-```
-- To show hierachical data.
-
-# 15. Icon based plots
-```python
-!pip install scikit-plot
-import scikitplot as skplt
-import numpy as np
-import matplotlib.pyplot as plt
-
-data = np.random.rand(10, 5)
-skplt.visualization.plot_pca_2d_projection(pca, data, target_values)
-plt.show()
-
-```
-
-- To show the PCA projection.
+## Data Reduction
+
+### Dimensionality Reduction: Less is More!
+
+We're reducing the number of *features* (columns) while keeping the important stuff.
+
+*   **Benefits:**  Gets rid of noise, speeds things up, helps with visualization, and prevents *overfitting* (when your model learns the training data too well and doesn't generalize).
+
+#### Principal Component Analysis (PCA): The King of Dimensionality Reduction
+
+*   **What it does:**  Creates new features called *principal components* that capture the most *variance* (spread) in the data.
+*   **Process:**
+    1.  *Standardize* the data (mean = 0, variance = 1).
+    2.  Find the *principal components* (directions where the data varies the most).
+    3.  Project the data onto these components – boom, fewer dimensions!
+*   **Key Idea:**  Keep the important patterns, throw away the noise.
+*   **Use Case:**  High-dimensional data with correlations, good for machine learning and visualization.
+
+### Numerosity reduction
+* Parametric
+ * Regression
+ * Log-linear
+* Non-Parametric
+  * Histograms
+  * Clustering
+  * Sampling
+  * Data cube aggregation
+### Data Compression
+* Lossless
+* Lossy
+
+That's data preprocessing in a nutshell!  It's a bit of work, but it's *essential* for getting good results from your data analysis. Remember, garbage in, garbage out!
