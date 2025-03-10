@@ -57,492 +57,698 @@ every subheading is a topic ofc give more than two topics
 
 questions
 
-1.  Give any two characteristics of "Big Data". (3 marks)
-1.   Why is EDA a significant component of Data Science? (3 marks)
-2.   What is regression analysis? (3 marks)
-4.  Summarize the philosophy of EDA. (5 marks)
-5.  Discuss ethical issues in data science. (5 marks)
+# 1. Exploratory Data Analysis (EDA)
 
+1.  Why is EDA a significant component of Data Science? (3 marks)
+2.  Summarize the philosophy of EDA. (5 marks)
+
+# 2. Types of EDA
+
+1.  Differentiate the Graphical vs. Non-graphical methods in EDA (In context of two way cross classification) (Implied - combining information)
+2.  What is the difference between Univariate and Multivariate EDA? (Implied - Combining information)
+
+# 3. Descriptive Statistics
+
+1. What are Measures of Central Tendency. List them? (Implied 3 marks)
+2.  What are measures of dispersion? List them (3 Marks)
+3. Explain skewness and give it's formula. (implied)
+4. Expalin kurtosis and give it's formula (implied)
+
+# 4. Python Libraries for EDA
+
+1.  List any four data visualization tools. (From the "Tools Used in Python" section - this is borderline, as it's a list, but the tools are directly named in the text) (3 marks)
+2.  What is a dataframe in python? (3 marks)
+3. Write short note on Dataframe Features? (implied 3 marks)
+
+# 5. Data Visualization
+
+1.  List any four data visualization tools. (3 marks)
+2. Explain Box Plot. (Implied - it's defined in the text)
+3. Explain Scatter Plot. (Implied - defined)
+4. Explain Heatmap. (Implied - defined)
+5. What is a Bubble Chart. (Implied- Defined)
 
 
 module
 
-#  Data
 
-##  Data
-Any  information  that  is  stored  in  the  digital  format  is  called  **Data**
 
-##  BigData
+# Exploratory Data Analysis (EDA)
 
-*  Data  generated  from  various  sources  is  huge  in  size  and  this  is  termed  as  **BigData**
-*  It  is  used  to  derive  business  decision  by  analyzing  it.
-*  Based  on  how  the  data  is  stored,  organized  and  analyzed  data  is  divided  into  three:  structured,  semi-structured  and  unstructured  data.
+It is the process of *examining* data to *gain insights* and *understanding*. It can be done either by *statistical* or *graphical* methods. Think of it like being a data detective!
 
-###  Structured  data
+*   **Purpose:**
+    *   *Summarize* main characteristics of datasets (get the gist!).
+    *   *Identify problems* within the data (spot the weird stuff).
+    *   Determine data *readiness* for analysis (is it good to go?).
+    *   *Inform* data preparation techniques (what cleaning needs to be done?).
+    *   *Influence* the choice of algorithms for training machine learning (ML) models (pick the right tool!).
 
-*  It  refers  to  data  in  tabular  form  (i.e  with  rows  and  columns)
-*  DataBases  that  hold  structured  data  is  called  relational  databases
-*  The  term  relation  means  table
-*  In  structured  tables,  all  rows  have  same  set  of  columns
-*  SQL  is  the  programming  language  used  to  work  with  RDbMS  (  relational  database  management  system)
+*   **Tools Used in Python:**
+    *   `pandas` (for data manipulation)
+    *   `numPy` (for numerical operations)
+    *   `matplotlib` (for basic plotting)
+    *   `seaborn` (for pretty, statistical plots)
+    *   `plotly` (for interactive visualizations)
+
+*   **Objectives:**
+    *   Detection of *mistakes* in the data (typos, errors, etc.).
+    *   Checking of *assumptions* about the data (is it normal?).
+    *   Preliminary *selection* of appropriate models (what might work?).
+    *   Determining *relationships* among explanatory variables (what goes together?).
+    *   Assessing the *direction* and *rough size* of relationships between explanatory and outcome variables (what affects what?).
+
+*   **Techniques:**
+    *   Work by selectively *highlighting* certain aspects of the data while *hiding* others to reveal patterns and insights.  It's like shining a light on different parts of the data.
+
+## Types of EDA
+
+*   **Two-way Cross-Classification:** This is just a fancy way of saying we can categorize EDA methods in two ways:
+
+    *   **Graphical vs. Non-graphical:**
+        *   **Non-graphical:** Involve calculating *summary statistics* (numbers that describe the data).
+        *   **Graphical:** Summarize data *visually* using diagrams or pictures (much easier to understand!).
+
+    *   **Univariate vs. Multivariate (usually Bivariate):**
+        *   **Univariate:** Analyze a *single* variable at a time (look at one thing).
+        *   **Multivariate:** Analyze *multiple* variables simultaneously, often focusing on the relationship between *two* variables (bivariate) (see how things relate).
+
+### Univariate Non-Graphical
+
+*   Understanding the underlying *distribution* of a **single variable** and making inferences about the population based on a sample.  Also includes *outlier detection* (finding the weird data points).
+
+*   **Categorical Data:** (like colors, types of fruit) Analysis centers on the *range* of values and their *frequencies* (how often each value appears).
+
+*   **Quantitative Data:** (numbers!)
+    *   Preliminary assessments of the population distribution are made using the sample data.
+    *   Characteristics inferred include:
+        *   **Center:** Measures like *mean*, *median*, and *mode*.  Mean is most common, but the median is preferred for *skewed* distributions or when *outliers* are a concern.
+        *   **Spread:** Measures like *variance*, *standard deviation*, and *interquartile range (IQR)*.  Spread indicates how far data values are likely to be from the center.
+        *   **Modality:** *Number of peaks* in the distribution (unimodal = one peak, bimodal = two peaks, etc.).
+        *   **Shape:** Overall form of the distribution (symmetric, skewed, etc.).
+        *   **Outliers:** *Extreme values* that deviate significantly from the rest of the data.
+    *   **Skewness:** Measure of *asymmetry* in the distribution.
+    *   **Kurtosis:** Measure of the *"peakedness"* of the distribution relative to a normal (Gaussian) distribution.
+
+### Multivariate Non-Graphical Analysis
+
+Analyzing *multiple* variables *without* using graphs.
+
+#### Methods:
+
+*   **Cross-Tabulation (Contingency Tables):**  For categorical variables. Shows how many data points fall into each combination of categories.
+*   **Correlation Matrix:** Shows the *relationship strength* between multiple *numeric* variables (how much they change together).
+*  **Covariance:** Similar to correlation but not standardized.
+*   **Multivariate Regression:** Examines how multiple *independent* variables affect a *dependent* variable (more advanced).
+*   **Factor Analysis:** Identifies *underlying relationships* among variables (grouping variables).
+*   **Principal Component Analysis (PCA):** *Reduces dimensionality* while preserving essential information (simplifying complex data).
+
+### Univariate Graphical Analysis
+
+This involves analyzing a *single* variable using *visual representations* to understand its distribution, central tendency, and spread.
+
+#### Key Graphical Techniques:
+
+*   **Histogram:** Shows the *frequency distribution* of a variable (how often each value or range of values occurs).
+*   **Box Plot:** Displays the *median*, *quartiles*, and *outliers* (great for spotting weird data).
+* **Quantile Plot:**  Shows the quantiles of a distribution.
+* **Stem-and-leaf plots**
+
+### Multivariate Graphical Analysis
+
+This involves visualizing the *relationships* between *two or more* variables using graphs.
+
+#### Key Graphical Techniques:
+
+*   **Scatter Plot:** Shows the *relationship* between *two numeric* variables (dots on a graph).
+*   **Heatmap:** Displays *correlations* between multiple variables using *colors* (like a weather map for data!).
+*   **Bubble Chart:** Similar to a scatter plot but with an added dimension (size of bubbles represents a *third* variable).
+*  **Conditional Plots:** Show how a variable changes across different groups (e.g. boxplot for different categories).
+*   **Scatter Plot Matrix/Pair Plot:** Shows scatter plots for *all pairs* of variables in a dataset.
+
+---
+
+## Methods of EDA
+
+EDA primarily involves:
+
+1.  **Descriptive Statistics** – *Numerical* summaries of data (numbers!).
+2.  **Data Visualization** – *Graphical* representations to identify trends and relationships (pictures!).
+
+### Common Visualization Techniques:
+
+-   **Histograms** – Show data distribution (frequency of values).
+-   **Boxplots** – Display quartiles and detect outliers (spot the weirdos!).
+-   **Scatter Plots** – Explore relationships between two variables (dots!).
+-   **Heatmaps** – Represent correlations between variables (colored squares!).
+-   **Bubble Charts** - Scatter plots with a third dimension (bubble size).
+-   **Line Graphs** - Show trends over time.
+-   **Pie Charts** - Show proportions of categories.
+-   **Area Charts** - Like line graphs, but filled in.
+-  **Pair Plots** – show relationships between every pair of variables.
+-   **Quantile plots**
+-   **Quantile-Quantile plots**
+-   **Icon based plots**
+-   **Hierarchical plot**
+
+---
+
+## Descriptive Statistics
+
+Descriptive statistics *summarize* data using measures of *central tendency*, *dispersion*, and *shape*.
+
+### Measures of Central Tendency
+
+These describe the *"center"* of the data distribution:
+
+#### Mean (Arithmetic Average):
+The sum of all values divided by the number of values.
+
+$$
+\mu = \frac{1}{N} \sum_{i=1}^{N} x_i
+$$
+
+#### Weighted Mean:
+A mean where each value has a different "weight" (importance).
+
+#### Median
+-   *Middle value* when the data is sorted.  Good for skewed data!
+-   If **𝑛** is odd:
+    $$
+    \text{M} = x_{\frac{n+1}{2}}
+    $$
+-   If **𝑛** is even:
+    $$
+    \text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+    $$
+
+#### Mode
+-   Most *frequently occurring* value in a dataset.  Can have more than one!
+
+#### Midrange:
+  Average of min and max.
+
+### Measures of Dispersion
+
+Dispersion quantifies how *spread out* the data is.
+
+#### Range
+$$
+\text{Range} = \max(x) - \min(x)
+$$
+
+#### Variance (Spread of Data):
+-   **Population Variance (𝜎²):**
+    $$
+    \sigma^2 = \frac{1}{N} \sum_{i=1}^{N} (x_i - \mu)^2
+    $$
+-   **Sample Variance (𝑠²):**  Uses (n-1) to get an unbiased estimate.
+    $$
+    s^2 = \frac{1}{n-1} \sum_{i=1}^{n} (x_i - \bar{x})^2
+    $$
+
+#### Standard Deviation (Average Deviation from Mean):
+-   **Population Standard Deviation (𝜎):**
+    $$
+    \sigma = \sqrt{\sigma^2}
+    $$
+-   **Sample Standard Deviation (𝑠):**
+    $$
+    s = \sqrt{s^2}
+    $$
+#### Mean Absolute Deviation
+The average distance from the mean
+
+#### Interquartile Range (IQR)
+$$
+\text{IQR} = Q_3 - Q_1
+$$
+-   **Q1**: 25th percentile (first quartile).
+-   **Q3**: 75th percentile (third quartile).
+-   IQR helps detect outliers (more robust than the range).
+
+#### Five-Number Summary:
+    Min, Q1, Median, Q3, Max.  A quick summary of the distribution.
+
+---
+
+### Skewness and Kurtosis
+
+These describe the *shape* of the data distribution.
+
+#### Skewness (Measure of Asymmetry)
+$$
+\text{Skewness} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^3
+$$
+Here ```s``` is Standard devaition
+
+-   **Positive Skew** (Right-Skewed): Tail extends to the *right*. (mode < median < mean)
+-   **Negative Skew** (Left-Skewed): Tail extends to the *left*. (mean < median < mode)
+-   **Zero Skew**: *Symmetrical* distribution. (mean ≈ median ≈ mode)
+
+#### Kurtosis (Measure of Tailedness)
+
+$$
+\text{Kurtosis} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^4
+$$
+
+-   **Excess Kurtosis:**
+    $$
+    \text{Excess Kurtosis} = \text{Kurtosis} - 3
+    $$
+    -   **Mesokurtic (≈ 0):** *Normal* distribution.
+    -   **Leptokurtic (> 0):** *Heavy tails* (more outliers).
+    -   **Platykurtic (< 0):** *Light tails* (fewer outliers).
+
+## Introduction to Python Libraries
+
+Let's imagine some data:
 
 <table>
-        <tr>
-                <th>Pros</th>
-                <th>Cons</th>
-        </tr>
-        <tr>
-                <td>Require  less  processing  since  it's  easy  to  manage</td>
-                <td>Limited  usability  because  it's  predefined</td>
-        </tr>
-        <tr>
-                <td>Since  it's  an  old  method,  it  supports  several  tools  and  work  with  ML  algorithms</td>
-                <td>Not  very  scalable  or  flexible</td>
-        </tr>
-        <tr>
-                <td>Consistent  and  predictable  format  reduces  errors</td>
-                <td>Difficult  to  modify  schema  once  implemented</td>
-        </tr>
-        <tr>
-                <td>Easier  to  maintain  data  integrity  and  quality</td>
-                <td>May  not  capture  complex  relationships  effectively</td>
-        </tr>
-        <tr>
-                <td>Efficient  querying  and  faster  search  operations</td>
-                <td>Storage  overhead  due  to  fixed  schema  requirements</td>
-        </tr>
+    <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Salary</th>
+    </tr>
+    <tr>
+            <td>Alice</td>
+            <td>24</td>
+            <td>50,000</td>
+    </tr>
+    <tr>
+            <td>Bob</td>
+            <td>27</td>
+            <td>60,000</td>
+    </tr>
+    <tr>
+            <td>Charlie</td>
+            <td>22</td>
+            <td>55,000</td>
+    </tr>
+    <tr>
+            <td>David</td>
+            <td>32</td>
+            <td>70,000</td>
+    </tr>
+    <tr>
+            <td>Eve</td>
+            <td>29</td>
+            <td>65,000</td>
+    </tr>
 </table>
 
-####  Use  Cases  for  Structured  Data
+In Python, we can represent this using *dictionaries*:
 
-*  Business  analytics  and  reporting
-*  Web  development
-*  Data  Science  and  Machine  Learning
-*  Healthcare
-*  Education
-*  Finance
-*  Supply  chain  and  logistics
-*  IoT  and  Smart  Devices
-*  Government  and  public  services
-
-###  Semi-Structured  Data
-
-*  **Semi-structured  data**  is  simply  an  incompletely  structured  data.
-*  HTML,XML,JSON  are  examples  for  semi-structured  data
-
-Example  xml
-```xml
-<person>
-        <name>John  Smith</name>
-        <contact>
-                <email>john@email.com</email>
-                <phone>123-456-7890</phone>
-        </contact>
-        <skills>
-                <skill>Python</skill>
-                <skill>Java</skill>
-        </skills>
-</person>
-```
-Example  json
-```json
-{
-        "person":  {
-                "name":  "John  Smith",
-                "contact":  {
-                        "email":  "john@email.com",
-                        "phone":  "123-456-7890"
-                },
-                "skills":  ["Python",  "Java"]
-        }
+```python
+data = {
+    "name": ["Alice","Bob","Charlie","David","Eve"],
+    "age": [24,27,22,32,29],
+    "salary": [50000,60000,50000,30000,65000]
 }
 ```
 
-<table>
-        <tr>
-                <th>Pros</th>
-                <th>Cons</th>
-        </tr>
-        <tr>
-                <td>Flexible  schema  allows  for  varying  data  structures</td>
-                <td>More  complex  to  query  compared  to  structured  data</td>
-        </tr>
-        <tr>
-                <td>Self-describing  nature  makes  it  easy  to  understand</td>
-                <td>Requires  more  storage  space  due  to  repeated  tags/keys</td>
-        </tr>
-        <tr>
-                <td>Easy  to  modify  without  affecting  entire  dataset</td>
-                <td>Inconsistent  structure  can  lead  to  data  quality  issues</td>
-        </tr>
-        <tr>
-                <td>Better  suited  for  evolving  business  requirements</td>
-                <td>More  processing  overhead  for  data  validation</td>
-        </tr>
-        <tr>
-                <td>Natural  fit  for  web  and  API  integrations</td>
-                <td>Can  be  slower  to  process  than  structured  data</td>
-        </tr>
-</table>
+We use Python libraries like:
 
-####  Use  cases  for  semi-structured  data  
+1.  `pandas`
+2.  `matplotlib`
+3.  `seaborn`
 
-*  Scientific  Research  Applications  
-*  Healthcare  Information  Management  
-*  Business  Intelligence  Analytics  
-*  Web  Technology  Integration  
-*  IoT  Device  Ecosystems  
-*  Document  Management  Systems  
+To work on the data, first by converting it into a ***data frame*** using `pandas`:
 
-###  Unstructured  Data
+```python
+import pandas as pd
+df = pd.DataFrame(data)
+```
 
-*  When  data  is  not  organized  in  a  predefined  manner  it  is  **unstructured**  
-*  Video,  Audio  and  Images  are  example  for  unstructured  data.
+### Data Frame
 
-<table>
-        <tr>
-                <th>Pros</th>
-                <th>Cons</th>
-        </tr>
-        <tr>
-                <td>Can  store  diverse  and  complex  data  types</td>
-                <td>Challenging  to  analyze  without  preprocessing</td>
-        </tr>
-        <tr>
-                <td>Ideal  for  multimedia  content  like  images,  videos,  and  text</td>
-                <td>Requires  specialized  tools  and  algorithms  for  processing</td>
-        </tr>
-        <tr>
-                <td>Supports  natural  data  representation  without  constraints</td>
-                <td>Harder  to  query  and  integrate  compared  to  structured  data</td>
-        </tr>
-        <tr>
-                <td>Facilitates  storage  of  large  volumes  of  varied  data</td>
-                <td>Data  extraction  and  transformation  can  be  time-intensive</td>
-        </tr>
-        <tr>
-                <td>Useful  for  machine  learning  and  deep  learning  applications</td>
-                <td>Higher  storage  and  processing  costs</td>
-        </tr>
-</table>
+It is a *2D data structure* in Python with *rows* and *columns* (like a spreadsheet).
 
+#### Features
 
-####  Use  cases  for  unstructured  data
+*   Two Dimensional (rows and columns)
+*   Labeled Axes (column names, row indices)
+*   Flexible and Powerful (lots of built-in functions)
 
-*  Classification  of  data  like  image  audio  and  video
-*  As  input  predictive  models
-*  Chatbots
+#### Finding Measures using DataFrame
 
-## Data Streams
+Since a DataFrame is built on dictionaries, you can find measures like this:
 
-Data Streams are the typo of information that keeps cotniuesly updated in real time, i.e they keep changing. Unlike regular data like in we can collect then analyse, for data streams we must process it in real-time.
+```python
+meanAge = df["age"].mean()  # Calculate the mean of the 'age' column
+medianAge = df["age"].median() # Calculate the median of the 'age' column
+```
 
-##    Statistical  Data
+Similarly, we have functions for `mode()`, `var()`, `std()`, etc.
 
-Statistical  Data  refers  to  qualitative  facts  that  are,  gathered,  organised  and  analysed  in  a  systematic  way.  Which  are  collected  from  surveys,  experiments,  observations  and  even  from  existing  sources.
+### Visualizations
 
-Statistical  Data  is  divided  into  both  qualitative  and  quantitative  based  on  whether  they  are  measurable  or  not.
+For graphical representation, we use `matplotlib` and `seaborn`.
 
-###  Qualitative  Data
+*   `matplotlib` is used to *show the screen* and set the *screen size* (the foundation).
+*   `seaborn` is used to *plot the type of graph*, like a histogram or boxplot (the pretty stuff).
 
-It  is  also  called  categorical  data  and  it  is  about  things  that  can't  be  measured  in  an  objective  sense.
+Example:
 
-Eg:  Age  Group,  Gender,  Nationality  etc.
+```python
+# Import matplotlib and seaborn (assuming we already have pandas as pd)
 
-They  are  divided  into  nominal  and  ordinal  data  based  on  if  they  are  ordered  units  or  not.
+import matplotlib.pyplot as plt
+import seaborn as sns
 
+# Create the screen using figure() from matplotlib
+plt.figure(figsize=(8, 6))  # Specify width and height (optional)
 
-####  Nominal  Data
+# Plot Histogram using seaborn
+sns.histplot(data=df, x="age", bins=5)  # x is the column, bins is the number of bars
 
-Nominal  Data  is  used  to  label  variables  without  giving  any  quantitaive  value.  But  they  are  represented  in  discrete  units.
+# Add a title and show the plot
+plt.title("Histogram of Age")
+plt.xlabel("Age") # Add x label
+plt.ylabel("Frequency") # Add y label
+plt.show()
+```
 
-Eg:  Gender,  Hair  color,  Nationality  etc.
+Similarly, you can create a box plot using `sns.boxplot(data=df, x="age")`.
 
-Hot  encoding  is  used  to  transform  nominal  data  into  numerical  feature.  The  only  logical  operation  can  be  applied  will  be  equality  or  inequality.
+## Data Visualization (Detailed Examples)
 
-They  can  be  represented  using  frequencies,  percentages,  proportions  and  central  point.
+Data visualization helps in understanding *trends*, *distributions*, and *relationships* in datasets. It makes the data *talk* to you!
 
-Graphically  using  a  pie  chart  or  a  bar  chart.
+| Plot Type        | Usage                                      |
+| ---------------- | ------------------------------------------ |
+| Histogram        | Displays frequency distribution             |
+| Box Plot         | Identifies outliers and spread             |
+| Scatter Plot     | Shows relationships between variables    |
+| Pair Plot        | Visualizes multiple variable relationships |
+| Heatmap          | Displays correlation between variables   |
+| Bubble Chart     | Scatter plot with a third dimension       |
+| Line Graph       | Shows trends over time                    |
+| Pie Chart        | Shows proportions of categories          |
+| Area Chart       | Like a line graph, but filled in          |
+| Quantile Plot     | Displays the quantiles of a distribution          |
+| Q-Q Plot     | Compare dataset with a theoretical distribution          |
+|Icon-Based plot     | Use icons to display multi-dimensional data          |
+| Hierarchical plot  | Displays data hierachies
 
-In  short,  the  units  in  nominal  data  all  have  same  priority  so  order  doesn't  matter.
+# 1. Histogram
 
-####  Ordinal  Data
+-   Displays the *distribution* of *numerical* data.
+-   Helps identify *skewness*, *spread*, and *outliers*.
+-   Useful in *frequency distribution* analysis.
 
-Discrete  ordered  units  with  no  concistancy  between  the  realtive  distance  of  adjacent  categories.
+```python
+import matplotlib.pyplot as plt
+import numpy as np
 
-Examples  are:
+# Sample data (normally distributed)
+data = np.random.randn(1000)
 
-*  Opinion  (agree,  mostly  agree,  neutral,  disagree,  mostly  disagree)
-*  Socio-economic  status
+# Create histogram
+plt.hist(data, bins=30, color='skyblue', edgecolor='black', alpha=0.7) #alpha is the transparency
+plt.xlabel('Value')
+plt.ylabel('Frequency')
+plt.title('Histogram')
+plt.show()
+```
 
-Label  encoding  is  used  to  transform  it  into  a  numerical  feature.  It  supports  all  ways  of  represntation  as  nominal  and  also  median,  made  and  interquartile  range.
+-   Tall bars indicate *frequent* values.
+-   Skewness can be detected from the *shape*.
 
-Visualisation  method  is  same.
+# 2. Box Plot (Whisker Plot)
 
-###  Quantitaive  
+-   Shows *median*, *quartiles*, and *outliers*.
+-   Helps *compare* data distributions.
+-   Used in *outlier detection*.
 
-Quantitative  Data  is  about  quantities  of  things  that  we  can  measure,  Height,  Volume,  Weight  and  Distance  are  examples.
+```python
+import seaborn as sns
+import matplotlib.pyplot as plt
+import numpy as np
 
-They  are  divided  into  discrete  and  continues  and  also  continues  is  further  divided  into  interval  and  ratio  scales.
+# Sample data
+data = np.random.randn(100)
+
+# Create box plot
+sns.boxplot(data=data, color='lightblue')
+plt.title('Box Plot')
+plt.show()
+```
 
-####  Discrete  data
+-   Box = *Interquartile Range (IQR)* (middle 50% of the data).
+-   Whiskers = Range *excluding outliers*.
+-   Dots = *Outliers* (usually defined as 1.5 * IQR beyond the box).
 
-The  numarical  data  has  distinct  and  seperate  values.
+# 3. Quantile-Quantile (Q-Q) Plot
 
-Eg:  No.  of  students  in  a  class
+-   Compares a dataset against a *theoretical distribution* (often the normal distribution).
+-   Used to check the *normality assumption*.
 
-####  Continues  data
+```python
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+import numpy as np
 
-It  is  the  numarical  data  that  is  given  within  a  range.
+# Generate normally distributed data
+data = np.random.normal(0, 1, 1000)
 
-EG:  Age  group
+# Q-Q plot
+stats.probplot(data, dist="norm", plot=plt)
+plt.title('Q-Q Plot')
+plt.show()
+```
 
-It  can  be  visualized  using  histograms  and  box  plots.
+-   *Straight diagonal line* → Data follows the normal distribution.
+-   *Curved pattern* → Data is *skewed* or has *heavy tails* (not normal).
 
-They  are  more  adjuctive  and  conclusive  in  nature.
+# 4. Scatter Plot
 
-####  Interval  Scale
+-   Shows *relationship* between *two numerical* variables.
+-   Used in *correlation analysis*.
 
-Data  that  measured  along  an  equal  distance  between  adjacent  units.
+```python
+import matplotlib.pyplot as plt
+import numpy as np
 
-It  can  be  continues  or  discrete.
+# Sample data
+x = np.random.rand(100)
+y = x + np.random.normal(0, 0.1, 100) # Add some noise
 
-Eg:  IQ  test's  intelligence,  Time  if  measured  using  a  12  hour  clock.
+plt.scatter(x, y, color='blue', alpha=0.5)
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Scatter Plot')
+plt.show()
+```
 
-Can  only  be  either  added  or  substracted.  Represented  using  central  point  range  and  spread.
+-   *Upward trend* → *Positive* correlation (as x increases, y increases).
+-   *Downward trend* → *Negative* correlation (as x increases, y decreases).
+-   *No pattern* → *No correlation*.
 
-####  Ratio  Scale
+# 5. Heatmap
 
-It can be  given  zero,  cannot  take  negative  value  also  within  some  difference  between  individual  units.
+-   Displays *correlation* between variables (using colors).
+-   Used in *feature selection* (finding important variables).
 
-Eg:  Temperature  in  kelvin  scale,  height
+```python
+import seaborn as sns
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
 
-Can  be  multiplied  or  divided.
+# Sample dataset (create a DataFrame)
+data = pd.DataFrame(np.random.rand(10, 10), columns=[f'Var{i}' for i in range(10)])
 
-###  Data  Analysis
+# Create heatmap
+sns.heatmap(data.corr(), annot=True, cmap='coolwarm') # annot shows the numbers, cmap is the color scheme
+plt.title('Heatmap')
+plt.show()
+```
 
-1.  Collect
-2.  Organise
-3.  **Analyse**
+-   Dark red/blue → *Strong* correlation.
+-   Near zero → *No* correlation.
 
-Steps:
+# 6. Bubble Chart
 
-*  Identify  data  using  descriptive  analysis
-*  Investigate  using  diagnostic  analysis
-*  Perform  actions  using  prescriptive  analysis
-*  Predict  future  using  predictive  analysis
+-   Similar to a scatter plot, but *size* represents a *third* variable.
+-   Used in business and economic analysis.
 
-Collect,  Clean,  Store  and  Transform  then  apply  required  analysis  technique
+```python
+import matplotlib.pyplot as plt
+import numpy as np
 
-####  Data  Mining
+# Sample data
+x = np.random.rand(50)
+y = np.random.rand(50)
+size = np.random.rand(50) * 1000 # Sizes of the bubbles
 
-It  is  the  step  that  involves  to  collect  data  from  different  sources.
+plt.scatter(x, y, s=size, alpha=0.5, color='purple') # s is the size
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Bubble Chart')
+plt.show()
+```
 
-####  Data  Management
+-   *Larger bubbles* represent *higher values* of the third variable.
 
-Changing  different  types  of  data  into  something  effective.  Like  format  and  unit  to  a  standard  format.
+# 7. Bar Chart
 
-####  Statistical  Analysis
+-   Represents *categorical* data.
+-   Used for *comparison*.
 
-Analysis  data  statistically  based  on  the  way  we  needed  to  analyse.
+```python
+import matplotlib.pyplot as plt
 
-####  Data  Presentation
+categories = ['A', 'B', 'C', 'D']
+values = [10, 20, 15, 25]
 
-After  deny  all  these,  one  must  create  a  statistical  report  with  the  prediction  needed  to  be  made.
+plt.bar(categories, values, color='orange')
+plt.xlabel('Category')
+plt.ylabel('Value')
+plt.title('Bar Chart')
+plt.show()
+```
 
-##  Types  of  Data  Analysis
+-   *Taller bars* indicate *higher values*.
 
-1.  Predictive
-2.  Descriptive
-3.  Exploration
-4.  Diagnostic
-5.  Inferential
+# 8. Distribution Plot
 
-###  Predictive  Analysis
+-   Displays the *probability distribution* of a dataset.
+-   Used in statistical analysis (often combines a histogram with a KDE).
 
-It  gives  the  probability  of  an  event  or  a  situation.
+```python
+import seaborn as sns
+import numpy as np
 
-By  using  techniques  like:
+data = np.random.normal(0, 1, 1000)
 
-*  Modeling
-*  Machine  Learning
-*  Data  Mining
-*  Game  Theory
+sns.histplot(data, kde=True, color='green') # kde adds the smooth curve
+plt.title('Distribution Plot')
+plt.show()
+```
 
-This  may  help  to  give  predictions  about  a  future  event.
+-   Smooth curve (KDE - Kernel Density Estimate) represents the *probability density function (PDF)*.
 
-The  processes:
-1.  Linear  regression
-2.  Time  series  analysis
-3.  Data  mining
+# 9. Pair Plot
 
-Basicity  cornerstones  of  predictive  analysis:
+-   Shows *scatter plots* between *multiple variables*.
+-   Used in exploring *feature relationships*.
 
-1.  Predictive  Modeling
-2.  Decision  Analysis  and  Optimization
-3.  Transaction  Profile
+```python
+import seaborn as sns
 
-### Exploratory Analysis
+# Load a sample dataset (iris dataset)
+df = sns.load_dataset('iris')
 
-The process of examining data to gain insights and understanding.
-It is for making sure the data is thoroughly analyzed before making assumptions or conclusions.
+# Pair plot
+sns.pairplot(df, hue='species') # hue colors by category
+plt.show()
+```
 
-##### Benefits for Data Analysts
-* Identify potential errors.
-* Understand patterns and relationships within the data.
-* Detect unusual or unexpected events (outliers).
-##### Benefits for Data Scientists
-* Validate results.
-* Ensure results are relevant to desired business outcomes.
-##### Benefits for Stakeholders
-* Confirm they are asking the right questions about their data.
+-   Each subplot shows a scatter plot between *two features*.  The diagonal shows the distribution of each feature.
 
+# 10. Line Graph
 
-### Diagnostic Analytics
+-   Represents *trends over time* (or another continuous variable).
+-   Used in *time series analysis*.
 
-The process of using historical data to answer questions and find solutions to problems. It is used to identify dependencies and patterns within the historical data of a specific problem.
-#### Value for Companies
-* Provides deep insights into problems.
-* Companies maintain detailed historical data to avoid redundant data collection for each new problem, saving time and resources.
-Common Techniques Used:
+```python
+import matplotlib.pyplot as plt
+import numpy as np
 
-It is done by Data Discovery and Data Mining: 
+x = np.arange(0, 11)
+y = np.sin(x)
 
-**Data Discovery:** The process of collecting data from various sources and getting an initial understanding of it.
+plt.plot(x, y, marker='o', linestyle='-', color='blue') # marker adds points, linestyle connects them
+plt.xlabel('X axis')
+plt.ylabel('Y axis')
+plt.title('Line Graph')
+plt.show()
+```
 
-**Data Mining:** Examining large datasets to find patterns, anomalies, and other valuable information.
+-   *Upward trend* → *Increasing* trend.
+-   *Downward trend* → *Decreasing* trend.
 
+# 11. Pie Chart
 
+-   Represents *proportions* of *categorical* data.
+-   Used in *market share analysis*.
 
-## Inferential Data Analysis
-A branch of statistics that uses *sample data* to make inferences or draw conclusions about a *larger population* to generalize findings beyond the collected sample and make predictions or hypotheses about the broader population.
-*   **Techniques Used:**
-    *   **Hypothesis Testing:** Determining if there's enough evidence to support a claim about the population.
-    *   **Confidence Intervals:** Estimating a range of values that likely contains the true population parameter.
-    *   **Regression Analysis:** Examining the relationship between variables to predict outcomes.
-*   **Importance:**
-    *   Allows researchers to draw significant conclusions from smaller datasets.
-    *   Essential for making data-driven decisions in fields like science, business, economics, and social sciences.
-    *   Helps in better understanding complex phenomena and predicting future outcomes with a degree of confidence.
+```python
+import matplotlib.pyplot as plt
 
-###  Statistical Modeling
+labels = ['A', 'B', 'C', 'D']
+sizes = [20, 30, 25, 25]
 
-Statistical modeling is the process of using mathematical equations and statistical techniques to analyze data, identify patterns, and make predictions
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', colors=['red', 'green', 'blue', 'yellow']) # autopct shows percentages
+plt.title('Pie Chart')
+plt.show()
+```
 
-### Statistical Inference
+-   *Larger slices* represent *higher proportions*.  (Often, it's better to use a bar chart instead).
 
-The process of using data analysis to deduce properties of an underlying population distribution.
+# 12. Area Chart
 
-Statistical inference is about using information from a smaller group (a sample) to understand the characteristics of a larger group (the population).
+-   Similar to a line graph, but with a *filled area* below the line.
+-   Used to show *cumulative trends*.
 
-#### Methods used to draw conclusions 
+```python
+import matplotlib.pyplot as plt
+import numpy as np
 
-* Estimation
-* Confidence intervals
-*  hypothesis testing
+x = np.arange(0, 11)
+y = np.sin(x)
 
-### Population
+plt.fill_between(x, y, color='blue', alpha=0.5) # fill_between fills the area
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Area Chart')
+plt.show()
+```
 
-The complete set of all elements or individuals under consideration in a study.
+- Used for stacked visualizations to show *total value accumulation*.
 
-*   **Example:** All people living in India represent the population of India.
+# 13. Quantile Plot
 
-### Probability of Distribution
+```
+import numpy as np
+import matplotlib.pyplot as plt
+import statsmodels.api as sm
 
-*   **Probability:** A measure of the uncertainty associated with various phenomena (events or occurrences).
-*   **Probability Distribution (in Statistics):**  A description that gives the probability of each possible outcome of a random experiment or event.
-*   **Purpose:** Provides the probabilities of different possible occurrences.
-*   **Random Experiment:** An experiment whose outcome cannot be predicted with certainty.
+data = np.random.normal(0, 1, 1000)
+sm.qqplot(data, line='45')
+plt.show()
 
-### Uniform Distribution
+```
+- Displays the quantiles.
 
-A probability distribution where every value within a given interval (from *a* to *b*) is equally likely to occur is a uniform distribution.
-*   **Properties:**
-    *   **Symmetrical:** The distribution is balanced and even on both sides.
-    *   **Rectangular-shaped:** When graphed, the distribution forms a rectangle.
+# 14. Hierarchical plot
+   -Treemap
 
+```
+!pip install squarify
+import matplotlib.pyplot as plt
+import squarify
+import pandas as pd
 
+data = pd.DataFrame({'values': [1, 2, 3], 'labels': ['A', 'B', 'C']})
+squarify.plot(data['values'], label=data['labels'], alpha=0.7)
+plt.show()
 
-### What is Big Data? 
+```
+- To show hierachical data.
 
-Big data refers to extremely large volumes of data that cannot be effectively processed using traditional applications.
-*   **Characteristics:**
-    *   High-Volume 
-    *   High-Velocity
-    *   High-Variety
-*   **Starts with Raw Data:** The process begins with raw, unaggregated data that is typically too large to fit in the memory of a single computer.
-*   **Requires New Processing Methods:** Big data demands cost-effective, innovative forms of information processing to enable:
-    *   **Enhanced Insight:** Gaining deeper understanding from the data.
-    *   **Decision Making:** Making better, data-driven decisions.
-    *   **Process Automation:** Automating tasks based on data analysis.
+# 15. Icon based plots
+```python
+!pip install scikit-plot
+import scikitplot as skplt
+import numpy as np
+import matplotlib.pyplot as plt
 
-## What is Data Science?
+data = np.random.rand(10, 5)
+skplt.visualization.plot_pca_2d_projection(pca, data, target_values)
+plt.show()
 
-Data science empowers businesses to process vast amounts of both structured and unstructured big data to identify patterns.
-*   **Business Benefits:**
-    *  Increased Efficiency
-    *  Cost Management
-    *  New Market Opportunities
-    *  Enhanced Market Advantage
-*   **Real-Life Applications:**
-    *   Voice Assistants (e.g., Alexa, Siri)
-    *   Self-Driving Cars
-    *   Search Engines
-    *   Chatbots
+```
 
-### Steps in Data Science Process:
-
-1.  **Data Collection:**
-    *   Gather data relevant to a defined problem or question.
-    *   **Methods:**
-        *   Surveys: Collecting data directly from individuals.
-        *   Web Scraping: Extracting data from websites.
-
-2.  **Data Cleaning:**
-    *  Transform raw, messy data into a structured and usable format.
-    *   **Focus:** Handling missing values, inconsistencies, and converting data into a consistent format.
-
-3.  **Exploratory Data Analysis (EDA):**
-    *  Discover patterns, relationships, and insights within the data.
-    *   **Activities:**
-        *   Identify factors influencing the target variable (the thing you want to predict or understand).
-        *   Analyze relationships between independent variables (the factors that might influence the target).
-        *   Determine the best approach for modeling.
-
-4.  **Model Building:**
-    *   **Purpose:** Develop machine learning models to identify complex patterns in the data.
-    *   **Tools:** Various machine learning algorithms and techniques are used to automate pattern recognition.
-
-5.  **Model Deployment:**
-    *   **Purpose:** Implement the trained model in a real-world setting.
-    *   **Activities:**
-        *   Deploy the model to make predictions or provide insights on new data.
-        *   Continuously monitor the model's performance and retrain as needed.
-      
-
-### Challenges in the Data Science Process
-
-1.  **Data Quality and Availability:**
-    *   **Problem:** Inaccurate, incomplete, or inconsistent data can lead to unreliable models. The necessary data might also be difficult or impossible to access.
-    *   **Impact:** Affects the accuracy and trustworthiness of the analysis.
-
-2.  **Bias in Data and Algorithms:**
-    *   **Problem:** Data can reflect existing biases due to factors like how it was collected or measured. Algorithms can further amplify these biases, leading to unfair outcomes.
-    *   **Impact:** Can result in discriminatory or inaccurate predictions and reinforce societal biases.
-
-3.  **Model Overfitting and Underfitting:**
-    *   **Overfitting Problem:** A model that is too complex fits the training data perfectly but performs poorly on new, unseen data.
-    *   **Underfitting Problem:** A model that is too simple fails to capture the important patterns in the data, leading to poor performance both on training and new data.
-    *   **Impact:** Both issues result in models that do not generalize well and are not useful for real-world applications.
-
-4.  **Model Interpretability:**
-    *   **Problem:** Complex models (like deep learning models) can be "black boxes," making it hard to understand how they arrive at their predictions.
-    *   **Impact:** Difficulty in explaining the model's reasoning, which can hinder trust and adoption, especially in critical decision-making scenarios.
-
-5.  **Privacy and Ethical Considerations:**
-    *   **Problem:** Data science often deals with sensitive personal information, raising concerns about privacy violations and ethical misuse of data.
-    *   **Impact:** Potential for harm to individuals, legal issues, and damage to reputation if data is not handled responsibly.
-
-
-
-
+- To show the PCA projection.
