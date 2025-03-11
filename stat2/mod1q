@@ -1,65 +1,198 @@
-# 1. Random Variables and Probability Distributions
 
-1. What is the expected profit for a seller per item, if he is selling a large number of this item per day with various profits Rs. 2, 3 or 4 according to the buyer with a probability 0.2, 0.35 and 0.45 respectively?
+**Key Principles Across All Topics**
 
+*   **Pattern Recognition:**  The vast majority of these problems rely on identifying patterns.  This might be a numerical sequence, a repeating visual element, a logical relationship, or a coding rule.  Practice is key to developing this skill.
+*   **Systematic Approach:**  Don't just guess!  Develop a systematic way to analyze each problem.  This might involve:
+    *   Writing down key information.
+    *   Drawing diagrams (especially for spatial reasoning).
+    *   Eliminating obviously wrong answers.
+    *   Working step-by-step.
+*   **Time Management:**  Competitive exams are time-pressured.  Practice solving problems quickly *and* accurately.  Learn to recognize when you're spending too long on a problem and should move on.
+* **Practice, practice, practice:** Should try every check yourself section question.
 
-# 2. Probability Mass Function (PMF) and Cumulative Distribution Function (CDF)
+**Detailed Breakdown of Each Unit**
 
-1. If the number shown when an unbiased die is thrown. Name the probability distribution of X. Write the p.m.f. of X.  
+**(I) Non-Verbal Reasoning**
 
+   1.  **Similarity of Pairs (Analogy):**
 
-# 3. Mathematical Expectation
+      *   **Concept:**  You're given a pair of figures that have a specific relationship.  You must identify the same relationship in another pair of figures, choosing the correct answer from options.
+      *   **Relationships:**  These can be based on:
+          *   Rotation (clockwise or counter-clockwise)
+          *   Reflection (mirror image)
+          *   Addition or removal of elements
+          *   Changes in size, shape, or shading
+          *   Combinations of the above
+      *   **Example:**  Figure A is a square.  Figure B is a square rotated 90 degrees clockwise.  Figure C is a triangle.  What is Figure D?  (Answer: A triangle rotated 90 degrees clockwise.)
+          *   **Solution process** First identify the relationship between the two figures, figure A and figure B. Here figure B is just the 90 degree rotation of figure A. Applying the same logic, we will rotate the figure C by 90 degree.
+      *   **Strategy:**  Carefully examine the first pair.  Verbally describe the relationship to yourself ("The second figure is the first figure flipped upside down").  Then apply that *exact* description to the second pair.
 
-1.  For any random variable $X$, show that $V(X)$ is always non-negative. (Hint: Use the definition of variance in terms of expectation)
+   2.  **What Comes Next (Series):**
 
+      *   **Concept:**  You're given a sequence of figures that follow a pattern.  You must determine the next figure in the sequence.
+      *   **Patterns:**  Similar to analogies, but often involve more complex, multi-step changes.  Look for:
+          *   Progressive changes (e.g., a shape adding a side in each step)
+          *   Alternating patterns (e.g., two different changes happening in turn)
+          *   Changes in multiple elements simultaneously
+      *   **Example:**  Figure 1: One dot.  Figure 2: Two dots.  Figure 3: Three dots.  What is Figure 4? (Answer: Four dots.)
+      *   **Strategy:**  Analyze the changes *between* consecutive figures.  Write down the changes if necessary.  Look for patterns that repeat or progress logically.
 
-# 4. Moments
+   3.  **Odd One Out (Classification):**
 
-1. Explain two methods of finding raw moments of $X$, when the moment generating function of $X$ exists.
-2. Show that the 1st central moment of a random variable $X$ is zero.
-3.  Define the coefficient of kurtosis based on moments.
+      *   **Concept:**  You're given a set of figures, and you must identify the one that *doesn't* fit the pattern shared by the others.
+      *   **Strategy:**  Look for common characteristics among *most* of the figures.  The odd one out will lack this characteristic or have a different one.  Consider:
+          *   Shape, size, number of elements
+          *   Orientation, rotation
+          *   Shading, internal patterns
+          *   Symmetry
+      *   **Example:**  Four figures show squares; one shows a circle.  The circle is the odd one out.
 
+   4.  **Coding and Decoding:**
+      *   **Concept:** Given figures will be coded in certain manner, we have to identfy the patterns.
+      *   **Example:** Figure 1: One dot. Figure 2: Two dots. Figure 3: Three dots
+       Figure 1 is coded as A, figure 2 is coded as B. Then, Figure 3 will be coded as C.
+       *   **Solution process** First identify the relationship between the two figures, figure 1 and it's code A. Then figure 2 and it's code B. Here, Figure 1, 2 are coded as A, B respectively. Applying the same logic, we will code the figure 3 by C.
 
-# 5. Moment Generating Function (MGF)
+   5. **Ranking Test:**
+       *    **Concept:** Here, Ranking of figures needs to be found based on ceratin pattern.
+       * **Example:** Given 5 figures. First identify pattern of figures, then rank the figures based on the increasing/ decreasing order.
 
-1. Obtain the m.g.f. of $X$ following a geometric distribution with parameter $p$. (Refer to the properties of MGF for sums of random variables)  
-2. If $\phi_X(t)$ is the characteristic function of $X$, prove that $|\phi_X(t)| \leq 1$. (Use the properties of expectation and complex numbers.)
+**(II) Reasoning Contd.**
 
+   6.  **Blood Relations:**
 
-# 6. Binomial Distribution
+      *   **Concept:**  Problems describe relationships between family members (father, mother, son, daughter, brother, sister, uncle, aunt, cousin, etc.).  You must deduce a specific relationship based on the given information.
+      *   **Strategy:**
+          *   **Draw a family tree.** This is *essential* for visualizing the relationships.  Use symbols (e.g., squares for males, circles for females, lines for marriage/parent-child relationships).
+          *   **Work step-by-step.**  Break down complex sentences into smaller, manageable pieces of information.
+          *   **Use standard abbreviations:** M (Mother), F (Father), S (Son), D (Daughter), B (Brother), Si (Sister)
+          *   **Be careful with gender assumptions.**  Don't assume someone's gender unless it's explicitly stated.
+      *   **Example:**  "A is B's brother. C is A's mother. D is C's father. E is B's son. How is D related to A?"
+          *   **Solution:**
+              1.  A is B's brother (A and B are siblings, both male).
+              2.  C is A's mother (C is the parent of A and B).
+              3.  D is C's father (D is C's parent, and therefore A and B's grandfather).
+              4.  E is B's son.
+              *   Answer: D is A's grandfather.
 
-1. Identify the parameters of $X$ following a binomial distribution with mean 12 and variance 3. (Use the formulas for mean and variance of a binomial distribution)
-2. State and prove the additive property of binomial distribution. (This requires using the definition of binomial distribution and potentially the MGF)
-3. If $P(X=2) = P(X=3)$, where $X$ follows a Poisson distribution, find the m.g.f. of $X$. (Use the PMF of the Poisson distribution and the definition of MGF)
-4. What are the physical conditions for which the binomial distribution is used?
-5. Find the mode of  following binomial distribution with parameters  and .
+   7.  **Blood Relations Contd.:**  More complex blood relation problems, possibly involving coded relationships (e.g., "A + B means A is the father of B").  The same strategies apply, but careful attention to the code is crucial.
 
+   8.  **Direction Sense Test:**
 
-# 7. Poisson Distribution
+      *   **Concept:**  Problems involve determining directions (North, South, East, West, and their combinations) and distances.  A person or object moves in a series of directions, and you must determine their final position or direction relative to the starting point.
+      *   **Strategy:**
+          *   **Draw a diagram.**  This is *absolutely essential*.  Start with a clear point of origin.  Represent each movement with an arrow, clearly labeling the direction and distance.
+          *   **Use a compass rose:**  A simple diagram showing North, South, East, and West.
+          *   **Remember turns:**  "Turning right" from North means facing East.  "Turning left" from South means facing East.
+          *   **Pythagorean Theorem:**  If the movements involve right angles, you might need to use the Pythagorean theorem ($a^2 + b^2 = c^2$) to calculate the final distance.
+      *   **Example:**  "A man walks 5 km North, then turns right and walks 3 km. Then he turns left and walks 2 km. How far is he from the starting point, and in what direction?"
+      *     1. Draw diagram as mentioned in strategy, with proper arrows.
+            2. Distance calculation = 5+2 = 7.
+          *   Answer: Distance = 7KM, Direction: North.
 
-1. If the variance of $X$ following a Poisson distribution is 5, find $P(X = 5)$. (Use the fact that mean and variance are equal in a Poisson distribution)  
-2. Define negative binomial distribution. (Relate it to the binomial distribution and describe its properties)
-3. Show that in a Poisson distribution with unit mean, the mean deviation about the mean is $\frac{2}{e}$ times the standard deviation. (This involves calculating the mean deviation and relating it to the standard deviation, using the PMF of the Poisson distribution.)
-4.  A car hire firm has two cars which it hires out day by day. The number of demands for a car on each day is distributed as a Poisson variate with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused. (Apply the Poisson distribution to a real-world scenario).
-5. Derive the Poisson distribution as a limiting case of the binomial distribution. (This requires a detailed mathematical derivation using limits.)
+   9.  **Direction Sense Test contd.:**  More complex direction problems, possibly involving multiple people or objects, or changes in direction based on certain conditions.
 
-  
-# 8. General Probability Concepts
+   10. **Logical Venn Diagram:**
 
-1. Define (a) Random experiment ; (b) Event.
-2. Define Bernoulli random variable.
-3. Define characteristic function of a random variable.
-4. Name the discrete distribution having the memoryless property. (Recall the unique property of one of the discussed distributions)
-5. If $X \sim B(n, p)$, the distribution of $y = n - X$ is __________. (Think about the properties of the binomial distribution and transformations)
-6. If $X$ and $Y$ are two independent variables, the conditional distribution of $X$ given $Y = y, f(x|y) =$ __________. (Consider the meaning of independence in terms of conditional probabilities)
-7.  For a geometric distribution, the mean is always less than the variance.  (True or False, justify using formulas)
-8. Define mathematical expectation of a random variable.
-9. What are the properties of the moment generating function?
-10. Define conditional variance.
-11. Define geometric distribution.
-12. State and prove the addition theorem of expectation.
-13. What is the expectation of the number of failures before the first success in an infinite series of independent trials with constant probability  of success in each trial?
-14. Find the m.g.f. of the random variables whose moments are (i) $\mu_r' = (r+1)!2^r$ and (ii) $\mu_r = r!$  (Use the relationship between moments and the MGF).
+      *   **Concept:**  Uses overlapping circles to represent relationships between sets of items.  You must interpret the diagram to answer questions about the relationships.
+      *   **Key Areas:**
+          *   **Intersection (overlap):**  Represents items that belong to *both* sets.
+          *   **Union (entire area of both circles):**  Represents items that belong to *either* set.
+          *   **Outside the circles:**  Represents items that belong to *neither* set.
+      *   **Example:**  Two circles: one for "Doctors," one for "Women."  The overlapping area represents "Female Doctors."
+      *   **Strategy:**  Carefully read the descriptions of each circle.  Shade or label the relevant areas to help visualize the answer.  Pay attention to words like "only," "all," "some," and "none."
 
+**(III) Spatial Reasoning**
 
+   11. **Figure Analogy:**  Same as "Similarity of Pairs" (covered above).
+
+   12. **Figure Series:**  Same as "What Comes Next" (covered above).
+
+   13. **Figure Classification:**  Same as "Odd One Out" (covered above).
+
+   14. **Mirror and Water Images:**
+
+      *   **Concept:**  You're given a figure and must determine its mirror image (reflection across a vertical line) or water image (reflection across a horizontal line).
+      *   **Mirror Image:**  Left and right are reversed, but top and bottom remain the same.
+      *   **Water Image:**  Top and bottom are reversed, but left and right remain the same.
+      *   **Strategy:**
+          *   **Visualize the reflection.**  Imagine folding the paper along the mirror line or water line.
+          *   **Focus on key features.**  Look at how specific points or lines in the original figure will be positioned in the reflection.
+          *   **Eliminate incorrect answers.**  Often, you can quickly rule out options that don't have the correct basic orientation.
+          * **Example**  
+            Mirror Image: Given 'pq', it's mirror image is 'qp'.
+            Water Image: Given, 'pq', it's water image is 'db'.
+
+   15. **Counting of Figures:**
+
+      *   **Concept:**  You're given a complex figure composed of simpler shapes (triangles, squares, rectangles, etc.), and you must count the total number of a specific shape within the figure.
+      *   **Strategy:**
+          *   **Be systematic.**  Don't just randomly count.  Start with the smallest shapes and work your way up to larger ones.
+          *   **Mark or label.**  As you count, mark the shapes you've already counted to avoid double-counting.
+          *   **Divide and conquer.**  Break the complex figure into smaller, more manageable sections.
+      *   **Example:** A large triangle divided into many smaller triangles. Count *all* the triangles, including the large one and combinations of smaller ones.
+
+**(IV) Abstract Reasoning**
+
+   16. **Cube and Dice:**
+
+      *   **Concept:**  Problems involve visualizing and analyzing three-dimensional cubes and dice.  You might be given a folded or unfolded cube and asked to determine the opposite face, or to identify which cube can be formed from a given net.
+      *   **Key Concepts:**
+          *   **Opposite faces:**  On a standard die, opposite faces always add up to 7 (1 is opposite 6, 2 is opposite 5, 3 is opposite 4).
+          *   **Net of a cube:**  A 2D pattern that can be folded to form a cube.  There are multiple possible nets.
+          *   **Rotation:**  You must be able to mentally rotate the cube to visualize different faces.
+      *   **Strategy:**
+          *   **Visualize folding.**  For net problems, imagine folding the net into a cube.
+          *   **Use the "opposite faces" rule.**  For standard dice problems.
+          *   **Look for adjacent faces.**  Faces that are next to each other on the net will also be adjacent on the folded cube.
+          *   **Eliminate impossible options.**  Often, you can rule out nets that would result in the same number appearing on adjacent faces.
+
+   17. **Logical and Analytical Reasoning:**  This is a broad category that encompasses various problem types, including:
+
+      *   **Syllogisms:**  Given a set of statements (premises), you must determine whether a conclusion logically follows from those premises.  Often involves using Venn diagrams.
+           **Example**
+           Statement: All A are B. All B are C.
+           Conclusion: All A are C.
+      *   **Statement and Assumptions:** Given a statement, identify the underlying assumption.
+      *   **Statement and Conclusions**
+      *   **Statement and Arguments**
+      *   **Course of Action**
+      *   **Cause and Effect**
+      *   **Critical Reasoning:**  Analyzing arguments, identifying flaws in reasoning, drawing inferences.
+
+      *   **General Strategies:**
+          *   **Read carefully.**  Pay close attention to the wording of the statements.
+          *   **Identify key terms.**  Look for words like "all," "some," "none," "only," "if," "then," "must," "could."
+          *   **Don't assume anything beyond the given information.**
+          *   **Use diagrams or symbols** to represent the relationships.
+
+   18. **Geometry Mensuration:**
+
+      *   **Concept:**  Applies geometric principles to solve problems involving shapes and their properties (area, perimeter, volume, etc.).  You might need to know formulas for:
+          *   **Triangles:**  Area = (1/2) * base * height; Perimeter = sum of sides
+          *   **Squares:**  Area = side * side; Perimeter = 4 * side
+          *   **Rectangles:**  Area = length * width; Perimeter = 2 * (length + width)
+          *   **Circles:**  Area = π * radius^2; Circumference = 2 * π * radius
+          *   **Cubes:** Volume = side^3; Surface area = 6 * side^2
+          *   **Cuboids:** Volume = length * width * height
+          *   **Cylinders:** Volume = π * radius^2 * height
+          * **Basic Trigonometry**
+      *   **Strategy:**
+          *   **Identify the relevant shapes.**
+          *   **Write down the known information and the formulas you need.**
+          *   **Substitute the values into the formulas and solve.**
+          *   **Pay attention to units.**
+
+   19. **Data Interpretation:**
+
+      *   **Concept:**  Analyzing data presented in tables, charts, or graphs (bar graphs, pie charts, line graphs) and answering questions based on the data.
+      *   **Key Skills:**
+          *   **Reading and understanding the data presentation.**  Identify the axes, labels, and units.
+          *   **Calculating percentages, averages, ratios, and differences.**
+          *   **Identifying trends and patterns.**
+          *   **Drawing inferences and conclusions.**
+      *   **Strategy:**
+          *   **Read the questions carefully *before* looking at the data.**  This helps you focus on the relevant information.
+          *   **Estimate when possible.**  You often don't need to do precise calculations.
+          *   **Double-check your work.**
 
