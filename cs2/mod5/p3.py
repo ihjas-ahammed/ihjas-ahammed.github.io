@@ -1,4 +1,3 @@
-# Exp 3: Data Cleaning
 import pandas as pd
 import numpy as np
 from sklearn.impute import SimpleImputer

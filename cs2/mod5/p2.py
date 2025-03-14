@@ -1,5 +1,3 @@
-# Exp2: Graphical Analysis
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -16,11 +14,13 @@ data = {
 df = pd.DataFrame(data)
 
 
-plt.figure(10)
+plt.figure(figsize=(4,2))
 sns.histplot(data=df,x='salary',bins=10)
 plt.title("Histogram for salary")
 plt.show()
 
+
+plt.figure(figsize=(4,2))
 sns.boxplot(data=df,y="age",x="department")
 plt.title("Boxplot for Age")
 plt.xlabel("department")
@@ -30,11 +30,14 @@ sns.scatterplot(data=df,x='age',y='salary',hue='department',size='experience')
 plt.show()
 
 
+plt.figure(figsize=(4,2))
 correlationMatrix = df[['age', 'salary','experience']].corr()
 sns.heatmap(correlationMatrix,annot=True)
 plt.title("Heat Map")
 plt.show()
 
+
+plt.figure(figsize=(4,2))
 department_counts = df['department'].value_counts()
 plt.pie(department_counts,labels=department_counts.index)
 plt.title("Pie Chart")
