@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Q&A Generator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/9.23.0/firebase-database.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .file-area {
+            border: 2px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background-color: #fafafa;
+        }
+        .file-area.drag-over {
+            border-color: #2196F3;
+            background-color: rgba(33, 150, 243, 0.1);
+        }
+        #file-input {
+            display: none;
+        }
+        button {
+            background-color: #4285f4;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3367d6;
+        }
+        button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        textarea {
+            width: 100%;
+            height: 200px;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+        #status {
+            margin-top: 20px;
+            padding: 10px;
+            text-align: center;
+            border-radius: 4px;
+        }
+        .success {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .error {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .loading {
+            background-color: #e2f3f5;
+            color: #0c5460;
+        }
+        pre {
+            background-color: #f5f5f5;
+            padding: 10px;
+            border-radius: 4px;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Document Q&A Generator</h1>
+        
+        <div class="file-area" id="drop-area">
+            <p>Drag & Drop your document here or</p>
+            <input type="file" id="file-input" accept=".txt,.pdf,.docx,.md">
+            <button id="file-select-btn">Select File</button>
+        </div>
+        
+        <h3>Document Content</h3>
+        <textarea id="document-content" placeholder="Or paste your document content here..."></textarea>
+        
+        <div class="input-group">
+            <label for="num-questions">Number of questions to generate:</label>
+            <input type="number" id="num-questions" value="5" min="1" max="20">
+        </div>
+        
+        <button id="generate-btn">Generate Questions</button>
+        
+        <div id="status" style="display: none;"></div>
+        
+        <div id="output-section" style="display: none;">
+            <h3>Generated Questions:</h3>
+            <pre id="questions-output"></pre>
+            <button id="upload-btn">Upload to Firebase</button>
+        </div>
+    </div>
+
+    <script>
+        // DOM elements
+        const dropArea = document.getElementById('drop-area');
+        const fileInput = document.getElementById('file-input');
+        const fileSelectBtn = document.getElementById('file-select-btn');
+        const documentContent = document.getElementById('document-content');
+        const generateBtn = document.getElementById('generate-btn');
+        const uploadBtn = document.getElementById('upload-btn');
+        const statusDiv = document.getElementById('status');
+        const questionsOutput = document.getElementById('questions-output');
+        const outputSection = document.getElementById('output-section');
+        const numQuestionsInput = document.getElementById('num-questions');
+        
+        // Store the generated questions
+        let generatedQuestions = null;
+        
+        // Hardcoded credentials
+        const googleApiKey = "AIzaSyBpxFwmq8_b9snWnAaRnyeUmmy3FzT-7rM";
+        const firebaseConfig = {
+            apiKey: "AIzaSyAnjWWep4dtxvn1YKtmdU7A002X2NAvlX0",
+            authDomain: "data-science-ef878.firebaseapp.com",
+            databaseURL: "https://data-science-ef878-default-rtdb.firebaseio.com",
+            projectId: "data-science-ef878",
+            storageBucket: "data-science-ef878.firebasestorage.app",
+            messagingSenderId: "1010841233830",
+            appId: "1:1010841233830:web:e7aa0b516ace71c1720767",
+            measurementId: "G-FL7XZR6X7Q"
+        };
+        
+        // Initialize Firebase
+        let firebaseApp = null;
+        
+        // Initialize Firebase on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            try {
+                firebaseApp = firebase.initializeApp(firebaseConfig);
+                console.log("Firebase initialized successfully");
+            } catch (error) {
+                console.error("Error initializing Firebase:", error);
+            }
+        });
+        
+        // Drag and drop functionality
+        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, preventDefaults, false);
+        });
+        
+        function preventDefaults(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        
+        ['dragenter', 'dragover'].forEach(eventName => {
+            dropArea.addEventListener(eventName, highlight, false);
+        });
+        
+        ['dragleave', 'drop'].forEach(eventName => {
+            dropArea.addEventListener(eventName, unhighlight, false);
+        });
+        
+        function highlight() {
+            dropArea.classList.add('drag-over');
+        }
+        
+        function unhighlight() {
+            dropArea.classList.remove('drag-over');
+        }
+        
+        dropArea.addEventListener('drop', handleDrop, false);
+        
+        function handleDrop(e) {
+            const dt = e.dataTransfer;
+            const files = dt.files;
+            handleFiles(files);
+        }
+        
+        function handleFiles(files) {
+            if (files.length === 0) return;
+            const file = files[0];
+            
+            // Read the file content based on file type
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const content = e.target.result;
+                documentContent.value = content;
+            };
+            
+            if (file.type === 'application/pdf') {
+                showStatus('PDF files require text extraction. Processing...', 'loading');
+                // Here you would need a PDF.js integration for better extraction
+                reader.readAsText(file);
+            } else if (file.type === 'application/vnd.openxmlformats-officedocument.wordprocessingml.document') {
+                showStatus('DOCX files require text extraction. Processing...', 'loading');
+                // Here you would need a docx parsing library
+                reader.readAsText(file);
+            } else {
+                // Assume it's a text file
+                reader.readAsText(file);
+            }
+        }
+        
+        fileSelectBtn.addEventListener('click', () => {
+            fileInput.click();
+        });
+        
+        fileInput.addEventListener('change', (e) => {
+            handleFiles(e.target.files);
+        });
+        
+        // Generate questions using Google AI
+        generateBtn.addEventListener('click', async () => {
+            // Validate inputs
+            const content = documentContent.value.trim();
+            const numQuestions = parseInt(numQuestionsInput.value);
+            
+            if (!content) {
+                showStatus('Please provide document content', 'error');
+                return;
+            }
+            
+            try {
+                showStatus('Generating questions...', 'loading');
+                const questions = await generateQuestionsWithGoogleAI(content, googleApiKey, numQuestions);
+                generatedQuestions = questions;
+                
+                // Display the questions
+                questionsOutput.textContent = JSON.stringify(questions, null, 2);
+                outputSection.style.display = 'block';
+                showStatus('Questions generated successfully!', 'success');
+            } catch (error) {
+                console.error('Error generating questions:', error);
+                showStatus(`Error: ${error.message}`, 'error');
+            }
+        });
+        
+        // Upload to Firebase
+        uploadBtn.addEventListener('click', async () => {
+            if (!generatedQuestions) {
+                showStatus('No questions to upload. Generate questions first.', 'error');
+                return;
+            }
+            
+            try {
+                if (!firebaseApp) {
+                    firebaseApp = firebase.initializeApp(firebaseConfig);
+                }
+                
+                showStatus('Uploading to Firebase...', 'loading');
+                
+                // Upload to Firebase
+                const db = firebase.database();
+                await db.ref('/qa1').set(JSON.stringify(generatedQuestions));
+                
+                showStatus('Questions uploaded to Firebase successfully!', 'success');
+            } catch (error) {
+                console.error('Error uploading to Firebase:', error);
+                showStatus(`Error: ${error.message}`, 'error');
+            }
+        });
+        
+        // Function to show status messages
+        function showStatus(message, type) {
+            statusDiv.textContent = message;
+            statusDiv.className = type;
+            statusDiv.style.display = 'block';
+        }
+        
+        // Function to generate questions using Google AI
+        async function generateQuestionsWithGoogleAI(content, apiKey, numQuestions) {
+            const apiEndpoint = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-pro:generateContent';
+            
+            const prompt = `
+            Create ${numQuestions} objective questions based on the following document content. 
+            For each question, provide 4 multiple-choice options with only one correct answer.
+            Format the output as a JSON array with the following structure:
+            [
+              {
+                "question": "Question text here?",
+                "options": ["Option A", "Option B", "Option C", "Option D"],
+                "correctAnswer": "Option A"
+              }
+            ]
+            
+            Document content:
+            ${content}
+            `;
+            
+            const response = await fetch(`${apiEndpoint}?key=${apiKey}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    contents: [
+                        {
+                            parts: [{ text: prompt }]
+                        }
+                    ],
+                    generationConfig: {
+                        temperature: 0.7,
+                        maxOutputTokens: 4096,
+                    }
+                })
+            });
+            
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(`Google AI API error: ${errorData.error?.message || response.statusText}`);
+            }
+            
+            const data = await response.json();
+            
+            try {
+                // Extract the JSON string from the response and parse it
+                const text = data.candidates[0].content.parts[0].text;
+                const startIndex = text.indexOf('[');
+                const endIndex = text.lastIndexOf(']') + 1;
+                
+                if (startIndex === -1 || endIndex === 0) {
+                    throw new Error('Could not find valid JSON in the API response');
+                }
+                
+                const jsonStr = text.substring(startIndex, endIndex);
+                return JSON.parse(jsonStr);
+            } catch (error) {
+                console.error('Error parsing response:', error);
+                throw new Error('Failed to parse the generated questions. Please try again.');
+            }
+        }
+    </script>
+</body>
+</html>
