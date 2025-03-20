@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Learning Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            display: none;
+            margin-bottom: 30px;
+        }
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        .question-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .options {
+            margin-top: 15px;
+        }
+        .option {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #e9ecef;
+        }
+        .option.selected {
+            border-color: #3498db;
+            background-color: #e3f2fd;
+        }
+        .option.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .option.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        .progress-container {
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .progress {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.5s;
+        }
+        .score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .score-detail {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+        .summary {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .summary h2 {
+            color: #3498db;
+        }
+        .restart-btn {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        /* Responsive Design for Mobile */
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .question-container {
+                padding: 15px;
+                margin-top: 15px;
+            }
+            .option {
+                padding: 12px;
+                margin-bottom: 8px;
+                font-size: 0.9em;
+            }
+            button {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+            .progress-container {
+                margin-bottom: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Semiconductor Learning Tool</h1>
+        
+        <div class="progress-container">
+            <div class="score-container">
+                <span id="current-score">Score: 0/0 (0%)</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="section active" id="section1">
+            <h2>5.1 Semiconductors</h2>
+            <p>It is not easy to define a semiconductor if we want to take into account all its physical characteristics. However, generally, a semiconductor is defined on the basis of electrical conductivity as under:</p>
+            <p>The reader may wonder, when a semiconductor is neither a good conductor nor an insulator, then why not to classify it as a resistance material? The answer shall be readily available if we study the following table:</p>
+            
+            <table>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Substance</th>
+                    <th>Nature</th>
+                    <th>Resistivity</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Copper</td>
+                    <td>good conductor</td>
+                    <td>1.7 × 10⁻⁸ Ω m</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Germanium</td>
+                    <td>semiconductor</td>
+                    <td>0.6 Ω m</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Glass</td>
+                    <td>insulator</td>
+                    <td>10¹⁰ Ω m</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Nichrome</td>
+                    <td>resistance material</td>
+                    <td>10⁻⁶ Ω m</td>
+                </tr>
+            </table>
+            
+            <p>Comparing the resistivities of above materials, it is apparent that the resistivity of germanium (a semiconductor) is quite high compared to copper (a conductor) but it is quite low when compared with glass (an insulator). However, it will be wrong to consider the semiconductor as a resistance material.</p>
+            
+            <p>Semiconductors have negative temperature co-efficient of resistance i.e. the resistance of a semiconductor decreases with the increase in temperature and vice-versa.</p>
+
+            <div class="question-container">
+                <h3>Question 1</h3>
+                <p>What happens to the resistance of a semiconductor when its temperature increases?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">The resistance decreases</div>
+                    <div class="option">The resistance increases</div>
+                    <div class="option">The resistance remains the same</div>
+                    <div class="option">The resistance becomes zero</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="navigation">
+                <button id="next1" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section" id="section2">
+            <h2>5.2 Bonds in Semiconductors</h2>
+            <p>The atoms of every element are held together by the bonding action of valence electrons. In semiconductors, bonds are formed through the sharing of valence electrons, and these bonds are called covalent bonds.</p>
+            
+            <p>For example, a germanium atom has four valence electrons and seeks to have 8 electrons in its valence shell to achieve stability. It does this by sharing electrons with four neighboring germanium atoms, forming covalent bonds.</p>
+            
+            <div class="question-container">
+                <h3>Question 2</h3>
+                <p>How many valence electrons does a germanium atom have?</p>
+                <div class="options">
+                    <div class="option">2</div>
+                    <div class="option" data-correct="true">4</div>
+                    <div class="option">6</div>
+                    <div class="option">8</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container">
+                <h3>Question 3</h3>
+                <p>What type of bonds are formed in semiconductors?</p>
+                <div class="options">
+                    <div class="option">Ionic bonds</div>
+                    <div class="option" data-correct="true">Covalent bonds</div>
+                    <div class="option">Metallic bonds</div>
+                    <div class="option">Hydrogen bonds</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="navigation">
+                <button id="prev2">Previous Section</button>
+                <button id="next2" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section" id="section3">
+            <h2>5.3 Types of Semiconductors</h2>
+            <p>Semiconductors can be classified into two main types: intrinsic and extrinsic. Intrinsic semiconductors are pure materials like silicon or germanium, while extrinsic semiconductors are doped with impurities to enhance their conductivity.</p>
+            
+            <div class="question-container">
+                <h3>Question 4</h3>
+                <p>What is an intrinsic semiconductor?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">A pure semiconductor without impurities</div>
+                    <div class="option">A semiconductor with added impurities</div>
+                    <div class="option">A semiconductor with high resistance</div>
+                    <div class="option">A semiconductor used only in transistors</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container">
+                <h3>Question 5</h3>
+                <p>Which of the following is an example of an extrinsic semiconductor?</p>
+                <div class="options">
+                    <div class="option">Pure silicon</div>
+                    <div class="option" data-correct="true">Silicon doped with phosphorus</div>
+                    <div class="option">Germanium without impurities</div>
+                    <div class="option">Pure carbon</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="navigation">
+                <button id="prev3">Previous Section</button>
+                <button id="next3" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section" id="section4">
+            <h2>5.4 Doping in Semiconductors</h2>
+            <p>Doping is the process of adding impurities to a semiconductor to alter its electrical properties. This creates n-type semiconductors (with excess electrons) or p-type semiconductors (with excess holes).</p>
+            
+            <div class="question-container">
+                <h3>Question 6</h3>
+                <p>What is the purpose of doping in semiconductors?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">To alter the electrical properties</div>
+                    <div class="option">To make the semiconductor pure</div>
+                    <div class="option">To increase its resistance permanently</div>
+                    <div class="option">To reduce its conductivity</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="question-container">
+                <h3>Question 7</h3>
+                <p>Which type of semiconductor has an excess of electrons?</p>
+                <div class="options">
+                    <div class="option" data-correct="true">n-type</div>
+                    <div class="option">p-type</div>
+                    <div class="option">Intrinsic</div>
+                    <div class="option">Insulating</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            
+            <div class="navigation">
+                <button id="prev4">Previous Section</button>
+                <button id="next4" disabled>Finish</button>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary" id="summary">
+            <h2>Learning Summary</h2>
+            <div class="score-detail">
+                <p>You have completed the semiconductor learning module!</p>
+                <p id="final-score">Your final score: 0/0 (0%)</p>
+                <p id="accuracy-feedback"></p>
+            </div>
+            <button class="restart-btn" id="restart">Restart Learning</button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize variables
+        let currentSection = 1;
+        const totalSections = 4;
+        let correctAnswers = 0;
+        let totalQuestions = 0;
+        let answeredQuestions = 0;
+        let sectionQuestions = [1, 2, 2, 2]; // Questions per section
+        
+        // Elements
+        const sections = document.querySelectorAll('.section');
+        const progress = document.getElementById('progress');
+        const currentScoreElement = document.getElementById('current-score');
+        const finalScoreElement = document.getElementById('final-score');
+        const accuracyFeedbackElement = document.getElementById('accuracy-feedback');
+        
+        // Navigation buttons
+        const next1Button = document.getElementById('next1');
+        const prev2Button = document.getElementById('prev2');
+        const next2Button = document.getElementById('next2');
+        const prev3Button = document.getElementById('prev3');
+        const next3Button = document.getElementById('next3');
+        const prev4Button = document.getElementById('prev4');
+        const next4Button = document.getElementById('next4');
+        const restartButton = document.getElementById('restart');
+        
+        // Initialize the UI
+        updateProgress();
+        
+        // Add event listeners to all options
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const questionContainer = this.closest('.question-container');
+                if (questionContainer.dataset.answered === 'true') return;
+                
+                questionContainer.dataset.answered = 'true';
+                totalQuestions++;
+                answeredQuestions++;
+                
+                const options = questionContainer.querySelectorAll('.option');
+                options.forEach(opt => opt.classList.remove('selected'));
+                
+                this.classList.add('selected');
+                
+                const isCorrect = this.dataset.correct === 'true';
+                if (isCorrect) {
+                    correctAnswers++;
+                    this.classList.add('correct');
+                    questionContainer.querySelector('.feedback').textContent = 'Correct!';
+                    questionContainer.querySelector('.feedback').classList.add('correct');
+                } else {
+                    this.classList.add('incorrect');
+                    questionContainer.querySelector('.feedback').textContent = 'Incorrect. The correct answer is highlighted.';
+                    questionContainer.querySelector('.feedback').classList.add('incorrect');
+                    options.forEach(opt => {
+                        if (opt.dataset.correct === 'true') {
+                            opt.classList.add('correct');
+                        }
+                    });
+                }
+                
+                updateScore();
+                
+                const currentSectionQuestions = document.querySelectorAll(`#section${currentSection} .question-container`);
+                const answeredInSection = Array.from(currentSectionQuestions).filter(q => q.dataset.answered === 'true').length;
+                
+                if (answeredInSection === currentSectionQuestions.length) {
+                    if (currentSection === 1) next1Button.disabled = false;
+                    else if (currentSection === 2) next2Button.disabled = false;
+                    else if (currentSection === 3) next3Button.disabled = false;
+                    else if (currentSection === 4) next4Button.disabled = false;
+                }
+            });
+        });
+        
+        // Navigation event listeners
+        next1Button.addEventListener('click', function() {
+            goToSection(2);
+        });
+        prev2Button.addEventListener('click', function() {
+            goToSection(1);
+        });
+        next2Button.addEventListener('click', function() {
+            goToSection(3);
+        });
+        prev3Button.addEventListener('click', function() {
+            goToSection(2);
+        });
+        next3Button.addEventListener('click', function() {
+            goToSection(4);
+        });
+        prev4Button.addEventListener('click', function() {
+            goToSection(3);
+        });
+        next4Button.addEventListener('click', function() {
+            showSummary();
+        });
+        restartButton.addEventListener('click', function() {
+            resetLearning();
+        });
+        
+        // Functions
+        function goToSection(sectionNumber) {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(`section${sectionNumber}`).classList.add('active');
+            currentSection = sectionNumber;
+            updateProgress();
+        }
+        
+        function updateProgress() {
+            const progressPercentage = (currentSection / totalSections) * 100;
+            progress.style.width = `${progressPercentage}%`;
+        }
+        
+        function updateScore() {
+            const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            currentScoreElement.textContent = `Score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+        }
+        
+        function showSummary() {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById('summary').style.display = 'block';
+            
+            const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            finalScoreElement.textContent = `Your final score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+            
+            if (scorePercentage >= 90) {
+                accuracyFeedbackElement.textContent = 'Excellent! You have a strong understanding of semiconductors.';
+            } else if (scorePercentage >= 70) {
+                accuracyFeedbackElement.textContent = 'Good job! You have a good grasp of the basic concepts.';
+            } else if (scorePercentage >= 50) {
+                accuracyFeedbackElement.textContent = 'You\'re on the right track, but consider reviewing the material again.';
+            } else {
+                accuracyFeedbackElement.textContent = 'You might need to study the material more thoroughly.';
+            }
+        }
+        
+        function resetLearning() {
+            currentSection = 1;
+            correctAnswers = 0;
+            totalQuestions = 0;
+            answeredQuestions = 0;
+            
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected', 'correct', 'incorrect');
+            });
+            
+            document.querySelectorAll('.feedback').forEach(feedback => {
+                feedback.textContent = '';
+                feedback.classList.remove('correct', 'incorrect');
+            });
+            
+            document.querySelectorAll('.question-container').forEach(container => {
+                delete container.dataset.answered;
+            });
+            
+            next1Button.disabled = true;
+            next2Button.disabled = true;
+            next3Button.disabled = true;
+            next4Button.disabled = true;
+            
+            updateScore();
+            document.getElementById('summary').style.display = 'none';
+            goToSection(1);
+        }
+    </script>
+</body>
+</html>
