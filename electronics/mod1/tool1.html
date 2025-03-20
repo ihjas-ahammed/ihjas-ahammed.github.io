@@ -509,6 +509,10 @@
         function updateScore() {
             const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
             currentScoreElement.textContent = `Score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+            window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'setAccuracy',
+                accuracy: scorePercentage/100
+            }));
         }
         
         function showSummary() {
@@ -527,6 +531,10 @@
             } else {
                 accuracyFeedbackElement.textContent = 'You might need to study the material more thoroughly.';
             }
+
+            window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'gameOver'
+             }));
         }
         
         function resetLearning() {
