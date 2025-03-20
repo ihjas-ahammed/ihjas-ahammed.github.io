@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Temperature Effects Learning Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            display: none;
+            margin-bottom: 30px;
+        }
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        .question-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .options {
+            margin-top: 15px;
+        }
+        .option {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #e9ecef;
+        }
+        .option.selected {
+            border-color: #3498db;
+            background-color: #e3f2fd;
+        }
+        .option.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .option.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        .progress-container {
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .progress {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.5s;
+        }
+        .score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .summary {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .summary h2 {
+            color: #3498db;
+        }
+        .restart-btn {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .question-container {
+                padding: 15px;
+                margin-top: 15px;
+            }
+            .option {
+                padding: 12px;
+                margin-bottom: 8px;
+                font-size: 0.9em;
+            }
+            button {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Semiconductor Temperature Effects Learning Tool</h1>
+        <div class="progress-container">
+            <div class="score-container">
+                <span id="current-score">Score: 0/0 (0%)</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <!-- Section 1: Effect of Temperature on Semiconductors -->
+        <div class="section active" id="section1">
+            <h2>5.6 Effect of Temperature on Semiconductors</h2>
+            <p>The electrical conductivity of a semiconductor changes significantly with temperature variations. This is a crucial characteristic to understand.</p>
+            <h3>(i) At Absolute Zero</h3>
+            <p>At absolute zero, semiconductor atoms have no thermal energy. The valence electrons are tightly bound in covalent bonds, making the covalent bonds very strong with no free electrons. As a result, the semiconductor behaves as a perfect insulator. In the energy band model, the valence band is fully occupied, and a large energy gap separates it from the conduction band, preventing electrons from reaching the conduction band.</p>
+            <h3>(ii) Above Absolute Zero</h3>
+            <p>As temperature increases, thermal energy breaks some covalent bonds, freeing electrons that were part of these bonds. These free electrons can generate a small electric current if a potential difference is applied. Additionally, each time an electron moves to the conduction band, a hole is created in the valence band, contributing to the current as well.</p>
+            <div class="question-container">
+                <h3>Question 1</h3>
+                <p>How does a semiconductor behave at absolute zero?</p>
+                <div class="options">
+                    <div class="option">A) As a perfect conductor</div>
+                    <div class="option" data-correct="true">B) As a perfect insulator</div>
+                    <div class="option">C) As a superconductor</div>
+                    <div class="option">D) As a resistor</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 2</h3>
+                <p>What happens when temperature increases above absolute zero in a semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) All electrons become tightly bound</div>
+                    <div class="option" data-correct="true">B) Some covalent bonds break, freeing electrons</div>
+                    <div class="option">C) The energy gap increases</div>
+                    <div class="option">D) No holes are created</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="next1" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 2: Hole Current -->
+        <div class="section" id="section2">
+            <h2>5.7 Hole Current</h2>
+            <p>At room temperature, thermal energy breaks some covalent bonds in pure semiconductors, releasing free electrons that contribute to electric current under an electric field. Simultaneously, another current, known as hole current, flows. When a covalent bond breaks, it leaves a vacancy called a "hole," which acts as a positive charge carrier. For each free electron, a hole is created, forming hole-electron pairs.</p>
+            <p>Hole current occurs as valence electrons move to fill these vacancies, effectively moving the hole in the opposite direction—toward the negative terminal—constituting hole current. In the energy band model, when an electron jumps from the valence band to the conduction band, a hole is left behind, and valence electrons shift to fill it, moving the hole in the opposite direction of electron flow.</p>
+            <div class="question-container">
+                <h3>Question 3</h3>
+                <p>What is a hole in a semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) A free electron</div>
+                    <div class="option" data-correct="true">B) A missing electron in a covalent bond</div>
+                    <div class="option">C) A proton</div>
+                    <div class="option">D) An impurity atom</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 4</h3>
+                <p>How does hole current flow?</p>
+                <div class="options">
+                    <div class="option">A) By movement of free electrons only</div>
+                    <div class="option" data-correct="true">B) By valence electrons filling holes, moving holes toward the negative terminal</div>
+                    <div class="option">C) By movement of protons</div>
+                    <div class="option">D) By impurity atoms shifting</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev2">Previous Section</button>
+                <button id="next2" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 3: Intrinsic and Extrinsic Semiconductors -->
+        <div class="section" id="section3">
+            <h2>5.8 & 5.9 Intrinsic and Extrinsic Semiconductors</h2>
+            <p>An intrinsic semiconductor is a pure material where thermal energy at room temperature creates hole-electron pairs. Current flows via both free electrons and holes under an electric field, with total current being the sum of electron and hole currents.</p>
+            <p>An extrinsic semiconductor is created by doping—adding impurities—to enhance conductivity. Pentavalent impurities (e.g., arsenic) increase free electrons, forming n-type semiconductors, while trivalent impurities (e.g., gallium) increase holes, forming p-type semiconductors.</p>
+            <div class="question-container">
+                <h3>Question 5</h3>
+                <p>What conducts current in an intrinsic semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) Only free electrons</div>
+                    <div class="option" data-correct="true">B) Both free electrons and holes</div>
+                    <div class="option">C) Only holes</div>
+                    <div class="option">D) Impurity atoms</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 6</h3>
+                <p>What is the purpose of doping in an extrinsic semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) To purify the semiconductor</div>
+                    <div class="option" data-correct="true">B) To increase the number of free electrons or holes</div>
+                    <div class="option">C) To reduce conductivity</div>
+                    <div class="option">D) To eliminate holes</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev3">Previous Section</button>
+                <button id="next3" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 4: n-type and p-type Semiconductors -->
+        <div class="section" id="section4">
+            <h2>5.10 & 5.11 n-type and p-type Semiconductors</h2>
+            <p>An n-type semiconductor forms when a pentavalent impurity (e.g., arsenic) is added to a pure semiconductor, providing excess free electrons, which are the majority carriers, while holes are minority carriers. Current conduction is primarily by these electrons.</p>
+            <p>A p-type semiconductor forms with a trivalent impurity (e.g., gallium), creating excess holes as majority carriers, with electrons as minority carriers. Current conduction is mainly by hole movement.</p>
+            <div class="question-container">
+                <h3>Question 7</h3>
+                <p>What impurity creates an n-type semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) Trivalent</div>
+                    <div class="option" data-correct="true">B) Pentavalent</div>
+                    <div class="option">C) Divalent</div>
+                    <div class="option">D) Monovalent</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 8</h3>
+                <p>What are the majority carriers in a p-type semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) Electrons</div>
+                    <div class="option" data-correct="true">B) Holes</div>
+                    <div class="option">C) Protons</div>
+                    <div class="option">D) Neutrons</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev4">Previous Section</button>
+                <button id="next4" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 5: Charge and Carriers -->
+        <div class="section" id="section5">
+            <h2>5.12 & 5.13 Charge and Carriers</h2>
+            <p>Despite excess electrons in n-type and excess holes in p-type semiconductors, both remain electrically neutral because the impurities added are neutral atoms. In n-type, free electrons are majority carriers, and holes are minority carriers. In p-type, holes are majority carriers, and electrons are minority carriers.</p>
+            <div class="question-container">
+                <h3>Question 9</h3>
+                <p>Are n-type and p-type semiconductors electrically charged?</p>
+                <div class="options">
+                    <div class="option">A) Yes, n-type is negative, p-type is positive</div>
+                    <div class="option" data-correct="true">B) No, both are electrically neutral</div>
+                    <div class="option">C) Only n-type is charged</div>
+                    <div class="option">D) Only p-type is charged</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 10</h3>
+                <p>What are the minority carriers in an n-type semiconductor?</p>
+                <div class="options">
+                    <div class="option">A) Electrons</div>
+                    <div class="option" data-correct="true">B) Holes</div>
+                    <div class="option">C) Protons</div>
+                    <div class="option">D) Impurity atoms</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev5">Previous Section</button>
+                <button id="next5" disabled>Finish</button>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary" id="summary">
+            <h2>Learning Summary</h2>
+            <div class="score-detail">
+                <p>You have completed the Semiconductor Temperature Effects module!</p>
+                <p id="final-score">Your final score: 0/0 (0%)</p>
+                <p id="accuracy-feedback"></p>
+            </div>
+            <button class="restart-btn" id="restart">Restart Learning</button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize variables
+        let currentSection = 1;
+        const totalSections = 5;
+        let correctAnswers = 0;
+        let totalQuestions = 0;
+        const sectionQuestions = [2, 2, 2, 2, 2]; // Questions per section
+
+        // Elements
+        const sections = document.querySelectorAll('.section');
+        const progress = document.getElementById('progress');
+        const currentScoreElement = document.getElementById('current-score');
+        const finalScoreElement = document.getElementById('final-score');
+        const accuracyFeedbackElement = document.getElementById('accuracy-feedback');
+
+        // Navigation buttons
+        const next1Button = document.getElementById('next1');
+        const prev2Button = document.getElementById('prev2');
+        const next2Button = document.getElementById('next2');
+        const prev3Button = document.getElementById('prev3');
+        const next3Button = document.getElementById('next3');
+        const prev4Button = document.getElementById('prev4');
+        const next4Button = document.getElementById('next4');
+        const prev5Button = document.getElementById('prev5');
+        const next5Button = document.getElementById('next5');
+        const restartButton = document.getElementById('restart');
+
+        // Initialize UI
+        updateProgress();
+
+        // Add event listeners to options
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const questionContainer = this.closest('.question-container');
+                if (questionContainer.dataset.answered === 'true') return;
+
+                questionContainer.dataset.answered = 'true';
+                totalQuestions++;
+
+                const options = questionContainer.querySelectorAll('.option');
+                options.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+
+                const isCorrect = this.dataset.correct === 'true';
+                if (isCorrect) {
+                    correctAnswers++;
+                    this.classList.add('correct');
+                    questionContainer.querySelector('.feedback').textContent = 'Correct!';
+                    questionContainer.querySelector('.feedback').classList.add('correct');
+                } else {
+                    this.classList.add('incorrect');
+                    questionContainer.querySelector('.feedback').textContent = 'Incorrect. The correct answer is highlighted.';
+                    questionContainer.querySelector('.feedback').classList.add('incorrect');
+                    options.forEach(opt => {
+                        if (opt.dataset.correct === 'true') opt.classList.add('correct');
+                    });
+                }
+
+                updateScore();
+
+                const currentSectionQuestions = document.querySelectorAll(`#section${currentSection} .question-container`);
+                const answeredInSection = Array.from(currentSectionQuestions).filter(q => q.dataset.answered === 'true').length;
+
+                if (answeredInSection === sectionQuestions[currentSection - 1]) {
+                    if (currentSection === 1) next1Button.disabled = false;
+                    else if (currentSection === 2) next2Button.disabled = false;
+                    else if (currentSection === 3) next3Button.disabled = false;
+                    else if (currentSection === 4) next4Button.disabled = false;
+                    else if (currentSection === 5) next5Button.disabled = false;
+                }
+            });
+        });
+
+        // Navigation event listeners
+        next1Button.addEventListener('click', () => goToSection(2));
+        prev2Button.addEventListener('click', () => goToSection(1));
+        next2Button.addEventListener('click', () => goToSection(3));
+        prev3Button.addEventListener('click', () => goToSection(2));
+        next3Button.addEventListener('click', () => goToSection(4));
+        prev4Button.addEventListener('click', () => goToSection(3));
+        next4Button.addEventListener('click', () => goToSection(5));
+        prev5Button.addEventListener('click', () => goToSection(4));
+        next5Button.addEventListener('click', () => showSummary());
+        restartButton.addEventListener('click', () => resetLearning());
+
+        // Functions
+        function goToSection(sectionNumber) {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(`section${sectionNumber}`).classList.add('active');
+            currentSection = sectionNumber;
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progressPercentage = (currentSection / totalSections) * 100;
+            progress.style.width = `${progressPercentage}%`;
+        }
+
+        function updateScore() {
+            const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            currentScoreElement.textContent = `Score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+            window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'setAccuracy',
+                accuracy: scorePercentage / 100
+            }));
+        }
+
+        function showSummary() {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById('summary').style.display = 'block';
+
+            const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            finalScoreElement.textContent = `Your final score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+
+            if (scorePercentage >= 90) {
+                accuracyFeedbackElement.textContent = 'Excellent! You have a strong understanding of semiconductor temperature effects.';
+            } else if (scorePercentage >= 70) {
+                accuracyFeedbackElement.textContent = 'Good job! You grasp the basic concepts well.';
+            } else if (scorePercentage >= 50) {
+                accuracyFeedbackElement.textContent = 'You’re on the right track, but consider reviewing the material.';
+            } else {
+                accuracyFeedbackElement.textContent = 'More study might help solidify your understanding.';
+            }
+
+            window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'gameOver'
+            }));
+        }
+
+        function resetLearning() {
+            currentSection = 1;
+            correctAnswers = 0;
+            totalQuestions = 0;
+
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected', 'correct', 'incorrect');
+            });
+
+            document.querySelectorAll('.feedback').forEach(feedback => {
+                feedback.textContent = '';
+                feedback.classList.remove('correct', 'incorrect');
+            });
+
+            document.querySelectorAll('.question-container').forEach(container => {
+                delete container.dataset.answered;
+            });
+
+            next1Button.disabled = true;
+            next2Button.disabled = true;
+            next3Button.disabled = true;
+            next4Button.disabled = true;
+            next5Button.disabled = true;
+
+            updateScore();
+            document.getElementById('summary').style.display = 'none';
+            goToSection(1);
+        }
+    </script>
+</body>
+</html>
