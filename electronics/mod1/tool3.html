@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p-n Junction Learning Tool</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #2c3e50;
+        }
+        .section {
+            display: none;
+            margin-bottom: 30px;
+        }
+        .section.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+        .question-container {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            border-left: 4px solid #3498db;
+        }
+        .options {
+            margin-top: 15px;
+        }
+        .option {
+            display: block;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .option:hover {
+            background-color: #e9ecef;
+        }
+        .option.selected {
+            border-color: #3498db;
+            background-color: #e3f2fd;
+        }
+        .option.correct {
+            border-color: #28a745;
+            background-color: #d4edda;
+        }
+        .option.incorrect {
+            border-color: #dc3545;
+            background-color: #f8d7da;
+        }
+        .feedback {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 5px;
+            display: none;
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            display: block;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            display: block;
+        }
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+        button:disabled {
+            background-color: #bdc3c7;
+            cursor: not-allowed;
+        }
+        .progress-container {
+            margin-bottom: 20px;
+        }
+        .progress-bar {
+            height: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        .progress {
+            height: 100%;
+            background-color: #3498db;
+            border-radius: 5px;
+            width: 0%;
+            transition: width 0.5s;
+        }
+        .score-container {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .summary {
+            display: none;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .summary h2 {
+            color: #3498db;
+        }
+        .restart-btn {
+            display: inline-block;
+            margin-top: 20px;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+            .container {
+                padding: 15px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+            h1 {
+                font-size: 1.8em;
+            }
+            h2 {
+                font-size: 1.5em;
+            }
+            .question-container {
+                padding: 15px;
+                margin-top: 15px;
+            }
+            .option {
+                padding: 12px;
+                margin-bottom: 8px;
+                font-size: 0.9em;
+            }
+            button {
+                padding: 8px 12px;
+                font-size: 0.9em;
+            }
+            .navigation {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>p-n Junction Learning Tool</h1>
+        <div class="progress-container">
+            <div class="score-container">
+                <span id="current-score">Score: 0/0 (0%)</span>
+            </div>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+            </div>
+        </div>
+
+        <!-- Section 1: Formation of p-n Junction -->
+        <div class="section active" id="section1">
+            <h2>5.14 Formation of p-n Junction</h2>
+            <p>When a p-type semiconductor is suitably joined to an n-type semiconductor, the contact surface is called a <em>p-n junction</em>. Most semiconductor devices contain one or more p-n junctions. The p-n junction is of great importance because it is, in effect, the control element for semiconductor devices. A thorough knowledge of the formation and properties of p-n junction can enable the reader to understand the semiconductor devices.</p>
+            <p><strong>Formation of p-n junction:</strong> In actual practice, the characteristic properties of a p-n junction will not be apparent if a p-type block is just brought in contact with an n-type block. In fact, a p-n junction is fabricated by special techniques. One common method of making a p-n junction is called alloying. In this method, a small block of indium (trivalent impurity) is placed on an n-type germanium slab. The system is then heated at a temperature of about 500°C. The indium and some of the germanium melt to form a small puddle of molten germanium-indium mixture. The temperature is then lowered, and the puddle begins to solidify. Under proper conditions, the atoms of indium impurity will be suitably adjusted in the germanium slab to form a single crystal. The addition of indium overcomes the excess of electrons in the n-type germanium to such an extent that it creates a p-type region. As the process goes on, the remaining molten mixture becomes increasingly rich in indium. When all germanium has been redeposited, the remaining material appears as an indium button, which is frozen onto the outer surface of the crystallized portion. This button serves as a suitable base for soldering on leads.</p>
+            <div class="question-container">
+                <h3>Question 1</h3>
+                <p>What is a p-n junction?</p>
+                <div class="options">
+                    <div class="option">A) A type of semiconductor</div>
+                    <div class="option" data-correct="true">B) The contact surface between p-type and n-type semiconductors</div>
+                    <div class="option">C) A doping technique</div>
+                    <div class="option">D) A method of biasing</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 2</h3>
+                <p>How is a p-n junction typically formed?</p>
+                <div class="options">
+                    <div class="option">A) By heating semiconductors</div>
+                    <div class="option" data-correct="true">B) By alloying, such as placing indium on n-type germanium</div>
+                    <div class="option">C) By applying voltage</div>
+                    <div class="option">D) By cooling semiconductors</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="next1" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 2: Biasing a p-n Junction -->
+        <div class="section" id="section2">
+            <h2>5.16 Biasing a p-n Junction</h2>
+            <p>In electronics, the term "bias" refers to the use of d.c. voltage to establish certain operating conditions for an electronic device. In relation to a p-n junction, there are two bias conditions: <strong>Forward Biasing</strong> and <strong>Reverse Biasing</strong>.</p>
+            <h3>1. Forward Biasing</h3>
+            <p>When external d.c. voltage is applied to the junction in such a direction that it cancels the potential barrier, thus permitting current flow, it is called forward biasing. To apply forward bias, connect the positive terminal of the battery to p-type and negative terminal to n-type. The applied forward potential establishes an electric field which acts against the field due to potential barrier. Therefore, the resultant field is weakened, and the barrier height is reduced at the junction. As potential barrier voltage is very small (0.1 to 0.3 V), a small forward voltage is sufficient to completely eliminate the barrier. Once the potential barrier is eliminated by the forward voltage, junction resistance becomes almost zero, and a low resistance path is established for the entire circuit. Therefore, current flows in the circuit. This is called <em>forward current</em>. With forward bias to p-n junction, the following points are worth noting:</p>
+            <ul>
+                <li>The potential barrier is reduced, and at some forward voltage (0.1 to 0.3 V), it is eliminated altogether.</li>
+                <li>The junction offers low resistance (called <em>forward resistance, Rf</em>) to current flow.</li>
+                <li>Current flows in the circuit due to the establishment of low resistance path. The magnitude of current depends upon the applied forward voltage.</li>
+            </ul>
+            <h3>2. Reverse Biasing</h3>
+            <p>When the external d.c. voltage applied to the junction is in such a direction that it increases the potential barrier, it is called reverse biasing. To apply reverse bias, connect the negative terminal of the battery to p-type and positive terminal to n-type. The applied reverse voltage establishes an electric field which acts in the same direction as the field due to potential barrier. Therefore, the resultant field is strengthened, and the barrier height is increased. The increased potential barrier prevents the flow of charge carriers across the junction. Thus, a high resistance path is established for the entire circuit, and hence current does not flow. With reverse bias to p-n junction, the following points are worth noting:</p>
+            <ul>
+                <li>The potential barrier is increased.</li>
+                <li>The junction offers very high resistance (called <em>reverse resistance, Rr</em>) to current flow.</li>
+                <li>No current flows in the circuit due to the establishment of high resistance path.</li>
+            </ul>
+            <p><strong>Conclusion:</strong> From the above discussion, it follows that with reverse bias to the junction, a high resistance path is established, and hence no current flows in the circuit. With forward bias, a low resistance path is set up in the junction, and hence current flows in the circuit.</p>
+            <div class="question-container">
+                <h3>Question 3</h3>
+                <p>What is forward biasing?</p>
+                <div class="options">
+                    <div class="option">A) Applying voltage to increase the potential barrier</div>
+                    <div class="option" data-correct="true">B) Applying voltage to decrease the potential barrier</div>
+                    <div class="option">C) Applying zero voltage</div>
+                    <div class="option">D) Applying alternating current</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 4</h3>
+                <p>In reverse biasing, what happens to the potential barrier?</p>
+                <div class="options">
+                    <div class="option">A) It decreases</div>
+                    <div class="option">B) It remains the same</div>
+                    <div class="option" data-correct="true">C) It increases</div>
+                    <div class="option">D) It disappears</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev2">Previous Section</button>
+                <button id="next2" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 3: Current Flow in Forward Bias -->
+        <div class="section" id="section3">
+            <h2>5.17 Current Flow in Forward Bias</h2>
+            <p>We shall now see how current flows across a p-n junction when it is forward biased. In forward bias on the junction, under the influence of forward voltage, the free electrons in n-type move towards the junction, leaving behind positively charged atoms. However, more electrons arrive from the negative battery terminal and enter the n-region to take up their places. As the free electrons reach the junction, they become “valence electrons.” As valence electrons, they move through the holes in the p-region. The valence electrons move towards the left in the p-region, which is equivalent to the holes moving to the right. When the valence electrons reach the left end of the crystal, they flow into the positive terminal of the battery.</p>
+            <p>The mechanism of current flow in a forward biased p-n junction can be summed up as under:</p>
+            <ul>
+                <li>The free electrons from the negative terminal continue to pour into the n-region, while the holes in the p-region move towards the junction.</li>
+                <li>As these electrons reach the p-region, they combine with holes and become valence electrons.</li>
+                <li>When these valence electrons reach the left end of the crystal, they flow into the positive terminal of the battery.</li>
+            </ul>
+            <p>From the above discussion, it is concluded that in the n-type region, current is carried by free electrons, whereas in the p-type region, it is carried by holes. However, in the external connecting wires, the current is carried by free electrons.</p>
+            <div class="question-container">
+                <h3>Question 5</h3>
+                <p>In forward bias, what carries the current in the n-type region?</p>
+                <div class="options">
+                    <div class="option">A) Holes</div>
+                    <div class="option" data-correct="true">B) Free electrons</div>
+                    <div class="option">C) Valence electrons</div>
+                    <div class="option">D) Protons</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 6</h3>
+                <p>What happens to electrons when they reach the p-region in forward bias?</p>
+                <div class="options">
+                    <div class="option">A) They stop moving</div>
+                    <div class="option" data-correct="true">B) They combine with holes and become valence electrons</div>
+                    <div class="option">C) They create more holes</div>
+                    <div class="option">D) They flow back to the n-region</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev3">Previous Section</button>
+                <button id="next3" disabled>Next Section</button>
+            </div>
+        </div>
+
+        <!-- Section 4: Volt-Ampere Characteristics -->
+        <div class="section" id="section4">
+            <h2>5.18 Volt-Ampere Characteristics</h2>
+            <p>A p-n junction, also called a crystal or semiconductor diode, is the curve between voltage across the junction and the circuit current. Usually, voltage is taken along the x-axis and current along the y-axis. The characteristics of a p-n junction can be studied under three heads, namely: zero external voltage, forward bias, and reverse bias.</p>
+            <h3>(i) Zero External Voltage</h3>
+            <p>When the external voltage is zero, i.e., the circuit is open at K, the potential barrier at the junction does not permit current flow. Therefore, the circuit current is zero as indicated by point O.</p>
+            <h3>(ii) Forward Bias</h3>
+            <p>In forward bias, the positive terminal of the voltage source is connected to the p-side and the negative terminal to the n-side of the p-n junction. This reduces the potential barrier, allowing current to flow easily. The current increases exponentially with the increase in forward voltage.</p>
+            <h3>(iii) Reverse Bias</h3>
+            <p>In reverse bias, the positive terminal of the voltage source is connected to the n-side and the negative terminal to the p-side of the p-n junction. This increases the potential barrier, preventing current flow. However, a small leakage current may flow due to minority charge carriers. If the reverse voltage exceeds a certain limit, it can lead to breakdown, causing a sudden increase in current.</p>
+            <p>R is the current limiting resistance. It prevents the forward current from exceeding the permitted value.</p>
+            <p><strong>Circuit Description:</strong> The circuit diagram shows a p-n junction diode connected in a circuit. The diode is represented by a triangle pointing towards a line, symbolizing the p-side and n-side of the junction. The circuit includes a voltage source (V) connected across the diode, with a current limiting resistor (R) in series. A milliammeter (mA) is placed in the circuit to measure the current flowing through the diode, and a voltmeter (V) is connected across the diode to measure the voltage. The circuit can be configured for zero external voltage, forward bias, or reverse bias by adjusting the connections of the voltage source.</p>
+            <p><strong>Graph Description:</strong> The graph plots the relationship between voltage (V) on the x-axis and current (I) on the y-axis for a p-n junction diode. The x-axis represents voltage in volts, ranging from negative values (reverse bias) to positive values (forward bias). The y-axis represents current in milliamperes (mA). The curve starts at the origin (point O) with zero current for zero voltage. In the reverse bias region (negative voltages), the current remains very small until a breakdown point, where it increases sharply. In the forward bias region (positive voltages), the current increases exponentially after a small threshold voltage. Key points include the barrier voltage and the breakdown point.</p>
+            <div class="question-container">
+                <h3>Question 7</h3>
+                <p>What is the current when zero external voltage is applied?</p>
+                <div class="options">
+                    <div class="option">A) Maximum</div>
+                    <div class="option">B) Minimum</div>
+                    <div class="option" data-correct="true">C) Zero</div>
+                    <div class="option">D) Depends on the diode</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="question-container">
+                <h3>Question 8</h3>
+                <p>In reverse bias, what can cause a sudden increase in current?</p>
+                <div class="options">
+                    <div class="option">A) Forward voltage</div>
+                    <div class="option" data-correct="true">B) Breakdown</div>
+                    <div class="option">C) Zero voltage</div>
+                    <div class="option">D) High temperature</div>
+                </div>
+                <div class="feedback"></div>
+            </div>
+            <div class="navigation">
+                <button id="prev4">Previous Section</button>
+                <button id="next4" disabled>Finish</button>
+            </div>
+        </div>
+
+        <!-- Summary Section -->
+        <div class="summary" id="summary">
+            <h2>Learning Summary</h2>
+            <div class="score-detail">
+                <p>You have completed the p-n Junction module!</p>
+                <p id="final-score">Your final score: 0/0 (0%)</p>
+                <p id="accuracy-feedback"></p>
+            </div>
+            <button class="restart-btn" id="restart">Restart Learning</button>
+        </div>
+    </div>
+
+    <script>
+        // Initialize variables
+        let currentSection = 1;
+        const totalSections = 4;
+        let correctAnswers = 0;
+        let totalQuestions = 0;
+        const sectionQuestions = [2, 2, 2, 2]; // Questions per section
+
+        // Elements
+        const sections = document.querySelectorAll('.section');
+        const progress = document.getElementById('progress');
+        const currentScoreElement = document.getElementById('current-score');
+        const finalScoreElement = document.getElementById('final-score');
+        const accuracyFeedbackElement = document.getElementById('accuracy-feedback');
+
+        // Navigation buttons
+        const next1Button = document.getElementById('next1');
+        const prev2Button = document.getElementById('prev2');
+        const next2Button = document.getElementById('next2');
+        const prev3Button = document.getElementById('prev3');
+        const next3Button = document.getElementById('next3');
+        const prev4Button = document.getElementById('prev4');
+        const next4Button = document.getElementById('next4');
+        const restartButton = document.getElementById('restart');
+
+        // Initialize UI
+        updateProgress();
+
+        // Add event listeners to options
+        document.querySelectorAll('.option').forEach(option => {
+            option.addEventListener('click', function() {
+                const questionContainer = this.closest('.question-container');
+                if (questionContainer.dataset.answered === 'true') return;
+
+                questionContainer.dataset.answered = 'true';
+                totalQuestions++;
+
+                const options = questionContainer.querySelectorAll('.option');
+                options.forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+
+                const isCorrect = this.dataset.correct === 'true';
+                if (isCorrect) {
+                    correctAnswers++;
+                    this.classList.add('correct');
+                    questionContainer.querySelector('.feedback').textContent = 'Correct!';
+                    questionContainer.querySelector('.feedback').classList.add('correct');
+                } else {
+                    this.classList.add('incorrect');
+                    questionContainer.querySelector('.feedback').textContent = 'Incorrect. The correct answer is highlighted.';
+                    questionContainer.querySelector('.feedback').classList.add('incorrect');
+                    options.forEach(opt => {
+                        if (opt.dataset.correct === 'true') opt.classList.add('correct');
+                    });
+                }
+
+                updateScore();
+
+                const currentSectionQuestions = document.querySelectorAll(`#section${currentSection} .question-container`);
+                const answeredInSection = Array.from(currentSectionQuestions).filter(q => q.dataset.answered === 'true').length;
+
+                if (answeredInSection === sectionQuestions[currentSection - 1]) {
+                    if (currentSection === 1) next1Button.disabled = false;
+                    else if (currentSection === 2) next2Button.disabled = false;
+                    else if (currentSection === 3) next3Button.disabled = false;
+                    else if (currentSection === 4) next4Button.disabled = false;
+                }
+            });
+        });
+
+        // Navigation event listeners
+        next1Button.addEventListener('click', () => goToSection(2));
+        prev2Button.addEventListener('click', () => goToSection(1));
+        next2Button.addEventListener('click', () => goToSection(3));
+        prev3Button.addEventListener('click', () => goToSection(2));
+        next3Button.addEventListener('click', () => goToSection(4));
+        prev4Button.addEventListener('click', () => goToSection(3));
+        next4Button.addEventListener('click', () => showSummary());
+        restartButton.addEventListener('click', () => resetLearning());
+
+        // Functions
+        function goToSection(sectionNumber) {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById(`section${sectionNumber}`).classList.add('active');
+            currentSection = sectionNumber;
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const progressPercentage = (currentSection / totalSections) * 100;
+            progress.style.width = `${progressPercentage}%`;
+        }
+
+        function updateScore() {
+            const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            currentScoreElement.textContent = `Score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+            window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'setAccuracy',
+                accuracy: scorePercentage / 100
+            }));
+        }
+
+        function showSummary() {
+            sections.forEach(section => section.classList.remove('active'));
+            document.getElementById('summary').style.display = 'block';
+
+            const scorePercentage = totalQuestions > 0 ? Math.round((correctAnswers / totalQuestions) * 100) : 0;
+            finalScoreElement.textContent = `Your final score: ${correctAnswers}/${totalQuestions} (${scorePercentage}%)`;
+
+            if (scorePercentage >= 90) {
+                accuracyFeedbackElement.textContent = 'Excellent! You have a strong understanding of p-n junctions.';
+            } else if (scorePercentage >= 70) {
+                accuracyFeedbackElement.textContent = 'Good job! You grasp the basic concepts well.';
+            } else if (scorePercentage >= 50) {
+                accuracyFeedbackElement.textContent = 'You’re on the right track, but consider reviewing the material.';
+            } else {
+                accuracyFeedbackElement.textContent = 'More study might help solidify your understanding.';
+            }
+
+            window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({
+                type: 'gameOver'
+            }));
+        }
+
+        function resetLearning() {
+            currentSection = 1;
+            correctAnswers = 0;
+            totalQuestions = 0;
+
+            document.querySelectorAll('.option').forEach(option => {
+                option.classList.remove('selected', 'correct', 'incorrect');
+            });
+
+            document.querySelectorAll('.feedback').forEach(feedback => {
+                feedback.textContent = '';
+                feedback.classList.remove('correct', 'incorrect');
+            });
+
+            document.querySelectorAll('.question-container').forEach(container => {
+                delete container.dataset.answered;
+            });
+
+            next1Button.disabled = true;
+            next2Button.disabled = true;
+            next3Button.disabled = true;
+            next4Button.disabled = true;
+
+            updateScore();
+            document.getElementById('summary').style.display = 'none';
+            goToSection(1);
+        }
+    </script>
+</body>
+</html>
