@@ -1,72 +1,313 @@
-# 3rd Module - Correlation and Regression
+# Correlation & Regression
 
 ## Correlation
+Correlation is a statistical measure for
+finding out degree of association or relat-
+ship between two variables.
+By association we mean the tendency of
+the variables to move together.
+Correlation is said to be positive or negative
+according to the movements of the two
+variables.
 
-Correlation is a statistical measure for finding out the degree of association or relationship between 2 variables. By association, we mean the tendency of the variables to move together. Correlation is said to be:
+If the change of the two variables are in the
+same direction, then the correlation is said
+to be positive.
+e.g.: Height and weight.
 
-1. **Positive (+ve) Correlation**: If the movements of the two variables are in the same direction, then the two variables are said to be +ve. For example, height and weight.
+If the change of the two variables are in the
+opposite direction, then the correlation is said
+to be negative.
+e.g.: Pressure and volume
 
-2. **Negative (-ve) Correlation**: If the change of the two variables are in the opposite direction, then the correlation is said to be -ve. For example, pressure and volume.
+If the change of the variables are not
+related, then the correlation is said to be
+zero or no correlation.
 
-3. **No Correlation (0)**: If the change of the variables are not related, then the correlation is said to be 0 or no correlation.
+Correlation coefficient ($r$) measures the degree
+of linear relationship between two
+variables.
+It lies between -1 and 1.
 
-### Correlation Coefficient (r)
-The correlation coefficient (r) measures the degree of linear relationship between two variables. It lies between -1 and +1, represented as $$-1 ≤ r ≤ +1$$
+$$-1 \le r_{xy} \le 1$$
 
+## Methods for Finding Correlations
 
+Correlation between two variables may be
+determined by any of the following methods:
+1. Scatter diagram
+2. Covariance method or Karl-Pearson's method
+3. Spearman's Rank method
 
-## Methods for Finding Correlation
+## Scatter Diagram
 
-Correlation between two variables may be determined by any of the following methods:
+It is the diagrammatic representation of the
+existence of correlation between two variables.
+Statistical data relating simultaneous movement
+of the variables can be represented by
+points or dots.
 
-1. Scatter Diagram method or Karl Pearson's covariance method
-2. Spearman's Rank method
+One of the variables ($x$) is shown along
+the x-axis and the other along y-axis.
+All the pairs of values of $x$ and $y$ are
+shown by points along $xy$ plane.
 
-### Scatter Diagram
+The scatter diagram of these points and
+also the direction of the scatter reveals
+the nature and strength of correlation
+between two variables.
 
-It is the diagrammatic representation of the existence of correlation between two variables. Statistical data relating simultaneous movements of variables can be represented by points or dots. One of the variables $X$ is shown along the $x$-axis and the other along the $y$-axis. Pairs of values of $x$ and $y$ are shown by points along the $x$-$y$ plane.
+**Perfect Positive Correlation**
 
-The scatter diagram of these points also reveals the direction and strength of correlation between two variables.
+Here, the points are aligned such that the line has a positive slope. r = 1.
 
-### Examples of Perfect Correlation
-- Perfect +ve correlation: $r = +1$
-- Perfect -ve correlation: $r = -1$
-- Zero correlation
+**Perfect Negative Correlation**
 
-Search for "scatter-plot-negative-correlation"
-"scatter-plot-positive-correlation"
-"scatter-plot-zero-correlation"
+Here, the points are aligned such that the line has a negative slope. r = -1.
 
-## Angle b/w two regression lines
+## Karl Pearson's Correlation Coefficient
 
-# Regression Equation of y on x
+Let $(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$ be $n$ pairs
+of observations of two variables $x$ and $y$.
+The correlation coefficient between $x$ and $y$ is given by:
 
-We know that the regression equation of y on x is:
+$$r = \frac{cov(x, y)}{\sigma_x \cdot \sigma_y}$$
 
-$$ y - \bar{y} = b_{yx} (x - \bar{x}) $$
+where
 
-where $ b_{yx} $ is the slope of the line, $ m_1 = \frac{\sigma_y}{\sigma_x} = b_{yx} $
+$$cov(x, y) = \frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})$$
 
-## Regression Equation of Line x on y
+$$\sigma_x = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2}$$
 
-The regression equation of line x on y is:
+$$\sigma_y = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2}$$
 
-$$ x - \bar{x} = b_{xy} (y - \bar{y}) $$
+Therefore,
 
-where $ b_{xy} $ is the slope of the line, the reciprocal of the slope of the line, i.e.,
+$$r = \frac{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\frac{1}{n} \sum_{i=1}^{n} (x_i - \bar{x})^2} \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \bar{y})^2}}$$
 
-$$ \frac{1}{m_1} = \frac{\sigma_x}{\sigma_y} = b_{xy} $$
+$$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2} \sqrt{\sum (y_i - \bar{y})^2}}$$
 
-# Angle Between Lines of Regression
+We can write,
+$$cov(x, y) = \frac{\sum x_i y_i}{n} - (\frac{\sum x_i}{n})(\frac{\sum y_i}{n})$$
 
-If $ \theta $ is the angle between the two lines of regression, then:
+$$\sigma_x = \sqrt{\frac{\sum x_i^2}{n} - (\frac{\sum x_i}{n})^2}$$
 
-$$ \tan \theta = \frac{m_1 - m_2}{1 + m_1 m_2} $$
+$$\sigma_y = \sqrt{\frac{\sum y_i^2}{n} - (\frac{\sum y_i}{n})^2}$$
 
-$$ tan(\theta) = \left(\frac{1 - r^2}{|r|} \cdot \frac{|\sigma_y\sigma_x|}{\sigma_x^2 + \sigma_y^2}\right) $$
+So,
+$$r = \frac{\frac{\sum x_i y_i}{n} - (\frac{\sum x_i}{n})(\frac{\sum y_i}{n})}{\sqrt{\frac{\sum x_i^2}{n} - (\frac{\sum x_i}{n})^2} \sqrt{\frac{\sum y_i^2}{n} - (\frac{\sum y_i}{n})^2}}$$
 
-# Lines of Regression and Correlation
+By multiplying each term by $n^2$, we get
 
-If the two variables are uncorrelated, the lines of regression become perpendicular to each other.
+$$r = \frac{n \sum x_i y_i - (\sum x_i)(\sum y_i)}{\sqrt{n \sum x_i^2 - (\sum x_i)^2} \sqrt{n \sum y_i^2 - (\sum y_i)^2}}$$
 
-If $ r = \pm 1 $, then $ \theta = 0 $ or $ 180^\circ $, and the regression lines coincide.
+$$r_{xy} = r_{uv} = \frac{cov(u, v)}{\sigma_u \sigma_v}$$
+
+where
+$$u = x - A$$
+$$v = y - B$$
+
+where $A$ and $B$ are assumed means of $x$ and $y$ respectively.
+
+1. Find the correlation coefficient of the following:
+   
+   $x$: 1 2 3 4 5 6 7
+   
+   $y$: 6 8 11 9 12 10 14
+
+ 2) Calculate Pearson's correlation coefficient on
+taking 100 and 90 as the assumed
+average of $x$ and $y$ respectively.
+
+Given the table with columns x, y, u (x-A), v (y-B), u*v, u^2, v^2
+
+$n = 11$ (number of observations)
+
+$\sum u = 96$
+$\sum v = 84$
+$\sum uv = 1128$
+$\sum u^2 = 1380$
+$\sum v^2 = 312$
+
+$r_{uv} = \frac{n \sum uv - \sum u \sum v}{\sqrt{[n \sum u^2 - (\sum u)^2][n \sum v^2 - (\sum v)^2]}}$
+
+$r_{uv} = \frac{(11 \times 1128) - (96 \times 84)}{\sqrt{[(11 \times 1380) - 96^2][(11 \times 312) - 84^2]}}$
+
+$r_{uv} = \frac{12408 - 8064}{\sqrt{(15180 - 9216)(3432 - 7056)}}$
+
+$r_{uv} = \frac{4320}{\sqrt{4320 \times 7504}}$
+
+$r_{uv} = \frac{4320}{ \sqrt{65726 \times 97.488}}$
+
+$r_{uv} = -0.674$
+
+## Regression
+
+Suppose we are given n pairs of values
+$(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$ of two variables
+$x$ and $y$. If we fit a straight line to these data
+and if $x$ is independent variable and $y$
+is taken as dependent variable, then the straight
+line as obtained is called the regression line
+of $y$ on $x$.
+Similarly if we fit a straight line to the
+data by taking $y$ as independent variable
+and $x$ as dependent variable, the line
+obtained is the regression line of $x$ on
+$y$.
+
+The reciprocal of it's slope is called the
+regression coefficient of $x$ on $y$.
+
+## Equation for Regression Line
+
+Let
+$y = a + bx$ be the equation of the
+regression line of $y$ on $x$.
+where $a$ and $b$ are determined by solving
+the normal eq obtained by the principle
+of least squares.
+Hence we get
+
+$(\bar{y} - \bar{y}) = b_{yx} (\bar{x} - \bar{x})$
+
+where
+$\bar{x}$ and $\bar{y}$ are means of $x$ and $y$
+Solving these we get
+$$b_{yx} = \frac{n \sum x_i y_i - (\sum x_i) (\sum y_i)}{n \sum x_i^2 - (\sum x_i)^2}$$ and
+
+Here $b_{yx}$ is called the regression coefficient of
+$y$ on $x$, and coefficient of $x$ on $y$
+is $b_{xy}$.
+So we can rewrite the regression equation of
+$y$ on $x$ as
+
+$(y - \bar{y}) = b_{yx} (x - \bar{x})$
+
+## Remark
+
+The correlation coefficient $r$ is the geometric
+mean of two regression coefficients $b_{xy}$ and
+$b_{yx}$
+
+$r = \sqrt{b_{xy} \cdot b_{yx}}$
+
+*   The two lines of regressions always pass
+    through the point $(\bar{x}, \bar{y})$.
+*   The regression eq. of $y$ on $x$ is needed for
+    estimating or predicting the value of $y$ for
+    a given value of $x$; and the regression eq.
+    of $x$ on $y$ is needed for estimating value of
+    $x$ on $y$.
+
+3) Find the two regression equation for the
+following
+a)
+   $x$: 2 3 4 5 6
+   $y$: 3 5 4 8 9
+Find the value of $y$ if $x=10$
+Find the value of $x$ if $y=15$
+
+$x$ | $y$ | $x*y$ | $x^2$ | $y^2$
+------- | -------- | -------- | -------- | --------
+2 | 3 | 6 | 4 | 9
+3 | 5 | 15 | 9 | 25
+4 | 4 | 16 | 16 | 16
+5 | 8 | 40 | 25 | 64
+6 | 9 | 54 | 36 | 81
+$\sum x = 20$ | $\sum y = 29$ | $\sum xy = 131$ | $\sum x^2 = 90$ | $\sum y^2 = 195$
+
+$b_{yx} = \frac{n \sum xy - \sum x \sum y}{n \sum x^2 - (\sum x)^2}$
+
+$b_{yx} = \frac{5 * 131 - 20*29}{5*90-20^2}$
+
+$b_{yx} = \frac{655 - 580}{450-400}$
+
+$b_{yx} = \frac{75}{50}$
+
+$b_{yx} = 1.5$
+
+$\bar{x} = \frac{\sum x}{5} = \frac{20}{5} = 4$
+$\bar{y} = \frac{\sum y}{5} = \frac{29}{5} = 5.8$
+
+Regression equation of $y$ on $x$
+$(y - \bar{y}) = b_{yx}(x - \bar{x})$
+$(y - 5.8) = 1.5(x - 4)$
+$y = 1.5 x - 6 + 5.8$
+$y = 1.5 x - 0.2$
+
+Regression equation of $x$ on $y$
+$(x - \bar{x}) = b_{xy}(y - \bar{y})$
+$(x - 4) = 0.56 (y-5.8)$
+$x = 0.56 y + 3.25 + 4$
+$x = 0.56 y + 0.75$
+
+$y = 1.5 x - 0.2 = 1.5 * 10 - 0.2$
+$y = 15-0.2 = 14.8$
+
+$x = 0.56 * 15 + 0.75 = 9.15$
+
+## Curve Fitting (Linear Regression)
+
+Suppose we are given $n$ values $x_i$ and corresponding values $y_i$ of the variable $y$ and $x$ respectively.
+In the pairs $(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$ then the values of $y_i$ depending on $x_i$ gives as a function
+
+Generally, it is not possible to find the an exact plane, hence we try to find a curve to the points. Hence, we try approximation to the curve $y = f(x)$. Such a curve is referred to as the curve of best fit.
+
+The process of determining a curve of best fit is called curve fitting. The method generally used for curve fitting is known as method of least squares.
+
+## Method of Least Squares
+
+This is a method for finding the unknown coefficient in a curve that serves as best approximation to the curve $y = f(x)$.
+
+The principle of least squares says that the sum of squares of the errors between the observed values and the corresponding expected (estimated) values should be the least.
+
+Suppose we want to fit a $k$th degree curve to the points $(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$ given by
+
+$$y = a_0 + a_1 x + a_2 x^2 + ... + a_k x^k$$
+
+Let $y_i'$ be the estimated value of $y$ when $x$ takes the value $x_i$, then the corresponding observed value is $y_i$, then the residual or error is
+$$e_i = y_i - y_i'$$
+$$e_i = y_i - (a_0 + a_1 x + a_2 x^2 + ... + a_k x^k)$$
+To make the sum of squares minimum we have to minimize
+
+$$S = \sum e_i^2$$
+$$S = \sum (y_i - y_i')^2 = \sum (y_i - a_0 - a_1 x_i - a_2 x_i^2 - ... - a_k x_i^k)^2$$
+
+$S$ will be minimum when
+
+$$\frac{\partial S}{\partial a_0} = 0, \frac{\partial S}{\partial a_1} = 0, ... , \frac{\partial S}{\partial a_k} = 0$$
+
+Solve these $k+1$ equations called normal equation which gives the best values of $a_0, a_1, ..., a_k$
+
+Substituting these values in equation we get the curve of best fit
+
+Suppose we wish to have a straight line that serves as best approximation to the actual curve $y = f(x)$ passing through a given points $(x_1, y_1), (x_2, y_2), ..., (x_n, y_n)$ This line will be referred to as the line of best fit, and we take this equation as
+$$y = a + bx$$
+
+Where $a$ and $b$ are the parameter to be determined
+
+let the estimated value $y = a + bx$
+$$S = \sum (y_i - a - b x_i)^2$$
+
+for $S$ to be least 2 necessary condition are
+$$\frac{\partial S}{\partial a} = 0, \frac{\partial S}{\partial b} = 0$$
+
+Using equations these becomes
+$$2 \sum(y_i - a - b x_i) = 0, 2\sum (y_i - a - bx_i)(-x_i) = 0$$
+Therefore
+$$\sum y_i = n a + b \sum x_i$$
+$$\sum y_i x_i = a \sum x_i + b \sum x_i^2$$
+
+Solve equations and for determining the values of a & b normal putting these values in the line of best fit for the given data.
+
+## Fitting of a Parabola
+
+Suppose we wish to have a parabola to the curve of best fit for a data consisting of $n$ given pairs $(x_i, y_i)$
+for $i = 1, 2, ..., n$, let us take the equation of the parabola as
+$$y = a + b x + c x^2$$
+
+where $a, b,$ and $c$ are constants to be determined
+
+Let $y_i$ be the value of $y$ corresponding to the value of $x_i$ determined by equation, then the sum of squares of the error between observed value of $y$ and estimated value of $y$ is
+$$S = \sum (y_i - y_i')^2$$

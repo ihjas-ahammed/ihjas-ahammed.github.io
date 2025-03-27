@@ -92,8 +92,14 @@
                 },
                 {
                     "text": "Correlation and Regression",
-                    "path": "/stat2/mod3.html",
-                    "webview": true,
+                    "path": "/stat2/mod3",
+                    "webview": false,
+                    "qa": {}
+                },
+                {
+                    "text": "Sampling Distributions",
+                    "path": "/stat2/mod4",
+                    "webview": false,
                     "qa": {}
                 }
             ]
