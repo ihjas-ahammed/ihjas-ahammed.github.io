@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced 7-Day Study Plan</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+        :root {
+            --bg-color: #1a1a2e;
+            --sidebar-bg: #162447;
+            --content-bg: #1f4068;
+            --card-bg: #1b1b2f;
+            --primary-accent: #e43f5a;
+            --secondary-accent: #1fcca4;
+            --text-light: #e0e0e0;
+            --text-medium: #a0a0c0;
+            --text-dark: #162447;
+            --border-color: #3a3a5a;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+            --progress-bar-bg: #3a3a5a;
+            --progress-bar-fill: var(--secondary-accent);
+
+            --font-main: 'Poppins', sans-serif;
+
+            /* Mouse tracking variables */
+            --mouse-x: 50%;
+            --mouse-y: 50%;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-color);
+            color: var(--text-light);
+            display: flex;
+            line-height: 1.6;
+            position: relative; /* Needed for pseudo-element background */
+            transition: background-color 0.3s ease; /* Smooth theme transition if added later */
+        }
+
+        /* Interactive Background Effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: radial-gradient(
+                circle at var(--mouse-x) var(--mouse-y),
+                rgba(228, 63, 90, 0.15) 0%,
+                rgba(31, 204, 164, 0.05) 30%,
+                transparent 70%
+            );
+            z-index: -1;
+            pointer-events: none; /* Allows clicking through */
+            transition: background 0.1s linear; /* Smooth gradient movement */
+        }
+
+        .container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Sidebar Navigation */
+        .sidebar {
+            width: 250px;
+            background-color: var(--sidebar-bg);
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+            position: fixed; /* Fix sidebar */
+            left: 0;
+            top: 0;
+            box-shadow: 5px 0 15px var(--shadow-color);
+            z-index: 10;
+            transition: transform 0.3s ease; /* For mobile toggle */
+            overflow-y: auto; /* Allow sidebar scrolling if content overflows */
+        }
+
+        .sidebar h2 {
+            color: var(--secondary-accent);
+            text-align: center;
+            margin-bottom: 30px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .sidebar nav ul {
+            list-style: none;
+        }
+
+        .sidebar nav li a {
+            display: block;
+            color: var(--text-medium);
+            text-decoration: none;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+            font-weight: 400;
+            border-left: 3px solid transparent;
+        }
+
+        .sidebar nav li a:hover {
+            background-color: rgba(255, 255, 255, 0.05);
+            color: var(--text-light);
+            transform: translateX(5px);
+        }
+
+        .sidebar nav li a.active {
+            background-color: var(--primary-accent);
+            color: #fff;
+            font-weight: 600;
+            border-left: 3px solid var(--secondary-accent);
+            box-shadow: 0 2px 8px rgba(228, 63, 90, 0.4);
+        }
+
+        /* Progress Tracker */
+        .progress-tracker {
+            margin-top: auto; /* Push to bottom */
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .progress-tracker h3 {
+            font-size: 0.9em;
+            color: var(--text-medium);
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .progress-bar-container {
+            background-color: var(--progress-bar-bg);
+            border-radius: 10px;
+            height: 12px;
+            overflow: hidden;
+            margin-bottom: 5px;
+            box-shadow: inset 0 1px 3px rgba(0,0,0,0.3);
+        }
+
+        .progress-bar {
+            width: 0%; /* Initial width */
+            height: 100%;
+            background: linear-gradient(90deg, var(--secondary-accent), var(--primary-accent));
+            border-radius: 10px;
+            transition: width 0.5s ease-out;
+        }
+
+        #progress-text {
+            font-size: 0.85em;
+            text-align: center;
+            color: var(--text-medium);
+        }
+
+        /* Main Content Area */
+        .main-content {
+            flex-grow: 1;
+            margin-left: 250px; /* Offset by sidebar width */
+            padding: 40px;
+            height: 100vh; /* Full viewport height */
+            overflow-y: auto; /* Allow content scrolling */
+            transition: margin-left 0.3s ease;
+        }
+
+        .day-content {
+            display: none; /* Hidden by default */
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .day-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .day-header {
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--primary-accent);
+        }
+
+        .day-header h1 {
+            color: var(--secondary-accent);
+            font-size: 2em;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+
+        .day-header .goal {
+            color: var(--text-medium);
+            font-style: italic;
+            font-size: 1.1em;
+        }
+
+        .topic-section {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 12px var(--shadow-color);
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .topic-section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .topic-section h3 {
+            color: var(--primary-accent);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-left: 3px solid var(--secondary-accent);
+            padding-left: 10px;
+        }
+
+        .topic-list {
+            list-style: none;
+        }
+
+        .topic-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start; /* Align checkbox and text nicely */
+        }
+
+        /* Custom Checkbox Styling */
+        .topic-list input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 18px;
+            height: 18px;
+            background-color: var(--progress-bar-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 4px;
+            margin-right: 12px;
+            cursor: pointer;
+            position: relative;
+            top: 3px; /* Align vertically with text */
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            flex-shrink: 0; /* Prevent shrinking */
+        }
+
+        .topic-list input[type="checkbox"]:hover {
+            border-color: var(--secondary-accent);
+        }
+
+        .topic-list input[type="checkbox"]:checked {
+            background-color: var(--secondary-accent);
+            border-color: var(--secondary-accent);
+        }
+
+        .topic-list input[type="checkbox"]:checked::after {
+            content: '\u2714'; /* Checkmark character */
+            font-size: 14px;
+            color: var(--bg-color);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: bold;
+        }
+
+        .topic-list label {
+            cursor: pointer;
+            color: var(--text-light);
+            flex-grow: 1; /* Allow label to take remaining space */
+        }
+
+         .topic-list label.completed {
+            text-decoration: line-through;
+            color: var(--text-medium);
+        }
+
+        .topic-details {
+            font-size: 0.9em;
+            color: var(--text-medium);
+            margin-left: 30px; /* Indent details under checkbox */
+            margin-top: -5px;
+            margin-bottom: 10px;
+            padding-left: 5px;
+            border-left: 1px dashed var(--border-color);
+        }
+
+        .focus-section, .tips-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: rgba(31, 64, 104, 0.5); /* Slightly different bg */
+            border-radius: 8px;
+            border-left: 4px solid var(--primary-accent);
+        }
+
+        .focus-section h4, .tips-section h4 {
+            color: var(--secondary-accent);
+            margin-bottom: 10px;
+            font-size: 1.1em;
+        }
+
+        .tips-section ul {
+            list-style: disc;
+            margin-left: 20px;
+            color: var(--text-medium);
+        }
+        .tips-section li {
+            margin-bottom: 5px;
+        }
+
+        /* Mobile Menu Toggle Button */
+        .menu-toggle {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            background: var(--primary-accent);
+            color: white;
+            border: none;
+            padding: 10px 12px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.2em;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%); /* Hide sidebar off-screen */
+                width: 280px; /* Slightly wider for touch */
+                z-index: 1000; /* Ensure it's above content when open */
+            }
+
+            .sidebar.open {
+                transform: translateX(0);
+            }
+
+            .main-content {
+                margin-left: 0; /* Full width */
+                padding: 30px 20px; /* Adjust padding */
+            }
+
+            .menu-toggle {
+                display: block; /* Show toggle button */
+            }
+
+             body::before {
+                 /* Simplify background on smaller screens if needed */
+                 background: radial-gradient(
+                    circle at var(--mouse-x) var(--mouse-y),
+                    rgba(228, 63, 90, 0.1) 0%,
+                    rgba(31, 204, 164, 0.03) 40%,
+                    transparent 80%
+                 );
+             }
+        }
+
+        @media (max-width: 576px) {
+            .sidebar {
+                width: 250px; /* Adjust width */
+            }
+
+            .main-content {
+                 padding: 20px 15px;
+            }
+
+            .day-header h1 {
+                font-size: 1.6em;
+            }
+            .day-header .goal {
+                font-size: 1em;
+            }
+            .topic-section {
+                 padding: 20px;
+            }
+             .topic-section h3 {
+                font-size: 1.2em;
+            }
+            .focus-section, .tips-section {
+                padding: 15px;
+            }
+            .topic-list li {
+                font-size: 0.95em;
+            }
+            .topic-details {
+                margin-left: 25px;
+                font-size: 0.85em;
+            }
+             .topic-list input[type="checkbox"] {
+                 width: 16px;
+                 height: 16px;
+                 margin-right: 10px;
+             }
+             .topic-list input[type="checkbox"]:checked::after {
+                 font-size: 12px;
+             }
+        }
+
+        /* Overlay for mobile sidebar */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999; /* Below sidebar, above content */
+        }
+        .overlay.active {
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle Menu">☰</button>
+    <div class="overlay" id="overlay"></div>
+
+    <div class="container">
+        <aside class="sidebar" id="sidebar">
+            <h2>7-Day Plan</h2>
+            <nav>
+                <ul>
+                    <li><a href="#" data-day="1" class="day-link active">Day 1: Data Fundamentals</a></li>
+                    <li><a href="#" data-day="2" class="day-link">Day 2: Analysis & EDA Intro</a></li>
+                    <li><a href="#" data-day="3" class="day-link">Day 3: EDA Statistics</a></li>
+                    <li><a href="#" data-day="4" class="day-link">Day 4: EDA Core Viz</a></li>
+                    <li><a href="#" data-day="5" class="day-link">Day 5: EDA Viz & Preprocessing Intro</a></li>
+                    <li><a href="#" data-day="6" class="day-link">Day 6: Preprocessing Techniques</a></li>
+                    <li><a href="#" data-day="7" class="day-link">Day 7: ML Introduction</a></li>
+                </ul>
+            </nav>
+
+            <div class="progress-tracker">
+                <h3>Overall Progress</h3>
+                <div class="progress-bar-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <p id="progress-text">0% Complete</p>
+            </div>
+        </aside>
+
+        <main class="main-content" id="main-content">
+            <!-- Day 1 Content -->
+            <section id="day-1" class="day-content active">
+                <div class="day-header">
+                    <h1>Day 1: Data Fundamentals & Types</h1>
+                    <p class="goal">Understand what data is, its different forms, and how it's categorized statistically.</p>
+                </div>
+
+                <div class="topic-section">
+                    <h3>Topics (from mod1.md)</h3>
+                    <ul class="topic-list">
+                        <li>
+                            <input type="checkbox" id="topic-1-1" data-topic-id="topic-1-1"><label for="topic-1-1">Data vs. Big Data (5 Vs)</label>
+                            <div class="topic-details">Velocity, Volume, Variety, Veracity, Value</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-1-2" data-topic-id="topic-1-2"><label for="topic-1-2">Structured Data</label>
+                            <div class="topic-details">Definition, RDBMS, Attributes/Objects, Pros/Cons, Use Cases (e.g., sales transactions)</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-3" data-topic-id="topic-1-3"><label for="topic-1-3">Semi-Structured Data</label>
+                            <div class="topic-details">Definition, Examples (XML/JSON), Pros/Cons, Use Cases (e.g., web server logs)</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-4" data-topic-id="topic-1-4"><label for="topic-1-4">Unstructured Data</label>
+                            <div class="topic-details">Definition, Examples (Text, Images, Video), Pros/Cons, Use Cases (e.g., social media posts)</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-5" data-topic-id="topic-1-5"><label for="topic-1-5">Data Streams (Concept)</label>
+                            <div class="topic-details">Continuous flow of data</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-6" data-topic-id="topic-1-6"><label for="topic-1-6">Statistical Data: Qualitative vs. Quantitative</label>
+                            <div class="topic-details">Categorical vs. Numerical</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-7" data-topic-id="topic-1-7"><label for="topic-1-7">Qualitative: Nominal vs. Ordinal</label>
+                            <div class="topic-details">No order (Nominal: colors) vs. Order matters (Ordinal: education level). Encoding hint.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-8" data-topic-id="topic-1-8"><label for="topic-1-8">Quantitative: Discrete vs. Continuous</label>
+                            <div class="topic-details">Countable (Discrete: # of cars) vs. Measurable (Continuous: height)</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-1-9" data-topic-id="topic-1-9"><label for="topic-1-9">Continuous: Interval vs. Ratio Scale</label>
+                            <div class="topic-details">Meaningful difference, no true zero (Interval: Celsius) vs. True zero, meaningful ratio (Ratio: Height, Weight). Operations.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>Definitions, key differences, examples. Don't get bogged down in encoding details yet.</p>
+                </div>
+
+                <div class="tips-section">
+                    <h4>Study Tips (1 Hour Session)</h4>
+                    <ul>
+                        <li><strong>Review (5-10 mins):</strong> Quickly recap previous concepts if applicable.</li>
+                        <li><strong>Focused Study (40-45 mins):</strong> Read notes on today's topics. Understand the 'what' and 'why'.</li>
+                        <li><strong>Summarize & Question (5-10 mins):</strong> Jot down 3-5 key takeaways. Note any unclear points.</li>
+                        <li>Minimize distractions. Use active learning (explain aloud, summarize).</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Day 2 Content -->
+            <section id="day-2" class="day-content">
+                <div class="day-header">
+                    <h1>Day 2: Data Analysis Overview & Intro to EDA</h1>
+                    <p class="goal">Understand the overall data analysis process, different types of analysis, and the purpose/scope of EDA.</p>
+                </div>
+
+                 <div class="topic-section">
+                    <h3>Topics (from mod1.md & mod2.md)</h3>
+                    <ul class="topic-list">
+                        <li>
+                            <input type="checkbox" id="topic-2-1" data-topic-id="topic-2-1"><label for="topic-2-1">Data Analysis Process</label>
+                            <div class="topic-details">Overall steps: Requirement Gathering, Collection, Cleaning, Analysis, Interpretation, Presentation. Mining/Management/Stat Analysis aspects.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-2-2" data-topic-id="topic-2-2"><label for="topic-2-2">Types of Data Analysis (Briefly)</label>
+                            <div class="topic-details">Predictive (What will happen?), Descriptive (What happened?), Exploratory (Discover patterns), Diagnostic (Why did it happen?), Inferential (Generalize from sample). Focus on aims.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-2-3" data-topic-id="topic-2-3"><label for="topic-2-3">Inferential Analysis Details</label>
+                            <div class="topic-details">Concept: Sample vs Population. Techniques list (Hypothesis testing, Confidence Intervals).</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-2-4" data-topic-id="topic-2-4"><label for="topic-2-4">Statistical Modeling & Inference (Concept)</label>
+                            <div class="topic-details">Using models to draw conclusions about populations.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-2-5" data-topic-id="topic-2-5"><label for="topic-2-5">Probability Distributions (Concept)</label>
+                            <div class="topic-details">How probabilities are distributed (Normal/Uniform briefly).</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-2-6" data-topic-id="topic-2-6"><label for="topic-2-6">What is Data Science?</label>
+                            <div class="topic-details">Definition, Process Steps overview, Challenges overview.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-2-7" data-topic-id="topic-2-7"><label for="topic-2-7">What is EDA? (mod2.md)</label>
+                            <div class="topic-details">Purpose (summarize, visualize, uncover structure), Tools list, Objectives, Techniques concept.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-2-8" data-topic-id="topic-2-8"><label for="topic-2-8">Types of EDA</label>
+                            <div class="topic-details">Graphical vs. Non-graphical, Univariate vs. Multivariate.</div>
+                        </li>
+                    </ul>
+                </div>
+
+                 <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>High-level understanding of processes and analysis types. What is the goal of EDA?</p>
+                </div>
+                 <div class="tips-section">
+                     <h4>Study Tips (1 Hour Session)</h4>
+                     <!-- Same tips structure as Day 1 -->
+                     <ul>
+                         <li><strong>Review (5-10 mins):</strong> Quickly reread Day 1 key points.</li>
+                         <li><strong>Focused Study (40-45 mins):</strong> Go through today's topics, focusing on concepts and goals.</li>
+                         <li><strong>Summarize & Question (5-10 mins):</strong> List key takeaways and questions.</li>
+                         <li>Minimize distractions. Use active learning.</li>
+                     </ul>
+                 </div>
+            </section>
+
+            <!-- Day 3 Content -->
+            <section id="day-3" class="day-content">
+                 <div class="day-header">
+                    <h1>Day 3: EDA - Descriptive Statistics & Non-Graphical</h1>
+                    <p class="goal">Understand how to summarize single and multiple variables numerically.</p>
+                </div>
+                 <div class="topic-section">
+                    <h3>Topics (from mod2.md)</h3>
+                    <ul class="topic-list">
+                         <li>
+                            <input type="checkbox" id="topic-3-1" data-topic-id="topic-3-1"><label for="topic-3-1">Univariate Non-Graphical EDA</label>
+                            <div class="topic-details">Categorical (Range/Frequency), Quantitative (Center, Spread, Modality, Shape, Outliers).</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-3-2" data-topic-id="topic-3-2"><label for="topic-3-2">Measures of Central Tendency</label>
+                            <div class="topic-details">Mean, Median, Mode, Midrange - definitions, when to use Median (skewed data, outliers).</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-3-3" data-topic-id="topic-3-3"><label for="topic-3-3">Measures of Dispersion (Spread)</label>
+                            <div class="topic-details">Range, Variance, Std Dev, MAD, IQR, 5-Number Summary (Min, Q1, Median, Q3, Max) - definitions, what they measure.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-3-4" data-topic-id="topic-3-4"><label for="topic-3-4">Skewness and Kurtosis</label>
+                            <div class="topic-details">Definitions. Skew (Positive/Negative/Zero) - asymmetry. Kurtosis (Lepto/Meso/Platy) - peakedness/tails. What they tell about shape.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-3-5" data-topic-id="topic-3-5"><label for="topic-3-5">Multivariate Non-Graphical EDA</label>
+                            <div class="topic-details">List & brief concept: Cross-Tabulation (frequencies of two categorical vars), Correlation Matrix (linear relationships b/w numeric vars), Covariance. Focus on what they show.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-3-6" data-topic-id="topic-3-6"><label for="topic-3-6">Python Libraries Intro</label>
+                            <div class="topic-details">Concept: Pandas DataFrame (tabular data structure), Matplotlib/Seaborn (for plotting visualizations).</div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>Understand the statistical measures and what they tell you about the data's center, spread, and shape.</p>
+                </div>
+                 <div class="tips-section">
+                     <h4>Study Tips (1 Hour Session)</h4>
+                     <ul>
+                         <li><strong>Review (5-10 mins):</strong> Recap Day 2 process and EDA goals.</li>
+                         <li><strong>Focused Study (40-45 mins):</strong> Grasp definitions and purpose of each statistic.</li>
+                         <li><strong>Summarize & Question (5-10 mins):</strong> Note key measures and their interpretations.</li>
+                         <li>Minimize distractions. Active learning.</li>
+                     </ul>
+                 </div>
+            </section>
+
+            <!-- Day 4 Content -->
+            <section id="day-4" class="day-content">
+                 <div class="day-header">
+                    <h1>Day 4: EDA - Core Visualizations</h1>
+                    <p class="goal">Understand key graphical techniques for visualizing data distributions and relationships.</p>
+                </div>
+                 <div class="topic-section">
+                    <h3>Topics (from mod2.md)</h3>
+                     <ul class="topic-list">
+                        <li>
+                            <input type="checkbox" id="topic-4-1" data-topic-id="topic-4-1"><label for="topic-4-1">Univariate Graphical EDA (Concept)</label>
+                            <div class="topic-details">Visualizing single variables.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-4-2" data-topic-id="topic-4-2"><label for="topic-4-2">Multivariate Graphical EDA (Concept)</label>
+                            <div class="topic-details">Visualizing relationships between variables.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-4-3" data-topic-id="topic-4-3"><label for="topic-4-3">Histogram</label>
+                            <div class="topic-details">Shows distribution/frequency of a single numeric variable (bins). Use: Understand shape, center, spread.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-4-4" data-topic-id="topic-4-4"><label for="topic-4-4">Box Plot (Box-and-Whisker)</label>
+                            <div class="topic-details">Shows 5-number summary visually (Median, quartiles, whiskers for range/IQR, outliers). Use: Compare distributions across groups, identify outliers.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-4-5" data-topic-id="topic-4-5"><label for="topic-4-5">Scatter Plot</label>
+                            <div class="topic-details">Shows relationship between two numeric variables (dots for each data point). Use: Identify correlation (linear/non-linear), patterns, outliers.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-4-6" data-topic-id="topic-4-6"><label for="topic-4-6">Heatmap</label>
+                            <div class="topic-details">Visual representation of a matrix (e.g., correlation matrix) using color intensity. Use: Quickly spot strong/weak correlations between many variables.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-4-7" data-topic-id="topic-4-7"><label for="topic-4-7">Pair Plot (Scatterplot Matrix)</label>
+                            <div class="topic-details">Grid of scatter plots for all pairs of numeric variables, often with histograms/density plots on diagonal. Use: Comprehensive overview of pairwise relationships.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-4-8" data-topic-id="topic-4-8"><label for="topic-4-8">Python Plotting Code (Brief Review)</label>
+                            <div class="topic-details">Recognize structure: `sns.histplot()`, `sns.boxplot()`, `sns.scatterplot()`, `sns.heatmap()`, `sns.pairplot()`.</div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>What information does each plot type convey? Recognize their appearance and primary use cases.</p>
+                </div>
+                 <div class="tips-section">
+                     <h4>Study Tips (1 Hour Session)</h4>
+                     <ul>
+                         <li><strong>Review (5-10 mins):</strong> Link Day 3 stats to these visualizations.</li>
+                         <li><strong>Focused Study (40-45 mins):</strong> Understand what each plot shows and *why* you'd choose it. Look at examples if possible.</li>
+                         <li><strong>Summarize & Question (5-10 mins):</strong> Match plots to analysis questions (e.g., Distribution -> Histogram, Relationship -> Scatter).</li>
+                         <li>Minimize distractions. Active learning.</li>
+                     </ul>
+                 </div>
+            </section>
+
+            <!-- Day 5 Content -->
+             <section id="day-5" class="day-content">
+                 <div class="day-header">
+                    <h1>Day 5: EDA - More Viz & Preprocessing Intro</h1>
+                    <p class="goal">Cover remaining visualizations and start understanding why data needs cleaning.</p>
+                </div>
+                 <div class="topic-section">
+                    <h3>Finish EDA Visualizations (from mod2.md)</h3>
+                     <ul class="topic-list">
+                         <li>
+                            <input type="checkbox" id="topic-5-1" data-topic-id="topic-5-1"><label for="topic-5-1">Bubble Chart</label>
+                            <div class="topic-details">Scatter plot where point size represents a third numeric variable. Use: Show relationship + magnitude.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-5-2" data-topic-id="topic-5-2"><label for="topic-5-2">Line Graph</label>
+                            <div class="topic-details">Shows trends over a continuous interval or time. Use: Time-series data, tracking changes.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-5-3" data-topic-id="topic-5-3"><label for="topic-5-3">Pie Chart / Bar Chart</label>
+                            <div class="topic-details">Pie: Proportions of a whole (use sparingly, <5 categories). Bar: Compare quantities across categories. Use: Categorical data comparison.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-5-4" data-topic-id="topic-5-4"><label for="topic-5-4">Area Chart</label>
+                            <div class="topic-details">Like line chart but area below line is filled. Stacked Area shows parts of a whole over time. Use: Show cumulative totals or volume changes.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-5-5" data-topic-id="topic-5-5"><label for="topic-5-5">Q-Q Plot (Quantile-Quantile)</label>
+                            <div class="topic-details">Compares quantiles of data distribution to theoretical quantiles (e.g., Normal). Use: Check if data follows a specific distribution (esp. normality). Points on line = good fit.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-5-6" data-topic-id="topic-5-6"><label for="topic-5-6">Briefly: Other Plots</label>
+                            <div class="topic-details">Quantile plot (data vs quantiles), Hierarchical (tree structures), Icon-based (glyphs). Understand purpose if mentioned.</div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="topic-section">
+                    <h3>Start Data Preprocessing (from mod3.md)</h3>
+                     <ul class="topic-list">
+                         <li>
+                            <input type="checkbox" id="topic-5-7" data-topic-id="topic-5-7"><label for="topic-5-7">Why preprocess data?</label>
+                            <div class="topic-details">Real-world data issues: Incomplete (missing), Noisy (errors, outliers), Inconsistent (discrepancies), Redundant. "Garbage In, Garbage Out".</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-5-8" data-topic-id="topic-5-8"><label for="topic-5-8">Advantages of Preprocessing</label>
+                            <div class="topic-details">Improves data quality, accuracy, efficiency of analysis/modeling.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-5-9" data-topic-id="topic-5-9"><label for="topic-5-9">Data Cleaning (Concept)</label>
+                            <div class="topic-details">Process of handling issues: Missing values, errors/noise, duplicates, type conversion.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-5-10" data-topic-id="topic-5-10"><label for="topic-5-10">Dealing with Missing Values</label>
+                            <div class="topic-details">List methods: Ignore row/column, Manual fill, Global Constant, Mean/Median/Mode imputation, Prediction Model. Brief Pros/Cons (e.g., Ignore = data loss, Mean = distorts variance).</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-5-11" data-topic-id="topic-5-11"><label for="topic-5-11">Noisy Data (Definition)</label>
+                            <div class="topic-details">Random error or variance in measured variable. Outliers are often considered noise.</div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>Finish understanding plot types. Grasp the problems in real-world data that necessitate preprocessing.</p>
+                </div>
+                <div class="tips-section">
+                     <h4>Study Tips (1 Hour Session)</h4>
+                     <ul>
+                         <li><strong>Review (5-10 mins):</strong> Recap Day 4 core plots.</li>
+                         <li><strong>Focused Study (40-45 mins):</strong> Understand remaining plots. Internalize the *reasons* for data cleaning.</li>
+                         <li><strong>Summarize & Question (5-10 mins):</strong> List data problems and initial cleaning ideas.</li>
+                         <li>Minimize distractions. Active learning.</li>
+                     </ul>
+                 </div>
+            </section>
+
+            <!-- Day 6 Content -->
+            <section id="day-6" class="day-content">
+                 <div class="day-header">
+                    <h1>Day 6: Data Preprocessing Techniques</h1>
+                    <p class="goal">Understand common methods for cleaning, integrating, transforming, and reducing data.</p>
+                </div>
+                 <div class="topic-section">
+                    <h3>Topics (from mod3.md)</h3>
+                     <ul class="topic-list">
+                         <li>
+                            <input type="checkbox" id="topic-6-1" data-topic-id="topic-6-1"><label for="topic-6-1">Dealing with Noisy Data</label>
+                            <div class="topic-details">Binning (smoothing local values), Regression (fit curve), Clustering (detect outliers), Combined human/computer inspection. Brief concept of each.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-6-2" data-topic-id="topic-6-2"><label for="topic-6-2">Outlier Detection Methods</label>
+                            <div class="topic-details">Statistical (Z-score > threshold), IQR method (outside Q1-1.5*IQR or Q3+1.5*IQR), Isolation Forest, DBSCAN (density-based clustering). Understand *what* they do, not deep algorithms.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-6-3" data-topic-id="topic-6-3"><label for="topic-6-3">Data Integration (Concept)</label>
+                            <div class="topic-details">Combining data from multiple sources. Challenges: Entity identification, Redundancy, Data value conflicts, Schema integration, Duplication.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-6-4" data-topic-id="topic-6-4"><label for="topic-6-4">Data Transformation (Concept)</label>
+                            <div class="topic-details">Changing data format or structure (e.g., scaling, aggregation).</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-6-5" data-topic-id="topic-6-5"><label for="topic-6-5">Standardization/Normalization (Scaling)</label>
+                            <div class="topic-details">Purpose: Put features on a similar scale for distance-based algorithms (KNN, K-Means, PCA). Z-Score (StandardScaler: mean=0, std=1), Min-Max (MinMaxScaler: range [0,1]), Robust Scaling (uses IQR, robust to outliers), Normalizer (scales samples/rows to unit norm). Understand goal & basic idea.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-6-6" data-topic-id="topic-6-6"><label for="topic-6-6">Other Transformation Methods</label>
+                            <div class="topic-details">List & brief concept: Smoothing (remove noise), Aggregation (summarize), Discretization (numeric to categorical bins), Attribute/Feature construction, Generalization (concept hierarchies).</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-6-7" data-topic-id="topic-6-7"><label for="topic-6-7">Data Reduction (Concept)</label>
+                            <div class="topic-details">Obtain reduced representation while maintaining integrity. Strategies: Dimensionality Reduction (features), Numerosity Reduction (data volume), Data Compression.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-6-8" data-topic-id="topic-6-8"><label for="topic-6-8">Dimensionality Reduction: PCA (Principal Component Analysis)</label>
+                            <div class="topic-details">Concept: Create new uncorrelated features (Principal Components) that capture maximum variance. Reduce number of features while retaining most information.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-6-9" data-topic-id="topic-6-9"><label for="topic-6-9">Review Python Cleaning Code (Concept)</label>
+                            <div class="topic-details">Pandas: `.replace()`, `.dropna()`, `.fillna()`, `.drop_duplicates()`. Scikit-learn: `SimpleImputer`. Z-score removal logic. Understand *what* the code achieves.</div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>Key techniques for fixing data issues and preparing it for analysis/modeling. Understand the purpose of scaling and PCA.</p>
+                </div>
+                 <div class="tips-section">
+                     <h4>Study Tips (1 Hour Session)</h4>
+                     <ul>
+                         <li><strong>Review (5-10 mins):</strong> Revisit Day 5 data problems.</li>
+                         <li><strong>Focused Study (40-45 mins):</strong> Understand the *purpose* and basic idea of each technique (cleaning, scaling, reduction).</li>
+                         <li><strong>Summarize & Question (5-10 mins):</strong> Group techniques by purpose. Note when you might use scaling or PCA.</li>
+                         <li>Minimize distractions. Active learning.</li>
+                     </ul>
+                 </div>
+            </section>
+
+            <!-- Day 7 Content -->
+            <section id="day-7" class="day-content">
+                 <div class="day-header">
+                    <h1>Day 7: Machine Learning Introduction</h1>
+                    <p class="goal">Get a high-level overview of Machine Learning concepts, types, evaluation, and key algorithms mentioned.</p>
+                </div>
+                 <div class="topic-section">
+                    <h3>Topics (from Unit 4 .md)</h3>
+                     <ul class="topic-list">
+                         <li>
+                            <input type="checkbox" id="topic-7-1" data-topic-id="topic-7-1"><label for="topic-7-1">What is Machine Learning (ML)?</label>
+                            <div class="topic-details">Definition (Learn from data without explicit programming), Importance (automation, insights).</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-2" data-topic-id="topic-7-2"><label for="topic-7-2">Types of ML</label>
+                            <div class="topic-details">Supervised (labeled data), Unsupervised (unlabeled data), Semi-supervised (mix), Reinforcement (rewards/penalties). Know the key difference based on data/feedback.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-7-3" data-topic-id="topic-7-3"><label for="topic-7-3">Supervised Learning</label>
+                            <div class="topic-details">Task types: Classification (predict category, e.g., spam/not spam) vs. Regression (predict continuous value, e.g., house price).</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-4" data-topic-id="topic-7-4"><label for="topic-7-4">Unsupervised Learning</label>
+                            <div class="topic-details">Task types: Clustering (group similar data points, e.g., customer segments) vs. Dimensionality Reduction (reduce features, e.g., PCA).</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-7-5" data-topic-id="topic-7-5"><label for="topic-7-5">Reinforcement Learning</label>
+                            <div class="topic-details">Key Components: Agent, Environment, State, Action, Reward. Learning through trial and error.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-6" data-topic-id="topic-7-6"><label for="topic-7-6">Train-Test Split</label>
+                            <div class="topic-details">Why? Train model on one part of data, evaluate its performance on unseen data (test set) to estimate generalization.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-7" data-topic-id="topic-7-7"><label for="topic-7-7">Bias vs. Variance Trade-off</label>
+                            <div class="topic-details">Bias: Error from wrong assumptions (Underfitting - too simple). Variance: Error from sensitivity to small fluctuations in training data (Overfitting - too complex). Goal is low bias & low variance.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-8" data-topic-id="topic-7-8"><label for="topic-7-8">Model Evaluation Metrics</label>
+                            <div class="topic-details">Classification: Accuracy (overall correct), Confusion Matrix (TP/TN/FP/FN), Precision (TP / (TP+FP) - correctness of positive predictions), Recall (TP / (TP+FN) - sensitivity, finds all positives), F1-Score (harmonic mean of Precision/Recall). Regression: MAE, MSE, RMSE (error magnitudes), R² (variance explained). What they measure.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-7-9" data-topic-id="topic-7-9"><label for="topic-7-9">KNN Algorithm (K-Nearest Neighbors)</label>
+                            <div class="topic-details">Concept: Classify/predict based on majority vote/average of 'K' nearest neighbors in feature space (using distance metric). Simple, instance-based.</div>
+                        </li>
+                        <li>
+                            <input type="checkbox" id="topic-7-10" data-topic-id="topic-7-10"><label for="topic-7-10">K-Means Clustering</label>
+                            <div class="topic-details">Concept: Unsupervised. Partition data into 'K' clusters. Iteratively assign points to nearest centroid and update centroid position.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-11" data-topic-id="topic-7-11"><label for="topic-7-11">Naive Bayes</label>
+                            <div class="topic-details">Concept: Probabilistic classifier based on Bayes' Theorem with 'naive' assumption of feature independence. Fast, good for text.</div>
+                        </li>
+                         <li>
+                            <input type="checkbox" id="topic-7-12" data-topic-id="topic-7-12"><label for="topic-7-12">SVD (Singular Value Decomposition)</label>
+                            <div class="topic-details">Concept: Matrix factorization technique. Used in dimensionality reduction, recommendations.</div>
+                        </li>
+                    </ul>
+                </div>
+                 <div class="focus-section">
+                    <h4>Focus</h4>
+                    <p>Understand the ML landscape, the purpose of different learning types, the crucial concepts of train/test split and bias/variance, and the basic idea behind the mentioned algorithms (KNN, K-Means).</p>
+                </div>
+                 <div class="tips-section">
+                     <h4>Study Tips (1 Hour Session)</h4>
+                     <ul>
+                         <li><strong>Review (5-10 mins):</strong> Briefly recall data preprocessing steps (Day 6).</li>
+                         <li><strong>Focused Study (40-45 mins):</strong> Grasp the core concepts of ML types, evaluation, and the high-level idea of each algorithm.</li>
+                         <li><strong>Summarize & Question (5-10 mins):</strong> Differentiate supervised/unsupervised. Explain bias/variance. What are KNN/K-Means for?</li>
+                         <li>Minimize distractions. Active learning.</li>
+                     </ul>
+                 </div>
+            </section>
+
+            <!-- Add more day sections here following the pattern -->
+
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const dayLinks = document.querySelectorAll('.day-link');
+            const dayContents = document.querySelectorAll('.day-content');
+            const sidebar = document.getElementById('sidebar');
+            const menuToggle = document.getElementById('menu-toggle');
+            const overlay = document.getElementById('overlay');
+            const mainContent = document.getElementById('main-content');
+            const progressBar = document.getElementById('progress-bar');
+            const progressText = document.getElementById('progress-text');
+            const checkboxes = document.querySelectorAll('.topic-list input[type="checkbox"]');
+            const body = document.body;
+
+            let progressData = {};
+            const totalTopics = checkboxes.length;
+
+            // --- Progress Loading ---
+            function loadProgress() {
+                const savedProgress = localStorage.getItem('studyPlanProgress');
+                if (savedProgress) {
+                    progressData = JSON.parse(savedProgress);
+                } else {
+                    progressData = {}; // Initialize if nothing is saved
+                }
+
+                checkboxes.forEach(checkbox => {
+                    const topicId = checkbox.dataset.topicId;
+                    if (progressData[topicId]) {
+                        checkbox.checked = true;
+                        const label = checkbox.nextElementSibling; // Assuming label is next sibling
+                         if (label && label.tagName === 'LABEL') {
+                             label.classList.add('completed');
+                         }
+                    } else {
+                        checkbox.checked = false;
+                         const label = checkbox.nextElementSibling;
+                         if (label && label.tagName === 'LABEL') {
+                             label.classList.remove('completed');
+                         }
+                    }
+                });
+                updateProgressDisplay();
+            }
+
+            // --- Progress Saving & Updating ---
+            function updateProgress(topicId, isChecked) {
+                progressData[topicId] = isChecked;
+                localStorage.setItem('studyPlanProgress', JSON.stringify(progressData));
+                updateProgressDisplay();
+
+                // Update label style
+                 const checkbox = document.getElementById(topicId); // Use topicId directly if it's the element ID
+                 const label = checkbox ? checkbox.nextElementSibling : null;
+                 if (label && label.tagName === 'LABEL') {
+                     if(isChecked) {
+                         label.classList.add('completed');
+                     } else {
+                         label.classList.remove('completed');
+                     }
+                 }
+            }
+
+            function updateProgressDisplay() {
+                const completedTopics = Object.values(progressData).filter(status => status === true).length;
+                const progressPercentage = totalTopics > 0 ? Math.round((completedTopics / totalTopics) * 100) : 0;
+
+                progressBar.style.width = `${progressPercentage}%`;
+                progressText.textContent = `${progressPercentage}% Complete (${completedTopics}/${totalTopics} topics)`;
+            }
+
+            // --- Navigation ---
+            function setActiveDay(day) {
+                // Update Links
+                dayLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.dataset.day === day) {
+                        link.classList.add('active');
+                    }
+                });
+
+                // Update Content Sections
+                dayContents.forEach(content => {
+                    content.classList.remove('active');
+                    if (content.id === `day-${day}`) {
+                        content.classList.add('active');
+                    }
+                });
+
+                 // Scroll to top of content area
+                mainContent.scrollTop = 0;
+
+                // Close sidebar on mobile after selection
+                if (window.innerWidth <= 992) {
+                    sidebar.classList.remove('open');
+                    overlay.classList.remove('active');
+                }
+            }
+
+            dayLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const day = link.dataset.day;
+                    setActiveDay(day);
+                });
+            });
+
+            // --- Checkbox Handling ---
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('change', (e) => {
+                    const topicId = e.target.dataset.topicId;
+                    updateProgress(topicId, e.target.checked);
+                });
+            });
+
+             // --- Mobile Menu Toggle ---
+             menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+             });
+
+             overlay.addEventListener('click', () => {
+                 sidebar.classList.remove('open');
+                 overlay.classList.remove('active');
+             });
+
+            // --- Mouse Interaction for Background ---
+            body.addEventListener('mousemove', (e) => {
+                // Calculate mouse position percentage relative to viewport
+                const x = (e.clientX / window.innerWidth) * 100;
+                const y = (e.clientY / window.innerHeight) * 100;
+
+                // Update CSS variables - use requestAnimationFrame for performance
+                requestAnimationFrame(() => {
+                    body.style.setProperty('--mouse-x', `${x}%`);
+                    body.style.setProperty('--mouse-y', `${y}%`);
+                });
+            });
+
+            // --- Initial Load ---
+            loadProgress(); // Load progress first
+            setActiveDay('1'); // Set default day view
+
+        });
+    </script>
+
+</body>
+</html>

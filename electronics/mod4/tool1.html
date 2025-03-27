@@ -3,114 +3,243 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Electronics Journey</title>
+    <title>Digital Electronics Journey - MC Dungeons Theme</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font for Minecraft Style -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         /* Custom base styles */
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Standard font for readability */
+            /* Dark purple/gray gradient inspired by the image */
+             background-color: #211e2b; /* Fallback */
+             background-image: linear-gradient(to bottom right, #312d3b, #211e2b);
+             color: #e0e0e0; /* Light gray text default */
         }
 
-        /* Styles for step transitions */
+        /* Minecraft-style font for titles/headers */
+        .font-minecraft {
+             font-family: 'Press Start 2P', cursive;
+        }
+
+        /* Main container mimicking the item description panel */
+        .mc-container {
+            background-color: rgba(33, 30, 43, 0.85); /* Slightly transparent dark background */
+            backdrop-filter: blur(4px);
+             border: 1px solid #5a4a6a; /* Subtle purple border */
+             border-radius: 4px; /* Less rounded corners */
+             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Title style */
+        h1.mc-title {
+            color: #ffffff;
+            border-bottom: 1px solid #5a4a6a; /* Purple separator */
+            padding-bottom: 0.75rem; /* Spacing */
+        }
+
+        /* Step transitions (Keep existing logic) */
         .step {
-            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-            position: absolute; /* Needed for clean transitions */
-            width: 100%;
-            left: 0;
-            top: 0;
-            padding: 1rem; /* Add padding within step */
-            box-sizing: border-box;
+             transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
+             position: absolute; width: 100%; left: 0; top: 0;
+             padding: 1rem; box-sizing: border-box;
         }
-
-        .step.hidden {
-            opacity: 0;
-            transform: translateX(100%); /* Slide out to the right */
-            pointer-events: none; /* Prevent interaction when hidden */
-            height: 0; /* Collapse height when hidden */
-            overflow: hidden;
-            position: absolute; /* Keep it out of flow */
-        }
-
-         .step.prev-step {
-             transform: translateX(-100%); /* Slide out to the left */
-             position: absolute; /* Keep it out of flow */
-        }
-
-         .step.current-step {
-            opacity: 1;
-            transform: translateX(0);
-            position: relative; /* Bring current step back into flow */
-            height: auto; /* Allow height to adjust */
-            overflow: visible;
-        }
+        .step.hidden { opacity: 0; transform: translateX(100%); pointer-events: none; height: 0; overflow: hidden; position: absolute; }
+        .step.prev-step { transform: translateX(-100%); position: absolute; }
+        .step.current-step { opacity: 1; transform: translateX(0); position: relative; height: auto; overflow: visible; }
 
         /* Styling for code blocks and interactive elements */
         code {
-            background-color: rgba(59, 59, 79, 0.8); /* input-bg with opacity */
+            background-color: #4a4458; /* Darker purple-gray */
             padding: 2px 6px;
-            border-radius: 4px;
+            border-radius: 2px; /* Sharper corners */
             font-family: 'Courier New', Courier, monospace;
-            color: #ffda63; /* Yellowish */
+            color: #ffd700; /* Gold/yellow like sparks */
+            font-size: 0.9em;
+            border: 1px solid #5a4a6a;
+        }
+
+        .mc-interactive-section {
+            background-color: rgba(20, 18, 26, 0.7); /* Even darker inner background */
+            padding: 15px;
+            border-radius: 3px;
+            margin-top: 20px;
+             border: 1px dashed #8a4ca8; /* Dashed purple border */
+        }
+        .mc-interactive-section label {
+            display: block; margin-bottom: 5px; font-weight: bold;
+            color: #c084fc; /* Purple accent for labels */
             font-size: 0.9em;
         }
-        .interactive-section {
-            background-color: rgba(10, 10, 35, 0.7);
-            padding: 15px;
-            border-radius: 8px;
-            margin-top: 20px;
-            border: 1px dashed #00ffff; /* accent */
+        .mc-interactive-section input[type="text"],
+        .mc-interactive-section input[type="number"] {
+            width: 100%; padding: 8px; margin-bottom: 10px;
+            border: 1px solid #5a4a6a; /* Purple border */
+            border-radius: 2px; /* Sharper corners */
+            background-color: #312d3b; /* Dark input background */
+            color: #e0e0e0; /* Light text */
+            font-size: 0.95em;
         }
-        .interactive-section label { display: block; margin-bottom: 5px; font-weight: bold; color: #00ffff; }
-        .interactive-section input[type="text"],
-        .interactive-section input[type="number"] {
-            width: 100%; padding: 10px; margin-bottom: 10px; border: none;
-            border-radius: 5px; background-color: #3b3b4f; /* input-bg */
-            color: #f5f6f7; /* text-main */ font-size: 1em;
+        .mc-interactive-section button, .mc-nav-button {
+            background-color: #581c87; /* Dark Purple */
+             color: #ffffff;
+             border: 1px solid #7e22ce; /* Brighter purple border */
+             padding: 8px 14px; border-radius: 2px; /* Sharper corners */
+             cursor: pointer; font-size: 0.9em; font-weight: bold;
+             margin-right: 8px; margin-bottom: 8px; text-transform: uppercase; /* MC buttons often uppercase */
+             transition: background-color 0.2s ease, border-color 0.2s ease;
+             box-shadow: 0 2px 3px rgba(0,0,0,0.3);
         }
-        .interactive-section button {
-             background-color: #00ffff; /* accent */ color: #0a0a23; /* primary */
-             border: none; padding: 10px 15px; border-radius: 5px; cursor: pointer;
-             font-size: 1em; font-weight: bold; margin-right: 10px; margin-bottom: 10px;
-             transition: background-color 0.3s ease;
+        .mc-interactive-section button:hover, .mc-nav-button:hover {
+             background-color: #6b21a8; /* Slightly lighter purple */
+             border-color: #9333ea;
         }
-        .interactive-section button:hover { background-color: #00e0e0; }
-        .interactive-output {
-            margin-top: 10px; padding: 10px; background-color: #0a0a23; /* primary */
-            border-radius: 5px; font-family: 'Courier New', Courier, monospace;
+         .mc-nav-button:disabled { /* Style for disabled nav buttons */
+            background-color: #4a4458;
+            border-color: #5a4a6a;
+            color: #888;
+            cursor: not-allowed;
+            box-shadow: none;
+         }
+
+        .mc-interactive-output {
+            margin-top: 10px; padding: 10px;
+            background-color: #1e1b24; /* Very dark */
+            border-radius: 2px;
+            font-family: 'Courier New', Courier, monospace;
             font-weight: bold; word-wrap: break-word; min-height: 30px;
-            border: 1px solid #00ffff; /* accent */
+            border: 1px solid #8a4ca8; /* Purple border */
+             color: #e0e0e0; /* Light text */
         }
-        .interactive-output .label { color: #00ffff; font-weight: normal; font-family: inherit; }
-        .error-message { color: #ffcccb; font-size: 0.9em; margin-top: -5px; margin-bottom: 10px; }
-        .signal-diagram {
-            width: 90%; max-width: 250px; height: auto; display: block; margin: 15px auto;
-            background: #fff; border-radius: 5px; padding: 10px; border: 1px solid #00ffff;
+        .mc-interactive-output .label { color: #c084fc; font-weight: normal; font-family: inherit; }
+        .error-message { color: #f87171; /* Red-400 for errors */ font-size: 0.85em; margin-top: -5px; margin-bottom: 10px; }
+        .signal-diagram { /* Style the diagrams */
+            width: 80%; max-width: 200px; height: auto; display: block; margin: 15px auto;
+             background: #312d3b; border-radius: 3px; padding: 5px; border: 1px solid #5a4a6a;
         }
+         .signal-diagram path, .signal-diagram polyline { stroke: #ffd700; /* Gold spark color */ }
+         .signal-diagram line, .signal-diagram text { stroke: #9ca3af; fill: #9ca3af; /* Gray */ }
+
         /* Table styles */
-         table { width: 100%; border-collapse: collapse; margin-bottom: 15px; background-color: #1b1b32; font-size: 0.9em;}
-         th, td { border: 1px solid #00ffff; padding: 6px; text-align: center; }
-         th { background-color: #3b3b4f; color: #00ffff; }
+         table { width: 100%; border-collapse: collapse; margin-bottom: 15px; background-color: #312d3b; font-size: 0.9em; border: 1px solid #5a4a6a; }
+         th, td { border: 1px solid #5a4a6a; padding: 6px; text-align: center; }
+         th { background-color: #4a4458; color: #c084fc; font-weight: bold; }
+         td { color: #e0e0e0; }
 
-        /* Quiz Option Styles */
-        .option-btn.selected { background-color: #0891b2; color: white; font-weight: bold; }
-        .option-btn.correct { background-color: #10b981 !important; color: white !important; border: 2px solid #059669; }
-        .option-btn.incorrect { background-color: #f43f5e !important; color: white !important; border: 2px solid #e11d48; text-decoration: line-through; }
-        .option-btn.highlight-correct { border: 2px solid #10b981; }
+        /* Quiz Option Styles - Inspired by Enchantment Slots */
+        .option-btn {
+            background-color: #312d3b; /* Dark background */
+            border: 1px solid #5a4a6a;
+            color: #e0e0e0;
+            padding: 10px; margin: 8px 0; border-radius: 3px; cursor: pointer;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            position: relative; /* For potential pseudo-element glows */
+            text-align: left;
+        }
+         .option-btn:hover {
+            background-color: #4a4458;
+            border-color: #8a4ca8; /* Purple border on hover */
+         }
+        .option-btn.selected {
+            background-color: #4a4458;
+            border-color: #c084fc; /* Bright purple border */
+            color: #ffffff;
+            /* box-shadow: 0 0 5px #c084fc; Simple glow */
+        }
+        /* Correct/Incorrect styles */
+        .option-btn.correct {
+            background-color: #1e463b !important; /* Dark Green */
+            border-color: #10b981 !important; /* Emerald-500 */
+            color: #ffffff !important;
+        }
+        .option-btn.incorrect {
+            background-color: #5c202d !important; /* Dark Red */
+            border-color: #f43f5e !important; /* Rose-500 */
+            color: #ffffff !important;
+            text-decoration: line-through;
+            text-decoration-color: #fda4af;
+        }
+        .option-btn.highlight-correct {
+            border: 2px solid #10b981; /* For showing correct on summary */
+        }
+        /* Quiz Question Text */
+        .question-block .question {
+             color: #ffffff;
+             font-weight: bold;
+        }
+        /* Step Headers */
+        .step h2, .step h3 {
+             font-family: 'Press Start 2P', cursive;
+             color: #c084fc; /* Purple */
+             margin-bottom: 0.75rem;
+             font-size: 1rem; /* Adjust size for pixel font */
+             letter-spacing: 1px;
+        }
+        .step h3 { font-size: 0.9rem; color: #ab6ff0; margin-top: 1rem;}
 
-        /* Progress Dots */
-        .progress-dots span { height: 8px; width: 8px; background-color: #6b7280; border-radius: 50%; display: inline-block; margin: 0 3px; transition: background-color 0.3s ease; }
-        .progress-dots span.active { background-color: #00ffff; /* accent */ }
-        .progress-dots span.completed { background-color: #10b981; /* emerald-500 */ }
-        .progress-dots span.learning { background-color: #60a5fa; /* blue-400 */ } /* Different color for learning steps */
-        .progress-dots span.quiz { background-color: #facc15; /* yellow-400 */ } /* Different color for quiz steps */
+        /* Progress Dots - Square like pixels? Or colored circles */
+        .progress-dots span {
+             height: 10px; width: 10px; background-color: #4a4458; /* Default gray */
+             border-radius: 1px; /* Square-ish */
+             display: inline-block; margin: 0 3px; transition: background-color 0.3s ease;
+             border: 1px solid #5a4a6a;
+        }
+        .progress-dots span.active { background-color: #c084fc; border-color: #e9d5ff; } /* Active Purple */
+        .progress-dots span.completed { background-color: #10b981; border-color: #6ee7b7; } /* Completed Green */
+        /* Specific step types if needed */
+        .progress-dots span.learning { /* Already handled by active/completed */ }
+        .progress-dots span.quiz { /* Already handled by active/completed */ }
 
+        /* Summary Item Style */
+        .summary-item {
+            background-color: rgba(20, 18, 26, 0.8);
+            padding: 10px; margin: 10px 0; border-radius: 3px;
+            border-left-width: 5px;
+            font-size: 0.9em;
+        }
+        .summary-item.correct { border-left-color: #10b981; /* Green */ }
+        .summary-item.incorrect { border-left-color: #f43f5e; /* Red */ }
+        .summary-item p { margin-bottom: 4px; }
+        .summary-item .font-medium { color: #ffffff; }
+        .summary-item .text-emerald-400 { color: #34d399; } /* Use specific colors */
+        .summary-item .text-rose-400 { color: #fb7185; }
+        .summary-item details { color: #a1a1aa; /* Gray-400 */ }
+        .summary-item summary { cursor: pointer; font-weight: bold; }
+        .summary-item details p { color: #d4d4d8; margin-top: 5px; } /* Lighter gray for explanation */
+
+        /* Final Result Area */
+         #final-result { margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #5a4a6a; }
+         #result-text { font-size: 1.1em; font-weight: bold; color: #ffffff; margin-bottom: 1rem; }
+         #complete-btn {
+             background-color: #059669; /* Emerald-600 */
+             border-color: #10b981;
+         }
+          #complete-btn:hover { background-color: #047857; border-color: #34d399; }
+          #complete-btn:disabled {
+            background-color: #4a4458;
+            border-color: #5a4a6a;
+            color: #888;
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+
+          /* Adjustments for small screens */
+          @media (max-width: 640px) {
+            h1.mc-title { font-size: 1rem; }
+            .step h2, .step h3 { font-size: 0.9rem; }
+            .step h3 { font-size: 0.8rem; }
+            .mc-interactive-section button, .mc-nav-button { font-size: 0.8em; padding: 6px 10px; }
+            .progress-dots span { height: 8px; width: 8px; }
+          }
 
     </style>
     <script>
         tailwind.config = { /* No changes needed here */ }
 
-        // --- Mock ReactNativeWebView (Remove in production) ---
+        // --- Mock ReactNativeWebView (Keep for testing) ---
         if (typeof window.ReactNativeWebView === 'undefined') {
             console.log("Mocking ReactNativeWebView for browser testing.");
             window.ReactNativeWebView = { postMessage: (message) => console.log("ReactNativeWebView.postMessage:", message) };
@@ -118,33 +247,36 @@
         // --- End Mock ---
     </script>
 </head>
-<body class="bg-gradient-to-br from-primary to-secondary text-text-main min-h-screen flex items-center justify-center p-1">
+<body class="min-h-screen flex items-center justify-center p-1">
 
-    <div class="container bg-secondary/80 backdrop-blur-sm p-4 rounded-xl shadow-2xl w-full max-w-lg overflow-hidden min-h-[500px] relative flex flex-col">
+    <!-- Changed container class -->
+    <div class="mc-container p-4 w-full max-w-lg overflow-hidden min-h-[550px] relative flex flex-col">
 
-        <h1 class="text-xl sm:text-2xl font-bold text-center mb-2 text-accent border-b border-accent/50 pb-2 flex-shrink-0">Digital Electronics Journey</h1>
+        <!-- Changed title class -->
+        <h1 class="mc-title font-minecraft text-lg sm:text-xl text-center mb-3 flex-shrink-0">Digital Electronics Journey</h1>
 
         <!-- Progress Indicator -->
-         <div id="progress-indicator" class="progress-dots text-center my-2 flex-shrink-0">
+         <div id="progress-indicator" class="progress-dots text-center my-3 flex-shrink-0">
              <!-- Dots will be added here -->
          </div>
 
         <!-- Step Container - Takes remaining space -->
-        <div id="step-container" class="relative flex-grow overflow-y-auto">
+        <div id="step-container" class="relative flex-grow overflow-y-auto mb-3 pr-2"> <!-- Added padding-right for scrollbar -->
             <!-- Steps will be dynamically inserted here -->
-            <!-- Note: overflow-y-auto allows scrolling within long steps -->
         </div>
 
         <!-- Navigation Buttons -->
-        <div class="navigation-buttons mt-3 text-center border-t border-accent/30 pt-3 flex-shrink-0">
-            <button id="prev-btn" class="bg-gray-500 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg shadow transition duration-200 ease-in-out mr-2 hidden text-sm">Previous</button>
-            <button id="next-btn" class="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-2 px-4 rounded-lg shadow transition duration-200 ease-in-out disabled:opacity-50 disabled:cursor-not-allowed text-sm">Start Journey</button>
+        <div class="navigation-buttons mt-auto text-center border-t border-purple-700/50 pt-3 flex-shrink-0">
+            <!-- Added mc-nav-button class -->
+            <button id="prev-btn" class="mc-nav-button bg-gray-600 hover:bg-gray-700 border-gray-500 hover:border-gray-600 hidden">Previous</button>
+            <button id="next-btn" class="mc-nav-button disabled:opacity-70 disabled:cursor-not-allowed">Start Journey</button>
         </div>
 
         <!-- Final Result Area (Initially Hidden) -->
          <div id="final-result" class="text-center mt-4 hidden flex-shrink-0">
             <p id="result-text" class="text-base font-semibold mb-3"></p>
-            <button id="complete-btn" class="bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-2 px-5 rounded-lg shadow transition duration-200 ease-in-out text-sm">Finish Journey</button>
+            <!-- Added mc-nav-button class -->
+            <button id="complete-btn" class="mc-nav-button">Finish Journey</button>
         </div>
 
     </div>
@@ -155,7 +287,8 @@
 
         // --- Question Pool (40 Questions) ---
         const fullQuestionPool = [
-            // Analog vs Digital
+            // ... (Keep the full question pool as it was) ...
+             // Analog vs Digital
             { question: "Which signal type is less reliable due to infinite possible values?", options: ["Digital", "Binary", "Analog", "Square Wave"], answer: 2, summary: "Analog signals are susceptible to noise, which can alter their infinitely variable values, making them less reliable for precise operations compared to the two distinct states of digital signals." },
             { question: "A square wave is an example of which type of signal?", options: ["Analog", "Sinusoidal", "Digital", "Continuous"], answer: 2, summary: "Square waves have distinct high and low levels, representing the two states (1 and 0) of a digital or binary signal." },
             { question: "Driving a transistor between cut-off and saturation results in:", options: ["Amplification", "Two-state operation", "Linear output", "Oscillation"], answer: 1, summary: "In digital circuits, transistors act like switches, being either fully OFF (cut-off) or fully ON (saturation), representing the two binary states." },
@@ -200,7 +333,7 @@
             { question: "Which number system is most convenient for representing raw binary data in a more compact, human-readable form?", options: ["Decimal", "BCD", "Octal", "Hexadecimal"], answer: 3, summary: "Hexadecimal is widely used because it maps neatly to 4-bit binary groups (bytes are 8 bits), making long binary strings much shorter and easier to read/write." },
             { question: "Convert (401)₁₀ to BCD.", options: ["100 000 001", "0100 0000 0001", "110010001", "Invalid"], answer: 1, summary: "Convert each decimal digit: 4->0100, 0->0000, 1->0001. Result: 0100 0000 0001." },
             { question: "The number (1111 1010 0110)₂ is equivalent to which hexadecimal number?", options: ["F96", "EAG", "FA6", "7A6"], answer: 2, summary: "Group in fours: (1111)(1010)(0110). Convert: F A 6. Result: FA6₁₆." },
-            { question: "Convert (27)₈ to hexadecimal.", options: ["17", "1F", "37", "1B"], answer: 3, summary: "Convert Oct->Bin->Hex: 27₈ = (010 111)₂. Regroup in fours: (0001 0111)₂ = 17₁₆. Error in options/prev calc: Correct is 17_16. Let's re-check 27_8 = 2*8+7 = 23_10. 23_10 = 16+7 = 17_16. Let's assume question meant 37_8 = 3*8+7 = 31_10 = 16+15 = 1F_16. If it was 17_8 = 1*8+7=15_10 = F_16. Let's assume the intended answer is 17_16 for 27_8. *Correction: Re-evaluating 27_8 = (010 111)₂ = (0001 0111)₂ = 17₁₆. Option 1 is correct based on calculation. Let's make a different question or fix options/answer.* Okay, let's change the question: Convert (63)₈ to hexadecimal." , options: ["33", "C3", "3F", "133"], answer: 2, summary: "Oct->Bin->Hex: 63₈ = (110 011)₂. Regroup in fours: (0011 0011)₂ = 33₁₆. *Another mismatch. Let's try again with a clean one:* Convert (75)₈ to hexadecimal." , options: ["3D", "75", "35", "F3"], answer: 0, summary: "Oct->Bin->Hex: 75₈ = (111 101)₂. Regroup: (0011 1101)₂ = 3D₁₆."},
+            { question: "Convert (75)₈ to hexadecimal." , options: ["3D", "75", "35", "F3"], answer: 0, summary: "Oct->Bin->Hex: 75₈ = (111 101)₂. Regroup: (0011 1101)₂ = 3D₁₆."}, // Fixed this question from original code
             { question: "Represent (100)₁₀ in binary, octal, and hexadecimal.", options: ["1100100, 144, 64", "1100100, 64, 144", "1100010, 144, 64", "1100100, 144, 64"], answer: 0, summary: "100₁₀ = 64+32+4 = 1100100₂. Group for oct: (1)(100)(100) -> 144₈. Group for hex: (0110)(0100) -> 64₁₆." },
         ];
 
@@ -211,8 +344,7 @@
         let quizCompleted = false;
         let totalJourneySteps = 0; // Will be calculated later
 
-        // Fixed steps count (Intro + Learn x3 + Quiz Intro + Summary)
-        const fixedStepsCount = 6;
+        const fixedStepsCount = 6; // Intro + Learn x3 + Quiz Intro + Summary
 
         // --- DOM Elements ---
         const stepContainer = document.getElementById('step-container');
@@ -223,21 +355,13 @@
         const completeBtn = document.getElementById('complete-btn');
         const progressIndicator = document.getElementById('progress-indicator');
 
-        // --- Utility Functions (Include Helpers from previous example like displayOutput, isValidBinary etc.) ---
-        function displayOutput(elementId, label, value, isError = false) { /* ... implementation ... */ }
-        function displayError(elementId, message) { /* ... implementation ... */ }
-        function clearError(elementId) { /* ... implementation ... */ }
-        function isValidBinary(bin) { return /^[01]+$/.test(bin); }
-        function isValidOctal(oct) { return /^[0-7]+$/.test(oct); }
-        function isValidHex(hex) { return /^[0-9A-Fa-f]+$/.test(hex); }
-        function isValidBcdInput(bcdStr) { /* ... implementation ... */ }
-        // --- (Paste the full helper functions here from the first provided example) ---
-                function displayOutput(elementId, label, value, isError = false) {
+        // --- Utility Functions (Keep existing functions) ---
+        function displayOutput(elementId, label, value, isError = false) {
             const outputElement = document.getElementById(elementId);
             if (outputElement) {
                 let content = `<span class="label">${label}:</span> `;
                 if (isError) {
-                    content += `<span class="text-red-300">${value}</span>`; // Use Tailwind color
+                    content += `<span class="text-red-400">${value}</span>`; // Adjusted error color
                 } else {
                     content += value; // Value might contain HTML (like <br> or <sub>)
                 }
@@ -245,7 +369,7 @@
             }
         }
         function displayError(elementId, message) {
-            const errorElement = document.getElementById(elementId);
+             const errorElement = document.getElementById(elementId);
              if (errorElement) {
                  errorElement.textContent = message;
                  errorElement.classList.remove('hidden'); // Show error message
@@ -258,27 +382,29 @@
                   errorElement.classList.add('hidden'); // Hide error message
              }
         }
-        // isValidBinary, isValidOctal, isValidHex remain the same
-         function isValidBcdInput(bcdStr) {
-            const groups = bcdStr.trim().split(/\s+/);
-            if (groups.length === 0 || groups[0] === '') return false;
-            for (const group of groups) {
-                if (!/^[01]{4}$/.test(group)) return false;
-                 // Stricter check for valid BCD digits (0000-1001)
-                 if (parseInt(group, 2) > 9) return false;
-            }
-            return true;
+        function isValidBinary(bin) { return /^[01]+$/.test(bin); }
+        function isValidOctal(oct) { return /^[0-7]+$/.test(oct); }
+        function isValidHex(hex) { return /^[0-9A-Fa-f]+$/.test(hex); }
+        function isValidBcdInput(bcdStr) {
+             const groups = bcdStr.trim().split(/\s+/);
+             if (groups.length === 0 || groups[0] === '') return false;
+             for (const group of groups) {
+                 if (!/^[01]{4}$/.test(group)) return false;
+                  // Stricter check for valid BCD digits (0000-1001)
+                  if (parseInt(group, 2) > 9) return false;
+             }
+             return true;
         }
-        // hexToBinMap, binToHexMap, decToBcdMap, bcdToDecMap remain the same
         const hexToBinMap = { '0': '0000', '1': '0001', '2': '0010', '3': '0011', '4': '0100', '5': '0101', '6': '0110', '7': '0111', '8': '1000', '9': '1001', 'A': '1010', 'B': '1011', 'C': '1100', 'D': '1101', 'E': '1110', 'F': '1111' };
         const binToHexMap = { '0000': '0', '0001': '1', '0010': '2', '0011': '3', '0100': '4', '0101': '5', '0110': '6', '0111': '7', '1000': '8', '1001': '9', '1010': 'A', '1011': 'B', '1100': 'C', '1101': 'D', '1110': 'E', '1111': 'F' };
         const decToBcdMap = { '0': '0000', '1': '0001', '2': '0010', '3': '0011', '4': '0100', '5': '0101', '6': '0110', '7': '0111', '8': '1000', '9': '1001' };
         const bcdToDecMap = { '0000':'0', '0001':'1', '0010':'2', '0011':'3', '0100':'4', '0101':'5', '0110':'6', '0111':'7', '1000':'8', '1001':'9' };
-        // --- Interactive Conversion Functions ---
+
+        // --- Interactive Conversion Functions (Keep existing functions) ---
         function showPlaceValue() {
             const binInput = document.getElementById('binPlaceValueInput').value.trim();
             const outputElement = document.getElementById('binPlaceValueOutput');
-            clearError('binPlaceValueError'); // Assuming error element exists with this ID
+            clearError('binPlaceValueError');
 
             if (!binInput) { outputElement.textContent = ''; return; }
             if (!isValidBinary(binInput)) {
@@ -287,30 +413,30 @@
              }
 
             let explanation = ''; let decimalValue = 0; const len = binInput.length;
-            explanation += `<code>${binInput}</code><sub class="text-xs">2</sub> = `;
+            explanation += `<code>${binInput}</code><sub class="text-xs opacity-80">2</sub> = `; // Style subscript
             let terms = [];
             for (let i = 0; i < len; i++) {
                 const bit = parseInt(binInput[i]); const power = len - 1 - i;
                 const placeValue = Math.pow(2, power); decimalValue += bit * placeValue;
-                terms.push(`(${bit} × 2<sup>${power}</sup>)`);
+                terms.push(`(${bit} × 2<sup>${power}</sup>)`); // Use times symbol
             }
             explanation += terms.join(' + ');
-            explanation += `<br>= ${decimalValue}<sub class="text-xs">10</sub>`;
+            explanation += `<br>= ${decimalValue}<sub class="text-xs opacity-80">10</sub>`;
             outputElement.innerHTML = explanation;
         }
-        // Add ALL other conversion functions (convertToBinary, convertToDecimal, convertToOctal, etc.) here...
-                // --- Interactive Functions (Copied and adapted) ---
+        // --- Add ALL other conversion functions here (convertToBinary, etc.) ---
+        // (Functions are the same, no need to repeat them all here for brevity)
         function convertToBinary() {
             const decInput = document.getElementById('decToBinInput').value;
             const outputId = 'decToBinOutput';
-            const errorId = 'decToBinError'; // Assume an error div exists
+            const errorId = 'decToBinError';
             clearError(errorId);
             if (decInput === '' || isNaN(decInput) || decInput < 0 || !Number.isInteger(Number(decInput))) {
                 displayError(errorId, 'Please enter a non-negative integer.');
                  displayOutput(outputId, 'Binary', '', true); return;
             }
             const decimal = parseInt(decInput, 10); const binary = decimal.toString(2);
-             displayOutput(outputId, 'Binary', `<code>${binary}</code><sub class="text-xs">2</sub>`);
+             displayOutput(outputId, 'Binary', `<code>${binary}</code><sub class="text-xs opacity-80">2</sub>`);
         }
         function convertToDecimal() {
             const binInput = document.getElementById('binToDecInput').value.trim();
@@ -321,7 +447,7 @@
                 displayOutput(outputId, 'Decimal', '', true); return;
             }
             const decimal = parseInt(binInput, 2);
-            displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs">10</sub>`);
+            displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs opacity-80">10</sub>`);
         }
         function convertToOctal() {
             const decInput = document.getElementById('decToOctInput').value;
@@ -331,7 +457,7 @@
                  displayOutput(outputId, 'Octal', '', true); return;
             }
             const decimal = parseInt(decInput, 10); const octal = decimal.toString(8);
-            displayOutput(outputId, 'Octal', `<code>${octal}</code><sub class="text-xs">8</sub>`);
+            displayOutput(outputId, 'Octal', `<code>${octal}</code><sub class="text-xs opacity-80">8</sub>`);
         }
         function convertOctToDecimal() {
              const octInput = document.getElementById('octToDecInput').value.trim();
@@ -342,7 +468,7 @@
                  displayOutput(outputId, 'Decimal', '', true); return;
              }
             const decimal = parseInt(octInput, 8);
-            displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs">10</sub>`);
+            displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs opacity-80">10</sub>`);
         }
         function convertOctToBinary() {
              const octInput = document.getElementById('octToBinInput').value.trim();
@@ -354,9 +480,25 @@
              }
              let binary = '';
              for (let i = 0; i < octInput.length; i++) {
-                binary += parseInt(octInput[i], 8).toString(2).padStart(3, '0') + ' ';
+                 // Ensure 3 bits per digit, handle leading zeros correctly if needed (though less critical for display)
+                 let binDigit = parseInt(octInput[i], 8).toString(2);
+                 while (binDigit.length < 3 && i > 0) { // Don't pad the very first digit unnecessarily unless it's 0
+                    binDigit = '0' + binDigit;
+                 }
+                 // More robust padding for display consistency:
+                 if (octInput.length > 1) { // Pad if more than one oct digit
+                      binary += parseInt(octInput[i], 8).toString(2).padStart(3, '0') + ' ';
+                 } else {
+                      binary += parseInt(octInput[i], 8).toString(2) + ' '; // Don't pad single digit
+                 }
              }
-            displayOutput(outputId, 'Binary', `<code>${binary.trim()}</code><sub class="text-xs">2</sub>`);
+            // Final refinement - ensure first group isn't padded if unnecessary
+            binary = binary.trim();
+            let parts = binary.split(' ');
+            if (parts.length > 0) parts[0] = parseInt(parts[0],2).toString(2); // Remove leading zero from first group if any
+            binary = parts.join(' ');
+
+            displayOutput(outputId, 'Binary', `<code>${binary.trim()}</code><sub class="text-xs opacity-80">2</sub>`);
         }
          function convertBinToOctal() {
             let binInput = document.getElementById('binToOctInput').value.trim().replace(/\s+/g, '');
@@ -366,10 +508,11 @@
                  displayError(errorId, 'Invalid binary input.');
                  displayOutput(outputId, 'Octal', '', true); return;
              }
+             // Pad START of string
              const remainder = binInput.length % 3; if (remainder !== 0) binInput = '0'.repeat(3 - remainder) + binInput;
              let octal = '';
              for (let i = 0; i < binInput.length; i += 3) { octal += parseInt(binInput.substring(i, i + 3), 2).toString(8); }
-             displayOutput(outputId, 'Octal', `<code>${octal}</code><sub class="text-xs">8</sub>`);
+             displayOutput(outputId, 'Octal', `<code>${octal}</code><sub class="text-xs opacity-80">8</sub>`);
          }
         function convertToHex() {
             const decInput = document.getElementById('decToHexInput').value;
@@ -379,7 +522,7 @@
                  displayOutput(outputId, 'Hex', '', true); return;
              }
             const decimal = parseInt(decInput, 10); const hex = decimal.toString(16).toUpperCase();
-            displayOutput(outputId, 'Hex', `<code>${hex}</code><sub class="text-xs">16</sub>`);
+            displayOutput(outputId, 'Hex', `<code>${hex}</code><sub class="text-xs opacity-80">16</sub>`);
         }
         function convertHexToDecimal() {
              const hexInput = document.getElementById('hexToDecInput').value.trim();
@@ -390,7 +533,7 @@
                  displayOutput(outputId, 'Decimal', '', true); return;
              }
             const decimal = parseInt(hexInput, 16);
-            displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs">10</sub>`);
+            displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs opacity-80">10</sub>`);
         }
         function convertHexToBinary() {
             const hexInput = document.getElementById('hexToBinInput').value.trim().toUpperCase();
@@ -402,7 +545,7 @@
              }
              let binary = '';
              for (let i = 0; i < hexInput.length; i++) { binary += hexToBinMap[hexInput[i]] + ' '; }
-            displayOutput(outputId, 'Binary', `<code>${binary.trim()}</code><sub class="text-xs">2</sub>`);
+            displayOutput(outputId, 'Binary', `<code>${binary.trim()}</code><sub class="text-xs opacity-80">2</sub>`);
         }
          function convertBinToHex() {
             let binInput = document.getElementById('binToHexInput').value.trim().replace(/\s+/g, '');
@@ -412,10 +555,11 @@
                  displayError(errorId, 'Invalid binary input.');
                  displayOutput(outputId, 'Hex', '', true); return;
              }
+              // Pad START of string
              const remainder = binInput.length % 4; if (remainder !== 0) binInput = '0'.repeat(4 - remainder) + binInput;
              let hex = '';
              for (let i = 0; i < binInput.length; i += 4) { hex += binToHexMap[binInput.substring(i, i + 4)]; }
-             displayOutput(outputId, 'Hex', `<code>${hex}</code><sub class="text-xs">16</sub>`);
+             displayOutput(outputId, 'Hex', `<code>${hex}</code><sub class="text-xs opacity-80">16</sub>`);
          }
         function convertToBcd() {
             const decInput = document.getElementById('decToBcdInput').value;
@@ -432,17 +576,17 @@
             const bcdInput = document.getElementById('bcdToDecInput').value.trim();
             const outputId = 'bcdToDecOutput'; const errorId = 'bcdToDecError'; clearError(errorId);
              if (!bcdInput) { displayOutput(outputId, 'Decimal', ''); return; }
-             // Validate BCD format (space separated 4-bit groups 0000-1001)
              if (!isValidBcdInput(bcdInput)) {
                   displayError(errorId, 'Invalid BCD format/value. Use 4-bit groups (0000-1001) separated by spaces.');
                   displayOutput(outputId, 'Decimal', '', true); return;
              }
              const groups = bcdInput.split(/\s+/); let decimal = '';
              for (const group of groups) { decimal += bcdToDecMap[group]; }
-             displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs">10</sub>`);
+             displayOutput(outputId, 'Decimal', `${decimal}<sub class="text-xs opacity-80">10</sub>`);
         }
 
-        // --- Journey Logic ---
+
+        // --- Journey Logic (Keep existing functions) ---
         function shuffleArray(array) { // Fisher-Yates Shuffle
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -450,42 +594,30 @@
             }
             return array;
         }
-
         function selectRandomQuestions() {
             selectedQuizQuestions = shuffleArray([...fullQuestionPool]).slice(0, NUM_QUIZ_QUESTIONS);
             userAnswers = new Array(NUM_QUIZ_QUESTIONS).fill(undefined);
-            totalJourneySteps = fixedStepsCount + NUM_QUIZ_QUESTIONS; // Recalculate total steps
-            quizCompleted = false; // Reset quiz state
+            totalJourneySteps = fixedStepsCount + NUM_QUIZ_QUESTIONS;
+            quizCompleted = false;
         }
-
         function renderProgressDots() {
             progressIndicator.innerHTML = '';
             for (let i = 0; i < totalJourneySteps; i++) {
                  const dot = document.createElement('span');
-                 let stepType = ''; // To apply different colors
-
-                 if (i === 0) stepType = 'intro';
-                 else if (i >= 1 && i <= 3) stepType = 'learning'; // Learning steps
-                 else if (i === 4) stepType = 'quiz-intro';
-                 else if (i > 4 && i <= 4 + NUM_QUIZ_QUESTIONS) stepType = 'quiz'; // Quiz steps
-                 else stepType = 'summary';
-
                  if (i === currentStep) {
                      dot.classList.add('active');
                  } else if (i < currentStep || (quizCompleted && i < totalJourneySteps - 1) ) {
                       dot.classList.add('completed');
                  }
-
-                 // Add type class for specific styling
-                 if (stepType === 'learning') dot.classList.add('learning');
-                 else if (stepType === 'quiz') dot.classList.add('quiz');
-
+                 // Add type class for potential future styling (optional now)
+                 // if (i >= 1 && i <= 3) dot.classList.add('learning');
+                 // else if (i > 4 && i <= 4 + NUM_QUIZ_QUESTIONS) dot.classList.add('quiz');
                  progressIndicator.appendChild(dot);
             }
         }
 
         function renderStep(stepIndex) {
-            // Remove previous step classes
+            // --- Step Rendering Logic (Minor Adjustments for Theme Classes) ---
             stepContainer.querySelectorAll('.step').forEach(step => {
                  step.classList.remove('current-step', 'prev-step');
                  step.classList.add('hidden');
@@ -500,166 +632,190 @@
                 currentStepElement.classList.add('step');
                 let stepContent = '';
 
-                // --- Define Content for Each Step ---
+                // --- Define Content for Each Step (Add Theme Classes) ---
                 switch (stepIndex) {
                     case 0: // Intro
                         stepContent = `
                             <div class="text-center">
-                                <h2 class="text-xl font-semibold mb-3 text-cyan-400">Welcome!</h2>
-                                <p class="mb-2">This journey covers the fundamentals of Digital Electronics.</p>
-                                <p class="mb-4">You'll review key concepts and then test your knowledge with a ${NUM_QUIZ_QUESTIONS}-question quiz randomly selected from a larger pool.</p>
-                                <p class="text-sm text-gray-400">Use the 'Next' button to proceed through learning modules and the quiz.</p>
+                                <h2 class="text-xl mb-4">Welcome, Adventurer!</h2>
+                                <p class="mb-3 text-gray-300">Embark on a journey through the fundamentals of Digital Electronics.</p>
+                                <p class="mb-5">You'll explore key concepts and test your knowledge with a ${NUM_QUIZ_QUESTIONS}-question trial.</p>
+                                <p class="text-sm text-gray-400">Use the navigation buttons below to proceed.</p>
                             </div>`;
                         break;
                     case 1: // Analog vs Binary
                          stepContent = `
-                            <h2 class="text-lg font-semibold mb-3 text-cyan-400">1. Analog vs. Binary Signals</h2>
-                            <h3 class="font-medium mb-2 text-cyan-300">Analog Signal</h3>
-                            <ul class="list-disc ml-6 mb-3 text-sm space-y-1">
-                                <li>Continuously varying signal.</li>
-                                <li>Can take any value within a range.</li>
-                                <li>Example: Alternating voltage varying sinusoidally.</li>
+                            <h2>1. Ancient Signals vs. Digital Power</h2>
+                            <h3>Analog Whispers</h3>
+                            <ul class="list-disc ml-6 mb-3 text-sm space-y-1 text-gray-300">
+                                <li>Continuously varying energy.</li>
+                                <li>Can hold infinite values within its range.</li>
+                                <li>Like a flowing river, susceptible to ripples (noise).</li>
                             </ul>
                             <svg viewBox="0 0 100 50" class="signal-diagram" aria-label="Sine wave diagram">
-                              <path d="M 0 25 Q 12.5 0, 25 25 T 50 25 T 75 25 T 100 25" stroke="#00ffff" fill="transparent" stroke-width="1.5"/>
-                              <line x1="0" y1="25" x2="100" y2="25" stroke="gray" stroke-dasharray="2,2"/>
+                              <path d="M 0 25 Q 12.5 0, 25 25 T 50 25 T 75 25 T 100 25" stroke-width="1.5"/>
+                              <line x1="0" y1="25" x2="100" y2="25" stroke-dasharray="2,2"/>
                             </svg>
-                            <p class="text-sm mb-3">Transistors processing analog signals produce continuously varying outputs. Less reliable due to noise sensitivity.</p>
+                            <p class="text-sm mb-4 text-gray-400">Transistors handling these signals amplify continuously, but noise can easily corrupt the message.</p>
 
-                            <h3 class="font-medium mb-2 text-cyan-300">Binary Signal</h3>
-                             <ul class="list-disc ml-6 mb-3 text-sm space-y-1">
-                                <li>Has only two discrete, distinct values (High/Low, On/Off, 1/0).</li>
-                                <li>Example: A square wave.</li>
+                            <h3>Binary Runes</h3>
+                             <ul class="list-disc ml-6 mb-3 text-sm space-y-1 text-gray-300">
+                                <li>Only two distinct states: High/Low, Charged/Empty, <code>1</code>/<code>0</code>.</li>
+                                <li>Like a switch, either ON or OFF.</li>
                             </ul>
                              <svg viewBox="0 0 100 50" class="signal-diagram" aria-label="Square wave diagram">
-                               <polyline points="0,40 20,40 20,10 40,10 40,40 60,40 60,10 80,10 80,40 100,40" stroke="#00ffff" fill="transparent" stroke-width="1.5"/>
-                               <text x="5" y="38" font-size="7px" fill="gray">Low (0)</text> <text x="25" y="8" font-size="7px" fill="gray">High (1)</text>
+                               <polyline points="0,40 20,40 20,10 40,10 40,40 60,40 60,10 80,10 80,40 100,40" stroke-width="1.5"/>
+                               <text x="5" y="38" font-size="7px">Low (0)</text> <text x="25" y="8" font-size="7px">High (1)</text>
                             </svg>
-                            <p class="text-sm mb-3">Digital signals drive transistors fully ON (saturation) or OFF (cut-off), enabling stable two-state operation.</p>
+                            <p class="text-sm mb-4 text-gray-400">Digital signals command transistors to be fully ON or OFF, providing robust, clear states.</p>
 
-                            <h3 class="font-medium mb-2 text-cyan-300">Digital Circuit</h3>
-                            <p class="text-sm mb-3">Electronic circuits designed specifically to process these two-state binary signals.</p>
+                            <h3>Digital Circuits</h3>
+                            <p class="text-sm mb-3 text-gray-300">Forged pathways designed specifically to channel and manipulate these powerful two-state signals.</p>
                         `;
                         break;
                     case 2: // Binary System
                         stepContent = `
-                            <h2 class="text-lg font-semibold mb-3 text-cyan-400">2. The Binary System</h2>
-                            <p class="text-sm mb-3">Uses only two digits: <code>0</code> and <code>1</code>. Radix (base) = 2.</p>
-                            <h3 class="font-medium mb-2 text-cyan-300">Counting</h3>
-                            <!-- Simple counting table -->
-                            <table><thead><tr><th>Dec</th><th>Bin</th></tr></thead>
-                            <tbody><tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr><tr><td>2</td><td>10</td></tr><tr><td>3</td><td>11</td></tr><tr><td>4</td><td>100</td></tr></tbody></table>
+                            <h2>2. The Binary Code</h2>
+                            <p class="text-sm mb-3 text-gray-300">The language of machines, using only two symbols: <code>0</code> and <code>1</code>. Base = 2.</p>
+                            <h3>Counting Ritual</h3>
+                            <table><thead><tr><th>Decimal</th><th>Binary</th></tr></thead>
+                            <tbody>
+                                <tr><td>0</td><td>0</td></tr><tr><td>1</td><td>1</td></tr>
+                                <tr><td>2</td><td>10</td></tr><tr><td>3</td><td>11</td></tr>
+                                <tr><td>4</td><td>100</td></tr><tr><td>5</td><td>101</td></tr>
+                                <tr><td>...</td><td>...</td></tr>
+                            </tbody></table>
 
-                            <h3 class="font-medium mb-2 text-cyan-300">Terminology</h3>
-                            <ul class="list-disc ml-6 mb-3 text-sm space-y-1">
-                                <li><strong>Bit:</strong> A single binary digit (0 or 1).</li>
-                                <li><strong>Nibble:</strong> A group of 4 bits.</li>
-                                <li><strong>Byte:</strong> A group of 8 bits.</li>
+                            <h3>Sacred Terms</h3>
+                            <ul class="list-disc ml-6 mb-4 text-sm space-y-1 text-gray-300">
+                                <li><strong>Bit:</strong> A single binary rune (<code>0</code> or <code>1</code>).</li>
+                                <li><strong>Nibble:</strong> A quartet of bits (4 bits).</li>
+                                <li><strong>Byte:</strong> An octet of bits (8 bits).</li>
                             </ul>
 
-                            <h3 class="font-medium mb-2 text-cyan-300">Place Value</h3>
-                            <p class="text-sm mb-2">Each position represents a power of 2.</p>
-                            <p class="text-xs mb-1">Example: <code>1011</code><sub class="text-xs">2</sub> = (1 × 2<sup>3</sup>) + (0 × 2<sup>2</sup>) + (1 × 2<sup>1</sup>) + (1 × 2<sup>0</sup>)</p>
-                            <p class="text-xs mb-3">= 8 + 0 + 2 + 1 = 11<sub class="text-xs">10</sub></p>
-                            <ul class="list-disc ml-6 mb-3 text-xs space-y-1">
-                                <li>MSB: Most Significant Bit (leftmost, highest value).</li>
-                                <li>LSB: Least Significant Bit (rightmost, lowest value).</li>
+                            <h3>Positional Power</h3>
+                            <p class="text-sm mb-2 text-gray-300">Each position holds a power of 2.</p>
+                            <p class="text-xs mb-1 text-gray-400">Example: <code>1011</code><sub class="opacity-80">2</sub> = (1 × 2<sup>3</sup>) + (0 × 2<sup>2</sup>) + (1 × 2<sup>1</sup>) + (1 × 2<sup>0</sup>)</p>
+                            <p class="text-xs mb-3 text-gray-400">= 8 + 0 + 2 + 1 = 11<sub class="opacity-80">10</sub></p>
+                            <ul class="list-disc ml-6 mb-3 text-xs space-y-1 text-gray-400">
+                                <li>MSB (Most Significant Bit): Leftmost, greatest power.</li>
+                                <li>LSB (Least Significant Bit): Rightmost, least power.</li>
                             </ul>
 
-                             <div class="interactive-section">
-                                <h4 class="text-base font-medium mb-2 text-cyan-300">Explore Place Value</h4>
+                             <div class="mc-interactive-section"> <!-- Themed section -->
+                                <h4 class="font-minecraft text-purple-400 text-sm mb-3">Decipher Place Value</h4>
                                 <label for="binPlaceValueInput">Enter Binary:</label>
-                                <input type="text" id="binPlaceValueInput" placeholder="e.g., 1101" class="text-sm">
+                                <input type="text" id="binPlaceValueInput" placeholder="e.g., 1101">
                                 <div id="binPlaceValueError" class="error-message hidden"></div>
-                                <button onclick="showPlaceValue()" class="text-sm">Show Calculation</button>
-                                <div id="binPlaceValueOutput" class="interactive-output text-sm"></div>
+                                <button onclick="showPlaceValue()">Calculate</button> <!-- Themed button -->
+                                <div id="binPlaceValueOutput" class="mc-interactive-output"></div> <!-- Themed output -->
                              </div>
                         `;
                          break;
-                    case 3: // Conversions (Oct, Hex, BCD)
+                    case 3: // Conversions (Oct, Hex, BCD) - Apply Theme Classes
                          stepContent = `
-                             <h2 class="text-lg font-semibold mb-3 text-cyan-400">3. Number Systems & Conversions</h2>
+                             <h2>3. Number System Glyphs</h2>
 
                              <!-- Octal -->
-                             <h3 class="font-medium mb-2 text-cyan-300">Octal (Base 8)</h3>
-                             <p class="text-sm mb-2">Uses digits 0-7. Easily convertible to/from binary (3 bits per octal digit).</p>
-                             <div class="interactive-section mb-4">
-                                <h4 class="text-base font-medium mb-2 text-cyan-300">Octal Tools</h4>
-                                <!-- Dec <-> Oct -->
-                                <label for="decToOctInput">Dec to Oct:</label> <input type="number" id="decToOctInput" placeholder="Decimal" class="text-sm">
-                                <div id="decToOctError" class="error-message hidden"></div> <button onclick="convertToOctal()" class="text-xs">Convert</button>
-                                <div id="decToOctOutput" class="interactive-output text-sm mb-2"></div>
-                                <label for="octToDecInput">Oct to Dec:</label> <input type="text" id="octToDecInput" placeholder="Octal (0-7)" class="text-sm">
-                                <div id="octToDecError" class="error-message hidden"></div> <button onclick="convertOctToDecimal()" class="text-xs">Convert</button>
-                                <div id="octToDecOutput" class="interactive-output text-sm mb-2"></div>
-                                 <!-- Oct <-> Bin -->
-                                <label for="octToBinInput">Oct to Bin:</label> <input type="text" id="octToBinInput" placeholder="Octal (0-7)" class="text-sm">
-                                <div id="octToBinError" class="error-message hidden"></div> <button onclick="convertOctToBinary()" class="text-xs">Convert</button>
-                                <div id="octToBinOutput" class="interactive-output text-sm mb-2"></div>
-                                <label for="binToOctInput">Bin to Oct:</label> <input type="text" id="binToOctInput" placeholder="Binary (group by 3)" class="text-sm">
-                                <div id="binToOctError" class="error-message hidden"></div> <button onclick="convertBinToOctal()" class="text-xs">Convert</button>
-                                <div id="binToOctOutput" class="interactive-output text-sm"></div>
+                             <h3>Octal Runes (Base 8)</h3>
+                             <p class="text-sm mb-2 text-gray-300">Uses digits 0-7. Easily transmuted from binary (3 bits per rune).</p>
+                             <div class="mc-interactive-section mb-4">
+                                <h4 class="font-minecraft text-purple-400 text-sm mb-3">Octal Transmuter</h4>
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4"> <!-- Layout for inputs -->
+                                    <div>
+                                        <label for="decToOctInput">Dec to Oct:</label> <input type="number" id="decToOctInput" placeholder="Decimal">
+                                        <div id="decToOctError" class="error-message hidden"></div> <button onclick="convertToOctal()">Convert</button>
+                                        <div id="decToOctOutput" class="mc-interactive-output mb-2"></div>
+                                    </div>
+                                    <div>
+                                        <label for="octToDecInput">Oct to Dec:</label> <input type="text" id="octToDecInput" placeholder="Octal (0-7)">
+                                        <div id="octToDecError" class="error-message hidden"></div> <button onclick="convertOctToDecimal()">Convert</button>
+                                        <div id="octToDecOutput" class="mc-interactive-output mb-2"></div>
+                                    </div>
+                                     <div>
+                                        <label for="octToBinInput">Oct to Bin:</label> <input type="text" id="octToBinInput" placeholder="Octal (0-7)">
+                                        <div id="octToBinError" class="error-message hidden"></div> <button onclick="convertOctToBinary()">Convert</button>
+                                        <div id="octToBinOutput" class="mc-interactive-output mb-2"></div>
+                                     </div>
+                                     <div>
+                                        <label for="binToOctInput">Bin to Oct:</label> <input type="text" id="binToOctInput" placeholder="Binary (group by 3)">
+                                        <div id="binToOctError" class="error-message hidden"></div> <button onclick="convertBinToOctal()">Convert</button>
+                                        <div id="binToOctOutput" class="mc-interactive-output"></div>
+                                     </div>
+                                </div>
                              </div>
 
                              <!-- Hexadecimal -->
-                             <h3 class="font-medium mb-2 text-cyan-300">Hexadecimal (Base 16)</h3>
-                             <p class="text-sm mb-2">Uses 0-9 and A-F (A=10...F=15). Maps to 4 binary bits.</p>
-                             <!-- Hex Table Snippet -->
-                             <table class="mb-3"><thead><tr><th>Dec</th><th>Hex</th><th>Bin</th></tr></thead><tbody><tr><td>10</td><td>A</td><td>1010</td></tr><tr><td>...</td><td>...</td><td>...</td></tr><tr><td>15</td><td>F</td><td>1111</td></tr></tbody></table>
-                              <div class="interactive-section mb-4">
-                                 <h4 class="text-base font-medium mb-2 text-cyan-300">Hexadecimal Tools</h4>
-                                 <!-- Add Dec<->Hex, Hex<->Bin converter inputs/buttons/outputs here -->
-                                 <label for="decToHexInput">Dec to Hex:</label> <input type="number" id="decToHexInput" placeholder="Decimal" class="text-sm">
-                                 <div id="decToHexError" class="error-message hidden"></div> <button onclick="convertToHex()" class="text-xs">Convert</button>
-                                 <div id="decToHexOutput" class="interactive-output text-sm mb-2"></div>
-                                 <label for="hexToDecInput">Hex to Dec:</label> <input type="text" id="hexToDecInput" placeholder="Hex (0-9, A-F)" class="text-sm">
-                                 <div id="hexToDecError" class="error-message hidden"></div> <button onclick="convertHexToDecimal()" class="text-xs">Convert</button>
-                                 <div id="hexToDecOutput" class="interactive-output text-sm mb-2"></div>
-                                 <label for="hexToBinInput">Hex to Bin:</label> <input type="text" id="hexToBinInput" placeholder="Hex (0-9, A-F)" class="text-sm">
-                                 <div id="hexToBinError" class="error-message hidden"></div> <button onclick="convertHexToBinary()" class="text-xs">Convert</button>
-                                 <div id="hexToBinOutput" class="interactive-output text-sm mb-2"></div>
-                                 <label for="binToHexInput">Bin to Hex:</label> <input type="text" id="binToHexInput" placeholder="Binary (group by 4)" class="text-sm">
-                                 <div id="binToHexError" class="error-message hidden"></div> <button onclick="convertBinToHex()" class="text-xs">Convert</button>
-                                 <div id="binToHexOutput" class="interactive-output text-sm"></div>
+                             <h3>Hexadecimal Glyphs (Base 16)</h3>
+                             <p class="text-sm mb-2 text-gray-300">Uses 0-9 and A-F (A=10...F=15). Maps cleanly to 4 binary bits.</p>
+                             <table class="mb-3"><thead><tr><th>Dec</th><th>Hex</th><th>Bin</th></tr></thead><tbody><tr><td>10</td><td>A</td><td>1010</td></tr><tr><td>11</td><td>B</td><td>1011</td></tr><tr><td>...</td><td>...</td><td>...</td></tr><tr><td>15</td><td>F</td><td>1111</td></tr></tbody></table>
+                              <div class="mc-interactive-section mb-4">
+                                 <h4 class="font-minecraft text-purple-400 text-sm mb-3">Hexadecimal Scribe</h4>
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                                     <div>
+                                         <label for="decToHexInput">Dec to Hex:</label> <input type="number" id="decToHexInput" placeholder="Decimal">
+                                         <div id="decToHexError" class="error-message hidden"></div> <button onclick="convertToHex()">Convert</button>
+                                         <div id="decToHexOutput" class="mc-interactive-output mb-2"></div>
+                                     </div>
+                                     <div>
+                                         <label for="hexToDecInput">Hex to Dec:</label> <input type="text" id="hexToDecInput" placeholder="Hex (0-9, A-F)">
+                                         <div id="hexToDecError" class="error-message hidden"></div> <button onclick="convertHexToDecimal()">Convert</button>
+                                         <div id="hexToDecOutput" class="mc-interactive-output mb-2"></div>
+                                     </div>
+                                     <div>
+                                         <label for="hexToBinInput">Hex to Bin:</label> <input type="text" id="hexToBinInput" placeholder="Hex (0-9, A-F)">
+                                         <div id="hexToBinError" class="error-message hidden"></div> <button onclick="convertHexToBinary()">Convert</button>
+                                         <div id="hexToBinOutput" class="mc-interactive-output mb-2"></div>
+                                     </div>
+                                      <div>
+                                         <label for="binToHexInput">Bin to Hex:</label> <input type="text" id="binToHexInput" placeholder="Binary (group by 4)">
+                                         <div id="binToHexError" class="error-message hidden"></div> <button onclick="convertBinToHex()">Convert</button>
+                                         <div id="binToHexOutput" class="mc-interactive-output"></div>
+                                      </div>
+                                  </div>
                               </div>
 
                              <!-- BCD -->
-                             <h3 class="font-medium mb-2 text-cyan-300">Binary Coded Decimal (BCD)</h3>
-                             <p class="text-sm mb-2">Represents each decimal digit (0-9) with its 4-bit binary equivalent. Useful for decimal interfacing.</p>
-                             <p class="text-xs mb-2">Example: <code>289</code><sub class="text-xs">10</sub> = <code>0010 1000 1001</code> (BCD)</p>
-                             <div class="interactive-section">
-                                 <h4 class="text-base font-medium mb-2 text-cyan-300">BCD Tools</h4>
-                                 <!-- Add Dec<->BCD converter inputs/buttons/outputs here -->
-                                 <label for="decToBcdInput">Dec to BCD:</label> <input type="number" id="decToBcdInput" placeholder="Decimal (0-9 digits)" class="text-sm">
-                                 <div id="decToBcdError" class="error-message hidden"></div> <button onclick="convertToBcd()" class="text-xs">Convert</button>
-                                 <div id="decToBcdOutput" class="interactive-output text-sm mb-2"></div>
-                                 <label for="bcdToDecInput">BCD to Dec:</label> <input type="text" id="bcdToDecInput" placeholder="BCD (space separated 4-bit groups)" class="text-sm">
-                                 <div id="bcdToDecError" class="error-message hidden"></div> <button onclick="convertBcdToDecimal()" class="text-xs">Convert</button>
-                                 <div id="bcdToDecOutput" class="interactive-output text-sm"></div>
+                             <h3>BCD Tablets (Binary Coded Decimal)</h3>
+                             <p class="text-sm mb-2 text-gray-300">Encodes each decimal digit (0-9) with its 4-bit binary form. Bridges decimal and binary worlds.</p>
+                             <p class="text-xs mb-2 text-gray-400">Example: <code>289</code><sub class="opacity-80">10</sub> = <code>0010 1000 1001</code> (BCD)</p>
+                             <div class="mc-interactive-section">
+                                 <h4 class="font-minecraft text-purple-400 text-sm mb-3">BCD Decoder</h4>
+                                  <div class="grid grid-cols-1 md:grid-cols-2 gap-x-4">
+                                     <div>
+                                         <label for="decToBcdInput">Dec to BCD:</label> <input type="number" id="decToBcdInput" placeholder="Decimal (0-9 digits)">
+                                         <div id="decToBcdError" class="error-message hidden"></div> <button onclick="convertToBcd()">Convert</button>
+                                         <div id="decToBcdOutput" class="mc-interactive-output mb-2"></div>
+                                     </div>
+                                      <div>
+                                         <label for="bcdToDecInput">BCD to Dec:</label> <input type="text" id="bcdToDecInput" placeholder="BCD (4-bit groups, space separated)">
+                                         <div id="bcdToDecError" class="error-message hidden"></div> <button onclick="convertBcdToDecimal()">Convert</button>
+                                         <div id="bcdToDecOutput" class="mc-interactive-output"></div>
+                                      </div>
+                                  </div>
                              </div>
                          `;
                          break;
                     case 4: // Quiz Intro
                         stepContent = `
                             <div class="text-center">
-                                <h2 class="text-xl font-semibold mb-3 text-cyan-400">Quiz Time!</h2>
-                                <p class="mb-4">Let's test your understanding. You will be presented with ${NUM_QUIZ_QUESTIONS} randomly selected questions.</p>
-                                <p class="text-sm text-gray-400">Select the best answer for each question and click 'Next'.</p>
+                                <h2 class="text-xl mb-4">The Trial Begins!</h2>
+                                <p class="mb-5 text-gray-300">Prove your mastery. Answer ${NUM_QUIZ_QUESTIONS} questions drawn from the digital ether.</p>
+                                <p class="text-sm text-gray-400">Choose wisely and proceed.</p>
                             </div>`;
                         break;
-                    // Cases for Quiz Questions (Dynamically generated)
-                    // Case for Summary (Dynamically generated)
-
-                    default: // Should handle quiz questions and summary
+                    // --- Quiz Questions and Summary (Theme Classes applied dynamically) ---
+                    default:
                          if (stepIndex > 4 && stepIndex <= 4 + NUM_QUIZ_QUESTIONS) { // Quiz Question Step
-                            const qIndex = stepIndex - (4 + 1); // Index within selectedQuizQuestions (0-based)
+                            const qIndex = stepIndex - (4 + 1);
                             if (qIndex < selectedQuizQuestions.length) {
                                 const q = selectedQuizQuestions[qIndex];
                                 let optionsHTML = '';
                                 q.options.forEach((opt, optIndex) => {
                                     const isSelected = userAnswers[qIndex] === optIndex;
+                                    // Added theme class 'option-btn'
                                     optionsHTML += `
-                                        <div class="option-btn bg-input-bg hover:bg-cyan-800/50 p-3 my-2 rounded-lg cursor-pointer transition duration-150 ease-in-out text-sm ${isSelected ? 'selected' : ''}"
+                                        <div class="option-btn ${isSelected ? 'selected' : ''}"
                                              data-q-index="${qIndex}" data-opt-index="${optIndex}">
                                             ${opt}
                                         </div>
@@ -667,14 +823,14 @@
                                 });
                                 stepContent = `
                                     <div class="question-block p-1">
-                                        <div class="question text-base font-medium mb-4">Q ${qIndex + 1}/${NUM_QUIZ_QUESTIONS}: ${q.question}</div>
+                                        <div class="question mb-5 text-base">Trial ${qIndex + 1}/${NUM_QUIZ_QUESTIONS}: ${q.question}</div>
                                         <div class="options">${optionsHTML}</div>
                                     </div>
                                 `;
-                            } else { stepContent = `<p>Error: Question index out of bounds.</p>`; }
+                            } else { stepContent = `<p class="text-red-400">Error: Question index out of bounds.</p>`; }
 
                         } else if (stepIndex === totalJourneySteps - 1) { // Summary Step
-                             stepContent = renderSummary();
+                             stepContent = renderSummary(); // Uses themed classes inside
                         } else {
                              stepContent = `<p>Step ${stepIndex} content not defined.</p>`;
                         }
@@ -684,21 +840,15 @@
                 currentStepElement.innerHTML = stepContent;
                 stepContainer.appendChild(currentStepElement);
 
-                // Add event listeners if it's a quiz question step or contains interactive elements
+                // Re-add event listeners if needed (same logic)
                 if (stepIndex > 4 && stepIndex <= 4 + NUM_QUIZ_QUESTIONS) {
                     currentStepElement.querySelectorAll('.option-btn').forEach(btn => {
                         btn.addEventListener('click', handleOptionClick);
                     });
                 }
-                 // If step 3 (conversions), attach listeners to buttons (better done via delegation later if performance is an issue)
-                 if (stepIndex === 3 || stepIndex === 2) { // Also handles place value in step 2
-                     // The functions are global, just need to ensure elements exist
-                 }
+            }
 
-            } // end if(isNewStep)
-
-
-             // Manage visibility and transitions (same logic as before)
+             // Manage visibility and transitions (same logic)
             const previousStepIndex = parseInt(stepContainer.dataset.previousStep || '-1');
              if (stepIndex > previousStepIndex) {
                  const prevStepElement = stepContainer.querySelector(`#step-${previousStepIndex}`);
@@ -708,105 +858,124 @@
              } else {
                  const prevStepElement = stepContainer.querySelector(`#step-${previousStepIndex}`);
                  if (prevStepElement) prevStepElement.classList.remove('prev-step');
+                 // Adjust for immediate visibility on 'prev'
                  currentStepElement.style.transform = 'translateX(-100%)';
-                 requestAnimationFrame(() => {
-                    currentStepElement.classList.remove('hidden', 'prev-step');
-                    currentStepElement.classList.add('current-step');
+                 currentStepElement.classList.remove('hidden'); // Make visible *before* transition starts
+                 requestAnimationFrame(() => { // Allow repaint
+                     currentStepElement.classList.add('current-step'); // Add class to trigger transition
+                     currentStepElement.style.transform = 'translateX(0)'; // Set target state
                  });
              }
 
             stepContainer.dataset.previousStep = stepIndex;
-            stepContainer.scrollTop = 0; // Scroll to top of new step
+            stepContainer.scrollTop = 0;
 
             updateButtonStates();
             renderProgressDots();
         }
 
-
         function updateButtonStates() {
             prevBtn.classList.toggle('hidden', currentStep === 0);
             nextBtn.classList.remove('hidden');
-            finalResultDiv.classList.add('hidden');
+            finalResultDiv.classList.add('hidden'); // Always hide final initially
 
+            // Update text and disabled state based on current step
             if (currentStep === 0) { nextBtn.textContent = 'Start Journey'; nextBtn.disabled = false; }
-            else if (currentStep < 4) { nextBtn.textContent = 'Next Module'; nextBtn.disabled = false; } // Learning steps
-            else if (currentStep === 4) { nextBtn.textContent = 'Start Quiz'; nextBtn.disabled = false; } // Quiz intro
-            else if (currentStep > 4 && currentStep <= 4 + NUM_QUIZ_QUESTIONS) { // Quiz questions
+            else if (currentStep < 4) { nextBtn.textContent = 'Next Section'; nextBtn.disabled = false; }
+            else if (currentStep === 4) { nextBtn.textContent = 'Start Trial'; nextBtn.disabled = false; }
+            else if (currentStep > 4 && currentStep <= 4 + NUM_QUIZ_QUESTIONS) {
                 const qIndex = currentStep - (4 + 1);
-                nextBtn.disabled = userAnswers[qIndex] === undefined; // Disable until answered
-                 if (currentStep === 4 + NUM_QUIZ_QUESTIONS) { nextBtn.textContent = 'View Summary'; }
+                nextBtn.disabled = userAnswers[qIndex] === undefined;
+                 if (currentStep === 4 + NUM_QUIZ_QUESTIONS) { nextBtn.textContent = 'View Results'; }
                  else { nextBtn.textContent = 'Next Question'; }
             } else if (currentStep === totalJourneySteps - 1) { // Summary step
-                nextBtn.classList.add('hidden');
-                prevBtn.classList.remove('hidden'); // Allow back from summary
-                finalResultDiv.classList.remove('hidden');
-                calculateAndDisplayResults(); // Calculate score now
+                nextBtn.classList.add('hidden'); // Hide Next on summary
+                prevBtn.classList.remove('hidden'); // Ensure Prev is visible
+                finalResultDiv.classList.remove('hidden'); // Show final area
+                calculateAndDisplayResults();
             }
         }
 
-        function handleOptionClick(event) { /* ... (same as before) ... */
-            if (quizCompleted) return;
-            const selectedBtn = event.target.closest('.option-btn');
-            const qIndex = parseInt(selectedBtn.dataset.qIndex);
-            const optIndex = parseInt(selectedBtn.dataset.optIndex);
-            userAnswers[qIndex] = optIndex;
-            const optionsInQuestion = stepContainer.querySelectorAll(`.option-btn[data-q-index="${qIndex}"]`);
-            optionsInQuestion.forEach(btn => btn.classList.remove('selected'));
-            selectedBtn.classList.add('selected');
-            nextBtn.disabled = false; // Enable Next button
+        function handleOptionClick(event) {
+             if (quizCompleted) return; // Don't allow changes after quiz is done (summary view)
+             const selectedBtn = event.target.closest('.option-btn');
+             if (!selectedBtn) return; // Click wasn't on an option button
+
+             const qIndex = parseInt(selectedBtn.dataset.qIndex);
+             const optIndex = parseInt(selectedBtn.dataset.optIndex);
+
+             // If we are on the summary step, don't allow selection changes
+             if (currentStep === totalJourneySteps - 1) return;
+
+             userAnswers[qIndex] = optIndex;
+
+             const optionsInQuestion = stepContainer.querySelectorAll(`.option-btn[data-q-index="${qIndex}"]`);
+             optionsInQuestion.forEach(btn => btn.classList.remove('selected')); // Use theme's selected class
+             selectedBtn.classList.add('selected');
+
+             nextBtn.disabled = false; // Enable Next button
          }
 
         function nextStep() {
-            if (currentStep === 4) { // Moving from Quiz Intro to first question
-                selectRandomQuestions(); // Select questions NOW
-                // Need to re-render immediately to update total steps/dots before moving
-                renderProgressDots();
+            if (currentStep === 4) {
+                selectRandomQuestions();
+                renderProgressDots(); // Update dots immediately after selection
             }
              if (currentStep < totalJourneySteps - 1) {
-                 if (currentStep === 4 + NUM_QUIZ_QUESTIONS) { // Moving to summary
-                      quizCompleted = true;
+                 if (currentStep === 4 + NUM_QUIZ_QUESTIONS) { // Moving TO summary
+                      quizCompleted = true; // Mark quiz as completed
+                      // Optional: Disable prev button if you don't want them going back into quiz questions from summary
+                      // prevBtn.disabled = true;
                  }
                 currentStep++;
                 renderStep(currentStep);
             }
         }
 
-        function prevStep() { /* ... (same as before) ... */
+        function prevStep() {
+             // Prevent going back into the quiz once summary is reached? Optional.
+             // if (quizCompleted && currentStep === totalJourneySteps - 1) return;
+
              if (currentStep > 0) {
+                // If moving back from summary, re-enable quiz interactions?
+                // if (currentStep === totalJourneySteps - 1) quizCompleted = false; // Allow re-answering?
+
                 currentStep--;
                 renderStep(currentStep);
             }
         }
 
-        function calculateAndDisplayResults() { /* ... (same as before - uses selectedQuizQuestions.length) ... */
+        function calculateAndDisplayResults() {
              let score = 0;
              userAnswers.forEach((answer, index) => {
                  if (selectedQuizQuestions[index] && answer === selectedQuizQuestions[index].answer) {
                      score++;
                  }
              });
-             const accuracy = selectedQuizQuestions.length > 0 ? score / selectedQuizQuestions.length : 0;
-             resultText.textContent = `Quiz Complete! You scored ${score} out of ${selectedQuizQuestions.length}. (${(accuracy * 100).toFixed(0)}%)`;
+             const accuracy = selectedQuizQuestions.length > 0 ? Math.round((score / selectedQuizQuestions.length) * 100) : 0;
+             resultText.textContent = `Trial Complete! Score: ${score} / ${selectedQuizQuestions.length} (${accuracy}%)`; // Themed text
              try {
-                 window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'setAccuracy', accuracy: accuracy, score: score, total: selectedQuizQuestions.length }));
+                 window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'setAccuracy', accuracy: (accuracy/100), score: score, total: selectedQuizQuestions.length }));
              } catch (error) { console.error("Error sending accuracy:", error); }
         }
 
-        function renderSummary() { /* ... (use selectedQuizQuestions) ... */
+        function renderSummary() {
             let summaryHTML = `<div class="text-left p-1">
-                                <h2 class="text-xl font-semibold mb-3 text-cyan-400 text-center">Quiz Summary</h2>`;
+                                <h2 class="text-xl text-center mb-4">Trial Results</h2>`; // Themed Header
              selectedQuizQuestions.forEach((q, qIndex) => {
                 const userAnswer = userAnswers[qIndex];
                 const correctAnswer = q.answer;
                 const isCorrect = userAnswer === correctAnswer;
+                // Added theme classes 'summary-item' and 'correct'/'incorrect'
                 summaryHTML += `
-                    <div class="summary-item bg-input-bg/70 p-3 my-3 rounded-lg border-l-4 ${isCorrect ? 'border-emerald-500' : 'border-rose-500'} text-sm">
-                        <p class="font-medium mb-2">${qIndex + 1}. ${q.question}</p>
-                        <p class="${isCorrect ? 'text-emerald-400' : 'text-rose-400'}"> Your: ${userAnswer !== undefined ? q.options[userAnswer] : 'Not answered'} ${isCorrect ? ' (Correct)' : ''} </p>
-                        ${!isCorrect && userAnswer !== undefined ? `<p class="text-emerald-400"> Correct: ${q.options[correctAnswer]}</p>` : ''}
-                         <details class="text-xs mt-2 text-gray-400 cursor-pointer">
-                             <summary class="outline-none focus:ring-1 focus:ring-cyan-500 rounded px-1 inline-block">Explanation</summary>
-                             <p class="mt-1">${q.summary}</p>
+                    <div class="summary-item ${isCorrect ? 'correct' : 'incorrect'}">
+                        <p class="font-medium mb-2 text-gray-200">${qIndex + 1}. ${q.question}</p>
+                        <p class="${isCorrect ? 'text-emerald-400' : 'text-rose-400'}"> Your Answer: ${userAnswer !== undefined ? q.options[userAnswer] : 'Not answered'} ${isCorrect ? '<span class="text-green-400 font-bold">(Correct)</span>' : ''} </p>
+                        ${!isCorrect && userAnswer !== undefined ? `<p class="text-emerald-400"> Correct Answer: ${q.options[correctAnswer]}</p>` : ''}
+                        ${!isCorrect && userAnswer === undefined ? `<p class="text-emerald-400"> Correct Answer: ${q.options[correctAnswer]}</p>` : ''}
+                         <details class="text-xs mt-2 cursor-pointer">
+                             <summary class="font-bold outline-none focus:ring-1 focus:ring-purple-500 rounded px-1 inline-block text-gray-400 hover:text-gray-200">Explanation</summary>
+                             <p class="mt-1 text-gray-300">${q.summary}</p>
                          </details>
                     </div>`;
              });
@@ -814,11 +983,15 @@
             return summaryHTML;
         }
 
-        function completeQuiz() { /* ... (same as before) ... */
+
+        function completeQuiz() {
             try {
                 window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'gameOver' }));
             } catch (error) { console.error("Error sending gameOver:", error); }
-            completeBtn.textContent = "Finished"; completeBtn.disabled = true; prevBtn.disabled = true;
+            completeBtn.textContent = "Finished";
+            completeBtn.disabled = true;
+            prevBtn.disabled = true; // Disable prev on final completion
+             nextBtn.disabled = true; // Disable next as well
         }
 
         // --- Initial Setup ---
@@ -827,9 +1000,8 @@
         completeBtn.addEventListener('click', completeQuiz);
 
         window.onload = () => {
-            // Set initial total steps (will be updated before quiz starts)
-            totalJourneySteps = fixedStepsCount + NUM_QUIZ_QUESTIONS;
-            renderStep(0); // Render Intro step first
+            totalJourneySteps = fixedStepsCount + NUM_QUIZ_QUESTIONS; // Initial calc
+            renderStep(0); // Render Intro step
         };
 
     </script>
