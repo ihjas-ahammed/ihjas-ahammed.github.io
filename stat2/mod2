@@ -7,7 +7,7 @@ $p(x \leq X \leq x+dx) = f(x) dx$ is the PDF for a continuous random variable $x
 
 It satisfies:
 
-1. $f(x) \geq 0$ for all $x$
+1. $f(x) \\geq 0$ for all $x$
 2. $$\int_{-\infty}^{\infty} f(x) dx = 1$$
 
 ### Result 1

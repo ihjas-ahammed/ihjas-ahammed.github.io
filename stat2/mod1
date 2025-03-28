@@ -39,7 +39,7 @@ Random variables are also called *chance variables* or *stochastic variables*. I
 
 The probability distribution of a discrete random variable $ X $ is a list of distinct values $ x_i $ with their associated probabilities. The function $ f(x_i) $ or $ P(X = x_i) $ is called the **probability mass function (PMF)**, provided:
 
-1. $ f(x_i) \geq 0 $
+1. $ f(x_i) \\geq 0 $
 2. $ \sum f(x_i) = 1 $
 
 A probability mass function can be represented as a histogram.

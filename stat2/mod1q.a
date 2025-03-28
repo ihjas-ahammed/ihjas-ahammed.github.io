@@ -11,25 +11,25 @@ Here are the solutions to the questions provided, organized by topic and source 
     * **Probability density function (pdf):** For a continuous random variable X, the probability density function $f(x)$ is a function such that the probability that X falls in a small interval $[x, x + dx]$ is approximately $f(x) dx$.
 
     * **Properties of pdf:**
-        1.  $f(x) \geq 0$ for all $x \in \mathbb{R}$ (The pdf is non-negative everywhere).
+        1.  $f(x) \\geq 0$ for all $x \in \mathbb{R}$ (The pdf is non-negative everywhere).
         2.  $\int_{-\infty}^{\infty} f(x) dx = 1$ (The total area under the pdf curve is equal to 1).
         3.  $P(a \leq X \leq b) = \int_{a}^{b} f(x) dx$ (Probability of X falling in an interval is the area under the pdf curve over that interval).
 
     * **Axiomatic definition of probability:**
         * **Underlying Assumptions:** We consider a sample space S, which is the set of all possible outcomes of a random experiment. Let A be an event, which is a subset of S. We define a probability function P that assigns a real number P(A) to each event A.
         * **Axioms:**
-            1. **Non-negativity:** For any event A, $P(A) \geq 0$.
+            1. **Non-negativity:** For any event A, $P(A) \\geq 0$.
             2. **Normalization:** For the sample space S, $P(S) = 1$.
             3. **Additivity:** If $A_1, A_2, A_3, ...$ is a sequence of mutually exclusive events (i.e., $A_i \cap A_j = \emptyset$ for $i \neq j$), then $P(A_1 \cup A_2 \cup A_3 \cup ...) = \sum_{i=1}^{\infty} P(A_i)$.
 
         * **Establish $0 \leq P(A) \leq 1$ for an event A:**
-            * From Axiom 1, we have $P(A) \geq 0$.
+            * From Axiom 1, we have $P(A) \\geq 0$.
             * We know that for any event A, $A \subseteq S$.
             * Therefore, using properties of probability (which can be derived from axioms, though not strictly required here for this part), we know that if $A \subseteq B$, then $P(A) \leq P(B)$.
             * Since $A \subseteq S$, we have $P(A) \leq P(S)$.
             * From Axiom 2, $P(S) = 1$.
             * Hence, $P(A) \leq 1$.
-            * Combining $P(A) \geq 0$ and $P(A) \leq 1$, we get $0 \leq P(A) \leq 1$.
+            * Combining $P(A) \\geq 0$ and $P(A) \leq 1$, we get $0 \leq P(A) \leq 1$.
 
 * **From C4185:**
     * **Let x denote the number of heads obtained when a fair coin is tossed thrice ; then $P(x=1)$ is:**
@@ -64,8 +64,8 @@ Here are the solutions to the questions provided, organized by topic and source 
         * The distribution function $F(x) = P(X \leq x) = \int_{-\infty}^{x} f(t) dt$.
         * For $x \leq 0$, $F(x) = \int_{-\infty}^{x} 0 dt = 0$.
         * For $0 < x < 1$, $F(x) = \int_{-\infty}^{0} 0 dt + \int_{0}^{x} 3t^2 dt = [t^3]_0^x = x^3$.
-        * For $x \geq 1$, $F(x) = \int_{-\infty}^{0} 0 dt + \int_{0}^{1} 3t^2 dt + \int_{1}^{x} 0 dt = [t^3]_0^1 = 1$.
-        * So, $F(x) = \begin{cases} 0, & x \leq 0 \\ x^3, & 0 < x < 1 \\ 1, & x \geq 1 \end{cases}$
+        * For $x \\geq 1$, $F(x) = \int_{-\infty}^{0} 0 dt + \int_{0}^{1} 3t^2 dt + \int_{1}^{x} 0 dt = [t^3]_0^1 = 1$.
+        * So, $F(x) = \begin{cases} 0, & x \leq 0 \\ x^3, & 0 < x < 1 \\ 1, & x \\geq 1 \end{cases}$
 
     * **Find the value of $k$, if $f(x) = \binom{k}{2}^x$, for $x = 1, 2, 3...$ is the probability mass function of X.**
         * For $f(x)$ to be a p.m.f., $\sum_{x=1}^{\infty} f(x) = 1$.
@@ -78,7 +78,7 @@ Here are the solutions to the questions provided, organized by topic and source 
         * $k^2 - k - 1 = 0$
         * $k = \frac{1 \pm \sqrt{1 - 4(1)(-1)}}{2} = \frac{1 \pm \sqrt{5}}{2}$.
         * Since $\binom{k}{2}$ must be positive for it to be a probability, and for the geometric series to converge, we need $0 < \binom{k}{2} < 1$.  If $k = \frac{1 + \sqrt{5}}{2} \approx 1.618$, then $\binom{k}{2}$ is not well-defined as k is not an integer and also less than 2. However, if we interpret $\binom{k}{2}$ as $\frac{k(k-1)}{2}$ for real k, then $\binom{k}{2} = \frac{1}{2} < 1$.
-        * But for binomial coefficient notation $\binom{k}{2}$ to be standard, k should be an integer and $k \ge 2$. If we assume there's a typo and it was meant to be something else, and proceed with $\binom{k}{2} = 1/2$, then $k^2-k-1=0$ gives non-integer $k$ values.  Let's re-examine the question.  It's likely there's a misunderstanding in the form.  If we assume the question meant $(\frac{1}{c})^x$ form for geometric, then we should have $\binom{k}{2}$ constant, not depending on x.  If it's meant to be $\left(\frac{1}{2}\right)^x$, then maybe $\binom{k}{2} = 1/2$, but k being integer doesn't work.
+        * But for binomial coefficient notation $\binom{k}{2}$ to be standard, k should be an integer and $k \\ge 2$. If we assume there's a typo and it was meant to be something else, and proceed with $\binom{k}{2} = 1/2$, then $k^2-k-1=0$ gives non-integer $k$ values.  Let's re-examine the question.  It's likely there's a misunderstanding in the form.  If we assume the question meant $(\frac{1}{c})^x$ form for geometric, then we should have $\binom{k}{2}$ constant, not depending on x.  If it's meant to be $\left(\frac{1}{2}\right)^x$, then maybe $\binom{k}{2} = 1/2$, but k being integer doesn't work.
         * **Let's reconsider assuming the question is incorrectly transcribed and should be $f(x) = c (\frac{1}{2})^x$.** Then $\sum_{x=1}^\infty c (\frac{1}{2})^x = c \sum_{x=1}^\infty (\frac{1}{2})^x = c \frac{1/2}{1-1/2} = c = 1$. So $c=1$. In that case, no $k$ to find based on $\binom{k}{2}$.
 
         * **Let's assume the question meant $f(x) = C \cdot r^x$ where $r = \binom{k}{2}$ and we need to find $k$ such that $r = 1/2$.**  Then $\binom{k}{2} = 1/2 \implies k^2-k-1=0$, which gives non-integer $k$.
@@ -99,15 +99,15 @@ Here are the solutions to the questions provided, organized by topic and source 
             For $1 \leq x < 2$, $F(x) = f(1) = \frac{2(1)^2 - 1}{56} = \frac{1}{56}$.
             For $2 \leq x < 3$, $F(x) = f(1) + f(2) = \frac{1}{56} + \frac{2(2)^2 - 1}{56} = \frac{1}{56} + \frac{7}{56} = \frac{8}{56} = \frac{1}{7}$.
             For $3 \leq x < 4$, $F(x) = f(1) + f(2) + f(3) = \frac{8}{56} + \frac{2(3)^2 - 1}{56} = \frac{8}{56} + \frac{17}{56} = \frac{25}{56}$.
-            For $x \geq 4$, $F(x) = f(1) + f(2) + f(3) + f(4) = \frac{25}{56} + \frac{2(4)^2 - 1}{56} = \frac{25}{56} + \frac{31}{56} = \frac{56}{56} = 1$.
+            For $x \\geq 4$, $F(x) = f(1) + f(2) + f(3) + f(4) = \frac{25}{56} + \frac{2(4)^2 - 1}{56} = \frac{25}{56} + \frac{31}{56} = \frac{56}{56} = 1$.
 
-            So, $F(x) = \begin{cases} 0, & x < 1 \\ 1/56, & 1 \leq x < 2 \\ 8/56 = 1/7, & 2 \leq x < 3 \\ 25/56, & 3 \leq x < 4 \\ 1, & x \geq 4 \end{cases}$
+            So, $F(x) = \begin{cases} 0, & x < 1 \\ 1/56, & 1 \leq x < 2 \\ 8/56 = 1/7, & 2 \leq x < 3 \\ 25/56, & 3 \leq x < 4 \\ 1, & x \\geq 4 \end{cases}$
 
     * **Given the p.d.f. of X as $f(x) = 1$, for $0 < x < 1$. Find the p.d.f. of $Y = -2 \log_e X$.**
         * We use the transformation of random variables technique.
-        * CDF method: $F_Y(y) = P(Y \leq y) = P(-2 \log_e X \leq y) = P(\log_e X \geq -\frac{y}{2}) = P(X \geq e^{-y/2})$.
-        * Since $0 < X < 1$, for $y>0$, $0 < e^{-y/2} < 1$. For $y \leq 0$, $e^{-y/2} \geq 1$, so $P(X \geq e^{-y/2}) = 0$.
-        * For $y > 0$, $P(X \geq e^{-y/2}) = \int_{e^{-y/2}}^{1} f_X(x) dx = \int_{e^{-y/2}}^{1} 1 dx = [x]_{e^{-y/2}}^{1} = 1 - e^{-y/2}$.
+        * CDF method: $F_Y(y) = P(Y \leq y) = P(-2 \log_e X \leq y) = P(\log_e X \\geq -\frac{y}{2}) = P(X \\geq e^{-y/2})$.
+        * Since $0 < X < 1$, for $y>0$, $0 < e^{-y/2} < 1$. For $y \leq 0$, $e^{-y/2} \\geq 1$, so $P(X \\geq e^{-y/2}) = 0$.
+        * For $y > 0$, $P(X \\geq e^{-y/2}) = \int_{e^{-y/2}}^{1} f_X(x) dx = \int_{e^{-y/2}}^{1} 1 dx = [x]_{e^{-y/2}}^{1} = 1 - e^{-y/2}$.
         * So, $F_Y(y) = \begin{cases} 1 - e^{-y/2}, & y > 0 \\ 0, & y \leq 0 \end{cases}$
         * Now, differentiate $F_Y(y)$ with respect to $y$ to get $f_Y(y)$.
         * For $y > 0$, $f_Y(y) = \frac{d}{dy} (1 - e^{-y/2}) = -e^{-y/2} (-\frac{1}{2}) = \frac{1}{2} e^{-y/2}$.
@@ -278,7 +278,7 @@ Here are the solutions to the questions provided, organized by topic and source 
         $\mu_2 = \mu_2' - (\mu_1')^2 = \mu_2' - \mu^2 = 2 \implies \mu_2' = 2 + \mu^2$.
         $\mu_3 = \mu_3' - 3\mu \mu_2' + 2\mu^3 = 6 \implies \mu_3' = 6 + 3\mu \mu_2' - 2\mu^3 = 6 + 3\mu(2+\mu^2) - 2\mu^3 = 6 + 6\mu + 3\mu^3 - 2\mu^3 = 6 + 6\mu + \mu^3$.
         And so on... It's getting complicated to find a general form for $\mu_r'$ in terms of $\mu = \mu_1'$.
-        Let's consider a simpler case.  If $\mu_r = r!$ for *all* central moments including $r=1, 0$.  But $\mu_1 = 0$ always, and $\mu_0 = 1$ always. So $\mu_1 = 1! = 1 \neq 0$ and $\mu_0 = 0! = 1$.  So, it should be for $r \ge 2$.  Assume $\mu_r = r!$ for $r \ge 2$. And assume $\mu_1 = 0, \mu_0 = 1$.
+        Let's consider a simpler case.  If $\mu_r = r!$ for *all* central moments including $r=1, 0$.  But $\mu_1 = 0$ always, and $\mu_0 = 1$ always. So $\mu_1 = 1! = 1 \neq 0$ and $\mu_0 = 0! = 1$.  So, it should be for $r \\ge 2$.  Assume $\mu_r = r!$ for $r \\ge 2$. And assume $\mu_1 = 0, \mu_0 = 1$.
         If we consider standard normal distribution, moments are $\mu_{2k} = \frac{(2k)!}{2^k k!}$ and $\mu_{2k+1} = 0$. This is not $r!$.
         Consider exponential distribution, raw moments $\mu_r' = \Gamma(r+1)/\lambda^r = r!/\lambda^r$.  If $\lambda = 1$, $\mu_r' = r!$.  But these are raw moments, not central moments.
 
@@ -358,8 +358,8 @@ Here are the solutions to the questions provided, organized by topic and source 
 * **From C 4401:**
     * **For any random variable X, show that $V(X)$ is always non-negative.**
         * $V(X) = E[(X - E(X))^2]$. Let $Y = X - E(X)$. Then $V(X) = E(Y^2)$.
-        * Since $(X - E(X))^2 = Y^2 \geq 0$ for all possible values of X (and hence Y), and expectation is a "weighted average", the expected value of a non-negative random variable must be non-negative.
-        * Formally, for any random variable Z, if $Z \geq 0$ almost surely, then $E(Z) \geq 0$. Here $Z = (X - E(X))^2 \geq 0$. Thus, $V(X) = E[(X - E(X))^2] \geq 0$.
+        * Since $(X - E(X))^2 = Y^2 \\geq 0$ for all possible values of X (and hence Y), and expectation is a "weighted average", the expected value of a non-negative random variable must be non-negative.
+        * Formally, for any random variable Z, if $Z \\geq 0$ almost surely, then $E(Z) \\geq 0$. Here $Z = (X - E(X))^2 \\geq 0$. Thus, $V(X) = E[(X - E(X))^2] \\geq 0$.
 
     * **For two independent random variables X and Y, show that $V(X - Y) = V(X) + V(Y)$.**
         * $V(X - Y) = E[( (X - Y) - E(X - Y) )^2] = E[( (X - Y) - (E(X) - E(Y)) )^2] = E[( (X - E(X)) - (Y - E(Y)) )^2]$.
@@ -475,7 +475,7 @@ Here are the solutions to the questions provided, organized by topic and source 
  * **Obtain the mode of $X$ following binomial distribution with parameters $n$ and $p$.**
     * Mode is the value of x that maximizes $P(X=x) = {n \choose x} p^x q^{n-x}$.
     * Consider the ratio $\frac{P(X=x)}{P(X=x-1)} = \frac{{n \choose x} p^x q^{n-x}}{{n \choose x-1} p^{x-1} q^{n-(x-1)}} = \frac{n!}{x!(n-x)!} \frac{(x-1)!(n-x+1)!}{n!} \frac{p^x}{p^{x-1}} \frac{q^{n-x}}{q^{n-x+1}} = \frac{(n-x+1)}{x} \frac{p}{q} = \frac{(n-x+1)p}{xq}$.
-    * $P(X=x) \geq P(X=x-1)$ if $\frac{P(X=x)}{P(X=x-1)} \geq 1 \implies \frac{(n-x+1)p}{xq} \geq 1 \implies (n-x+1)p \geq xq \implies np - xp + p \geq xq \implies np + p \geq xq + xp = x(p+q) = x$.
+    * $P(X=x) \\geq P(X=x-1)$ if $\frac{P(X=x)}{P(X=x-1)} \\geq 1 \implies \frac{(n-x+1)p}{xq} \\geq 1 \implies (n-x+1)p \\geq xq \implies np - xp + p \\geq xq \implies np + p \\geq xq + xp = x(p+q) = x$.
     * $x \leq np + p = (n+1)p$.
     * Mode is the largest integer less than or equal to $(n+1)p$.
     * If $(n+1)p$ is an integer, then both $(n+1)p$ and $(n+1)p - 1$ are modes. If $(n+1)p$ is not an integer, then mode is $\lfloor (n+1)p \rfloor$.
@@ -548,7 +548,7 @@ Here are the solutions to the questions provided, organized by topic and source 
     *  $= -r(x-\lambda)^{r-1} \frac{e^{-\lambda} \lambda^x}{x!} - (x-\lambda)^r \frac{e^{-\lambda} \lambda^x}{x!} + (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!}$.
     *  $\frac{d}{d\lambda} \mu_r = \sum_{x=0}^{\infty} [-r(x-\lambda)^{r-1} \frac{e^{-\lambda} \lambda^x}{x!} - (x-\lambda)^r \frac{e^{-\lambda} \lambda^x}{x!} + (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!}]$.
     *  $= -r \sum_{x=0}^{\infty} (x-\lambda)^{r-1} \frac{e^{-\lambda} \lambda^x}{x!} - \sum_{x=0}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^x}{x!} + \sum_{x=0}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!}$.
-    *  $= -r E[(X-\lambda)^{r-1}] - E[(X-\lambda)^r] + \sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!}$. (Term at $x=0$ is $(0-\lambda)^r \frac{e^{-\lambda} \lambda^{-1}}{(-1)!} = 0$ if $r \ge 0$).  $\sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!} = \frac{1}{\lambda} \sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x}}{ (x-1)!} = \frac{1}{\lambda} \sum_{x=0}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x}}{ (x-1)!}$.
+    *  $= -r E[(X-\lambda)^{r-1}] - E[(X-\lambda)^r] + \sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!}$. (Term at $x=0$ is $(0-\lambda)^r \frac{e^{-\lambda} \lambda^{-1}}{(-1)!} = 0$ if $r \\ge 0$).  $\sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!} = \frac{1}{\lambda} \sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x}}{ (x-1)!} = \frac{1}{\lambda} \sum_{x=0}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x}}{ (x-1)!}$.
     *  $\mu_{r+1} = E[(X-\lambda)^{r+1}] = E[(X-\lambda)(X-\lambda)^r] = E[X(X-\lambda)^r - \lambda(X-\lambda)^r] = E[X(X-\lambda)^r] - \lambda E[(X-\lambda)^r] = E[X(X-\lambda)^r] - \lambda \mu_r$.
     *  $E[X(X-\lambda)^r] = \sum_{x=0}^{\infty} x (x-\lambda)^r \frac{e^{-\lambda} \lambda^x}{x!} = \sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^x}{(x-1)!} = \lambda \sum_{x=1}^{\infty} (x-\lambda)^r \frac{e^{-\lambda} \lambda^{x-1}}{(x-1)!}$.
     *  Let $y = x-1$, $x = y+1$. $\lambda \sum_{y=0}^{\infty} (y+1-\lambda)^r \frac{e^{-\lambda} \lambda^{y}}{y!} = \lambda E[(Y+1-\lambda)^r] = \lambda E[( (Y-\lambda) + 1)^r ] = \lambda E[ \sum_{j=0}^r {r \choose j} (Y-\lambda)^j 1^{r-j} ] = \lambda \sum_{j=0}^r {r \choose j} E[(Y-\lambda)^j] = \lambda \sum_{j=0}^r {r \choose j} \mu_j$.  Here Y has same distribution as X, so $\mu_j$ are same central moments.
