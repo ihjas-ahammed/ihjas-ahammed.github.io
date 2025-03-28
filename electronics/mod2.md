@@ -38,7 +38,7 @@ The main disadvantages of a half-wave rectifier are:
 The output frequency of a half-wave rectifier is equal to the input frequency ($50 \mathrm{~Hz}$). Recall how a complete cycle is defined. A waveform has a complete cycle when it repeats the same wave pattern over a given time. Thus, the a.c. input voltage repeats the same wave pattern over $0^\circ-360^\circ$, $360^\circ-720^\circ$, and so on. The output waveform also repeats the same wave pattern over $0^\circ-360^\circ$, $360^\circ-720^\circ$, and so on. This means that when the input a.c. completes one cycle, the output half-wave rectified wave also completes one cycle. In other words, the output frequency is equal to the input frequency, i.e.,
 
 $$
-f_{\\text{out}} = f_{\\text{in}}
+f_{\text{out}} = f_{\text{in}}
 $$
 
 For example, if the input frequency of a sine wave applied to a half-wave rectifier is $100 \mathrm{~Hz}$, then the frequency of the output wave will also be $100 \mathrm{~Hz}$.
@@ -48,7 +48,7 @@ For example, if the input frequency of a sine wave applied to a half-wave rectif
 The ratio of d.c. power output to the applied input a.c. power is known as rectifier efficiency, i.e.,
 
 $$
-\\text{Rectifier efficiency, } \eta = \frac{\\text{d.c. power output}}{\\text{Input a.c. power}}
+\text{Rectifier efficiency, } \eta = \frac{\text{d.c. power output}}{\text{Input a.c. power}}
 $$
 
 Consider a half-wave rectifier. Let $ v = V_m \sin \theta $ be the alternating voltage that appears across the secondary winding. Let $ r_f $ and $ R_L $ be the diode resistance and load resistance, respectively. The diode conducts during the positive half-cycles of the a.c. supply while no current conduction takes place during negative half-cycles.
@@ -65,7 +65,7 @@ $$
 \]
 
 $$
-\therefore \quad \\text{d.c. power, } P_{dc} = I_{dc}^2 \times R_L = \left( \frac{I_m}{\pi} \right)^2 \times R_L
+\therefore \quad \text{d.c. power, } P_{dc} = I_{dc}^2 \times R_L = \left( \frac{I_m}{\pi} \right)^2 \times R_L
 $$
 
 ### a.c. Power Input
@@ -82,13 +82,13 @@ $$
 $$
 
 $$
-\therefore \quad \\text{Rectifier efficiency} = \frac{\\text{d.c. output power}}{\\text{a.c. input power}} = \frac{(I_m / \pi)^2 \times R_L}{(I_m / 2)^2 (r_f + R_L)} = \frac{0.406 R_L}{r_f + R_L} = \frac{0.406}{1 + \frac{r_f}{R_L}}
+\therefore \quad \text{Rectifier efficiency} = \frac{\text{d.c. output power}}{\text{a.c. input power}} = \frac{(I_m / \pi)^2 \times R_L}{(I_m / 2)^2 (r_f + R_L)} = \frac{0.406 R_L}{r_f + R_L} = \frac{0.406}{1 + \frac{r_f}{R_L}}
 $$
 
 The efficiency will be maximum if $ r_f $ is negligible compared to $ R_L $.
 
 $$
-\therefore \quad \\text{Max. rectifier efficiency} = 40.6\%
+\therefore \quad \text{Max. rectifier efficiency} = 40.6\%
 $$
 
 This shows that in half-wave rectification, a maximum of $40.6\%$ of a.c. power is converted into d.c. power.
@@ -100,12 +100,12 @@ The applied input a.c. power to a half-wave rectifier is 100 watts. The d.c. out
 (ii) What happens to the remaining 60 watts?
 
 #### Solution
-(i) Rectification efficiency = $\frac{\\text{d.c. output power}}{\\text{a.c. input power}} = \frac{40}{100} = 0.4 = 40\%$  
+(i) Rectification efficiency = $\frac{\text{d.c. output power}}{\text{a.c. input power}} = \frac{40}{100} = 0.4 = 40\%$  
 
 (ii) $40\%$ efficiency of rectification does not mean that $60\%$ of power is lost in the rectifier circuit. In fact, a crystal diode consumes little power due to its small internal resistance. The 100 W a.c. power is contained as 50 watts in positive half-cycles and 50 watts in negative half-cycles. The 50 watts in the negative half-cycles are not supplied at all. Only 50 watts in the positive half-cycles are converted into 40 watts d.c. power.
 
 $$
-\therefore \quad \\text{Power efficiency} = \frac{40}{50} \times 100 = 80\%
+\therefore \quad \text{Power efficiency} = \frac{40}{50} \times 100 = 80\%
 $$
 
 Although 100 watts of a.c. power was supplied, the half-wave rectifier accepted only 50 watts and converted it into 40 watts d.c. power. Therefore, it is appropriate to say that the efficiency of rectification is $40\%$ and not $80\%$, which is power efficiency.
@@ -119,7 +119,7 @@ Primary to secondary turns is $ \frac{N_1}{N_2} = 10 $
 R.M.S. primary voltage = 230 V
 
 $$
-\therefore \quad \\text{Max. primary voltage, } V_{prm} = (\sqrt{2}) \times \\text{r.m.s. primary voltage} = (\sqrt{2}) \times 230 = 325.3 \mathrm{~V}
+\therefore \quad \text{Max. primary voltage, } V_{prm} = (\sqrt{2}) \times \text{r.m.s. primary voltage} = (\sqrt{2}) \times 230 = 325.3 \mathrm{~V}
 $$
 
 Max. secondary voltage is
@@ -139,7 +139,7 @@ $$
 (ii) During the negative half-cycle of the a.c. supply, the diode is reverse-biased and hence conducts no current. Therefore, the maximum secondary voltage appears across the diode.
 
 $$
-\therefore \\text{Peak inverse voltage} = 32.53 \mathrm{~V}
+\therefore \text{Peak inverse voltage} = 32.53 \mathrm{~V}
 $$
 
 ### Example 6.14
@@ -157,7 +157,7 @@ v = 50 \sin \omega t
 $$
 
 $$
-\therefore \quad \\text{Maximum voltage, } V_m = 50 \mathrm{~V}
+\therefore \quad \text{Maximum voltage, } V_m = 50 \mathrm{~V}
 $$
 
 $$
@@ -201,7 +201,7 @@ $$
 $$
 
 $$
-\\text{or } 50 = \frac{V_m}{\pi (25 + 800)} \times 800
+\text{or } 50 = \frac{V_m}{\pi (25 + 800)} \times 800
 $$
 
 $$
@@ -232,7 +232,7 @@ During the positive half-cycle of the secondary voltage, the end A of the second
 Suppose $ V_m $ is the maximum voltage across the half-secondary winding. The circuit at the instant the secondary voltage reaches its maximum value in the positive direction shows diode $ D_1 $ conducting while diode $ D_2 $ is non-conducting. Therefore, the entire secondary voltage appears across the non-conducting diode. Consequently, the peak inverse voltage is twice the maximum voltage across the half-secondary winding, i.e.,
 
 $$
-\\text{PIV} = 2 V_m
+\text{PIV} = 2 V_m
 $$
 
 ### Disadvantages
@@ -257,7 +257,7 @@ During the negative half-cycle of the secondary voltage, end P becomes negative,
 The peak inverse voltage (PIV) of each diode is equal to the maximum secondary voltage of the transformer. Suppose during the positive half-cycle of the input a.c., end P of the secondary is positive, and end Q is negative. Under such conditions, diodes $ D_1 $ and $ D_3 $ are forward-biased, while diodes $ D_2 $ and $ D_4 $ are reverse-biased. Since the diodes are considered ideal, diodes $ D_1 $ and $ D_3 $ can be replaced by wires. This circuit shows that the PIV of each reverse-biased diode is equal to the maximum secondary voltage.
 
 $$
-\\text{PIV} = V_m
+\text{PIV} = V_m
 $$
 
 ### Disadvantages
@@ -268,7 +268,7 @@ $$
 The output frequency of a full-wave rectifier is double the input frequency. Remember that a wave has a complete cycle when it repeats the same pattern. The input a.c. completes one cycle from $0^\circ-360^\circ$. However, the full-wave rectified wave completes 2 cycles in this period. Therefore, the output frequency is twice the input frequency, i.e.,
 
 $$
-f_{\\text{out}} = 2 f_{\\text{in}}
+f_{\text{out}} = 2 f_{\text{in}}
 $$
 
 For example, if the input frequency to a full-wave rectifier is $100 \mathrm{~Hz}$, then the output frequency will be $200 \mathrm{~Hz}$.
@@ -293,7 +293,7 @@ I_{dc} = \frac{2 I_m}{\pi}
 $$
 
 $$
-\therefore \quad \\text{d.c. power output, } P_{dc} = I_{dc}^2 \times R_L = \left( \frac{2 I_m}{\pi} \right)^2 \times R_L
+\therefore \quad \text{d.c. power output, } P_{dc} = I_{dc}^2 \times R_L = \left( \frac{2 I_m}{\pi} \right)^2 \times R_L
 $$
 
 ### a.c. Input Power
@@ -314,7 +314,7 @@ P_{ac} = \left( \frac{I_m}{\sqrt{2}} \right)^2 (r_f + R_L)
 $$
 
 $$
-\therefore \quad \\text{Full-wave rectification efficiency is}
+\therefore \quad \text{Full-wave rectification efficiency is}
 $$
 
 $$
@@ -324,7 +324,7 @@ $$
 The efficiency will be maximum if $ r_f $ is negligible compared to $ R_L $.
 
 $$
-\therefore \quad \\text{Maximum efficiency} = 81.2\%
+\therefore \quad \text{Maximum efficiency} = 81.2\%
 $$
 
 This is double the efficiency due to a half-wave rectifier. Therefore, a full-wave rectifier is twice as effective as a half-wave rectifier.
@@ -365,7 +365,7 @@ Primary to secondary turns, $ N_1 / N_2 = 5 $
 R.M.S. primary voltage = 230 V
 
 $$
-\therefore \\text{R.M.S. secondary voltage} = 230 \times (1 / 5) = 46 \mathrm{~V}
+\therefore \text{R.M.S. secondary voltage} = 230 \times (1 / 5) = 46 \mathrm{~V}
 $$
 
 Maximum voltage across secondary = $ 46 \times \sqrt{2} = 65 \mathrm{~V} $
@@ -387,13 +387,13 @@ I_{dc} = \frac{2 \times 32.5}{\pi \times 100} = 0.207 \mathrm{~A}
 $$
 
 $$
-\therefore \quad \\text{d.c. output voltage, } V_{dc} = I_{dc} \times R_L = 0.207 \times 100 = 20.7 \mathrm{~V}
+\therefore \quad \text{d.c. output voltage, } V_{dc} = I_{dc} \times R_L = 0.207 \times 100 = 20.7 \mathrm{~V}
 $$
 
 (ii) The peak inverse voltage is equal to the maximum secondary voltage, i.e.,
 
 $$
-\\text{PIV} = 65 \mathrm{~V}
+\text{PIV} = 65 \mathrm{~V}
 $$
 
 (iii) Rectification efficiency = $ \frac{0.812}{1 + \frac{r_f}{R_L}} $
@@ -401,7 +401,7 @@ $$
 Since $ r_f = 0 $
 
 $$
-\therefore \quad \\text{Rectification efficiency} = 81.2\%
+\therefore \quad \text{Rectification efficiency} = 81.2\%
 $$
 
 ### Example 6.18
@@ -419,7 +419,7 @@ Primary/secondary turns, $ N_1 / N_2 = 4 $
 R.M.S. primary voltage = 230 V
 
 $$
-\therefore \\text{R.M.S. secondary voltage} = 230 \times (1 / 4) = 57.5 \mathrm{~V}
+\therefore \text{R.M.S. secondary voltage} = 230 \times (1 / 4) = 57.5 \mathrm{~V}
 $$
 
 Maximum voltage across secondary is
@@ -437,19 +437,19 @@ I_{dc} = \frac{2 \times 81.3}{\pi \times 200} = 0.26 \mathrm{~A}
 $$
 
 $$
-\therefore \quad \\text{d.c. output voltage, } V_{dc} = I_{dc} \times R_L = 0.26 \times 200 = 52 \mathrm{~V}
+\therefore \quad \text{d.c. output voltage, } V_{dc} = I_{dc} \times R_L = 0.26 \times 200 = 52 \mathrm{~V}
 $$
 
 (ii) The peak inverse voltage is equal to the maximum secondary voltage, i.e.,
 
 $$
-\\text{PIV} = 81.3 \mathrm{~V}
+\text{PIV} = 81.3 \mathrm{~V}
 $$
 
 (iii) In full-wave rectification, there are two output pulses for each complete cycle of the input a.c. voltage. Therefore, the output frequency is twice that of the a.c. supply frequency, i.e.,
 
 $$
-f_{\\text{out}} = 2 \times f_{\\text{in}} = 2 \times 50 = 100 \mathrm{~Hz}
+f_{\text{out}} = 2 \times f_{\text{in}} = 2 \times 50 = 100 \mathrm{~Hz}
 $$
 
 ### Example 6.19
@@ -498,7 +498,7 @@ V_m = 65 / 2 = 32.5 \mathrm{~V}
 $$
 
 $$
-\\text{PIV} = 2 V_m = 2 \times 32.5 = 65 \mathrm{~V}
+\text{PIV} = 2 V_m = 2 \times 32.5 = 65 \mathrm{~V}
 $$
 
 **Bridge-type circuit**  
@@ -507,7 +507,7 @@ R.M.S. secondary voltage = $ 230 \times 1 / 10 = 23 \mathrm{~V} $
 Max. voltage across secondary, $ V_m = 23 \times \sqrt{2} = 32.5 \mathrm{~V} $
 
 $$
-\therefore \quad \\text{PIV} = V_m = 32.5 \mathrm{~V}
+\therefore \quad \text{PIV} = V_m = 32.5 \mathrm{~V}
 $$
 
 This shows that for the same d.c. output voltage, the PIV of the bridge circuit is half that of the centre-tap circuit. This is a distinct advantage of the bridge circuit.
@@ -526,7 +526,7 @@ Max. a.c. voltage, $ V_m = 240 \times \sqrt{2} \mathrm{~V} $
 Max. load current, $ I_m = \frac{V_m}{2 r_f + R_L} = \frac{240 \times \sqrt{2}}{2 \times 1 + 480} = 0.7 \mathrm{~A} $
 
 $$
-\therefore \quad \\text{Mean load current, } I_{dc} = \frac{2 I_m}{\pi} = \frac{2 \times 0.7}{\pi} = 0.45 \mathrm{~A}
+\therefore \quad \text{Mean load current, } I_{dc} = \frac{2 I_m}{\pi} = \frac{2 \times 0.7}{\pi} = 0.45 \mathrm{~A}
 $$
 
 (ii) Since each diode conducts only half a cycle, the diode r.m.s. current is:
@@ -547,17 +547,17 @@ The bridge rectifier shown uses silicon diodes. Find:
 The conditions of the problem suggest that the a.c. voltage across the transformer secondary is 12 V r.m.s.
 
 $$
-\therefore \\text{Peak secondary voltage, } V_{s(pk)} = 12 \times \sqrt{2} = 16.97 \mathrm{~V}
+\therefore \text{Peak secondary voltage, } V_{s(pk)} = 12 \times \sqrt{2} = 16.97 \mathrm{~V}
 $$
 
 (i) At any instant in the bridge rectifier, two diodes in series are conducting.
 
 $$
-\therefore \\text{Peak output voltage, } V_{out(pk)} = 16.97 - 2(0.7) = 15.57 \mathrm{~V}
+\therefore \text{Peak output voltage, } V_{out(pk)} = 16.97 - 2(0.7) = 15.57 \mathrm{~V}
 $$
 
 $$
-\therefore \\text{Average (or d.c.) output voltage, } V_{av} = V_{dc} = \frac{2 V_{out(pk)}}{\pi} = \frac{2 \times 15.57}{\pi} = 9.91 \mathrm{~V}
+\therefore \text{Average (or d.c.) output voltage, } V_{av} = V_{dc} = \frac{2 V_{out(pk)}}{\pi} = \frac{2 \times 15.57}{\pi} = 9.91 \mathrm{~V}
 $$
 
 (ii) Average (or d.c.) output current is
@@ -612,7 +612,7 @@ The output of a rectifier consists of a d.c. component and an a.c. component (al
 The ratio of the r.m.s. value of the a.c. component to the d.c. component in the rectifier output is known as the ripple factor, i.e.,
 
 $$
-\\text{Ripple factor} = \frac{\\text{r.m.s. value of a.c. component}}{\\text{value of d.c. component}} = \frac{I_{ac}}{I_{dc}}
+\text{Ripple factor} = \frac{\text{r.m.s. value of a.c. component}}{\text{value of d.c. component}} = \frac{I_{ac}}{I_{dc}}
 $$
 
 Therefore, the ripple factor is very important in deciding the effectiveness of a rectifier. The smaller the ripple factor, the lesser the effective a.c. component, and hence the more effective the rectifier.
@@ -642,7 +642,7 @@ $$
 But $ I_{ac} / I_{dc} $ is the ripple factor.
 
 $$
-\therefore \quad \\text{Ripple factor} = \frac{1}{I_{dc}} \sqrt{I_{rms}^2 - I_{dc}^2} = \sqrt{\left( \frac{I_{rms}}{I_{dc}} \right)^2 - 1}
+\therefore \quad \text{Ripple factor} = \frac{1}{I_{dc}} \sqrt{I_{rms}^2 - I_{dc}^2} = \sqrt{\left( \frac{I_{rms}}{I_{dc}} \right)^2 - 1}
 $$
 
 (i) **For Half-Wave Rectification**  
@@ -653,7 +653,7 @@ I_{rms} = I_m / 2 \quad ; \quad I_{dc} = I_m / \pi
 $$
 
 $$
-\therefore \quad \\text{Ripple factor} = \sqrt{\left( \frac{I_m / 2}{I_m / \pi} \right)^2 - 1} = 1.21
+\therefore \quad \text{Ripple factor} = \sqrt{\left( \frac{I_m / 2}{I_m / \pi} \right)^2 - 1} = 1.21
 $$
 
 It is clear that the a.c. component exceeds the d.c. component in the output of a half-wave rectifier. This results in greater pulsations in the output. Therefore, a half-wave rectifier is ineffective for converting a.c. into d.c.
@@ -666,10 +666,10 @@ I_{rms} = \frac{I_m}{\sqrt{2}} \quad ; \quad I_{dc} = \frac{2 I_m}{\pi}
 $$
 
 $$
-\therefore \quad \\text{Ripple factor} = \sqrt{\left( \frac{I_m / \sqrt{2}}{2 I_m / \pi} \right)^2 - 1} = 0.48
+\therefore \quad \text{Ripple factor} = \sqrt{\left( \frac{I_m / \sqrt{2}}{2 I_m / \pi} \right)^2 - 1} = 0.48
 $$
 
-i.e., $ \frac{\\text{effective a.c. component}}{\\text{d.c. component}} = 0.48 $
+i.e., $ \frac{\text{effective a.c. component}}{\text{d.c. component}} = 0.48 $
 
 This shows that in the output of a full-wave rectifier, the d.c. component is more than the a.c. component. Consequently, the pulsations in the output will be less than in a half-wave rectifier. For this reason, full-wave rectification is invariably used for converting a.c. into d.c.
 
@@ -682,13 +682,13 @@ The lower the ripple factor of a power supply, the better it is.
 For power supply A,
 
 $$
-\\text{Ripple factor} = \frac{V_{ac(r.m.s.)}}{V_{dc}} = \frac{0.5}{10} \times 100 = 5\%
+\text{Ripple factor} = \frac{V_{ac(r.m.s.)}}{V_{dc}} = \frac{0.5}{10} \times 100 = 5\%
 $$
 
 For power supply B,
 
 $$
-\\text{Ripple factor} = \frac{V_{ac(r.m.s.)}}{V_{dc}} = \frac{0.001}{25} \times 100 = 0.004\%
+\text{Ripple factor} = \frac{V_{ac(r.m.s.)}}{V_{dc}} = \frac{0.001}{25} \times 100 = 0.004\%
 $$
 
 Clearly, power supply B is better.
@@ -799,13 +799,13 @@ The output of a full-wave rectifier has a d.c. component and an a.c. component. 
 For the d.c. component $ V_{dc}^* $, the choke resistance is in series with the load.
 
 $$
-\therefore \quad \\text{Voltage across load, } V_{dc} = \frac{V_{dc}^*}{R + R_L} \times R_L
+\therefore \quad \text{Voltage across load, } V_{dc} = \frac{V_{dc}^*}{R + R_L} \times R_L
 $$
 
 In our example, $ V_{dc}^* = \frac{2 V_m}{\pi} = \frac{2 \times 25.7}{\pi} = 16.4 \mathrm{~V} $
 
 $$
-\therefore \quad \\text{Voltage across load, } V_{dc} = \frac{16.4}{25 + 750} \times 750 = 15.9 \mathrm{~V}
+\therefore \quad \text{Voltage across load, } V_{dc} = \frac{16.4}{25 + 750} \times 750 = 15.9 \mathrm{~V}
 $$
 
 The voltage across the load is 15.9 V d.c. plus a small ripple.

@@ -71,7 +71,7 @@
             /* Prevent scrolling on body */
         }
 
-        .example{
+        *{
             scrollbar-width: none;
             overflow-x: scroll;
         }
@@ -931,7 +931,7 @@
 
                         <h3>Definition (Discrete)</h3>
                         <p>For a discrete random variable $X$ with PMF $P(x_i)$, the expectation $E(X)$ is:</p> 
-                        <div class="formula"> $ E(X) = \mu = \\sum_i x_i P(X=x_i) $ </div> 
+                        <div class="formula"> $ E(X) = \\mu = \\sum_i x_i P(X=x_i) $ </div> 
                         <p>It's a weighted average, where each possible value $x_i$ is weighted by its probability $P(x_i)$.</p> 
 
                         <div class="example">
@@ -997,7 +997,7 @@
 
                         <h3>Variance ($Var(X)$ or $\\sigma^2$)</h3> 
                         <p>Variance, denoted $Var(X)$ or $\\sigma^2$, measures the spread or dispersion of the distribution around the mean.</p>
-                        <div class="formula"> $ Var(X) = \\sigma^2 = E[(X - \\mu)^2] = E(X^2) - [E(X)]^2 = \mu_2' - (\mu_1')^2 $ </div> 
+                        <div class="formula"> $ Var(X) = \\sigma^2 = E[(X - \\mu)^2] = E(X^2) - [E(X)]^2 = \\mu_2' - (\\mu_1')^2 $ </div> 
                         <p>The <strong>Standard Deviation</strong>, $\\sigma$, is the square root of the variance: $\\sigma = \\sqrt{Var(X)}$. It's in the same units as the random variable.</p> 
 
                         <h3>Properties of Variance</h3>

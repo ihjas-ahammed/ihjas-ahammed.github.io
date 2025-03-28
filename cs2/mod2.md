@@ -142,11 +142,11 @@ A mean where each value has a different "weight" (importance).
 -   *Middle value* when the data is sorted.  Good for skewed data!
 -   If **𝑛** is odd:
     $$
-    \\text{M} = x_{\frac{n+1}{2}}
+    \text{M} = x_{\frac{n+1}{2}}
     $$
 -   If **𝑛** is even:
     $$
-    \\text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
+    \text{M} = \frac{x_{\frac{n}{2}} + x_{\frac{n}{2}+1}}{2}
     $$
 
 #### Mode
@@ -161,7 +161,7 @@ Dispersion quantifies how *spread out* the data is.
 
 #### Range
 $$
-\\text{Range} = \max(x) - \min(x)
+\text{Range} = \max(x) - \min(x)
 $$
 
 #### Variance (Spread of Data):
@@ -188,7 +188,7 @@ The average distance from the mean
 
 #### Interquartile Range (IQR)
 $$
-\\text{IQR} = Q_3 - Q_1
+\text{IQR} = Q_3 - Q_1
 $$
 -   **Q1**: 25th percentile (first quartile).
 -   **Q3**: 75th percentile (third quartile).
@@ -205,7 +205,7 @@ These describe the *shape* of the data distribution.
 
 #### Skewness (Measure of Asymmetry)
 $$
-\\text{Skewness} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^3
+\text{Skewness} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^3
 $$
 Here ```s``` is Standard devaition
 
@@ -216,12 +216,12 @@ Here ```s``` is Standard devaition
 #### Kurtosis (Measure of Tailedness)
 
 $$
-\\text{Kurtosis} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^4
+\text{Kurtosis} = \frac{1}{n} \sum_{i=1}^{n} \left(\frac{x_i - \bar{x}}{s}\right)^4
 $$
 
 -   **Excess Kurtosis:**
     $$
-    \\text{Excess Kurtosis} = \\text{Kurtosis} - 3
+    \text{Excess Kurtosis} = \text{Kurtosis} - 3
     $$
     -   **Mesokurtic (≈ 0):** *Normal* distribution.
     -   **Leptokurtic (> 0):** *Heavy tails* (more outliers).
