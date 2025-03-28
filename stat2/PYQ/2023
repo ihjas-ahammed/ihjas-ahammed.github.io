@@ -52,7 +52,7 @@
 
 12. What is the graphical method of measuring trend in a time series ?
 
-$(8 \times 3 = 24 \text{ marks})$
+$(8 \times 3 = 24 \\text{ marks})$
 
 ---
 
@@ -91,7 +91,7 @@ $(8 \times 3 = 24 \text{ marks})$
 
 19. Explain the method of semi-average to measure trend in a time series.
 
-$(5 \times 5 = 25 \text{ marks})$
+$(5 \times 5 = 25 \\text{ marks})$
 
 ---
 
@@ -109,7 +109,7 @@ $(5 \times 5 = 25 \text{ marks})$
 
 21. Define time series. Explain various components of time series with suitable examples.
 
-$(1 \times 11 = 11 \text{ marks})$
+$(1 \times 11 = 11 \\text{ marks})$
 
 ---
 **C 4403 (Pages : 3)**
@@ -145,7 +145,7 @@ $(1 \times 11 = 11 \text{ marks})$
 10. If A and B are two independent event, then $P(A \cap B)=$__________.
 11. For two mutually exclusive events A and B, given that $P(A \cup B) = \frac{3}{8}$ and $P(B) = \frac{1}{4}$. Find $P(\bar{A})$.
 12. State any two properties of distribution function of a discrete random variable.
-$(8 \times 3 = 24 \text{ marks})$
+$(8 \times 3 = 24 \\text{ marks})$
 ---
 **Turn Over**
 ---
@@ -155,7 +155,7 @@ $(8 \times 3 = 24 \text{ marks})$
 21. (i) The probability that a student passes Statistics test is $\frac{2}{3}$, the probability that he passes both Statistics and Mathematics test is $\frac{14}{45}$. The probability that he passes at least one test is $\frac{4}{5}$. What is the probability that he passes the Mathematics test?
 (ii) A problem in Statistics is given to three students A, B and C whose chances of solving it are $\frac{1}{2}, \frac{3}{4}$ and $\frac{1}{4}$ respectively. What is the probability that the problem will be solved, if all of them try independently?
 
-$$(1 \times 11= 11 \text{ marks})$$
+$$(1 \times 11= 11 \\text{ marks})$$
 
 ---
 
@@ -193,7 +193,7 @@ $$(1 \times 11= 11 \text{ marks})$$
 Find the value of a.
 Find $P(X\leq3)$ and $P(0\leq X \leq 5)$.
 
-$$(5 \times 5=25 \text{ marks})$$
+$$(5 \times 5=25 \\text{ marks})$$
 
 ---
 **Section C**
@@ -240,7 +240,7 @@ $$(5 \times 5=25 \text{ marks})$$
 (b) Define the mutual independence of three events A, B and C. Also illustrate that the pairwise independence of A, B and C need not imply their mutual independence.
 21. (a) Cauchy-Schwartz Inequality for two random variables X and Y.
 (b) Using this inequality prove $-1 \leq r_{XY} \leq +1$, where $r_{XY}$ is the coefficient of correlation between X and Y.
-$$(1 \times 11 = 11 \text{ marks})$$
+$$(1 \times 11 = 11 \\text{ marks})$$
 ---
 **(Page 8 is part of 4402-A)**
 
@@ -391,7 +391,7 @@ $$(1 \times 11 = 11 \text{ marks})$$
 11. Find $c$, if $f(x, y) = c(x + 2y)$, for $x = 1, 2 ; -y = 0, 1$ is the joint p.m.f. of $(X, Y)$.
 12. Define independence of two random variables X and Y.
 
-$(8 \times 3 = 24 \text{ marks})$
+$(8 \times 3 = 24 \\text{ marks})$
 
 **Section B (Short Essay/Paragraph Type Questions)**
 
@@ -419,7 +419,7 @@ $(8 \times 3 = 24 \text{ marks})$
 
 19. For two random variables X and Y, prove that (i) $V(X - Y) = V(X) + V(Y) - 2Cov(X, Y)$ ; (ii) $Cov(X - a, Y - b) = Cov(X, Y)$, where $a$ and $b$ are two constants.
 
-$(5 \times 5 = 25 \text{ marks})$
+$(5 \times 5 = 25 \\text{ marks})$
 ---
 **(Page 13 is part of 4402)**
 **3 C4402**
@@ -433,7 +433,7 @@ $(5 \times 5 = 25 \text{ marks})$
 
 21. (a) Cauchy-Schwartz Inequality for two random variables X and Y.
     (b) Using this inequality prove $-1 \leq r_{XY} \leq +1$, where $r_{XY}$ is the coefficient of correlation between X and Y.
-$(1 \times 11 = 11 \text{ marks})$
+$(1 \times 11 = 11 \\text{ marks})$
 ---
 **C 4401 (Pages : 3)**
 **Name....................................**
@@ -478,7 +478,7 @@ $(1 \times 11 = 11 \text{ marks})$
 14. Define negative binomial distribution.
 15. State Bernoulli's law of large numbers.
 
-$(10 \times 3 = 30 \text{ marks})$
+$(10 \times 3 = 30 \\text{ marks})$
 
 **Section B (Short Essay/Paragraph Type Questions)**
 
@@ -493,13 +493,13 @@ $(10 \times 3 = 30 \text{ marks})$
 19. Find $h$, if $f(x,y)=\frac{x+y}{k}; x=0,1,2;y=1,2$ is a joint p.m.f. of (X,Y). Verify whether X and Y are independent.
 20. If $f(x,y) = \begin{cases}
 e^{-(x+y)}; & x>0;y>0 \\
-0, & \text{elsewhere}
+0, & \\text{elsewhere}
 \end{cases}$
 is the joint p.d.f. of (X, Y), obtain the conditional p.d.fs of X given Y and Y given X.
 21. State and prove the additive property of binomial distribution.
 22. Define hyper geometric distribution. Find the mean of X following this distribution with parameters N, M and *n* where M is not exceeding N.
 23. If $P(X=2) = P(X=3)$, where X follows Poisson distribution, find the m.g.f. of X.
-$$(5 \times 6 = 30 \text{ marks})$$
+$$(5 \times 6 = 30 \\text{ marks})$$
 
 ---
 **(Page 16 is part of 4401)**
@@ -515,8 +515,8 @@ $$(5 \times 6 = 30 \text{ marks})$$
 25. Given the joint p.d.f. of two random variables X and Y as ;
 
     $$f(x, y) = \begin{cases}
-    c(2x + y), & \text{for } 2 < x < 6 ; 0 < y < 5 \\
-    0, & \text{otherwise}
+    c(2x + y), & \\text{for } 2 < x < 6 ; 0 < y < 5 \\
+    0, & \\text{otherwise}
     \end{cases}$$
 
     Find (a) $c$ ; (b) $P(3 < X < 4, Y > 2)$ ; (c) $P(X + Y > 4)$ ; and (iv) $f_{X/Y}(x/y)$.
@@ -525,7 +525,7 @@ $$(5 \times 6 = 30 \text{ marks})$$
 
 27. State and prove Chebycheve's inequality. Also find a lower bound to $P(2 < X < 6)$ where the mean and variance of X are 4 and 3 respectively.
 
-$(2 \times 10 = 20 \text{ marks})$
+$(2 \times 10 = 20 \\text{ marks})$
 ---
 **C 4187 (Pages : 4)**
 **Name....................................**
@@ -587,7 +587,7 @@ $(2 \times 10 = 20 \text{ marks})$
 
     d) Principle of least square method.
 
-$(10 \times 1 = 10 \text{ marks})$
+$(10 \times 1 = 10 \\text{ marks})$
 
 **Section B (One Sentence Questions)**
 
@@ -609,7 +609,7 @@ $(10 \times 1 = 10 \text{ marks})$
 
 17. Define time reversal test.
 
-$(7 \times 2 = 14 \text{ marks})$
+$(7 \times 2 = 14 \\text{ marks})$
 
 **Section C (Paragraph Questions)**
 
@@ -633,7 +633,7 @@ $(7 \times 2 = 14 \text{ marks})$
 
 22. Explain the models of time series.
 
-$(3 \times 4 = 12 \text{ marks})$
+$(3 \times 4 = 12 \\text{ marks})$
 
 ---
 **(Page 19 is part of 4187)**
@@ -644,7 +644,7 @@ $(3 \times 4 = 12 \text{ marks})$
     | Y   | 67 | 68 | 65 | 68 | 72 | 72 |
 31. Explain the construction of cost of living index numbers.
 32. Explain the moving average method. Also give its merits and Demerits.
-$(2 \times 10 = 20 \text{ marks} )$
+$(2 \times 10 = 20 \\text{ marks} )$
 ---
 **(Page 20 is part of 4187)**
 
@@ -684,7 +684,7 @@ $(2 \times 10 = 20 \text{ marks} )$
 
 28. Illustrate how moving average is calculated for even periods.
 
-$(4 \times 6 = 24 \text{ marks})$
+$(4 \times 6 = 24 \\text{ marks})$
 
 **Section E (Essay question)**
 
@@ -904,7 +904,7 @@ Write true or false :
 9.  For a geometric distribution mean is always less than the variance.
 10. The existence of variances of the random variables is not necessary for applying weak law of large numbers.
 
-$(10 \times 1 = 10 \text{ marks})$
+$(10 \times 1 = 10 \\text{ marks})$
 
 **Turn over**
 
@@ -933,7 +933,7 @@ $(10 \times 1 = 10 \text{ marks})$
 
 17. Define convergence in probability.
 
-$(7 \times 2 = 14 \text{ marks})$
+$(7 \times 2 = 14 \\text{ marks})$
 
 **Section C**
 
@@ -951,7 +951,7 @@ $(7 \times 2 = 14 \text{ marks})$
 
 22. State and prove Bernoulli's weak law of large numbers.
 
-$(3 \times 4 = 12 \text{ marks})$
+$(3 \times 4 = 12 \\text{ marks})$
 
 **Section D**
 
@@ -965,7 +965,7 @@ $(3 \times 4 = 12 \text{ marks})$
 
     $$f(x, y) = \begin{cases}
     2 - x - y, & 0 \leq x \leq 1, 0 \leq y \leq 1 \\
-    0, & \text{otherwise}
+    0, & \\text{otherwise}
     \end{cases}$$
 
     Find the covariance between X and Y.
@@ -979,7 +979,7 @@ $(3 \times 4 = 12 \text{ marks})$
 26.  A car hire firm has two cars which it hires out day by day. The number of demands for a car on each day is distributed as Poisson variate with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused
 27.  In a distribution exactly normal, 7% of the items are under 35 and 89% are under 63. What are the mean and standard deviation of the distribution ?
 28.  Let $X_i$ Assume the values $+1$ and $-1$ with equal probabilities, show that law of large numbers cannot be applied to the independent variables $X_1,X_2,...$
-$(4 \times 6 = 24 \text{ marks})$
+$(4 \times 6 = 24 \\text{ marks})$
 **Section E**
 *Answer any two questions*
 *Each questions carries 10 marks*
@@ -987,7 +987,7 @@ $(4 \times 6 = 24 \text{ marks})$
 30. Derive Poisson distribution as a limiting case of binomial distribution.
 31. Explain the properties of Normal Distribution
 32. State and prove the Chebychev's inequality.
-$(2 \times 10 = 20 \text{ marks})$
+$(2 \times 10 = 20 \\text{ marks})$
 ---
 
 **C 4184 (Pages : 3)**
@@ -1017,7 +1017,7 @@ $(2 \times 10 = 20 \text{ marks})$
 8.  For a geometric random variable $X, P(X=x+1)=$__________$ \times P(X=x)$.
 9.  Random variable following gamma distribution ranges in between __________.
 10. If $X$ follow $N(0,1), P(X^2<1)=$__________.
-$(10 \times 1 = 10 \text{ marks})$
+$(10 \times 1 = 10 \\text{ marks})$
 
 **Section B (One Sentence Questions)**
 
@@ -1034,7 +1034,7 @@ $(10 \times 1 = 10 \text{ marks})$
 15. Find the values of the parameters of a binomial random variable with mean 4 and variance 3.
 16. Find $P(X=0)$ for a Poisson random variable with mean 5.
 17. If $X ~ N(\mu, \sigma)$, suggest the variable following log normal distribution.
-$(7 \times 2 = 14 \text{ marks})$
+$(7 \times 2 = 14 \\text{ marks})$
 
 **Section C (Paragraph Questions)**
 
@@ -1045,7 +1045,7 @@ $(7 \times 2 = 14 \text{ marks})$
 20. $X$ and $Y$ are independent random variables following Poisson distribution with parameters $\lambda$ and $\mu$ respectively, where $V(X)=2$ and $V(Y)=3$. Find $P(X+Y>0)$.
 21. If $X$ follow $U[-a,a]$, find $a$ such that $P[X>-1]=0.7$.
 22. Obtain the mean of $X$ follow beta distribution of first kind with parameters $p$ and $q$.
-$(3 \times 4 = 12 \text{ marks})$
+$(3 \times 4 = 12 \\text{ marks})$
 
 **Section D (Short Essay Questions)**
 
@@ -1065,15 +1065,15 @@ $(3 \times 4 = 12 \text{ marks})$
     (i) Between 260 and 280 inclusive.
     (ii) Exactly 250.
     (iii) Fewer than 230 and more than 250.
-$(4 \times 6 = 24 \text{ marks})$
+$(4 \times 6 = 24 \\text{ marks})$
 **Section E (Essay Questions)**
 *Answer any **two** questions.*
 *Each questions carries 10 marks.*
-29. Let X and Y are two random variables with joint p.m.f. $f(x,y)=\begin{cases} 2; 0<x<y<1 \\ 0; \text{ elsewhere}\end{cases}$.
+29. Let X and Y are two random variables with joint p.m.f. $f(x,y)=\begin{cases} 2; 0<x<y<1 \\ 0; \\text{ elsewhere}\end{cases}$.
 
     Find Correlation between X and Y.
 30. If X and Y independent random variables such that $P(X=r)=P(Y=r)=q^rp, r=0,1,2,...$
 where, $p$ and $q$ are positive numbers such that $p+q=1$. Find (i) the distribution of $X+Y$; (ii) The conditionai distribution of $X$ given $X+Y$.
 31. Obtain the m.g.f. of $X$ following (i) Exponential distribution with parameter $\lambda$. (ii) Gamma distribution with parameters $\lambda$ and $n$. Hence prove that sum of $n$ independent and identical exponential random variables follow gamma distribution.
 32. Define standard normal distribution. Show that the quartile deviation of $X-N(\mu, \sigma)$ is $0.6745\sigma$.
-$(2 \times 10 = 20 \text{ marks})$
+$(2 \times 10 = 20 \\text{ marks})$

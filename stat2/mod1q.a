@@ -41,7 +41,7 @@ Here are the solutions to the questions provided, organized by topic and source 
         * For the maximum to be 5, the possible outcomes are pairs where the maximum of the two numbers is 5. These are:
             (5,1), (5,2), (5,3), (5,4), (5,5), (1,5), (2,5), (3,5), (4,5).
         * Total favorable outcomes = 9.
-        * $P(x=5) = \frac{\text{Favorable outcomes}}{\text{Total outcomes}} = \frac{9}{36} = \frac{1}{4}$
+        * $P(x=5) = \frac{\\text{Favorable outcomes}}{\\text{Total outcomes}} = \frac{9}{36} = \frac{1}{4}$
 
     * **If X is the number shown when an unbiased die is thrown. Name the probability distribution of X. Write the p.m.f. of X and find $E(X)$.**
         * **Probability distribution:** Discrete Uniform Distribution.
@@ -247,7 +247,7 @@ Here are the solutions to the questions provided, organized by topic and source 
 
 * **From C4185**
 * **The measure of skewness $\beta_1$ is related to the central moments as :**
-    * $\beta_1 = \frac{\mu_3^2}{\mu_2^3} = \frac{(E[(X-\mu)^3])^2}{(E[(X-\mu)^2])^3} = (\text{Skewness})^2$.  Another common measure of skewness is $\gamma_1 = \sqrt{\beta_1} = \frac{\mu_3}{\sigma^3} = \frac{E[(X-\mu)^3]}{[V(X)]^{3/2}}$.
+    * $\beta_1 = \frac{\mu_3^2}{\mu_2^3} = \frac{(E[(X-\mu)^3])^2}{(E[(X-\mu)^2])^3} = (\\text{Skewness})^2$.  Another common measure of skewness is $\gamma_1 = \sqrt{\beta_1} = \frac{\mu_3}{\sigma^3} = \frac{E[(X-\mu)^3]}{[V(X)]^{3/2}}$.
 
 * **The curve is said to be leptokurtic if:**
     * A curve is leptokurtic if it is more peaked than a normal distribution and has heavier tails. In terms of kurtosis, it means the coefficient of kurtosis $\beta_2 > 3$ (or excess kurtosis $\gamma_2 = \beta_2 - 3 > 0$).
@@ -507,7 +507,7 @@ Here are the solutions to the questions provided, organized by topic and source 
   * So, $\sum_{x=0}^{\infty} |x - 1| \frac{1}{x!} = 1 + 1 = 2$.
   * Mean deviation about mean = $e^{-1} \times 2 = \frac{2}{e}$.
   * Standard deviation = 1.
-  * $\frac{\text{Mean deviation about mean}}{\text{Standard deviation}} = \frac{2/e}{1} = \frac{2}{e}$.  Thus, mean deviation about mean is $\frac{2}{e}$ times the standard deviation.
+  * $\frac{\\text{Mean deviation about mean}}{\\text{Standard deviation}} = \frac{2/e}{1} = \frac{2}{e}$.  Thus, mean deviation about mean is $\frac{2}{e}$ times the standard deviation.
 
   * **Derive Poisson distribution as a limiting case of binomial distribution.**
     * Consider Binomial $B(n, p)$ with parameters $n$ and $p$. Let $n \to \infty$ and $p \to 0$ such that $np = \lambda$ (constant). Then Binomial approaches Poisson with parameter $\lambda$.

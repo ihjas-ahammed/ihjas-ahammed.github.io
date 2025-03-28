@@ -251,7 +251,7 @@ The following are some of the properties of the normal curve:
 
 7. For a normal distribution:
    $$
-   \beta_1 = 0 \quad \text{and} \quad \beta_2 = 3
+   \beta_1 = 0 \quad \\text{and} \quad \beta_2 = 3
    $$
 
 8. The points of inflection of the curve are at $x = \mu \pm \sigma$.
@@ -357,7 +357,7 @@ $$
 1. If 
 
 $$
-X_1 \sim N(\mu_1, \sigma_1^2) \quad \text{and} \quad X_2 \sim N(\mu_2, \sigma_2^2)
+X_1 \sim N(\mu_1, \sigma_1^2) \quad \\text{and} \quad X_2 \sim N(\mu_2, \sigma_2^2)
 $$
 
 and if $X_1$ and $X_2$ are independent, then:
@@ -585,7 +585,7 @@ $$
 The corresponding probability distribution is called the **standard normal distribution**.
 
 - **Mean**: $ E(Z) = 0 $
-- **Variance**: $ \text{Var}(Z) = 1 $
+- **Variance**: $ \\text{Var}(Z) = 1 $
 
 We write:
 

@@ -199,7 +199,7 @@ $$ M_X(t) = E(e^{tX}) = \sum e^{t x_i} P(x_i) $$
 1. $ V(aX) = E[(aX - E(aX))^2] = a^2 V(X) $
 2. For random variables $ X $ and $ Y $:
 
-   $$ V(X + Y) = V(X) + V(Y) + 2 \text{Cov}(X, Y) $$
+   $$ V(X + Y) = V(X) + V(Y) + 2 \\text{Cov}(X, Y) $$
 
 3. If $ X $ and $ Y $ are independent:
 
@@ -211,7 +211,7 @@ $$ M_X(t) = E(e^{tX}) = \sum e^{t x_i} P(x_i) $$
 
 The covariance of $ X $ and $ Y $ is:
 
-$$ \text{Cov}(X, Y) = E[(X - E(X))(Y - E(Y))] = E(XY) - E(X)E(Y) $$
+$$ \\text{Cov}(X, Y) = E[(X - E(X))(Y - E(Y))] = E(XY) - E(X)E(Y) $$
 
 ### Proof for Independent Variables
 
@@ -221,7 +221,7 @@ $$ E(XY) = E(X)E(Y) $$
 
 Thus:
 
-$$ \text{Cov}(X, Y) = E(XY) - E(X)E(Y) = E(X)E(Y) - E(X)E(Y) = 0 $$
+$$ \\text{Cov}(X, Y) = E(XY) - E(X)E(Y) = E(X)E(Y) - E(X)E(Y) = 0 $$
 
 ---
 

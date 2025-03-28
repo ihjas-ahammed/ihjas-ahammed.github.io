@@ -1,0 +1,1485 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>InGen Probability Training</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <script>
+        // MathJax Configuration
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            },
+            svg: {
+                fontCache: 'global'
+            },
+            options: {
+                skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+                ignoreHtmlClass: 'tex2jax_ignore',
+                processHtmlClass: 'tex2jax_process'
+            }
+        };
+    </script>
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+        </script>
+    <style>
+        /* --- Base Styles (Mostly Unchanged) --- */
+        :root {
+            --primary-bg: #0a1a2e;
+            --secondary-bg: #102a43;
+            --panel-bg: rgba(16, 42, 67, 0.85);
+            --border-color: #3c9d9b;
+            --highlight-color: #66fcf1;
+            --text-color: #c5c6c7;
+            --text-muted: #8892b0;
+            --accent-color: #f9a826;
+            /* Orange accent */
+            --red-alert: #e74c3c;
+            --green-confirm: #2ecc71;
+
+            --font-primary: 'Rajdhani', sans-serif;
+            --font-display: 'Orbitron', sans-serif;
+
+            --transition-speed: 0.3s;
+            --glow-effect: 0 0 5px var(--highlight-color), 0 0 10px var(--highlight-color);
+            --footer-height: 50px;
+            /* Height for the Give Up button area */
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            height: 100%;
+            /* Ensure body takes full height */
+            overflow: hidden;
+            /* Prevent scrolling on body */
+        }
+
+        body {
+            background-color: var(--primary-bg);
+            color: var(--text-color);
+            font-family: var(--font-primary);
+            font-size: 16px;
+            line-height: 1.6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Subtle background pattern */
+            background-image:
+                linear-gradient(rgba(10, 26, 46, 0.95), rgba(10, 26, 46, 0.95)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40"><path fill="%23102a43" fill-opacity="0.2" d="M0 40 L40 0 H20 L0 20 M40 40 V20 L20 40"></path></svg>');
+        }
+
+        #loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: var(--primary-bg);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            transition: opacity 0.5s ease-out;
+        }
+
+        #loading-screen.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .loader {
+            /* ... (loader styles unchanged) ... */
+            width: 100px;
+            height: 100px;
+            border: 5px solid var(--secondary-bg);
+            border-top-color: var(--highlight-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+
+        #loading-text {
+            /* ... */
+            font-family: var(--font-display);
+            color: var(--highlight-color);
+            font-size: 1.1em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+
+        .game-container {
+            width: 100%;
+            height: 100%;
+            /* Make container fill viewport */
+            max-width: 600px;
+            /* Retain max-width for larger screens */
+            background-color: var(--secondary-bg);
+            border: 2px solid var(--border-color);
+            box-shadow: 0 0 15px rgba(102, 252, 241, 0.3);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            /* Important: Content scrolls, container doesn't */
+            position: relative;
+            /* For absolute positioning inside */
+        }
+
+        .header {
+            /* ... (header styles unchanged) ... */
+            background-color: rgba(10, 26, 46, 0.8);
+            padding: 10px 15px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-shrink: 0;
+        }
+
+        .header-title {
+            /* ... */
+            font-family: var(--font-display);
+            font-size: 1.2em;
+            color: var(--highlight-color);
+            text-shadow: var(--glow-effect);
+            letter-spacing: 1px;
+        }
+
+        .header-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .header-icons .icon {
+            width: 20px;
+            height: 20px;
+            background-color: var(--border-color);
+            opacity: 0.7;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+        }
+
+
+        .main-content-area {
+            flex-grow: 1;
+            /* Takes up space between header and footer */
+            overflow-y: auto;
+            /* Allows content to scroll */
+            overflow-x: hidden;
+            /* Prevent horizontal scroll */
+            padding: 20px;
+            position: relative;
+            /* For animation positioning */
+            padding-bottom: calc(var(--footer-height) + 20px);
+            /* Ensure space below content */
+        }
+
+        /* --- Animation Styles --- */
+        @keyframes screen-fade-in {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes screen-fade-out {
+            from {
+                opacity: 1;
+            }
+
+            to {
+                opacity: 0;
+            }
+        }
+
+        .screen-fade-in {
+            animation: screen-fade-in 0.4s ease-out forwards;
+        }
+
+        .screen-fade-out {
+            animation: screen-fade-out 0.3s ease-in forwards;
+        }
+
+        @keyframes feedback-pop {
+            0% {
+                transform: scale(0.8);
+                opacity: 0;
+            }
+
+            70% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .feedback {
+            /* Styles moved below */
+            animation: feedback-pop 0.3s ease-out forwards;
+        }
+
+        /* --- Database Grid Styles (Mostly Unchanged) --- */
+        .database-grid {
+            /* ... */
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            /* Slightly smaller min */
+            gap: 12px;
+            padding: 10px 0;
+        }
+
+        .db-item {
+            /* ... */
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            padding: 12px 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            position: relative;
+            overflow: hidden;
+            min-height: 110px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 4px;
+        }
+
+        .db-item::before {
+            /* Scanline effect - slightly adjusted */
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: var(--highlight-color);
+            opacity: 0.2;
+            animation: scanline 5s linear infinite alternate;
+        }
+
+        @keyframes scanline {
+            0% {
+                transform: translateY(5px);
+            }
+
+            100% {
+                transform: translateY(105px);
+            }
+
+            /* Adjust based on min-height */
+        }
+
+        .db-item:hover,
+        .db-item.active {
+            /* ... */
+            background-color: rgba(60, 157, 155, 0.3);
+            border-color: var(--highlight-color);
+            box-shadow: var(--glow-effect);
+            transform: translateY(-2px);
+            /* Add subtle lift */
+        }
+
+        .db-item.locked {
+            /* ... */
+            cursor: not-allowed;
+            opacity: 0.5;
+            filter: grayscale(80%);
+        }
+
+        .db-item.locked:hover {
+            background-color: var(--panel-bg);
+            border-color: var(--border-color);
+            box-shadow: none;
+            transform: none;
+        }
+
+        .db-item-icon {
+            /* ... */
+            width: 35px;
+            height: 35px;
+            background-color: var(--highlight-color);
+            margin-bottom: 8px;
+            opacity: 0.8;
+        }
+
+        /* Icon styles unchanged */
+        .icon-dna {
+            clip-path: polygon(50% 0%, 65% 15%, 65% 35%, 50% 50%, 35% 35%, 35% 15%);
+        }
+
+        .icon-map {
+            clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 100%, 25% 100%, 0% 75%);
+        }
+
+        .icon-fossil {
+            clip-path: circle(50% at 50% 50%);
+        }
+
+        .icon-lab {
+            clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+        }
+
+        .icon-archive {
+            clip-path: polygon(0% 0%, 75% 0%, 100% 25%, 100% 100%, 0% 100%);
+        }
+
+        .icon-calc {
+            clip-path: polygon(0 10%, 100% 10%, 100% 90%, 0 90%);
+        }
+
+        .db-item-title {
+            /* ... */
+            font-size: 0.85em;
+            font-weight: 600;
+            margin-top: auto;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.2;
+        }
+
+        .new-tag {
+            /* ... */
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: var(--accent-color);
+            color: var(--primary-bg);
+            font-size: 0.65em;
+            font-weight: 700;
+            padding: 1px 4px;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        .completion-status {
+            /* New style for Completed/Locked text */
+            font-size: 0.75em;
+            margin-top: 4px;
+            font-weight: 600;
+        }
+
+        .status-locked {
+            color: var(--red-alert);
+        }
+
+        .status-completed {
+            color: var(--green-confirm);
+        }
+
+
+        /* --- Lesson Content Styles (Mostly Unchanged) --- */
+        .lesson-content {
+            padding-bottom: 20px;
+            /* Reduced padding, footer adds more space */
+        }
+
+        .lesson-title {
+            /* ... */
+            font-family: var(--font-display);
+            color: var(--highlight-color);
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
+            text-align: center;
+        }
+
+        .lesson-content h3 {
+            /* ... */
+            color: var(--highlight-color);
+            margin-top: 18px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 1.1em;
+        }
+
+        .lesson-content p,
+        .lesson-content li {
+            /* ... */
+            margin-bottom: 12px;
+            color: var(--text-color);
+            list-style: none;
+        }
+
+        .lesson-content code {
+            /* ... */
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+            color: var(--highlight-color);
+            font-size: 0.9em;
+        }
+
+        .formula {
+            /* ... */
+            background-color: rgba(10, 26, 46, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            margin: 15px 0;
+            overflow-x: auto;
+            text-align: center;
+            border-radius: 4px;
+        }
+
+        .example {
+            /* ... */
+            border-left: 3px solid var(--accent-color);
+            padding-left: 12px;
+            margin: 18px 0;
+            background-color: rgba(25, 53, 80, 0.35);
+            padding: 10px 12px;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .example p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- Interactive Section Styles --- */
+        .interactive-section {
+            /* ... */
+            background-color: var(--panel-bg);
+            border: 1px solid var(--border-color);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .interactive-section h4 {
+            /* ... */
+            color: var(--accent-color);
+            margin-bottom: 12px;
+            font-size: 1.05em;
+        }
+
+        .quiz-question {
+            margin-bottom: 10px;
+        }
+
+        .quiz-options label {
+            /* ... */
+            display: block;
+            margin-bottom: 8px;
+            background: rgba(60, 157, 155, 0.2);
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background var(--transition-speed);
+        }
+
+        .quiz-options label:hover {
+            background: rgba(60, 157, 155, 0.4);
+        }
+
+        .quiz-options input[type="radio"] {
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--text-muted);
+            font-size: 0.9em;
+        }
+
+        .input-group input[type="text"],
+        .input-group input[type="number"] {
+            /* ... */
+            width: 100%;
+            padding: 8px 10px;
+            background-color: rgba(10, 26, 46, 0.7);
+            border: 1px solid var(--border-color);
+            color: var(--text-color);
+            border-radius: 4px;
+            font-family: var(--font-primary);
+            font-size: 1em;
+        }
+
+        .input-group input:focus {
+            outline: none;
+            border-color: var(--highlight-color);
+            box-shadow: var(--glow-effect);
+        }
+
+        button {
+            /* Base button style */
+            background-color: transparent;
+            border: 1px solid var(--highlight-color);
+            color: var(--highlight-color);
+            padding: 8px 15px;
+            font-family: var(--font-display);
+            font-size: 0.9em;
+            cursor: pointer;
+            transition: all var(--transition-speed) ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 8px;
+            border-radius: 4px;
+        }
+
+        button:hover:not(:disabled) {
+            /* Hover only when not disabled */
+            background-color: var(--highlight-color);
+            color: var(--primary-bg);
+            box-shadow: var(--glow-effect);
+        }
+
+        button:disabled {
+            /* ... */
+            border-color: var(--text-muted);
+            color: var(--text-muted);
+            cursor: not-allowed;
+            background-color: transparent;
+            box-shadow: none;
+            opacity: 0.6;
+        }
+
+        .back-button {
+            margin-top: 25px;
+            /* Add space above back button */
+            display: block;
+            /* Make it block for easier centering/spacing */
+            width: fit-content;
+            /* Adjust width */
+            margin-left: auto;
+            /* Push to right if needed, or center */
+            margin-right: auto;
+        }
+
+        .feedback {
+            /* Base feedback style */
+            margin-top: 12px;
+            padding: 8px 10px;
+            border-radius: 4px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9em;
+            border-width: 1px;
+            border-style: solid;
+            /* Animation added via class */
+        }
+
+        .feedback.correct {
+            background-color: rgba(46, 204, 113, 0.2);
+            border-color: var(--green-confirm);
+            color: var(--green-confirm);
+        }
+
+        .feedback.incorrect {
+            background-color: rgba(231, 76, 60, 0.2);
+            border-color: var(--red-alert);
+            color: var(--red-alert);
+        }
+
+        .feedback.info {
+            /* Optional style for general info */
+            background-color: rgba(60, 157, 155, 0.2);
+            border-color: var(--border-color);
+            color: var(--highlight-color);
+        }
+
+        /* Utility Classes */
+        .hidden {
+            display: none !important;
+        }
+
+        /* Use important to override inline styles if needed */
+        .text-center {
+            text-align: center;
+        }
+
+        .mt-20 {
+            margin-top: 20px;
+        }
+
+        /* Table Styles (Unchanged) */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        th,
+        td {
+            border: 1px solid var(--border-color);
+            padding: 6px 8px;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        th {
+            background-color: var(--panel-bg);
+            color: var(--highlight-color);
+            font-weight: 600;
+        }
+
+        td {
+            background-color: rgba(16, 42, 67, 0.6);
+        }
+
+        /* --- Footer for Give Up Button --- */
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: var(--footer-height);
+            background-color: rgba(10, 26, 46, 0.9);
+            /* Slightly different background */
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 15px;
+            flex-shrink: 0;
+            /* Prevent shrinking */
+            z-index: 10;
+            /* Ensure it's above scrolling content */
+        }
+
+        #give-up-btn {
+            background-color: var(--red-alert);
+            border-color: var(--red-alert);
+            color: var(--primary-bg);
+            font-weight: bold;
+            margin-top: 0;
+            /* Override default margin */
+        }
+
+        #give-up-btn:hover:not(:disabled) {
+            background-color: transparent;
+            color: var(--red-alert);
+            box-shadow: 0 0 5px var(--red-alert);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="loading-screen">
+        <div class="loader"></div>
+        <div id="loading-text">Initializing InGen Database...</div>
+    </div>
+
+    <div class="game-container">
+        <header class="header">
+            <div class="header-title">InGen Probability</div>
+            <div class="header-icons">
+                <div class="icon"></div>
+                <div class="icon"></div>
+                <div class="icon"></div>
+            </div>
+        </header>
+
+        <main class="main-content-area" id="main-content">
+            <!-- Content dynamically loaded here -->
+        </main>
+
+        <footer class="footer">
+            <button id="give-up-btn" onclick="handleGiveUp()">End Simulation</button>
+        </footer>
+    </div>
+
+    <script>
+        const mainContent = document.getElementById('main-content');
+        const loadingScreen = document.getElementById('loading-screen');
+        const loadingText = document.getElementById('loading-text');
+        const giveUpButton = document.getElementById('give-up-btn');
+
+        // --- Communication with React Native ---
+        function postToReactNative(type, payload = {}) {
+            if (window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+                const message = JSON.stringify({ type, ...payload });
+                window.ReactNativeWebView.postMessage(message);
+                console.log("Posted to RN:", message); // For debugging
+            } else {
+                console.warn("ReactNativeWebView.postMessage not found. Running in browser?");
+                // Optionally, provide browser feedback for testing
+                if (type === 'setAccuracy') {
+                    console.log(`Accuracy Update: ${(payload.accuracy * 100).toFixed(1)}%`);
+                } else if (type === 'gameOver') {
+                    console.log("Game Over signal sent.");
+                    alert(`Simulation Ended. Final Accuracy: ${(gameState.currentAccuracy * 100).toFixed(1)}%`);
+                }
+            }
+        }
+
+        // --- Game State ---
+        const gameState = {
+            currentScreen: 'database', // 'database' or 'lesson'
+            currentLessonId: null,
+            unlockedLessons: ['rv_intro'],
+            completedLessons: [],
+            newlyUnlocked: [],
+            totalInteractiveElements: 8, // Manually count interactive sections (q1 to q8)
+            correctAnswersCount: 0,
+            attemptedQuestions: new Set(), // Store IDs of attempted questions (e.g., 'q1', 'q2')
+            isGameOver: false,
+            currentAccuracy: 0,
+        };
+
+        // --- Lesson Definitions (WITH MathJax Backslashes Doubled) ---
+        const lessons = [
+            {
+                id: 'rv_intro',
+                title: 'Random Variables',
+                icon: 'icon-dna',
+                content: () => `
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">Module 1: Random Variables</h2>
+                        <p>Welcome, Researcher. Your first task is to understand the fundamental concept of <strong>Random Variables</strong>. In our operations, uncertainty is constant. Random variables help us quantify this uncertainty.</p>
+
+                        <h3>Definition</h3>
+                        <p>A <strong>random variable</strong> is a function that assigns a numerical value to each outcome in a sample space of a random experiment.</p>
+                        <p>Think about extracting DNA from amber samples. The sample space might be $\\{$Successful Extraction, Failed Extraction$\\}.$ A random variable could assign 1 to success and 0 to failure.</p> {/* Note \\{ and \\} */}
+
+                        <div class="example">
+                            <p><strong>Example: Fossil Dig Site</strong></p>
+                            <p>Imagine excavating a small plot. We might find different types of fossils. The sample space (possible outcomes) could be:</p>
+                            <p> $ S = \\{ \\text{Herbivore Bone}, \\text{Carnivore Tooth}, \\text{Amber Fragment}, \\text{Empty} \\} $ </p> {/* Note \\{ and \\} */}
+                            <p>Let's define a random variable $X$ = Number of potentially viable DNA sources found.</p>
+                            <ul>
+                                <li>If we find a Herbivore Bone, maybe $X=1$.</li>
+                                <li>If we find a Carnivore Tooth, maybe $X=1$.</li>
+                                <li>If we find an Amber Fragment, maybe $X=2$ (higher potential).</li>
+                                <li>If the plot is Empty, $X=0$.</li>
+                            </ul>
+                            <p>The random variable $X$ maps the qualitative outcomes to numerical values $\\{0, 1, 2\\}.$</p> {/* Note \\{ and \\} */}
+                        </div>
+
+                        <h3>Types of Random Variables</h3>
+                        <p>Primarily, we deal with:</p>
+                        <ul>
+                            <li><strong>Discrete Random Variables:</strong> Can only take specific, separate values (like counts: 0, 1, 2 dinosaurs). Often integers.</li>
+                            <li><strong>Continuous Random Variables:</strong> Can take any value within a given range (like height, weight, time).</li>
+                        </ul>
+                        <p>This module focuses on <strong>Discrete Random Variables</strong>.</p>
+
+                        <div class="interactive-section" data-question-id="q1">
+                            <h4>Knowledge Check: Dino Paddock</h4>
+                            <p class="quiz-question">In a paddock containing 5 Velociraptors, you are monitoring their aggressive encounters per hour. Let $Y$ be the number of aggressive encounters recorded in one hour. Is $Y$ a discrete or continuous random variable?</p>
+                            <div class="quiz-options">
+                                <label><input type="radio" name="q1" value="discrete"> Discrete (Counts like 0, 1, 2, ...)</label>
+                                <label><input type="radio" name="q1" value="continuous"> Continuous (Can take any value)</label>
+                            </div>
+                            <button onclick="checkAnswer('q1', 'discrete', 'pmf_intro')">Verify Answer</button>
+                            <div id="q1_feedback" class="feedback hidden"></div>
+                        </div>
+                         <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'pmf_intro',
+                title: 'Probability Mass Func.', // Shorter title
+                icon: 'icon-calc',
+                content: () => `
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">Module 2: Probability Mass Function (PMF)</h2>
+                        <p>Now that we can assign numbers to outcomes, we need to know how likely each number is. This is where the <strong>Probability Mass Function (PMF)</strong> comes in.</p>
+
+                        <h3>Definition</h3>
+                        <p>The PMF, denoted as $P(X=x)$ or $f(x)$, gives the probability that a discrete random variable $X$ is exactly equal to some value $x$.</p> {/* Keep original text: $P(\\text{Discrete } X = \\text{value } x)$ */}
+                        <p>A PMF must satisfy two conditions:</p>
+                        <ol>
+                            <li>$f(x_i) \ge 0$ for all possible values $x_i$. (Probabilities can't be negative)</li> {/* Note \\ge */}
+                            <li>$\\sum f(x_i) = 1$. (The sum of probabilities for all possible outcomes must be 1)</li> {/* Note \\sum */}
+                        </ol>
+
+                        <div class="example">
+                            <p><strong>Example: Compsognathus Hatching</strong></p>
+                            <p>Let's say we incubate two Compy eggs ($n=2$). Let $X$ be the number of eggs that successfully hatch. The possible outcomes (S=Success, F=Failure) are $S = \\{SS, SF, FS, FF\\}.$</p> {/* Note \\{ \\} */}
+                            <p>The random variable $X$ (number of successes) can take values $0, 1, 2$.</p>
+                            <p>Assume the probability of one egg hatching is $p=0.8$. Then $q=1-p=0.2$. Assuming independence:</p>
+                            <ul>
+                                <li>$P(X=2) = P(SS) = p \\times p = 0.8 \\times 0.8 = 0.64$</li> {/* Note \\times */}
+                                <li>$P(X=1) = P(SF \text{ or } FS) = P(SF) + P(FS) = (p \\times q) + (q \\times p) = (0.8 \\times 0.2) + (0.2 \\times 0.8) = 0.16 + 0.16 = 0.32$</li> {/* Note \\times */}
+                                <li>$P(X=0) = P(FF) = q \\times q = 0.2 \\times 0.2 = 0.04$</li> {/* Note \\times */}
+                            </ul>
+                            <p>This list of probabilities is the PMF:</p>
+                            <table>
+                                <tr><th>$x$ (Hatched)</th><th>$P(X=x)$</th></tr>
+                                <tr><td>0</td><td>0.04</td></tr>
+                                <tr><td>1</td><td>0.32</td></tr>
+                                <tr><td>2</td><td>0.64</td></tr>
+                            </table>
+                            <p>Check the conditions: All probabilities $P(x) \ge 0$. Sum = $0.04 + 0.32 + 0.64 = 1.00$. Verified.</p> {/* Note \\ge */}
+                        </div>
+
+                         <div class="interactive-section" data-question-id="q2">
+                            <h4>Calculate PMF: Dilophosaurus Feeders</h4>
+                            <p>Three automated feeders supply a Dilophosaurus enclosure. Each has a $p=0.1$ probability of failing overnight, independently. Let $Y$ be the number of feeders that fail.</p>
+                            <p>Calculate $P(Y=1)$ (Exactly one feeder fails).</p>
+                             <div class="input-group">
+                                <label for="q2_input">Enter $P(Y=1)$ (to 3 decimal places):</label>
+                                <input type="number" step="0.001" id="q2_input" placeholder="0.000"> {/* Adjusted placeholder */}
+                            </div>
+                            <button onclick="checkCalculation('q2', 0.243, 'cdf_intro')">Check Calculation</button> {/* Changed first argument back to 'q2' */}
+                            <div id="q2_feedback" class="feedback hidden"></div>
+                            <p class="hidden" id="q2_hint">Hint: There are 3 ways one feeder can fail (1st fails, 2nd fails, or 3rd fails). Calculate the probability of one specific sequence (e.g., FSS: $0.1 \\times 0.9 \\times 0.9$) and multiply by the number of ways (3). Total is $3 \\times P(\\text{FSS})$.</p> {/* Merged hints */}
+                        </div>
+                         <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'cdf_intro',
+                title: 'Cumulative Distribution',
+                icon: 'icon-archive',
+                content: () => `
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">Module 3: Cumulative Distribution Function (CDF)</h2>
+                        <p>While the PMF tells us the probability of an exact value, the <strong>Cumulative Distribution Function (CDF)</strong>, denoted $F(x)$, tells us the probability of a random variable $X$ being less than or equal to a certain value $x$. $F(x)$ gives $P(X \\le x)$.</p> {/* Note \\le. Combined intro text */}
+
+                        <h3>Definition</h3>
+                         <p>For a discrete random variable $X$ is defined as:</p> {/* Added context */}
+                        <div class="formula"> $ F(x) = P(X \\le x) = \\sum_{x_i \\le x} P(X=x_i) $ </div> {/* Note \\le, \\sum */}
+                        <p>It accumulates probabilities as $x$ increases.</p> {/* Added text */}
+
+                        <h3>Properties of CDF</h3>
+                        <ul>
+                            <li>$0 \le F(x) \le 1$ for all $x$.</li> {/* Note \\le */}
+                            <li>$F(-\\infty) = 0$ and $F(\\infty) = 1$.</li> {/* Note \\infty */}
+                            <li>If $a < b$, then $F(a) \le F(b)$ (it's non-decreasing).</li> {/* Note \\le */}
+                            <li>For discrete variables, the graph of $F(x)$ is a step function.</li>
+                        </ul>
+
+                         <div class="example">
+                            <p><strong>Example: Compsognathus Hatching (revisited)</strong></p>
+                            <p>Recall the PMF: $P(X=0)=0.04$, $P(X=1)=0.32$, $P(X=2)=0.64$.</p>
+                            <p>Let's find the CDF, $F(x)$:</p>
+                            <ul>
+                                <li>For $x < 0$, $F(x) = P(X \le x) = 0$. (Or $x < 0 \\implies F(x) = 0$)</li> {/* Note \\implies */}
+                                <li>For $0 \le x < 1$, $F(x) = P(X \le x) = P(X=0) = 0.04$.</li> {/* Note \\le */}
+                                <li>For $1 \le x < 2$, $F(x) = P(X \le x) = P(X=0) + P(X=1) = 0.04 + 0.32 = 0.36$.</li> {/* Note \\le */}
+                                <li>For $x \ge 2$, $F(x) = P(X \le x) = P(X=0) + P(X=1) + P(X=2) = 0.04 + 0.32 + 0.64 = 1.00$.</li> {/* Note \\ge */}
+                            </ul>
+                            <p>The CDF tells us, for example, the probability of hatching <em>at most one</em> egg is $P(X \\le 1) = F(1) = 0.36$.</p> {/* Note \\le */}
+                        </div>
+
+                        <div class="interactive-section" data-question-id="q3">
+                            <h4>Calculate CDF: Feeder Failures</h4>
+                            <p>Using the Dilophosaurus feeder scenario ($n=3$, $p=0.1$ failure rate). Let $Y$ be the number of failures:</p> {/* Added RV definition */}
+                            <p> $P(Y=0) = (0.9)^3 = 0.729$ </p>
+                            <p> $P(Y=1) = 3 \\times (0.1)^1 \\times (0.9)^2 = 0.243$ </p>
+                            <p> $P(Y=2) = 3 \\times (0.1)^2 \\times (0.9)^1 = 0.027$ </p>
+                            <p> $P(Y=3) = (0.1)^3 = 0.001$ </p>
+                            <p>What is the probability that <strong>at most 1</strong> feeder fails? Calculate $F(1) = P(Y \\le 1)$.</p> {/* Note \\le */}
+                            <div class="input-group">
+                                <label for="q3_input">Enter $F(1)$ (to 3 decimal places):</label>
+                                <input type="number" step="0.001" id="q3_input" placeholder="0.000"> {/* Adjusted placeholder */}
+                            </div>
+                            <button onclick="checkCalculation('q3', 0.972, 'expectation_intro')">Check Calculation</button> {/* Changed first argument back to 'q3' */}
+                            <div id="q3_feedback" class="feedback hidden"></div>
+                             <p class="hidden" id="q3_hint">Hint: $F(1) = P(Y=0) + P(Y=1)$.</p>
+                        </div>
+                        <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'expectation_intro',
+                title: 'Expectation (Mean)',
+                icon: 'icon-fossil',
+                content: () => `
+                     <div class="lesson-content">
+                        <h2 class="lesson-title">Module 4: Mathematical Expectation $E(X)$</h2>
+                        <p>The <strong>Expected Value</strong> or <strong>Expectation</strong> ($E(X)$ or $\\mu$) of a random variable is the long-run average value we would expect if we repeated the experiment many times. It's the mean of the probability distribution.</p> {/* Note \\mu. Combined intro text */}
+
+                        <h3>Definition (Discrete)</h3>
+                        <p>For a discrete random variable $X$ with PMF $P(x_i)$, the expectation $E(X)$ is:</p> {/* Added context */}
+                        <div class="formula"> $ E(X) = \mu = \\sum_i x_i P(X=x_i) $ </div> {/* Note \\mu, \\sum */}
+                        <p>It's a weighted average, where each possible value $x_i$ is weighted by its probability $P(x_i)$.</p> {/* Added text */}
+
+                        <div class="example">
+                            <p><strong>Example: Compsognathus Hatching $E(X)$ (again)</strong></p>
+                             <p>PMF: $P(X=0)=0.04$, $P(X=1)=0.32$, $P(X=2)=0.64$.</p>
+                            <p>Expected number of hatched eggs:</p>
+                            <p> $ E(X) = (0 \\times 0.04) + (1 \\times 0.32) + (2 \\times 0.64) $ </p> {/* Note \\times */}
+                            <p> $ E(X) = 0 + 0.32 + 1.28 = 1.60 $ </p>
+                            <p>On average, we expect 1.6 eggs to hatch per batch of two, given the 80% success rate. (Average 1.6 hatches expected)</p> {/* Combined text */}
+                        </div>
+
+                        <h3>Properties of Expectation</h3>
+                        <p>Let $X, Y$ be random variables (RVs) and $a, b, C$ be constants:</p>
+                        <ul>
+                            <li>$E(C) = C$</li>
+                            <li>$E(aX) = a E(X)$</li> {/* Added property */}
+                            <li>$E(aX + b) = a E(X) + b$</li>
+                            <li>$E(X + Y) = E(X) + E(Y)$ (Linearity of Expectation)</li>
+                        </ul>
+
+                        <h3>Expectation of a Function $g(X)$</h3>
+                        <div class="formula"> $ E[g(X)] = \\sum_i g(x_i) P(X=x_i) $ </div> {/* Note \\sum */}
+
+                        <div class="interactive-section" data-question-id="q4">
+                            <h4>Calculate Expectation: Feeder Failures</h4>
+                            <p>For the Dilophosaurus feeders ($Y$ = number of failures, $n=3, p=0.1$):</p>
+                            <p> $P(Y=0)=0.729, P(Y=1)=0.243, P(Y=2)=0.027, P(Y=3)=0.001$. </p>
+                            <p>Calculate the expected number of feeder failures, $E(Y)$.</p>
+                             <div class="input-group">
+                                <label for="q4_input">Enter $E(Y)$ (to 1 decimal place):</label>
+                                <input type="number" step="0.1" id="q4_input" placeholder="0.0"> {/* Adjusted placeholder */}
+                            </div>
+                            <button onclick="checkCalculation('q4', 0.3, 'moments_intro')">Check Calculation</button> {/* Changed first argument back to 'q4' */}
+                            <div id="q4_feedback" class="feedback hidden"></div>
+                            <p class="hidden" id="q4_hint">Hint: Use the formula $E(Y) = \\sum y P(Y=y)$ for $y=0, 1, 2, 3$. $(0 \\times 0.729) + (1 \\times 0.243) + (2 \\times 0.027) + (3 \\times 0.001)$.</p> {/* Merged hints */}
+                        </div>
+                         <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'moments_intro',
+                title: 'Moments & Variance',
+                icon: 'icon-lab',
+                content: () => `
+                     <div class="lesson-content">
+                        <h2 class="lesson-title">Module 5: Moments and Variance</h2>
+                        <p>Moments provide more detailed information about the shape and spread of a probability distribution.</p>
+
+                        <h3>Raw Moments</h3>
+                        <p>The $r$-th raw moment about the origin is $\\mu_r' = E(X^r)$.</p> {/* Note \\mu */}
+                        <ul>
+                            <li>The 1st raw moment is the mean: $\\mu_1' = E(X) = \\mu$.</li> {/* Note \\mu */}
+                            <li>The 2nd raw moment is $\\mu_2' = E(X^2)$.</li>
+                        </ul>
+
+                        <h3>Central Moments</h3>
+                        <p>The $r$-th central moment about the mean $\\mu$ is $\\mu_r = E[(X-\\mu)^r]$.</p> {/* Note \\mu */}
+                        <ul>
+                            <li>The 1st central moment is always zero: $\\mu_1 = E(X-\\mu) = E(X) - \\mu = 0$.</li> {/* Note \\mu */}
+                            <li>The 2nd central moment is the <strong>Variance</strong>: $\\mu_2 = E[(X-\\mu)^2] = Var(X)$.</li> {/* Note \\mu */}
+                        </ul>
+
+                        <h3>Variance ($Var(X)$ or $\\sigma^2$)</h3> {/* Note \\sigma */}
+                        <p>Variance, denoted $Var(X)$ or $\\sigma^2$, measures the spread or dispersion of the distribution around the mean.</p>
+                        <div class="formula"> $ Var(X) = \\sigma^2 = E[(X - \\mu)^2] = E(X^2) - [E(X)]^2 = \mu_2' - (\mu_1')^2 $ </div> {/* Note \\sigma, \\mu */}
+                        <p>The <strong>Standard Deviation</strong>, $\\sigma$, is the square root of the variance: $\\sigma = \\sqrt{Var(X)}$. It's in the same units as the random variable.</p> {/* Note \\sigma, \\sqrt */}
+
+                        <h3>Properties of Variance</h3>
+                         <ul>
+                            <li>$Var(C) = 0$ for a constant $C$.</li>
+                            <li>$Var(aX) = a^2 Var(X)$.</li> {/* Added property */}
+                            <li>$Var(X + b) = Var(X)$.</li> {/* Added property */}
+                            <li>$Var(aX + b) = a^2 Var(X)$.</li>
+                             <li>If $X, Y$ are independent: $Var(X+Y) = Var(X) + Var(Y)$.</li>
+                        </ul>
+
+                        <div class="example">
+                            <p><strong>Example: Compsognathus Hatching Variance</strong></p>
+                            <p>We know $E(X) = 1.6$. Let's find $E(X^2)$:</p>
+                            <p> $ E(X^2) = (0^2 \\times P(0)) + (1^2 \\times P(1)) + (2^2 \\times P(2)) $ </p> {/* Note \\times */}
+                            <p> $ E(X^2) = (0 \\times 0.04) + (1 \\times 0.32) + (4 \\times 0.64) = 0 + 0.32 + 2.56 = 2.88 $ </p>
+                            <p>Now, calculate the variance:</p>
+                            <p> $ Var(X) = E(X^2) - [E(X)]^2 = 2.88 - (1.6)^2 = 2.88 - 2.56 = 0.32 $ </p>
+                            <p>Standard Deviation $\\sigma = \\sqrt{0.32} \\approx 0.566$. This gives a measure of the typical deviation from the mean number of hatches.</p> {/* Note \\sigma, \\sqrt, \\approx */}
+                        </div>
+
+                         <div class="interactive-section" data-question-id="q5">
+                            <h4>Calculate Variance: Feeder Failures</h4>
+                            <p>For the feeders ($Y$=#fails): $E(Y) = 0.3$. PMF: $P(0)=0.729, P(1)=0.243, P(2)=0.027, P(3)=0.001$.</p>
+                            <p>First, calculate $E(Y^2)$. Then find $Var(Y) = E(Y^2) - [E(Y)]^2$.</p>
+                             <div class="input-group">
+                                <label for="q5_input">Enter $Var(Y)$ (to 3 decimal places):</label>
+                                <input type="number" step="0.001" id="q5_input" placeholder="0.000"> {/* Adjusted placeholder */}
+                            </div>
+                            <button onclick="checkCalculation('q5', 0.270, 'mgf_intro')">Check Calculation</button> {/* Changed first argument back to 'q5' */}
+                            <div id="q5_feedback" class="feedback hidden"></div>
+                             <p class="hidden" id="q5_hint">Hint: Find $E(Y^2) = \\sum y^2 P(Y=y)$. $E(Y^2) = (0^2 \\times P(0)) + (1^2 \\times P(1)) + (2^2 \\times P(2)) + (3^2 \\times P(3))$. Calculate $E(Y^2)$. Then use $Var(Y) = E(Y^2) - (0.3)^2$. $E(Y^2) = 0.36$. Then $Var(Y) = 0.36 - (0.3)^2 = 0.36 - 0.09 = 0.27$.</p> {/* Merged hints */}
+                        </div>
+                         <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'mgf_intro',
+                title: 'Moment Generating Func.',
+                icon: 'icon-dna',
+                content: () => `
+                     <div class="lesson-content">
+                        <h2 class="lesson-title">Module 6: Moment Generating Function (MGF)</h2>
+                        <p>The <strong>Moment Generating Function (MGF)</strong> $M_X(t)$ is a powerful tool derived from the distribution that can, as its name suggests, generate the moments (like mean and variance) of $X$.</p> {/* Combined text */}
+
+                        <h3>Definition</h3>
+                        <p>For a random variable $X$, the MGF $M_X(t)$ is defined as:</p>
+                        <div class="formula"> $ M_X(t) = E[e^{tX}] $ </div>
+                        <p>For a discrete random variable with PMF $P(x_i)$:</p> {/* Added context */}
+                        <div class="formula"> $ M_X(t) = \\sum_i e^{tx_i} P(X=x_i) $ </div> {/* Note \\sum */}
+                        <p>This function 'encodes' all the moments of the distribution.</p> {/* Added text */}
+
+                        <h3>Generating Moments</h3>
+                        <p>The key property is that the $r$-th derivative of $M_X(t)$ evaluated at $t=0$ gives the $r$-th raw moment $\\mu_r' = E(X^r)$:</p> {/* Note \\mu */}
+                        <div class="formula"> $ E(X^r) = \\mu_r' = \\frac{d^r}{dt^r} M_X(t) \\bigg|_{t=0} $ </div> {/* Note \\mu, \\frac, \\bigg| */}
+                        <ul>
+                            <li>$E(X) = M_X'(0)$ (First derivative at t=0)</li>
+                            <li>$E(X^2) = M_X''(0)$ (Second derivative at t=0)</li>
+                        </ul>
+                        <p>From these, we can find the variance: $Var(X) = M_X''(0) - [M_X'(0)]^2$.</p>
+
+                         <h3>Properties of MGF</h3>
+                        <ul>
+                             <li>$M_X(0) = E(e^0) = E(1) = 1$.</li>
+                             <li>$M_{aX+b}(t) = E[e^{t(aX+b)}] = E[e^{atX} e^{bt}] = e^{bt} E[e^{(at)X}] = e^{bt} M_X(at)$.</li>
+                            <li>If $X, Y$ are independent, $M_{X+Y}(t) = M_X(t) M_Y(t)$.</li>
+                        </ul>
+
+                        <div class="example">
+                            <p><strong>Example: Single Coin Toss (Bernoulli Trial $X=1$ w/ prob $p$, $X=0$ w/ prob $q$)</strong></p> {/* Combined text */}
+                            <p>PMF: $P(X=1)=p$, $P(X=0)=q$.</p>
+                            <p>MGF:</p>
+                            <p> $ M_X(t) = \\sum e^{tx_i} P(x_i) = e^{t \\times 0} P(X=0) + e^{t \\times 1} P(X=1) $ </p> {/* Note \\times */}
+                            <p> $ M_X(t) = (1 \\times q) + (e^t \\times p) = q + pe^t $ </p>
+                            <p>Let's find the moments:</p>
+                            <p> $ M_X'(t) = \\frac{d}{dt}(q + pe^t) = pe^t $. At $t=0$, $E(X) = M_X'(0) = pe^0 = p$. </p> {/* Note \\implies */}
+                            <p> $ M_X''(t) = \\frac{d}{dt}(pe^t) = pe^t $. At $t=0$, $E(X^2) = M_X''(0) = pe^0 = p$. </p> {/* Note \\implies */}
+                             <p> $ Var(X) = E(X^2) - [E(X)]^2 = p - p^2 = p(1-p) = pq$. </p>
+                             <p>This confirms the known mean and variance for a Bernoulli trial.</p> {/* Added text */}
+                        </div>
+
+                        <div class="interactive-section" data-question-id="q6">
+                            <h4>MGF Application</h4>
+                            <p>A random variable $Z$ has MGF $M_Z(t) = (0.7 + 0.3e^t)$.</p>
+                            <p class="quiz-question">What is the mean $E(Z)$?</p>
+                             <div class="quiz-options"> {/* Removed id="q6_options" */}
+                                <label><input type="radio" name="q6" value="0.7"> 0.7</label>
+                                <label><input type="radio" name="q6" value="0.3"> 0.3</label>
+                                <label><input type="radio" name="q6" value="1.0"> 1.0</label>
+                                <label><input type="radio" name="q6" value="0.21"> 0.21</label>
+                            </div>
+                            <button onclick="checkAnswer('q6', '0.3', 'binomial_dist')">Verify Answer</button>
+                            <div id="q6_feedback" class="feedback hidden"></div>
+                            <p class="hidden" id="q6_hint">Hint: Find the first derivative $M_Z'(t)$ and evaluate it at $t=0$. $E(Z) = M_Z'(0)$. $M_Z'(t) = 0.3e^t$.</p> {/* Merged hints */}
+                        </div>
+
+                        <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'binomial_dist',
+                title: 'Binomial Distribution',
+                icon: 'icon-fossil',
+                content: () => `
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">Module 7: Binomial Distribution $B(n, p)$</h2>
+                        <p>The <strong>Binomial Distribution</strong> is fundamental for modeling the number of 'successes' in $n$ fixed number of independent Bernoulli trials (fixed $p$).</p> {/* Combined text */}
+
+                        <h3>Conditions for Binomial</h3>
+                        <ol>
+                            <li>Fixed number of trials, $n$.</li>
+                            <li>Each trial has only two possible outcomes (Success/Failure).</li>
+                            <li>The probability of success, $p$, is constant for each trial.</li>
+                            <li>Trials are independent.</li>
+                        </ol>
+
+                        <h3>PMF</h3>
+                        <p>If $X \sim B(n, p)$, the PMF is:</p> {/* Note \\sim */}
+                        <div class="formula"> $ P(X=x) = \\binom{n}{x} p^x q^{n-x} $ </div> {/* Note \\binom */}
+                        <p>Where $x = 0, 1, \\dots, n$, $q = 1-p$, and $\\binom{n}{x} = \\frac{n!}{x!(n-x)!}$ is the binomial coefficient (number of ways to choose $x$ successes from $n$ trials).</p> {/* Note \\dots, \\binom, \\frac */}
+
+                        <h3>Mean, Variance, MGF</h3>
+                         <ul>
+                            <li>Mean: $E(X) = np$</li>
+                            <li>Variance: $Var(X) = npq$</li>
+                            <li>MGF: $M_X(t) = (q + pe^t)^n$</li>
+                        </ul>
+
+                        <div class="example">
+                            <p><strong>Example: Raptor Tranquilizers (Raptor Darts)</strong></p> {/* Combined text */}
+                            <p>An ACU trooper fires 5 tranquilizer darts ($n=5$) at a Velociraptor. The probability of a single dart hitting effectively is $p=0.6$. Let $X$ be the number of effective hits.</p>
+                            <p>Here, $n=5$, $p=0.6$, $q=0.4$. $X \sim B(5, 0.6)$.</p> {/* Note \\sim */}
+                            <p>What's the probability of exactly 3 effective hits ($P(X=3)$)?</p>
+                            <p> $ P(X=3) = \\binom{5}{3} (0.6)^3 (0.4)^{5-3} = \\frac{5!}{3!2!} (0.6)^3 (0.4)^2 $ </p> {/* Note \\binom */}
+                            <p> $ P(X=3) = 10 \\times (0.216) \\times (0.16) = 10 \\times 0.03456 = 0.3456 $ </p> {/* Note \\times */}
+                            <p>Expected number of hits: $E(X) = np = 5 \\times 0.6 = 3$.</p> {/* Note \\times */}
+                            <p>Variance of hits: $Var(X) = npq = 5 \\times 0.6 \\times 0.4 = 1.2$.</p> {/* Note \\times */}
+                        </div>
+
+                         <div class="interactive-section" data-question-id="q7">
+                            <h4>Binomial Calculation: Gene Splicing</h4>
+                             <p>A batch of 10 dinosaur embryos ($n=10$) undergoes gene splicing. Each embryo has an independent $p=0.8$ chance of successfully incorporating the new gene. Let $Y$ be the number of successful splicings.</p>
+                             <p>What is the expected number of successful splicings, $E(Y)$?</p>
+                              <div class="input-group">
+                                <label for="q7_input">Enter $E(Y)$:</label>
+                                <input type="number" step="0.1" id="q7_input" placeholder="0.0"> {/* Adjusted placeholder */}
+                            </div>
+                            <button onclick="checkCalculation('q7', 8, 'poisson_dist')">Check Calculation</button> {/* Changed first argument back to 'q7' */}
+                            <div id="q7_feedback" class="feedback hidden"></div>
+                             <p class="hidden" id="q7_hint">Hint: Use the formula $E(Y) = np$. Here $n=10, p=0.8$.</p>
+                        </div>
+                         <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            },
+            {
+                id: 'poisson_dist',
+                title: 'Poisson Distribution',
+                icon: 'icon-map',
+                content: () => `
+                    <div class="lesson-content">
+                        <h2 class="lesson-title">Module 8: Poisson Distribution $Poisson(\\lambda)$</h2> {/* Note \\lambda */}
+                        <p>The <strong>Poisson Distribution</strong> models the number of events occurring within a fixed interval of time or space, given the average rate ($\lambda$) of occurrence.</p> {/* Note \\lambda. Combined text */}
+
+                         <h3>Conditions for Poisson</h3>
+                        <ul>
+                            <li>Events occur independently.</li>
+                            <li>The average rate ($\lambda$) of events per unit interval is constant.</li> {/* Note \\lambda */}
+                            <li>Two events cannot occur at exactly the same instant/point.</li>
+                        </ul>
+
+                        <h3>PMF</h3>
+                        <p>If $X \sim Poisson(\\lambda)$, the PMF is:</p> {/* Note \\sim, \\lambda */}
+                         <div class="formula"> $ P(X=x) = \\frac{e^{-\\lambda} \\lambda^x}{x!} $ </div> {/* Note \\frac, \\lambda */}
+                         <p>Where $x = 0, 1, 2, \\dots$, and $\\lambda > 0$ is the average rate (parameter).</p> {/* Note \\dots, \\lambda */}
+
+                        <h3>Mean, Variance, MGF</h3>
+                         <ul>
+                            <li>Mean: $E(X) = \\lambda$</li> {/* Note \\lambda */}
+                            <li>Variance: $Var(X) = \\lambda$ (Mean and Variance are equal!)</li> {/* Note \\lambda */}
+                            <li>MGF: $M_X(t) = e^{\\lambda(e^t - 1)}$</li> {/* Note \\lambda */}
+                        </ul>
+                         <p>Note: The Poisson distribution can approximate the Binomial distribution when $n$ is large and $p$ is small, with $\\lambda = np$.</p> {/* Note \\lambda */}
+
+                         <div class="example">
+                            <p><strong>Example: Park Visitor Arrivals</strong></p>
+                            <p>Visitors arrive at the park entrance at an average rate of $\\lambda = 10$ people per minute during peak hours. Let $X$ be the number of arrivals in a specific minute.</p> {/* Note \\lambda */}
+                             <p>$X \sim Poisson(10)$.</p> {/* Note \\sim */}
+                            <p>What's the probability that exactly 8 people arrive in a given minute ($P(X=8)$)?</p>
+                            <p> $ P(X=8) = \\frac{e^{-10} 10^8}{8!} $ </p> {/* Note \\frac */}
+                            <p> $ P(X=8) \\approx \\frac{0.0000454 \\times 100,000,000}{40320} \\approx \\frac{4540}{40320} \\approx 0.1126 $ </p> {/* Note \\approx */}
+                             <p>Expected arrivals per minute: $E(X) = \\lambda = 10$.</p> {/* Note \\lambda */}
+                            <p>Variance of arrivals per minute: $Var(X) = \\lambda = 10$.</p> {/* Note \\lambda */}
+                        </div>
+
+                        <div class="interactive-section" data-question-id="q8">
+                            <h4>Poisson Calculation: Containment Breaches</h4>
+                            <p>Minor containment breaches occur randomly at a large facility with an average rate of $\\lambda = 0.5$ breaches per week. Let $Y$ be the number of breaches in a given week.</p> {/* Note \\lambda */}
+                             <p>What is the probability of <strong>no breaches</strong> ($Y=0$) in a week? ($P(Y=0)$?)</p> {/* Combined text */}
+                             <div class="input-group">
+                                <label for="q8_input">Enter $P(Y=0)$ (to 3 decimal places, use $e \\approx 2.718$):</label> {/* Note \\approx */}
+                                <input type="number" step="0.001" id="q8_input" placeholder="0.000"> {/* Adjusted placeholder */}
+                            </div>
+                            <button onclick="checkCalculation('q8', 0.607, null)">Check Calculation & Finish</button> {/* Changed first argument back to 'q8' */}
+                            <div id="q8_feedback" class="feedback hidden"></div>
+                             <p class="hidden" id="q8_hint">Hint: Use the formula $P(Y=x) = \\frac{e^{-\\lambda} \\lambda^x}{x!}$ with $x=0$ and $\\lambda=0.5$. $P(Y=0) = \\frac{e^{-0.5} 0.5^0}{0!} = e^{-0.5}$. ($\lambda^0=1, 0.5^0=1, 0!=1$)</p> {/* Merged hints, Note \\lambda */}
+                        </div>
+                        <button class="back-button" onclick="showDatabaseScreen()">Back to Database</button>
+                    </div>
+                `
+            }
+];
+
+        // --- UI Rendering Functions ---
+
+        function showDatabaseScreen() {
+            if (gameState.isGameOver) return; // Prevent navigation if game over
+            renderScreen(() => {
+                gameState.currentScreen = 'database';
+                gameState.currentLessonId = null;
+
+                let gridHtml = '<h2 class="lesson-title text-center">InGen Probability Modules</h2><div class="database-grid">';
+                lessons.forEach(lesson => {
+                    const isLocked = !gameState.unlockedLessons.includes(lesson.id);
+                    const isCompleted = gameState.completedLessons.includes(lesson.id);
+                    const isNew = gameState.newlyUnlocked.includes(lesson.id);
+                    const statusClass = isLocked ? 'status-locked' : (isCompleted ? 'status-completed' : '');
+                    const statusText = isLocked ? 'Locked' : (isCompleted ? 'Completed' : '');
+
+                    gridHtml += `
+                        <div class="db-item ${isLocked ? 'locked' : ''} ${isCompleted ? 'completed' : ''}"
+                             id="db-item-${lesson.id}"
+                             onclick="${isLocked || gameState.isGameOver ? '' : `loadLesson('${lesson.id}')`}">
+                            <div class="db-item-icon ${lesson.icon}"></div>
+                            <div class="db-item-title">${lesson.title}</div>
+                            ${isNew ? '<div class="new-tag">New</div>' : ''}
+                            ${statusText ? `<div class="completion-status ${statusClass}">${statusText}</div>` : ''}
+                        </div>
+                    `;
+                });
+                gridHtml += '</div>';
+                return gridHtml;
+            });
+
+            // Clear 'new' status after showing the database
+            gameState.newlyUnlocked = [];
+        }
+
+        function loadLesson(lessonId) {
+            if (gameState.isGameOver) return; // Prevent navigation
+            const lesson = lessons.find(l => l.id === lessonId);
+            if (!lesson || !gameState.unlockedLessons.includes(lessonId)) return;
+
+            renderScreen(() => {
+                gameState.currentScreen = 'lesson';
+                gameState.currentLessonId = lessonId;
+                const contentHtml = typeof lesson.content === 'function' ? lesson.content() : lesson.content;
+                return contentHtml;
+            }, true); // Pass true to indicate MathJax processing is needed
+        }
+
+        // Generic screen rendering function with animation
+        function renderScreen(contentGenerator, processMathJax = false) {
+            const currentContent = mainContent.innerHTML;
+            const newContent = contentGenerator();
+
+            if (currentContent) {
+                mainContent.classList.remove('screen-fade-in');
+                mainContent.classList.add('screen-fade-out');
+                // Wait for fade-out animation to complete (adjust time based on CSS)
+                setTimeout(() => {
+                    mainContent.innerHTML = newContent;
+                    mainContent.scrollTop = 0; // Scroll to top
+                    mainContent.classList.remove('screen-fade-out');
+                    mainContent.classList.add('screen-fade-in');
+                    if (processMathJax) typesetMathJax();
+                }, 300); // Matches screen-fade-out duration
+            } else {
+                // Initial load or no previous content
+                mainContent.innerHTML = newContent;
+                mainContent.scrollTop = 0;
+                mainContent.classList.add('screen-fade-in');
+                if (processMathJax) typesetMathJax();
+            }
+        }
+
+        // Helper function to run MathJax typesetting
+        function typesetMathJax() {
+            if (window.MathJax && window.MathJax.typesetPromise) {
+                window.MathJax.typesetPromise([mainContent]).catch((err) => console.error('MathJax Typeset Error:', err));
+            } else if (window.MathJax && window.MathJax.typeset) {
+                window.MathJax.typeset([mainContent]);
+            }
+        }
+
+
+        // --- Interaction Logic ---
+
+        function updateAccuracy() {
+            if (gameState.attemptedQuestions.size > 0) {
+                gameState.currentAccuracy = gameState.correctAnswersCount / gameState.attemptedQuestions.size;
+            } else {
+                gameState.currentAccuracy = 0;
+            }
+            postToReactNative('setAccuracy', { accuracy: gameState.currentAccuracy });
+        }
+
+        function handleAttempt(questionId, isCorrect) {
+            if (gameState.isGameOver) return;
+
+            const feedbackEl = document.getElementById(`${questionId}_feedback`);
+            const hintEl = document.getElementById(`${questionId}_hint`);
+            feedbackEl.classList.remove('hidden', 'correct', 'incorrect', 'info'); // Reset classes
+
+            // Track attempt and accuracy (only count first attempt per question for score)
+            let firstAttempt = !gameState.attemptedQuestions.has(questionId);
+            if (firstAttempt) {
+                gameState.attemptedQuestions.add(questionId);
+            }
+
+            if (isCorrect) {
+                feedbackEl.textContent = 'Correct! Accessing next data packet...';
+                feedbackEl.classList.add('correct');
+                if (firstAttempt) {
+                    gameState.correctAnswersCount++;
+                }
+                // Disable button only after correct answer to prevent re-triggering unlocks/completion
+                const button = feedbackEl.closest('.interactive-section').querySelector('button');
+                if (button) button.disabled = true;
+
+                return true; // Indicates correctness for unlocking etc.
+
+            } else {
+                feedbackEl.textContent = 'Incorrect. Review the material or check the hint.';
+                feedbackEl.classList.add('incorrect');
+                if (hintEl) hintEl.classList.remove('hidden');
+                return false;
+            }
+        }
+
+        function checkAnswer(questionId, correctAnswerValue, nextLessonId) {
+            if (gameState.isGameOver) return;
+
+            const options = document.querySelector(`input[name="${questionId}"]:checked`);
+            const isCorrect = options && options.value === correctAnswerValue;
+
+            const wasCorrect = handleAttempt(questionId, isCorrect);
+
+            if (wasCorrect) {
+                markLessonCompleted(gameState.currentLessonId);
+                unlockLesson(nextLessonId); // Unlock next lesson if correct
+            }
+            updateAccuracy(); // Update accuracy after every attempt
+        }
+
+        function checkCalculation(questionId, correctValue, nextLessonId) {
+            if (gameState.isGameOver) return;
+
+            const inputEl = document.getElementById(`${questionId}_input`);
+            const userAnswer = parseFloat(inputEl.value);
+            const tolerance = 0.0005; // Tolerance for floating point comparison
+            const isCorrect = !isNaN(userAnswer) && Math.abs(userAnswer - correctValue) < tolerance;
+
+            const wasCorrect = handleAttempt(questionId, isCorrect);
+
+            if (wasCorrect) {
+                markLessonCompleted(gameState.currentLessonId);
+                unlockLesson(nextLessonId); // Unlock next lesson if correct
+            }
+            updateAccuracy(); // Update accuracy after every attempt
+        }
+
+        function unlockLesson(lessonId) {
+            if (gameState.isGameOver) return;
+
+            if (lessonId && !gameState.unlockedLessons.includes(lessonId)) {
+                gameState.unlockedLessons.push(lessonId);
+                gameState.newlyUnlocked.push(lessonId);
+                console.log(`Unlocked: ${lessonId}`);
+            } else if (!lessonId && gameState.currentLessonId === lessons[lessons.length - 1].id) {
+                // Last question of the last lesson was answered correctly
+                handleGameOver(true); // true indicates completion
+            }
+        }
+
+        function markLessonCompleted(lessonId) {
+            if (lessonId && !gameState.completedLessons.includes(lessonId)) {
+                gameState.completedLessons.push(lessonId);
+                // Update database screen display if needed (though usually done on showing DB)
+            }
+        }
+
+        function handleGiveUp() {
+            if (gameState.isGameOver) return;
+            handleGameOver(false); // false indicates giving up
+        }
+
+        function handleGameOver(completedNaturally) {
+            if (gameState.isGameOver) return; // Prevent multiple triggers
+            gameState.isGameOver = true;
+
+            updateAccuracy(); // Send final accuracy
+
+            // Disable Give Up button
+            giveUpButton.disabled = true;
+            giveUpButton.textContent = completedNaturally ? "Simulation Complete" : "Simulation Ended";
+
+            // Optionally disable all interactive elements
+            document.querySelectorAll('.interactive-section button, .interactive-section input, .db-item').forEach(el => el.disabled = true);
+            document.querySelectorAll('.db-item').forEach(el => el.onclick = null); // Remove click handlers
+            document.querySelectorAll('.quiz-options label').forEach(el => el.style.cursor = 'default');
+
+            // Display final message in UI
+            const finalMessage = completedNaturally
+                ? "Congratulations, Researcher! All probability modules completed."
+                : "Simulation terminated. Further training may be required.";
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `feedback ${completedNaturally ? 'correct' : 'info'}`; // Use 'info' for give up
+            messageDiv.textContent = `${finalMessage} Final Accuracy: ${(gameState.currentAccuracy * 100).toFixed(1)}%`;
+            messageDiv.style.marginTop = '20px';
+            messageDiv.style.fontWeight = 'bold';
+
+            // Append message differently based on current screen
+            if (gameState.currentScreen === 'lesson') {
+                mainContent.appendChild(messageDiv);
+                mainContent.scrollTop = mainContent.scrollHeight; // Scroll to bottom
+            } else {
+                // If on database screen, maybe add it above the grid
+                const title = mainContent.querySelector('.lesson-title');
+                if (title) {
+                    title.insertAdjacentElement('afterend', messageDiv);
+                } else {
+                    mainContent.prepend(messageDiv); // Add to top if title not found
+                }
+            }
+
+
+            // Send game over signal to React Native
+            // Add a slight delay to ensure the final accuracy message might have been processed
+            setTimeout(() => {
+                postToReactNative('gameOver');
+            }, 100);
+        }
+
+        // --- Initialization ---
+        function initializeGame() {
+            loadingText.textContent = 'Loading Core Systems...';
+            setTimeout(() => {
+                loadingText.textContent = 'Establishing Secure Link...';
+                setTimeout(() => {
+                    loadingScreen.classList.add('hidden');
+                    showDatabaseScreen(); // Start at the database screen
+                }, 700);
+            }, 800);
+        }
+
+        // Wait for DOM and MathJax
+        document.addEventListener('DOMContentLoaded', () => {
+            let mathJaxRetryCount = 0;
+            const maxRetries = 20; // Try for 2 seconds max
+            let mathJaxReadyCheck = setInterval(() => {
+                mathJaxRetryCount++;
+                let mathJaxIsReady = false;
+                try {
+                    mathJaxIsReady = (window.MathJax && ((window.MathJax.startup && window.MathJax.startup.promise) || window.MathJax.isReady));
+                } catch (e) { /* Ignore potential errors during early checks */ }
+
+                if (mathJaxIsReady) {
+                    console.log('MathJax is ready.');
+                    clearInterval(mathJaxReadyCheck);
+                    // Ensure the promise resolves before initializing
+                    const promise = (window.MathJax.startup && window.MathJax.startup.promise) ? window.MathJax.startup.promise : Promise.resolve();
+                    promise.then(initializeGame).catch(err => {
+                        console.error("MathJax startup failed:", err);
+                        // Proceed without MathJax if it fails catastrophically? Or show error?
+                        initializeGame(); // Try to init anyway
+                    });
+                } else if (mathJaxRetryCount >= maxRetries) {
+                    console.warn('MathJax did not become ready. Proceeding without MathJax rendering.');
+                    clearInterval(mathJaxReadyCheck);
+                    initializeGame(); // Initialize without waiting further
+                }
+            }, 100); // Check every 100ms
+        });
+
+    </script>
+</body>
+
+</html>
