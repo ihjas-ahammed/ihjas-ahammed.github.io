@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Science: eFootball Training Ground</title>
+    <style>
+        /* --- Global Styles & eFootball Theme v2 --- */
+        :root {
+            --bg-primary: #080B12; /* Even deeper dark blue/black */
+            --bg-secondary: #151A26; /* Dark grey/blue */
+            --bg-card: #1E2535; /* Card background */
+            --bg-card-subtle-gradient: linear-gradient(145deg, rgba(30, 37, 53, 0.8), rgba(21, 26, 38, 0.9));
+            --text-primary: #E8EAF6; /* Off-white */
+            --text-secondary: #B0BEC5; /* Lighter grey */
+            --text-tertiary: #78909C; /* Muted grey */
+            --accent-blue: #00B0FF; /* Brighter Cyan/Blue */
+            --accent-pink: #F50057; /* Vivid Pink */
+            --accent-green: #00E676; /* Bright Green */
+            --accent-yellow: #FFD600; /* Gold/Yellow */
+            --accent-purple: #D500F9; /* Bright Purple */
+            --border-color: #37474F; /* Darker border */
+            --border-highlight: var(--accent-blue);
+            --font-main: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Common UI font */
+            --shadow-light: 0 2px 8px rgba(0, 176, 255, 0.15);
+            --shadow-medium: 0 4px 12px rgba(0, 0, 0, 0.4);
+            --glow-blue: 0 0 15px rgba(0, 176, 255, 0.3);
+            --glow-pink: 0 0 15px rgba(245, 0, 87, 0.3);
+            --input-bg: #263238;
+            --quiz-option-bg: #2a3441;
+            --quiz-option-hover-bg: rgba(0, 176, 255, 0.1);
+            --quiz-option-selected-bg: var(--accent-blue);
+            --quiz-correct-bg: rgba(0, 230, 118, 0.2);
+            --quiz-correct-border: var(--accent-green);
+            --quiz-incorrect-bg: rgba(245, 0, 87, 0.2);
+            --quiz-incorrect-border: var(--accent-pink);
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+            display: flex;
+            flex-direction: column; /* Prepare for mobile view where sidebar is on top */
+            overflow-x: hidden; /* Prevent accidental horizontal scroll on body */
+        }
+
+        /* --- Typography --- */
+        h1, h2, h3, h4, h5, h6 {
+            margin-bottom: 0.8em;
+            font-weight: 700; /* Bolder headings */
+            letter-spacing: 0.5px;
+        }
+
+        h1 {
+            font-size: 2.6em;
+            color: var(--accent-yellow);
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+            text-shadow: 0 0 10px rgba(255, 214, 0, 0.5);
+        }
+        h2 { /* Section Titles */
+            font-size: 2em;
+            color: var(--accent-blue);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center; /* Align icon and text */
+        }
+        h3 { /* Card Titles / Quiz Title */
+            font-size: 1.5em;
+            color: var(--accent-green);
+            margin-top: 0; /* Reset margin if first element in card */
+            margin-bottom: 0.8em; /* Increased margin for quiz title */
+        }
+        h4 { /* Sub-headings within cards */
+            font-size: 1.2em;
+            color: var(--text-primary);
+            font-weight: 500;
+            margin-top: 25px;
+            border-left: 3px solid var(--accent-pink);
+            padding-left: 8px;
+        }
+
+        p {
+            margin-bottom: 1.2em;
+            color: var(--text-secondary);
+        }
+
+        a {
+            color: var(--accent-blue);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: var(--accent-pink);
+            text-decoration: underline;
+        }
+
+        ul, ol {
+            margin-left: 25px;
+            margin-bottom: 1.2em;
+            color: var(--text-secondary);
+        }
+        li { margin-bottom: 0.6em; }
+
+        strong, .keyword { /* Enhanced keywords */
+            color: var(--accent-yellow);
+            font-weight: 500;
+        }
+
+        code {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: var(--accent-purple);
+            padding: 0.2em 0.5em;
+            border-radius: 4px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            border: 1px solid var(--border-color);
+        }
+        pre {
+            background-color: #000; /* Black background for code blocks */
+            color: #f0f0f0; /* Light text */
+            padding: 1.5em;
+            overflow-x: auto;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            margin: 1em 0 1.5em 0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.95em;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+        }
+        pre code { /* Reset code style inside pre */
+             background-color: transparent;
+             color: inherit;
+             padding: 0;
+             border: none;
+             font-size: inherit;
+        }
+
+        /* --- Layout: Sidebar + Main --- */
+        .content-wrapper { /* New wrapper for desktop view */
+            display: flex;
+            flex-grow: 1; /* Allow content to fill remaining height */
+        }
+
+        #sidebar {
+            width: 260px;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+            padding: 20px 0; /* No horizontal padding */
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            overflow-y: auto;
+            border-right: 2px solid var(--border-color);
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: width 0.3s ease; /* For potential collapse */
+            flex-shrink: 0; /* Prevent sidebar from shrinking */
+        }
+        #sidebar::-webkit-scrollbar { display: none; } /* Hide scrollbar */
+        #sidebar { -ms-overflow-style: none; scrollbar-width: none; } /* Hide scrollbar IE/Edge/FF */
+
+        #sidebar .sidebar-header {
+            color: var(--accent-yellow);
+            font-size: 1.6em;
+            font-weight: 700;
+            text-align: center;
+            padding: 15px 10px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            text-shadow: 0 0 5px rgba(255, 214, 0, 0.4);
+        }
+
+        #sidebar nav ul {
+            list-style: none;
+            margin: 0; padding: 0;
+        }
+
+        #sidebar nav ul li a {
+            display: flex; /* Use flex for alignment */
+            align-items: center;
+            color: var(--text-secondary);
+            padding: 14px 20px;
+            margin-bottom: 2px; /* Subtle separation */
+            border-left: 4px solid transparent; /* Indicator space */
+            transition: background-color 0.3s ease, color 0.3s ease, border-left-color 0.3s ease;
+            font-weight: 500;
+            position: relative; /* For completion checkmark */
+        }
+        #sidebar nav ul li a::before { /* Icon placeholder */
+            content: ''; margin-right: 12px; font-size: 1.1em; width: 18px; text-align: center;
+        }
+        #sidebar nav ul li a.completed::after { /* Completion checkmark */
+            content: '✔'; color: var(--accent-green); font-size: 0.9em; position: absolute; right: 15px; top: 50%; transform: translateY(-50%); text-shadow: 0 0 5px var(--accent-green);
+        }
+        #sidebar nav ul li a:hover {
+            background-color: rgba(0, 176, 255, 0.1); color: var(--text-primary); border-left-color: var(--accent-pink);
+        }
+        #sidebar nav ul li a.active {
+            background-color: rgba(0, 176, 255, 0.2); color: #fff; font-weight: 700; border-left-color: var(--accent-blue); box-shadow: inset 3px 0 8px rgba(0, 176, 255, 0.1);
+        }
+
+        #main-content {
+            margin-left: 260px; /* Desktop: space for fixed sidebar */
+            padding: 25px 45px;
+            width: calc(100% - 260px); /* Desktop: fill remaining width */
+            overflow-y: auto; /* Ensure main content is scrollable if needed */
+            background-color: var(--bg-primary);
+            flex-grow: 1; /* Allow main content to take available space */
+        }
+
+        /* --- Component Styles --- */
+
+        /* Content Cards */
+        .content-card {
+            background: var(--bg-card-subtle-gradient), var(--bg-card);
+            border-radius: 10px; padding: 30px; margin-bottom: 35px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-medium), 0 0 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative; overflow: hidden;
+        }
+        .content-card::before { /* Top border accent */
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-pink));
+            opacity: 0.6; transition: opacity 0.3s ease;
+        }
+        .content-card:hover::before { opacity: 1; }
+        .content-card:hover {
+            transform: translateY(-5px) scale(1.01);
+            box-shadow: var(--shadow-medium), 0 0 25px rgba(0,0,0,0.3), var(--glow-blue);
+            border-color: var(--border-highlight);
+        }
+        .content-card.nested-card { /* Style for nested cards */
+             background: var(--bg-secondary); margin-top: 20px; padding: 20px; border-color: #455A64;
+        }
+        .content-card.nested-card::before { display: none; }
+
+        /* Tables */
+        table {
+            width: 100%; border-collapse: separate; border-spacing: 0; margin-bottom: 25px;
+            background-color: var(--bg-secondary); border-radius: 8px; overflow: hidden;
+            border: 1px solid var(--border-color); box-shadow: var(--shadow-light);
+        }
+        th, td {
+            border-bottom: 1px solid var(--border-color); padding: 14px 18px;
+            text-align: left; color: var(--text-secondary); vertical-align: top;
+        }
+        th {
+            background: linear-gradient(rgba(0, 176, 255, 0.3), rgba(0, 176, 255, 0.1));
+            color: var(--text-primary); font-weight: 600; text-transform: uppercase;
+            font-size: 0.9em; letter-spacing: 0.5px; border-bottom: 2px solid var(--accent-blue);
+        }
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) td { background-color: rgba(0,0,0, 0.15); }
+        tr:hover td { background-color: rgba(0, 176, 255, 0.08); color: var(--text-primary); }
+        th:first-child { border-top-left-radius: 8px; }
+        th:last-child { border-top-right-radius: 8px; }
+        tr:last-child td:first-child { border-bottom-left-radius: 8px; }
+        tr:last-child td:last-child { border-bottom-right-radius: 8px; }
+
+        /* Buttons (eFootball Style) */
+        .btn {
+            display: inline-block; padding: 12px 30px; border: none; border-radius: 25px;
+            cursor: pointer; font-weight: 700; font-size: 1em; text-align: center;
+            text-transform: uppercase; letter-spacing: 1px; transition: all 0.3s ease;
+            margin: 10px 5px; position: relative; overflow: hidden; z-index: 1;
+        }
+        .btn::before { /* Shine effect */
+            content: ""; position: absolute; top: 0; left: -75%; width: 50%; height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+            transform: skewX(-25deg); transition: left 0.6s ease; z-index: -1;
+        }
+        .btn:hover::before { left: 125%; }
+
+        .btn-primary { /* Main action button */
+            background: linear-gradient(45deg, var(--accent-blue), #0077FF); color: #fff;
+            box-shadow: 0 4px 10px rgba(0, 176, 255, 0.3), inset 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(45deg, #0077FF, var(--accent-blue));
+            box-shadow: 0 6px 15px rgba(0, 176, 255, 0.4), inset 0 -2px 5px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+        .btn-secondary { /* Secondary action / Quiz Submit */
+            background: linear-gradient(45deg, var(--accent-pink), #C2185B); color: #fff;
+            box-shadow: 0 4px 10px rgba(245, 0, 87, 0.3), inset 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        .btn-secondary:hover {
+            background: linear-gradient(45deg, #C2185B, var(--accent-pink));
+            box-shadow: 0 6px 15px rgba(245, 0, 87, 0.4), inset 0 -2px 5px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+        .btn-action { /* Green action / Mark Complete */
+             background: linear-gradient(45deg, var(--accent-green), #00A152); color: #fff;
+             box-shadow: 0 4px 10px rgba(0, 230, 118, 0.3), inset 0 -2px 5px rgba(0,0,0,0.2);
+        }
+        .btn-action:hover {
+            background: linear-gradient(45deg, #00A152, var(--accent-green));
+            box-shadow: 0 6px 15px rgba(0, 230, 118, 0.4), inset 0 -2px 5px rgba(0,0,0,0.2);
+            transform: translateY(-2px);
+        }
+        .btn:disabled { /* Style for disabled buttons */
+            background: var(--text-tertiary);
+            color: var(--bg-secondary);
+            cursor: not-allowed;
+            opacity: 0.7;
+            box-shadow: none;
+        }
+        .btn:disabled:hover { transform: none; }
+        .btn:disabled::before { display: none; }
+
+
+        /* Interactive Details/Summary */
+        details {
+            background-color: rgba(0,0,0, 0.2); border-radius: 6px; margin-bottom: 1.5em;
+            border: 1px solid var(--border-color); transition: box-shadow 0.3s ease;
+        }
+        details:hover { box-shadow: 0 0 10px rgba(0, 176, 255, 0.1); }
+        summary {
+            padding: 12px 20px; cursor: pointer; font-weight: 600; color: var(--accent-green);
+            display: list-item; list-style: inside; list-style-type: "▶ ";
+            transition: background-color 0.3s ease, color 0.3s ease; border-radius: 6px 6px 0 0;
+        }
+        summary:hover { background-color: rgba(0, 176, 255, 0.05); color: var(--accent-blue); }
+        details[open] > summary {
+            list-style-type: "▼ "; background-color: rgba(0, 176, 255, 0.1);
+            border-bottom: 1px solid var(--border-highlight); color: var(--accent-blue);
+            border-radius: 6px 6px 0 0;
+        }
+        .details-content {
+            padding: 20px; border-top: none; background-color: rgba(0,0,0,0.1);
+            border-radius: 0 0 6px 6px;
+        }
+
+        /* --- Section Styling --- */
+        section {
+            padding-top: 70px; /* Offset for potential fixed header */
+            margin-top: -70px; /* Adjust scroll spy trigger point */
+            margin-bottom: 40px;
+            position: relative; /* For scroll spy */
+            min-height: 300px; /* Ensure sections have some height */
+        }
+
+        /* Welcome Section Style */
+        #welcome {
+            text-align: center; padding: 50px 30px;
+            background: linear-gradient(rgba(8, 11, 18, 0.85), rgba(8, 11, 18, 0.95)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80"><circle fill="%23151A26" cx="40" cy="40" r="40"/><path fill="%23080B12" d="M0 40h80v40H0z"/><path fill="%231E2535" d="M40 0v80h40V0z"/></svg>') repeat;
+            background-size: 80px 80px; border-radius: 12px; margin-bottom: 50px;
+            border: 2px solid var(--accent-blue); box-shadow: var(--glow-blue), var(--shadow-medium);
+        }
+        #welcome h1 { color: var(--accent-yellow); }
+        #welcome p { color: var(--text-primary); font-size: 1.2em; max-width: 850px; margin: 1.5em auto; }
+
+        /* Highlighting the 5 Vs */
+        .highlight-v {
+            font-weight: 700; color: var(--accent-pink); background-color: rgba(245, 0, 87, 0.1);
+            padding: 3px 8px; border-radius: 4px; display: inline-block; margin: 0 3px;
+            border: 1px solid rgba(245, 0, 87, 0.3);
+        }
+
+        /* --- NEW QUIZ STYLES --- */
+        #challenges .content-card { /* Style the quiz container card */
+            border: 2px dashed var(--accent-yellow);
+            background-color: rgba(255, 214, 0, 0.05);
+        }
+        #challenges h2 { /* Quiz Section Title */
+            color: var(--accent-purple);
+            border-color: var(--accent-purple);
+        }
+         #quiz-title { /* Specific title for quiz */
+             color: var(--accent-yellow);
+             text-align: center;
+             margin-bottom: 30px;
+             font-size: 1.8em; /* Slightly larger than h3 */
+         }
+
+        .quiz-container { margin-bottom: 30px; }
+
+        .question-block {
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .question-block:last-child { border-bottom: none; }
+
+        .question {
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .options {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 1fr; /* Stack options vertically */
+        }
+
+        .option-btn {
+            background-color: var(--quiz-option-bg);
+            color: var(--text-secondary);
+            padding: 12px 18px;
+            border-radius: 6px;
+            border: 1px solid var(--border-color);
+            cursor: pointer;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+            text-align: left; /* Ensure text aligns left */
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            background-color: var(--quiz-option-hover-bg);
+            border-color: var(--accent-blue);
+            color: var(--text-primary);
+        }
+
+        .option-btn.selected { /* Style for the selected option before submission */
+            background-color: var(--quiz-option-selected-bg) !important; /* Important to override hover */
+            border-color: var(--accent-blue) !important;
+            color: #fff !important;
+            font-weight: bold;
+        }
+
+        .option-btn.correct {
+            background-color: var(--quiz-correct-bg) !important;
+            border: 2px solid var(--quiz-correct-border) !important;
+            color: var(--accent-green) !important;
+            font-weight: bold;
+        }
+         .option-btn.correct::after {
+             content: ' ✔'; /* Checkmark for correct */
+             float: right;
+         }
+
+
+        .option-btn.incorrect {
+            background-color: var(--quiz-incorrect-bg) !important;
+            border: 2px solid var(--quiz-incorrect-border) !important;
+            color: var(--accent-pink) !important;
+             opacity: 0.8; /* Slightly fade incorrect chosen answer */
+        }
+         .option-btn.incorrect::after {
+             content: ' ✘'; /* Cross mark for incorrect chosen */
+             float: right;
+         }
+
+         /* Ensure correct answer is always highlighted after submission, even if not selected */
+         .quiz-container.results-shown .option-btn.correct {
+             background-color: var(--quiz-correct-bg) !important;
+             border: 2px solid var(--quiz-correct-border) !important;
+             color: var(--accent-green) !important;
+             font-weight: bold;
+         }
+         /* Dim unselected, incorrect options slightly after results shown */
+         .quiz-container.results-shown .option-btn:not(.selected):not(.correct) {
+              opacity: 0.6;
+              cursor: default;
+         }
+
+
+        .result {
+            margin-top: 30px;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+        .result.feedback-correct { background-color: rgba(0, 230, 118, 0.1); border: 1px solid var(--accent-green); color: var(--accent-green); }
+        .result.feedback-incorrect { background-color: rgba(245, 0, 87, 0.1); border: 1px solid var(--accent-pink); color: var(--accent-pink); }
+        .result.feedback-info { background-color: rgba(255, 214, 0, 0.1); border: 1px solid var(--accent-yellow); color: var(--accent-yellow); }
+
+        #submit-btn {
+            display: block; /* Initially shown, JS will hide/show */
+            margin: 30px auto 10px auto; /* Center button */
+        }
+        .result button { /* Style the 'Complete Quiz' button */
+            margin-top: 15px;
+            padding: 10px 25px;
+            font-size: 0.9em;
+            background: var(--accent-purple);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+         .result button:hover {
+             background: #a000c0; /* Darker purple */
+         }
+        /* --- END NEW QUIZ STYLES --- */
+
+        /* Progress Bar Style */
+        #progress-section h2 { color: var(--accent-purple); border-color: var(--accent-purple);}
+
+        .progress-bar-container {
+            width: 100%; background-color: var(--bg-secondary); border-radius: 15px; margin: 30px 0;
+            border: 1px solid var(--border-color); overflow: hidden; height: 30px; position: relative;
+            box-shadow: inset 0 2px 5px rgba(0,0,0,0.3);
+        }
+        .progress-bar {
+            width: 5%; height: 100%;
+            background: linear-gradient(90deg, var(--accent-blue) 0%, var(--accent-green) 50%, var(--accent-yellow) 100%);
+            border-radius: 15px; transition: width 0.6s ease-in-out; position: relative;
+        }
+        .progress-bar-text {
+            position: absolute; width: 100%; height: 100%; top: 0; left: 0; display: flex; justify-content: center;
+            align-items: center; color: #000; font-weight: 700; font-size: 0.9em;
+            text-shadow: 0 0 2px rgba(255,255,255,0.5); z-index: 2;
+        }
+        .progress-bar::after { /* Optional segments */
+            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+             background: repeating-linear-gradient( -45deg, rgba(255,255,255,0.05), rgba(255,255,255,0.05) 10px, rgba(255,255,255,0) 10px, rgba(255,255,255,0) 20px );
+             opacity: 0.5; z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            /* margin-left is handled by media query */
+            text-align: center; padding: 25px; margin-top: 50px;
+            border-top: 1px solid var(--border-color); color: var(--text-tertiary);
+            font-size: 0.9em;
+            width: 100%; /* Ensure footer spans width */
+        }
+
+        /* --- Responsiveness --- */
+        @media (max-width: 900px) {
+            #sidebar { width: 220px; }
+            #main-content { margin-left: 220px; width: calc(100% - 220px); padding: 20px 30px; }
+            h1 { font-size: 2.2em; }
+            h2 { font-size: 1.7em; }
+            .options { grid-template-columns: 1fr; } /* Ensure options stack */
+        }
+
+        @media (max-width: 768px) { /* Tablet breakpoint / Mobile */
+            body {
+                flex-direction: column; /* Stack sidebar on top of content */
+            }
+            .content-wrapper {
+                flex-direction: column; /* Stack sidebar and main content */
+                /* No longer needed: display: flex; */
+            }
+
+            #sidebar {
+                width: 100%; height: auto; position: static; /* Change to static */
+                border-right: none; border-bottom: 2px solid var(--border-color);
+                padding: 5px 0; /* Reduced padding */
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                z-index: 1001; /* Ensure it's above main content if needed */
+                order: -1; /* Place sidebar visually first */
+                overflow-y: visible; /* Remove vertical scroll */
+            }
+            #sidebar .sidebar-header { display: none; } /* Hide header on mobile */
+
+            #sidebar nav ul {
+                 display: flex; flex-wrap: nowrap; /* Prevent wrapping */
+                 overflow-x: auto; /* Allow horizontal scrolling */
+                 padding: 5px 10px;
+                 -webkit-overflow-scrolling: touch;
+                 scrollbar-width: thin;
+                 scrollbar-color: var(--accent-blue) var(--bg-secondary);
+                 border-bottom: none; /* Remove any residual border */
+                 margin-bottom: 0; /* Remove bottom margin */
+            }
+            #sidebar nav ul::-webkit-scrollbar { height: 6px; }
+            #sidebar nav ul::-webkit-scrollbar-track { background: var(--bg-secondary); border-radius: 3px;}
+            #sidebar nav ul::-webkit-scrollbar-thumb { background-color: var(--accent-blue); border-radius: 3px; }
+
+            #sidebar nav ul li { flex-shrink: 0; margin-right: 5px; margin-bottom: 0; }
+            #sidebar nav ul li a {
+                 padding: 10px 15px; font-size: 0.9em; border-left: none;
+                 border-bottom: 3px solid transparent; /* Use bottom border for active */
+                 border-radius: 5px; /* Slightly rounded buttons */
+                 margin-bottom: 0; /* Override default margin */
+            }
+            #sidebar nav ul li a.completed::after { display: none; } /* Hide checkmark */
+            #sidebar nav ul li a:hover { background-color: rgba(0, 176, 255, 0.1); border-bottom-color: var(--accent-pink); }
+            #sidebar nav ul li a.active { background-color: rgba(0, 176, 255, 0.2); border-bottom-color: var(--accent-blue); box-shadow: none; }
+
+            #main-content {
+                margin-left: 0; /* No margin needed */
+                width: 100%;
+                padding: 20px 15px; /* Less padding on mobile */
+            }
+            footer {
+                 margin-left: 0; /* No margin needed */
+            }
+
+            h1 { font-size: 1.9em; }
+            h2 { font-size: 1.6em; }
+            h3 { font-size: 1.3em; }
+            #quiz-title { font-size: 1.5em; }
+            .content-card { padding: 20px; }
+            .btn { padding: 10px 20px; font-size: 0.9em;}
+
+            /* Ensure tables scroll horizontally if too wide */
+            table { display: block; overflow-x: auto; white-space: nowrap; }
+            th, td { white-space: normal; } /* Allow text wrapping within cells */
+
+            .options { grid-template-columns: 1fr; } /* Ensure options stack */
+            .option-btn { font-size: 0.95em; padding: 10px 15px; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Sidebar Navigation (Handled by CSS for mobile/desktop) -->
+    <aside id="sidebar">
+        <div class="sidebar-header">Training Ground</div>
+        <nav>
+            <ul id="sidebar-nav-list">
+                <li><a href="#welcome" class="nav-link" data-section-id="welcome">Home Base</a></li>
+                <li><a href="#data-foundation" class="nav-link" data-section-id="data-foundation">Drill 1: The Ball</a></li>
+                <li><a href="#data-types-formation" class="nav-link" data-section-id="data-types-formation">Drill 2: Team Structure</a></li>
+                <li><a href="#data-streams-live" class="nav-link" data-section-id="data-streams-live">Drill 3: Live Action</a></li>
+                <li><a href="#statistical-data-squad" class="nav-link" data-section-id="statistical-data-squad">Drill 4: Player Stats</a></li>
+                <li><a href="#data-analysis-gameplan" class="nav-link" data-section-id="data-analysis-gameplan">Tactic 1: Game Plan</a></li>
+                <li><a href="#analysis-tactics" class="nav-link" data-section-id="analysis-tactics">Tactic 2: Variations</a></li>
+                <li><a href="#stats-advanced-skills" class="nav-link" data-section-id="stats-advanced-skills">Skill Moves: Advanced Stats</a></li>
+                <li><a href="#data-science-strategy" class="nav-link" data-section-id="data-science-strategy">The Manager: Data Science</a></li>
+                <li><a href="#challenges" class="nav-link" data-section-id="challenges">Penalty Shootout!</a></li>
+                <li><a href="#progress-section" class="nav-link" data-section-id="progress-section">Your Standing</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Content Wrapper for Desktop Flex Layout -->
+    <div class="content-wrapper">
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+
+            <section id="welcome">
+                 <h1>Data Science Training Ground</h1>
+                <p>Welcome, Manager! Sharpen your analytical skills and master the art of data. Just like building a winning eFootball™ Dream Team, understanding data unlocks powerful insights and strategic advantages. Let's kick off your training!</p>
+                <button class="btn btn-primary" onclick="document.getElementById('data-foundation').scrollIntoView();">Start First Drill</button>
+            </section>
+
+            <!-- Module 1: Data Fundamentals -->
+            <section id="data-foundation">
+                <h2>Drill 1: The Ball - Data Fundamentals</h2>
+                <div class="content-card">
+                    <h3>What is Data?</h3>
+                    <p>Think of <strong class="keyword">Data</strong> as the football – the core element. It's any information stored digitally: numbers, text (player names, stats), images (club crests), sound (commentary), or video (replays).</p>
+                </div>
+                <div class="content-card">
+                    <h3>Big Data: The Stadium Atmosphere</h3>
+                    <p><strong class="keyword">Big Data</strong> is the massive roar of the crowd – huge volumes of information generated rapidly from countless sources (match sensors, social media, fan interactions). Analyzing it helps make crucial decisions.</p>
+                    <ul>
+                        <li>Key Characteristics (The 5 Vs):
+                            <span class="highlight-v">Volume</span> (Huge size),
+                            <span class="highlight-v">Velocity</span> (Fast generation),
+                            <span class="highlight-v">Variety</span> (Different types),
+                            <span class="highlight-v">Veracity</span> (Trustworthiness),
+                            <span class="highlight-v">Value</span> (Potential insight).
+                        </li>
+                        <li>Data is categorized by structure: <strong class="keyword">Structured</strong>, <strong class="keyword">Semi-structured</strong>, and <strong class="keyword">Unstructured</strong>.</li>
+                     </ul>
+                </div>
+                 <button class="btn btn-action mark-complete" data-section-id="data-foundation">Mark Drill Complete</button>
+            </section>
+
+            <!-- Module 2: Data Types Formation -->
+            <section id="data-types-formation">
+                <h2>Drill 2: Team Structure - Data Types</h2>
+                <p>Just like formations (4-3-3, 3-5-2), data has different structures impacting how we use it.</p>
+
+                <div class="content-card">
+                    <h3>Structured Data: The Organized Formation</h3>
+                    <p>Data neatly arranged in tables with rows and columns, like a pre-match team sheet. Stored in <strong class="keyword">Relational Databases (RDBMS)</strong>.</p>
+                    <ul>
+                        <li>Each row is a <strong class="keyword">record</strong> or <strong class="keyword">data object</strong> (e.g., a player).</li>
+                        <li>Each column is an <strong class="keyword">attribute</strong> or <strong class="keyword">feature</strong> (e.g., Speed, Finishing).</li>
+                        <li>Managed using <strong class="keyword">SQL (Structured Query Language)</strong>.</li>
+                    </ul>
+                    <details>
+                        <summary>Formation Analysis: Pros & Cons</summary>
+                        <div class="details-content">
+                            <table>
+                                <thead><tr><th>Pros (Strengths)</th><th>Cons (Weaknesses)</th></tr></thead>
+                                <tbody>
+                                <tr><td>Easy to manage & process (Clear roles)</td><td>Predefined structure limits flexibility (Rigid formation)</td></tr>
+                                <tr><td>Mature technology, wide tool support (Established tactics)</td><td>Less scalable for diverse, evolving data</td></tr>
+                                <tr><td>Consistent format reduces errors (Players know positions)</td><td>Schema changes are difficult (Hard to switch formation)</td></tr>
+                                <tr><td>Strong data integrity & quality (Good team discipline)</td><td>May struggle with complex relationships</td></tr>
+                                <tr><td>Efficient querying (Quick passes)</td><td>Can have storage overhead (Needs specific player types)</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Match Situations (Use Cases)</summary>
+                        <div class="details-content">Analytics dashboards, player databases, financial records, inventory systems, user accounts.</div>
+                    </details>
+                </div>
+
+                <div class="content-card">
+                    <h3>Semi-Structured Data: Flexible Tactics</h3>
+                    <p>Data with some organizational markers (tags, keys) but no rigid table structure. Think of tactical instructions that vary per player.</p>
+                    <ul>
+                        <li>Examples: <strong class="keyword">JSON</strong> (common for web APIs), <strong class="keyword">XML</strong> (document markup), <strong class="keyword">HTML</strong> (web pages).</li>
+                    </ul>
+                     <details>
+                        <summary>Example Tactical Note (JSON)</summary>
+                        <div class="details-content">
+                            <pre><code>{
+        "player": {
+            "name": "L. Messi",
+            "position": "RWF",
+            "instructions": [
+                {"type": "attack", "detail": "Roaming Winger"},
+                {"type": "defense", "detail": "Press Aggressively"}
+            ],
+            "preferred_foot": "Left"
+        }
+    }</code></pre>
+                        </div>
+                    </details>
+                    <details>
+                        <summary>Tactical Analysis: Pros & Cons</summary>
+                        <div class="details-content">
+                             <table>
+                                <thead><tr><th>Pros (Strengths)</th><th>Cons (Weaknesses)</th></tr></thead>
+                                <tbody>
+                                <tr><td>Flexible schema adapts easily (Adaptable tactics)</td><td>More complex querying than structured</td></tr>
+                                <tr><td>Self-describing (Tags explain content)</td><td>Can have redundant tags (Verbose instructions)</td></tr>
+                                <tr><td>Easy to evolve (Easier tactical tweaks)</td><td>Potential for inconsistency (Misunderstood roles)</td></tr>
+                                <tr><td>Good for web/APIs (Game server data)</td><td>More processing overhead for validation</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                     <details>
+                        <summary>Match Situations (Use Cases)</summary>
+                        <div class="details-content">Web data exchange, configuration files, NoSQL database entries, IoT device messages.</div>
+                    </details>
+                </div>
+
+                <div class="content-card">
+                    <h3>Unstructured Data: Free-Flowing Gameplay</h3>
+                    <p>Data without any predefined organization – the raw chaos and brilliance of a match.</p>
+                    <ul>
+                        <li>Examples: Match video footage, audio commentary, social media posts (tweets), images, emails, text documents.</li>
+                        <li>Requires advanced techniques (like AI/ML) to extract meaningful information.</li>
+                    </ul>
+                    <details>
+                        <summary>Gameplay Analysis: Pros & Cons</summary>
+                        <div class="details-content">
+                             <table>
+                                <thead><tr><th>Pros (Strengths)</th><th>Cons (Weaknesses)</th></tr></thead>
+                                <tbody>
+                                <tr><td>Stores diverse, rich information (Captures everything)</td><td>Difficult and costly to analyze</td></tr>
+                                <tr><td>Ideal for multimedia (Replays, fan cams)</td><td>Needs specialized tools (Video/audio analysis AI)</td></tr>
+                                <tr><td>Natural representation (Raw gameplay feel)</td><td>Hard to query or integrate directly</td></tr>
+                                <tr><td>Handles massive volumes (Match archives)</td><td>Extraction is time-consuming</td></tr>
+                                <tr><td>Crucial for AI/ML applications (Train models on video)</td><td>High storage/processing needs</td></tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </details>
+                     <details>
+                        <summary>Match Situations (Use Cases)</summary>
+                        <div class="details-content">Sentiment analysis from fan comments, highlight detection from video, chatbot training data, medical image analysis.</div>
+                    </details>
+                </div>
+                <button class="btn btn-action mark-complete" data-section-id="data-types-formation">Mark Drill Complete</button>
+            </section>
+
+            <!-- Module 3: Data Streams -->
+            <section id="data-streams-live">
+                 <h2>Drill 3: Live Action - Data Streams</h2>
+                <div class="content-card">
+                    <h3>Real-Time Data Flow</h3>
+                    <p><strong class="keyword">Data Streams</strong> are like the live match commentary – information constantly updating in real-time.</p>
+                    <ul>
+                        <li>Must be processed *as it arrives* or very shortly after.</li>
+                        <li>Characterized by high <span class="highlight-v">Volume</span>, high <span class="highlight-v">Velocity</span>, and often needs real-time analysis for immediate insights (e.g., live betting odds, identifying a sudden tactical shift).</li>
+                        <li>Examples: Live player tracking data (GPS), stock market feeds, social media trends, live server logs.</li>
+                    </ul>
+                </div>
+                <button class="btn btn-action mark-complete" data-section-id="data-streams-live">Mark Drill Complete</button>
+            </section>
+
+            <!-- Module 4: Statistical Data -->
+            <section id="statistical-data-squad">
+                <h2>Drill 4: Player Attributes - Statistical Data</h2>
+                <div class="content-card">
+                    <h3>Understanding the Stats</h3>
+                    <p><strong class="keyword">Statistical Data</strong> involves collecting, organizing, and analyzing facts (player stats, survey results) systematically. It's the foundation for performance evaluation.</p>
+                    <p>Divided into two main types based on measurability:</p>
+
+                    <div class="content-card nested-card">
+                        <h4>Qualitative Data (Categorical): Roles & Ratings</h4>
+                        <p>Describes qualities or categories, not easily measured numerically.</p>
+                        <ul>
+                            <li><strong class="keyword">Nominal Data:</strong> Unordered labels. Order doesn't matter.
+                                <ul><li>Examples: Nationality (Brazil, Argentina), Position (GK, CF), Team Name.</li></ul>
+                            </li>
+                            <li><strong class="keyword">Ordinal Data:</strong> Ordered categories, but gaps aren't uniform. Order matters.
+                                <ul><li>Examples: Player Condition Arrow (Red, Orange, Yellow, Green, Blue), Match Difficulty (Beginner, Pro), Fan Satisfaction (Poor, Fair, Good, Excellent).</li></ul>
+                            </li>
+                        </ul>
+                         <details>
+                            <summary>Analysis Techniques</summary>
+                            <div class="details-content">Counts, Frequencies, Percentages, Mode (most frequent). For Ordinal: Median, Rank Order. Visuals: Bar charts, Pie charts.</div>
+                        </details>
+                    </div>
+
+                    <div class="content-card nested-card">
+                        <h4>Quantitative Data (Numerical): Measurable Performance</h4>
+                        <p>Represents measurable quantities.</p>
+                        <ul>
+                             <li><strong class="keyword">Discrete Data:</strong> Countable, distinct values (usually integers).
+                                 <ul><li>Examples: Goals Scored (0, 1, 2...), Red Cards, Number of Players.</li></ul>
+                             </li>
+                             <li><strong class="keyword">Continuous Data:</strong> Can take any value within a range. Infinitely divisible.
+                                <ul><li>Examples: Player Height (181.3 cm), Sprint Speed (34.5 km/h), Pass Completion % (88.7%).</li></ul>
+                            </li>
+                        </ul>
+                        <p>Continuous data is further classified by scale:</p>
+                         <ul>
+                             <li><strong class="keyword">Interval Scale:</strong> Ordered, equal intervals, but <strong class="keyword">no true zero</strong>. Zero doesn't mean absence.
+                                <ul><li>Examples: Temperature (°C/°F), Time on a 12hr clock, Standardized test scores (like IQ - theoretical). Ratios aren't meaningful (20°C isn't twice as hot as 10°C). Addition/subtraction okay.</li></ul>
+                            </li>
+                             <li><strong class="keyword">Ratio Scale:</strong> Ordered, equal intervals, AND a <strong class="keyword">true zero</strong>. Zero means absence.
+                                <ul><li>Examples: Height (0cm = no height), Weight, Goals Scored, Speed (0km/h = stopped), Duration, Kelvin Temperature. Ratios are meaningful (10 goals is twice 5 goals). All math operations okay.</li></ul>
+                            </li>
+                        </ul>
+                        <details>
+                            <summary>Analysis Techniques</summary>
+                            <div class="details-content">Mean, Median, Mode, Standard Deviation, Variance, Range. For Ratio: Ratios, Percentages. Visuals: Histograms, Box plots, Scatter plots.</div>
+                        </details>
+                    </div>
+                </div>
+                 <button class="btn btn-action mark-complete" data-section-id="statistical-data-squad">Mark Drill Complete</button>
+            </section>
+
+             <!-- Module 5: Data Analysis Gameplan -->
+            <section id="data-analysis-gameplan">
+                <h2>Tactic 1: The Game Plan - Data Analysis Process</h2>
+                <div class="content-card">
+                    <h3>From Raw Data to Insight</h3>
+                    <p><strong class="keyword">Data Analysis</strong> is the systematic process of inspecting, cleaning, transforming, and modeling data to discover useful information, draw conclusions, and support decisions (like choosing your starting XI).</p>
+                    <h4>The Analyst's Workflow:</h4>
+                    <ol>
+                        <li><strong>Collect:</strong> Gather data (match stats, player performance metrics).</li>
+                        <li><strong>Clean & Process (Wrangle):</strong> Handle missing values, fix errors, standardize formats (vital step!).</li>
+                        <li><strong>Explore (EDA):</strong> Understand patterns, trends, outliers using visualizations and summaries.</li>
+                        <li><strong>Analyze & Model:</strong> Apply statistical techniques or build models.</li>
+                        <li><strong>Interpret & Communicate:</strong> Explain findings clearly (reports, dashboards).</li>
+                    </ol>
+                     <h4>Key Activities within the Process:</h4>
+                     <ul>
+                        <li><strong>Data Mining:</strong> Discovering hidden patterns in large datasets.</li>
+                        <li><strong>Data Management:</strong> Ensuring data quality, storage, and accessibility.</li>
+                        <li><strong>Statistical Analysis:</strong> Applying statistical methods rigorously.</li>
+                        <li><strong>Data Visualization:</strong> Creating charts and graphs to communicate insights effectively.</li>
+                     </ul>
+                </div>
+                 <button class="btn btn-action mark-complete" data-section-id="data-analysis-gameplan">Mark Tactic Learned</button>
+            </section>
+
+            <!-- Module 6: Analysis Tactics -->
+            <section id="analysis-tactics">
+                 <h2>Tactic 2: Tactical Variations - Analysis Types</h2>
+                 <p>Different situations call for different analytical plays.</p>
+
+                <div class="content-card">
+                    <h3>1. Descriptive Analysis: The Match Report</h3>
+                    <ul>
+                        <li><strong>Goal:</strong> Summarize what happened. (e.g., Final score, possession %, top scorer).</li>
+                        <li><strong>Techniques:</strong> Mean, median, mode, standard deviation, counts, percentages, basic charts (bar, line, pie).</li>
+                        <li><strong>Answers:</strong> "What were our key stats last game?"</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>2. Exploratory Data Analysis (EDA): Scouting the Opposition (and Ourselves)</h3>
+                    <ul>
+                        <li><strong>Goal:</strong> Explore the data visually and statistically to find patterns, relationships, anomalies, and generate hypotheses *before* formal analysis.</li>
+                        <li><strong>Techniques:</strong> Heavy use of visualizations (histograms, scatter plots, box plots), correlation analysis, summary statistics, identifying outliers.</li>
+                        <li><strong>Answers:</strong> "What interesting patterns exist in our passing data?", "Are there any unusual player performances?"</li>
+                    </ul>
+                </div>
+                 <div class="content-card">
+                    <h3>3. Diagnostic Analysis: The Half-Time Talk</h3>
+                    <ul>
+                        <li><strong>Goal:</strong> Understand *why* something happened. (e.g., Why did we concede late goals?).</li>
+                        <li><strong>Techniques:</strong> Drill-down analysis, root cause analysis, comparing data segments, correlation.</li>
+                        <li><strong>Answers:</strong> "Why did our midfield lose control?", "What led to the increase in errors?"</li>
+                    </ul>
+                </div>
+                 <div class="content-card">
+                    <h3>4. Predictive Analysis: Pre-Match Prediction</h3>
+                    <ul>
+                        <li><strong>Goal:</strong> Forecast what is likely to happen in the future. (e.g., Predict the match outcome, predict player potential).</li>
+                        <li><strong>Techniques:</strong> Machine Learning (Regression, Classification), Statistical Modeling, Time Series Analysis.</li>
+                        <li><strong>Answers:</strong> "What's the probability we win the next match?", "Which youth player will develop fastest?"</li>
+                    </ul>
+                </div>
+                <div class="content-card">
+                    <h3>5. Inferential Analysis: Generalizing Insights</h3>
+                    <ul>
+                        <li><strong>Goal:</strong> Use a *sample* of data (e.g., 20 matches) to draw conclusions about a *larger population* (e.g., performance over the whole season).</li>
+                        <li><strong>Techniques:</strong> Hypothesis Testing (Is tactic A significantly better than tactic B?), Confidence Intervals (Estimate the true season average possession), Regression Analysis (for population inference).</li>
+                        <li><strong>Answers:</strong> "Can we confidently say our new training method improves stamina overall?"</li>
+                    </ul>
+                </div>
+                 <button class="btn btn-action mark-complete" data-section-id="analysis-tactics">Mark Tactic Learned</button>
+            </section>
+
+            <!-- Module 7: Advanced Skills -->
+            <section id="stats-advanced-skills">
+                <h2>Skill Moves: Advanced Stats & Probability</h2>
+                <div class="content-card">
+                    <h3>Statistical Modeling: Designing Set Pieces</h3>
+                    <p>Creating mathematical representations (models) of real-world processes using data. Aims to understand relationships and make predictions.</p>
+                    <ul><li>Example: Building a model to predict goals scored based on shot location, angle, and player finishing stat.</li></ul>
+                </div>
+                 <div class="content-card">
+                    <h3>Statistical Inference: Reading the Opponent's Mind</h3>
+                    <p>Using sample data to infer characteristics of the larger population. Making educated guesses about the whole based on a part.</p>
+                    <ul><li>Methods: Estimation, Confidence Intervals, Hypothesis Testing.</li></ul>
+                </div>
+                <div class="content-card">
+                    <h3>Probability Distributions: Chance of Success</h3>
+                    <p><strong class="keyword">Probability</strong> measures the likelihood of an event (0 = impossible, 1 = certain). A <strong class="keyword">Probability Distribution</strong> describes the likelihood of all possible outcomes.</p>
+                    <ul>
+                        <li>Common Examples:
+                            <ul>
+                                <li><strong>Normal Distribution (Bell Curve):</strong> Symmetrical distribution common in nature (e.g., player heights).</li>
+                                <li><strong>Uniform Distribution:</strong> All outcomes equally likely (e.g., rolling a fair die).</li>
+                                <li><strong>Binomial Distribution:</strong> Number of successes in fixed trials (e.g., penalties scored out of 5 attempts).</li>
+                                 <li><strong>Poisson Distribution:</strong> Number of events in a fixed interval (e.g., goals scored in a match).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn btn-action mark-complete" data-section-id="stats-advanced-skills">Mark Skill Mastered</button>
+            </section>
+
+            <!-- Module 8: Data Science -->
+            <section id="data-science-strategy">
+                <h2>The Manager: Data Science Overview</h2>
+                <div class="content-card">
+                    <h3>Data Science: The Master Tactician</h3>
+                    <p><strong class="keyword">Data Science</strong> is the interdisciplinary field that uses scientific methods, processes, algorithms, and systems to extract knowledge and insights from data in various forms, both structured and unstructured. It combines:</p>
+                    <ul>
+                        <li>Statistics & Mathematics</li>
+                        <li>Computer Science & Programming</li>
+                        <li>Machine Learning & AI</li>
+                        <li>Domain Expertise (e.g., Football knowledge!)</li>
+                    </ul>
+                     <h4>Benefits in Football:</h4>
+                     <p>Optimizing tactics, scouting effectively, preventing injuries, enhancing fan engagement, gaining a competitive edge.</p>
+                </div>
+
+                <div class="content-card">
+                    <h3>The Data Science Lifecycle: From Kick-off to Final Whistle</h3>
+                    <ol>
+                        <li><strong>Problem Definition:</strong> Understand the objective (e.g., Improve set-piece conversion).</li>
+                        <li><strong>Data Acquisition:</strong> Collect relevant data (player tracking, match events).</li>
+                        <li><strong>Data Preparation:</strong> Clean, transform, feature engineer (most time-consuming!).</li>
+                        <li><strong>Exploratory Data Analysis (EDA):</strong> Explore data for initial insights.</li>
+                        <li><strong>Modeling:</strong> Build predictive or descriptive models (ML, Stats).</li>
+                        <li><strong>Evaluation:</strong> Assess model performance and accuracy.</li>
+                        <li><strong>Deployment:</strong> Integrate the model into systems (tactical dashboard).</li>
+                        <li><strong>Communication:</strong> Present findings to coaches/stakeholders.</li>
+                    </ol>
+                </div>
+
+                <div class="content-card">
+                    <h3>Common Challenges: Potential Red Cards</h3>
+                     <ul>
+                        <li><strong>Data Quality & Availability:</strong> "Garbage in, garbage out." Poor data leads to poor models.</li>
+                        <li><strong>Bias:</strong> Data or algorithms reflecting/amplifying real-world biases (e.g., scouting biases). Needs careful fairness checks.</li>
+                        <li><strong>Overfitting/Underfitting:</strong> Models that don't generalize well to new data (too complex or too simple).</li>
+                        <li><strong>Interpretability:</strong> Understanding *why* a complex model makes a prediction ("black box" problem).</li>
+                        <li><strong>Privacy & Ethics:</strong> Handling sensitive data responsibly and avoiding misuse.</li>
+                    </ul>
+                </div>
+                 <button class="btn btn-action mark-complete" data-section-id="data-science-strategy">Mark Role Understood</button>
+            </section>
+
+            <!-- NEW Interactive Quiz Section -->
+            <section id="challenges">
+                 <h2>Penalty Shootout: Test Your Knowledge!</h2>
+                 <div class="content-card">
+                     <h3 id="quiz-title">Interactive Knowledge Check</h3>
+                     <div class="quiz-container" id="quiz">
+                         <!-- Questions will be dynamically loaded here -->
+                     </div>
+                     <div class="result" id="result" style="display: none;"></div> <!-- Initially hidden -->
+                     <button class="btn btn-secondary" id="submit-btn" style="display:none;">Submit Answers</button>
+                 </div>
+                 <!-- Note: No "Mark Challenge Attempted" button here anymore -->
+            </section>
+
+            <!-- Progress -->
+            <section id="progress-section">
+                <h2>Your League Standing</h2>
+                <div class="content-card">
+                    <h3>Training Progress</h3>
+                    <p>Keep pushing! Your mastery of data tactics is growing.</p>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="learning-progress-bar">
+                             <div class="progress-bar-text" id="progress-bar-text-id">5% Complete</div>
+                        </div>
+                    </div>
+                    <p>Progress is saved automatically as you view sections and complete the final challenge.</p>
+                </div>
+            </section>
+
+        </main>
+
+    </div> <!-- End content-wrapper -->
+
+    <footer>
+        Data Science Training Ground | Inspired by eFootball™ | Learning Tool v2.1 (Mobile Enhanced)
+    </footer>
+
+    <!-- Main Navigation & Progress Tracking Script -->
+    <script>
+        /**
+         * Gamified Data Science Playbook JS v2.1
+         * Features: localStorage progress, dynamic progress bar, completion indicators, scroll tracking, mobile nav handling.
+         * Quiz logic is in a separate script below.
+         */
+        // Make necessary variables/functions accessible to the quiz script
+        let progressData = {
+            completedSections: new Set(),
+            completedQuizzes: new Set() // Retained but quiz completion now primarily adds to completedSections
+        };
+        const progressKey = 'dataPlaybookProgress_v2_1'; // Updated key
+        let progressBar, progressBarText, navLinks, markCompleteButtons; // Declare globally for access
+
+        // Functions made accessible for quiz script
+        function saveProgress() {
+            try {
+                const dataToSave = {
+                    completedSections: Array.from(progressData.completedSections),
+                    // quizzes no longer strictly necessary here if handled via sections
+                };
+                localStorage.setItem(progressKey, JSON.stringify(dataToSave));
+                updateProgressBar(); // Update bar whenever progress changes
+            } catch (e) {
+                console.error("Failed to save progress:", e);
+            }
+        }
+
+        function updateCompletionVisuals() {
+           if (!navLinks) return; // Ensure navLinks is initialized
+           navLinks.forEach(link => {
+               const sectionId = link.dataset.sectionId;
+               if (progressData.completedSections.has(sectionId)) {
+                    link.classList.add('completed');
+               } else {
+                   link.classList.remove('completed');
+               }
+           });
+            // Update button states too
+            if (!markCompleteButtons) return;
+            markCompleteButtons.forEach(button => {
+                const sectionId = button.dataset.sectionId;
+                if (progressData.completedSections.has(sectionId)) {
+                    button.textContent = 'Module Completed ✔';
+                    button.disabled = true;
+                } else {
+                     // Reset if needed (e.g. after a progress reset)
+                     // Find appropriate default text (might vary)
+                     const defaultTextMap = {
+                        "data-foundation": "Mark Drill Complete",
+                        "data-types-formation": "Mark Drill Complete",
+                        "data-streams-live": "Mark Drill Complete",
+                        "statistical-data-squad": "Mark Drill Complete",
+                        "data-analysis-gameplan": "Mark Tactic Learned",
+                        "analysis-tactics": "Mark Tactic Learned",
+                        "stats-advanced-skills": "Mark Skill Mastered",
+                        "data-science-strategy": "Mark Role Understood"
+                        // No button for challenges anymore
+                     }
+                     button.textContent = defaultTextMap[sectionId] || 'Mark Complete';
+                     button.disabled = false;
+                }
+            });
+        }
+
+         function updateProgressBar() {
+             const totalLearningItems = document.querySelectorAll('#main-content > section').length; // Recalculate based on actual sections
+             const completedCount = progressData.completedSections.size;
+
+             const baseProgress = 5; // Start at 5%
+             let progressPercent = baseProgress + ((completedCount / totalLearningItems) * (100 - baseProgress));
+             progressPercent = Math.min(100, Math.max(baseProgress, progressPercent));
+
+             if (progressBar && progressBarText) {
+                 progressBar.style.width = `${progressPercent}%`;
+                 progressBarText.textContent = `${Math.round(progressPercent)}% Training Complete`;
+             }
+         }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- DOM Element References ---
+            const sidebarNavList = document.getElementById('sidebar-nav-list');
+            navLinks = Array.from(sidebarNavList.querySelectorAll('.nav-link')); // Assign to global
+            const sections = Array.from(document.querySelectorAll('#main-content > section')); // Direct children sections
+            progressBar = document.getElementById('learning-progress-bar'); // Assign to global
+            progressBarText = document.getElementById('progress-bar-text-id'); // Assign to global
+            const mainContent = document.getElementById('main-content');
+            markCompleteButtons = document.querySelectorAll('.mark-complete'); // Assign to global
+
+
+            // --- Initialization ---
+            loadProgress();
+            updateCompletionVisuals(); // Reflect loaded progress visually
+            updateProgressBar();
+            setActiveLink(); // Initial active link highlight
+            setupEventListeners();
+            console.log("Data Science Training Ground Initialized!");
+
+            // --- Functions ---
+
+            function setupEventListeners() {
+                // Use window for scroll events as main-content might not always be the scroll container
+                window.addEventListener('scroll', throttle(handleScroll, 150)); // Throttle scroll handler
+
+                // Update active link on click (CSS handles smooth scroll)
+                navLinks.forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        // Prevent default jump for smoother experience if needed, rely on setActiveLink
+                        // e.preventDefault();
+                        const targetId = link.getAttribute('href').substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            // Use scrollIntoView for reliability, esp. with dynamic layouts
+                            targetElement.scrollIntoView({ behavior: 'smooth' });
+                            // Update active link slightly after scroll starts
+                            setTimeout(setActiveLink, 100);
+                        }
+                    });
+                });
+
+                // Mark Complete buttons (excluding challenge section)
+                markCompleteButtons.forEach(button => {
+                    button.addEventListener('click', handleMarkComplete);
+                });
+            }
+
+             function handleMarkComplete(event) {
+                const sectionId = event.target.getAttribute('data-section-id');
+                if (sectionId && sectionId !== 'challenges' && !progressData.completedSections.has(sectionId)) {
+                    progressData.completedSections.add(sectionId);
+                    saveProgress();
+                    updateCompletionVisuals(); // Update checkmark immediately
+                    console.log(`Section marked complete: ${sectionId}`);
+                }
+            }
+
+             function handleScroll() {
+                setActiveLink();
+                updateProgressOnScroll(); // Mark sections as viewed automatically based on scroll
+            }
+
+            function loadProgress() {
+                const savedProgress = localStorage.getItem(progressKey);
+                if (savedProgress) {
+                    try {
+                        const parsedData = JSON.parse(savedProgress);
+                        // Ensure it's always a Set
+                        progressData.completedSections = new Set(parsedData.completedSections || []);
+                         console.log("Progress loaded:", progressData);
+                    } catch (e) {
+                        console.error("Failed to parse saved progress:", e);
+                        resetProgress(); // Reset if data is corrupt
+                    }
+                } else {
+                    console.log("No saved progress found.");
+                }
+            }
+
+            function resetProgress() {
+                 console.warn("Resetting progress due to error or request.");
+                 progressData = { completedSections: new Set() }; // Simplified reset
+                 localStorage.removeItem(progressKey);
+                 updateCompletionVisuals();
+                 updateProgressBar();
+            }
+
+
+             function updateProgressOnScroll() {
+                 let viewedSomethingNew = false;
+                 sections.forEach(section => {
+                     const sectionId = section.id;
+                     if (!sectionId || progressData.completedSections.has(sectionId)) {
+                         return; // Skip if no ID or already marked complete
+                     }
+
+                     if (isElementSignificantlyInViewport(section)) {
+                         progressData.completedSections.add(sectionId);
+                         viewedSomethingNew = true;
+                         console.log(`Section auto-completed by view: ${sectionId}`);
+                     }
+                 });
+
+                 if (viewedSomethingNew) {
+                     saveProgress();
+                     updateCompletionVisuals(); // Update checkmarks based on view
+                 }
+            }
+
+            // Check if element is substantially visible
+            function isElementSignificantlyInViewport(el) {
+                const rect = el.getBoundingClientRect();
+                const windowHeight = (window.innerHeight || document.documentElement.clientHeight);
+                 const elementCenterY = rect.top + rect.height / 2;
+                 const visibleHeight = Math.max(0, Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0));
+
+                 // Considered visible if center is roughly within middle 80% of viewport or > 40% of element height is visible
+                 return (elementCenterY > windowHeight * 0.1 && elementCenterY < windowHeight * 0.9) || (visibleHeight > rect.height * 0.4);
+            }
+
+
+             function setActiveLink() {
+                 let currentSectionId = null;
+                 const scrollY = window.scrollY;
+                 const windowHeight = window.innerHeight;
+
+                 sections.forEach(section => {
+                     const sectionTop = section.offsetTop - 100; // Adjust offset trigger point (navbar height etc)
+                     const sectionBottom = sectionTop + section.offsetHeight;
+
+                     // Check if the section is significantly in view
+                     if (scrollY >= sectionTop && scrollY < sectionBottom) {
+                         currentSectionId = section.id;
+                     }
+                 });
+
+                // Fallback for top/bottom of page
+                if (scrollY < 150 && sections.length > 0) {
+                    currentSectionId = sections[0].id;
+                } else if ((windowHeight + scrollY) >= document.body.offsetHeight - 150 && sections.length > 0) {
+                     currentSectionId = sections[sections.length - 1].id;
+                }
+
+
+                 navLinks.forEach(link => {
+                     link.classList.remove('active');
+                     if (link.dataset.sectionId === currentSectionId) {
+                         link.classList.add('active');
+                     }
+                 });
+             }
+
+             // --- Utility: Throttle ---
+            function throttle(func, limit) {
+                let inThrottle;
+                return function() {
+                    const args = arguments;
+                    const context = this;
+                    if (!inThrottle) {
+                        func.apply(context, args);
+                        inThrottle = true;
+                        setTimeout(() => inThrottle = false, limit);
+                    }
+                }
+            }
+
+             // Expose functions needed by the quiz script (use with caution)
+            window.markChallengeComplete = () => {
+                 if (!progressData.completedSections.has('challenges')) {
+                    progressData.completedSections.add('challenges');
+                    saveProgress(); // This now calls updateProgressBar internally
+                    updateCompletionVisuals();
+                    console.log("Challenge section marked complete via quiz submission.");
+                }
+            };
+             window.updateUIAfterQuiz = () => {
+                 updateCompletionVisuals();
+                 updateProgressBar();
+             }
+
+        }); // End DOMContentLoaded for main script
+    </script>
+
+    <!-- Interactive Quiz Script (Separate) -->
+    <script>
+        /**
+         * Interactive Quiz Logic v1.0
+         * Handles loading questions, user interaction, checking answers, and RN communication.
+         * Calls functions exposed by the main script to update overall progress.
+         */
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // New Quiz Questions based on the content
+            const quizQuestions = [
+                {
+                    question: "Which of the '5 Vs' of Big Data refers to the trustworthiness or accuracy of the data?",
+                    options: ["Volume", "Velocity", "Variety", "Veracity", "Value"],
+                    answer: 3 // Veracity
+                },
+                {
+                    question: "Player stats like Speed (95), Finishing (92), arranged in a database table, are an example of what type of data structure?",
+                    options: ["Unstructured Data", "Semi-structured Data", "Structured Data", "Nominal Data"],
+                    answer: 2 // Structured Data
+                },
+                {
+                    question: "A JSON file containing player instructions ({ 'name': 'Mbappe', 'instructions': ['Run Forward'] }) is best classified as:",
+                    options: ["Structured Data", "Semi-structured Data", "Unstructured Data", "Ratio Data"],
+                    answer: 1 // Semi-structured Data
+                },
+                 {
+                    question: "Live player tracking data from GPS sensors during a match is an example of:",
+                    options: ["Statistical Data", "Data Streams", "Historical Data", "Qualitative Data"],
+                    answer: 1 // Data Streams
+                },
+                {
+                    question: "A player's Nationality (e.g., 'Brazil') is what type of statistical data?",
+                    options: ["Ordinal", "Interval", "Ratio", "Nominal"],
+                    answer: 3 // Nominal
+                },
+                {
+                    question: "Player Height measured in centimeters (e.g., 185.5 cm) is classified as:",
+                    options: ["Nominal, Discrete", "Ordinal, Continuous", "Ratio, Continuous", "Interval, Discrete"],
+                    answer: 2 // Ratio, Continuous
+                },
+                 {
+                    question: "Which data analysis type aims to understand *why* something happened in the past (e.g., why possession dropped)?",
+                    options: ["Descriptive Analysis", "Predictive Analysis", "Diagnostic Analysis", "Exploratory Data Analysis (EDA)"],
+                    answer: 2 // Diagnostic Analysis
+                },
+                 {
+                    question: "Using past match data to forecast the probability of winning the next game is an example of:",
+                    options: ["Descriptive Analysis", "Predictive Analysis", "Diagnostic Analysis", "Inferential Analysis"],
+                    answer: 1 // Predictive Analysis
+                },
+                 {
+                    question: "Which distribution is often used to model the number of rare events occurring in a fixed interval, like goals scored in a 90-minute match?",
+                    options: ["Normal Distribution", "Uniform Distribution", "Binomial Distribution", "Poisson Distribution"],
+                    answer: 3 // Poisson Distribution
+                },
+                 {
+                    question: "What is a common challenge in Data Science where a model performs well on training data but poorly on new, unseen data?",
+                    options: ["Data Acquisition", "Bias", "Overfitting", "Interpretability"],
+                    answer: 2 // Overfitting
+                }
+            ];
+
+            let correctAnswers = 0;
+            let totalQuestions = quizQuestions.length;
+            let userAnswers = new Array(totalQuestions).fill(undefined); // Initialize array for answers
+            let quizCompleted = false;
+
+            const quizContainer = document.getElementById('quiz');
+            const resultContainer = document.getElementById('result');
+            const submitButton = document.getElementById('submit-btn');
+
+            // Load questions
+            function loadQuiz() {
+                if (!quizContainer) return;
+                quizContainer.innerHTML = ''; // Clear previous content
+
+                quizQuestions.forEach((q, qIndex) => {
+                    const questionDiv = document.createElement('div');
+                    questionDiv.className = 'question-block';
+
+                    const questionText = document.createElement('div');
+                    questionText.className = 'question';
+                    questionText.textContent = `${qIndex + 1}. ${q.question}`;
+                    questionDiv.appendChild(questionText);
+
+                    const optionsDiv = document.createElement('div');
+                    optionsDiv.className = 'options';
+
+                    q.options.forEach((opt, optIndex) => {
+                        const optionBtn = document.createElement('button'); // Use button for semantics
+                        optionBtn.type = 'button'; // Prevent form submission if wrapped in form
+                        optionBtn.className = 'option-btn';
+                        optionBtn.textContent = opt;
+                        optionBtn.dataset.qIndex = qIndex;
+                        optionBtn.dataset.optIndex = optIndex;
+
+                        optionBtn.addEventListener('click', handleOptionClick);
+
+                        optionsDiv.appendChild(optionBtn);
+                    });
+
+                    questionDiv.appendChild(optionsDiv);
+                    quizContainer.appendChild(questionDiv);
+                });
+
+                 // Add event listener to submit button only if it exists
+                 if (submitButton) {
+                    submitButton.style.display = 'none'; // Hide initially
+                    submitButton.addEventListener('click', checkAnswers);
+                 }
+            }
+
+            function handleOptionClick(event) {
+                 if (quizCompleted) return; // Don't allow changes after submission
+
+                 const clickedButton = event.target;
+                 const qIndex = parseInt(clickedButton.dataset.qIndex);
+                 const optIndex = parseInt(clickedButton.dataset.optIndex);
+
+                 // Remove 'selected' class from other options in the same question
+                 const questionBlock = clickedButton.closest('.question-block');
+                 const optionBtns = questionBlock.querySelectorAll('.option-btn');
+                 optionBtns.forEach(btn => {
+                     btn.classList.remove('selected');
+                     // Resetting style explicitly might be needed if inline styles were used before
+                     // btn.style.backgroundColor = '';
+                     // btn.style.fontWeight = '';
+                 });
+
+                 // Highlight selected option
+                 clickedButton.classList.add('selected');
+                 // clickedButton.style.backgroundColor = 'var(--quiz-option-selected-bg)';
+                 // clickedButton.style.fontWeight = 'bold';
+
+                 // Save user's answer
+                 userAnswers[qIndex] = optIndex;
+
+                 // Show submit button if all questions are answered
+                 if (userAnswers.filter(a => a !== undefined).length === totalQuestions) {
+                     if (submitButton) submitButton.style.display = 'block';
+                 }
+             }
+
+
+            // Check answers and display results
+            function checkAnswers() {
+                if (quizCompleted || !submitButton) return;
+
+                quizCompleted = true;
+                correctAnswers = 0;
+                 quizContainer.classList.add('results-shown'); // Add class to container for styling revealed answers
+
+                quizQuestions.forEach((q, qIndex) => {
+                    const userAnswer = userAnswers[qIndex];
+                    const correctAnswer = q.answer;
+
+                    // Find the options for the current question
+                     const options = quizContainer.querySelectorAll(`.option-btn[data-q-index="${qIndex}"]`);
+
+                    options.forEach((opt) => {
+                        const optIndex = parseInt(opt.dataset.optIndex);
+                        opt.disabled = true; // Disable options after submission
+                        opt.classList.remove('selected'); // Remove selection highlight before adding correct/incorrect
+
+                        if (optIndex === correctAnswer) {
+                            opt.classList.add('correct');
+                        } else if (optIndex === userAnswer) { // User chose this incorrect option
+                            opt.classList.add('incorrect');
+                        }
+                    });
+
+                    if (userAnswer === correctAnswer) {
+                        correctAnswers++;
+                    }
+                });
+
+                const accuracy = totalQuestions > 0 ? correctAnswers / totalQuestions : 0;
+                const resultText = `You got ${correctAnswers} out of ${totalQuestions} correct. Accuracy: ${(accuracy * 100).toFixed(0)}%`;
+
+                if (resultContainer) {
+                    resultContainer.textContent = resultText;
+                    resultContainer.style.display = 'block';
+                    // Add feedback class based on score
+                    resultContainer.className = 'result '; // Reset classes first
+                    if (accuracy === 1) {
+                        resultContainer.classList.add('feedback-correct');
+                    } else if (accuracy >= 0.5) {
+                         resultContainer.classList.add('feedback-info'); // Or maybe a different color for partial success
+                    } else {
+                        resultContainer.classList.add('feedback-incorrect');
+                    }
+                }
+
+
+                // Hide submit button
+                 submitButton.style.display = 'none';
+
+                 // --- Integration with Main Progress Script ---
+                 // Call the globally exposed function from the main script
+                 if (typeof window.markChallengeComplete === 'function') {
+                     window.markChallengeComplete();
+                 } else {
+                     console.warn("markChallengeComplete function not found on window.");
+                 }
+                 // Also trigger a general UI update if needed
+                 if (typeof window.updateUIAfterQuiz === 'function') {
+                      window.updateUIAfterQuiz();
+                 }
+                 // --------------------------------------------
+
+
+                // Send accuracy data to React Native if the bridge exists
+                if (window.ReactNativeWebView && typeof window.ReactNativeWebView.postMessage === 'function') {
+                    try {
+                        window.ReactNativeWebView.postMessage(JSON.stringify({
+                            type: 'setAccuracy',
+                            accuracy: accuracy
+                        }));
+                    } catch (e) {
+                        console.error("Error posting message to RN WebView:", e);
+                    }
+                } else {
+                    console.log("React Native WebView bridge not detected.");
+                }
+
+                // Add game over button (for RN communication)
+                if (resultContainer) {
+                    const gameOverBtn = document.createElement('button');
+                    gameOverBtn.textContent = 'Training Complete'; // Changed text slightly
+                    gameOverBtn.addEventListener('click', function() {
+                        if (window.ReactNativeWebView && typeof window.ReactNativeWebView.postMessage === 'function') {
+                            try {
+                                window.ReactNativeWebView.postMessage(JSON.stringify({
+                                    type: 'gameOver'
+                                }));
+                            } catch (e) {
+                                console.error("Error posting 'gameOver' message:", e)
+                            }
+                        } else {
+                             console.log("React Native WebView bridge not detected for 'gameOver'.");
+                             // Optionally, scroll to top or provide other feedback for web version
+                             window.scrollTo({ top: 0, behavior: 'smooth' });
+                        }
+                    });
+                    resultContainer.appendChild(document.createElement('br'));
+                    resultContainer.appendChild(gameOverBtn);
+                }
+            }
+
+            // Initialize the quiz
+            loadQuiz();
+
+        }); // End DOMContentLoaded for quiz script
+    </script>
+
+</body>
+</html>
