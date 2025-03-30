@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Notes</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Optional custom styles if needed */
+        body {
+            font-family: sans-serif;
+        }
+        h2 {
+            border-bottom: 1px solid #e2e8f0; /* light gray border */
+            padding-bottom: 4px;
+            margin-top: 1.5rem; /* Add space above h2 */
+        }
+        h3 {
+             margin-top: 1rem; /* Add space above h3 */
+        }
+        .note-block {
+            background-color: #ebf8ff; /* light blue background */
+            border-left: 4px solid #4299e1; /* blue border */
+            padding: 0.75rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900 p-4 md:p-8">
+
+    <div class="container mx-auto max-w-4xl bg-white p-6 md:p-10 rounded shadow-lg">
+
+        <h1 class="text-3xl font-bold mb-6 text-center text-blue-700">Semiconductor Basics: Definition, Properties, Bonds</h1>
+
+        <p class="mb-4 text-lg">
+            Substances that have resistivity in between conductors and insulators are termed as semiconductors.
+        </p>
+        <p class="mb-4">
+            <strong>E.g.:</strong> Ge, Si, C etc. (Resistivity range ~ <code class="bg-gray-200 px-1 rounded">10<sup>-4</sup></code> to <code class="bg-gray-200 px-1 rounded">10<sup>4</sup></code> Ωm)
+        </p>
+        <p class="mb-4">
+            Their difference is resistivity with resistance materials like nichrome (<code class="bg-gray-200 px-1 rounded">~10<sup>-6</sup> Ωm</code>) makes them prove they can't be used as resistance material (e.g. Nichrome 0.6 Ωm/m² ??). <!-- Note: Unit seems unusual -->
+        </p>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Key Properties</h2>
+        <p class="mb-4">
+            Not only resistivity alone can decide a semiconductor, it has the following properties:
+        </p>
+        <ol class="list-decimal list-inside space-y-2 mb-6">
+            <li>Resistivity less than insulator but more than a conductor.</li>
+            <li>
+                <strong>Negative temperature coefficient (NTC):</strong> Resistance decreases with increase in temperature.
+            </li>
+            <li>
+                By adding impurities (e.g., B, As, Cu <!-- Note: Cu is not a typical dopant -->), we can alter its conduction properties.
+            </li>
+        </ol>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Bonding and Structure</h2>
+        <p class="mb-4">
+            Semiconductors form covalent bonds by sharing four valence electrons.
+        </p>
+
+        <!-- Diagram: Covalent bonding in Germanium (Ge) crystal lattice -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img1.png" alt="Diagram of Covalent bonding in Germanium lattice" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+        <p class="mb-4">
+            These substances are arranged in a crystalline structure.
+        </p>
+        <p class="mb-4">
+            Ge, Si are mainly used semiconductors since their energy gap is very low. (e.g., 1.1 eV) <!-- Note: Energy gap value added for context -->
+            <!-- Original text: Y energy to break bonds -->
+        </p>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Germanium (Ge)</h3>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>Energy Gap (ΔE) ≈ 0.7eV <!-- Note: Value from text --></li>
+            <li>32 electrons</li>
+            <li>Expensive; it's a model substance</li>
+            <li>It can be purified relatively well and crystallized easily.</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Silicon (Si)</h3>
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>Energy Gap (ΔE) ≈ 1.1 eV <!-- Note: Value from text --></li>
+            <li>14 electrons</li>
+            <li>Most common semiconductor.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Energy Bands (Ge, Si)</h2>
+        <p class="mb-4">
+            <strong>Definition:</strong> In terms of energy bands, a semiconductor is a substance which has an almost filled valence band and nearly empty conduction band.
+        </p>
+
+        <!-- Diagram: Energy band structure for Germanium (showing Valence Band, Conduction Band, Forbidden Band/Energy Gap) -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img2.png" alt="Energy band diagram for Germanium" class="mx-auto max-w-sm h-auto mb-2 opacity-50">
+        </div>
+
+        <!-- Diagram: Energy band structure for Silicon (ΔE = 1.1 eV) -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+             <img src="./img/img3.png" alt="Energy band diagram for Silicon" class="mx-auto max-w-sm h-auto mb-2 opacity-50">
+        </div>
+
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Temperature Effects on Semiconductors (SC)</h2>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">i. At absolute zero (0 Kelvin)</h3>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>No free electrons, since all of them are tightly held in covalent bonds.</li>
+            <li>So SC behaves as a perfect insulator.</li>
+            <li>Energy gap between valence and conduction band is too large for electrons to jump.</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">ii. Above absolute zero</h3>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>A few free electrons exist, since some covalent bonds are broken due to thermal energy (heat).</li>
+            <li>These free electrons can cause current flow if potential is applied.</li>
+            <li>Resistance decreases as you heat up the SC (Negative Temperature Coefficient).</li>
+        </ul>
+        <div class="note-block">
+            <strong>Note:</strong> Each time an electron moves to the conduction band as a free electron, a hole is created in the valence band.
+        </div>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Hole Current Concept</h2>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>Thermal energy creates electron-hole pairs.</li>
+            <li>Hole movement is caused by holes attracting nearby valence electrons (filling the hole, creating a new one).</li>
+            <li>So it is actually due to the movement of valence electrons from one covalent bond to another.</li>
+            <li>Still, it seems like the positive holes are moving, hence it is called hole current.</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Intrinsic vs Extrinsic SC; Doping</h2>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Intrinsic SC</h3>
+        <p class="mb-2">An SC that is extremely pure form.</p>
+
+        <!-- Diagram: Intrinsic semiconductor showing electron-hole pairs -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img4.png" alt="Block diagram of intrinsic semiconductor" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>The current conduction is due to both holes and electrons generated thermally at room temperature, i.e., I<sub>net</sub> = I<sub>e</sub> + I<sub>h</sub>.</li>
+            <li>In external wires, there are only electrons since they recombine with holes. <!-- Simplified explanation --></li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Extrinsic SC</h3>
+        <p class="mb-2">Created by adding a small amount of impurity to an intrinsic SC to improve its conductivity.</p>
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>The process of adding impurities is called <strong>doping</strong>.</li>
+            <li>It is done either to increase the number of free electrons (creating n-type) or holes (creating p-type).</li>
+        </ul>
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">N-type & P-type Semiconductors</h2>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">N-type</h3>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>Pentavalent impurity (5 valence electrons) is added to the intrinsic SC.</li>
+            <li>Examples: Arsenic (As) or Antimony (Sb). These are called <strong>donor</strong> impurities.</li>
+            <li>They provide more free electrons.</li>
+        </ul>
+
+        <!-- Diagram: N-type semiconductor lattice showing donor impurity and free electron -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img5.png" alt="N-type lattice structure" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+        <!-- Diagram: Energy band diagram for N-type semiconductor -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img6.png" alt="N-type energy band diagram" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>Current conduction is predominantly by free electrons (negative charge carriers), hence it is called n-type (electron type).</li>
+             <li>Makes the SC conduct more like ordinary metals (in terms of electron availability).</li>
+        </ul>
+
+        <!-- Diagram: Block representation of N-type semiconductor -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img7.png" alt="N-type block diagram" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">P-type</h3>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>Trivalent impurity (3 valence electrons) is added to the intrinsic SC.</li>
+            <li>Examples: Gallium (Ga) or Indium (In). These are called <strong>acceptor</strong> impurities.</li>
+             <li>They provide more holes (vacancies for electrons).</li>
+       </ul>
+
+        <!-- Diagram: P-type semiconductor lattice showing acceptor impurity and hole -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img8.png" alt="P-type lattice structure" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+        <!-- Diagram: Energy band diagram for P-type semiconductor -->
+         <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img9.png" alt="P-type energy band diagram" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+        <!-- Diagram: Block representation of P-type semiconductor -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img10.png" alt="P-type block diagram" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+        </div>
+
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>Current conduction is predominantly because of holes, hence it is called p-type or hole-type conductivity.</li>
+             <li>Here, valence electrons move from one covalent bond to fill a hole in another, making the hole appear to move.</li>
+        </ul>
+         <div class="note-block">
+            <strong>Note:</strong> Because of the fixed negative charge of the acceptor ions (which have accepted an electron to complete a bond), the net charge of the p-type material as a whole is zero (similarly for n-type with fixed positive donor ions). <!-- Clarified based on notes -->
+        </div>
+
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">Majority and Minority Carriers</h2>
+         <h4 class="text-lg font-semibold mt-4 mb-2 text-blue-500">For N-type:</h4>
+        <ul class="list-disc list-inside ml-4 mb-2 space-y-1">
+            <li>Free electrons (from donor impurities) are <strong>majority carriers</strong>.</li>
+            <li>Holes (from thermal energy) are <strong>minority carriers</strong>.</li>
+        </ul>
+         <h4 class="text-lg font-semibold mt-4 mb-2 text-blue-500">For P-type:</h4>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>Holes (from acceptor impurities) are <strong>majority carriers</strong>.</li>
+            <li>Free electrons (from thermal energy) are <strong>minority carriers</strong>.</li>
+        </ul>
+
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">PN Junction: Formation, Depletion and Barrier</h2>
+        <p class="mb-4">
+            The contact surface or interface formed when an n-type semiconductor is suitably joined to a p-type semiconductor is called a <strong>PN Junction</strong>.
+        </p>
+        <p class="mb-4">
+            It is the fundamental control element for many semiconductor devices (like diodes, transistors).
+        </p>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Formation</h3>
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>It is fabricated by special techniques.</li>
+             <li><strong>E.g., Alloying:</strong>
+                 <ul class="list-circle list-inside ml-6 mt-1 space-y-1">
+                    <li>A small piece of Indium (In - trivalent) is placed on a doped n-type Germanium (Ge) slab.</li>
+                    <li>The system is heated to ~500°C.</li>
+                    <li>Indium melts and fuses with the n-type Ge. Where they fuse, the In atoms create a p-type region, forming a PN junction.</li>
+                 </ul>
+             </li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Depletion Region</h3>
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>Due to the concentration difference, electrons from the n-region diffuse across the junction into the p-region, and holes from the p-region diffuse into the n-region.</li>
+             <li>Electrons combine with holes near the junction on the p-side, and holes combine with electrons near the junction on the n-side.</li>
+             <li>This leaves behind uncovered positive donor ions (+) on the n-side and uncovered negative acceptor ions (-) on the p-side, near the junction.</li>
+             <li>Creating a layer depleted of free charge carriers, containing only fixed ions. This is the <strong>depletion layer</strong> or depletion region.</li>
+        </ul>
+
+        <!-- Diagram: Formation of PN junction showing diffusion and initial depletion layer -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img11.png" alt="PN junction formation and depletion layer" class="mx-auto max-w-sm h-auto mb-2 opacity-50">
+            <p class="text-sm text-gray-500 italic">[Image Placeholder: PN junction showing diffusion and depletion layer ions]</p>
+        </div>
+
+        <!-- Diagram: PN junction showing established depletion layer and barrier electric field -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img12.png" alt="PN junction depletion layer and barrier potential" class="mx-auto max-w-sm h-auto mb-2 opacity-50">
+            <p class="text-sm text-gray-500 italic">[Image Placeholder: PN junction with depletion layer and barrier field]</p>
+        </div>
+
+         <p class="mb-4">
+             The layer of fixed positive and negative ions creates an electric field across the junction, directed from the n-side to the p-side. This field opposes further diffusion.
+         </p>
+         <p class="mb-4">
+             This creates a potential difference across the junction called the <strong>barrier potential</strong> (V<sub>0</sub>) or contact potential.
+         </p>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>For Germanium (Ge), V<sub>0</sub> ≈ 0.3 V</li>
+             <li>For Silicon (Si), V<sub>0</sub> ≈ 0.7 V <!-- Note: Text had 1.1V, corrected to typical value. 1.1V is the energy gap. --></li>
+        </ul>
+
+
+        <h2 class="text-2xl font-semibold mt-8 mb-4 text-blue-600">PN Junction Biasing (Forward/Reverse)</h2>
+        <p class="mb-4">
+            <strong>Bias:</strong> Using an external DC Voltage source to establish specific operating conditions for an electronic device like a PN junction diode.
+        </p>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Forward Biasing</h3>
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>Applying DC voltage in a direction that opposes the potential barrier.</li>
+             <li>Connect the positive (+ve) terminal of the battery to the p-type side and the negative (-ve) terminal to the n-type side.</li>
+        </ul>
+
+        <!-- Diagram: PN junction under forward bias -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+            <img src="./img/img13.png" alt="PN junction under forward bias" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+            <p class="text-sm text-gray-500 italic">[Image Placeholder: PN junction under forward bias (reduced depletion layer)]</p>
+        </div>
+
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>The applied voltage reduces the barrier height and narrows the depletion layer.</li>
+             <li>Once the applied voltage overcomes the barrier potential (approx. 0.3V for Ge, 0.7V for Si), significant current starts to flow.</li>
+             <li>The PN junction offers a low resistance to current flow in forward bias (forward resistance).</li>
+        </ul>
+
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Reverse Biasing</h3>
+        <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>Applying DC voltage in such a way that it increases the potential barrier.</li>
+             <li>Connect the negative (-ve) terminal of the battery to the p-type side and the positive (+ve) terminal to the n-type side.</li>
+        </ul>
+
+        <!-- Diagram: PN junction under reverse bias -->
+        <div class="my-4 p-4 border rounded shadow-sm text-center bg-gray-50">
+             <img src="./img/img14.png" alt="PN junction under reverse bias" class="mx-auto max-w-xs h-auto mb-2 opacity-50">
+             <p class="text-sm text-gray-500 italic">[Image Placeholder: PN junction under reverse bias (widened depletion layer)]</p>
+        </div>
+
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+             <li>The applied voltage aids the barrier potential, increasing the barrier height and widening the depletion layer.</li>
+             <li>This opposes the flow of majority carriers across the junction.</li>
+             <li>The junction offers a very high resistance (reverse resistance).</li>
+             <li>Ideally, no current flows. In practice, a very small current (microamps or nanoamps) due to minority carriers flows (reverse saturation current). <!-- Clarification based on standard understanding --></li>
+             <!-- Original text was a bit unclear: "Increased barrier establishes flow of current, thus giving a high resistance path." and "No current flow in circuit due to no external..." -->
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-6 mb-3 text-blue-600">Forward Bias Current Flow Mechanism</h3>
+         <ul class="list-disc list-inside ml-4 mb-4 space-y-1">
+            <li>The free electrons (majority carriers) from the n-side are repelled by the negative terminal and pushed towards the junction.</li>
+            <li>The holes (majority carriers) from the p-side are repelled by the positive terminal and pushed towards the junction.</li>
+            <li>Electrons cross the junction, move through the p-side (by sequential movement through valence band/recombination), and reach the positive terminal.</li>
+            <li>Holes cross the junction, move through the n-side (effectively), and are neutralized by electrons from the negative terminal near the contact.</li>
+            <li>Electrons are continuously supplied by the negative terminal to the n-side, and removed from the p-side by the positive terminal, maintaining the current flow.</li>
+             <!-- Simplified interpretation of notes: "electrons from n-side move to junction - then through p-side as valence electrons and finally reach positive terminal. Their places are filled by more electrons from negative terminal. ... to the balance electrons moving, left means holes moving, right" -->
+        </ul>
+
+         <!-- Notes indicate further sections on Forward Bias and Reverse Bias characteristics would follow -->
+
+    </div> <!-- End Container -->
+
+</body>
+</html>

@@ -3,293 +3,1088 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aethel's Study Flow</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Galactic Study Atlas - Progress Tracker</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- NMS Style Variables --- */
+        :root {
+            --nms-bg-dark: #0a0f1a;
+            --nms-bg-medium: #1a233a;
+            --nms-bg-panel: rgba(15, 22, 40, 0.85);
+            --nms-text-primary: #e0f8ff;
+            --nms-text-secondary: #a0c8d8;
+            --nms-text-dim: #7098a8;
+            --nms-accent-cyan: #00e0ff;
+            --nms-accent-cyan-glow: rgba(0, 224, 255, 0.7);
+            --nms-accent-orange: #ff9a00;
+            --nms-border-color: #2a3f60;
+            --nms-glow-shadow: 0 0 8px var(--nms-accent-cyan-glow), 0 0 12px var(--nms-accent-cyan-glow);
+            --nms-font: 'Rajdhani', sans-serif;
+        }
+
+        /* --- Global Reset & Base Styles --- */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--nms-font);
+            background-color: var(--nms-bg-dark);
+            background-image: radial-gradient(ellipse at center, #1a233a 0%, #0a0f1a 70%);
+            color: var(--nms-text-primary);
+            line-height: 1.6;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--nms-bg-dark);
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: var(--nms-border-color);
+            border-radius: 4px;
+            border: 1px solid var(--nms-bg-dark);
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: var(--nms-accent-cyan);
+        }
+
+        /* --- Header --- */
+        .app-header {
+            background-color: rgba(10, 15, 26, 0.8);
+            padding: 10px 25px;
+            border-bottom: 1px solid var(--nms-border-color);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+        }
+
+        .app-header h1 {
+            font-size: 1.8em;
+            font-weight: 700;
+            color: var(--nms-text-primary);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+         .app-header h1::before {
+            content: '';
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 2px solid var(--nms-accent-cyan);
+            border-radius: 50%;
+            border-right-color: transparent;
+            margin-right: 10px;
+            animation: spin 2s linear infinite;
+         }
+
+         @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+         }
+
+
+        .header-dots {
+            font-size: 1.5em;
+            color: var(--nms-text-secondary);
+            cursor: default;
+            letter-spacing: 2px;
+        }
+
+        /* --- Main Content Area --- */
+        .main-content {
+            padding: 25px;
+            flex-grow: 1;
+            max-width: 1200px; /* Limit width */
+            margin: 0 auto; /* Center content */
+            width: 100%;
+        }
+
+        /* --- Total Progress Bar --- */
+        .total-progress-section {
+            background-color: var(--nms-bg-panel);
+            border: 1px solid var(--nms-border-color);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            padding: 15px 20px;
+            box-shadow: 0 0 15px rgba(10, 15, 26, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.3);
+        }
+        .total-progress-section h3 {
+            font-size: 1.2em;
+            color: var(--nms-accent-orange);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        /* --- Progress Bar Styling (Shared) --- */
+        .progress-bar-container {
+            background-color: var(--nms-bg-medium);
+            border-radius: 3px;
+            height: 12px; /* Adjusted height */
+            overflow: hidden;
+            border: 1px solid var(--nms-border-color);
+            position: relative; /* For potential text overlay */
+        }
+
+        .progress-bar-fill {
+            background-color: var(--nms-accent-cyan);
+            height: 100%;
+            width: 0%; /* Starts at 0 */
+            border-radius: 2px; /* Slightly smaller radius */
+            transition: width 0.5s ease-out;
+            box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3), var(--nms-glow-shadow);
+        }
+
+        /* --- Day Card Styling --- */
+        .day-card {
+            background-color: var(--nms-bg-panel);
+            border: 1px solid var(--nms-border-color);
+            border-radius: 4px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px rgba(10, 15, 26, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+            transition: box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .day-card:hover {
+             box-shadow: 0 0 15px rgba(10, 15, 26, 0.5), inset 0 0 5px rgba(0, 0, 0, 0.3), var(--nms-glow-shadow);
+             border-color: var(--nms-accent-cyan);
+        }
+
+
+        .day-header {
+            background-color: rgba(42, 63, 96, 0.5);
+            padding: 12px 20px;
+            border-bottom: 1px solid var(--nms-border-color);
+        }
+
+        .day-header h2 {
+            font-size: 1.4em;
+            font-weight: 700;
+            color: var(--nms-accent-cyan);
+            margin: 0 0 8px 0; /* Space below title */
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+        .day-header h2 .focus {
+            font-weight: 400;
+            color: var(--nms-text-secondary);
+            font-size: 0.8em;
+            display: block;
+            margin-top: 2px;
+        }
+        .day-header .progress-bar-container {
+             margin-top: 10px; /* Space above daily progress bar */
+        }
+
+        .task-list {
+            list-style: none;
+            padding: 15px 20px 20px 20px;
+        }
+
+        .task-item {
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(42, 63, 96, 0.3);
+            transition: opacity 0.3s ease;
+        }
+        .task-item:last-child {
+            border-bottom: none;
+        }
+
+        /* Main Task Styling */
+        .main-task-label {
+            font-weight: 500; /* Make main task label slightly bolder */
+            color: var(--nms-text-primary);
+            display: block; /* Ensure it takes full width before subtasks */
+            margin-bottom: 8px; /* Space between main task and its subtasks */
+        }
+
+        /* Subtask Styling */
+        .subtask-list {
+            list-style: none;
+            padding-left: 38px; /* Indent subtasks */
+            margin-top: 5px;
+        }
+
+        .subtask-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 5px;
+            padding: 4px 0;
+        }
+        .subtask-item:last-child {
+             margin-bottom: 0;
+        }
+
+        /* Checkbox Styling (Shared for Main & Subtasks) */
+        /* Using a wrapper for better alignment control */
+        .checkbox-wrapper {
+             display: flex;
+             align-items: flex-start; /* Align checkbox with first line of text */
+             cursor: pointer;
+        }
+
+        .checkbox-wrapper input[type="checkbox"] {
+            appearance: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            width: 18px; /* Slightly smaller for subtasks */
+            height: 18px;
+            border: 1px solid var(--nms-text-secondary);
+            transform: rotate(45deg);
+            margin-top: 4px;
+            margin-right: 18px;
+            position: relative;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+        }
+        /* Specific margin for subtask checkbox */
+        .subtask-item .checkbox-wrapper input[type="checkbox"] {
+            margin-right: 12px; /* Less margin for subtask */
+             width: 16px;
+             height: 16px;
+        }
+
+        .checkbox-wrapper input[type="checkbox"]::before {
+            content: '';
+            display: block;
+            width: 8px; /* Adjust inner diamond */
+            height: 8px;
+            background-color: transparent;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            transition: background-color 0.2s ease;
+        }
+         .subtask-item .checkbox-wrapper input[type="checkbox"]::before {
+             width: 7px;
+             height: 7px;
+         }
+
+
+        .checkbox-wrapper input[type="checkbox"]:checked {
+            background-color: var(--nms-accent-cyan);
+            border-color: var(--nms-accent-cyan);
+            box-shadow: var(--nms-glow-shadow);
+        }
+
+        /* Label Styling */
+        .checkbox-wrapper label {
+            cursor: pointer;
+            color: var(--nms-text-secondary); /* Subtasks are secondary */
+            flex-grow: 1;
+            transition: color 0.3s ease, text-decoration 0.3s ease;
+            font-size: 0.9em;
+        }
+
+        /* Completed State Styling */
+        /* Apply dimming to the entire subtask item */
+        .subtask-item.completed {
+             opacity: 0.6;
+        }
+        .subtask-item.completed label {
+            text-decoration: line-through;
+            color: var(--nms-text-dim);
+        }
+        /* Optional: Slightly dim main task label if ALL its subtasks are done */
+        .task-item.all-subtasks-completed .main-task-label {
+            /* color: var(--nms-text-dim); */ /* Maybe too much? */
+            /* opacity: 0.8; */
+        }
+
+
+        .time-estimate {
+            font-weight: 500;
+            color: var(--nms-accent-orange);
+            margin-right: 5px;
+        }
+
+        /* --- Footer Controls --- */
+        .controls {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid var(--nms-border-color);
+            margin-top: 20px;
+        }
+
+        .reset-button {
+            background-color: var(--nms-bg-medium);
+            color: var(--nms-accent-cyan);
+            border: 1px solid var(--nms-accent-cyan);
+            padding: 10px 20px;
+            font-family: var(--nms-font);
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 3px;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+            letter-spacing: 1px;
+        }
+        .reset-button:hover {
+            background-color: var(--nms-accent-cyan);
+            color: var(--nms-bg-dark);
+            box-shadow: var(--nms-glow-shadow);
+        }
+
+        /* --- Responsive Adjustments --- */
+        @media (max-width: 768px) {
+            .app-header { padding: 8px 15px; }
+            .app-header h1 { font-size: 1.5em; }
+            .app-header h1::before { width: 15px; height: 15px; }
+            .main-content { padding: 15px; }
+            .total-progress-section { padding: 12px 15px; margin-bottom: 20px;}
+            .total-progress-section h3 { font-size: 1.1em; }
+            .day-card { margin-bottom: 20px; }
+            .day-header h2 { font-size: 1.2em; }
+            .task-list { padding: 10px 15px 15px 15px; }
+            .subtask-list { padding-left: 25px; } /* Adjust subtask indent */
+            .checkbox-wrapper input[type="checkbox"] { width: 16px; height: 16px; margin-right: 12px;}
+            .subtask-item .checkbox-wrapper input[type="checkbox"] { width: 14px; height: 14px; margin-right: 10px; }
+            .checkbox-wrapper label { font-size: 0.9em; }
+        }
+
+         @media (max-width: 480px) {
+             .app-header { flex-direction: column; align-items: flex-start; }
+             .app-header h1 { font-size: 1.3em; margin-bottom: 5px; }
+             .header-dots { align-self: flex-end; }
+             .day-header h2 .focus { font-size: 0.75em; }
+             .task-item { padding: 8px 0; }
+             .subtask-list { padding-left: 20px; }
+         }
+
+    </style>
 </head>
 <body>
-    <div id="background-overlay"></div>
-    <div id="vignette-overlay"></div>
-    <div id="mouse-glow"></div>
 
-    <div id="app-container">
-        <header>
-            <h1>Aethel's Study Flow</h1>
-            <p>Your 8-Day Immersive Learning Quest</p>
-        </header>
+    <header class="app-header">
+        <h1>Galactic Study Atlas</h1>
+        <span class="header-dots">...</span>
+    </header>
 
-        <nav id="day-navigation">
-            <h2>CHOOSE YOUR DAY</h2>
-            <div class="nav-buttons">
-                <button class="day-btn active" data-day="1">Day 1</button>
-                <button class="day-btn" data-day="2">Day 2</button>
-                <button class="day-btn" data-day="3">Day 3</button>
-                <button class="day-btn" data-day="4">Day 4</button>
-                <button class="day-btn" data-day="5">Day 5</button>
-                <button class="day-btn" data-day="6">Day 6</button>
-                <button class="day-btn" data-day="7">Day 7</button>
-                <button class="day-btn" data-day="8">Day 8</button>
+    <main class="main-content">
+
+        <!-- Total Progress Section -->
+        <section class="total-progress-section">
+            <h3>Overall Mission Progress</h3>
+            <div class="progress-bar-container">
+                <div class="progress-bar-fill" id="total-progress-fill"></div>
             </div>
-        </nav>
+        </section>
 
-        <main id="plan-content">
-            <!-- Day 1 Content -->
-            <div class="day-plan active" id="day-1">
-                <h3>Day 1: Module 1 - Getting Started</h3>
-                <div class="module-item">
-                    <h4>The Fourth State of Matter - Jo Ann Beard</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d1_beard_read"> Read (26 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d1_beard_vocab"> Vocab (14)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d1_beard_shortq"> Short Q (8)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d1_beard_paraq"> Paragraph Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d1_beard_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <!-- Placeholder: Add other items for Day 1 if planned differently -->
-                 <div class="day-summary">
-                    <p><strong>Focus:</strong> Reading & Initial Vocab for "The Fourth State of Matter". Aim for 50-65 min reading, 25-35 min vocab.</p>
+        <!-- Day 1 -->
+        <section class="day-card" id="day-1">
+            <div class="day-header">
+                <h2>Day 1 (90 mins) <span class="focus">Focus: Module 1 Intro & Shorter Pieces</span></h2>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-1-progress-fill"></div>
                 </div>
             </div>
+            <ul class="task-list">
+                <li class="task-item" id="task-d1-t1">
+                    <span class="main-task-label">Review Plan <span class="time-estimate">(10 min)</span></span>
+                    <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t1-s1">
+                                <label for="d1-t1-s1">Quickly re-read study plan and goals.</label>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d1-t2">
+                    <span class="main-task-label">The Cure - Robert Smith <span class="time-estimate">(50 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                            <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t2-s1"><label for="d1-t2-s1">Read (10m)</label>
+                            </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t2-s2"><label for="d1-t2-s2">Watch Video (12m)</label>
+                            </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t2-s3"><label for="d1-t2-s3">Vocabulary (8m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t2-s4"><label for="d1-t2-s4">Short Questions (15m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d1-t3">
+                    <span class="main-task-label">Only An Axe Away - P Baburaj, C Sarath Chandran (Start) <span class="time-estimate">(30 min)</span></span>
+                    <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t3-s1"><label for="d1-t3-s1">Read (10m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t3-s2"><label for="d1-t3-s2">Watch Video (12m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d1-t3-s3"><label for="d1-t3-s3">Vocabulary (Start 7 words - 8m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-            <!-- Day 2 Content -->
-            <div class="day-plan" id="day-2">
-                <h3>Day 2: Module 1 - Consolidation & Next Text</h3>
-                 <div class="module-item">
-                    <h4>The Fourth State of Matter - Jo Ann Beard</h4>
-                     <p class="task-note"><em>(Continued from Day 1)</em></p>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_beard_vocab_finish"> Finish Vocab (14)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_beard_shortq_finish"> Answer Short Q (8)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>Relativity - Sarah Howe</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_howe_read"> Read (3 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_howe_vocab"> Vocab (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_howe_shortq"> Short Q (6)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_howe_paraq"> Paragraph Q (6)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d2_howe_essayq"> Essay Q (3)</label></li>
-                    </ul>
-                </div>
-                 <div class="day-summary">
-                    <p><strong>Focus:</strong> Finish Beard's initial tasks. Read, vocab, short Qs for Howe.</p>
+        <!-- Day 2 -->
+        <section class="day-card" id="day-2">
+            <div class="day-header">
+                <h2>Day 2 (90 mins) <span class="focus">Focus: Finishing Module 1 Shorter Pieces & Howe</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-2-progress-fill"></div>
                 </div>
             </div>
+            <ul class="task-list">
+                <li class="task-item" id="task-d2-t1">
+                    <span class="main-task-label">Only An Axe Away - Finish <span class="time-estimate">(40 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t1-s1"><label for="d2-t1-s1">Vocabulary (Finish 7 words - 8m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t1-s2"><label for="d2-t1-s2">Short Questions (17m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t1-s3"><label for="d2-t1-s3">Paragraph Qs (Outline 2/5 - 15m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d2-t2">
+                     <span class="main-task-label">Relativity - Sarah Howe <span class="time-estimate">(45 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t2-s1"><label for="d2-t2-s1">Read (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t2-s2"><label for="d2-t2-s2">Vocabulary (8m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t2-s3"><label for="d2-t2-s3">Short Questions (22m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d2-t3">
+                     <span class="main-task-label">Buffer/Review <span class="time-estimate">(5 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d2-t3-s1"><label for="d2-t3-s1">Quickly review Day 1 & 2 topics.</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-            <!-- Day 3 Content -->
-             <div class="day-plan" id="day-3">
-                <h3>Day 3: Module 1 - Video Texts</h3>
-                 <div class="module-item">
-                    <h4>The Cure - Robert Smith</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_cure_read"> Read (2 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_cure_watch"> Watch Video (10 min)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_cure_vocab"> Vocab (6)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_cure_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_cure_paraq"> Paragraph Q (2)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_cure_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>Only An Axe Away - P Baburaj, C Sarath Chandran</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_axe_read"> Read (2 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_axe_watch"> Watch Video (10 min)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_axe_vocab"> Vocab (14)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_axe_shortq"> Short Q (6)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_axe_paraq"> Paragraph Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d3_axe_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="day-summary">
-                     <p><strong>Focus:</strong> Process both video-based texts: Read, Watch, Vocab, Short Qs.</p>
-                 </div>
-            </div>
-
-            <!-- Day 4 Content -->
-             <div class="day-plan" id="day-4">
-                <h3>Day 4: Module 2 - Science & Place</h3>
-                 <div class="module-item">
-                    <h4>Wonders of Science - Albert Einstein</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_einstein_read"> Read (4 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_einstein_vocab"> Vocab (9)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_einstein_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_einstein_paraq"> Paragraph Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_einstein_essayq"> Essay Q (4)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>All Places are Temporary Places - Rosebud Ben</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_ben_read"> Read (3 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_ben_vocab"> Vocab (7)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_ben_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_ben_paraq"> Paragraph Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d4_ben_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="day-summary">
-                    <p><strong>Focus:</strong> Read, Vocab, Short Qs for Einstein & Ben. Optional: Start outlining Paragraph Qs if time allows.</p>
-                </div>
-            </div>
-
-            <!-- Day 5 Content -->
-            <div class="day-plan" id="day-5">
-                <h3>Day 5: Module 2 - Stars & Cancer</h3>
-                 <div class="module-item">
-                    <h4>The Star - Arthur C. Clarke</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_clarke_read"> Read (10 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_clarke_vocab"> Vocab (24)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_clarke_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_clarke_paraq"> Paragraph Q (6)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_clarke_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>We Live in the Age of Cancer - Dr. Siddhartha Mukherjee</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_cancer_read"> Read (3 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_cancer_watch"> Watch Video (20 min)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_cancer_shortq"> Short Q (7)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_cancer_paraq"> Paragraph Q (7)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d5_cancer_essayq"> Essay Q (4)</label></li>
-                    </ul>
-                </div>
-                <div class="day-summary">
-                    <p><strong>Focus:</strong> Read Clarke & start vocab. Read & watch Mukherjee.</p>
+        <!-- Day 3 -->
+        <section class="day-card" id="day-3">
+             <div class="day-header">
+                <h2>Day 3 (90 mins) <span class="focus">Focus: Module 1 - Howe Deeper & Beard Intro</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-3-progress-fill"></div>
                 </div>
             </div>
+             <ul class="task-list">
+                <li class="task-item" id="task-d3-t1">
+                     <span class="main-task-label">Relativity - Sarah Howe - Deeper Dive <span class="time-estimate">(40 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d3-t1-s1"><label for="d3-t1-s1">Paragraph Qs (Outline 3/6 - 25m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d3-t1-s2"><label for="d3-t1-s2">Essay Qs (Outline 1/3 - 15m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d3-t2">
+                     <span class="main-task-label">The Fourth State of Matter - Jo Ann Beard (Start) <span class="time-estimate">(45 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d3-t2-s1"><label for="d3-t2-s1">Read (~4-5 pgs - 25m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d3-t2-s2"><label for="d3-t2-s2">Short Qs (4/8 - 15m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d3-t3">
+                     <span class="main-task-label">Buffer/Review <span class="time-estimate">(5 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d3-t3-s1"><label for="d3-t3-s1">Consolidate Howe understanding.</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-            <!-- Day 6 Content -->
-            <div class="day-plan" id="day-6">
-                 <h3>Day 6: Module 3 - Heavens & Numbers</h3>
-                  <div class="module-item">
-                    <h4>The Star - Arthur C. Clarke</h4>
-                     <p class="task-note"><em>(Continued from Day 5)</em></p>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_clarke_vocab_finish"> Finish Vocab (24)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_clarke_shortq_finish"> Answer Short Q (5)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>On Earth as in the Heavens - Neil de Grasse Tyson</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_tyson_read"> Read (9 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_tyson_vocab"> Vocab (22)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_tyson_shortq"> Short Q (9)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_tyson_paraq"> Paragraph Q (4)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d6_tyson_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="day-summary">
-                    <p><strong>Focus:</strong> Finish Clarke's initial tasks. Read Tyson & start vocab.</p>
+        <!-- Day 4 -->
+        <section class="day-card" id="day-4">
+             <div class="day-header">
+                 <h2>Day 4 (90 mins) <span class="focus">Focus: Finishing Module 1 (Beard) & Module 2 Intro</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-4-progress-fill"></div>
                 </div>
             </div>
+             <ul class="task-list">
+                <li class="task-item" id="task-d4-t1">
+                     <span class="main-task-label">The Fourth State of Matter - Jo Ann Beard - Finish <span class="time-estimate">(55 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t1-s1"><label for="d4-t1-s1">Read (Finish - 15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t1-s2"><label for="d4-t1-s2">Short Qs (Finish 4/8 - 15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t1-s3"><label for="d4-t1-s3">Para Qs (Outline 3/5 - 20m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t1-s4"><label for="d4-t1-s4">Essay Qs (Outline 1/2 - 10m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d4-t2">
+                     <span class="main-task-label">Wonders of Science - Albert Einstein (Module 2 Start) <span class="time-estimate">(30 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t2-s1"><label for="d4-t2-s1">Read (4 pgs - 20m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t2-s2"><label for="d4-t2-s2">Vocab (Start 5/9 words - 10m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d4-t3">
+                    <span class="main-task-label">Buffer/Review <span class="time-estimate">(5 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d4-t3-s1"><label for="d4-t3-s1">Briefly recap Module 1 key themes.</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-            <!-- Day 7 Content -->
-            <div class="day-plan" id="day-7">
-                 <h3>Day 7: Module 3 - Pi, Gaiman & Primes</h3>
-                 <div class="module-item">
-                    <h4>Pi - Wislawa Szymborska</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_pi_read"> Read (4 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_pi_vocab"> Vocab (17)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_pi_shortq"> Short Q (7)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_pi_paraq"> Paragraph Q (3)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_pi_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>A study in emerald - Neil Gaiman</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_gaiman_read_part1"> Read Part 1 (approx. 10 pages)</label></li>
-                         <!-- Gaiman tasks split over days due to size -->
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_gaiman_vocab"> Vocab (73)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_gaiman_shortq"> Short Q (20)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_gaiman_paraq"> Paragraph Q (8)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_gaiman_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>A love poem for lonely Prime numbers</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_prime_read"> Read (5 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_prime_vocab"> Vocab (19)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_prime_shortq"> Short Q (9)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_prime_paraq"> Paragraph Q (3)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d7_prime_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="day-summary">
-                    <p><strong>Focus:</strong> Szymborska (Read, Vocab, Short Q). Start Gaiman reading. Read Primes poem.</p>
-                 </div>
-            </div>
-
-            <!-- Day 8 Content -->
-             <div class="day-plan" id="day-8">
-                 <h3>Day 8: Module 4 - Nanoclay & Philosophy</h3>
-                 <div class="module-item">
-                    <h4>Nanoclay: The Liquid Turning Desert to Farmland - Rachel Lovell</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_nano_read"> Read (10 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_nano_vocab"> Vocab (6)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_nano_shortq"> Short Q (8)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_nano_paraq"> Paragraph Q (3)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_nano_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>Mediations on First Philosophy - Rene Descartes</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_descartes_read"> Read (9 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_descartes_vocab"> Vocab (7)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_descartes_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_descartes_paraq"> Paragraph Q (3)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_descartes_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>A Trip to Infinty</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_infinity_read"> Read (2 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_infinity_watch"> Watch Video (15 min)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_infinity_vocab"> Vocab (20)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_infinity_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_infinity_paraq"> Paragraph Q (3)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_infinity_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="module-item">
-                    <h4>Scientific Temper - Indian Scientists</h4>
-                    <ul class="task-list">
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_temper_read"> Read (2 pages)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_temper_watch"> Watch Video (10 min)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_temper_vocab"> Vocab (14)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_temper_shortq"> Short Q (5)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_temper_paraq"> Paragraph Q (3)</label></li>
-                        <li class="task-item"><label><input type="checkbox" data-taskid="d8_temper_essayq"> Essay Q (2)</label></li>
-                    </ul>
-                </div>
-                 <div class="day-summary">
-                    <p><strong>Focus:</strong> Nanoclay & Descartes (Read, Vocab, Short Q). Process Infinity & Temper video texts.</p>
+         <!-- Day 5 -->
+        <section class="day-card" id="day-5">
+             <div class="day-header">
+                <h2>Day 5 (120 mins) <span class="focus">Focus: Module 2 - Einstein & Ben</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-5-progress-fill"></div>
                 </div>
             </div>
-             <!-- Add more day-plan divs for Day 3 to Day 8 similarly -->
+             <ul class="task-list">
+                 <li class="task-item" id="task-d5-t1">
+                     <span class="main-task-label">Wonders of Science - Albert Einstein - Finish <span class="time-estimate">(45 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t1-s1"><label for="d5-t1-s1">Vocab (Finish 4/9 - 8m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t1-s2"><label for="d5-t1-s2">Short Questions (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t1-s3"><label for="d5-t1-s3">Para Qs (Outline 3/5 - 22m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d5-t2">
+                     <span class="main-task-label">All Places are Temporary Places - Rosebud Ben <span class="time-estimate">(65 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t2-s1"><label for="d5-t2-s1">Read (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t2-s2"><label for="d5-t2-s2">Vocabulary (12m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t2-s3"><label for="d5-t2-s3">Short Questions (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t2-s4"><label for="d5-t2-s4">Para Qs (Outline 3/5 - 23m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d5-t3">
+                     <span class="main-task-label">Buffer/Review <span class="time-estimate">(10 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d5-t3-s1"><label for="d5-t3-s1">Review Einstein & Ben main ideas.</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        </main>
+         <!-- Day 6 -->
+        <section class="day-card" id="day-6">
+             <div class="day-header">
+                <h2>Day 6 (120 mins) <span class="focus">Focus: Module 2 - Clarke (Large Piece)</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-6-progress-fill"></div>
+                </div>
+            </div>
+             <ul class="task-list">
+                 <li class="task-item" id="task-d6-t1">
+                     <span class="main-task-label">The Star - Arthur C. Clarke <span class="time-estimate">(110 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d6-t1-s1"><label for="d6-t1-s1">Read (40m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d6-t1-s2"><label for="d6-t1-s2">Vocab (~15 key words - 25m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d6-t1-s3"><label for="d6-t1-s3">Short Questions (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d6-t1-s4"><label for="d6-t1-s4">Para Qs (Outline 3/6 - 30m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d6-t2">
+                     <span class="main-task-label">Buffer/Review <span class="time-estimate">(10 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d6-t2-s1"><label for="d6-t2-s1">Consolidate 'The Star' understanding. Note remaining tasks.</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-        <footer>
-            <p>Progress saved locally in your browser.</p>
-            <button id="reset-progress">Reset All Progress</button>
-        </footer>
-    </div>
+        <!-- Day 7 -->
+        <section class="day-card" id="day-7">
+             <div class="day-header">
+                <h2>Day 7 (180 mins) <span class="focus">Focus: Module 2 Finish & Module 3 Start (Heavy Day)</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-7-progress-fill"></div>
+                </div>
+            </div>
+             <ul class="task-list">
+                 <li class="task-item" id="task-d7-t1">
+                     <span class="main-task-label">The Star - Arthur C. Clarke - Finish & Review <span class="time-estimate">(40 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t1-s1"><label for="d7-t1-s1">Vocab (Review ~9 words - 10m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t1-s2"><label for="d7-t1-s2">Para Qs (Outline 3/6 - 20m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t1-s3"><label for="d7-t1-s3">Essay Qs (Outline 2/2 - 10m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d7-t2">
+                     <span class="main-task-label">We Live in the Age of Cancer - Mukherjee/Rutherford <span class="time-estimate">(70 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t2-s1"><label for="d7-t2-s1">Read (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t2-s2"><label for="d7-t2-s2">Watch Video (25m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t2-s3"><label for="d7-t2-s3">Short Questions (20m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t2-s4"><label for="d7-t2-s4">Para Qs (Outline 3/7 - 10m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d7-t3">
+                     <span class="main-task-label">On Earth as in the Heavens - Neil de Grasse Tyson (Module 3 Start) <span class="time-estimate">(60 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t3-s1"><label for="d7-t3-s1">Read (Focus key sections - 35m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t3-s2"><label for="d7-t3-s2">Vocab (~12 key words - 15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t3-s3"><label for="d7-t3-s3">Short Qs (5/9 - 10m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d7-t4">
+                     <span class="main-task-label">Buffer/Review <span class="time-estimate">(10 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d7-t4-s1"><label for="d7-t4-s1">Recap Module 2 themes (Science, Belief, Place).</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
 
-    <script src="script.js"></script>
+         <!-- Day 8 -->
+        <section class="day-card" id="day-8">
+             <div class="day-header">
+                <h2>Day 8 (180 mins) <span class="focus">Focus: Module 3 & 4 Survey & Final Review (Intensive Survey)</span></h2>
+                 <div class="progress-bar-container">
+                    <div class="progress-bar-fill" id="day-8-progress-fill"></div>
+                </div>
+            </div>
+             <ul class="task-list">
+                <li class="task-item" id="task-d8-t1">
+                     <span class="main-task-label">On Earth as in the Heavens - Tyson - Finish <span class="time-estimate">(40 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t1-s1"><label for="d8-t1-s1">Short Qs (Finish 4/9 - 8m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t1-s2"><label for="d8-t1-s2">Para Qs (Outline 2/4 - 12m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t1-s3"><label for="d8-t1-s3">Essay Qs (Outline 1/2 - 10m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t1-s4"><label for="d8-t1-s4">Vocab (Review ~10 - 10m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                <li class="task-item" id="task-d8-t2">
+                     <span class="main-task-label">Pi - Wislawa Szymborska (Module 3) <span class="time-estimate">(40 min)</span></span>
+                     <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t2-s1"><label for="d8-t2-s1">Read (15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t2-s2"><label for="d8-t2-s2">Vocab (~10 words - 10m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t2-s3"><label for="d8-t2-s3">Short Questions (15m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d8-t3">
+                     <span class="main-task-label">A Study in Emerald - Neil Gaiman (Module 3 - Survey) <span class="time-estimate">(50 min)</span></span>
+                      <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t3-s1"><label for="d8-t3-s1">Skim/Read key parts (20m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t3-s2"><label for="d8-t3-s2">Vocab (~15-20 words - 15m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t3-s3"><label for="d8-t3-s3">Short Qs (~10 representative - 15m)</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d8-t4">
+                     <span class="main-task-label">Module 4 Quick Survey (Choose ONE) <span class="time-estimate">(40 min)</span></span>
+                     <ul class="subtask-list">
+                         <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t4-s1"><label for="d8-t4-s1">Option A: Descartes (Read Preface ~25m, Vocab 5m, Short Q Outline 10m)</label>
+                             </div>
+                        </li>
+                         <li class="subtask-item">
+                              <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t4-s2"><label for="d8-t4-s2">Option B: Nanoclay (Read summary ~15m, Vocab 5m, Short Q Outline 10m, Quick look 10m)</label>
+                              </div>
+                        </li>
+                         <li class="subtask-item">
+                              <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t4-s3"><label for="d8-t4-s3">(Mark one option above as completed)</label>
+                              </div>
+                        </li>
+                    </ul>
+                </li>
+                 <li class="task-item" id="task-d8-t5">
+                    <span class="main-task-label">Final Review <span class="time-estimate">(10 min)</span></span>
+                    <ul class="subtask-list">
+                        <li class="subtask-item">
+                             <div class="checkbox-wrapper">
+                                <input type="checkbox" id="d8-t5-s1"><label for="d8-t5-s1">Scan notes across all modules. Identify 1-2 key takeaways from each text.</label>
+                             </div>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button id="resetProgress" class="reset-button">Reset All Progress</button>
+        </div>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const allCheckboxes = document.querySelectorAll('.task-list input[type="checkbox"]');
+            const dayCards = document.querySelectorAll('.day-card');
+            const totalProgressFill = document.getElementById('total-progress-fill');
+            const resetButton = document.getElementById('resetProgress');
+            const mainContent = document.querySelector('.main-content'); // For event delegation
+
+            // --- Function to update visual state of a checkbox and its container ---
+            const updateTaskVisual = (checkbox) => {
+                const subtaskItem = checkbox.closest('.subtask-item'); // Check if it's a subtask
+                if (subtaskItem) {
+                    if (checkbox.checked) {
+                        subtaskItem.classList.add('completed');
+                    } else {
+                        subtaskItem.classList.remove('completed');
+                    }
+                }
+                // Optional: Add logic here later if you want to style the main task based on subtasks
+            };
+
+            // --- Function to update all progress bars ---
+            const updateProgressBars = () => {
+                let grandTotalTasks = 0;
+                let grandTotalChecked = 0;
+
+                dayCards.forEach(dayCard => {
+                    const dayId = dayCard.id;
+                    const dayProgressFill = document.getElementById(`${dayId}-progress-fill`);
+                    const dayCheckboxes = dayCard.querySelectorAll('.task-list input[type="checkbox"]');
+
+                    const totalDayTasks = dayCheckboxes.length;
+                    let checkedDayTasks = 0;
+
+                    dayCheckboxes.forEach(cb => {
+                        if (cb.checked) {
+                            checkedDayTasks++;
+                        }
+                    });
+
+                    grandTotalTasks += totalDayTasks;
+                    grandTotalChecked += checkedDayTasks;
+
+                    const dayPercentage = totalDayTasks > 0 ? (checkedDayTasks / totalDayTasks) * 100 : 0;
+                    if (dayProgressFill) {
+                        dayProgressFill.style.width = `${dayPercentage}%`;
+                    }
+
+                     // Optional: Add class to main task if all its subtasks are done
+                     const mainTaskItems = dayCard.querySelectorAll('.task-item');
+                     mainTaskItems.forEach(mainTask => {
+                        const subCheckboxes = mainTask.querySelectorAll('.subtask-list input[type="checkbox"]');
+                        if (subCheckboxes.length > 0) {
+                            const allSubtasksDone = Array.from(subCheckboxes).every(scb => scb.checked);
+                             if (allSubtasksDone) {
+                                mainTask.classList.add('all-subtasks-completed');
+                            } else {
+                                mainTask.classList.remove('all-subtasks-completed');
+                            }
+                        }
+                     });
+                });
+
+                // Update total progress bar
+                const totalPercentage = grandTotalTasks > 0 ? (grandTotalChecked / grandTotalTasks) * 100 : 0;
+                if (totalProgressFill) {
+                    totalProgressFill.style.width = `${totalPercentage}%`;
+                }
+            };
+
+            // --- Load progress from localStorage ---
+            const loadProgress = () => {
+                 allCheckboxes.forEach(checkbox => {
+                    if (checkbox.id) {
+                        const isChecked = localStorage.getItem(checkbox.id) === 'true';
+                        checkbox.checked = isChecked;
+                        updateTaskVisual(checkbox); // Set initial visual state for subtasks
+                    }
+                 });
+                 updateProgressBars(); // Update progress bars after loading states
+            };
+
+            // --- Save progress to localStorage ---
+            const saveProgress = (checkbox) => {
+                 if (checkbox.id) {
+                    localStorage.setItem(checkbox.id, checkbox.checked);
+                }
+            };
+
+             // --- Event Listener using Delegation ---
+            mainContent.addEventListener('change', (event) => {
+                if (event.target.matches('.task-list input[type="checkbox"]')) {
+                    const checkbox = event.target;
+                    saveProgress(checkbox);
+                    updateTaskVisual(checkbox);
+                    updateProgressBars(); // Update progress whenever a checkbox changes
+                }
+            });
+
+            // --- Reset Button Functionality ---
+            resetButton.addEventListener('click', () => {
+                if (confirm('Are you sure you want to reset all progress? This cannot be undone.')) {
+                    allCheckboxes.forEach(checkbox => {
+                        if (checkbox.id) {
+                            checkbox.checked = false;
+                            localStorage.removeItem(checkbox.id);
+                            updateTaskVisual(checkbox);
+                            // Remove completion class from parent .subtask-item if it exists
+                            const subtaskItem = checkbox.closest('.subtask-item');
+                            if(subtaskItem) subtaskItem.classList.remove('completed');
+                        }
+                    });
+                     // Reset optional main task completion class
+                     document.querySelectorAll('.task-item.all-subtasks-completed').forEach(item => {
+                        item.classList.remove('all-subtasks-completed');
+                    });
+
+                    console.log('Progress reset.');
+                    updateProgressBars(); // Reset progress bars visually
+                }
+            });
+
+            // --- Initial Load ---
+            loadProgress();
+
+        });
+    </script>
+
 </body>
 </html>

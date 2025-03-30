@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semiconductor Combat Training</title>
+    <!-- Include Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts for a more epic feel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=MedievalSharp&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- Game Theme Custom CSS --- */
+        :root {
+            --theme-primary-dark: #1a0f0f; /* Very dark reddish brown */
+            --theme-primary-red: #8B0000; /* DarkRed */
+            --theme-accent-orange: #FF4500; /* OrangeRed */
+            --theme-accent-gold: #FFD700; /* Gold */
+            --theme-text-light: #f0e6d2; /* Light parchment/bone color */
+            --theme-text-dark: #3a2d1f; /* Dark brown for text on light bg */
+            --theme-papyrus-bg: #f5e8c8; /* Papyrus background */
+            --theme-border-color: #5a4a3a; /* Darker brown border */
+        }
+
+        /* Apply base font and background to body */
+        body {
+            font-family: 'Roboto', sans-serif; /* Fallback font */
+            background-color: var(--theme-primary-dark);
+            /* background-image: url('path/to/your/fiery-background.jpg'); /* Optional: Add a background image */
+            background-size: cover;
+            background-attachment: fixed;
+            color: var(--theme-text-light);
+            padding: 0; /* Remove default padding */
+            margin: 0;
+        }
+
+        /* Game Header Style */
+        .game-header {
+            font-family: 'Cinzel Decorative', cursive;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-bottom: 3px solid var(--theme-accent-orange);
+            padding: 1rem 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .game-header h1 {
+            font-size: 2.5rem; /* Adjusted from 3xl */
+            font-weight: 700;
+            color: var(--theme-accent-gold);
+            text-shadow: 2px 2px 4px var(--theme-primary-dark);
+            margin: 0;
+        }
+
+        /* Main content container - Scroll/Papyrus style */
+        .content-scroll {
+            max-width: 900px; /* Wider for content */
+            margin: 2rem auto;
+            background-color: var(--theme-papyrus-bg);
+            color: var(--theme-text-dark);
+            border: 5px solid var(--theme-border-color);
+            border-radius: 5px; /* Subtle rounding */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+            padding: 2rem; /* More padding */
+        }
+        /* Add edge texture for scroll effect */
+        .content-scroll::before, .content-scroll::after {
+             content: '';
+             position: absolute;
+             left: 0;
+             right: 0;
+             height: 15px; /* Adjust height */
+             background: linear-gradient(to right, var(--theme-papyrus-bg) 0%, rgba(245, 232, 200, 0) 20%, rgba(245, 232, 200, 0) 80%, var(--theme-papyrus-bg) 100%);
+             z-index: 1;
+        }
+        .content-scroll::before {
+            top: 0;
+            /* background-image: url('path/to/scroll-top-edge.png'); /* Optional texture */
+        }
+        .content-scroll::after {
+             bottom: 0;
+             /* background-image: url('path/to/scroll-bottom-edge.png'); /* Optional texture */
+        }
+
+        /* Section Titles - like game menus */
+        .section-title {
+            font-family: 'MedievalSharp', cursive; /* More thematic font */
+            font-size: 2rem; /* Adjusted from 2xl */
+            font-weight: bold;
+            color: var(--theme-primary-red);
+            border-bottom: 2px dashed var(--theme-border-color);
+            padding-bottom: 0.5rem;
+            margin-top: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        .section-title:first-of-type {
+            margin-top: 0;
+        }
+
+        /* Subheadings */
+        .sub-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.5rem; /* Adjusted from xl */
+            font-weight: 700;
+            color: var(--theme-accent-orange);
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-left: 4px solid var(--theme-accent-orange);
+            padding-left: 0.5rem;
+        }
+        .sub-sub-title { /* For h4 like Majority/Minority Carriers */
+             font-family: 'Cinzel Decorative', cursive;
+             font-size: 1.25rem; /* Adjusted from lg */
+             font-weight: bold;
+             color: var(--theme-primary-red);
+             margin-top: 1rem;
+             margin-bottom: 0.5rem;
+        }
+
+        /* Paragraph text */
+        p, li {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: var(--theme-text-dark);
+            list-style: none;
+        }
+
+        /* Lists */
+        ul, ol {
+            list-style-position: inside;
+            list-style: none;
+            margin-left: 1rem;
+            margin-bottom: 1rem;
+        }
+        li { margin-bottom: 0.5rem; }
+        ul.list-disc li::marker { color: var(--theme-accent-orange); }
+        ol.list-decimal li::marker { color: var(--theme-accent-orange); }
+        ul.list-circle li::marker { color: var(--theme-primary-red); } /* For nested lists */
+
+        /* Code blocks */
+        code {
+            background-color: rgba(0, 0, 0, 0.1); /* Subtle dark background */
+            color: var(--theme-primary-red);
+            font-weight: bold;
+            padding: 0.1em 0.4em;
+            border-radius: 3px;
+            font-size: 0.9em;
+            font-family: monospace;
+        }
+
+        /* Note block - styled like an important scroll */
+        .note-block {
+            background-color: #fff8e1; /* Lighter parchment */
+            border: 2px solid var(--theme-accent-gold);
+            border-left: 6px solid var(--theme-accent-orange);
+            padding: 1rem 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            font-style: italic;
+            box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.1);
+        }
+        .note-block strong {
+            color: var(--theme-primary-red);
+            font-style: normal;
+        }
+
+        /* Diagram Containers - Add a frame */
+        .diagram-container {
+            margin: 1.5rem auto; /* Center the container */
+            padding: 1rem;
+            border: 3px solid var(--theme-border-color);
+            border-radius: 5px;
+            background-color: #e8dcc4; /* Slightly darker parchment for contrast */
+            text-align: center;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.15);
+            max-width: 90%; /* Ensure it doesn't overflow */
+        }
+
+        .diagram-container img {
+            /* Opacity removed as requested, it clashes with dark themes */
+            max-width: 100%; /* Ensure image scales within container */
+            height: auto;
+            display: block; /* Prevents extra space below */
+            margin: 0 auto 0.5rem auto; /* Center image */
+            border: 1px solid rgba(0,0,0,0.1); /* Subtle border around image itself */
+        }
+         .diagram-container .placeholder-text {
+             font-size: 0.9em;
+             color: #776a5a; /* Muted text color */
+             font-style: italic;
+         }
+
+        /* --- Quiz Styling --- */
+        .quiz-section-title {
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 2.2rem;
+            color: var(--theme-accent-orange);
+            text-align: center;
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 3px var(--theme-text-dark);
+        }
+
+        .quiz-container {
+            background-color: rgba(0, 0, 0, 0.05); /* Slight tint */
+            padding: 1.5rem;
+            border-radius: 5px;
+            border: 1px dashed var(--theme-border-color);
+        }
+
+        .question-block {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--theme-border-color);
+        }
+        .question-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .question {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            color: var(--theme-primary-red);
+        }
+
+        .options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive grid */
+            gap: 0.75rem;
+        }
+
+        .option-btn {
+            background-color: #d4c3a4; /* Button base color */
+            border: 2px solid var(--theme-border-color);
+            padding: 0.75rem 1rem;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: all 0.2s ease-in-out;
+            font-weight: bold;
+            color: var(--theme-text-dark);
+        }
+        .option-btn:hover {
+            background-color: #c8b89c;
+            border-color: var(--theme-primary-red);
+        }
+
+        /* Selected state (before submission) */
+        .option-btn.selected {
+             background-color: var(--theme-accent-gold); /* Highlight selection */
+             border-color: var(--theme-primary-red);
+             color: var(--theme-primary-dark);
+             box-shadow: 0 0 8px var(--theme-accent-gold);
+        }
+
+        /* Correct/Incorrect states (after submission) */
+        .option-btn.correct {
+            background-color: #90ee90; /* LightGreen */
+            border-color: #2e8b57; /* SeaGreen */
+            color: #1a4d2e; /* Dark Green Text */
+            cursor: default;
+        }
+        .option-btn.incorrect {
+            background-color: #f08080; /* LightCoral */
+            border-color: var(--theme-primary-red);
+            color: #ffffff; /* White Text */
+            cursor: default;
+        }
+        .option-btn.correct.selected { /* User selected the correct one */
+             /* Keep correct styling */
+        }
+        .option-btn.incorrect.selected { /* User selected the incorrect one */
+             opacity: 0.8; /* Make it slightly faded */
+        }
+
+
+        /* Submit/Complete Button Style */
+        .action-button {
+            display: block; /* Make it block */
+            width: fit-content; /* Size to content */
+            margin: 2rem auto 0 auto; /* Center */
+            padding: 0.8rem 2.5rem;
+            font-family: 'Cinzel Decorative', cursive;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--theme-text-light);
+            background-color: var(--theme-accent-orange);
+            border: 3px solid var(--theme-border-color);
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-shadow: 1px 1px 2px var(--theme-primary-dark);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .action-button:hover {
+            background-color: var(--theme-primary-red);
+            color: var(--theme-accent-gold);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+            transform: translateY(-2px);
+        }
+        .action-button:disabled { /* Style for disabled state if needed */
+             background-color: #a0a0a0;
+             cursor: not-allowed;
+             opacity: 0.7;
+        }
+
+        /* Result Area Styling */
+        .result {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background-color: #e8dcc4; /* Match diagram container bg */
+            border: 2px solid var(--theme-accent-gold);
+            border-radius: 5px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--theme-primary-red);
+        }
+        .result button { /* Style the 'Complete Quiz' button added by JS */
+             margin-top: 1rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .game-header h1 { font-size: 2rem; }
+            .content-scroll { padding: 1.5rem; margin: 1rem; border-width: 3px;}
+            .section-title { font-size: 1.75rem; }
+            .sub-title { font-size: 1.3rem; }
+            .options { grid-template-columns: 1fr; } /* Stack options on small screens */
+        }
+         @media (max-width: 480px) {
+            .game-header h1 { font-size: 1.5rem; }
+            .content-scroll { padding: 1rem; margin: 0.5rem; }
+            .section-title { font-size: 1.5rem; }
+            .sub-title { font-size: 1.15rem; }
+            .action-button { padding: 0.6rem 1.5rem; font-size: 1rem;}
+        }
+
+    </style>
+</head>
+<body>
+
+    <header class="game-header">
+        <h1>Semiconductor Combat Training</h1>
+    </header>
+
+    <div class="content-scroll">
+
+        <!-- Chapter 1: Introduction -->
+        <section id="intro">
+            <h2 class="section-title">Chapter 1: The Basics of Semiconductors</h2>
+
+            <p>Welcome, Initiate. Your training begins with understanding the very essence of Semiconductors. These are substances whose power lies between the conductive might of metals and the steadfast resistance of insulators.</p>
+            <p>
+                <strong>Examples:</strong> Germanium (Ge), Silicon (Si), Carbon (C). Their resistivity dances in the range of <code>10<sup>-4</sup></code> to <code>10<sup>4</sup></code> Ωm.
+            </p>
+            <p>
+                Do not mistake them for mere resistance materials like Nichrome (<code>~10<sup>-6</sup> Ωm</code>). Their true strength lies in control.
+            </p>
+
+            <h3 class="sub-title">Key Properties - The Semiconductor Codex</h3>
+            <p>A true semiconductor is defined by more than just resistivity:</p>
+            <ol class="list-decimal">
+                <li>Their resistance is a middle path: less than insulators, more than conductors.</li>
+                <li>
+                    <strong>Negative Temperature Coefficient (NTC):</strong> Unlike metals, their resistance *weakens* as temperature rises. Heat empowers them!
+                </li>
+                <li>
+                    Their nature can be fundamentally altered by introducing specific impurities (like Boron (B), Arsenic (As)) - a process known as <strong>Doping</strong>. This unlocks advanced techniques you will learn later. <!-- Note: Cu removed as atypical dopant -->
+                </li>
+            </ol>
+
+            <h3 class="sub-title">Bonding and Structure - The Crystalline Formation</h3>
+            <p>
+                Semiconductors forge powerful <strong>covalent bonds</strong>, sharing their four valence electrons with neighbours to form a stable, crystalline structure. Imagine a disciplined army in perfect formation.
+            </p>
+
+            <!-- Diagram: Covalent bonding -->
+            <div class="diagram-container">
+                <img src="./img/img1.png" alt="Diagram of Covalent bonding in Germanium lattice">
+                <p class="placeholder-text">Covalent Bonding Formation (Ge Lattice)</p>
+            </div>
+
+            <p>
+                Germanium (Ge) and Silicon (Si) are the most common materials for our devices because the energy required to break these bonds (the Energy Gap) is relatively small, allowing us to control their conductivity.
+            </p>
+
+            <h4 class="sub-sub-title">Germanium (Ge) - The Elder Element</h4>
+             <ul class="list-disc">
+                <li>Energy Gap (ΔE) ≈ 0.7 eV</li>
+                <li>Atomic Number: 32</li>
+                <li>Costly, often used as a model or for specific high-frequency tasks.</li>
+                <li>Known for relative ease of purification and crystallization.</li>
+            </ul>
+
+            <h4 class="sub-sub-title">Silicon (Si) - The Workhorse</h4>
+            <ul class="list-disc">
+                <li>Energy Gap (ΔE) ≈ 1.1 eV</li>
+                <li>Atomic Number: 14</li>
+                <li>Abundant and the cornerstone of modern electronics.</li>
+            </ul>
+        </section>
+
+        <!-- Chapter 2: Energy Bands and Temperature -->
+        <section id="energy-temp">
+             <h2 class="section-title">Chapter 2: Energy Realms & Thermal Effects</h2>
+
+             <h3 class="sub-title">Energy Bands - The Electron Territories</h3>
+             <p>
+                Think of electron energy levels as territories. In a semiconductor, the <strong>Valence Band</strong> (home territory) is almost full, while the <strong>Conduction Band</strong> (the realm of free movement) is nearly empty. Between them lies the <strong>Forbidden Energy Gap (ΔE)</strong>, a barrier electrons must overcome to conduct electricity.
+            </p>
+
+            <!-- Diagram: Energy band Ge -->
+            <div class="diagram-container">
+                <img src="./img/img2.png" alt="Energy band diagram for Germanium">
+                 <p class="placeholder-text">Energy Bands in Germanium (Ge)</p>
+            </div>
+            <!-- Diagram: Energy band Si -->
+            <div class="diagram-container">
+                 <img src="./img/img3.png" alt="Energy band diagram for Silicon">
+                  <p class="placeholder-text">Energy Bands in Silicon (Si)</p>
+            </div>
+
+            <h3 class="sub-title">Temperature's Influence - Forging Warriors</h3>
+
+            <h4 class="sub-sub-title">i. At Absolute Zero (0 Kelvin) - Frozen Stillness</h4>
+            <ul class="list-disc">
+                <li>All electrons are locked in their covalent bonds. No free warriors.</li>
+                <li>The semiconductor acts as a perfect insulator. The energy gap is an insurmountable wall.</li>
+            </ul>
+
+            <h4 class="sub-sub-title">ii. Above Absolute Zero - Awakening the Charge</h4>
+            <ul class="list-disc">
+                <li>Thermal energy (heat) provides power, breaking some covalent bonds.</li>
+                <li>Freed electrons jump to the conduction band, ready for battle (current flow) if a potential is applied.</li>
+                <li>As temperature rises, more bonds break, resistance falls – the NTC effect in action!</li>
+            </ul>
+            <div class="note-block">
+                <strong>Vital Intel:</strong> Every time an electron breaks free and moves to the conduction band, it leaves behind a vacancy in the valence band. This vacancy is called a <strong>Hole</strong>.
+            </div>
+
+            <h3 class="sub-title">The Hole Current - A Ghostly March</h3>
+            <ul class="list-disc">
+                <li>Heat creates pairs: a free electron and a hole.</li>
+                <li>While electrons move freely in the conduction band, holes enable movement within the valence band. A nearby valence electron can "jump" into a hole, effectively moving the hole to the electron's original position.</li>
+                <li>It's the valence electrons moving, but it *appears* as if the positive holes are marching in the opposite direction. This is the <strong>Hole Current</strong>.</li>
+            </ul>
+        </section>
+
+         <!-- Chapter 3: Doping - Enhancing the Ranks -->
+        <section id="doping">
+            <h2 class="section-title">Chapter 3: Doping - Enhancing the Ranks</h2>
+
+            <h3 class="sub-title">Intrinsic vs Extrinsic - Pure vs Enhanced</h3>
+
+            <h4 class="sub-sub-title">Intrinsic Semiconductor (Pure Form)</h4>
+            <p>An extremely pure semiconductor crystal. Its conductivity relies solely on thermally generated electron-hole pairs.</p>
+             <!-- Diagram: Intrinsic semiconductor -->
+            <div class="diagram-container">
+                <img src="./img/img4.png" alt="Block diagram of intrinsic semiconductor">
+                <p class="placeholder-text">Intrinsic Semiconductor: Electron-Hole Pairs</p>
+            </div>
+            <ul class="list-disc">
+                <li>Current (I<sub>net</sub>) is carried by both electrons (I<sub>e</sub>) and holes (I<sub>h</sub>): I<sub>net</sub> = I<sub>e</sub> + I<sub>h</sub>.</li>
+                 <li>In external circuits, only electrons flow as holes are essentially recombination sites within the material.</li>
+            </ul>
+
+            <h4 class="sub-sub-title">Extrinsic Semiconductor (Impurity Added)</h4>
+            <p>Created by the strategic art of <strong>doping</strong>: adding tiny, controlled amounts of specific impurities to an intrinsic semiconductor to drastically increase its conductivity.</p>
+             <ul class="list-disc">
+                <li>Doping aims to create an abundance of either free electrons (N-type) or holes (P-type), turning the semiconductor into a specialized warrior.</li>
+            </ul>
+
+            <h3 class="sub-title">N-type & P-type - Specialised Forces</h3>
+
+            <h4 class="sub-sub-title">N-type (Electron-Rich)</h4>
+             <ul class="list-disc">
+                <li>Created by doping with <strong>Pentavalent</strong> impurities (5 valence electrons), like Arsenic (As) or Antimony (Sb). These are <strong>Donor</strong> impurities.</li>
+                <li>Four impurity electrons form bonds with the semiconductor atoms, leaving the fifth electron loosely bound and easily freed into the conduction band.</li>
+                 <li>Result: Abundant free electrons.</li>
+            </ul>
+
+            <!-- Diagram: N-type lattice -->
+            <div class="diagram-container">
+                <img src="./img/img5.png" alt="N-type lattice structure">
+                 <p class="placeholder-text">N-type Lattice: Donor Atom & Free Electron</p>
+            </div>
+            <!-- Diagram: N-type energy band -->
+            <div class="diagram-container">
+                <img src="./img/img6.png" alt="N-type energy band diagram">
+                 <p class="placeholder-text">N-type Energy Bands: Donor Level</p>
+            </div>
+             <ul class="list-disc">
+                 <li>Current is primarily carried by negative electrons (N-type).</li>
+                 <li>Electrons are the <strong>majority carriers</strong>; holes (thermally generated) are the <strong>minority carriers</strong>.</li>
+            </ul>
+            <!-- Diagram: N-type block -->
+            <div class="diagram-container">
+                <img src="./img/img7.png" alt="N-type block diagram">
+                <p class="placeholder-text">N-type Material: Majority Electrons</p>
+            </div>
+
+
+            <h4 class="sub-sub-title">P-type (Hole-Rich)</h4>
+            <ul class="list-disc">
+                <li>Created by doping with <strong>Trivalent</strong> impurities (3 valence electrons), like Gallium (Ga) or Indium (In). These are <strong>Acceptor</strong> impurities.</li>
+                <li>The impurity forms three covalent bonds, leaving one bond incomplete – creating a hole (a vacancy) that readily accepts an electron from the valence band.</li>
+                <li>Result: Abundant holes.</li>
+           </ul>
+
+            <!-- Diagram: P-type lattice -->
+            <div class="diagram-container">
+                <img src="./img/img8.png" alt="P-type lattice structure">
+                 <p class="placeholder-text">P-type Lattice: Acceptor Atom & Hole</p>
+            </div>
+            <!-- Diagram: P-type energy band -->
+             <div class="diagram-container">
+                <img src="./img/img9.png" alt="P-type energy band diagram">
+                 <p class="placeholder-text">P-type Energy Bands: Acceptor Level</p>
+            </div>
+            <!-- Diagram: P-type block -->
+            <div class="diagram-container">
+                <img src="./img/img10.png" alt="P-type block diagram">
+                <p class="placeholder-text">P-type Material: Majority Holes</p>
+            </div>
+
+            <ul class="list-disc">
+                 <li>Current is primarily carried by the movement of positive holes (P-type).</li>
+                 <li>Holes are the <strong>majority carriers</strong>; electrons (thermally generated) are the <strong>minority carriers</strong>.</li>
+            </ul>
+             <div class="note-block">
+                <strong>Neutrality Paradox:</strong> Despite having excess mobile electrons (N-type) or holes (P-type), the semiconductor material *as a whole* remains electrically neutral. The extra mobile charges are balanced by the fixed, ionized impurity atoms (positive donors in N-type, negative acceptors in P-type) embedded in the crystal lattice.
+            </div>
+        </section>
+
+        <!-- Chapter 4: The PN Junction Arena -->
+        <section id="pn-junction">
+            <h2 class="section-title">Chapter 4: The PN Junction Arena</h2>
+            <p>
+                When P-type and N-type territories are joined, a crucial battleground is formed: the <strong>PN Junction</strong>. This interface is the heart of diodes and transistors, enabling the control of current flow.
+            </p>
+
+            <h3 class="sub-title">Formation - Forging the Interface</h3>
+            <ul class="list-disc">
+                 <li>Special techniques fuse the two types. One method is <strong>Alloying</strong>:
+                     <ul class="list-circle ml-6 mt-1">
+                        <li>Melt a trivalent impurity (like Indium) onto an N-type slab (like Germanium).</li>
+                        <li>Heat (~500°C) fuses them. Where they meet, the Indium converts a layer of N-type Ge into P-type Ge, creating the junction.</li>
+                     </ul>
+                 </li>
+            </ul>
+
+            <h3 class="sub-title">The Depletion Region - No Man's Land</h3>
+             <ul class="list-disc">
+                 <li>Initially, the high concentration of electrons in the N-region drives them to diffuse across the junction into the P-region. Similarly, holes diffuse from P to N.</li>
+                 <li>Near the junction, diffusing electrons meet holes and recombine (neutralize). Diffusing holes meet electrons and recombine.</li>
+                 <li>This leaves behind immobile, charged ions: positive donor ions (+) on the N-side and negative acceptor ions (-) on the P-side.</li>
+                 <li>This zone, stripped of mobile charge carriers, containing only fixed ions, is the <strong>Depletion Layer</strong> or region.</li>
+            </ul>
+
+            <!-- Diagram: PN junction formation -->
+            <div class="diagram-container">
+                <img src="./img/img11.png" alt="PN junction formation and depletion layer">
+                 <p class="placeholder-text">Junction Formation: Diffusion & Ion Uncovering</p>
+            </div>
+            <!-- Diagram: PN junction established -->
+            <div class="diagram-container">
+                <img src="./img/img12.png" alt="PN junction depletion layer and barrier potential">
+                <p class="placeholder-text">Established Depletion Layer & Barrier Field</p>
+            </div>
+
+            <p>
+                 The layer of fixed ions creates an internal electric field pointing from N to P. This field opposes further diffusion, creating an equilibrium.
+            </p>
+            <p>
+                This field results in a potential difference across the junction known as the <strong>Barrier Potential (V<sub>0</sub>)</strong>. It's a built-in voltage wall.
+            </p>
+            <ul class="list-disc">
+                 <li>For Germanium (Ge): V<sub>0</sub> ≈ 0.3 V</li>
+                 <li>For Silicon (Si): V<sub>0</sub> ≈ 0.7 V <!-- Corrected typical value --></li>
+            </ul>
+
+            <h3 class="sub-title">Biasing - Applying External Force</h3>
+            <p>
+                <strong>Biasing</strong> is applying an external voltage to manipulate the PN junction's barrier and control current flow.
+            </p>
+
+            <h4 class="sub-sub-title">Forward Biasing - Lowering the Walls</h4>
+             <ul class="list-disc">
+                 <li>Connect Positive (+) battery terminal to P-type, Negative (-) terminal to N-type.</li>
+                 <li>The external voltage *opposes* the internal barrier potential (V<sub>0</sub>).</li>
+            </ul>
+
+            <!-- Diagram: Forward bias -->
+            <div class="diagram-container">
+                <img src="./img/img13.png" alt="PN junction under forward bias">
+                <p class="placeholder-text">Forward Bias: Reduced Barrier & Depletion Layer</p>
+            </div>
+
+            <ul class="list-disc">
+                 <li>Effect: Reduces the barrier height and narrows the depletion layer.</li>
+                 <li>When Applied Voltage > V<sub>0</sub> (approx.), the barrier is overcome. Majority carriers (electrons from N, holes from P) surge across the junction.</li>
+                 <li>Result: Significant current flows easily. The junction offers <strong>low resistance</strong>.</li>
+            </ul>
+
+            <h4 class="sub-sub-title">Reverse Biasing - Raising the Walls</h4>
+            <ul class="list-disc">
+                 <li>Connect Negative (-) battery terminal to P-type, Positive (+) terminal to N-type.</li>
+                 <li>The external voltage *aids* the internal barrier potential (V<sub>0</sub>).</li>
+            </ul>
+
+            <!-- Diagram: Reverse bias -->
+            <div class="diagram-container">
+                 <img src="./img/img14.png" alt="PN junction under reverse bias">
+                 <p class="placeholder-text">Reverse Bias: Increased Barrier & Widened Depletion Layer</p>
+            </div>
+
+             <ul class="list-disc">
+                 <li>Effect: Increases the barrier height and widens the depletion layer.</li>
+                 <li>This prevents majority carriers from crossing the junction.</li>
+                 <li>Result: Ideally, zero current. In reality, a tiny <strong>reverse saturation current</strong> (micro/nano-amps) flows due to minority carriers being swept across by the strong field. The junction offers <strong>very high resistance</strong>.</li>
+            </ul>
+
+
+            <h3 class="sub-title">Forward Bias Current - The Charge Assault</h3>
+             <ul class="list-disc">
+                <li>The negative terminal repels N-side electrons towards the junction.</li>
+                <li>The positive terminal repels P-side holes towards the junction.</li>
+                <li>Electrons overcome the weakened barrier, enter the P-side, move through recombination/valence electron shifts towards the positive terminal.</li>
+                <li>Holes overcome the barrier, enter the N-side, and are effectively neutralized near the negative terminal by incoming electrons.</li>
+                <li>The battery continuously supplies electrons to the N-side and removes them from the P-side, sustaining the flow.</li>
+            </ul>
+        </section>
+
+        <!-- Chapter 5: Knowledge Assessment -->
+        <section id="quiz-section">
+            <h2 class="quiz-section-title">Final Trial: Test Your Knowledge</h2>
+
+            <div class="quiz-container" id="quiz">
+                <!-- Questions will be dynamically loaded here -->
+                <p style="text-align:center; font-style:italic;">Loading the challenge...</p>
+            </div>
+            <div class="result" id="result" style="display:none;"></div> <!-- Hidden initially -->
+            <button id="submit-btn" class="action-button" style="display:none;">Submit Answers</button>
+
+        </section>
+
+    </div> <!-- End Content Scroll -->
+
+
+    <script>
+        // --- Semiconductor Quiz Questions ---
+        const quizQuestions = [
+            {
+                question: "What distinguishes a semiconductor's resistivity?",
+                options: ["Higher than conductors, lower than insulators", "Lower than conductors, higher than insulators", "Same as conductors", "Same as insulators"],
+                answer: 0 // "Higher than conductors, lower than insulators" (based on note text, though common definition is between) - Adjusted to match text: "less than insulator but more than a conductor" -> means resistivity is MORE than conductor, LESS than insulator.
+            },
+            {
+                question: "What is the typical behavior of a semiconductor's resistance when temperature increases?",
+                options: ["Increases (PTC)", "Decreases (NTC)", "Stays the same", "Becomes zero"],
+                answer: 1 // "Negative temperature coefficient (NTC): Resistance decreases..."
+            },
+             {
+                question: "What type of bond holds semiconductor atoms like Si and Ge together in a crystal?",
+                options: ["Ionic", "Metallic", "Covalent", "Hydrogen"],
+                answer: 2 // "Semiconductors form covalent bonds..."
+            },
+             {
+                question: "Adding a pentavalent impurity (like Arsenic) to Silicon creates what type of semiconductor?",
+                options: ["P-type", "N-type", "Intrinsic", "Insulator"],
+                answer: 1 // "Pentavalent impurity... creating n-type"
+            },
+             {
+                question: "What are the majority charge carriers in a P-type semiconductor?",
+                options: ["Electrons", "Holes", "Photons", "Phonons"],
+                answer: 1 // "Holes (from acceptor impurities) are majority carriers."
+            },
+            {
+                question: "What is the region near a PN junction that is depleted of free charge carriers called?",
+                options: ["Conduction Band", "Valence Band", "Depletion Layer", "Forbidden Gap"],
+                answer: 2 // "Creating a layer depleted of free charge carriers... This is the depletion layer"
+            },
+             {
+                question: "To forward bias a PN junction, you connect the positive terminal of the battery to the:",
+                options: ["N-type side", "P-type side", "Either side", "Metal contact"],
+                answer: 1 // "Connect the positive (+ve) terminal... to the p-type side"
+            },
+             {
+                question: "What happens to the width of the depletion layer during reverse bias?",
+                options: ["Narrows", "Widens", "Stays the same", "Disappears"],
+                answer: 1 // "increasing the barrier height and widening the depletion layer."
+            },
+             {
+                question: "What is the approximate barrier potential (V0) for Silicon (Si)?",
+                options: ["0.3 V", "0.7 V", "1.1 V", "5.0 V"],
+                answer: 1 // "For Silicon (Si), V0 ≈ 0.7 V"
+            },
+            {
+                question: "The process of adding impurities to a pure semiconductor is called:",
+                options: ["Alloying", "Biasing", "Doping", "Annealing"],
+                answer: 2 // "The process of adding impurities is called doping."
+            }
+        ];
+
+        // --- Quiz Logic (Adapted from template) ---
+        let correctAnswers = 0;
+        let totalQuestions = quizQuestions.length;
+        let userAnswers = new Array(totalQuestions).fill(undefined); // Initialize array
+        let quizCompleted = false;
+
+        // Load questions
+        function loadQuiz() {
+            const quizContainer = document.getElementById('quiz');
+            if (!quizContainer) {
+                 console.error("Quiz container not found!");
+                 return;
+            }
+            quizContainer.innerHTML = ''; // Clear loading message
+
+            quizQuestions.forEach((q, qIndex) => {
+                const questionDiv = document.createElement('div');
+                questionDiv.className = 'question-block';
+
+                const questionText = document.createElement('div');
+                questionText.className = 'question';
+                questionText.textContent = `${qIndex + 1}. ${q.question}`;
+                questionDiv.appendChild(questionText);
+
+                const optionsDiv = document.createElement('div');
+                optionsDiv.className = 'options';
+
+                q.options.forEach((opt, optIndex) => {
+                    const optionBtn = document.createElement('button'); // Use button for better semantics
+                    optionBtn.type = 'button'; // Prevent form submission
+                    optionBtn.className = 'option-btn';
+                    optionBtn.textContent = opt;
+                    optionBtn.dataset.qIndex = qIndex;
+                    optionBtn.dataset.optIndex = optIndex;
+
+                    optionBtn.addEventListener('click', function() {
+                        if (quizCompleted) return; // Don't allow changes after submission
+
+                        // Remove 'selected' class from other options in this question
+                        const siblingOptions = optionsDiv.querySelectorAll('.option-btn');
+                        siblingOptions.forEach(btn => btn.classList.remove('selected'));
+
+                        // Add 'selected' class to the clicked option
+                        this.classList.add('selected');
+
+                        // Save user's answer
+                        userAnswers[qIndex] = parseInt(this.dataset.optIndex);
+
+                        // Show submit button if all questions are answered
+                        if (userAnswers.filter(a => a !== undefined).length === totalQuestions) {
+                            const submitBtn = document.getElementById('submit-btn');
+                             if(submitBtn) submitBtn.style.display = 'block';
+                        }
+                    });
+
+                    optionsDiv.appendChild(optionBtn);
+                });
+
+                questionDiv.appendChild(optionsDiv);
+                quizContainer.appendChild(questionDiv);
+            });
+
+            // Add event listener to submit button
+            const submitBtn = document.getElementById('submit-btn');
+             if(submitBtn) {
+                 submitBtn.addEventListener('click', checkAnswers);
+             } else {
+                 console.error("Submit button not found!");
+             }
+        }
+
+        // Check answers and display results
+        function checkAnswers() {
+            if (quizCompleted) return;
+
+            quizCompleted = true;
+            correctAnswers = 0;
+            const resultDiv = document.getElementById('result');
+            const submitBtn = document.getElementById('submit-btn');
+
+            quizQuestions.forEach((q, qIndex) => {
+                const userAnswer = userAnswers[qIndex];
+                const correctAnswer = q.answer;
+
+                // Find the options for the current question
+                 const questionBlock = document.querySelector(`.option-btn[data-q-index="${qIndex}"]`)?.closest('.question-block');
+                 if (!questionBlock) return; // Skip if question block not found
+                 const options = questionBlock.querySelectorAll('.option-btn');
+
+
+                options.forEach((opt) => {
+                    const optIndex = parseInt(opt.dataset.optIndex);
+                    opt.disabled = true; // Disable options after submission
+                    opt.classList.remove('selected'); // Remove selection highlight
+
+                    if (optIndex === correctAnswer) {
+                        opt.classList.add('correct');
+                    } else if (optIndex === userAnswer) {
+                        opt.classList.add('incorrect');
+                    }
+                });
+
+                if (userAnswer === correctAnswer) {
+                    correctAnswers++;
+                }
+            });
+
+            const accuracy = totalQuestions > 0 ? correctAnswers / totalQuestions : 0;
+            const resultText = `Combat Assessment Complete! Score: ${correctAnswers} out of ${totalQuestions}. Accuracy: ${(accuracy * 100).toFixed(0)}%`;
+            if(resultDiv) {
+                resultDiv.textContent = resultText;
+                resultDiv.style.display = 'block'; // Show results
+            }
+
+
+             if(submitBtn) submitBtn.style.display = 'none'; // Hide submit button
+
+            // --- React Native Communication ---
+            if (window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+                 try {
+                    window.ReactNativeWebView.postMessage(JSON.stringify({
+                        type: 'setAccuracy',
+                        accuracy: accuracy,
+                        score: correctAnswers,
+                        total: totalQuestions
+                    }));
+                 } catch (e) {
+                     console.error("Error posting message to RN WebView:", e);
+                 }
+            } else {
+                console.warn("ReactNativeWebView.postMessage not available.");
+            }
+            // --- End React Native Communication ---
+
+
+            // Add game over button
+            const gameOverBtn = document.createElement('button');
+            gameOverBtn.textContent = 'End Training Session';
+            gameOverBtn.className = 'action-button'; // Use the same style
+            gameOverBtn.addEventListener('click', function() {
+                 if (window.ReactNativeWebView && window.ReactNativeWebView.postMessage) {
+                     try {
+                        window.ReactNativeWebView.postMessage(JSON.stringify({
+                            type: 'gameOver' // Or 'quizComplete', 'sessionEnd' etc.
+                        }));
+                     } catch (e) {
+                         console.error("Error posting 'gameOver' message:", e);
+                     }
+                 } else {
+                     console.warn("Cannot send 'gameOver' message: ReactNativeWebView not available.");
+                     alert("Training Session Complete!"); // Fallback for browser testing
+                 }
+            });
+
+            if (resultDiv) {
+                // resultDiv.appendChild(document.createElement('br')); // Add space if needed
+                resultDiv.appendChild(gameOverBtn);
+            }
+        }
+
+        // Initialize the quiz when the window loads
+        window.onload = loadQuiz;
+
+    </script>
+
+</body>
+</html>
