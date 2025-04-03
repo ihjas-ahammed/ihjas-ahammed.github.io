@@ -98,8 +98,8 @@
                 },
                 {
                     "text": "Sampling Distributions",
-                    "path": "/stat2/mod4",
-                    "webview": false,
+                    "path": "/stat2/mod4.html",
+                    "webview": true,
                     "qa": {}
                 }
             ]
