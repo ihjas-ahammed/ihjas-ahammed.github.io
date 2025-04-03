@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Electronics Study Plan</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="mouse-follower"></div>
+
+    <div class="container">
+        <h1>Electronics Study Plan - Final Sprint</h1>
+
+        <!-- Overall Progress -->
+        <div class="progress-section overall-progress-section">
+            <h2>Overall Progress</h2>
+            <div class="progress-bar-container">
+                <div class="progress-bar" id="overall-progress">
+                    <div class="progress-bar-fill" id="overall-progress-fill"></div>
+                    <span class="progress-bar-text" id="overall-progress-text">0%</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Task Groups -->
+        <div class="task-groups-container">
+
+            <!-- Group 1: Filters & Special Diodes -->
+            <div class="task-group" id="group1">
+                <div class="group-header">
+                    <h2>Goal 1: Filters & Special Diodes</h2>
+                    <div class="progress-bar-container group-progress">
+                        <div class="progress-bar" id="group1-progress">
+                            <div class="progress-bar-fill" id="group1-progress-fill"></div>
+                            <span class="progress-bar-text" id="group1-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="task-list">
+                    <li class="task-item" data-task-id="task1-1" data-task-name="Read: Filter Circuits">
+                        <input type="checkbox" id="task1-1" class="task-checkbox">
+                        <label for="task1-1"><span class="task-type-read">Read:</span> Filter Circuits (Need, Types: Cap, Choke, Pi)<span class="page-ref">(P 103-105)</span></label>
+                        <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task1-2" data-task-name="Understand: Voltage Multipliers">
+                        <input type="checkbox" id="task1-2" class="task-checkbox">
+                        <label for="task1-2"><span class="task-type-concept">Understand:</span> Voltage Multipliers (Concept)<span class="page-ref">(P 106)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task1-3" data-task-name="Practice: Filter Ex 6.23">
+                        <input type="checkbox" id="task1-3" class="task-checkbox">
+                        <label for="task1-3"><span class="task-type-practice">Practice:</span> Solve Filter Example 6.23</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task1-4" data-task-name="Practice: Filter Ex 6.24">
+                        <input type="checkbox" id="task1-4" class="task-checkbox">
+                        <label for="task1-4"><span class="task-type-practice">Practice:</span> Solve Filter Example 6.24</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task1-5" data-task-name="Read: Zener Diode">
+                        <input type="checkbox" id="task1-5" class="task-checkbox">
+                        <label for="task1-5"><span class="task-type-read">Read:</span> Zener Diode (Concept, Reverse Breakdown)<span class="page-ref">(P 126)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task1-6" data-task-name="Read: LED">
+                        <input type="checkbox" id="task1-6" class="task-checkbox">
+                        <label for="task1-6"><span class="task-type-read">Read:</span> Light-Emitting Diode (LED) (Theory, V/I, Protection, Apps)<span class="page-ref">(P 126-129)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task1-7" data-task-name="Practice: LED Ex 7.1">
+                        <input type="checkbox" id="task1-7" class="task-checkbox">
+                        <label for="task1-7"><span class="task-type-practice">Practice:</span> Solve LED Example 7.1</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task1-8" data-task-name="Practice: LED Ex 7.2">
+                        <input type="checkbox" id="task1-8" class="task-checkbox">
+                        <label for="task1-8"><span class="task-type-practice">Practice:</span> Solve LED Example 7.2</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task1-9" data-task-name="Read: Photo-diode">
+                        <input type="checkbox" id="task1-9" class="task-checkbox">
+                        <label for="task1-9"><span class="task-type-read">Read:</span> Photo-diode (Principle, Operation, Apps)<span class="page-ref">(P 130-132)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task1-10" data-task-name="Practice: Photodiode Ex 7.3">
+                        <input type="checkbox" id="task1-10" class="task-checkbox">
+                        <label for="task1-10"><span class="task-type-practice">Practice:</span> Solve Photodiode Example 7.3</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task1-11" data-task-name="Practice: Photodiode Ex 7.4">
+                        <input type="checkbox" id="task1-11" class="task-checkbox">
+                        <label for="task1-11"><span class="task-type-practice">Practice:</span> Solve Photodiode Example 7.4</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task1-12" data-task-name="Read: Optoisolator">
+                        <input type="checkbox" id="task1-12" class="task-checkbox">
+                        <label for="task1-12"><span class="task-type-read">Read:</span> Optoisolator (Concept, Operation)<span class="page-ref">(P 133)</span></label>
+                        <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+             <!-- Group 2: BJT Introduction -->
+            <div class="task-group" id="group2">
+                 <div class="group-header">
+                    <h2>Goal 2: BJT Introduction</h2>
+                    <div class="progress-bar-container group-progress">
+                        <div class="progress-bar" id="group2-progress">
+                            <div class="progress-bar-fill" id="group2-progress-fill"></div>
+                            <span class="progress-bar-text" id="group2-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="task-list">
+                   <li class="task-item" data-task-id="task2-1" data-task-name="Read: Intro to Transistors">
+                        <input type="checkbox" id="task2-1" class="task-checkbox">
+                        <label for="task2-1"><span class="task-type-read">Read:</span> Intro to Transistors (BJT Def, Types)<span class="page-ref">(P 141-142)</span></label>
+                        <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task2-2" data-task-name="Read: BJT Terminals">
+                        <input type="checkbox" id="task2-2" class="task-checkbox">
+                        <label for="task2-2"><span class="task-type-read">Read:</span> Naming Terminals (E, C, B functions, biasing)<span class="page-ref">(P 143)</span></label>
+                        <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task2-3" data-task-name="Read: BJT Facts">
+                        <input type="checkbox" id="task2-3" class="task-checkbox">
+                        <label for="task2-3"><span class="task-type-read">Read:</span> BJT Facts (Doping, Size)<span class="page-ref">(P 143-144)</span></label>
+                        <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task2-4" data-task-name="Read: Transistor Action">
+                        <input type="checkbox" id="task2-4" class="task-checkbox">
+                        <label for="task2-4"><span class="task-type-read">Read:</span> Transistor Action (npn/pnp principle, currents)<span class="page-ref">(P 144-145)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task2-5" data-task-name="Read: BJT Symbols/Amplifier">
+                        <input type="checkbox" id="task2-5" class="task-checkbox">
+                        <label for="task2-5"><span class="task-type-read">Read:</span> Transistor Symbols, Amplifier Concept<span class="page-ref">(P 146)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task2-6" data-task-name="Practice: BJT Intro Ex 8.1">
+                        <input type="checkbox" id="task2-6" class="task-checkbox">
+                        <label for="task2-6"><span class="task-type-practice">Practice:</span> Solve BJT Intro Example 8.1</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Group 3: Transistor Configurations & Characteristics -->
+            <div class="task-group" id="group3">
+                 <div class="group-header">
+                    <h2>Goal 3: Transistor Configs & Characteristics</h2>
+                     <div class="progress-bar-container group-progress">
+                        <div class="progress-bar" id="group3-progress">
+                            <div class="progress-bar-fill" id="group3-progress-fill"></div>
+                            <span class="progress-bar-text" id="group3-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+                 <ul class="task-list">
+                     <li class="task-item" data-task-id="task3-1" data-task-name="Read: Transistor Connections">
+                        <input type="checkbox" id="task3-1" class="task-checkbox">
+                        <label for="task3-1"><span class="task-type-read">Read:</span> Transistor Connections (CB, CE, CC)<span class="page-ref">(P 148)</span></label>
+                        <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-2" data-task-name="Read: Common Base">
+                        <input type="checkbox" id="task3-2" class="task-checkbox">
+                        <label for="task3-2"><span class="task-type-read">Read:</span> Common Base (Alpha, Current, Chars, R)<span class="page-ref">(P 148-152)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-3" data-task-name="Practice: CB Examples 8.2-8.7">
+                        <input type="checkbox" id="task3-3" class="task-checkbox">
+                        <label for="task3-3"><span class="task-type-practice">Practice:</span> Solve CB Examples 8.2 - 8.7</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-4" data-task-name="Read: Common Emitter">
+                        <input type="checkbox" id="task3-4" class="task-checkbox">
+                        <label for="task3-4"><span class="task-type-read">Read:</span> Common Emitter (Beta, Current, Leakage, Chars, R)<span class="page-ref">(P 152-155)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-5" data-task-name="Practice: CE Examples 8.8-8.10">
+                        <input type="checkbox" id="task3-5" class="task-checkbox">
+                        <label for="task3-5"><span class="task-type-practice">Practice:</span> Solve CE Examples 8.8 - 8.10</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-6" data-task-name="Read: Common Collector">
+                        <input type="checkbox" id="task3-6" class="task-checkbox">
+                        <label for="task3-6"><span class="task-type-read">Read:</span> Common Collector (Gamma, α/β/γ Relation)<span class="page-ref">(P 161-163)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-7" data-task-name="Read: Connection Comparison">
+                        <input type="checkbox" id="task3-7" class="task-checkbox">
+                        <label for="task3-7"><span class="task-type-read">Read:</span> Comparison of Connections, Common Use (CE)<span class="page-ref">(P 163-164)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task3-8" data-task-name="Understand: Leakage Currents">
+                        <input type="checkbox" id="task3-8" class="task-checkbox">
+                        <label for="task3-8"><span class="task-type-concept">Understand:</span> Leakage Currents (ICBO, ICEO)</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+             <!-- Group 4: Transistor Operation & Biasing Intro -->
+            <div class="task-group" id="group4">
+                 <div class="group-header">
+                    <h2>Goal 4: Transistor Operation & Biasing Intro</h2>
+                     <div class="progress-bar-container group-progress">
+                        <div class="progress-bar" id="group4-progress">
+                            <div class="progress-bar-fill" id="group4-progress-fill"></div>
+                            <span class="progress-bar-text" id="group4-progress-text">0%</span>
+                        </div>
+                    </div>
+                </div>
+                <ul class="task-list">
+                     <li class="task-item" data-task-id="task4-1" data-task-name="Read: Load Line Analysis">
+                        <input type="checkbox" id="task4-1" class="task-checkbox">
+                        <label for="task4-1"><span class="task-type-read">Read:</span> Load Line Analysis (DC LL, Q-point), Cut-off/Sat<span class="page-ref">(P 165-176)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task4-2" data-task-name="Practice: Load Line Ex 8.22-8.34">
+                        <input type="checkbox" id="task4-2" class="task-checkbox">
+                        <label for="task4-2"><span class="task-type-practice">Practice:</span> Solve Load Line Examples 8.22 - 8.34</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task4-3" data-task-name="Read: Power Rating">
+                        <input type="checkbox" id="task4-3" class="task-checkbox">
+                        <label for="task4-3"><span class="task-type-read">Read:</span> Power Rating of Transistor<span class="page-ref">(P 180)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task4-4" data-task-name="Practice: Power Rating Ex 8.38-8.40">
+                        <input type="checkbox" id="task4-4" class="task-checkbox">
+                        <label for="task4-4"><span class="task-type-practice">Practice:</span> Solve Power Rating Examples 8.38 - 8.40</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                     <li class="task-item" data-task-id="task4-5" data-task-name="Read: Intro to Biasing">
+                        <input type="checkbox" id="task4-5" class="task-checkbox">
+                        <label for="task4-5"><span class="task-type-read">Read:</span> Intro to Transistor Biasing (Need, Stabilization)<span class="page-ref">(P 192-197)</span></label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                    <li class="task-item" data-task-id="task4-6" data-task-name="Understand: Operating Regions">
+                        <input type="checkbox" id="task4-6" class="task-checkbox">
+                        <label for="task4-6"><span class="task-type-concept">Understand:</span> Cut-off, Saturation, Active Region</label>
+                         <div class="timer-controls">
+                             <span class="time-spent">0s</span>
+                             <button class="timer-btn start-btn" aria-label="Start Timer">▶</button>
+                             <button class="timer-btn finish-btn" aria-label="Finish Timer" disabled>⏹</button>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div><!-- End Task Groups Container -->
+
+        <!-- Time Summary Graph -->
+        <div class="graph-container">
+            <h2>Time Spent Per Task (Seconds)</h2>
+            <canvas id="timeChart"></canvas>
+        </div>
+
+    </div> <!-- End Container -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
