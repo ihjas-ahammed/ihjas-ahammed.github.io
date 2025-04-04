@@ -1,0 +1,619 @@
+
+
+**1. Correlation**
+
+1.  **Type of linear relation for given correlation coefficients:**
+    *   **(i) $r = -1$:** This indicates a **perfect negative linear correlation**. As the value of variable $x$ increases, the value of variable $y$ decreases proportionally, and all data points lie exactly on a straight line with a negative slope.
+    *   **(ii) $r = +1$:** This indicates a **perfect positive linear correlation**. As the value of variable $x$ increases, the value of variable $y$ increases proportionally, and all data points lie exactly on a straight line with a positive slope.
+    *(3 marks)*
+
+2.  **Meaning of zero correlation ($r = 0$):**
+    Zero correlation between $x$ and $y$ means there is **no linear relationship** between the two variables. This does *not* necessarily mean there is no relationship at all; there could be a non-linear relationship (e.g., a U-shape). It simply implies that as $x$ changes, there is no consistent tendency for $y$ to increase or decrease linearly.
+    *(3 marks)*
+
+3.  **How scatter diagram helps in correlation and regression analysis:**
+    A scatter diagram plots pairs of data points $(x, y)$ on a graph. It helps in the following ways:
+    *   **Visualizing the Relationship:** It provides an immediate visual impression of the relationship between the two variables.
+    *   **Identifying the Type of Correlation:** One can observe if the points tend to cluster around a line sloping upwards (positive correlation), downwards (negative correlation), or show no pattern (zero or near-zero correlation).
+    *   **Assessing Linearity:** It helps determine if a linear relationship is appropriate. If the points form a curve, linear correlation/regression might not be the best model.
+    *   **Detecting Strength:** The closer the points cluster around a potential line, the stronger the linear correlation. Widely scattered points indicate a weak correlation.
+    *   **Identifying Outliers:** Unusual data points that deviate significantly from the general pattern are easily spotted. These outliers can heavily influence correlation and regression results.
+    *   **Foundation for Regression:** It visually suggests whether fitting a regression line is meaningful and what type of line (linear or perhaps non-linear) might be suitable.
+    *(5 marks)*
+
+4.  **Calculate Pearson's coefficient of correlation (r):**
+    Data:
+    x: 1, 2, 3, 4, 5
+    y: 3, 5, 12, 15, 20
+    $n = 5$
+
+    We need: $\Sigma x, \Sigma y, \Sigma x^2, \Sigma y^2, \Sigma xy$
+
+    | x  | y  | $x^2$ | $y^2$  | $xy$  |
+    |----|----|-------|--------|-------|
+    | 1  | 3  | 1     | 9      | 3     |
+    | 2  | 5  | 4     | 25     | 10    |
+    | 3  | 12 | 9     | 144    | 36    |
+    | 4  | 15 | 16    | 225    | 60    |
+    | 5  | 20 | 25    | 400    | 100   |
+    |----|----|-------|--------|-------|
+    | **$\Sigma x=15$** | **$\Sigma y=55$** | **$\Sigma x^2=55$** | **$\Sigma y^2=803$** | **$\Sigma xy=209$** |
+
+    Formula for Pearson's r:
+    $$r = \frac{n \Sigma xy - (\Sigma x)(\Sigma y)}{\sqrt{[n \Sigma x^2 - (\Sigma x)^2] [n \Sigma y^2 - (\Sigma y)^2]}}$$
+
+    Substitute the values:
+    $$r = \frac{5(209) - (15)(55)}{\sqrt{[5(55) - (15)^2] [5(803) - (55)^2]}}$$
+    $$r = \frac{1045 - 825}{\sqrt{[275 - 225] [4015 - 3025]}}$$
+    $$r = \frac{220}{\sqrt{[50] [990]}}$$
+    $$r = \frac{220}{\sqrt{49500}}$$
+    $$r = \frac{220}{222.4859...}$$
+    $$r \approx 0.9888$$
+
+    The Pearson's coefficient of correlation is approximately **0.989**.
+    *(5 marks)*
+
+5.  **Limits for Pearson's coefficient of correlation:**
+    The value of Pearson's correlation coefficient ($r$) always lies between **-1 and +1**, inclusive.
+    Mathematically: $-1 \le r \le +1$
+    *(3 marks)*
+
+6.  **Define correlation and explain different types:**
+    **Definition:** Correlation measures the **strength and direction** of the **linear relationship** between two quantitative variables. It indicates how closely the variables move together.
+
+    **Types of Correlation:**
+    *   **Positive Correlation:** When an increase in one variable tends to be associated with an increase in the other variable (or a decrease in one with a decrease in the other). The correlation coefficient ($r$) is positive ($0 < r \le 1$). *Example: Height and weight.*
+        *   *Perfect Positive Correlation ($r = +1$):* A perfect linear relationship where all points lie on a line with a positive slope.
+    *   **Negative Correlation:** When an increase in one variable tends to be associated with a decrease in the other variable. The correlation coefficient ($r$) is negative ($-1 \le r < 0$). *Example: Price of a product and its demand.*
+        *   *Perfect Negative Correlation ($r = -1$):* A perfect linear relationship where all points lie on a line with a negative slope.
+    *   **Zero Correlation ($r \approx 0$):** When there is no linear relationship between the variables. Changes in one variable are not associated with any consistent linear change in the other. *Example: IQ and shoe size.*
+    *(5 marks)*
+
+7.  **Calculate product moment correlation coefficient (Pearson's r):**
+    Given: $n = 30, \Sigma X = 120, \Sigma Y = 90, \Sigma X^2 = 600, \Sigma Y^2 = 300, \Sigma XY = 330$
+
+    Formula for Pearson's r:
+    $$r = \frac{n \Sigma XY - (\Sigma X)(\Sigma Y)}{\sqrt{[n \Sigma X^2 - (\Sigma X)^2] [n \Sigma Y^2 - (\Sigma Y)^2]}}$$
+
+    Substitute the values:
+    $$r = \frac{30(330) - (120)(90)}{\sqrt{[30(600) - (120)^2] [30(300) - (90)^2]}}$$
+    $$r = \frac{9900 - 10800}{\sqrt{[18000 - 14400] [9000 - 8100]}}$$
+    $$r = \frac{-900}{\sqrt{[3600] [900]}}$$
+    $$r = \frac{-900}{\sqrt{3240000}}$$
+    $$r = \frac{-900}{1800}$$
+    $$r = -0.5$$
+
+    The product moment correlation coefficient is **-0.5**.
+    *(Part of a 5 marks question)*
+
+8.  **If $\rho(x, y) = -1$, there is:**
+    The correct answer is **b) Perfect negative correlation**. $\rho$ (rho) is often used to denote the population correlation coefficient, and a value of -1 signifies a perfect negative linear relationship.
+    *(1 mark)*
+
+9.  **Simplest method of correlation analysis is:**
+    The simplest method to visually assess correlation is the **b) Scatter diagram**. While Pearson's and Spearman's are calculation methods, the scatter diagram is the initial, simplest visual tool.
+    *(1 mark)*
+
+10. **Correlation between two variables means they are:**
+    Correlation means the variables are **linearly related** (or associated). It doesn't necessarily imply causation, just that they tend to change together in a linear fashion.
+    *(1 mark)*
+
+11. **What is positive correlation?**
+    Positive correlation exists between two variables when they tend to move in the **same direction**. That is, as the value of one variable increases, the value of the other variable also tends to increase, and as one decreases, the other tends to decrease. The correlation coefficient ($r$) in this case is greater than 0.
+    *(2 marks)*
+
+12. **Define Karl Pearson's co-efficient of correlation:**
+    Karl Pearson's coefficient of correlation (often denoted by '$r$') is a measure of the **strength and direction of the linear association** between two continuous variables. It is calculated as the covariance of the two variables divided by the product of their standard deviations. The formula is:
+    $$r = \frac{\text{Cov}(x, y)}{\sigma_x \sigma_y}$$
+    Or the computational formula:
+    $$r = \frac{n \Sigma xy - (\Sigma x)(\Sigma y)}{\sqrt{[n \Sigma x^2 - (\Sigma x)^2] [n \Sigma y^2 - (\Sigma y)^2]}}$$
+    Its value ranges from -1 (perfect negative linear correlation) to +1 (perfect positive linear correlation), with 0 indicating no linear correlation.
+    *(2 marks)*
+
+13. **Explain scatter diagram:** (Similar to Q3, but focusing on the definition)
+    A scatter diagram (or scatter plot) is a graphical tool used to display the relationship between two quantitative variables. It consists of plotting points on a two-dimensional graph, where the horizontal axis represents one variable (e.g., X) and the vertical axis represents the other variable (e.g., Y). Each point on the plot corresponds to a paired observation $(x, y)$ from the dataset. The resulting pattern of points helps visualize the form (linear, non-linear), direction (positive, negative), and strength (strong, weak) of the association between the variables, and identify any outliers.
+    *(4 marks)*
+
+14. **Distinguish between correlation and regression:**
+    *   **Purpose:** Correlation measures the **strength and direction** of the linear association between two variables. Regression aims to **model and predict** the value of one variable (dependent) based on the value of another variable (independent).
+    *   **Output:** Correlation results in a single statistic (the correlation coefficient, $r$). Regression results in an equation (the regression line, e.g., $y = a + bx$).
+    *   **Variable Roles:** In correlation, both variables are treated equally; there's no distinction between independent and dependent. In regression, variables have distinct roles: independent (predictor, X) and dependent (response, Y).
+    *   **Causation:** Correlation does *not* imply causation. Regression *can* be used to study causal relationships (though it doesn't prove them), focusing on how changes in X *predict* changes in Y.
+    *   **Units:** Correlation coefficient ($r$) is a unitless measure. Regression coefficients (slope '$b$') have units (units of Y per unit of X).
+    *(4 marks)*
+
+15. **Discuss briefly the methods of correlation analysis (Scatter Diagram, Karl Pearson):**
+    *   **Scatter Diagram:** This is a graphical method. It involves plotting paired data $(x, y)$ on a graph.
+        *   *Use:* Provides a visual representation of the relationship. Helps quickly assess the likely direction (positive/negative/none) and strength (strong/weak) of the *linear* relationship, check for non-linearity, and spot outliers.
+        *   *Limitation:* It's qualitative and doesn't provide a precise numerical measure of the correlation strength.
+    *   **Karl Pearson's Coefficient (r):** This is a quantitative, numerical method.
+        *   *Use:* Calculates a precise value between -1 and +1 that measures the strength and direction of the *linear* relationship between two *quantitative* variables. It's widely used and forms the basis for many other statistical analyses.
+        *   *Assumptions/Limitations:* Assumes the data is quantitative, the relationship is linear, and data is reasonably free of extreme outliers (which can heavily influence '$r$'). It requires interval or ratio scale data.
+    *(Part of a 6 marks question)*
+
+16. **Calculate correlation co-efficient for the following data:**
+    Data:
+    X: 65, 66, 67, 67, 68, 69
+    Y: 67, 68, 65, 68, 72, 72
+    $n = 6$
+
+    Calculations:
+    | X  | Y  | $X^2$   | $Y^2$   | $XY$   |
+    |----|----|---------|---------|--------|
+    | 65 | 67 | 4225    | 4489    | 4355   |
+    | 66 | 68 | 4356    | 4624    | 4488   |
+    | 67 | 65 | 4489    | 4225    | 4355   |
+    | 67 | 68 | 4489    | 4624    | 4556   |
+    | 68 | 72 | 4624    | 5184    | 4896   |
+    | 69 | 72 | 4761    | 5184    | 4968   |
+    |----|----|---------|---------|--------|
+    | **$\Sigma X=402$** | **$\Sigma Y=412$** | **$\Sigma X^2=26944$** | **$\Sigma Y^2=28330$** | **$\Sigma XY=27618$** |
+
+    Formula for Pearson's r:
+    $$r = \frac{n \Sigma XY - (\Sigma X)(\Sigma Y)}{\sqrt{[n \Sigma X^2 - (\Sigma X)^2] [n \Sigma Y^2 - (\Sigma Y)^2]}}$$
+
+    Substitute the values:
+    $$r = \frac{6(27618) - (402)(412)}{\sqrt{[6(26944) - (402)^2] [6(28330) - (412)^2]}}$$
+    $$r = \frac{165708 - 165624}{\sqrt{[161664 - 161604] [169980 - 169744]}}$$
+    $$r = \frac{84}{\sqrt{[60] [236]}}$$
+    $$r = \frac{84}{\sqrt{14160}}$$
+    $$r = \frac{84}{118.9957...}$$
+    $$r \approx 0.7059$$
+
+    The correlation coefficient is approximately **0.706**.
+    *(10 marks)*
+
+17. **Covariance, Correlation, Variance, Standard Deviation Relationship:**
+    Given:
+    Correlation coefficient ($r$) = 0.60
+    Covariance ($\text{Cov}(X, Y)$) = 4.80
+    Variance of X ($\text{Var}(X)$ or $\sigma_x^2$) = 9
+    Find: Standard Deviation of Y ($\sigma_y$)
+
+    We know that $\text{Var}(X) = \sigma_x^2 = 9$, so the standard deviation of X is $\sigma_x = \sqrt{9} = 3$.
+
+    The formula relating correlation, covariance, and standard deviations is:
+    $$r = \frac{\text{Cov}(X, Y)}{\sigma_x \sigma_y}$$
+
+    Substitute the known values:
+    $$0.60 = \frac{4.80}{3 \times \sigma_y}$$
+
+    Rearrange to solve for $\sigma_y$:
+    $$0.60 \times 3 \times \sigma_y = 4.80$$
+    $$1.80 \times \sigma_y = 4.80$$
+    $$\sigma_y = \frac{4.80}{1.80}$$
+    $$\sigma_y = \frac{48}{18} = \frac{8}{3}$$
+    $$\sigma_y \approx 2.667$$
+
+    The standard deviation of Y is **8/3** or approximately **2.67**.
+    *(3 marks)*
+
+---
+
+**2. Regression**
+
+1.  **Define regression analysis:**
+    Regression analysis is a statistical method used to model the relationship between a dependent (or response) variable and one or more independent (or predictor) variables. It aims to find an equation that best describes how the dependent variable changes as the independent variable(s) change. This equation can then be used for prediction or understanding the nature of the relationship.
+    *(3 marks)*
+
+2.  **Regression line x on y: $2x - 3y + 5 = 0$. Identify regression coefficient x on y ($b_{xy}$).**
+    The regression line of x on y expresses x as a function of y: $x = c + b_{xy} y$.
+    Rearrange the given equation to isolate x:
+    $2x = 3y - 5$
+    $x = \frac{3}{2}y - \frac{5}{2}$
+    Comparing this to $x = c + b_{xy} y$, the coefficient of $y$ is the regression coefficient $b_{xy}$.
+    Therefore, $b_{xy} = 3/2$ or **1.5**.
+    *(3 marks)*
+
+3.  **Line of regression x on y: $x - 0.3y - 35 = 0$. Identify the value of x when y = 6.**
+    This equation already predicts x based on y. Substitute $y = 6$ into the equation:
+    $x - 0.3(6) - 35 = 0$
+    $x - 1.8 - 35 = 0$
+    $x - 36.8 = 0$
+    $x = 36.8$
+    The value of x when y = 6 is **36.8**.
+    *(3 marks)*
+
+4.  **Explain the two types of regression lines. What are their uses?**
+    In simple linear regression with two variables (X and Y), there are two regression lines:
+    *   **Regression Line of Y on X:**
+        *   *Equation Form:* $Y = a + b_{yx} X$ (where $b_{yx}$ is the slope/regression coefficient of Y on X)
+        *   *Purpose:* This line minimizes the sum of squared vertical distances (errors in Y) between the data points and the line.
+        *   *Use:* It is used to **predict the value of the dependent variable Y** for a given value of the independent variable X.
+    *   **Regression Line of X on Y:**
+        *   *Equation Form:* $X = c + b_{xy} Y$ (where $b_{xy}$ is the slope/regression coefficient of X on Y)
+        *   *Purpose:* This line minimizes the sum of squared horizontal distances (errors in X) between the data points and the line.
+        *   *Use:* It is used to **predict the value of the variable X** for a given value of the variable Y. (Less common, but valid if X is considered dependent on Y).
+
+    These two lines are generally different unless the correlation is perfect ($r = +1$ or $r = -1$), in which case they coincide, or if there is no correlation ($r = 0$), in which case they are perpendicular and pass through the mean $(\bar{x}, \bar{y})$.
+    *(5 marks)*
+
+5.  **Define regression co-efficients. Prove $r = \pm\sqrt{b_{xy} b_{yx}}$.**
+    **Definition:** Regression coefficients represent the slope of the regression line.
+    *   $b_{yx}$ (Regression coefficient of Y on X): Represents the average change in the dependent variable Y for a one-unit change in the independent variable X. Formula: $b_{yx} = r \frac{\sigma_y}{\sigma_x} = \frac{\text{Cov}(X, Y)}{\text{Var}(X)}$
+    *   $b_{xy}$ (Regression coefficient of X on Y): Represents the average change in the variable X for a one-unit change in the variable Y. Formula: $b_{xy} = r \frac{\sigma_x}{\sigma_y} = \frac{\text{Cov}(X, Y)}{\text{Var}(Y)}$
+
+    **Proof:**
+    Multiply the formulas for the two regression coefficients:
+    $$b_{xy} \times b_{yx} = \left( r \frac{\sigma_x}{\sigma_y} \right) \times \left( r \frac{\sigma_y}{\sigma_x} \right)$$
+    $$b_{xy} b_{yx} = r^2 \left( \frac{\sigma_x}{\sigma_y} \times \frac{\sigma_y}{\sigma_x} \right)$$
+    The standard deviation terms cancel out:
+    $$b_{xy} b_{yx} = r^2 \times 1$$
+    $$b_{xy} b_{yx} = r^2$$
+    Taking the square root of both sides:
+    $$\sqrt{b_{xy} b_{yx}} = \sqrt{r^2}$$
+    $$\sqrt{b_{xy} b_{yx}} = |r|$$
+    Therefore, $$r = \pm \sqrt{b_{xy} b_{yx}}$$
+
+    The sign of $r$ must be the same as the sign of the regression coefficients ($b_{xy}$ and $b_{yx}$ always have the same sign, which can be seen from their covariance-based formulas, as variances are always positive). If $b_{xy}$ and $b_{yx}$ are positive, $r$ is positive. If $b_{xy}$ and $b_{yx}$ are negative, $r$ is negative. This shows that the correlation coefficient is the geometric mean of the two regression coefficients (considering the sign).
+    *(5 marks)*
+
+6.  **Lines: $3x - 2y + 5 = 0$ and $5x - 4y + 4 = 0$. Find the means of x and y.**
+    The two regression lines always intersect at the point corresponding to the means of the variables, i.e., $(\bar{x}, \bar{y})$. To find the means, we need to solve the system of linear equations:
+    1.  $3x - 2y = -5$
+    2.  $5x - 4y = -4$
+
+    Multiply equation (1) by 2:
+    $6x - 4y = -10$ (Equation 3)
+
+    Subtract Equation 2 from Equation 3:
+    $(6x - 4y) - (5x - 4y) = -10 - (-4)$
+    $6x - 5x - 4y + 4y = -10 + 4$
+    $x = -6$
+
+    Substitute $x = -6$ into Equation 1:
+    $3(-6) - 2y = -5$
+    $-18 - 2y = -5$
+    $-2y = -5 + 18$
+    $-2y = 13$
+    $y = -13/2 = -6.5$
+
+    Therefore, the means are $\bar{x} = -6$ and $\bar{y} = -6.5$.
+    *(5 marks)*
+
+7.  **If $b_{xy} = -0.90$ and $b_{yx} = -0.40$, find the value of the correlation coefficient.**
+    We know $r^2 = b_{xy} b_{yx}$.
+    $r^2 = (-0.90) \times (-0.40)$
+    $r^2 = 0.36$
+    $r = \pm \sqrt{0.36}$
+    $r = \pm 0.6$
+
+    Since both regression coefficients ($b_{xy}$ and $b_{yx}$) are negative, the correlation coefficient $r$ must also be negative.
+    Therefore, $r = -0.6$.
+    *(3 marks)*
+
+8.  **Lines: $x + 2y - 5 = 0$ and $2x + 3y = 8$. Find the means of x and y.**
+    Solve the system of equations:
+    1.  $x + 2y = 5$
+    2.  $2x + 3y = 8$
+
+    From Equation 1, $x = 5 - 2y$. Substitute this into Equation 2:
+    $2(5 - 2y) + 3y = 8$
+    $10 - 4y + 3y = 8$
+    $10 - y = 8$
+    $y = 10 - 8$
+    $y = 2$
+
+    Substitute $y = 2$ back into $x = 5 - 2y$:
+    $x = 5 - 2(2)$
+    $x = 5 - 4$
+    $x = 1$
+
+    Therefore, the means are $\bar{x} = 1$ and $\bar{y} = 2$.
+    *(3 marks)*
+
+9.  **Explain the concept of regression and write down the equations of lines of regression. When do these lines coincide?**
+    **Concept:** Regression analysis models the relationship between a dependent variable (Y) and one or more independent variables (X). Simple linear regression finds the best-fitting straight line ($Y = a + bX$) through the data points on a scatter plot. This line represents the average value of Y for a given value of X and can be used for prediction. The method typically used to find this line is the "method of least squares," which minimizes the sum of the squared differences between the observed Y values and the values predicted by the line.
+
+    **Equations:**
+    *   Regression line of Y on X: $Y - \bar{Y} = b_{yx} (X - \bar{X})$
+        where $b_{yx} = r \frac{\sigma_y}{\sigma_x} = \frac{\text{Cov}(X,Y)}{\text{Var}(X)}$
+        Alternatively, $Y = a + b_{yx} X$, where $b_{yx}$ is the slope and $a = \bar{Y} - b_{yx} \bar{X}$ is the y-intercept.
+    *   Regression line of X on Y: $X - \bar{X} = b_{xy} (Y - \bar{Y})$
+        where $b_{xy} = r \frac{\sigma_x}{\sigma_y} = \frac{\text{Cov}(X,Y)}{\text{Var}(Y)}$
+        Alternatively, $X = c + b_{xy} Y$, where $b_{xy}$ is the slope and $c = \bar{X} - b_{xy} \bar{Y}$ is the intercept (on the X-axis if Y is plotted horizontally).
+
+    **Coincidence:** The two regression lines (Y on X and X on Y) coincide and become the same line if and only if there is a **perfect correlation** between the variables, i.e., when the correlation coefficient $r = +1$ or $r = -1$. In this case, $r^2 = 1$, so $b_{xy} b_{yx} = 1$.
+    *(5 marks)*
+
+10. **Calculate the slope of regression line of Y on X ($b_{yx}$).**
+    Given: $n = 30, \Sigma X = 120, \Sigma Y = 90, \Sigma X^2 = 600, \Sigma Y^2 = 300, \Sigma XY = 330$
+    (Note: This data is the same as Correlation Q7)
+
+    Formula for $b_{yx}$:
+    $$b_{yx} = \frac{n \Sigma XY - (\Sigma X)(\Sigma Y)}{n \Sigma X^2 - (\Sigma X)^2}$$
+
+    Substitute the values:
+    $$b_{yx} = \frac{30(330) - (120)(90)}{30(600) - (120)^2}$$
+    $$b_{yx} = \frac{9900 - 10800}{18000 - 14400}$$
+    $$b_{yx} = \frac{-900}{3600}$$
+    $$b_{yx} = -1/4 = -0.25$$
+
+    The slope of the regression line of Y on X ($b_{yx}$) is **-0.25**.
+    *(Part of a 5 marks question)*
+
+11. **Regression lines: $3x + 12y – 10 = 0$ and $3y + 9x - 46 = 0$.**
+    *   **(i) Identify the regression lines.**
+        Assume Line 1 (L1: $3x + 12y - 10 = 0$) is Y on X and Line 2 (L2: $9x + 3y - 46 = 0$) is X on Y.
+        Rearrange L1 for Y: $12y = -3x + 10 \implies y = (-\frac{3}{12})x + \frac{10}{12} \implies y = -0.25x + \frac{5}{6}$. So, $b_{yx} = -0.25$.
+        Rearrange L2 for X: $9x = -3y + 46 \implies x = (-\frac{3}{9})y + \frac{46}{9} \implies x = (-\frac{1}{3})y + \frac{46}{9}$. So, $b_{xy} = -1/3$.
+
+        Check if $|r| \le 1$: $r^2 = b_{yx} b_{xy} = (-0.25) \times (-\frac{1}{3}) = (-\frac{1}{4}) \times (-\frac{1}{3}) = \frac{1}{12}$.
+        Since $r^2 = 1/12$ is between 0 and 1, this assumption is valid.
+
+        Therefore:
+        Regression line Y on X is: $3x + 12y - 10 = 0$
+        Regression line X on Y is: $9x + 3y - 46 = 0$
+
+    *   **(ii) Obtain the value of x when y = 10 and the value of y when x = 3.**
+        *   To find x when y = 10, use the regression line of X on Y: $9x + 3y - 46 = 0$
+            $9x + 3(10) - 46 = 0$
+            $9x + 30 - 46 = 0$
+            $9x - 16 = 0$
+            $9x = 16 \implies x = 16/9$
+        *   To find y when x = 3, use the regression line of Y on X: $3x + 12y - 10 = 0$
+            $3(3) + 12y - 10 = 0$
+            $9 + 12y - 10 = 0$
+            $12y - 1 = 0$
+            $12y = 1 \implies y = 1/12$
+
+    *   **(iii) If variance of X is 9, find the standard deviation of Y.**
+        Given $\text{Var}(X) = \sigma_x^2 = 9$. So, standard deviation of X, $\sigma_x = \sqrt{9} = 3$.
+        We know $b_{yx} = -0.25$ and $r^2 = 1/12$. Since both coefficients are negative, $r = -\sqrt{1/12} = -1 / \sqrt{12} = -1 / (2\sqrt{3})$.
+        Use the formula $b_{yx} = r (\sigma_y / \sigma_x)$:
+        $$-0.25 = \left( \frac{-1}{2\sqrt{3}} \right) \left( \frac{\sigma_y}{3} \right)$$
+        $$-\frac{1}{4} = \frac{-\sigma_y}{6\sqrt{3}}$$
+        Multiply both sides by $-1$:
+        $$\frac{1}{4} = \frac{\sigma_y}{6\sqrt{3}}$$
+        $$\sigma_y = \frac{6\sqrt{3}}{4}$$
+        $$\sigma_y = \frac{3\sqrt{3}}{2}$$
+
+        The standard deviation of Y is $\frac{3\sqrt{3}}{2}$ (approximately 2.598).
+    *(11 marks)*
+
+12. **Regression equation of x on y is _______.**
+    The general form is **$X = c + b_{xy} Y$** or **$X - \bar{X} = b_{xy} (Y - \bar{Y})$**. (Assuming 'x' means X and 'y' means Y).
+    *(1 mark)*
+
+13. **$b_{xy} = 0.2, r = 0.4$. Find $b_{yx}$.**
+    We know $r^2 = b_{xy} b_{yx}$. Since $r$ and $b_{xy}$ are both positive, $b_{yx}$ must also be positive.
+    $(0.4)^2 = (0.2) \times b_{yx}$
+    $0.16 = 0.2 b_{yx}$
+    $b_{yx} = \frac{0.16}{0.2}$
+    $b_{yx} = \frac{1.6}{2}$
+    $b_{yx} = 0.8$
+
+    The regression co-efficient $b_{yx} = 0.8$. The correct option is **c) 0.8**.
+    *(1 mark)*
+
+14. **Lines: $3x + 12y = 19$ and $3y + 9x = 46$. Obtain $\bar{x}, \bar{y}$ and $r(x, y)$.**
+    *   **Find Means $(\bar{x}, \bar{y})$:** Solve the system of equations.
+        1.  $3x + 12y = 19$
+        2.  $9x + 3y = 46$
+        Multiply equation (1) by 3: $9x + 36y = 57$ (Equation 3)
+        Subtract Equation 2 from Equation 3:
+        $(9x + 36y) - (9x + 3y) = 57 - 46$
+        $33y = 11$
+        $y = 11/33 = 1/3$
+        Substitute $y = 1/3$ into Equation 1:
+        $3x + 12(1/3) = 19$
+        $3x + 4 = 19$
+        $3x = 15$
+        $x = 5$
+        So, $\bar{x} = 5$ and $\bar{y} = 1/3$.
+
+    *   **Find $r(x, y)$:** First, identify the regression lines and find coefficients.
+        Assume L1 ($3x + 12y = 19$) is Y on X and L2 ($9x + 3y = 46$) is X on Y.
+        From L1: $12y = -3x + 19 \implies y = (-\frac{3}{12})x + \frac{19}{12} \implies y = -0.25x + \frac{19}{12}$. So $b_{yx} = -0.25$.
+        From L2: $9x = -3y + 46 \implies x = (-\frac{3}{9})y + \frac{46}{9} \implies x = (-\frac{1}{3})y + \frac{46}{9}$. So $b_{xy} = -1/3$.
+
+        Check assumption: $r^2 = b_{yx} b_{xy} = (-0.25) \times (-\frac{1}{3}) = \frac{1}{12}$. This is valid ($0 \le r^2 \le 1$).
+        Since both coefficients are negative, r must be negative.
+        $$r = -\sqrt{1/12}$$
+        $$r = -\frac{1}{\sqrt{12}}$$
+        $$r = -\frac{1}{2\sqrt{3}}$$
+        $$r = -\frac{\sqrt{3}}{6} \approx -0.289$$
+
+    The means are $\bar{x} = 5$, $\bar{y} = 1/3$. The correlation coefficient is $r = -1/(2\sqrt{3})$ or $r \approx -0.289$.
+    *(4 marks)*
+
+---
+
+**3. Curve Fitting (Non-linear Regression)**
+
+1.  **Define non-linear regression:**
+    Non-linear regression is a type of regression analysis where the relationship between the independent variable(s) and the dependent variable is modeled using a function that is non-linear in its parameters. Unlike linear regression ($y = a + bx$), the model equation involves parameters in a non-linear way (e.g., $y = ab^x$, $y = a + b/x$, $y = a + bx + cx^2$). The goal, like linear regression, is to find the parameter values that best fit the data, typically using the method of least squares or iterative optimization algorithms. *(Note: $y=a+bx+cx^2$ is linear in parameters a, b, c, so often fitted using multiple *linear* regression techniques, but it models a non-linear relationship between x and y. True non-linear regression involves models like $y=ab^x$ where parameters enter non-linearly).*
+    *(3 marks)*
+
+2.  **What is the principle of least squares?**
+    The principle of least squares is a standard approach in regression analysis for finding the best-fitting curve (linear or non-linear) to a set of data points. It states that the optimal curve is the one that minimizes the sum of the squared differences (residuals) between the observed values of the dependent variable and the values predicted by the curve. For a model $y_{\text{predicted}} = f(x, \text{parameters})$, and observed data $(x_i, y_i)$, the principle seeks to minimize $\sum (y_i - y_{\text{predicted}_i})^2$.
+    *(3 marks)*
+
+3.  **Fit a straight line $y = ax + b$ using the data:**
+    Data:
+    x: 2, 4, 6, 8, 10, 12
+    y: 9, 12, 18, 30, 34, 42
+    $n = 6$
+
+    Normal Equations for $y = ax + b$:
+    1.  $\Sigma y = a \Sigma x + n b$
+    2.  $\Sigma xy = a \Sigma x^2 + b \Sigma x$
+
+    Calculations:
+    | x  | y  | $x^2$  | $xy$   |
+    |----|----|--------|--------|
+    | 2  | 9  | 4      | 18     |
+    | 4  | 12 | 16     | 48     |
+    | 6  | 18 | 36     | 108    |
+    | 8  | 30 | 64     | 240    |
+    | 10 | 34 | 100    | 340    |
+    | 12 | 42 | 144    | 504    |
+    |----|----|--------|--------|
+    | **$\Sigma x=42$** | **$\Sigma y=145$** | **$\Sigma x^2=364$** | **$\Sigma xy=1258$** |
+
+    Substitute sums into normal equations:
+    1.  $145 = a(42) + 6b \implies 42a + 6b = 145$
+    2.  $1258 = a(364) + b(42) \implies 364a + 42b = 1258$
+
+    Solve the system: Multiply equation (1) by 7:
+    $7(42a + 6b) = 7(145)$
+    $294a + 42b = 1015$ (Equation 3)
+
+    Subtract Equation 3 from Equation 2:
+    $(364a + 42b) - (294a + 42b) = 1258 - 1015$
+    $70a = 243$
+    $a = 243 / 70 \approx 3.4714$
+
+    Substitute the value of 'a' into Equation 1:
+    $42 (243 / 70) + 6b = 145$
+    $(6 \times 243) / 10 + 6b = 145$ (Since $42/70 = 42/(7 \times 10) = 6/10$)
+    $1458 / 10 + 6b = 145$
+    $145.8 + 6b = 145$
+    $6b = 145 - 145.8$
+    $6b = -0.8$
+    $b = -0.8 / 6 = -8 / 60 = -2 / 15 \approx -0.1333$
+
+    The fitted straight line is $y = \frac{243}{70}x - \frac{2}{15}$ or approximately **$y = 3.471x - 0.133$**.
+    *(11 marks)*
+
+4.  **Explain the method of fitting $y = ab^x$ using data $(x_i, y_i)$.**
+    To fit the exponential curve $y = ab^x$ using the principle of least squares, we first transform the equation into a linear form by taking logarithms (usually natural log, ln, or base-10 log). Let's use natural logarithm (ln):
+    Take the natural logarithm of both sides:
+    $\ln(y) = \ln(ab^x)$
+    $\ln(y) = \ln(a) + \ln(b^x)$
+    $\ln(y) = \ln(a) + x \ln(b)$
+
+    Now, let $Y = \ln(y)$, $A = \ln(a)$, and $B = \ln(b)$. The equation becomes:
+    $Y = A + Bx$
+    This is a linear equation relating $Y (=\ln(y))$ and $x$.
+
+    **Method:**
+    1.  Transform the original $y$ data values into $Y = \ln(y)$. Keep the $x$ values as they are.
+    2.  Calculate the necessary sums for the linear regression of $Y$ on $x$: $\Sigma x$, $\Sigma Y$, $\Sigma x^2$, $\Sigma xY$, and $n$.
+    3.  Set up the normal equations for the linear form $Y = A + Bx$:
+        *   $\Sigma Y = nA + B\Sigma x$
+        *   $\Sigma xY = A\Sigma x + B\Sigma x^2$
+    4.  Solve these two linear equations simultaneously for $A$ and $B$.
+    5.  Once $A$ and $B$ are found, transform back to find the original parameters $a$ and $b$:
+        *   $a = e^A$ (or $a = 10^A$ if base-10 logs were used)
+        *   $b = e^B$ (or $b = 10^B$ if base-10 logs were used)
+    6.  The fitted curve is then $y = ab^x$ with the calculated values of $a$ and $b$.
+    *(5 marks)*
+
+5.  **Obtain the best fitted parabola $y = a + bx + cx^2$ for the data:**
+    Data:
+    X: 0, 1, 2, 3, 4
+    Y: 1, 1.8, 3.3, 2.5, 6.3
+    $n = 5$
+
+    The normal equations for fitting a parabola $y = a + bx + cx^2$ are:
+    1.  $\Sigma y = na + b\Sigma x + c\Sigma x^2$
+    2.  $\Sigma xy = a\Sigma x + b\Sigma x^2 + c\Sigma x^3$
+    3.  $\Sigma x^2y = a\Sigma x^2 + b\Sigma x^3 + c\Sigma x^4$
+
+    We need to compute the sums $\Sigma x, \Sigma y, \Sigma x^2, \Sigma x^3, \Sigma x^4, \Sigma xy, \Sigma x^2y$.
+
+    | X | Y   | $x^2$ | $x^3$ | $x^4$  | $xY$    | $x^2Y$    |
+    |---|-----|-------|-------|--------|---------|-----------|
+    | 0 | 1.0 | 0     | 0     | 0      | 0.0     | 0.0       |
+    | 1 | 1.8 | 1     | 1     | 1      | 1.8     | 1.8       |
+    | 2 | 3.3 | 4     | 8     | 16     | 6.6     | 13.2      |
+    | 3 | 2.5 | 9     | 27    | 81     | 7.5     | 22.5      |
+    | 4 | 6.3 | 16    | 64    | 256    | 25.2    | 100.8     |
+    |---|-----|-------|-------|--------|---------|-----------|
+    | **$\Sigma x=10$** | **$\Sigma y=14.9$** | **$\Sigma x^2=30$** | **$\Sigma x^3=100$** | **$\Sigma x^4=354$** | **$\Sigma xY=41.1$** | **$\Sigma x^2Y=138.3$** |
+
+    Substitute these sums into the normal equations:
+    1.  $14.9 = 5a + 10b + 30c$
+    2.  $41.1 = 10a + 30b + 100c$
+    3.  $138.3 = 30a + 100b + 354c$
+
+    Now, we solve this system of three linear equations for $a$, $b$, and $c$.
+    (Solving requires methods like substitution, elimination, or matrix methods. Let's re-verify the calculation):
+
+    From (1): $5a = 14.9 - 10b - 30c \implies a = 2.98 - 2b - 6c$ (Eq A)
+    Substitute into (2): $41.1 = 10(2.98 - 2b - 6c) + 30b + 100c$
+    $41.1 = 29.8 - 20b - 60c + 30b + 100c$
+    $41.1 - 29.8 = 10b + 40c$
+    $11.3 = 10b + 40c \implies b + 4c = 1.13 \implies b = 1.13 - 4c$ (Eq B)
+
+    Substitute into (3): $138.3 = 30(2.98 - 2b - 6c) + 100b + 354c$
+    $138.3 = 89.4 - 60b - 180c + 100b + 354c$
+    $138.3 - 89.4 = 40b + 174c$
+    $48.9 = 40b + 174c$ (Eq C)
+
+    Substitute (B) into (C):
+    $48.9 = 40(1.13 - 4c) + 174c$
+    $48.9 = 45.2 - 160c + 174c$
+    $48.9 - 45.2 = 14c$
+    $3.7 = 14c$
+    $c = 3.7 / 14 = 37 / 140 \approx 0.2643$
+
+    Substitute c back into (B):
+    $b = 1.13 - 4(3.7 / 14)$
+    $b = 1.13 - 14.8 / 14 = (1.13 \times 14 - 14.8) / 14 = (15.82 - 14.8) / 14 = 1.02 / 14 = 102 / 1400 = 51 / 700 \approx 0.0729$
+
+    Substitute b and c back into (A):
+    $a = 2.98 - 2(1.02 / 14) - 6(3.7 / 14)$
+    $a = 2.98 - (2.04 / 14) - (22.2 / 14)$
+    $a = (2.98 \times 14 - 2.04 - 22.2) / 14 = (41.72 - 24.24) / 14 = 17.48 / 14 = 1748 / 1400 = 437 / 350 \approx 1.2486$
+
+    The best fitted parabola is approximately:
+    **$y = 1.2486 + 0.0729x + 0.2643x^2$**
+    Or using fractions:
+    **$y = \frac{437}{350} + \frac{51}{700}x + \frac{37}{140}x^2$**
+    *(6 marks)*
+
+6.  **Fit a trend line ($y = a + bt$) and estimate production in 1990:**
+    Data:
+    Year: 1982, 1984, 1986, 1988, 1990, 1992, 1994
+    Production (y): 77, 81, 88, 94, 94, 96, 98
+    $n = 7$
+
+    We need to fit a linear trend $y = a + bt$, where $t$ represents time. Let's transform the 'Year' variable (X) into a simpler time variable $t$. Since the years are evenly spaced (2 years apart), we can center the time variable around the middle year (1988) to simplify calculations ($\Sigma t = 0$).
+    Let $t = (\text{Year} - 1988) / 2$.
+
+    Calculate $t$ and the necessary sums:
+    | Year (X) | Production (y) | $t = (X-1988)/2$ | $t^2$ | $ty$    |
+    |----------|----------------|------------------|-------|---------|
+    | 1982     | 77             | -3               | 9     | -231    |
+    | 1984     | 81             | -2               | 4     | -162    |
+    | 1986     | 88             | -1               | 1     | -88     |
+    | 1988     | 94             | 0                | 0     | 0       |
+    | 1990     | 94             | 1                | 1     | 94      |
+    | 1992     | 96             | 2                | 4     | 192     |
+    | 1994     | 98             | 3                | 9     | 294     |
+    |----------|----------------|------------------|-------|---------|
+    |          | **$\Sigma y=628$** | **$\Sigma t=0$**     | **$\Sigma t^2=28$** | **$\Sigma ty=99$** |
+
+    The normal equations for $y = a + bt$ are:
+    1.  $\Sigma y = na + b\Sigma t$
+    2.  $\Sigma ty = a\Sigma t + b\Sigma t^2$
+
+    Substitute the sums:
+    1.  $628 = 7a + b(0) \implies 628 = 7a$
+    2.  $99 = a(0) + b(28) \implies 99 = 28b$
+
+    Solve for $a$ and $b$:
+    $a = 628 / 7 \approx 89.714$
+    $b = 99 / 28 \approx 3.536$
+
+    The trend line equation is:
+    **$y = 89.714 + 3.536t$**, where $t = (\text{Year} - 1988) / 2$.
+
+    **Estimate production for the year 1990:**
+    First, find the value of $t$ for the year 1990:
+    $t = (1990 - 1988) / 2 = 2 / 2 = 1$
+
+    Substitute $t = 1$ into the trend line equation:
+    $y_{\text{estimated}} = 89.714 + 3.536 \times (1)$
+    $y_{\text{estimated}} = 89.714 + 3.536$
+    $y_{\text{estimated}} \approx 93.25$
+
+    Using fractions for exactness:
+    $y_{\text{estimated}} = \frac{628}{7} + \frac{99}{28} (1) = \frac{4 \times 628}{28} + \frac{99}{28} = \frac{2512 + 99}{28} = \frac{2611}{28} \approx 93.25$
+
+    The estimated production in the year 1990 is **93.25 (units)**.
+    *(6 marks)*
+
+---

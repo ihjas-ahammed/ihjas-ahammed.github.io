@@ -1,0 +1,72 @@
+
+# 1. Parameter, Statistic, Sampling Distribution, Standard Error
+
+1.  Define Statistic. (D73763 Q11, 2 marks)
+2.  Define Parameter. (D11878 Q15, 2 marks)
+3.  Define Parameter and Statistic. (D12050 Q5, 3 marks)
+4.  Differentiate Estimator and estimate. (D12049 Q9, 3 marks)
+5.  Name the following: Probability distribution of a statistic. (D73763 Q1, 1 mark)
+6.  Fill up the blanks: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ of any statistic is called its standard error. (D73763 Q7, 1 mark)
+7.  The difference between a statistic and the parameter is called: (D12050-A Q18, MCQ)
+    (A) Sampling error (B) Non-sampling error (C) Standard error (D) None of these
+8.  Sampling distribution is the probability distribution of: (D12050-A Q19, MCQ)
+    (A) Parameter (B) Statistic (C) Variable (D) Sample
+9.  Every test statistic is: (D11878-A Q15, MCQ)
+    (A) An estimate (B) A random variable (C) A fixed value (D) None of these
+10. Name the following: Functions representing sample characteristics. (D11877 Q1, 1 mark)
+
+# 2. Sampling Distribution of the Sample Mean ($\bar{x}$)
+
+1.  Derive the sampling distribution of the mean of random sample $x_1, x_2, \dots, x_n$ taken from a normal population $N(\mu, \sigma^2)$. (D73763 Q29, 10 marks; D12049 Q20, 6 marks)
+2.  Find the probability that the sample mean of a random sample of size 16 taken from a normal population with mean 2 and variance 4 is less than 1. (D12050 Q10, 3 marks)
+
+# 3. Chi-Square Distribution ($\chi^2$)
+
+1.  Define Chi-square distribution with $n$ degrees of freedom. (D11877 Q11, 2 marks; D12050 Q21(i), marks part of 5m)
+2.  Name the following: Probability distribution of the square of a random sample taken from a standard normal population. (D73763 Q2, 1 mark)
+3.  Identify the probability distribution of $X_1^2 + X_2^2$ if $X_1, X_2$ is a random sample taken independently from $N(0, 1)$ population. (D73763 Q23(i), marks part of 6m; D12049 Q8(i), marks part of 3m)
+4.  Identify the probability distribution of $\sum_{i=1}^{n} \left( \frac{x_i - 10}{3} \right)^2$ where $x_i$'s are random samples taken from normal distribution with mean 10 and variance 9. (D73763 Q12, 2 marks)
+5.  Fill up the blanks: If the mean of a Chi-square random variable is 4, its variance is \_\_\_\_\_\_\_\_. (D73763 Q5, 1 mark; D11877 Q4, 1 mark)
+6.  Mean of Chi-Square distribution with $n$ degrees of freedom is: (D12050-A Q20, MCQ)
+    (A) $n$ (B) $2n$ (C) $n/2$ (D) $n^2$
+7.  State and prove the additive property of chi square distribution. (D73763 Q18, 4 marks; D12050 Q21(ii), marks part of 5m)
+8.  Derive mgf of chisquare distribution. Hence show that chi square distribution possesses additive property. (D11877 Q25, 10 marks; D12050 Q21(i), marks part of 5m for MGF derivation)
+9.  Chi-square distribution is used to test: (D11878-A Q4, MCQ)
+    (A) Goodness of fit (B) Hypothetical value of population variance (C) Both (A) and (B) (D) Neither (A) nor (B) [*TEXT only explicitly covers variance*]
+10. The hypothesis that population variance has a specified value can be tested by: (D11878-A Q18, MCQ)
+    (A) F-test (B) Z-test (C) $\chi^2$-test (D) t-test
+11. A random sample of size 9 is taken from a normal population with mean 6 and variance 9. Identify the probability that the sample variance is less than 5.07. (D12049 Q6, 3 marks) [*Requires using $(n-1)s^2/\sigma^2 \sim \chi^2(n-1)$*]
+
+# 4. Student's t-Distribution ($t$)
+
+1.  Define t-distribution. (D12050 Q12, 3 marks)
+2.  Obtain the mean of $t$, where $t$ follows t-distribution with $n$ degrees of freedom. (D73763 Q21, 4 marks; D11878 Q24, 3 marks)
+3.  The degrees of freedom for student's 't' based on a random sample of size $n$ is: (D11878-A Q3, MCQ)
+    (A) $n-1$ (B) $n$ (C) $n-2$ (D) $(n-1)/2$
+4.  Fill up the blanks: The statistic used to test the mean of a normal population follows \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ distribution. (D11878 Q7, 1 mark)
+5.  What is the test statistics used in small sample test to test the mean of a normal population when $\sigma^2$ is unknown? (D11878 Q17, 2 marks)
+6.  It $X_1, X_2$ and $X_3$ is a random sample taken independently from $N(0, 1)$ population, identify the probability distribution of $\frac{X_3}{\sqrt{(X_1^2 + X_2^2) / 2}}$. (D73763 Q23(ii), marks part of 6m)
+7.  Derive any two statistics following t-distribution. (D73763 Q30, 10 marks) [*Focus on $\frac{\bar{x}-\mu}{s/\sqrt{n}}$*]
+8.  Write True or False: In a small sample test of the mean of a normal population, the test statistic follows Chi-square distribution. (D73763 Q10, 1 mark)
+9.  Calculate the value of test statistic in testing the mean $\mu = 30$ of a population using a random sample of size 225 with the mean and variance, 32 and 16 respectively. (D12051 Q11, 3 marks) [*Applies t-stat formula $\frac{\bar{x}-\mu}{s/\sqrt{n}}$*]
+
+# 5. Snedecor's F-Distribution ($F$)
+
+1.  Define F-distribution. (D73763 Q13, 2 marks)
+2.  Name the following: $X_1$ and $X_2$ are two independent chi-square variate having $n_1$ and $n_2$ degrees of freedom. Then $\frac{X_1/n_1}{X_2/n_2}$ follows \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_. (D11877 Q3, 1 mark)
+3.  Fill up the blanks: The distribution of the reciprocal of X following F(m, n) is \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_. (D11877 Q10, 1 mark)
+4.  If F follows F-distribution with $(m, n)$ degrees of freedom. Derive the probability distribution of $Y = 1/F$. (D11878 Q29(i), marks part of 10m)
+5.  Identify the distribution of the ratio of the squares of two independent standard normal random variables. (D11878 Q13, 2 marks)
+6.  It $X_1, X_2$ and $X_3$ is a random sample taken independently from $N(0, 1)$ population, identify the probability distribution of $X_3^2 / X_2^2$. (D73763 Q23(iii), marks part of 6m)
+7.  If X and Y are independent standard normal random variables, name the probability distribution of $X^2 / Y^2$. (D12049 Q8(ii), marks part of 3m)
+8.  Formula for the confidence interval for the ratio of variances of the two normal population involves: (D11878-A Q12, MCQ)
+    (A) $\chi^2$-distribution (B) F distribution (C) t-distribution (D) None of the above
+9.  Equality of two population variances can be tested by: (D11878-A Q17, MCQ)
+    (A) $\chi^2$-test (B) t-test (C) F-test (D) Z-test
+10. Write the test statistic and its probability distribution used in a small sample test of equality of variances of two normal populations. (D12051 Q12, 3m)
+11. Give any two uses of F-distribution. (D11877 Q13, 2 marks)
+12. Derive any one statistic following F-distribution. (D11878 Q29(ii), marks part of 10m)
+
+# 6. Interrelations between Distributions
+
+1.  Explain the interrelation between Chi-square, t and F distributions. (D73763 Q28, 6 marks; D11877 Q29, 10 marks)

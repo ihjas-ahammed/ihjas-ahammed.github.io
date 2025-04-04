@@ -1,0 +1,184 @@
+
+# 1. Correlation
+
+1.  What type of linear relation is between $x$ and $y$ when the co-efficient of correlation between them is (i) $-1$; and (ii) $+1$? (3 marks)
+2.  What is the meaning of zero correlation between $x$ and $y$? (3 marks)
+3.  Explain how the scatter diagram helps in correlation and regression analysis. (5 marks)
+4.  Calculate Pearson's co-efficient of correlation using the following data: (5 marks)
+    <table>
+      <thead>
+        <tr>
+          <th>$x$</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$y$</td>
+          <td>3</td>
+          <td>5</td>
+          <td>12</td>
+          <td>15</td>
+          <td>20</td>
+        </tr>
+      </tbody>
+    </table>
+5.  What are the limits for Pearson's coefficient of correlation? (3 marks)
+6.  Define correlation and explain different types of correlation. (5 marks)
+7.  On each of 30 items, two measurements X and Y are made and following data were obtained:
+    $$ \sum X = 120, \sum Y = 90, \sum X^2 = 600, \sum Y^2 = 300, \sum XY = 330 $$
+    Calculate the product moment correlation coefficient. (Part of a 5 marks question)
+8.  If $\rho(x, y) = -1$, there is \_\_\_\_\_\_\_\_\_\_. (1 mark)
+    a) Negative correlation.
+    b) Perfect negative correlation.
+    c) Non correlation.
+    d) None of the above.
+9.  Simplest method of correlation analysis is \_\_\_\_\_\_\_\_\_\_. (1 mark)
+    a) Karl Pearson's correlation method.
+    b) Scatter diagram.
+    c) Spearman's rank correlation method.
+    d) None of the above.
+10. Correlation between two variables means they are \_\_\_\_\_\_\_\_\_\_. (1 mark)
+11. What is positive correlation? (2 marks)
+12. Define Karl Pearson's co-efficient of correlation. (2 marks)
+13. Explain scatter diagram. (4 marks)
+14. Distinguish between correlation and regression. (4 marks)
+15. Discuss briefly the methods of correlation analysis covered in the text (Scatter Diagram, Karl Pearson). (Part of a 6 marks question)
+16. Calculate correlation co-efficient for the following data: (10 marks)
+    <table>
+      <thead>
+        <tr>
+          <th>X</th>
+          <th>65</th>
+          <th>66</th>
+          <th>67</th>
+          <th>67</th>
+          <th>68</th>
+          <th>69</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Y</td>
+          <td>67</td>
+          <td>68</td>
+          <td>65</td>
+          <td>68</td>
+          <td>72</td>
+          <td>72</td>
+        </tr>
+      </tbody>
+    </table>
+17. The coefficient of correlation between $X$ and $Y$ is $0.60$. Their covariance is $4.80$ and variance of $X$ is $9$. Find the standard deviation of $Y$. (3 marks)
+
+# 2. Regression
+
+1.  Define regression analysis. (3 marks)
+2.  The regression line $x$ on $y$ is $2x - 3y + 5 = 0$. Identify the regression co-efficient $x$ on $y$ ($b_{xy}$). (3 marks)
+3.  The line of regression $x$ on $y$ is $x - 0.3y - 35 = 0$. Identify the value of $x$ when $y = 6$. (3 marks)
+4.  Explain the two types of regression lines. What are their uses? (5 marks)
+5.  Define regression co-efficients. Prove that the geometric mean of regression co-efficient gives the absolute value of the co-efficient of correlation. ($r = \pm \sqrt{b_{xy} b_{yx}}$) (5 marks)
+6.  The lines of regression $x$ on $y$ and $y$ on $x$ are $3x - 2y + 5 = 0$ and $5x - 4y + 4 = 0$. Find the means of $x$ and $y$. (5 marks)
+7.  If $b_{XY} = -0.90$ and $b_{YX} = -0.40$, find the value of the correlation coefficient. (3 marks)
+8.  The two lines of regression are $x + 2y - 5 = 0$ and $2x + 3y = 8$. Find the means of $x$ and $y$. (3 marks)
+9.  Explain the concept of regression and write down the equations of lines of regression. When do these lines coincide? (5 marks)
+10. On each of 30 items, two measurements X and Y are made and following data were obtained:
+    $$ \sum X = 120, \sum Y = 90, \sum X^2 = 600, \sum Y^2 = 300, \sum XY = 330 $$
+    Calculate the slope of regression line of Y on X ($b_{yx}$). (Part of a 5 marks question)
+11. The equations of two lines of regression are $3x+12y-10=0$ and $3y+9x-46=0$.
+    (i) Identify the regression lines.
+    (ii) Obtain the value of $x$, when $y = 10$ and the value of $y$, when $x = 3$.
+    (iii) If variance of X is 9, find the standard deviation of Y. (11 marks)
+12. Regression equation of $x$ on $y$ is \_\_\_\_\_\_\_\_\_\_. (1 mark)
+13. The regression co-efficient $b_{xy} = 0.2$ and the correlation coefficient between $x$ and $y$ $0.4$. Then regression co-efficient $b_{yx} =$ \_\_\_\_\_\_\_\_\_\_. (1 mark)
+    a) 0.2.
+    b) 0.6.
+    c) 0.8.
+    d) 0.4.
+14. The two regression lines in a bivariate study is as follows $3x + 12y = 19$ and $3y + 9x = 46$. Obtain $\bar{x}, \bar{y}$ and $r(x, y)$. (4 marks)
+
+# 3. Curve Fitting (Non-linear Regression)
+
+1.  Define non-linear regression. (3 marks)
+2.  What is the principle of least squares? (3 marks)
+3.  Fit a straight line of the form $y = ax + b$ using the following data: (11 marks)
+    <table>
+      <thead>
+        <tr>
+          <th>$x$</th>
+          <th>2</th>
+          <th>4</th>
+          <th>6</th>
+          <th>8</th>
+          <th>10</th>
+          <th>12</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>$y$</td>
+          <td>9</td>
+          <td>12</td>
+          <td>18</td>
+          <td>30</td>
+          <td>34</td>
+          <td>42</td>
+        </tr>
+      </tbody>
+    </table>
+4.  Explain the method of fitting of regression equation of the form $y = ab^x$ using the data $(x_1, y_1), (x_2, y_2) \dots (x_n, y_n)$. (5 marks)
+5.  Obtain the best fitted parabola for the following data: (6 marks)
+    <table>
+      <thead>
+        <tr>
+          <th>X</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Y</td>
+          <td>1</td>
+          <td>1.8</td>
+          <td>3.3</td>
+          <td>2.5</td>
+          <td>6.3</td>
+        </tr>
+      </tbody>
+    </table>
+6.  Fit a trend line ($y=a+bx$) and estimate the production in the year 1990 for the following data: (6 marks)
+    <table>
+      <thead>
+        <tr>
+          <th>Year</th>
+          <th>1982</th>
+          <th>1984</th>
+          <th>1986</th>
+          <th>1988</th>
+          <th>1990</th>
+          <th>1992</th>
+          <th>1994</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Production (in units)</td>
+          <td>77</td>
+          <td>81</td>
+          <td>88</td>
+          <td>94</td>
+          <td>94</td>
+          <td>96</td>
+          <td>98</td>
+        </tr>
+      </tbody>
+    </table>
+    *(Note: Treat 'Year' as X, 'Production' as Y. You might need to transform X, e.g., by subtracting the middle year or starting from 0)*

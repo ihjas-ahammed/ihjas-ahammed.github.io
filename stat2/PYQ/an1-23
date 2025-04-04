@@ -1,0 +1,539 @@
+
+
+**1. Random Variables and Probability Distributions**
+
+**1. What is the expected profit for a seller per item, if he is selling a large number of this item per day with various profits Rs. 2, 3 or 4 according to the buyer with a probability 0.2, 0.35 and 0.45 respectively?**
+
+*   **Concept:** The expected profit is the Expected Value (E[X]) of the profit random variable X.
+*   **Let X be the random variable representing the profit per item.**
+    *   Possible values for X: {2, 3, 4}
+    *   Corresponding probabilities P(X=x): {0.2, 0.35, 0.45}
+*   **Formula for Expected Value (Discrete Random Variable):**
+    `E[X] = Σ [x * P(X=x)]`
+*   **Calculation:**
+    `E[X] = (2 * 0.2) + (3 * 0.35) + (4 * 0.45)`
+    `E[X] = 0.4 + 1.05 + 1.80`
+    `E[X] = 3.25`
+*   **Answer:** The expected profit for the seller per item is Rs. 3.25.
+
+---
+
+**2. Probability Mass Function (PMF) and Cumulative Distribution Function (CDF)**
+
+**1. If the number shown when an unbiased die is thrown. Name the probability distribution of X. Write the p.m.f. of X.**
+
+*   **Let X be the random variable representing the number shown on the die.**
+*   **Possible values for X:** The sample space is S = {1, 2, 3, 4, 5, 6}.
+*   **Probability:** Since the die is unbiased, each outcome is equally likely. The probability of each outcome is 1/6.
+*   **Name of Distribution:** This is a **Discrete Uniform Distribution** on the integers {1, 2, 3, 4, 5, 6}.
+*   **Probability Mass Function (p.m.f.):** The p.m.f., denoted by P(X=x) or p(x), gives the probability that the random variable X takes on a specific value x.
+    `P(X=x) = { 1/6,  if x ∈ {1, 2, 3, 4, 5, 6} }`
+    `P(X=x) = { 0,    otherwise }`
+
+---
+
+**3. Mathematical Expectation**
+
+**1. For any random variable X, show that V(X) is always non-negative. (Hint: Use the definition of variance in terms of expectation)**
+
+*   **Definition of Variance:** The variance of a random variable X, denoted V(X) or Var(X), is defined as the expected value of the squared deviation from the mean. Let μ = E[X] be the expected value (mean) of X.
+    `V(X) = E[(X - μ)²]`
+*   **Consider the term inside the expectation:** Let Y = (X - μ)².
+*   Since X is a random variable and μ is a constant (the mean), (X - μ) is also a random variable representing the deviation from the mean.
+*   The square of any real number is always non-negative. Therefore, (X - μ)² ≥ 0 for all possible outcomes of X. So, the random variable Y is always non-negative (Y ≥ 0).
+*   **Property of Expectation:** If a random variable Y is always greater than or equal to zero (Y ≥ 0), then its expected value must also be greater than or equal to zero (E[Y] ≥ 0). This is because the expectation is a weighted average of the possible values of Y, and if all possible values are non-negative, the average must also be non-negative.
+*   **Conclusion:** Since V(X) = E[Y] and Y = (X - μ)² ≥ 0, it follows directly from the property of expectation that E[Y] ≥ 0.
+    Therefore, `V(X) ≥ 0`. Variance is always non-negative.
+
+---
+
+**4. Moments**
+
+**1. Explain two methods of finding raw moments of X, when the moment generating function of X exists.**
+
+*   **Raw Moments:** The r-th raw moment of a random variable X is defined as `μ'_r = E[X^r]`.
+*   **Moment Generating Function (MGF):** The MGF of X is defined as `M_X(t) = E[e^(tX)]`, assuming it exists for t in some interval around 0.
+
+*   **Method 1: Differentiation**
+    *   The r-th raw moment `μ'_r` can be found by taking the r-th derivative of the MGF `M_X(t)` with respect to t, and then evaluating the result at t = 0.
+    *   **Formula:** `μ'_r = d^r/dt^r [M_X(t)] |_(t=0)`
+    *   **Explanation:** This works because differentiating `e^(tX)` r times with respect to t yields `X^r * e^(tX)`. Taking the expectation and setting t=0 gives `E[X^r * e^0] = E[X^r]`.
+        *   `μ'_1 = E[X] = M'_X(0)`
+        *   `μ'_2 = E[X²] = M''_X(0)`
+        *   ...and so on.
+
+*   **Method 2: Series Expansion**
+    *   Expand the MGF `M_X(t)` as a power series (Taylor series) in t around t = 0.
+    *   **Formula:** `M_X(t) = E[e^(tX)] = E[Σ_{r=0 to ∞} (tX)^r / r!] = Σ_{r=0 to ∞} E[X^r] * t^r / r!` (by linearity of expectation, assuming interchange of sum and expectation is valid).
+    *   `M_X(t) = Σ_{r=0 to ∞} μ'_r * t^r / r! = μ'_0 + μ'_1 * t/1! + μ'_2 * t²/2! + μ'_3 * t³/3! + ...`
+    *   **Explanation:** The r-th raw moment `μ'_r` is the coefficient of `t^r / r!` in the power series expansion of `M_X(t)`. By finding the series expansion, one can identify the moments directly. Note that `μ'_0 = E[X^0] = E[1] = 1`.
+
+**2. Show that the 1st central moment of a random variable X is zero.**
+
+*   **Central Moments:** The r-th central moment of X is defined as `μ_r = E[(X - μ)^r]`, where `μ = E[X]`.
+*   **1st Central Moment (r=1):** We need to find `μ_1`.
+    `μ_1 = E[(X - μ)^1] = E[X - μ]`
+*   **Using Linearity of Expectation:** The expectation of a sum (or difference) is the sum (or difference) of expectations.
+    `E[X - μ] = E[X] - E[μ]`
+*   **Expectation of a Constant:** The mean `μ = E[X]` is a constant value. The expectation of a constant is the constant itself.
+    `E[μ] = μ`
+*   **Substitution:** Substitute `E[μ] = μ` back into the equation:
+    `μ_1 = E[X] - μ`
+*   **Final Step:** Substitute the definition of `μ = E[X]`:
+    `μ_1 = E[X] - E[X] = 0`
+*   **Conclusion:** The 1st central moment `μ_1` is always zero.
+
+**3. Define the coefficient of kurtosis based on moments.**
+
+*   **Kurtosis:** Kurtosis measures the "tailedness" or "peakedness" of a probability distribution relative to a normal distribution.
+*   **Coefficient of Kurtosis (Pearson's Kurtosis):** It is usually denoted by `β₂` and is defined using the central moments:
+    `β₂ = μ₄ / (μ₂)²`
+    where:
+    *   `μ₄ = E[(X - μ)⁴]` is the 4th central moment.
+    *   `μ₂ = E[(X - μ)²] = V(X)` is the 2nd central moment (the variance).
+*   **Interpretation:**
+    *   For a normal distribution, `β₂ = 3`.
+    *   `β₂ > 3`: Leptokurtic distribution (sharper peak, fatter tails than normal).
+    *   `β₂ < 3`: Platykurtic distribution (flatter peak, thinner tails than normal).
+*   **Excess Kurtosis:** Sometimes, *excess kurtosis* (`γ₂`) is used, defined as `γ₂ = β₂ - 3`. This compares the kurtosis directly to that of a normal distribution (where `γ₂ = 0`).
+
+---
+
+**5. Moment Generating Function (MGF)**
+
+**1. Obtain the m.g.f. of X following a geometric distribution with parameter p. (Refer to the properties of MGF for sums of random variables)**
+
+*   **Geometric Distribution:** Let's assume X represents the number of Bernoulli trials needed to get the *first* success. The probability of success on any trial is `p`.
+    *   PMF: `P(X=k) = (1-p)^(k-1) * p` for `k = 1, 2, 3, ...`
+    *   Let `q = 1-p` be the probability of failure. `P(X=k) = q^(k-1) * p`.
+*   **MGF Definition:** `M_X(t) = E[e^(tX)] = Σ_{k=1 to ∞} e^(tk) * P(X=k)`
+*   **Calculation:**
+    `M_X(t) = Σ_{k=1 to ∞} e^(tk) * q^(k-1) * p`
+    `M_X(t) = p * Σ_{k=1 to ∞} e^(tk) * q^(k-1)`
+    Factor out `e^t`:
+    `M_X(t) = p * e^t * Σ_{k=1 to ∞} e^(t(k-1)) * q^(k-1)`
+    Let `j = k-1`. When `k=1`, `j=0`. As `k -> ∞`, `j -> ∞`.
+    `M_X(t) = p * e^t * Σ_{j=0 to ∞} e^(tj) * q^j`
+    `M_X(t) = p * e^t * Σ_{j=0 to ∞} (q * e^t)^j`
+*   **Geometric Series:** The sum is a geometric series `Σ_{j=0 to ∞} r^j = 1 / (1 - r)`, provided `|r| < 1`. Here, `r = q * e^t`.
+*   **Result:**
+    `M_X(t) = p * e^t * [ 1 / (1 - q * e^t) ]`
+    `M_X(t) = (p * e^t) / (1 - (1-p)e^t)`
+*   **Condition for Convergence:** The series converges if `|q * e^t| < 1`, i.e., `|(1-p)e^t| < 1`.
+*   **Note on the Hint:** The hint "Refer to the properties of MGF for sums of random variables" seems misplaced for finding the MGF of a single Geometric random variable directly from the definition. It might be relevant if relating Geometric to Negative Binomial (sum of Geometrics) or deriving Negative Binomial MGF, but not directly for this question as stated.
+
+**2. If φ_X(t) is the characteristic function of X, prove that |φ_X(t)| ≤ 1. (Use the properties of expectation and complex numbers.)**
+
+*   **Characteristic Function (CF):** The CF of a random variable X is defined as `φ_X(t) = E[e^(itX)]`, where `i` is the imaginary unit (`i² = -1`) and `t` is a real number.
+*   **Goal:** Prove `|φ_X(t)| ≤ 1`.
+*   **Modulus of the CF:** `|φ_X(t)| = |E[e^(itX)]|`.
+*   **Property of Expectation:** For any complex-valued random variable Z, `|E[Z]| ≤ E[|Z|]`. (This is a form of Jensen's inequality or can be shown from the definition of expectation).
+*   **Applying the property:** Let `Z = e^(itX)`. Then:
+    `|E[e^(itX)]| ≤ E[|e^(itX)|]`
+*   **Modulus of the Complex Exponential:** Use Euler's formula: `e^(iθ) = cos(θ) + i sin(θ)`.
+    So, `e^(itX) = cos(tX) + i sin(tX)`.
+    The modulus of a complex number `a + bi` is `sqrt(a² + b²)`.
+    `|e^(itX)| = |cos(tX) + i sin(tX)| = sqrt(cos²(tX) + sin²(tX))`
+    Using the fundamental trigonometric identity `cos²(θ) + sin²(θ) = 1`:
+    `|e^(itX)| = sqrt(1) = 1`.
+*   **Substitution:** Substitute `|e^(itX)| = 1` back into the inequality:
+    `|E[e^(itX)]| ≤ E[1]`
+*   **Expectation of a Constant:** The expectation of the constant 1 is 1. `E[1] = 1`.
+*   **Conclusion:** Combining the steps:
+    `|φ_X(t)| = |E[e^(itX)]| ≤ E[|e^(itX)|] = E[1] = 1`
+    Therefore, `|φ_X(t)| ≤ 1`.
+
+---
+
+**6. Binomial Distribution**
+
+**1. Identify the parameters of X following a binomial distribution with mean 12 and variance 3. (Use the formulas for mean and variance of a binomial distribution)**
+
+*   **Binomial Distribution:** X ~ B(n, p), where `n` is the number of trials and `p` is the probability of success.
+*   **Formulas:**
+    *   Mean: `E[X] = np`
+    *   Variance: `V(X) = np(1-p)`
+*   **Given:** `E[X] = 12` and `V(X) = 3`.
+*   **Equations:**
+    1.  `np = 12`
+    2.  `np(1-p) = 3`
+*   **Solve for p:** Substitute equation (1) into equation (2):
+    `12 * (1-p) = 3`
+    `1 - p = 3 / 12 = 1/4`
+    `p = 1 - 1/4 = 3/4`
+*   **Solve for n:** Substitute the value of `p` back into equation (1):
+    `n * (3/4) = 12`
+    `n = 12 * (4/3)`
+    `n = 16`
+*   **Answer:** The parameters of the binomial distribution are `n = 16` and `p = 3/4`.
+
+**2. State and prove the additive property of binomial distribution. (This requires using the definition of binomial distribution and potentially the MGF)**
+
+*   **Statement (Additive Property):** If X ~ B(n₁, p) and Y ~ B(n₂, p) are *independent* random variables with the *same* probability of success `p`, then their sum Z = X + Y follows a binomial distribution with parameters `n₁ + n₂` and `p`.
+    `Z = X + Y ~ B(n₁ + n₂, p)`
+
+*   **Proof using MGF:**
+    1.  **MGF of Binomial:** The MGF of a binomial distribution B(n, p) is `M(t) = (q + pe^t)^n`, where `q = 1-p`.
+    2.  **MGF of X:** Since X ~ B(n₁, p), its MGF is `M_X(t) = (q + pe^t)^(n₁)`.
+    3.  **MGF of Y:** Since Y ~ B(n₂, p), its MGF is `M_Y(t) = (q + pe^t)^(n₂)`.
+    4.  **MGF of Sum of Independent Variables:** For independent random variables X and Y, the MGF of their sum Z = X + Y is the product of their individual MGFs: `M_Z(t) = M_{X+Y}(t) = M_X(t) * M_Y(t)`.
+    5.  **Calculate M_Z(t):**
+        `M_Z(t) = M_X(t) * M_Y(t) = (q + pe^t)^(n₁) * (q + pe^t)^(n₂)`
+        `M_Z(t) = (q + pe^t)^(n₁ + n₂)`
+    6.  **Conclusion:** The resulting MGF, `(q + pe^t)^(n₁ + n₂)` is the MGF of a Binomial distribution with parameters `n₁ + n₂` and `p`. By the uniqueness property of MGFs (an MGF uniquely determines the distribution), we conclude that `Z = X + Y ~ B(n₁ + n₂, p)`.
+
+**3. If P(X = 2) = P(X = 3), where X follows a Poisson distribution, find the m.g.f. of X. (Use the PMF of the Poisson distribution and the definition of MGF)**
+
+*   **Poisson Distribution:** X ~ Poisson(λ).
+    *   PMF: `P(X=k) = (e^(-λ) * λ^k) / k!` for `k = 0, 1, 2, ...`
+*   **Given Condition:** `P(X=2) = P(X=3)`
+*   **Set up Equation:**
+    `(e^(-λ) * λ²) / 2! = (e^(-λ) * λ³) / 3!`
+*   **Solve for λ:** Since `e^(-λ)` is always positive, we can cancel it. Assuming `λ > 0` (otherwise probabilities are zero), we can also divide by `λ²`.
+    `1 / 2! = λ / 3!`
+    `1 / 2 = λ / (3 * 2 * 1)`
+    `1 / 2 = λ / 6`
+    `λ = 6 / 2 = 3`
+    So, X follows a Poisson distribution with parameter `λ = 3`.
+*   **MGF of Poisson:** The MGF of a Poisson(λ) distribution is `M_X(t) = E[e^(tX)] = e^(λ(e^t - 1))`.
+*   **Substitute λ = 3:**
+    `M_X(t) = e^(3(e^t - 1))`
+*   **Answer:** The MGF of X is `M_X(t) = e^(3(e^t - 1))`.
+
+**4. What are the physical conditions for which the binomial distribution is used?**
+
+The binomial distribution models the number of successes in a sequence of trials when the following conditions hold:
+1.  **Fixed Number of Trials:** The experiment consists of a fixed number of trials, denoted by `n`.
+2.  **Two Outcomes:** Each trial has only two possible mutually exclusive outcomes, typically labeled "success" and "failure".
+3.  **Constant Probability:** The probability of success, denoted by `p`, remains the same for every trial. Consequently, the probability of failure, `q = 1-p`, is also constant.
+4.  **Independent Trials:** The outcome of each trial is independent of the outcomes of all other trials.
+
+**5. Find the mode of following binomial distribution with parameters `n` and `p`.**
+
+*   **Mode:** The mode of a distribution is the value of the random variable that has the highest probability of occurring. For a Binomial distribution B(n, p), the mode can be found by considering the value `(n+1)p`.
+*   **Calculation:**
+    1.  Calculate `m = (n+1)p`.
+    2.  **Case 1: `m` is not an integer.** The mode is unique and is equal to `floor(m)`, the largest integer less than or equal to `m`.
+        Mode = `⌊(n+1)p⌋`
+    3.  **Case 2: `m` is an integer.** The distribution has two modes: `m` and `m-1`.
+        Modes = `(n+1)p` and `(n+1)p - 1`
+*   **Example:** If n=10, p=0.3, then (n+1)p = 11 * 0.3 = 3.3. Since 3.3 is not an integer, the mode is floor(3.3) = 3.
+*   **Example:** If n=5, p=0.5, then (n+1)p = 6 * 0.5 = 3. Since 3 is an integer, the modes are 3 and 3-1=2.
+
+---
+
+**7. Poisson Distribution**
+
+**1. If the variance of X following a Poisson distribution is 5, find P(X = 5). (Use the fact that mean and variance are equal in a Poisson distribution)**
+
+*   **Poisson Distribution Property:** For a Poisson distribution X ~ Poisson(λ), both the mean and the variance are equal to the parameter λ.
+    `E[X] = λ`
+    `V(X) = λ`
+*   **Given:** Variance `V(X) = 5`.
+*   **Find λ:** Therefore, the parameter `λ = 5`. So, X ~ Poisson(5).
+*   **PMF:** `P(X=k) = (e^(-λ) * λ^k) / k!`
+*   **Calculate P(X=5):** Substitute `λ = 5` and `k = 5`.
+    `P(X=5) = (e^(-5) * 5^5) / 5!`
+    `P(X=5) = (e^(-5) * 3125) / (5 * 4 * 3 * 2 * 1)`
+    `P(X=5) = (e^(-5) * 3125) / 120`
+    `P(X=5) = (625 * e^(-5)) / 24`
+*   **Answer:** `P(X=5) = (625 * e^(-5)) / 24` (or approximately 0.1755).
+
+**2. Define negative binomial distribution. (Relate it to the binomial distribution and describe its properties)**
+
+*   **Definition:** The Negative Binomial distribution models the number of independent Bernoulli trials required to achieve a specified number (`r`) of successes. The probability of success on each trial is `p`.
+    *   **Random Variable (Common Definition 1):** Let Y be the total number of trials needed to get exactly `r` successes.
+        *   Support: `y = r, r+1, r+2, ...`
+        *   PMF: `P(Y=y) = C(y-1, r-1) * p^r * (1-p)^(y-r)`
+    *   **Random Variable (Common Definition 2):** Let X be the number of failures encountered *before* the `r`-th success occurs. `X = Y - r`.
+        *   Support: `x = 0, 1, 2, ...`
+        *   PMF: `P(X=x) = C(x+r-1, x) * p^r * (1-p)^x = C(x+r-1, r-1) * p^r * (1-p)^x`
+
+*   **Relation to Binomial:**
+    *   Binomial: Fixed number of trials (`n`), variable number of successes (`k`).
+    *   Negative Binomial: Variable number of trials (`y` or `x+r`), fixed number of successes (`r`).
+    *   The probability term `p^r * (1-p)^(number of failures)` appears in both, but the combinatorial coefficient differs because the stopping condition is different.
+
+*   **Properties (using Y, number of trials):**
+    *   **Mean:** `E[Y] = r / p`
+    *   **Variance:** `V(Y) = r(1-p) / p²`
+    *   **Relation to Geometric:** The Geometric distribution (number of trials for 1st success) is a special case of the Negative Binomial distribution with `r=1`.
+    *   **Sum of Geometrics:** The sum of `r` independent Geometric(p) random variables (trials version) follows a Negative Binomial NB(r, p) distribution (trials version).
+
+**3. Show that in a Poisson distribution with unit mean, the mean deviation about the mean is 2/e times the standard deviation.**
+
+*   **Distribution:** Poisson distribution with unit mean, so `λ = 1`. X ~ Poisson(1).
+*   **Mean:** `μ = E[X] = λ = 1`.
+*   **Standard Deviation:** `σ = sqrt(V(X)) = sqrt(λ) = sqrt(1) = 1`.
+*   **PMF:** `P(X=k) = (e^(-1) * 1^k) / k! = e^(-1) / k!` for `k = 0, 1, 2, ...`
+*   **Mean Deviation about Mean (MD):** `MD = E[|X - μ|] = E[|X - 1|]`
+    `MD = Σ_{k=0 to ∞} |k - 1| * P(X=k)`
+    `MD = Σ_{k=0 to ∞} |k - 1| * (e^(-1) / k!)`
+*   **Calculation:**
+    `MD = |0 - 1|*P(X=0) + |1 - 1|*P(X=1) + |2 - 1|*P(X=2) + |3 - 1|*P(X=3) + ...`
+    `MD = 1 * P(X=0) + 0 * P(X=1) + 1 * P(X=2) + 2 * P(X=3) + 3 * P(X=4) + ...`
+    `MD = e^(-1) * [ 1/0! + 0 + 1/2! + 2/3! + 3/4! + ... ]`
+    `MD = e^(-1) * [ 1 + Σ_{k=2 to ∞} (k-1) / k! ]`
+    Let's evaluate the sum: `Σ_{k=2 to ∞} (k-1) / k! = Σ_{k=2 to ∞} [ k/k! - 1/k! ]`
+    `= Σ_{k=2 to ∞} [ 1/(k-1)! - 1/k! ]`
+    This is a telescoping series:
+    `= (1/1! - 1/2!) + (1/2! - 1/3!) + (1/3! - 1/4!) + ...`
+    All terms cancel except the first one. The sum converges to `1/1! = 1`.
+    Substitute back into the MD expression:
+    `MD = e^(-1) * [ 1 + 1 ] = e^(-1) * 2 = 2/e`
+*   **Compare MD and Standard Deviation:** We found `MD = 2/e` and `σ = 1`.
+*   **Conclusion:** `MD = 2/e = (2/e) * 1 = (2/e) * σ`. The mean deviation about the mean is indeed `2/e` times the standard deviation.
+
+**4. A car hire firm has two cars which it hires out day by day. The number of demands for a car on each day is distributed as a Poisson variate with mean 1.5. Calculate the proportion of days on which (i) neither car is used and (ii) some demand is refused.**
+
+*   **Distribution:** Let X be the number of demands per day. X ~ Poisson(λ = 1.5).
+*   **PMF:** `P(X=k) = (e^(-1.5) * 1.5^k) / k!`
+*   **Cars available:** 2.
+
+*   **(i) Neither car is used:**
+    *   This occurs if the demand is zero (X = 0).
+    *   `P(X=0) = (e^(-1.5) * 1.5^0) / 0! = e^(-1.5) * 1 / 1 = e^(-1.5)`
+    *   `P(X=0) ≈ 0.2231`
+    *   **Answer (i):** The proportion of days on which neither car is used is `e^(-1.5)` (approximately 22.31%).
+
+*   **(ii) Some demand is refused:**
+    *   This occurs if the demand is greater than the number of cars available (X > 2).
+    *   `P(X > 2) = 1 - P(X ≤ 2) = 1 - [P(X=0) + P(X=1) + P(X=2)]`
+    *   Calculate needed probabilities:
+        *   `P(X=0) = e^(-1.5)`
+        *   `P(X=1) = (e^(-1.5) * 1.5^1) / 1! = 1.5 * e^(-1.5)`
+        *   `P(X=2) = (e^(-1.5) * 1.5^2) / 2! = (e^(-1.5) * 2.25) / 2 = 1.125 * e^(-1.5)`
+    *   Substitute into the formula for P(X > 2):
+        `P(X > 2) = 1 - [e^(-1.5) + 1.5 * e^(-1.5) + 1.125 * e^(-1.5)]`
+        `P(X > 2) = 1 - e^(-1.5) * (1 + 1.5 + 1.125)`
+        `P(X > 2) = 1 - e^(-1.5) * (3.625)`
+    *   `P(X > 2) ≈ 1 - (0.2231 * 3.625) ≈ 1 - 0.8088 ≈ 0.1912`
+    *   **Answer (ii):** The proportion of days on which some demand is refused is `1 - 3.625 * e^(-1.5)` (approximately 19.12%).
+
+**5. Derive the Poisson distribution as a limiting case of the binomial distribution. (This requires a detailed mathematical derivation using limits.)**
+
+*   **Goal:** Show that Binomial(n, p) approaches Poisson(λ) as `n -> ∞` and `p -> 0` such that `np = λ` (a constant).
+*   **Binomial PMF:** `P(X=k) = C(n, k) * p^k * (1-p)^(n-k)`
+    `P(X=k) = [n! / (k! * (n-k)!)] * p^k * (1-p)^(n-k)`
+*   **Substitute p = λ/n:**
+    `P(X=k) = [n! / (k! * (n-k)!)] * (λ/n)^k * (1 - λ/n)^(n-k)`
+*   **Rearrange and Expand:**
+    `P(X=k) = [n(n-1)(n-2)...(n-k+1) * (n-k)!] / [k! * (n-k)!] * (λ^k / n^k) * (1 - λ/n)^n * (1 - λ/n)^(-k)`
+    `P(X=k) = [n(n-1)(n-2)...(n-k+1)] / k! * (λ^k / n^k) * (1 - λ/n)^n * (1 - λ/n)^(-k)`
+    `P(X=k) = (λ^k / k!) * [n(n-1)...(n-k+1) / n^k] * (1 - λ/n)^n * (1 - λ/n)^(-k)`
+*   **Analyze Limits as n -> ∞ (for fixed k and λ):**
+    1.  `(λ^k / k!)`: This term remains constant as it doesn't depend on `n`.
+    2.  `[n(n-1)...(n-k+1) / n^k]`: This is a product of `k` terms.
+        `= (n/n) * ((n-1)/n) * ((n-2)/n) * ... * ((n-k+1)/n)`
+        `= 1 * (1 - 1/n) * (1 - 2/n) * ... * (1 - (k-1)/n)`
+        As `n -> ∞`, each term `(1 - j/n)` approaches 1. The product of `k` terms approaching 1 is 1.
+        Limit = `1`.
+    3.  `(1 - λ/n)^n`: This is a standard limit form. Recall `lim_{n->∞} (1 + x/n)^n = e^x`. Here `x = -λ`.
+        Limit = `e^(-λ)`.
+    4.  `(1 - λ/n)^(-k)`: As `n -> ∞`, `λ/n -> 0`. So `(1 - λ/n) -> 1`.
+        Limit = `1^(-k) = 1`.
+*   **Combine the Limits:** Multiply the limits of each part:
+    `lim_{n->∞} P(X=k) = (λ^k / k!) * 1 * e^(-λ) * 1`
+    `lim_{n->∞} P(X=k) = (e^(-λ) * λ^k) / k!`
+*   **Conclusion:** The resulting expression is the PMF of a Poisson distribution with parameter `λ`. Thus, the Poisson distribution is the limiting case of the Binomial distribution under the specified conditions.
+
+---
+
+**8. General Probability Concepts**
+
+**1. Define (a) Random experiment; (b) Event.**
+
+*   **(a) Random Experiment:** A process or action whose outcome cannot be predicted with certainty before it occurs, but the set of all possible outcomes is known. Examples: Tossing a fair coin, rolling a standard die, measuring the height of a randomly selected person.
+*   **(b) Event:** A specific outcome or a set of outcomes of a random experiment. Mathematically, an event is any subset of the sample space (the set of all possible outcomes). Examples: Getting "Heads" (an outcome) when tossing a coin; Getting an even number ({2, 4, 6}) when rolling a die (a set of outcomes).
+
+**2. Define Bernoulli random variable.**
+
+*   A **Bernoulli random variable** is a discrete random variable that represents the outcome of a single **Bernoulli trial**. A Bernoulli trial is an experiment with exactly two possible mutually exclusive outcomes, conventionally labeled "success" and "failure".
+*   The random variable typically takes the value:
+    *   `1` if the outcome is a "success" (with probability `p`)
+    *   `0` if the outcome is a "failure" (with probability `q = 1-p`)
+*   **PMF:** `P(X=x) = p^x * (1-p)^(1-x)` for `x ∈ {0, 1}`.
+
+**3. Define characteristic function of a random variable.**
+
+*   The **characteristic function (CF)** of a random variable X (real-valued) is a function `φ_X(t)` defined for all real numbers `t` as the expected value of `e^(itX)`, where `i` is the imaginary unit (`i² = -1`).
+*   **Definition:** `φ_X(t) = E[e^(itX)]`
+*   **Calculation:**
+    *   If X is discrete with PMF `P(X=k)`: `φ_X(t) = Σ_k e^(itk) * P(X=k)`
+    *   If X is continuous with PDF `f(x)`: `φ_X(t) = ∫_{-∞ to ∞} e^(itx) * f(x) dx`
+*   The characteristic function always exists for any random variable and uniquely determines its probability distribution.
+
+**4. Name the discrete distribution having the memoryless property.**
+
+*   The **Geometric distribution** is the unique discrete probability distribution that possesses the memoryless property.
+*   **Memoryless Property (Discrete):** If X is the number of trials needed for the first success, then `P(X > s + t | X > s) = P(X > t)` for non-negative integers `s` and `t`. This means that if the first success hasn't occurred after `s` trials, the probability that it will take at least `t` *more* trials is the same as the probability that it would take at least `t` trials from the beginning.
+
+**5. If X ~ B(n, p), the distribution of y = n - X is _____. (Think about the properties of the binomial distribution and transformations)**
+
+*   **Interpretation:**
+    *   X ~ B(n, p) represents the number of "successes" in `n` independent Bernoulli trials, where `p` is the probability of success in a single trial.
+    *   Y = n - X represents the total number of trials (`n`) minus the number of successes (`X`). This difference is exactly the number of "failures" in the `n` trials.
+*   **Properties of the Trials:**
+    *   There are `n` independent trials.
+    *   Each trial has two outcomes: Success (prob `p`) or Failure (prob `q = 1-p`).
+*   **Distribution of Y:** Y counts the number of failures in `n` independent Bernoulli trials, where the probability of failure in each trial is `q = 1-p`. This fits the definition of a Binomial distribution.
+*   **Parameters for Y:**
+    *   Number of trials = `n`.
+    *   Probability of the outcome being counted ("failure") = `q = 1-p`.
+*   **Answer:** The distribution of Y = n - X is **Binomial(n, 1-p)** or **B(n, 1-p)**.
+
+---
+*(Continuing with questions from page 3, assuming they follow section 8)*
+
+**8.6. If X and Y are two independent variables, the conditional distribution of X given Y = y, f(x|y) = _____. (Consider the meaning of independence in terms of conditional probabilities)**
+
+*   **Conditional Distribution Definition:** The conditional PDF (or PMF) of X given Y=y is defined as `f(x|y) = f(x, y) / f_Y(y)`, where `f(x, y)` is the joint PDF/PMF and `f_Y(y)` is the marginal PDF/PMF of Y (assuming `f_Y(y) > 0`).
+*   **Independence Definition:** X and Y are independent if and only if their joint distribution is the product of their marginal distributions: `f(x, y) = f_X(x) * f_Y(y)`.
+*   **Substitution:** Substitute the independence condition into the definition of the conditional distribution:
+    `f(x|y) = [f_X(x) * f_Y(y)] / f_Y(y)`
+*   **Simplification:** Cancel `f_Y(y)`:
+    `f(x|y) = f_X(x)`
+*   **Answer:** If X and Y are independent, the conditional distribution of X given Y=y is simply the **marginal distribution of X, `f_X(x)`**. Knowing the value of Y provides no information about X when they are independent.
+
+**8.7. For a geometric distribution, the mean is always less than the variance. (True or False, justify using formulas)**
+
+*   **Geometric Distribution (Let X = number of trials for 1st success):**
+    *   Parameter: `p` (probability of success, `0 < p ≤ 1`).
+    *   Mean: `E[X] = μ = 1/p`
+    *   Variance: `V(X) = σ² = (1-p) / p²`
+*   **Comparison:** We need to compare `1/p` and `(1-p) / p²`.
+    *   Consider the ratio: `V(X) / E[X] = [(1-p)/p²] / [1/p] = (1-p)/p`.
+    *   Consider the difference: `V(X) - E[X] = (1-p)/p² - 1/p = (1-p - p) / p² = (1 - 2p) / p²`.
+*   **Analysis:**
+    *   If `p = 1` (success is certain on the first trial): Mean = 1/1 = 1, Variance = (1-1)/1² = 0. Mean > Variance.
+    *   If `p = 1/2`: Mean = 1/(1/2) = 2, Variance = (1-1/2)/(1/2)² = (1/2)/(1/4) = 2. Mean = Variance.
+    *   If `p < 1/2` (e.g., p=0.1): Mean = 10, Variance = (0.9)/(0.01) = 90. Mean < Variance.
+    *   If `p > 1/2` (e.g., p=0.8): Mean = 1/0.8 = 1.25, Variance = (0.2)/(0.64) = 0.3125. Mean > Variance.
+*   The mean is less than the variance only when `V(X) - E[X] > 0`, which means `(1 - 2p) / p² > 0`. Since `p² > 0`, this requires `1 - 2p > 0`, or `2p < 1`, or `p < 1/2`.
+*   **Answer:** **False**. The mean is less than the variance only if `p < 1/2`. It is equal if `p = 1/2` and greater if `p > 1/2`.
+*   **Note:** If the Geometric distribution is defined as the number of *failures* before the first success (Y = X-1), then `E[Y] = (1-p)/p` and `V(Y) = (1-p)/p²`. In this case, `V(Y) ≥ E[Y]` because `V(Y)/E[Y] = 1/p ≥ 1` (for `0 < p ≤ 1`). So, the statement's truth depends on the definition used. Assuming the "number of trials" definition, it's False.
+
+**8.8. Define mathematical expectation of a random variable.**
+
+*   The **mathematical expectation** (or expected value, or mean) of a random variable X, denoted `E[X]`, represents the weighted average of all possible values that the random variable can take on, weighted by their respective probabilities (or probability densities).
+*   **Formal Definitions:**
+    *   **Discrete Random Variable:** If X has a PMF `P(X=x_k)`, then
+        `E[X] = Σ_k x_k * P(X=x_k)`
+        (The sum is taken over all possible values `x_k` of X, provided the sum converges absolutely).
+    *   **Continuous Random Variable:** If X has a PDF `f(x)`, then
+        `E[X] = ∫_{-∞ to ∞} x * f(x) dx`
+        (Provided the integral converges absolutely).
+*   It provides a measure of the central tendency of the distribution.
+
+**8.9. What are the properties of the moment generating function?**
+
+Let `M_X(t) = E[e^(tX)]` be the MGF of X. Key properties include:
+1.  **Value at Zero:** `M_X(0) = E[e^0] = E[1] = 1`.
+2.  **Moment Generation:** The r-th derivative of `M_X(t)` evaluated at `t=0` gives the r-th raw moment `μ'_r = E[X^r]`.
+    `μ'_r = d^r/dt^r [M_X(t)] |_(t=0)`
+3.  **Linear Transformation:** If Y = aX + b, then the MGF of Y is:
+    `M_Y(t) = M_{aX+b}(t) = e^(tb) * M_X(at)`
+4.  **Sum of Independent Variables:** If X₁, X₂, ..., Xₙ are independent random variables with MGFs `M_{X₁}(t), ..., M_{Xₙ}(t)`, then the MGF of their sum S = X₁ + ... + Xₙ is the product of their MGFs:
+    `M_S(t) = M_{X₁}(t) * M_{X₂}(t) * ... * M_{Xₙ}(t)`
+5.  **Uniqueness Property:** If two random variables have MGFs that exist and are equal in an open interval containing `t=0`, then they have the same probability distribution. This allows us to identify distributions via their MGFs.
+
+**8.10. Define conditional variance.**
+
+*   The **conditional variance** of a random variable X given that another random variable Y has taken the value `y`, denoted `Var(X | Y=y)` or `V(X | Y=y)`, measures the variance of X within the subpopulation where Y is fixed at `y`.
+*   **Definition:** It is the expected value of the squared deviation of X from its conditional mean `E[X | Y=y]`, calculated using the conditional distribution of X given Y=y.
+    `Var(X | Y=y) = E[ (X - E[X | Y=y])² | Y=y ]`
+*   **Computational Formula:** Similar to regular variance, it can often be calculated more easily as:
+    `Var(X | Y=y) = E[X² | Y=y] - (E[X | Y=y])²`
+    where `E[X² | Y=y]` is the conditional expectation of `X²` given `Y=y`.
+*   The conditional variance is generally a function of `y`.
+
+**8.11. Define geometric distribution.**
+
+*(This is similar to Q5.1 and Q8.7, requires specifying the definition)*
+
+The **Geometric distribution** models the number of independent Bernoulli trials needed until the *first* success occurs, or alternatively, the number of failures before the first success. The probability of success on any given trial is `p` (`0 < p ≤ 1`).
+
+*   **Definition 1: Number of Trials (X)**
+    *   X = Number of trials needed to get the first success.
+    *   Support: `k ∈ {1, 2, 3, ...}`
+    *   PMF: `P(X=k) = (1-p)^(k-1) * p`
+*   **Definition 2: Number of Failures (Y)**
+    *   Y = Number of failures before the first success. (Y = X - 1)
+    *   Support: `k ∈ {0, 1, 2, ...}`
+    *   PMF: `P(Y=k) = (1-p)^k * p`
+
+It's crucial to state which definition is being used when discussing properties like mean or variance.
+
+**8.12. State and prove the addition theorem of expectation.**
+
+*   **Statement (Addition Theorem / Linearity of Expectation):** For *any* two random variables X and Y (defined on the same probability space), the expected value of their sum is the sum of their expected values, provided `E[X]` and `E[Y]` exist.
+    `E[X + Y] = E[X] + E[Y]`
+    (Note: X and Y do *not* need to be independent for this property to hold).
+
+*   **Proof (Continuous Case):** Let `f(x, y)` be the joint PDF of X and Y.
+    1.  By definition of expectation for a function of two random variables (LOTUS):
+        `E[X + Y] = ∫_{-∞ to ∞} ∫_{-∞ to ∞} (x + y) * f(x, y) dx dy`
+    2.  Split the integral using linearity:
+        `= ∫_{-∞ to ∞} ∫_{-∞ to ∞} x * f(x, y) dx dy + ∫_{-∞ to ∞} ∫_{-∞ to ∞} y * f(x, y) dx dy`
+    3.  Consider the first term. Integrate with respect to `y` first:
+        `∫_{-∞ to ∞} x * [∫_{-∞ to ∞} f(x, y) dy] dx`
+        The inner integral `∫_{-∞ to ∞} f(x, y) dy` is the marginal PDF of X, denoted `f_X(x)`.
+        So the first term becomes `∫_{-∞ to ∞} x * f_X(x) dx`, which is the definition of `E[X]`.
+    4.  Consider the second term. Integrate with respect to `x` first:
+        `∫_{-∞ to ∞} y * [∫_{-∞ to ∞} f(x, y) dx] dy`
+        The inner integral `∫_{-∞ to ∞} f(x, y) dx` is the marginal PDF of Y, denoted `f_Y(y)`.
+        So the second term becomes `∫_{-∞ to ∞} y * f_Y(y) dy`, which is the definition of `E[Y]`.
+    5.  Combine the results:
+        `E[X + Y] = E[X] + E[Y]`
+*   **Proof (Discrete Case):** The proof is analogous using summations instead of integrals:
+    `E[X + Y] = Σ_x Σ_y (x + y) P(X=x, Y=y)`
+    `= Σ_x Σ_y x P(x, y) + Σ_x Σ_y y P(x, y)`
+    `= Σ_x x [Σ_y P(x, y)] + Σ_y y [Σ_x P(x, y)]`
+    `= Σ_x x P(X=x) + Σ_y y P(Y=y)`
+    `= E[X] + E[Y]`
+
+**8.13. What is the expectation of the number of failures before the first success in an infinite series of independent trials with constant probability of success in each trial?**
+
+*   **Identify the Scenario:** This describes a sequence of Bernoulli trials with success probability `p`.
+*   **Identify the Random Variable:** Let Y be the number of failures *before* the first success.
+*   **Identify the Distribution:** This random variable Y follows the **Geometric distribution (failures version)**, as defined in Q8.11 (Definition 2).
+    `P(Y=k) = (1-p)^k * p` for `k = 0, 1, 2, ...`
+*   **Expectation:** The expected value (mean) for this version of the Geometric distribution is:
+    `E[Y] = (1-p) / p`
+*   **Answer:** The expectation of the number of failures before the first success is `(1-p) / p`.
+
+**8.14. Find the m.g.f. of the random variables whose moments are (i) μ'_r = (r + 1)! * 2^r and (ii) μ'_r = r! (Use the relationship between moments and the MGF).**
+
+*   **Relationship:** The MGF `M_X(t)` can be expressed as a power series using the raw moments `μ'_r = E[X^r]`:
+    `M_X(t) = Σ_{r=0 to ∞} μ'_r * t^r / r!`
+
+*   **(i) μ'_r = (r + 1)! * 2^r**
+    Substitute this into the MGF series:
+    `M_X(t) = Σ_{r=0 to ∞} [(r + 1)! * 2^r] * t^r / r!`
+    Simplify the terms: `(r+1)! / r! = r+1`.
+    `M_X(t) = Σ_{r=0 to ∞} (r + 1) * 2^r * t^r`
+    `M_X(t) = Σ_{r=0 to ∞} (r + 1) * (2t)^r`
+    Let `x = 2t`. The series is `Σ_{r=0 to ∞} (r + 1) * x^r = 1 + 2x + 3x² + 4x³ + ...`
+    Recall the geometric series: `1 / (1 - x) = Σ_{r=0 to ∞} x^r = 1 + x + x² + ...` (for `|x| < 1`)
+    Differentiate both sides with respect to `x`:
+    `d/dx [1 / (1 - x)] = d/dx [Σ x^r]`
+    `1 / (1 - x)² = Σ_{r=0 to ∞} r * x^(r-1) = Σ_{k=0 to ∞} (k+1) * x^k` (let `k=r-1` for r≥1, r=0 term is 0)
+    Actually, `Σ_{r=0 to ∞} (r+1)x^r` is exactly the derivative result `1/(1-x)²`.
+    Substitute back `x = 2t`:
+    `M_X(t) = 1 / (1 - 2t)²`
+    This MGF corresponds to a Gamma distribution with shape α=2 and rate β=1/2 (or scale θ=2), or an Erlang(2, 1/2) distribution. The series converges for `|2t| < 1`, i.e., `|t| < 1/2`.
+
+*   **(ii) μ'_r = r!**
+    Substitute this into the MGF series:
+    `M_X(t) = Σ_{r=0 to ∞} r! * t^r / r!`
+    Simplify: The `r!` terms cancel.
+    `M_X(t) = Σ_{r=0 to ∞} t^r`
+    This is the standard geometric series `1 + t + t² + t³ + ...`
+    `M_X(t) = 1 / (1 - t)`
+    This MGF corresponds to an Exponential distribution with rate parameter `λ = 1` (or scale parameter `β = 1`). The series converges for `|t| < 1`.
+
+*   **Answer:**
+    *   (i) The MGF is `M_X(t) = 1 / (1 - 2t)²` for `|t| < 1/2`.
+    *   (ii) The MGF is `M_X(t) = 1 / (1 - t)` for `|t| < 1`.
+
+---

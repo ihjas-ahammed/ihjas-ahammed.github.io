@@ -68,7 +68,7 @@
                     "webview": false,
                     "qa": {
                         "name": "obj",
-                        "path": "stat2/qa.json",
+                        "path": "stat2/qa1.json",
                         "obj": 1
                     },
                     "qa2": {
@@ -82,7 +82,7 @@
                     "webview": false,
                     "qa": {
                         "name": "obj",
-                        "path": "stat2/qa.json",
+                        "path": "stat2/qa1.json",
                         "obj": 2
                     },
                     "qa2": {
@@ -94,13 +94,19 @@
                     "text": "Correlation and Regression",
                     "path": "/stat2/mod3",
                     "webview": false,
-                    "qa": {}
+                    "qa2": {
+                        "path": "stat2/qa21.json",
+                        "obj": 3
+                    }
                 },
                 {
                     "text": "Sampling Distributions",
                     "path": "/stat2/mod4.1",
-                    "webview": false,
-                    "qa": {}
+                    "webview": true,
+                    "qa2": {
+                        "path": "stat2/qa21.json",
+                        "obj": 4
+                    }
                 }
             ]
         },

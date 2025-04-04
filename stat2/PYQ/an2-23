@@ -1,0 +1,232 @@
+
+**1. Probability Density Function (PDF)**
+
+**1. Define the probability density function (PDF) of a continuous random variable and state any two of its properties. (5 marks)**
+
+*   **Definition:** For a continuous random variable `X`, the probability density function (PDF), denoted as `f(x)`, is a function that describes the relative likelihood for the random variable to take on a given value. Unlike the probability mass function (PMF) for discrete variables, `f(x)` itself is not a probability; rather, the probability of `X` falling within a particular interval `[a, b]` is given by the integral of the PDF over that interval:
+    `P(a ≤ X ≤ b) = ∫[a, b] f(x) dx`
+
+*   **Properties:**
+    1.  **Non-negativity:** The PDF must be non-negative for all possible values of `x`.
+        `f(x) ≥ 0` for all `x` in the domain of X. (Probability density cannot be negative).
+    2.  **Total Area Equals 1:** The integral of the PDF over the entire range of possible values for `X` must be equal to 1. This signifies that the total probability of the random variable taking *some* value is 1.
+        `∫[-∞, ∞] f(x) dx = 1`
+
+---
+
+**2. Cumulative Distribution Function (CDF)**
+
+**1. Given the probability density function (PDF) of a random variable X as `f(x) = 3x²` for `0 < x < 1`, find the cumulative distribution function (CDF), `F(x)`. (This question requires calculation, but defining what a CDF is would come from the text.)**
+
+*   **Definition of CDF:** The Cumulative Distribution Function (CDF), `F(x)`, for a random variable `X` gives the probability that `X` will take a value less than or equal to `x`. Mathematically, `F(x) = P(X ≤ x)`. For a continuous random variable with PDF `f(t)`, the CDF is found by integrating the PDF from the lower limit of the variable's range up to `x`:
+    `F(x) = ∫[-∞, x] f(t) dt`
+
+*   **Calculation:**
+    The PDF is given as `f(x) = 3x²` for `0 < x < 1`, and `f(x) = 0` otherwise. We need to find `F(x) = P(X ≤ x)`. We consider different ranges for `x`:
+
+    *   **Case 1: `x ≤ 0`**
+        Since the PDF is 0 for all values less than or equal to 0, the probability `P(X ≤ x)` is 0.
+        `F(x) = ∫[-∞, x] f(t) dt = ∫[-∞, x] 0 dt = 0`
+
+    *   **Case 2: `0 < x < 1`**
+        The probability `P(X ≤ x)` involves integrating the PDF from its start (0) up to `x`.
+        `F(x) = ∫[-∞, x] f(t) dt = ∫[-∞, 0] 0 dt + ∫[0, x] 3t² dt`
+        `F(x) = 0 + [t³]_0^x = x³ - 0³ = x³`
+
+    *   **Case 3: `x ≥ 1`**
+        Since the PDF is defined only up to 1, the probability `P(X ≤ x)` for any `x ≥ 1` includes the entire range where the PDF is non-zero. The total probability must be 1.
+        `F(x) = ∫[-∞, x] f(t) dt = ∫[-∞, 0] 0 dt + ∫[0, 1] 3t² dt + ∫[1, x] 0 dt`
+        `F(x) = 0 + [t³]_0^1 + 0 = 1³ - 0³ = 1`
+
+*   **Resulting CDF:**
+    Combining these cases, the CDF `F(x)` is a piecewise function:
+    `F(x) =`
+    `{ 0,        if x ≤ 0`
+    `{ x³,        if 0 < x < 1`
+    `{ 1,        if x ≥ 1`
+
+---
+
+**3. Moments and Moment Generating Functions**
+
+**1. Define the Mathematical Expectation of a random variable. (3 marks)**
+
+*   **Definition:** The Mathematical Expectation (or expected value) of a random variable `X`, denoted as `E[X]`, represents the weighted average of all possible values that the random variable can take. The weights are the probabilities (for discrete variables) or probability densities (for continuous variables) associated with those values. It provides a measure of the central tendency of the random variable's distribution.
+
+    *   **For a discrete random variable `X`** with probability mass function `p(x)`:
+        `E[X] = Σ [x * p(x)]` (sum over all possible values `x`)
+    *   **For a continuous random variable `X`** with probability density function `f(x)`:
+        `E[X] = ∫[-∞, ∞] [x * f(x)] dx`
+
+**2. What are the properties of a Moment Generating Function? (3 marks)**
+
+*   The Moment Generating Function (MGF) of a random variable `X` is defined as `M_X(t) = E[e^(tX)]`, provided the expectation exists for `t` in some neighborhood around 0. Key properties include:
+    1.  **`M_X(0) = 1`**: Evaluating the MGF at `t = 0` always yields 1, since `M_X(0) = E[e^(0*X)] = E[e^0] = E[1] = 1`.
+    2.  **Uniqueness Property**: If two random variables have the same MGF that exists in a neighborhood around `t=0`, then they have the same probability distribution. This property is fundamental for identifying distributions.
+    3.  **Moment Generation**: The `n`-th derivative of the MGF evaluated at `t = 0` gives the `n`-th raw moment (`E[X^n]`) of the random variable `X`.
+        `d^n/dt^n [M_X(t)] |_(t=0) = E[X^n]`
+    *(Other properties exist, like behavior under linear transformation `M_{aX+b}(t) = e^{bt} M_X(at)` and for sums of independent variables `M_{X+Y}(t) = M_X(t)M_Y(t)`, but the first three are often considered primary).*
+
+**3. Explain the two methods of obtaining the raw moments of X using the moment generating function of X. (10 marks)**
+
+The Moment Generating Function `M_X(t) = E[e^(tX)]` can be used to find the raw moments `E[X^n]` (where `n = 1, 2, 3, ...`) using two primary methods:
+
+*   **Method 1: Differentiation** (5 marks)
+    *   **Concept:** This method relies on differentiating the MGF with respect to `t` and then evaluating the result at `t = 0`. The `n`-th derivative evaluated at `t = 0` yields the `n`-th raw moment.
+    *   **Procedure:**
+        1.  Find the MGF, `M_X(t)`.
+        2.  Calculate the first derivative: `M'_X(t) = d/dt [E[e^(tX)]]`. Assuming we can interchange differentiation and expectation: `E[d/dt(e^(tX))] = E[X * e^(tX)]`.
+        3.  Evaluate at `t = 0`: `M'_X(0) = E[X * e^0] = E[X]`. This gives the first raw moment (the mean).
+        4.  Calculate the second derivative: `M''_X(t) = d/dt [E[X * e^(tX)]] = E[d/dt(X * e^(tX))] = E[X² * e^(tX)]`.
+        5.  Evaluate at `t = 0`: `M''_X(0) = E[X² * e^0] = E[X²]`. This gives the second raw moment.
+        6.  In general, the `n`-th derivative evaluated at `t = 0` is:
+            `M_X^(n)(t) = d^n/dt^n [M_X(t)] = E[X^n * e^(tX)]`
+            `M_X^(n)(0) = E[X^n * e^0] = E[X^n]`
+    *   **Example:** To find `E[X]` and `E[X²]`, compute `M'_X(t)` and `M''_X(t)` and evaluate them at `t=0`.
+
+*   **Method 2: Taylor Series Expansion** (5 marks)
+    *   **Concept:** This method uses the Taylor (Maclaurin) series expansion of the MGF around `t = 0`. The coefficients of this series expansion are directly related to the raw moments.
+    *   **Procedure:**
+        1.  Recall the Taylor series expansion of `e^u` around `u=0`: `e^u = 1 + u + u²/2! + u³/3! + ... = Σ[k=0, ∞] (u^k / k!)`.
+        2.  Substitute `u = tX` into the MGF definition:
+            `M_X(t) = E[e^(tX)] = E[1 + tX + (tX)²/2! + (tX)³/3! + ...]`
+            `M_X(t) = E[ Σ[n=0, ∞] ((tX)^n / n!) ]`
+        3.  Assuming we can interchange expectation and summation (which holds if MGF exists):
+            `M_X(t) = Σ[n=0, ∞] E[ (tX)^n / n! ]`
+            `M_X(t) = Σ[n=0, ∞] E[ t^n * X^n / n! ]`
+        4.  Since `t^n` and `n!` are constants with respect to the expectation:
+            `M_X(t) = Σ[n=0, ∞] ( E[X^n] / n! ) * t^n`
+            `M_X(t) = E[X^0]/0! + E[X^1]/1! * t + E[X^2]/2! * t² + E[X^3]/3! * t³ + ...`
+            `M_X(t) = 1 + E[X] * t + E[X²] * (t²/2!) + E[X^3] * (t³/3!) + ...`
+        5.  **Identification:** By finding the Taylor series expansion of a given `M_X(t)` around `t=0`, the `n`-th raw moment `E[X^n]` can be identified as the coefficient of `t^n / n!` in the expansion. Alternatively, find the coefficient of `t^n` and multiply it by `n!`.
+
+---
+
+**5. Variance and Covariance**
+
+**1. Prove that for any random variable X, the variance V(X) is always non-negative. (3 marks)**
+
+*   **Proof:**
+    1.  By definition, the variance of a random variable `X` with mean `μ = E[X]` is given by:
+        `V(X) = E[(X - μ)²]`
+    2.  Let `Y = (X - μ)`. Then the expression inside the expectation is `Y²`.
+    3.  For any real number `y`, its square `y²` is always greater than or equal to zero (`y² ≥ 0`). Therefore, the random variable `(X - μ)²` can only take non-negative values.
+    4.  The expectation `E[g(X)]` is calculated as `∫ g(x)f(x) dx` (continuous case) or `Σ g(x)p(x)` (discrete case).
+    5.  In the continuous case: `V(X) = ∫[-∞, ∞] (x - μ)² f(x) dx`. Since `(x - μ)² ≥ 0` for all `x` and `f(x) ≥ 0` (property of PDF), the integrand `(x - μ)² f(x)` is always non-negative. The integral of a non-negative function over its domain must be non-negative.
+    6.  In the discrete case: `V(X) = Σ [(x - μ)² p(x)]`. Since `(x - μ)² ≥ 0` for all `x` and `p(x) ≥ 0` (property of PMF), each term in the sum `(x - μ)² p(x)` is non-negative. The sum of non-negative terms must be non-negative.
+    7.  Therefore, in both cases, `V(X) = E[(X - μ)²] ≥ 0`.
+
+**2. Show that for any Random Variable X that Cov(X, X) = V(X). (3 marks)**
+
+*   **Proof:**
+    1.  The definition of covariance between two random variables `X` and `Y` is:
+        `Cov(X, Y) = E[(X - E[X])(Y - E[Y])]`
+    2.  To find `Cov(X, X)`, we substitute `Y` with `X` in the definition:
+        `Cov(X, X) = E[(X - E[X])(X - E[X])]`
+    3.  Let `μ = E[X]`. Substituting this gives:
+        `Cov(X, X) = E[(X - μ)(X - μ)]`
+    4.  Simplifying the expression inside the expectation:
+        `Cov(X, X) = E[(X - μ)²]`
+    5.  By definition, `E[(X - μ)²]` is the variance of `X`, denoted as `V(X)`.
+    6.  Therefore, `Cov(X, X) = V(X)`.
+
+---
+
+**6. Independence and Covariance**
+
+**1. If X and Y are two independent random variables, prove that their covariance, Cov(X, Y), is equal to 0. Show that the converse is not necessarily true (i.e., Cov(X, Y) = 0 does not always imply independence). (10 marks)**
+
+*   **Part 1: Independence implies Cov(X, Y) = 0** (5 marks)
+    *   **Proof:**
+        1.  The computational formula for covariance is:
+            `Cov(X, Y) = E[XY] - E[X]E[Y]`
+        2.  A key property of independent random variables `X` and `Y` is that the expectation of their product equals the product of their expectations:
+            `E[XY] = E[X]E[Y]` (This holds if X and Y are independent).
+        3.  Substituting this property into the covariance formula:
+            `Cov(X, Y) = (E[X]E[Y]) - E[X]E[Y]`
+            `Cov(X, Y) = 0`
+        4.  Thus, if `X` and `Y` are independent, their covariance must be 0.
+
+*   **Part 2: Converse is not true (Cov(X, Y) = 0 does not imply independence)** (5 marks)
+    *   **Explanation:** We need to provide a counterexample where `Cov(X, Y) = 0` but `X` and `Y` are clearly dependent.
+    *   **Counterexample:**
+        1.  Let `X` be a random variable uniformly distributed on the interval `[-1, 1]`. Its PDF is `f(x) = 1/2` for `-1 ≤ x ≤ 1`, and 0 otherwise.
+        2.  Let `Y = X²`.
+        3.  **Dependence:** `Y` is completely determined by `X`. If we know the value of `X`, we know the value of `Y` exactly. For instance, if `X = 0.5`, then `Y = 0.25`. This functional relationship means `X` and `Y` are dependent. They are not independent because, for example, `P(Y ≤ 0.25 | X = 0.5) = 1`, but `P(Y ≤ 0.25)` is not 1 (it's `P(X² ≤ 0.25) = P(-0.5 ≤ X ≤ 0.5) = ∫[-0.5, 0.5] (1/2) dx = 0.5`). Since the conditional probability does not equal the marginal probability, they are dependent.
+        4.  **Calculate Covariance:** We need `E[X]`, `E[Y]`, and `E[XY]`.
+            *   `E[X] = ∫[-1, 1] x * (1/2) dx = (1/2) * [x²/2]_(-1)^1 = (1/2) * (1/2 - 1/2) = 0`. (Due to symmetry around 0).
+            *   `E[Y] = E[X²] = ∫[-1, 1] x² * (1/2) dx = (1/2) * [x³/3]_(-1)^1 = (1/2) * (1/3 - (-1/3)) = (1/2) * (2/3) = 1/3`.
+            *   `E[XY] = E[X * X²] = E[X³] = ∫[-1, 1] x³ * (1/2) dx = (1/2) * [x⁴/4]_(-1)^1 = (1/2) * (1/4 - 1/4) = 0`. (Again, due to symmetry - integrating an odd function over a symmetric interval).
+            *   `Cov(X, Y) = E[XY] - E[X]E[Y] = 0 - (0) * (1/3) = 0`.
+        5.  **Conclusion:** In this example, `Cov(X, Y) = 0`, but `X` and `Y` are dependent. Therefore, zero covariance does not necessarily imply independence.
+
+*(Note: Other symmetric distributions for X, like discrete X taking values {-1, 0, 1} with equal probability, would also work for the counterexample).*
+
+---
+
+**(Sections 7, 9 are missing from the prompt, continuing with 8 and 10)**
+
+---
+
+**8. Uniform Distribution**
+
+**1. Find the variance of the continuous uniform (rectangular) distribution with probability density function (PDF) `f(x) = 1/(b-a)` for `a ≤ x ≤ b`. (Requires calculation, but understanding the variance formula in relation to a PDF comes from the text.) (3 marks)**
+
+*   **Calculation:**
+    The variance `V(X)` is given by `V(X) = E[X²] - (E[X])²`. We need to calculate `E[X]` and `E[X²]`.
+
+    1.  **Calculate `E[X]`:**
+        `E[X] = ∫[a, b] x * f(x) dx = ∫[a, b] x * (1 / (b - a)) dx`
+        `E[X] = [1 / (b - a)] * [x²/2]_a^b`
+        `E[X] = [1 / (b - a)] * (b²/2 - a²/2)`
+        `E[X] = [1 / (b - a)] * [(b - a)(b + a) / 2]`
+        `E[X] = (a + b) / 2`
+
+    2.  **Calculate `E[X²]`:**
+        `E[X²] = ∫[a, b] x² * f(x) dx = ∫[a, b] x² * (1 / (b - a)) dx`
+        `E[X²] = [1 / (b - a)] * [x³/3]_a^b`
+        `E[X²] = [1 / (b - a)] * (b³/3 - a³/3)`
+        `E[X²] = [1 / (b - a)] * [(b³ - a³) / 3]`
+        Using the difference of cubes factorization `b³ - a³ = (b - a)(b² + ab + a²)`:
+        `E[X²] = [1 / (b - a)] * [(b - a)(b² + ab + a²) / 3]`
+        `E[X²] = (b² + ab + a²) / 3`
+
+    3.  **Calculate `V(X)`:**
+        `V(X) = E[X²] - (E[X])²`
+        `V(X) = [(b² + ab + a²) / 3] - [(a + b) / 2]²`
+        `V(X) = [(b² + ab + a²) / 3] - [(a² + 2ab + b²) / 4]`
+        Find a common denominator (12):
+        `V(X) = [4(b² + ab + a²) - 3(a² + 2ab + b²)] / 12`
+        `V(X) = [4b² + 4ab + 4a² - 3a² - 6ab - 3b²] / 12`
+        `V(X) = [(4b² - 3b²) + (4ab - 6ab) + (4a² - 3a²)] / 12`
+        `V(X) = [b² - 2ab + a²] / 12`
+        `V(X) = (b - a)² / 12`
+
+*   **Result:** The variance of a continuous uniform distribution on `[a, b]` is `(b - a)² / 12`.
+
+---
+
+**10. Normal Distribution**
+
+**1. Explain the properties of the Normal Distribution. (10 marks)**
+
+The Normal Distribution, often called the Gaussian distribution or bell curve, is arguably the most important probability distribution in statistics. A random variable `X` follows a Normal distribution with mean `μ` and variance `σ²`, denoted `X ~ N(μ, σ²)`, if its PDF is:
+`f(x) = (1 / (σ * √(2π))) * exp(-(x - μ)² / (2σ²))` for `-∞ < x < ∞`.
+
+Key properties include:
+
+1.  **Shape and Symmetry:** The distribution curve is bell-shaped and perfectly symmetric about its mean `μ`.
+2.  **Parameters:** It is completely defined by two parameters: the mean `μ` (determining the center or location of the peak) and the variance `σ²` (or standard deviation `σ`, determining the spread or width of the curve).
+3.  **Mean, Median, Mode:** Due to symmetry, the mean, median, and mode of the distribution are all equal and located at `x = μ`.
+4.  **Domain:** The normal curve extends infinitely in both directions along the horizontal axis (`-∞ < x < ∞`), never touching the axis but getting asymptotically close.
+5.  **Total Area:** The total area under the normal curve is equal to 1, representing the total probability. `∫[-∞, ∞] f(x) dx = 1`.
+6.  **Standard Normal Distribution:** A special case is the Standard Normal Distribution, where `μ = 0` and `σ² = 1` (so `σ = 1`), denoted `Z ~ N(0, 1)`. Any normal random variable `X ~ N(μ, σ²)` can be transformed into a standard normal variable `Z` using the standardization formula: `Z = (X - μ) / σ`. This allows the use of standard normal tables (Z-tables) for probability calculations.
+7.  **Empirical Rule (68-95-99.7 Rule):** For any normal distribution:
+    *   Approximately 68% of the values lie within one standard deviation of the mean (`μ ± σ`).
+    *   Approximately 95% of the values lie within two standard deviations of the mean (`μ ± 2σ`).
+    *   Approximately 99.7% of the values lie within three standard deviations of the mean (`μ ± 3σ`).
+8.  **Linear Combinations:** Linear combinations of independent normally distributed random variables are also normally distributed. If `X₁ ~ N(μ₁, σ₁²)` and `X₂ ~ N(μ₂, σ₂²)` are independent, then `aX₁ + bX₂ ~ N(aμ₁ + bμ₂, a²σ₁² + b²σ₂²)`. A crucial consequence is that the sum or difference of independent normal variables is normal.
+9.  **Skewness and Kurtosis:** The normal distribution has a skewness of 0 (due to symmetry) and a kurtosis of 3. Excess kurtosis (kurtosis - 3) is 0, making it mesokurtic.
+10. **Moment Generating Function (MGF):** The MGF of `X ~ N(μ, σ²)` is `M_X(t) = exp(μt + σ²t²/2)`. This function can be used to derive all the moments of the normal distribution.
+
+---

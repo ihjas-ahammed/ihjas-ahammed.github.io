@@ -1,0 +1,337 @@
+
+**1. Parameter, Statistic, Sampling Distribution, Standard Error**
+
+1.  **Define Statistic.** (D73763 Q11, 2 marks)
+    *   A **statistic** is a function of the observable sample data (random variables $X_1, X_2, ..., X_n$) that does not contain any unknown parameters. It is a numerical value calculated from a sample, used to estimate a population parameter or describe the sample. Since it is calculated from a random sample, a statistic is itself a random variable. Examples include the sample mean ($\bar{X}$) and sample variance ($s^2$).
+
+2.  **Define Parameter.** (D11878 Q15, 2 marks)
+    *   A **parameter** is a numerical characteristic or measure that describes a specific property of an entire population or a probability distribution. It is typically a fixed, unknown constant value. Examples include the population mean ($\mu$), population variance ($\sigma^2$), and population proportion ($p$).
+
+3.  **Define Parameter and Statistic.** (D12050 Q5, 3 marks)
+    *   **Parameter:** A numerical value summarizing some characteristic of the entire population (e.g., population mean $\mu$, population standard deviation $\sigma$). It is usually a fixed, unknown constant we wish to estimate.
+    *   **Statistic:** A numerical value calculated from sample data (e.g., sample mean $\bar{X}$, sample standard deviation $s$). It is a function of the sample observations and is used as an estimator for a population parameter. Since it depends on the sample, a statistic is a random variable.
+
+4.  **Differentiate Estimator and estimate.** (D12049 Q9, 3 marks)
+    *   **Estimator:** An estimator is a rule, formula, or function used to estimate an unknown population parameter based on sample data. It is a random variable because its value depends on the particular sample drawn. Example: The formula for the sample mean, $\bar{X} = \frac{1}{n}\sum_{i=1}^{n} X_i$, is an estimator for the population mean $\mu$.
+    *   **Estimate:** An estimate is the specific numerical value obtained by applying the estimator formula to a particular set of sample data. It is a fixed number once the sample is observed. Example: If a sample yields data {2, 4, 6}, using the sample mean estimator gives an estimate of $\bar{x} = (2+4+6)/3 = 4$.
+
+5.  **Name the following: Probability distribution of a statistic.** (D73763 Q1, 1 mark)
+    *   **Sampling Distribution**
+
+6.  **Fill up the blanks: \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_ of any statistic is called its standard error.** (D73763 Q7, 1 mark)
+    *   **Standard deviation**
+
+7.  **The difference between a statistic and the parameter is called:** (D12050-A Q18, MCQ)
+    *   **(A) Sampling error** (Sampling error arises because the statistic is calculated from a sample rather than the entire population).
+
+8.  **Sampling distribution is the probability distribution of:** (D12050-A Q19, MCQ)
+    *   **(B) Statistic**
+
+9.  **Every test statistic is:** (D11878-A Q15, MCQ)
+    *   **(B) A random variable** (Because it is calculated from sample data, which is random).
+
+10. **Name the following: Functions representing sample characteristics.** (D11877 Q1, 1 mark)
+    *   **Statistics**
+
+---
+
+**2. Sampling Distribution of the Sample Mean ($\bar{X}$)**
+
+1.  **Derive the sampling distribution of the mean of random sample $X_1, X_2, ..., X_n$ taken from a normal population $N(\mu, \sigma^2)$.** (D73763 Q29, 10 marks; D12049 Q20, 6 marks)
+    *   Let $X_1, X_2, ..., X_n$ be a random sample from a normal population $N(\mu, \sigma^2)$. This means each $X_i$ is normally distributed with mean $E(X_i) = \mu$ and variance $Var(X_i) = \sigma^2$. The $X_i$'s are independent.
+    *   The sample mean is defined as $\bar{X} = \frac{1}{n}\sum_{i=1}^{n} X_i$.
+    *   We need to find the distribution of $\bar{X}$.
+    *   **Mean of $\bar{X}$:**
+        $E(\bar{X}) = E\left(\frac{1}{n}\sum_{i=1}^{n} X_i\right) = \frac{1}{n}\sum_{i=1}^{n} E(X_i)$ (by linearity of expectation)
+        $E(\bar{X}) = \frac{1}{n}\sum_{i=1}^{n} \mu = \frac{1}{n}(n\mu) = \mu$.
+    *   **Variance of $\bar{X}$:**
+        Since the $X_i$'s are independent:
+        $Var(\bar{X}) = Var\left(\frac{1}{n}\sum_{i=1}^{n} X_i\right) = \frac{1}{n^2}\sum_{i=1}^{n} Var(X_i)$ (property of variance for independent variables)
+        $Var(\bar{X}) = \frac{1}{n^2}\sum_{i=1}^{n} \sigma^2 = \frac{1}{n^2}(n\sigma^2) = \frac{\sigma^2}{n}$.
+    *   **Distribution Shape:**
+        A fundamental property of the normal distribution is that any linear combination of independent normally distributed random variables is also normally distributed. The sample mean $\bar{X}$ is a linear combination of $X_1, ..., X_n$.
+    *   **Conclusion:**
+        Therefore, the sample mean $\bar{X}$ follows a normal distribution with mean $\mu$ and variance $\sigma^2/n$. We write this as:
+        $$ \bar{X} \sim N\left(\mu, \frac{\sigma^2}{n}\right) $$
+
+2.  **Find the probability that the sample mean of a random sample of size 16 taken from a normal population with mean 2 and variance 4 is less than 1.** (D12050 Q10, 3 marks)
+    *   Population distribution: $N(\mu=2, \sigma^2=4)$. So, $\sigma = \sqrt{4} = 2$.
+    *   Sample size: $n = 16$.
+    *   From Q2.1, the sampling distribution of the sample mean $\bar{X}$ is $N\left(\mu, \frac{\sigma^2}{n}\right)$.
+    *   Substituting the values: $\bar{X} \sim N\left(2, \frac{4}{16}\right) = N(2, 0.25)$.
+    *   The standard deviation of $\bar{X}$ (standard error) is $\sqrt{0.25} = 0.5$.
+    *   We need to find $P(\bar{X} < 1)$.
+    *   Standardize the value 1 using the Z-score formula for the sample mean:
+        $Z = \frac{\bar{X} - \mu}{\sigma/\sqrt{n}} = \frac{1 - 2}{0.5} = \frac{-1}{0.5} = -2$.
+    *   So, $P(\bar{X} < 1) = P(Z < -2)$.
+    *   Using the standard normal distribution table or calculator:
+        $P(Z < -2) \approx 0.0228$.
+    *   **Answer:** The probability is approximately 0.0228.
+
+---
+
+**3. Chi-Square Distribution ($\chi^2$)**
+
+1.  **Define Chi-square distribution with n degrees of freedom.** (D11877 Q11, 2 marks; D12050 Q21(i), marks part of 5m)
+    *   Let $Z_1, Z_2, ..., Z_n$ be $n$ independent random variables, each following the standard normal distribution, $N(0, 1)$. The **Chi-square distribution with $n$ degrees of freedom**, denoted as $\chi^2(n)$, is defined as the distribution of the sum of the squares of these variables:
+        $$ Y = \sum_{i=1}^{n} Z_i^2 $$
+        The variable $Y$ follows a Chi-square distribution with $n$ degrees of freedom, written as $Y \sim \chi^2(n)$.
+
+2.  **Name the following: Probability distribution of the square of a random sample taken from a standard normal population.** (D73763 Q2, 1 mark)
+    *   **Chi-square distribution with 1 degree of freedom** ($\chi^2(1)$). (Assuming "a random sample" means a single observation, $Z_1$. Then $Z_1^2 \sim \chi^2(1)$).
+
+3.  **Identify the probability distribution of $X_1^2 + X_2^2$ if $X_1, X_2$ is a random sample taken independently from $N(0, 1)$ population.** (D73763 Q23(i), marks part of 6m; D12049 Q8(i), marks part of 3m)
+    *   Since $X_1 \sim N(0, 1)$ and $X_2 \sim N(0, 1)$ independently, then $X_1^2 \sim \chi^2(1)$ and $X_2^2 \sim \chi^2(1)$.
+    *   By the additive property of the Chi-square distribution (sum of independent chi-square variables is also chi-square, with degrees of freedom adding up), $X_1^2 + X_2^2$ follows a **Chi-square distribution with $1+1=2$ degrees of freedom**, denoted as $\chi^2(2)$.
+
+4.  **Identify the probability distribution of $\sum_{i=1}^{n} \left(\frac{x_i - 10}{3}\right)^2$ where $x_i$'s are random samples taken from normal distribution with mean 10 and variance 9.** (D73763 Q12, 2 marks)
+    *   Given $x_i \sim N(\mu=10, \sigma^2=9)$. The standard deviation is $\sigma = \sqrt{9} = 3$.
+    *   Standardize each $x_i$: Let $Z_i = \frac{x_i - \mu}{\sigma} = \frac{x_i - 10}{3}$. Each $Z_i$ follows the standard normal distribution, $N(0, 1)$.
+    *   The expression is $\sum_{i=1}^{n} Z_i^2$.
+    *   By the definition of the Chi-square distribution, the sum of squares of $n$ independent standard normal variables follows a **Chi-square distribution with $n$ degrees of freedom**, denoted as $\chi^2(n)$.
+
+5.  **Fill up the blanks: If the mean of a Chi-square random variable is 4, its variance is \_\_\_\_\_\_.** (D73763 Q5, 1 mark; D11877 Q4, 1 mark)
+    *   For a Chi-square distribution with $n$ degrees of freedom, $\chi^2(n)$, the mean is $n$ and the variance is $2n$.
+    *   Given the mean is 4, we have $n = 4$.
+    *   The variance is $2n = 2 \times 4 = 8$.
+    *   **Answer:** 8
+
+6.  **Mean of Chi-Square distribution with n degrees of freedom is:** (D12050-A Q20, MCQ)
+    *   **(A) n**
+
+7.  **State and prove the additive property of chi square distribution.** (D73763 Q18, 4 marks; D12050 Q21(ii), marks part of 5m)
+    *   **Statement:** If $Y_1 \sim \chi^2(n_1)$ and $Y_2 \sim \chi^2(n_2)$ are two independent Chi-square random variables with $n_1$ and $n_2$ degrees of freedom respectively, then their sum $Y = Y_1 + Y_2$ follows a Chi-square distribution with $n_1 + n_2$ degrees of freedom, i.e., $Y \sim \chi^2(n_1 + n_2)$.
+    *   **Proof (using Moment Generating Functions - MGFs):**
+        The MGF of a $\chi^2(k)$ distribution is $M_k(t) = (1 - 2t)^{-k/2}$.
+        Let $Y_1 \sim \chi^2(n_1)$ and $Y_2 \sim \chi^2(n_2)$ be independent. Their MGFs are $M_{Y_1}(t) = (1 - 2t)^{-n_1/2}$ and $M_{Y_2}(t) = (1 - 2t)^{-n_2/2}$.
+        Let $Y = Y_1 + Y_2$. The MGF of the sum of independent random variables is the product of their individual MGFs:
+        $M_Y(t) = M_{Y_1}(t) \times M_{Y_2}(t)$
+        $M_Y(t) = (1 - 2t)^{-n_1/2} \times (1 - 2t)^{-n_2/2}$
+        $M_Y(t) = (1 - 2t)^{-(n_1/2 + n_2/2)}$
+        $M_Y(t) = (1 - 2t)^{-(n_1 + n_2)/2}$
+        This is the MGF of a Chi-square distribution with $n_1 + n_2$ degrees of freedom. By the uniqueness property of MGFs, $Y = Y_1 + Y_2 \sim \chi^2(n_1 + n_2)$.
+
+8.  **Derive mgf of chisquare distribution. Hence show that chi square distribution possesses additive property.** (D11877 Q25, 10 marks; D12050 Q21(i), marks part of 5m for MGF derivation)
+    *   **Derivation of MGF:**
+        Let $Z \sim N(0, 1)$. Then $Y = Z^2 \sim \chi^2(1)$. The MGF of Y is $M_Y(t) = E(e^{tY}) = E(e^{tZ^2})$.
+        The probability density function (PDF) of $Z$ is $f(z) = \frac{1}{\sqrt{2\pi}}e^{-z^2/2}$ for $-\infty < z < \infty$.
+        $M_Y(t) = \int_{-\infty}^{\infty} e^{tz^2} \frac{1}{\sqrt{2\pi}}e^{-z^2/2} dz = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{\infty} e^{-(1-2t)z^2/2} dz$.
+        This integral converges for $(1-2t) > 0$, i.e., $t < 1/2$.
+        Let $a = (1-2t)/2$. The integral is $\int_{-\infty}^{\infty} e^{-az^2} dz$. We know that $\int_{-\infty}^{\infty} e^{-x^2/(2\sigma^2)} dx = \sqrt{2\pi}\sigma$. Comparing $e^{-az^2}$ to $e^{-x^2/(2\sigma^2)}$, we have $a = 1/(2\sigma^2)$, so $2\sigma^2 = 1/a$, and $\sigma = 1/\sqrt{2a}$. The integral value is $\sqrt{2\pi}\sigma = \sqrt{2\pi} (1/\sqrt{2a}) = \sqrt{\pi/a}$.
+        Substituting $a = (1-2t)/2$: $\sqrt{\pi / [(1-2t)/2]} = \sqrt{2\pi / (1-2t)}$.
+        So, $M_Y(t) = \frac{1}{\sqrt{2\pi}} \sqrt{\frac{2\pi}{1-2t}} = \frac{1}{\sqrt{1-2t}} = (1 - 2t)^{-1/2}$. This is the MGF for $\chi^2(1)$.
+        Now, let $W = \sum_{i=1}^{n} Z_i^2$ where $Z_i \sim N(0, 1)$ are independent. $W \sim \chi^2(n)$.
+        $M_W(t) = M_{\sum Z_i^2}(t) = E(e^{t\sum Z_i^2}) = E(\prod e^{tZ_i^2})$
+        Due to independence, $M_W(t) = \prod E(e^{tZ_i^2}) = \prod M_{Z_i^2}(t)$.
+        Since each $Z_i^2 \sim \chi^2(1)$, $M_{Z_i^2}(t) = (1-2t)^{-1/2}$.
+        $M_W(t) = [(1 - 2t)^{-1/2}]^n = (1 - 2t)^{-n/2}$.
+        This is the MGF of the $\chi^2(n)$ distribution.
+    *   **Additive Property:** (Proven in Q3.7 above using this MGF result).
+
+9.  **Chi-square distribution is used to test:** (D11878-A Q4, MCQ)
+    *   **(C) Both (A) and (B)** (Goodness of fit and Hypothetical value of population variance). The text note acknowledges variance is explicitly covered, but goodness-of-fit is also a primary use.
+
+10. **The hypothesis that population variance has a specified value can be tested by:** (D11878-A Q18, MCQ)
+    *   **(C) $\chi^2$-test** (Using the statistic $(n-1)s^2/\sigma_0^2$).
+
+11. **A random sample of size 9 is taken from a normal population with mean 6 and variance 9. Identify the probability that the sample variance is less than 5.07.** (D12049 Q6, 3 marks) [Requires using $(n-1)s^2/\sigma^2 \sim \chi^2(n-1)$]
+    *   Population: $N(\mu=6, \sigma^2=9)$. Sample size $n=9$.
+    *   The statistic $\frac{(n-1)s^2}{\sigma^2}$ follows a Chi-square distribution with $n-1$ degrees of freedom.
+    *   Here, df = $n-1 = 9-1 = 8$. The statistic is $\frac{(9-1)s^2}{9} = \frac{8s^2}{9}$.
+    *   So, $\frac{8s^2}{9} \sim \chi^2(8)$.
+    *   We want to find the probability $P(s^2 < 5.07)$.
+    *   Convert the condition on $s^2$ to a condition on the $\chi^2$ statistic:
+        $s^2 < 5.07 \implies \frac{8s^2}{9} < \frac{8 \times 5.07}{9}$
+        $\frac{8 \times 5.07}{9} = \frac{40.56}{9} = 4.5067$ (approx).
+    *   So, we need to identify $P\left(\chi^2(8) < 4.5067\right)$.
+    *   **Answer:** The probability is given by $P(\chi^2(8) < 4.5067)$. (Using a calculator or software, this probability is approximately 0.197).
+
+---
+
+**4. Student's t-Distribution (t)**
+
+1.  **Define t-distribution.** (D12050 Q12, 3 marks)
+    *   Let $Z$ be a random variable following the standard normal distribution, $N(0, 1)$.
+    *   Let $U$ be a random variable following a Chi-square distribution with $n$ degrees of freedom, $\chi^2(n)$.
+    *   Assume $Z$ and $U$ are independent.
+    *   The **Student's t-distribution with $n$ degrees of freedom**, denoted as $t(n)$, is defined as the distribution of the random variable $T$:
+        $$ T = \frac{Z}{\sqrt{U/n}} $$
+    *   The distribution depends on the parameter $n$, the degrees of freedom.
+
+2.  **Obtain the mean of t, where t follows t-distribution with n degrees of freedom.** (D73763 Q21, 4 marks; D11878 Q24, 3 marks)
+    *   Let $T \sim t(n)$. By definition, $T = \frac{Z}{\sqrt{U/n}}$, where $Z \sim N(0, 1)$, $U \sim \chi^2(n)$, and $Z, U$ are independent.
+    *   The mean of $T$ is $E(T) = E\left(\frac{Z}{\sqrt{U/n}}\right)$.
+    *   Since $Z$ and $U$ are independent, $Z$ and $\sqrt{U/n}$ are also independent.
+    *   $E(T) = E(Z) \times E\left(\frac{1}{\sqrt{U/n}}\right) = E(Z) \times E\left(\sqrt{\frac{n}{U}}\right)$.
+    *   We know that the mean of a standard normal distribution is $E(Z) = 0$.
+    *   Therefore, $E(T) = 0 \times E\left(\sqrt{\frac{n}{U}}\right) = 0$.
+    *   This holds provided the expectation $E\left(\sqrt{\frac{n}{U}}\right)$ exists, which requires $n > 1$. If $n=1$ (Cauchy distribution), the mean is undefined.
+    *   **Answer:** The mean of the t-distribution with $n$ degrees of freedom is 0 (for $n>1$).
+
+3.  **The degrees of freedom for student's 't' based on a random sample of size n is:** (D11878-A Q3, MCQ)
+    *   **(A) n - 1** (This refers to the typical single-sample t-test application).
+
+4.  **Fill up the blanks: The statistic used to test the mean of a normal population follows \_\_\_\_\_\_\_\_\_\_\_\_ distribution.** (D11878 Q7, 1 mark)
+    *   **t-distribution** (Specifically, when the population variance $\sigma^2$ is unknown and estimated by the sample variance $s^2$, and the sample size is small or the Central Limit Theorem doesn't guarantee normality of the sample mean). If $\sigma^2$ were known, it would be the Z (normal) distribution. Given the context of this section, t-distribution is the intended answer.
+
+5.  **What is the test statistics used in small sample test to test the mean of a normal population when $\sigma^2$ is unknown?** (D11878 Q17, 2 marks)
+    *   The test statistic is:
+        $$ t = \frac{\bar{X} - \mu_0}{s / \sqrt{n}} $$
+        where $\bar{X}$ is the sample mean, $\mu_0$ is the hypothesized population mean, $s$ is the sample standard deviation, and $n$ is the sample size. This statistic follows a t-distribution with $n-1$ degrees of freedom under the null hypothesis.
+
+6.  **It $X_1, X_2$ and $X_3$ is a random sample taken independently from $N(0, 1)$ population, identify the probability distribution of $\frac{X_3}{\sqrt{(X_1^2 + X_2^2)/2}}$.** (D73763 Q23(ii), marks part of 6m)
+    *   Given $X_1, X_2, X_3$ are iid $N(0, 1)$.
+    *   Let $Z = X_3$. Then $Z \sim N(0, 1)$.
+    *   Let $U = X_1^2 + X_2^2$. Since $X_1, X_2$ are iid $N(0, 1)$, $X_1^2 \sim \chi^2(1)$ and $X_2^2 \sim \chi^2(1)$. Because they are independent, $U = X_1^2 + X_2^2 \sim \chi^2(1+1) = \chi^2(2)$.
+    *   The degrees of freedom for $U$ is $n=2$.
+    *   The statistic is $\frac{X_3}{\sqrt{(X_1^2 + X_2^2)/2}} = \frac{Z}{\sqrt{U/2}}$.
+    *   This matches the definition of a Student's t-distribution $T = \frac{Z}{\sqrt{U/n}}$ with $n=2$.
+    *   **Answer:** The distribution is **Student's t-distribution with 2 degrees of freedom**, denoted as $t(2)$.
+
+7.  **Derive any two statistics following t-distribution.** (D73763 Q30, 10 marks) [Focus on $\frac{\bar{x}-\mu}{s/\sqrt{n}}$]
+    *   **Statistic 1: Single Sample Mean Test (σ unknown)**
+        Let $X_1, ..., X_n$ be a random sample from $N(\mu, \sigma^2)$ where $\sigma^2$ is unknown.
+        We know $\bar{X} \sim N(\mu, \sigma^2/n)$, so $\frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \sim N(0, 1)$. Let this be $Z$.
+        We also know that $\frac{(n-1)s^2}{\sigma^2} \sim \chi^2(n-1)$, where $s^2 = \frac{1}{n-1}\sum(X_i - \bar{X})^2$ is the sample variance. Let this be $U$.
+        Crucially, $\bar{X}$ and $s^2$ are independent when sampling from a normal distribution. Therefore, $Z$ and $U$ are independent.
+        By definition of the t-distribution, $T = \frac{Z}{\sqrt{U/(n-1)}}$.
+        Substituting $Z$ and $U$:
+        $$ T = \frac{(\bar{X}-\mu)/(\sigma/\sqrt{n})}{\sqrt{\frac{(n-1)s^2/\sigma^2}{(n-1)}}} = \frac{(\bar{X}-\mu)/(\sigma/\sqrt{n})}{\sqrt{s^2/\sigma^2}} = \frac{(\bar{X}-\mu)/(\sigma/\sqrt{n})}{s/\sigma} $$
+        $$ T = \frac{\bar{X}-\mu}{\sigma/\sqrt{n}} \times \frac{\sigma}{s} = \frac{\bar{X}-\mu}{s/\sqrt{n}} $$
+        This statistic follows a t-distribution with $n-1$ degrees of freedom: $T \sim t(n-1)$. This is used to test hypotheses about $\mu$ or construct confidence intervals when $\sigma$ is unknown.
+
+    *   **Statistic 2: Paired Difference Test**
+        Consider paired data $(X_1, Y_1), ..., (X_n, Y_n)$. Let $D_i = X_i - Y_i$. Assume the differences $D_i$ are normally distributed with mean $\mu_D$ and unknown variance $\sigma_D^2$, i.e., $D_i \sim N(\mu_D, \sigma_D^2)$.
+        Calculate the sample mean difference $\bar{D} = \frac{1}{n}\sum D_i$ and the sample standard deviation of the differences $s_D = \sqrt{\frac{1}{n-1}\sum(D_i - \bar{D})^2}$.
+        Applying the result from Statistic 1 to the differences $D_i$:
+        $$ T = \frac{\bar{D} - \mu_D}{s_D / \sqrt{n}} $$
+        This statistic follows a t-distribution with $n-1$ degrees of freedom: $T \sim t(n-1)$. This is used to test hypotheses about the mean difference $\mu_D$. (e.g., $H_0: \mu_D = 0$).
+
+8.  **Write True or False: In a small sample test of the mean of a normal population, the test statistic follows Chi-square distribution.** (D73763 Q10, 1 mark)
+    *   **False**. It typically follows a t-distribution (if $\sigma$ is unknown) or a Z (normal) distribution (if $\sigma$ is known). Chi-square is used for variance tests.
+
+9.  **Calculate the value of test statistic in testing the mean $\mu = 30$ of a population using a random sample of size 225 with the mean and variance, 32 and 16 respectively.** (D12051 Q11, 3 marks) [Applies t-stat formula $\frac{\bar{x}-\mu}{s/\sqrt{n}}$]
+    *   Given: Hypothesized mean $\mu_0 = 30$.
+    *   Sample size $n = 225$.
+    *   Sample mean $\bar{x} = 32$.
+    *   Sample variance $s^2 = 16$. Sample standard deviation $s = \sqrt{16} = 4$.
+    *   Since the population variance is unknown (we only have sample variance), we use the t-statistic formula:
+        $t = \frac{\bar{x} - \mu_0}{s / \sqrt{n}}$
+        $t = \frac{32 - 30}{4 / \sqrt{225}} = \frac{2}{4 / 15}$
+        $t = 2 \times \frac{15}{4} = \frac{30}{4} = 7.5$.
+    *   **Answer:** The value of the test statistic is 7.5. (Note: With $n=225$, the degrees of freedom $n-1=224$ is large, and the t-distribution is very close to the standard normal distribution).
+
+---
+
+**5. Snedecor's F-Distribution (F)**
+
+1.  **Define F-distribution.** (D73763 Q13, 2 marks)
+    *   Let $U$ be a random variable following a Chi-square distribution with $m$ degrees of freedom, $\chi^2(m)$.
+    *   Let $V$ be a random variable following a Chi-square distribution with $n$ degrees of freedom, $\chi^2(n)$.
+    *   Assume $U$ and $V$ are independent.
+    *   The **F-distribution with $m$ and $n$ degrees of freedom**, denoted as $F(m, n)$, is defined as the distribution of the random variable $F$:
+        $$ F = \frac{U/m}{V/n} $$
+    *   The distribution depends on two parameters: the numerator degrees of freedom ($m$) and the denominator degrees of freedom ($n$).
+
+2.  **Name the following: $X_1$ and $X_2$ are two independent chi-square variate having $n_1$ and $n_2$ degrees of freedom. Then $\frac{X_1/n_1}{X_2/n_2}$ follows \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_.** (D11877 Q3, 1 mark)
+    *   **F-distribution with $n_1$ and $n_2$ degrees of freedom**, denoted as $F(n_1, n_2)$.
+
+3.  **Fill up the blanks: The distribution of the reciprocal of X following F(m, n) is \_\_\_\_\_\_\_\_\_\_\_\_.** (D11877 Q10, 1 mark)
+    *   **F(n, m)** (F-distribution with $n$ and $m$ degrees of freedom).
+
+4.  **If F follows F-distribution with (m, n) degrees of freedom. Derive the probability distribution of $Y = 1/F$.** (D11878 Q29(i), marks part of 10m)
+    *   Given $F \sim F(m, n)$. By definition, $F = \frac{U/m}{V/n}$, where $U \sim \chi^2(m)$ and $V \sim \chi^2(n)$ are independent.
+    *   Let $Y = 1/F$.
+    *   Substituting the expression for F:
+        $Y = \frac{1}{(U/m)/(V/n)} = \frac{V/n}{U/m}$
+    *   This expression represents the ratio of two independent Chi-square variables ($V$ and $U$) divided by their respective degrees of freedom ($n$ and $m$).
+    *   By the definition of the F-distribution, this ratio follows an F-distribution with the degrees of freedom corresponding to the numerator ($V$, which has $n$ df) and the denominator ($U$, which has $m$ df).
+    *   Therefore, $Y = 1/F \sim F(n, m)$.
+    *   **Answer:** The distribution of $Y = 1/F$ is $F(n, m)$.
+
+5.  **Identify the distribution of the ratio of the squares of two independent standard normal random variables.** (D11878 Q13, 2 marks)
+    *   Let $Z_1$ and $Z_2$ be two independent standard normal random variables, $Z_1, Z_2 \sim N(0, 1)$.
+    *   Then $Z_1^2 \sim \chi^2(1)$ and $Z_2^2 \sim \chi^2(1)$.
+    *   The ratio of their squares is $R = \frac{Z_1^2}{Z_2^2}$.
+    *   We can write this ratio in the form required for the F-distribution:
+        $R = \frac{Z_1^2 / 1}{Z_2^2 / 1}$
+    *   Here, $U = Z_1^2 \sim \chi^2(1)$ (so $m=1$) and $V = Z_2^2 \sim \chi^2(1)$ (so $n=1$). $U$ and $V$ are independent.
+    *   The ratio follows an F-distribution with numerator df $m=1$ and denominator df $n=1$.
+    *   **Answer:** **F-distribution with (1, 1) degrees of freedom**, denoted as $F(1, 1)$.
+
+6.  **It $X_1, X_2$ and $X_3$ is a random sample taken independently from $N(0, 1)$ population, identify the probability distribution of $X_1^2 / X_2^2$.** (D73763 Q23(iii), marks part of 6m)
+    *   Given $X_1, X_2, X_3$ are iid $N(0, 1)$.
+    *   Then $X_1^2 \sim \chi^2(1)$ and $X_2^2 \sim \chi^2(1)$. They are independent.
+    *   The ratio is $\frac{X_1^2}{X_2^2} = \frac{X_1^2 / 1}{X_2^2 / 1}$.
+    *   This fits the definition of an F-distribution with $m=1$ (numerator df) and $n=1$ (denominator df).
+    *   **Answer:** **F-distribution with (1, 1) degrees of freedom**, $F(1, 1)$.
+
+7.  **If X and Y are independent standard normal random variables, name the probability distribution of $X^2/Y^2$.** (D12049 Q8(ii), marks part of 3m)
+    *   This is the same scenario as Q5.5 and Q5.6. $X \sim N(0, 1)$, $Y \sim N(0, 1)$, independent.
+    *   $X^2 \sim \chi^2(1)$ and $Y^2 \sim \chi^2(1)$.
+    *   The ratio $\frac{X^2}{Y^2} = \frac{X^2/1}{Y^2/1}$ follows an **F-distribution with (1, 1) degrees of freedom**, $F(1, 1)$.
+
+8.  **Formula for the confidence interval for the ratio of variances of the two normal population involves:** (D11878-A Q12, MCQ)
+    *   **(B) F distribution** (The ratio of sample variances $s_1^2/s_2^2$, adjusted by the unknown population variance ratio $\sigma_1^2/\sigma_2^2$, follows an F-distribution).
+
+9.  **Equality of two population variances can be tested by:** (D11878-A Q17, MCQ)
+    *   **(C) F-test** (Using the test statistic $F = s_1^2 / s_2^2$).
+
+10. **Write the test statistic and its probability distribution used in a small sample test of equality of variances of two normal populations.** (D12051 Q12, 3m)
+    *   Assume we have two independent random samples of sizes $n_1$ and $n_2$ from two normal populations $N(\mu_1, \sigma_1^2)$ and $N(\mu_2, \sigma_2^2)$, respectively. We want to test $H_0: \sigma_1^2 = \sigma_2^2$ against $H_1: \sigma_1^2 \neq \sigma_2^2$ (or one-sided alternatives).
+    *   Calculate the sample variances $s_1^2$ and $s_2^2$.
+    *   **Test Statistic:** The test statistic is the ratio of the sample variances:
+        $$ F = \frac{s_1^2}{s_2^2} $$
+        (Sometimes the larger variance is placed in the numerator to simplify using F-tables).
+    *   **Probability Distribution:** Under the null hypothesis ($H_0: \sigma_1^2 = \sigma_2^2$), this test statistic follows an **F-distribution with $n_1 - 1$ numerator degrees of freedom and $n_2 - 1$ denominator degrees of freedom**:
+        $$ F \sim F(n_1 - 1, n_2 - 1) $$
+
+11. **Give any two uses of F-distribution.** (D11877 Q13, 2 marks)
+    *   1.  **Testing the equality of variances** of two normally distributed populations.
+    *   2.  **Analysis of Variance (ANOVA)**: Testing the equality of means of three or more normally distributed populations. (Specifically, testing if the variation *between* group means is significantly larger than the variation *within* groups).
+
+12. **Derive any one statistic following F-distribution.** (D11878 Q29(ii), marks part of 10m)
+    *   **Statistic: Ratio of Sample Variances for Testing Equality of Population Variances**
+        Let $X_1, ..., X_{n_1}$ be a random sample from $N(\mu_1, \sigma_1^2)$.
+        Let $Y_1, ..., Y_{n_2}$ be an independent random sample from $N(\mu_2, \sigma_2^2)$.
+        Let $s_1^2 = \frac{1}{n_1-1}\sum_{i=1}^{n_1}(X_i - \bar{X})^2$ and $s_2^2 = \frac{1}{n_2-1}\sum_{j=1}^{n_2}(Y_j - \bar{Y})^2$ be the sample variances.
+        We know that $\frac{(n_1-1)s_1^2}{\sigma_1^2} \sim \chi^2(n_1-1)$. Let this be $U$. The degrees of freedom are $m = n_1-1$.
+        We also know that $\frac{(n_2-1)s_2^2}{\sigma_2^2} \sim \chi^2(n_2-1)$. Let this be $V$. The degrees of freedom are $n = n_2-1$.
+        Since the samples are independent, $U$ and $V$ are independent.
+        By the definition of the F-distribution, the ratio $\frac{U/m}{V/n}$ follows $F(m, n)$.
+        $$ \frac{U/m}{V/n} = \frac{\left(\frac{(n_1-1)s_1^2}{\sigma_1^2}\right) / (n_1-1)}{\left(\frac{(n_2-1)s_2^2}{\sigma_2^2}\right) / (n_2-1)} = \frac{s_1^2 / \sigma_1^2}{s_2^2 / \sigma_2^2} $$
+        This statistic, $\frac{s_1^2 / \sigma_1^2}{s_2^2 / \sigma_2^2}$, follows $F(n_1-1, n_2-1)$.
+        If we are testing the null hypothesis $H_0: \sigma_1^2 = \sigma_2^2$, then under $H_0$, the ratio simplifies to:
+        $$ F = \frac{s_1^2}{s_2^2} $$
+        This specific statistic $F = s_1^2/s_2^2$ follows $F(n_1-1, n_2-1)$ only under the assumption that the null hypothesis is true. This is the statistic commonly used for the F-test of equal variances.
+
+---
+
+**6. Interrelations between Distributions**
+
+1.  **Explain the interrelation between Chi-square, t and F distributions.** (D73763 Q28, 6 marks; D11877 Q29, 10 marks)
+    *   The Chi-square, t, and F distributions are closely related, often arising from operations on normally distributed random variables. They form the foundation for many statistical inference procedures.
+
+    *   **Normal and Chi-square:**
+        *   If $Z \sim N(0, 1)$, then $Z^2 \sim \chi^2(1)$. (Square of a standard normal is Chi-square with 1 df).
+        *   If $Z_1, ..., Z_n$ are iid $N(0, 1)$, then $\sum_{i=1}^{n} Z_i^2 \sim \chi^2(n)$. (Sum of squares of $n$ independent standard normals is Chi-square with $n$ df. This is the definition of $\chi^2(n)$).
+
+    *   **Normal, Chi-square, and t:**
+        *   If $Z \sim N(0, 1)$ and $U \sim \chi^2(n)$, and $Z$ and $U$ are independent, then $T = \frac{Z}{\sqrt{U/n}} \sim t(n)$. (Definition of t-distribution).
+        *   As degrees of freedom $n \to \infty$, the t-distribution $t(n)$ converges to the standard normal distribution $N(0, 1)$. $t(\infty) = Z$. This is because as $n \to \infty$, the sample variance $s^2$ becomes a very precise estimate of $\sigma^2$, or intuitively, $\sqrt{U/n}$ approaches $\sqrt{E(U/n)} = \sqrt{E(U)/n} = \sqrt{n/n} = 1$.
+
+    *   **Chi-square and F:**
+        *   If $U \sim \chi^2(m)$ and $V \sim \chi^2(n)$, and $U$ and $V$ are independent, then $F = \frac{U/m}{V/n} \sim F(m, n)$. (Definition of F-distribution).
+
+    *   **t and F:**
+        *   The square of a t-distributed random variable with $n$ degrees of freedom follows an F-distribution with 1 and $n$ degrees of freedom. That is, if $T \sim t(n)$, then $T^2 \sim F(1, n)$.
+        *   *Proof:* Let $T = \frac{Z}{\sqrt{U/n}}$, where $Z \sim N(0, 1)$, $U \sim \chi^2(n)$, independent.
+            Then $T^2 = \frac{Z^2}{U/n}$.
+            We know $Z^2 \sim \chi^2(1)$. Let $W = Z^2$. So $W \sim \chi^2(1)$.
+            Then $T^2 = \frac{W}{U/n} = \frac{W/1}{U/n}$.
+            Since $Z$ and $U$ are independent, $W=Z^2$ and $U$ are independent.
+            This expression $\frac{W/1}{U/n}$ fits the definition of an F-distribution with $m=1$ and $n$ degrees of freedom. Therefore, $T^2 \sim F(1, n)$.
+
+These relationships highlight how these fundamental sampling distributions are interconnected and derived from the normal distribution, forming a coherent framework for statistical inference.
+
+---
