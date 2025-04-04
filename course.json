@@ -95,16 +95,16 @@
                     "path": "/stat2/mod3",
                     "webview": false,
                     "qa2": {
-                        "path": "stat2/qa21.json",
+                        "path": "stat2/qa21.1.json",
                         "obj": 3
                     }
                 },
                 {
                     "text": "Sampling Distributions",
-                    "path": "/stat2/mod4.1",
+                    "path": "/stat2/mod4.html",
                     "webview": true,
                     "qa2": {
-                        "path": "stat2/qa21.json",
+                        "path": "stat2/qa23.json",
                         "obj": 4
                     }
                 }

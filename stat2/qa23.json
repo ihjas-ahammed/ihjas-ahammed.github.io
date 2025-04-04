@@ -1,0 +1,1552 @@
+{
+    "4": [
+        {
+            "name": "Parameter vs. Statistic",
+            "qa": [
+                {
+                    "question": "What is a parameter?",
+                    "options": [
+                        "A numerical measure calculated using sample values",
+                        "A numerical measure calculated using all values in a population",
+                        "A characteristic described by a sample",
+                        "The standard deviation of a sample"
+                    ],
+                    "describe": "A parameter is a numerical measure calculated using all the values in a population, describing characteristics of the population.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is a statistic?",
+                    "options": [
+                        "A numerical measure calculated using all values in a population",
+                        "A characteristic of a population",
+                        "A numerical measure calculated using values from a sample",
+                        "The theoretical mean of a distribution"
+                    ],
+                    "describe": "A statistic is a numerical measure calculated using values from a sample, used to estimate population parameters or describe the sample.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which of the following is an example of a parameter?",
+                    "options": [
+                        "Sample mean (x-bar)",
+                        "Population mean (mu)",
+                        "Sample variance (s-squared)",
+                        "Sample correlation coefficient (r)"
+                    ],
+                    "describe": "Examples of parameters include Population mean (mu), Population variance (sigma-squared), Population standard deviation (sigma), and Population correlation coefficient (rho).",
+                    "correct": 1
+                },
+                {
+                    "question": "Which of the following is an example of a statistic?",
+                    "options": [
+                        "Population mean (mu)",
+                        "Population variance (sigma-squared)",
+                        "Sample mean (x-bar)",
+                        "Population standard deviation (sigma)"
+                    ],
+                    "describe": "Examples of statistics include Sample mean (x-bar), Sample variance (s-squared), Sample standard deviation (s), and Sample correlation coefficient (r).",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the primary purpose of calculating a statistic?",
+                    "options": [
+                        "To describe the entire population perfectly",
+                        "To estimate population parameters or describe a sample",
+                        "To define the sample size",
+                        "To calculate the population variance"
+                    ],
+                    "describe": "Statistics are used to estimate population parameters or describe the sample from which they were calculated.",
+                    "correct": 1
+                },
+                {
+                    "question": "The symbol 'mu' typically represents which quantity?",
+                    "options": [
+                        "Sample mean",
+                        "Sample variance",
+                        "Population mean",
+                        "Population variance"
+                    ],
+                    "describe": "mu represents the Population mean, which is a parameter.",
+                    "correct": 2
+                },
+                {
+                    "question": "The symbol 's-squared' typically represents which quantity?",
+                    "options": [
+                        "Population variance",
+                        "Sample variance",
+                        "Population standard deviation",
+                        "Sample standard deviation"
+                    ],
+                    "describe": "s-squared represents the Sample variance, which is a statistic.",
+                    "correct": 1
+                },
+                {
+                    "question": "The symbol 'sigma' typically represents which quantity?",
+                    "options": [
+                        "Sample standard deviation",
+                        "Population standard deviation",
+                        "Sample mean",
+                        "Population mean"
+                    ],
+                    "describe": "sigma represents the Population standard deviation, which is a parameter.",
+                    "correct": 1
+                },
+                {
+                    "question": "The symbol 'r' typically represents which quantity?",
+                    "options": [
+                        "Population correlation coefficient",
+                        "Population mean",
+                        "Sample correlation coefficient",
+                        "Sample standard deviation"
+                    ],
+                    "describe": "r represents the Sample correlation coefficient, which is a statistic.",
+                    "correct": 2
+                },
+                {
+                    "question": "The symbol 'rho' typically represents which quantity?",
+                    "options": [
+                        "Sample correlation coefficient",
+                        "Population correlation coefficient",
+                        "Sample variance",
+                        "Population variance"
+                    ],
+                    "describe": "rho represents the Population correlation coefficient, which is a parameter.",
+                    "correct": 1
+                },
+                {
+                    "question": "Parameters are characteristics of the ________, while statistics are characteristics of the ________.",
+                    "options": [
+                        "Sample, Population",
+                        "Population, Sample",
+                        "Mean, Variance",
+                        "Variance, Mean"
+                    ],
+                    "describe": "Parameters describe characteristics of the population, and statistics describe characteristics of the sample.",
+                    "correct": 1
+                },
+                {
+                    "question": "If you measure the height of every student in a university, the average height calculated would be a:",
+                    "options": [
+                        "Statistic",
+                        "Parameter",
+                        "Sample",
+                        "Variable"
+                    ],
+                    "describe": "Since the average height is calculated using all values (every student) in the population (the university), it is a parameter.",
+                    "correct": 1
+                },
+                {
+                    "question": "If you measure the height of 100 randomly selected students from a university, the average height calculated would be a:",
+                    "options": [
+                        "Parameter",
+                        "Population value",
+                        "Statistic",
+                        "True mean"
+                    ],
+                    "describe": "Since the average height is calculated using values from a sample (100 students), it is a statistic.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which term refers to a fixed numerical value describing a population characteristic?",
+                    "options": [
+                        "Variable",
+                        "Statistic",
+                        "Estimate",
+                        "Parameter"
+                    ],
+                    "describe": "A parameter is a numerical measure calculated using all the values in a population, representing a fixed characteristic.",
+                    "correct": 3
+                },
+                {
+                    "question": "Which term refers to a numerical value calculated from sample data?",
+                    "options": [
+                        "Parameter",
+                        "Population characteristic",
+                        "Statistic",
+                        "True value"
+                    ],
+                    "describe": "A statistic is a numerical measure calculated using values from a sample.",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Sampling Distribution",
+            "qa": [
+                {
+                    "question": "What is the definition of a sampling distribution of a statistic?",
+                    "options": [
+                        "The distribution of data within a single sample",
+                        "The distribution of data within the entire population",
+                        "The probability distribution of all possible values of a statistic from samples of the same size",
+                        "A list of all statistics calculated from one sample"
+                    ],
+                    "describe": "The sampling distribution of a statistic is the probability distribution of all possible values of that statistic, computed from samples of the same size n drawn from the same population.",
+                    "correct": 2
+                },
+                {
+                    "question": "How is a sampling distribution conceptually formed?",
+                    "options": [
+                        "By analyzing a single large sample",
+                        "By taking one sample and calculating many different statistics",
+                        "By taking all possible samples of a fixed size, calculating a specific statistic for each, and collecting these values",
+                        "By calculating parameters from the population"
+                    ],
+                    "describe": "Imagine taking all possible samples of a fixed size 'n', calculating a specific statistic (like the sample mean) for each sample, and then forming the distribution of these calculated statistic values.",
+                    "correct": 2
+                },
+                {
+                    "question": "In the formal definition t = g(X1, X2, ..., Xn), what does 't' represent?",
+                    "options": [
+                        "The population parameter",
+                        "A single data point",
+                        "The sample size",
+                        "A statistic calculated from the sample"
+                    ],
+                    "describe": "Let X1, X2, ..., Xn be a random sample of size n. Let t = g(X1, X2, ..., Xn) be a statistic (a function of the sample).",
+                    "correct": 3
+                },
+                {
+                    "question": "What does f(t) denote in the context of the formal definition of a sampling distribution?",
+                    "options": [
+                        "The population distribution function",
+                        "The probability distribution of the statistic 't'",
+                        "The value of the statistic for a specific sample",
+                        "A function of the population parameter"
+                    ],
+                    "describe": "The probability distribution of the random variable t, denoted f(t), is its sampling distribution.",
+                    "correct": 1
+                },
+                {
+                    "question": "A sampling distribution describes the variability of what?",
+                    "options": [
+                        "Individual data points within a sample",
+                        "Population parameters",
+                        "A statistic across different possible samples",
+                        "The sample size"
+                    ],
+                    "describe": "A sampling distribution shows how a statistic (like the sample mean) varies from sample to sample.",
+                    "correct": 2
+                },
+                {
+                    "question": "To create the sampling distribution of the sample mean (x-bar) for samples of size n=10 from a population, what would you need to do?",
+                    "options": [
+                        "Take one sample of size 10 and calculate its mean",
+                        "Take many samples, each of size 10, calculate the mean for each, and plot the distribution of these means",
+                        "Calculate the population mean",
+                        "Take a sample of size 10 and calculate the variance"
+                    ],
+                    "describe": "The sampling distribution is formed by considering all possible samples of size n (here, n=10), calculating the statistic (here, the sample mean) for each, and examining the distribution of these statistic values.",
+                    "correct": 1
+                },
+                {
+                    "question": "The concept of a sampling distribution is fundamental for which statistical activity?",
+                    "options": [
+                        "Data collection",
+                        "Descriptive statistics of a single sample",
+                        "Inferential statistics (e.g., hypothesis testing, confidence intervals)",
+                        "Calculating population parameters directly"
+                    ],
+                    "describe": "Sampling distributions form the basis for inferential statistics, allowing us to make conclusions about a population based on a sample statistic.",
+                    "correct": 2
+                },
+                {
+                    "question": "Does the sampling distribution depend on the statistic being calculated?",
+                    "options": [
+                        "No, it only depends on the population",
+                        "No, it only depends on the sample size",
+                        "Yes, there is a different sampling distribution for the mean, variance, median, etc.",
+                        "Yes, but only for non-normal populations"
+                    ],
+                    "describe": "The sampling distribution is specific to the statistic being considered (e.g., the sampling distribution of the sample mean is different from the sampling distribution of the sample variance).",
+                    "correct": 2
+                },
+                {
+                    "question": "Does the sampling distribution depend on the sample size 'n'?",
+                    "options": [
+                        "No, it's always the same regardless of 'n'",
+                        "Yes, the shape, center, and spread of the sampling distribution typically depend on 'n'",
+                        "Only the spread depends on 'n'",
+                        "Only the center depends on 'n'"
+                    ],
+                    "describe": "The sampling distribution depends on the sample size n; for example, the standard error (spread) decreases as n increases.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the 'random variable' represent in the definition of a sampling distribution?",
+                    "options": [
+                        "An individual observation from the population",
+                        "The population parameter",
+                        "The statistic calculated from a random sample",
+                        "The sample size"
+                    ],
+                    "describe": "In the formal definition, the statistic 't' is treated as a random variable because its value depends on the particular random sample selected.",
+                    "correct": 2
+                },
+                {
+                    "question": "The sampling distribution bridges the gap between ______ and ______.",
+                    "options": [
+                        "Sample statistics, Population parameters",
+                        "Raw data, Data visualization",
+                        "Sample size, Population size",
+                        "Mean, Median"
+                    ],
+                    "describe": "Sampling distributions allow us to understand how sample statistics relate to population parameters, forming the basis of statistical inference.",
+                    "correct": 0
+                },
+                {
+                    "question": "If we repeatedly draw samples of size n and calculate the sample proportion (p-hat) for each, the distribution of these p-hat values is called:",
+                    "options": [
+                        "The population distribution",
+                        "The sample distribution",
+                        "The sampling distribution of the proportion",
+                        "The binomial distribution"
+                    ],
+                    "describe": "This is the definition of the sampling distribution applied specifically to the sample proportion statistic.",
+                    "correct": 2
+                },
+                {
+                    "question": "What characteristic of the population affects the sampling distribution of a statistic?",
+                    "options": [
+                        "Only the population mean",
+                        "Only the population variance",
+                        "The underlying distribution of the population",
+                        "None, it only depends on the sample"
+                    ],
+                    "describe": "The shape of the population distribution influences the shape of the sampling distribution, although the Central Limit Theorem provides an approximation for the sample mean's distribution for large n.",
+                    "correct": 2
+                },
+                {
+                    "question": "The sampling distribution provides the theoretical foundation for understanding the uncertainty associated with using a ______ to estimate a ______.",
+                    "options": [
+                        "Parameter, Statistic",
+                        "Statistic, Parameter",
+                        "Sample, Population",
+                        "Population, Sample"
+                    ],
+                    "describe": "We use a statistic calculated from a sample to estimate a population parameter, and the sampling distribution quantifies the uncertainty (variability) in this estimation.",
+                    "correct": 1
+                },
+                {
+                    "question": "True or False: A sampling distribution is based on empirical data from one specific sample.",
+                    "options": [
+                        "True",
+                        "False"
+                    ],
+                    "describe": "False. A sampling distribution is a theoretical probability distribution based on all possible samples of a given size, not just one observed sample.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Standard Error (SE)",
+            "qa": [
+                {
+                    "question": "What is the Standard Error (SE) of a statistic?",
+                    "options": [
+                        "The standard deviation of the population",
+                        "The standard deviation of the sample data",
+                        "The standard deviation of the sampling distribution of the statistic",
+                        "The average value of the statistic"
+                    ],
+                    "describe": "The standard deviation of the sampling distribution of a statistic is called its Standard Error (SE).",
+                    "correct": 2
+                },
+                {
+                    "question": "What does the Standard Error measure?",
+                    "options": [
+                        "The central tendency of the population",
+                        "The variability or spread of individual data points in a sample",
+                        "The variability or spread of the statistic's values across all possible samples",
+                        "The bias of the statistic"
+                    ],
+                    "describe": "SE measures the variability or spread of the statistic's values across all possible samples of the same size.",
+                    "correct": 2
+                },
+                {
+                    "question": "How is the Standard Error (SE) formally calculated?",
+                    "options": [
+                        "SE(t) = E[t]",
+                        "SE(t) = Var(t)",
+                        "SE(t) = E[t-squared]",
+                        "SE(t) = sqrt(Var(t))"
+                    ],
+                    "describe": "The Standard Error is the standard deviation of the sampling distribution, calculated as the square root of the variance of the statistic: SE(t) = sqrt(Var(t)).",
+                    "correct": 3
+                },
+                {
+                    "question": "Which formula represents the variance of a statistic 't' used in the SE calculation?",
+                    "options": [
+                        "Var(t) = E[t]",
+                        "Var(t) = (E[t])-squared",
+                        "Var(t) = E[t-squared] - (E[t])-squared",
+                        "Var(t) = E[t-squared]"
+                    ],
+                    "describe": "The variance of a random variable (the statistic 't') is calculated as Var(t) = E[t-squared] - (E[t])-squared.",
+                    "correct": 2
+                },
+                {
+                    "question": "If the Standard Error of a statistic is small, what does it imply?",
+                    "options": [
+                        "The sample size was small",
+                        "The statistic is likely close to the population parameter (high precision)",
+                        "The population variance is large",
+                        "The statistic is a biased estimator"
+                    ],
+                    "describe": "A smaller SE indicates that the sample statistic is likely closer to the population parameter, implying greater reliability or precision.",
+                    "correct": 1
+                },
+                {
+                    "question": "How does the Standard Error typically change as the sample size 'n' increases?",
+                    "options": [
+                        "It increases proportionally to n",
+                        "It increases proportionally to sqrt(n)",
+                        "It decreases proportionally to 1/sqrt(n)",
+                        "It remains constant"
+                    ],
+                    "describe": "SE is typically inversely proportional to the square root of the sample size (sqrt(n)). As n increases, SE decreases.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the relationship between Standard Error (SE) and the precision of an estimate?",
+                    "options": [
+                        "Higher SE means higher precision",
+                        "Lower SE means higher precision",
+                        "SE is unrelated to precision",
+                        "SE equals precision"
+                    ],
+                    "describe": "A smaller SE indicates less variability in the statistic across samples, meaning the statistic from any one sample is likely closer to the true parameter, hence higher precision.",
+                    "correct": 1
+                },
+                {
+                    "question": "The reciprocal of the Standard Error (1/SE) can be considered a measure of what?",
+                    "options": [
+                        "Bias",
+                        "Variance",
+                        "Reliability or Precision",
+                        "Sample Size"
+                    ],
+                    "describe": "The reciprocal of SE (1/SE) can be seen as a measure of reliability or precision. Higher reliability corresponds to lower SE.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which term specifically refers to the standard deviation of the sampling distribution of the sample mean (x-bar)?",
+                    "options": [
+                        "Population Standard Deviation (sigma)",
+                        "Sample Standard Deviation (s)",
+                        "Standard Error of the Mean (SE(x-bar))",
+                        "Variance of the Mean"
+                    ],
+                    "describe": "The standard deviation of the sampling distribution of the sample mean is specifically called the Standard Error of the Mean.",
+                    "correct": 2
+                },
+                {
+                    "question": "If Var(t) = 16 for a statistic t, what is SE(t)?",
+                    "options": [
+                        "16",
+                        "8",
+                        "4",
+                        "256"
+                    ],
+                    "describe": "SE(t) = sqrt(Var(t)). So, SE(t) = sqrt(16) = 4.",
+                    "correct": 2
+                },
+                {
+                    "question": "Standard Error is a measure of ______ uncertainty.",
+                    "options": [
+                        "Measurement",
+                        "Sampling",
+                        "Systematic",
+                        "Population"
+                    ],
+                    "describe": "Standard Error quantifies the uncertainty introduced by using a sample statistic to estimate a population parameter, which arises from the random sampling process.",
+                    "correct": 1
+                },
+                {
+                    "question": "Is Standard Error a parameter or a statistic?",
+                    "options": [
+                        "Parameter",
+                        "Statistic",
+                        "Can be either, depending on context",
+                        "Neither"
+                    ],
+                    "describe": "Standard Error is typically estimated from sample data (e.g., using s / sqrt(n) when sigma is unknown), making the *estimated* SE a statistic. The *true* SE (e.g., sigma / sqrt(n)) is derived from parameters but describes the distribution of a statistic. Conceptually it describes the sampling distribution of a statistic.",
+                    "correct": 2
+                },
+                {
+                    "question": "Rephrased: Is the *estimated* Standard Error (e.g., calculated as s/sqrt(n)) a parameter or a statistic?",
+                    "options": [
+                        "Parameter",
+                        "Statistic",
+                        "Neither",
+                        "Both"
+                    ],
+                    "describe": "When the population standard deviation sigma is unknown and we use the sample standard deviation s to calculate SE as s / sqrt(n), this calculated value is a statistic because it's derived from sample data.",
+                    "correct": 1
+                },
+                {
+                    "question": "If two different statistics are calculated from the same samples, will they have the same Standard Error?",
+                    "options": [
+                        "Yes, always",
+                        "Only if the sample size is the same",
+                        "Only if the population is normal",
+                        "No, each statistic has its own sampling distribution and thus its own Standard Error"
+                    ],
+                    "describe": "Different statistics (e.g., mean, median, variance) have different sampling distributions, and therefore different standard deviations (Standard Errors).",
+                    "correct": 3
+                },
+                {
+                    "question": "The standard error quantifies the typical difference between a ______ and the ______ it estimates.",
+                    "options": [
+                        "Sample statistic, population parameter",
+                        "Population parameter, sample statistic",
+                        "Sample data point, sample mean",
+                        "Population data point, population mean"
+                    ],
+                    "describe": "Standard Error measures how much a sample statistic is expected to vary from the population parameter it is estimating, across different possible samples.",
+                    "correct": 0
+                },
+                {
+                    "question": "True or False: Standard Error is the same as Standard Deviation.",
+                    "options": [
+                        "True",
+                        "False"
+                    ],
+                    "describe": "False. Standard deviation typically refers to the spread of data within a population (sigma) or a sample (s), while Standard Error refers to the spread (standard deviation) of a statistic's sampling distribution.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Uses of Standard Error (SE)",
+            "qa": [
+                {
+                    "question": "Which of the following is a primary use of Standard Error (SE)?",
+                    "options": [
+                        "Calculating the population mean",
+                        "Describing the shape of the population distribution",
+                        "Determining the required sample size for a study",
+                        "Measuring the correlation between two variables"
+                    ],
+                    "describe": "SE is used in sample size determination. A smaller desired SE requires a larger sample size, helping researchers plan their studies.",
+                    "correct": 2
+                },
+                {
+                    "question": "How is Standard Error used in hypothesis testing?",
+                    "options": [
+                        "To set the significance level (alpha)",
+                        "To calculate the population parameter",
+                        "To construct the test statistic",
+                        "To determine if the data is normal"
+                    ],
+                    "describe": "SE is crucial in constructing test statistics (like t-scores or z-scores) used to determine if sample results are statistically significant.",
+                    "correct": 2
+                },
+                {
+                    "question": "What does a smaller Standard Error indicate about the reliability or precision of a sample statistic?",
+                    "options": [
+                        "Lower reliability / precision",
+                        "Higher reliability / precision",
+                        "No relationship with reliability / precision",
+                        "Indicates a biased estimate"
+                    ],
+                    "describe": "A smaller SE indicates that the sample statistic is likely closer to the population parameter, implying greater reliability or precision.",
+                    "correct": 1
+                },
+                {
+                    "question": "Standard Error is a key component in the calculation of which inferential tool?",
+                    "options": [
+                        "Frequency tables",
+                        "Histograms",
+                        "Confidence Intervals",
+                        "Scatter plots"
+                    ],
+                    "describe": "SE is used to calculate confidence intervals, which provide a range of plausible values for the population parameter.",
+                    "correct": 2
+                },
+                {
+                    "question": "If a researcher wants to increase the precision of their estimate (i.e., decrease the SE), what is the most direct way?",
+                    "options": [
+                        "Decrease the sample size",
+                        "Increase the sample size",
+                        "Change the statistic being calculated",
+                        "Use a different population"
+                    ],
+                    "describe": "SE is typically inversely proportional to sqrt(n). Increasing the sample size 'n' will decrease the Standard Error, thus increasing precision.",
+                    "correct": 1
+                },
+                {
+                    "question": "In the context of hypothesis testing, the SE is often found in the ______ of the test statistic formula.",
+                    "options": [
+                        "Numerator",
+                        "Denominator",
+                        "Exponent",
+                        "Coefficient"
+                    ],
+                    "describe": "Test statistics often take the form (Statistic - Hypothesized Value) / SE. The SE standardizes the difference, measuring it in units of standard error.",
+                    "correct": 1
+                },
+                {
+                    "question": "The measure 1/SE relates to which use of Standard Error?",
+                    "options": [
+                        "Sample size determination",
+                        "Hypothesis testing",
+                        "Assessing reliability/precision",
+                        "Calculating confidence intervals"
+                    ],
+                    "describe": "The reciprocal of SE (1/SE) can be seen as a measure of reliability or precision.",
+                    "correct": 2
+                },
+                {
+                    "question": "When constructing a confidence interval for a population mean, the margin of error is typically calculated as:",
+                    "options": [
+                        "Critical Value / SE",
+                        "Critical Value * SE",
+                        "SE / Critical Value",
+                        "SE + Critical Value"
+                    ],
+                    "describe": "The margin of error for a confidence interval is generally found by multiplying a critical value (from a z or t distribution) by the Standard Error of the statistic.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is SE important for determining sample size?",
+                    "options": [
+                        "It directly tells you the sample size needed",
+                        "It relates the desired precision (related to SE) to the required sample size",
+                        "It sets the alpha level for the study",
+                        "It determines the population variance"
+                    ],
+                    "describe": "Researchers often specify a desired level of precision (a maximum SE) and use the relationship between SE and sample size (SE proportional to 1 / sqrt(n)) to calculate the necessary 'n'.",
+                    "correct": 1
+                },
+                {
+                    "question": "A test statistic essentially measures how many ______ the sample statistic is away from the hypothesized parameter value.",
+                    "options": [
+                        "Sample standard deviations",
+                        "Population standard deviations",
+                        "Standard Errors",
+                        "Units of the variable"
+                    ],
+                    "describe": "The test statistic standardizes the difference between the observed statistic and the hypothesized value by dividing by the Standard Error, effectively measuring the difference in SE units.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which use of SE helps quantify the uncertainty around a point estimate?",
+                    "options": [
+                        "Sample size determination",
+                        "Hypothesis testing",
+                        "Reliability/Precision assessment",
+                        "Confidence intervals"
+                    ],
+                    "describe": "Confidence intervals, which are built using the SE, provide a range estimate that reflects the uncertainty associated with the point estimate.",
+                    "correct": 3
+                },
+                {
+                    "question": "If Research Study A has a smaller SE for the sample mean than Study B (using the same population), what can we likely infer?",
+                    "options": [
+                        "Study A used a smaller sample size",
+                        "Study A's estimate of the mean is less reliable",
+                        "Study A used a larger sample size or the population had smaller variance",
+                        "Study A's result is less statistically significant"
+                    ],
+                    "describe": "A smaller SE implies greater precision, which is usually achieved through a larger sample size (assuming the population variance is the same).",
+                    "correct": 2
+                },
+                {
+                    "question": "The width of a confidence interval is directly proportional to the:",
+                    "options": [
+                        "Sample size",
+                        "Standard Error",
+                        "Population mean",
+                        "Reciprocal of the Standard Error"
+                    ],
+                    "describe": "The width of a confidence interval is typically 2 * Margin of Error = 2 * (Critical Value * SE). Therefore, it is directly proportional to the Standard Error.",
+                    "correct": 1
+                },
+                {
+                    "question": "Assessing the 'statistical significance' of a result in hypothesis testing relies heavily on comparing the test statistic to a critical value. How does SE play a role?",
+                    "options": [
+                        "SE determines the critical value",
+                        "SE is used to calculate the test statistic itself",
+                        "SE defines the null hypothesis",
+                        "SE determines the p-value directly"
+                    ],
+                    "describe": "SE is a fundamental component in calculating the test statistic (e.g., z = (x-bar - mu_0) / (sigma / sqrt(n)) or t = (x-bar - mu_0) / (s / sqrt(n)), where the denominator involves SE).",
+                    "correct": 1
+                },
+                {
+                    "question": "The concept that a smaller SE implies the sample statistic is 'likely closer' to the population parameter relates to which use of SE?",
+                    "options": [
+                        "Sample Size Determination",
+                        "Hypothesis Testing",
+                        "Reliability/Precision Assessment",
+                        "Confidence Intervals"
+                    ],
+                    "describe": "This statement directly describes the meaning of reliability or precision, which is indicated by the magnitude of the SE.",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Sampling Distribution of the Sample Mean (x-bar)",
+            "qa": [
+                {
+                    "question": "If a random sample X1, ..., Xn is drawn from a N(mu, sigma-squared) population, what is the distribution of the sample mean x-bar?",
+                    "options": [
+                        "N(mu, sigma-squared)",
+                        "N(mu, sigma-squared / n)",
+                        "t(n-1)",
+                        "Chi-Sq(n)"
+                    ],
+                    "describe": "The sample mean x-bar from a Normal population N(mu, sigma-squared) follows a Normal distribution N(mu, sigma-squared / n).",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the expected value (mean) of the sampling distribution of the sample mean, E[x-bar]?",
+                    "options": [
+                        "mu / n",
+                        "sigma-squared / n",
+                        "mu",
+                        "0"
+                    ],
+                    "describe": "The expected value of the sample mean is the population mean: E[x-bar] = mu. This indicates that x-bar is an unbiased estimator of mu.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the variance of the sampling distribution of the sample mean, Var(x-bar)?",
+                    "options": [
+                        "sigma-squared",
+                        "sigma-squared / n",
+                        "sigma / sqrt(n)",
+                        "mu"
+                    ],
+                    "describe": "The variance of the sample mean is the population variance divided by the sample size: Var(x-bar) = sigma-squared / n.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the Standard Error of the sample mean, SE(x-bar)?",
+                    "options": [
+                        "sigma-squared / n",
+                        "sigma",
+                        "sigma / sqrt(n)",
+                        "mu / sqrt(n)"
+                    ],
+                    "describe": "The Standard Error of the sample mean is the square root of its variance: SE(x-bar) = sqrt(Var(x-bar)) = sqrt(sigma-squared / n) = sigma / sqrt(n).",
+                    "correct": 2
+                },
+                {
+                    "question": "The fact that E[x-bar] = mu means that the sample mean x-bar is a(n) ______ estimator of the population mean mu.",
+                    "options": [
+                        "Biased",
+                        "Efficient",
+                        "Consistent",
+                        "Unbiased"
+                    ],
+                    "describe": "An estimator is unbiased if its expected value equals the parameter it estimates. Since E[x-bar] = mu, x-bar is an unbiased estimator of mu.",
+                    "correct": 3
+                },
+                {
+                    "question": "How does the spread of the sampling distribution of x-bar compare to the spread of the population distribution?",
+                    "options": [
+                        "It is wider (larger variance)",
+                        "It is narrower (smaller variance, assuming n>1)",
+                        "It has the same spread",
+                        "Depends on the population mean"
+                    ],
+                    "describe": "The variance of x-bar is sigma-squared / n, which is smaller than the population variance sigma-squared (for n>1). Thus, the sampling distribution is less spread out.",
+                    "correct": 1
+                },
+                {
+                    "question": "What theorem states that the sampling distribution of x-bar will be approximately Normal for large 'n', even if the population is not Normal?",
+                    "options": [
+                        "Bayes' Theorem",
+                        "Law of Large Numbers",
+                        "Central Limit Theorem (CLT)",
+                        "Chebyshev's Inequality"
+                    ],
+                    "describe": "The Central Limit Theorem (CLT) states that for a sufficiently large sample size n, the sampling distribution of the sample mean x-bar is approximately N(mu, sigma-squared / n), regardless of the shape of the population distribution.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to the Standard Error of the mean as the sample size 'n' increases?",
+                    "options": [
+                        "Increases",
+                        "Decreases",
+                        "Stays the same",
+                        "Becomes equal to sigma"
+                    ],
+                    "describe": "SE(x-bar) = sigma / sqrt(n). As n increases, the denominator sqrt(n) increases, so the SE decreases.",
+                    "correct": 1
+                },
+                {
+                    "question": "The Moment Generating Function (MGF) of x-bar is M_x-bar(t) = exp(mu*t + (1/2) * (sigma-squared / n) * t-squared). This MGF corresponds to which distribution?",
+                    "options": [
+                        "N(0, 1)",
+                        "N(mu, sigma-squared)",
+                        "N(mu, sigma-squared / n)",
+                        "t(n-1)"
+                    ],
+                    "describe": "This is the MGF of a Normal distribution with mean mu and variance sigma-squared / n. This confirms the distribution of x-bar derived from properties of normal variables.",
+                    "correct": 2
+                },
+                {
+                    "question": "If a population has mean mu = 50 and variance sigma-squared = 100, what is the mean of the sampling distribution of x-bar for samples of size n=25?",
+                    "options": [
+                        "50",
+                        "100",
+                        "2",
+                        "4"
+                    ],
+                    "describe": "The mean of the sampling distribution of x-bar is always equal to the population mean mu. Here, E[x-bar] = mu = 50.",
+                    "correct": 0
+                },
+                {
+                    "question": "If a population has mean mu = 50 and variance sigma-squared = 100, what is the variance of the sampling distribution of x-bar for samples of size n=25?",
+                    "options": [
+                        "50",
+                        "100",
+                        "4",
+                        "2"
+                    ],
+                    "describe": "The variance of the sampling distribution of x-bar is sigma-squared / n. Here, Var(x-bar) = 100/25 = 4.",
+                    "correct": 2
+                },
+                {
+                    "question": "If a population has mean mu = 50 and standard deviation sigma = 10, what is the Standard Error of the mean for samples of size n=25?",
+                    "options": [
+                        "50",
+                        "10",
+                        "4",
+                        "2"
+                    ],
+                    "describe": "The Standard Error of the mean is sigma / sqrt(n). Here, SE(x-bar) = 10 / sqrt(25) = 10/5 = 2.",
+                    "correct": 3
+                },
+                {
+                    "question": "The results regarding the distribution of x-bar (N(mu, sigma-squared/n)) assume the sample X1, ..., Xn is drawn from what type of population?",
+                    "options": [
+                        "Any population (due to CLT)",
+                        "A Binomial population",
+                        "A Normal population N(mu, sigma-squared)",
+                        "A Uniform population"
+                    ],
+                    "describe": "The exact result x-bar ~ N(mu, sigma-squared / n) holds when the underlying population is Normally distributed. The CLT provides an approximation for non-normal populations if n is large.",
+                    "correct": 2
+                },
+                {
+                    "question": "How is the sample mean x-bar calculated?",
+                    "options": [
+                        "Sum(Xi)",
+                        "(Sum(Xi)) / n",
+                        "Sum((Xi - mu)-squared) / n",
+                        "sqrt(Sum((Xi - x-bar)-squared) / (n-1))"
+                    ],
+                    "describe": "The sample mean x-bar is calculated as the sum of the sample observations divided by the sample size: x-bar = (1/n) * Sum(Xi for i=1 to n).",
+                    "correct": 1
+                },
+                {
+                    "question": "The Central Limit Theorem is particularly useful when:",
+                    "options": [
+                        "The sample size is small and the population is normal",
+                        "The population standard deviation sigma is unknown",
+                        "The population distribution is unknown or not normal, and the sample size is large",
+                        "We are comparing two population means"
+                    ],
+                    "describe": "The CLT allows us to approximate the sampling distribution of the mean as Normal even without knowing the population distribution shape, provided the sample size is sufficiently large.",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Chi-Square Distribution (Chi-Sq)",
+            "qa": [
+                {
+                    "question": "What type of random variable follows a Chi-Square distribution?",
+                    "options": [
+                        "Discrete",
+                        "Continuous",
+                        "Categorical",
+                        "Binary"
+                    ],
+                    "describe": "The Chi-Square distribution applies to a continuous random variable X, typically defined for x > 0.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the primary parameter of the Chi-Square distribution?",
+                    "options": [
+                        "Mean (mu)",
+                        "Variance (sigma-squared)",
+                        "Degrees of freedom (n)",
+                        "Sample size (N)"
+                    ],
+                    "describe": "The Chi-Square distribution is characterized by a single parameter, n, which represents the degrees of freedom (df), a positive integer.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the range of possible values for a Chi-Square random variable?",
+                    "options": [
+                        "-infinity to +infinity",
+                        "0 to +infinity (x > 0)",
+                        "0 to 1",
+                        "Only positive integers"
+                    ],
+                    "describe": "The PDF of the Chi-Square distribution is defined for x > 0.",
+                    "correct": 1
+                },
+                {
+                    "question": "If a random variable X follows a Chi-Square distribution with n degrees of freedom, X ~ Chi-Sq(n), what is its mean E[X]?",
+                    "options": [
+                        "n/2",
+                        "n",
+                        "2n",
+                        "sqrt(2n)"
+                    ],
+                    "describe": "The mean of a Chi-Square distribution with n degrees of freedom is E[X] = n.",
+                    "correct": 1
+                },
+                {
+                    "question": "If a random variable X follows a Chi-Square distribution with n degrees of freedom, X ~ Chi-Sq(n), what is its variance Var(X)?",
+                    "options": [
+                        "n",
+                        "n/2",
+                        "sqrt(2n)",
+                        "2n"
+                    ],
+                    "describe": "The variance of a Chi-Square distribution with n degrees of freedom is Var(X) = 2n.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the Moment Generating Function (MGF) of a Chi-Sq(n) random variable?",
+                    "options": [
+                        "exp(n*t + (1/2)*2*n*t-squared)",
+                        "(1 - t)^(-n)",
+                        "(1 - 2t)^(-n/2)",
+                        "It does not exist"
+                    ],
+                    "describe": "The MGF of a Chi-Sq(n) random variable X is M_X(t) = (1 - 2t)^(-n/2), for t < 1/2.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the additive property of the Chi-Square distribution?",
+                    "options": [
+                        "The sum of two Chi-Square variables is always Normal",
+                        "If X1 ~ Chi-Sq(n1) and X2 ~ Chi-Sq(n2) are independent, then X1 + X2 ~ Chi-Sq(n1 + n2)",
+                        "The average of Chi-Square variables follows a t-distribution",
+                        "If X1 ~ Chi-Sq(n1) and X2 ~ Chi-Sq(n2) are independent, then X1 - X2 ~ Chi-Sq(n1 - n2)"
+                    ],
+                    "describe": "If X1 and X2 are independent Chi-Square variables with n1 and n2 df respectively, their sum X1 + X2 follows a Chi-Square distribution with n1 + n2 degrees of freedom.",
+                    "correct": 1
+                },
+                {
+                    "question": "How is the Chi-Square distribution related to the Standard Normal distribution?",
+                    "options": [
+                        "The sum of n standard normal variables is Chi-Sq(n)",
+                        "If Z ~ N(0,1), then Z-squared ~ Chi-Sq(1)",
+                        "If Z ~ N(0,1), then Z ~ Chi-Sq(1)",
+                        "The ratio of two standard normal variables is Chi-Sq(1)"
+                    ],
+                    "describe": "If Z is a standard normal random variable (Z ~ N(0,1)), then its square, Z-squared, follows a Chi-Square distribution with 1 degree of freedom (Z-squared ~ Chi-Sq(1)).",
+                    "correct": 1
+                },
+                {
+                    "question": "If Z1, Z2, ..., Zn are independent standard normal variables (Zi ~ N(0,1)), what is the distribution of the sum of their squares, Sum(Zi-squared for i=1 to n)?",
+                    "options": [
+                        "N(0, n)",
+                        "Chi-Sq(1)",
+                        "Chi-Sq(n)",
+                        "t(n)"
+                    ],
+                    "describe": "The sum of the squares of n independent standard normal variables follows a Chi-Square distribution with n degrees of freedom: Sum(Zi-squared for i=1 to n) ~ Chi-Sq(n).",
+                    "correct": 2
+                },
+                {
+                    "question": "If X1, ..., Xn are independent variables from N(mu, sigma-squared), what is the distribution of Sum(((Xi - mu) / sigma)-squared for i=1 to n)?",
+                    "options": [
+                        "N(0, n)",
+                        "Chi-Sq(n)",
+                        "t(n-1)",
+                        "Chi-Sq(n-1)"
+                    ],
+                    "describe": "Since each (Xi - mu) / sigma is a standard normal variable Zi ~ N(0,1), the sum of their squares follows Sum(Zi-squared for i=1 to n) ~ Chi-Sq(n).",
+                    "correct": 1
+                },
+                {
+                    "question": "A Chi-Square distribution with 10 degrees of freedom has a mean of ___ and a variance of ___.",
+                    "options": [
+                        "10, 10",
+                        "10, 20",
+                        "20, 10",
+                        "5, 10"
+                    ],
+                    "describe": "For Chi-Sq(n), Mean = n and Variance = 2n. With n=10, Mean = 10 and Variance = 2*10 = 20.",
+                    "correct": 1
+                },
+                {
+                    "question": "The shape of the Chi-Square distribution is typically:",
+                    "options": [
+                        "Symmetric and bell-shaped",
+                        "Skewed to the left",
+                        "Skewed to the right (positively skewed)",
+                        "Uniform"
+                    ],
+                    "describe": "The Chi-Square distribution is defined for positive values and is generally skewed to the right, although it becomes more symmetric as degrees of freedom increase.",
+                    "correct": 2
+                },
+                {
+                    "question": "The Gamma function Gamma(n/2) appears in the PDF formula for the Chi-Square distribution. What is Gamma(k) for a positive integer k?",
+                    "options": [
+                        "k!",
+                        "(k-1)!",
+                        "k",
+                        "exp(-k)"
+                    ],
+                    "describe": "For positive integers k, the Gamma function is related to the factorial: Gamma(k) = (k-1)!. (Note: The PDF uses Gamma(n/2), which may involve non-integer arguments where the factorial definition doesn't directly apply, but the relationship is important).",
+                    "correct": 1
+                },
+                {
+                    "question": "The Chi-Square distribution is a special case of which other distribution family?",
+                    "options": [
+                        "Normal Distribution",
+                        "Beta Distribution",
+                        "Gamma Distribution",
+                        "Exponential Distribution"
+                    ],
+                    "describe": "The Chi-Square distribution with n degrees of freedom is a Gamma distribution with shape parameter k=n/2 and scale parameter theta=2.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to the shape of the Chi-Square distribution as the degrees of freedom (n) become very large?",
+                    "options": [
+                        "It approaches a uniform distribution",
+                        "It becomes more skewed to the right",
+                        "It approaches a Normal distribution",
+                        "It approaches an exponential distribution"
+                    ],
+                    "describe": "For large degrees of freedom, the Chi-Square distribution can be approximated by a Normal distribution.",
+                    "correct": 2
+                },
+                {
+                    "question": "The proof of the additive property of Chi-Square relies on which property of MGFs?",
+                    "options": [
+                        "The MGF uniquely determines the distribution",
+                        "The MGF of a sum of independent variables is the product of their MGFs",
+                        "The derivatives of the MGF give the moments",
+                        "The MGF always exists"
+                    ],
+                    "describe": "The proof uses the property that the MGF of a sum of independent random variables is the product of their individual MGFs. Multiplying (1 - 2t)^(-n1/2) and (1 - 2t)^(-n2/2) gives (1 - 2t)^(-(n1+n2)/2).",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "Student's t-Distribution",
+            "qa": [
+                {
+                    "question": "How is the t-statistic defined in terms of standard normal (Z) and Chi-Square (Y) variables?",
+                    "options": [
+                        "t = Z / Y",
+                        "t = Z * sqrt(Y/n)",
+                        "t = Z / sqrt(Y/n)",
+                        "t = Y / Z-squared"
+                    ],
+                    "describe": "The t-statistic is defined as t = Z / sqrt(Y/n), where Z ~ N(0,1), Y ~ Chi-Sq(n), and Z and Y are independent.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the parameter that characterizes Student's t-distribution?",
+                    "options": [
+                        "Mean (mu)",
+                        "Variance (sigma-squared)",
+                        "Degrees of freedom (n)",
+                        "Sample size (N)"
+                    ],
+                    "describe": "Student's t-distribution is characterized by a single parameter, n, representing the degrees of freedom.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the shape of the t-distribution?",
+                    "options": [
+                        "Skewed to the right",
+                        "Skewed to the left",
+                        "Symmetric, bell-shaped, with heavier tails than Normal",
+                        "Uniform"
+                    ],
+                    "describe": "The t-distribution is symmetric about t=0, bell-shaped, and unimodal, similar to the Normal distribution but with heavier tails.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the mean of the t-distribution with n degrees of freedom, E[t]?",
+                    "options": [
+                        "n",
+                        "0 (provided n > 1)",
+                        "1",
+                        "Undefined"
+                    ],
+                    "describe": "The mean of the t-distribution is E[t] = 0, provided the degrees of freedom n > 1.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the variance of the t-distribution with n degrees of freedom, Var(t)?",
+                    "options": [
+                        "1",
+                        "n / (n-1)",
+                        "n / (n-2) (provided n > 2)",
+                        "n"
+                    ],
+                    "describe": "The variance of the t-distribution is Var(t) = n / (n-2), provided the degrees of freedom n > 2.",
+                    "correct": 2
+                },
+                {
+                    "question": "How does the variance of the t-distribution compare to the variance of the standard normal distribution?",
+                    "options": [
+                        "It is smaller (Var(t) < 1)",
+                        "It is equal (Var(t) = 1)",
+                        "It is larger (Var(t) > 1, for n > 2)",
+                        "It depends on the mean"
+                    ],
+                    "describe": "The variance of the t-distribution is n/(n-2), which is greater than 1 for n > 2. The standard normal variance is exactly 1.",
+                    "correct": 2
+                },
+                {
+                    "question": "What happens to the t-distribution as the degrees of freedom 'n' approach infinity?",
+                    "options": [
+                        "It approaches a Chi-Square distribution",
+                        "It approaches the Standard Normal distribution N(0,1)",
+                        "It approaches a Uniform distribution",
+                        "Its variance approaches infinity"
+                    ],
+                    "describe": "As the degrees of freedom n approaches infinity, the t-distribution converges to the standard normal distribution N(0,1).",
+                    "correct": 1
+                },
+                {
+                    "question": "Does the Moment Generating Function (MGF) exist for the t-distribution?",
+                    "options": [
+                        "Yes, it's (1 - t-squared / n)^(-(n+1)/2)",
+                        "Yes, it's exp(t-squared / 2)",
+                        "No, the MGF does not exist for the t-distribution",
+                        "Only if n > 4"
+                    ],
+                    "describe": "The Moment Generating Function (MGF) does not exist for the t-distribution because the integral defining it diverges.",
+                    "correct": 2
+                },
+                {
+                    "question": "In the important application for inference about the population mean mu when sigma is unknown, which statistic follows a t-distribution?",
+                    "options": [
+                        "(x-bar - mu) / (sigma / sqrt(n))",
+                        "(n-1)*s-squared / sigma-squared",
+                        "(x-bar - mu) / (s / sqrt(n))",
+                        "x-bar"
+                    ],
+                    "describe": "The statistic t = (x-bar - mu) / (s / sqrt(n)) follows a t-distribution with (n-1) degrees of freedom when sampling from a Normal population.",
+                    "correct": 2
+                },
+                {
+                    "question": "In the formula t = (x-bar - mu) / (s / sqrt(n)), what does 's' represent?",
+                    "options": [
+                        "Population standard deviation (sigma)",
+                        "Sample standard deviation",
+                        "Standard Error using sigma",
+                        "Population variance (sigma-squared)"
+                    ],
+                    "describe": "'s' represents the sample standard deviation, calculated as s = sqrt((1/(n-1)) * Sum((Xi - x-bar)-squared)).",
+                    "correct": 1
+                },
+                {
+                    "question": "How many degrees of freedom does the t-statistic t = (x-bar - mu) / (s / sqrt(n)) have?",
+                    "options": [
+                        "n",
+                        "n-1",
+                        "n-2",
+                        "Depends on mu"
+                    ],
+                    "describe": "This t-statistic follows a t-distribution with (n-1) degrees of freedom, corresponding to the degrees of freedom used in calculating the sample variance s-squared.",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is the t-distribution used instead of the Z (standard normal) distribution when the population standard deviation sigma is unknown?",
+                    "options": [
+                        "The t-distribution is easier to calculate",
+                        "Using the sample standard deviation 's' introduces extra variability, accounted for by the heavier tails of the t-distribution",
+                        "The t-distribution always provides narrower confidence intervals",
+                        "The Z-distribution requires a large sample size"
+                    ],
+                    "describe": "Estimating sigma with s adds uncertainty. The t-distribution has heavier tails than the N(0,1) distribution, reflecting this additional uncertainty.",
+                    "correct": 1
+                },
+                {
+                    "question": "For the t-distribution, odd-order central moments (like the mean and the third moment) are equal to zero. Why?",
+                    "options": [
+                        "Because the variance is n/(n-2)",
+                        "Due to the symmetry of the distribution around t=0",
+                        "Because the MGF does not exist",
+                        "Only if n is an odd number"
+                    ],
+                    "describe": "The t-distribution is symmetric about t=0. For any symmetric distribution centered at 0, all odd-order central moments are zero, provided they exist.",
+                    "correct": 1
+                },
+                {
+                    "question": "The existence of even-order central moments mu_2r = E[t^(2r)] for the t-distribution depends on the degrees of freedom 'n'. What is the condition for mu_2r to exist?",
+                    "options": [
+                        "n > 2",
+                        "n > 2r",
+                        "n must be even",
+                        "Moments always exist"
+                    ],
+                    "describe": "Even-order central moments mu_2r exist only if the degrees of freedom n > 2r. For example, the fourth moment (r=2) exists only if n > 4.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the mode of the t-distribution?",
+                    "options": [
+                        "n",
+                        "n-1",
+                        "0",
+                        "1"
+                    ],
+                    "describe": "The t-distribution is unimodal and symmetric, with its peak (mode) at t=0.",
+                    "correct": 2
+                },
+                {
+                    "question": "When comparing a t-distribution with df=5 and a t-distribution with df=20, which one will have heavier tails?",
+                    "options": [
+                        "df=5",
+                        "df=20",
+                        "They have the same tails",
+                        "Depends on the variance"
+                    ],
+                    "describe": "The tails of the t-distribution become lighter (closer to the normal distribution) as the degrees of freedom increase. Therefore, the t-distribution with fewer degrees of freedom (df=5) will have heavier tails.",
+                    "correct": 0
+                }
+            ]
+        },
+        {
+            "name": "Snedecor's F-Distribution",
+            "qa": [
+                {
+                    "question": "How is the F-statistic defined in terms of two independent Chi-Square variables U and V?",
+                    "options": [
+                        "F = (U/n1) * (V/n2)",
+                        "F = (U/n1) / (V/n2)",
+                        "F = U + V",
+                        "F = U / V"
+                    ],
+                    "describe": "The F-statistic is defined as the ratio of two independent Chi-Square variables, each divided by its respective degrees of freedom: F = (U/n1) / (V/n2), where U ~ Chi-Sq(n1) and V ~ Chi-Sq(n2).",
+                    "correct": 1
+                },
+                {
+                    "question": "What are the parameters of the F-distribution?",
+                    "options": [
+                        "One degree of freedom (n)",
+                        "Mean (mu) and Variance (sigma-squared)",
+                        "Numerator degrees of freedom (n1) and Denominator degrees of freedom (n2)",
+                        "Sample sizes (N1 and N2)"
+                    ],
+                    "describe": "The F-distribution is characterized by two parameters: n1, the numerator degrees of freedom, and n2, the denominator degrees of freedom, denoted F(n1, n2).",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the range of possible values for an F-distributed random variable?",
+                    "options": [
+                        "-infinity to +infinity",
+                        "0 to 1",
+                        "Greater than 0 (F > 0)",
+                        "Only integers"
+                    ],
+                    "describe": "Since the F-statistic is a ratio of non-negative quantities (Chi-Square variables divided by positive df), its value must be positive. The PDF is defined for F > 0.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the general shape of the F-distribution?",
+                    "options": [
+                        "Symmetric and bell-shaped",
+                        "Symmetric and U-shaped",
+                        "Positively skewed (skewed to the right)",
+                        "Negatively skewed (skewed to the left)"
+                    ],
+                    "describe": "The F-distribution is unimodal and positively skewed. The skewness decreases as the degrees of freedom (n1 and n2) increase.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the mean of the F-distribution F(n1, n2), E[F]?",
+                    "options": [
+                        "n1 / (n1 - 2)",
+                        "n2 / (n2 - 2) (provided n2 > 2)",
+                        "n1 / n2",
+                        "1"
+                    ],
+                    "describe": "The mean of the F-distribution is E[F] = n2 / (n2 - 2), provided the denominator degrees of freedom n2 > 2.",
+                    "correct": 1
+                },
+                {
+                    "question": "Under what condition is the mean of the F-distribution defined?",
+                    "options": [
+                        "n1 > 2",
+                        "n2 > 0",
+                        "n2 > 2",
+                        "n1 > 4"
+                    ],
+                    "describe": "The mean E[F] = n2 / (n2 - 2) is defined only when the denominator n2 - 2 is positive, i.e., n2 > 2.",
+                    "correct": 2
+                },
+                {
+                    "question": "Under what condition is the variance of the F-distribution defined?",
+                    "options": [
+                        "n1 > 2",
+                        "n2 > 2",
+                        "n1 > 4",
+                        "n2 > 4"
+                    ],
+                    "describe": "The variance formula Var(F) = (2 * n2-squared * (n1 + n2 - 2)) / (n1 * (n2 - 2)-squared * (n2 - 4)) requires the term (n2-4) in the denominator to be positive, so the variance is defined only when n2 > 4.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the primary application of the F-distribution discussed in the notes?",
+                    "options": [
+                        "Testing hypothesis about a single population mean",
+                        "Constructing confidence interval for population proportion",
+                        "Comparing two population variances",
+                        "Testing for goodness-of-fit"
+                    ],
+                    "describe": "The F-distribution is used to compare two population variances (sigma1-squared and sigma2-squared) by testing hypotheses about their ratio, often using the ratio of sample variances (s1-squared / s2-squared).",
+                    "correct": 2
+                },
+                {
+                    "question": "If s1-squared and s2-squared are sample variances from independent samples of size n1 and n2 from Normal populations N(mu1, sigma1-squared) and N(mu2, sigma2-squared), what statistic follows an F-distribution?",
+                    "options": [
+                        "s1-squared / s2-squared",
+                        "(s1-squared / sigma1-squared) / (s2-squared / sigma2-squared)",
+                        "(n1-1)*s1-squared / ((n2-1)*s2-squared)",
+                        "s1 / s2"
+                    ],
+                    "describe": "The statistic formed by the ratio of sample variances divided by their respective population variances, (s1-squared / sigma1-squared) / (s2-squared / sigma2-squared), follows an F-distribution with (n1-1, n2-1) degrees of freedom.",
+                    "correct": 1
+                },
+                {
+                    "question": "When testing the null hypothesis H0: sigma1-squared = sigma2-squared, which statistic is used and what distribution does it follow under H0?",
+                    "options": [
+                        "s1-squared / s2-squared ~ F(n1, n2)",
+                        "s1-squared / s2-squared ~ F(n1-1, n2-1)",
+                        "s1 / s2 ~ t(n1+n2-2)",
+                        "(s1-squared - s2-squared) ~ Chi-Sq(n1+n2-2)"
+                    ],
+                    "describe": "If H0: sigma1-squared = sigma2-squared is true, the statistic simplifies to the ratio of sample variances F = s1-squared / s2-squared, which follows an F-distribution with (n1-1, n2-1) degrees of freedom.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does ANOVA stand for, a technique that utilizes the F-distribution?",
+                    "options": [
+                        "Analysis of Normality and Variance",
+                        "Analysis of Variance",
+                        "Association of Variables",
+                        "Asymptotic Normal Variance"
+                    ],
+                    "describe": "The F-test for equality of variances is a basis for ANOVA (Analysis of Variance), which compares means across multiple groups by analyzing variances.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the reciprocal property of the F-distribution?",
+                    "options": [
+                        "If F ~ F(n1, n2), then 1/F ~ F(n1, n2)",
+                        "If F ~ F(n1, n2), then 1/F ~ F(n2, n1)",
+                        "If F ~ F(n1, n2), then -F ~ F(n1, n2)",
+                        "The F-distribution is its own reciprocal"
+                    ],
+                    "describe": "If a random variable F follows an F-distribution with (n1, n2) degrees of freedom, then its reciprocal 1/F follows an F-distribution with the degrees of freedom reversed: (n2, n1).",
+                    "correct": 1
+                },
+                {
+                    "question": "Why is the reciprocal property 1/F ~ F(n2, n1) useful?",
+                    "options": [
+                        "For calculating the mean",
+                        "For calculating the variance",
+                        "For finding critical values for lower-tail tests or confidence intervals",
+                        "For checking the symmetry of the distribution"
+                    ],
+                    "describe": "F-tables typically only provide upper critical values (F_alpha). The reciprocal property allows us to find lower critical values (F_(1-alpha)) using F_(1-alpha, n1, n2) = 1 / F_(alpha, n2, n1).",
+                    "correct": 2
+                },
+                {
+                    "question": "The F-distribution relates to the ratio of variances. It can also be related to which other distribution through squaring?",
+                    "options": [
+                        "Normal distribution (Z-squared = F(1, n2))",
+                        "t-distribution (t-squared(n) = F(1, n))",
+                        "Chi-Square distribution (Chi-Sq(n1) / Chi-Sq(n2) = F(n1, n2))",
+                        "Exponential distribution"
+                    ],
+                    "describe": "A squared t-distributed variable with n degrees of freedom follows an F-distribution with (1, n) degrees of freedom: t-squared(n) ~ F(1, n). This stems from the definitions: t = Z / sqrt(Y/n) and F = (U/n1)/(V/n2). If n1=1, U = Z-squared, so F(1,n) = (Z-squared/1) / (Y/n) = Z-squared / (Y/n) = (Z/sqrt(Y/n))-squared = t-squared(n).",
+                    "correct": 1
+                },
+                {
+                    "question": "For an F-distribution F(n1, n2), the numerator degrees of freedom n1 come from the Chi-Square variable in the ______ of the F-ratio definition.",
+                    "options": [
+                        "Numerator",
+                        "Denominator",
+                        "Square root",
+                        "Exponent"
+                    ],
+                    "describe": "F = (U/n1) / (V/n2). The degrees of freedom n1 correspond to the Chi-Square variable U in the numerator.",
+                    "correct": 0
+                },
+                {
+                    "question": "The F-test for equality of variances assumes that the two populations from which samples are drawn are:",
+                    "options": [
+                        "Any shape, but independent",
+                        "Normally distributed and independent",
+                        "Identical",
+                        "Large"
+                    ],
+                    "describe": "The derivation relies on (n-1)*s-squared / sigma-squared following a Chi-Square distribution, which requires the underlying population to be Normal. The F-test requires independent samples from normal populations.",
+                    "correct": 1
+                }
+            ]
+        }
+    ],
+    "sample": {
+        "topics": [
+            "Parameter, Statistic, Sampling Concepts",
+            "Sampling Distribution of the Mean",
+            "Chi-Square Distribution",
+            "t-Distribution",
+            "F-Distribution",
+            "Interrelations between Distributions"
+        ],
+        "sections": [
+            {
+                "name": "Section A",
+                "marks": 3,
+                "questions": [
+                    "Define Parameter.",
+                    "Define Statistic.",
+                    "Give an example of a population parameter and its corresponding sample statistic.",
+                    "What is a sampling distribution?",
+                    "The standard deviation of a sampling distribution is called what?",
+                    "What does a smaller Standard Error indicate about a statistic's reliability?",
+                    "Differentiate between an estimator and an estimate.",
+                    "What is sampling error?",
+                    "If X_i are independent samples from N(10, 36), what is the exact distribution of the sample mean X_bar when n=9?",
+                    "If X_i are samples from a population with mean mu, what is the expected value of the sample mean X_bar?",
+                    "If X_i are independent samples from a population with variance sigma^2, what is the variance of the sample mean X_bar?",
+                    "Write the formula for the standard error of the sample mean X_bar.",
+                    "If Z is a standard normal random variable (N(0,1)), what is the distribution of Z^2?",
+                    "Define the Chi-square distribution with k degrees of freedom based on standard normal variables.",
+                    "What are the mean and variance of a Chi-square distribution with 12 degrees of freedom?",
+                    "If X follows Chi-square(6) and Y follows Chi-square(8) independently, what is the distribution of X+Y?",
+                    "Identify the distribution of the sum of squares of n independent standard normal variables.",
+                    "What statistic involving the sample variance s^2 follows a Chi-square distribution when sampling from a normal population N(mu, sigma^2)?",
+                    "Define the t-distribution using a standard normal and a chi-square variable.",
+                    "What is the mean of a t-distribution with 10 degrees of freedom?",
+                    "What value does the variance of the t-distribution approach as the degrees of freedom become very large?",
+                    "What distribution does the t-distribution converge to as degrees of freedom approach infinity?",
+                    "For a one-sample t-test with a sample size of n=20, what are the degrees of freedom?",
+                    "Write the formula for the one-sample t-statistic used for testing H0: mu = mu_0 when sigma is unknown.",
+                    "Define the F-distribution using two independent Chi-square variables.",
+                    "What are the two parameters (degrees of freedom) that define a specific F-distribution?",
+                    "If U ~ Chi-square(5) and V ~ Chi-square(10) are independent, identify the distribution of (U/5) / (V/10).",
+                    "If a random variable F follows F(8, 15), identify the distribution of 1/F.",
+                    "Which statistical test is commonly used to compare the variances of two independent normal populations?",
+                    "What is the range of possible values for a random variable following an F-distribution?",
+                    "State one specific relationship between the t-distribution and the F-distribution.",
+                    "True or False: The F-distribution is symmetric around 1."
+                ],
+                "topicNo": [
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    1,
+                    2,
+                    2,
+                    2,
+                    2,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    3,
+                    4,
+                    4,
+                    4,
+                    4,
+                    4,
+                    4,
+                    5,
+                    5,
+                    5,
+                    5,
+                    5,
+                    5,
+                    6,
+                    5
+                ]
+            },
+            {
+                "name": "Section B",
+                "marks": 5,
+                "questions": [
+                    "Define Parameter and Statistic, clearly distinguishing between them and providing an example for each.",
+                    "Explain the concept of a Sampling Distribution. What is Standard Error and what information does it provide?",
+                    "List two uses of the Standard Error in statistical inference.",
+                    "State the Central Limit Theorem (for sample means) and briefly explain its significance in practice.",
+                    "Suppose a random sample of size n=25 is drawn from a normal population with mean mu=50 and variance sigma^2=100. Find the probability that the sample mean X_bar is greater than 52.",
+                    "Derive the mean and variance of the Chi-square distribution with n degrees of freedom.",
+                    "State and prove the additive property of the Chi-square distribution using Moment Generating Functions.",
+                    "If Z1, Z2, Z3, Z4 are independent N(0,1) variables, identify the distribution of Y = Z1^2 + Z2^2 + Z3^2 + Z4^2 and find E(Y) and Var(Y).",
+                    "Define Student's t-distribution formally using a standard normal variable Z and an independent chi-square variable U.",
+                    "Derive the mean of the t-distribution with n degrees of freedom. Under what condition does the mean exist?",
+                    "Describe three key characteristics (e.g., shape, mean, variance, tails) of the t-distribution and compare them to the standard normal distribution.",
+                    "Explain how the statistic t = (X_bar - mu) / (s / sqrt(n)) is derived and why it follows a t-distribution.",
+                    "Define Snedecor's F-distribution formally using two independent chi-square variables U and V.",
+                    "If F is a random variable following F(m, n) distribution, derive the distribution of Y = 1/F.",
+                    "Describe the procedure for testing the null hypothesis H0: sigma1^2 = sigma2^2 against H1: sigma1^2 != sigma2^2 using the F-test. State the required assumptions.",
+                    "State two primary applications (uses) of the F-distribution in statistical analysis.",
+                    "Explain the relationship T^2 ~ F(1, n), where T ~ t(n).",
+                    "If X and Y are independent standard normal variables, derive the distribution of the ratio X^2 / Y^2.",
+                    "Calculate the value of the t-statistic for testing H0: mu = 60 against H1: mu != 60, given a sample of size n=16 with sample mean = 57 and sample standard deviation = 8.",
+                    "A random sample of size 9 from a normal population with variance 36 yielded a sample variance s^2 = 45. Calculate the value of the chi-square statistic used to test hypotheses about the population variance."
+                ],
+                "topicNo": [
+                    1,
+                    1,
+                    1,
+                    2,
+                    2,
+                    3,
+                    3,
+                    3,
+                    4,
+                    4,
+                    4,
+                    4,
+                    5,
+                    5,
+                    5,
+                    5,
+                    6,
+                    5,
+                    4,
+                    3
+                ]
+            },
+            {
+                "name": "Section C",
+                "marks": 10,
+                "questions": [
+                    "Let X1, X2, ..., Xn be a random sample from a normal population N(mu, sigma^2). Derive the sampling distribution of the sample mean X_bar, including its mean and variance.",
+                    "Derive the Moment Generating Function (MGF) of the Chi-square distribution with n degrees of freedom. Use the MGF to prove the additive property of independent Chi-square variables.",
+                    "Derive the test statistic t = (X_bar - mu) / (s / sqrt(n)) used for inference on a population mean when sigma is unknown. Clearly state the distributions of the numerator and denominator components and justify why the resulting statistic follows a t-distribution, specifying its degrees of freedom.",
+                    "Explain the interrelations between the Normal, Chi-square, t, and F distributions. Include definitions based on these relationships (e.g., how t and F are constructed from Normal and Chi-square) and limiting behaviors (e.g., t approaching Normal)."
+                ],
+                "topicNo": [
+                    2,
+                    3,
+                    4,
+                    6
+                ]
+            }
+        ]
+    }
+}

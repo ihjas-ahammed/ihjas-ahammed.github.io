@@ -1,0 +1,670 @@
+{
+    "3": [
+        {
+            "name": "Correlation",
+            "qa": [
+                {
+                    "question": "What does correlation measure?",
+                    "options": [
+                        "The cause-and-effect relationship between two variables",
+                        "The degree of association or relationship between two variables",
+                        "The average value of two variables",
+                        "The difference between two variables"
+                    ],
+                    "describe": "Correlation is a statistical measure used to determine the degree of association or relationship between two variables. Association refers to the tendency of the variables to move together.",
+                    "correct": 1
+                },
+                {
+                    "question": "If two variables tend to increase together and decrease together, what type of correlation exists?",
+                    "options": [
+                        "Negative Correlation",
+                        "Zero Correlation",
+                        "Positive Correlation",
+                        "No Association"
+                    ],
+                    "describe": "Positive Correlation (+ve): Occurs when changes in the two variables are in the same direction. As one variable increases, the other tends to increase; as one decreases, the other tends to decrease.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is an example of negative correlation?",
+                    "options": [
+                        "Height and weight",
+                        "Study time and exam score",
+                        "Pressure and volume of a gas (at constant temperature)",
+                        "Number of cars and air pollution"
+                    ],
+                    "describe": "Negative Correlation (-ve): Occurs when changes in the two variables are in opposite directions. An example is Pressure and volume of a gas (at constant temperature, increasing pressure decreases volume).",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the range of the correlation coefficient (r)?",
+                    "options": [
+                        "0 to 1",
+                        "-1 to 0",
+                        "-1 to +1",
+                        "No specific range"
+                    ],
+                    "describe": "The correlation coefficient (r) quantifies the strength and direction of the linear relationship between two variables. Its value always lies between -1 and +1, inclusive: -1 <= r <= +1.",
+                    "correct": 2
+                },
+                {
+                    "question": "What does a correlation coefficient of r = -1 indicate?",
+                    "options": [
+                        "Perfect positive linear correlation",
+                        "No linear correlation",
+                        "Strong positive linear correlation",
+                        "Perfect negative linear correlation"
+                    ],
+                    "describe": "A value of r = -1 indicates a Perfect negative linear correlation.",
+                    "correct": 3
+                },
+                {
+                    "question": "Which method uses a graphical representation to visualize potential correlation?",
+                    "options": [
+                        "Karl Pearson's Coefficient",
+                        "Spearman's Rank Correlation",
+                        "Scatter Diagram",
+                        "Covariance Method"
+                    ],
+                    "describe": "A scatter diagram is a graphical representation used to visualize the potential correlation between two variables by plotting data points (x, y).",
+                    "correct": 2
+                },
+                {
+                    "question": "In a scatter diagram, if points are tightly clustered on a straight line falling from top-left to bottom-right, what does it suggest?",
+                    "options": [
+                        "Perfect Positive Correlation (r=1)",
+                        "Zero Correlation (r=0)",
+                        "Perfect Negative Correlation (r=-1)",
+                        "Weak Negative Correlation"
+                    ],
+                    "describe": "A scatter plot with points tightly clustered on a straight line falling from top-left to bottom-right indicates Perfect Negative Correlation (r=-1).",
+                    "correct": 2
+                },
+                {
+                    "question": "Karl Pearson's correlation coefficient (r) is defined as the ratio of:",
+                    "options": [
+                        "Sum of products to product of sums",
+                        "Covariance to the product of standard deviations",
+                        "Mean deviation to standard deviation",
+                        "Variance to covariance"
+                    ],
+                    "describe": "The Karl Pearson correlation coefficient (r) is defined as the ratio of the covariance of x and y to the product of their standard deviations: r = cov(x,y) / (sigma_x * sigma_y).",
+                    "correct": 1
+                },
+                {
+                    "question": "What does Cov(x, y) measure?",
+                    "options": [
+                        "The spread of x values",
+                        "The spread of y values",
+                        "How x and y vary together",
+                        "The average of x and y"
+                    ],
+                    "describe": "Covariance (cov(x,y)) measures how x and y vary together. The formula is cov(x,y) = (1/n) * Sum[(xi - x_bar)(yi - y_bar)].",
+                    "correct": 2
+                },
+                {
+                    "question": "Which formula is a common computational formula for Karl Pearson's correlation coefficient r?",
+                    "options": [
+                        "r = Sum(xy) / sqrt(Sum(x^2) * Sum(y^2))",
+                        "r = Sum[(x - x_bar)(y - y_bar)] / n",
+                        "r = [n * Sum(xy) - Sum(x) * Sum(y)] / sqrt{[n * Sum(x^2) - (Sum(x))^2] * [n * Sum(y^2) - (Sum(y))^2]}",
+                        "r = cov(x,y) * sigma_x * sigma_y"
+                    ],
+                    "describe": "The most common computational formula for r is: r = [n * Sum(xi * yi) - (Sum(xi))*(Sum(yi))] / sqrt{[n * Sum(xi^2) - (Sum(xi))^2] * [n * Sum(yi^2) - (Sum(yi))^2]}.",
+                    "correct": 2
+                },
+                {
+                    "question": "What does the property 'Independence of Change of Origin and Scale' mean for the correlation coefficient?",
+                    "options": [
+                        "The correlation changes if you add a constant to the variables",
+                        "The correlation changes if you multiply the variables by a constant",
+                        "The correlation is unaffected by adding or multiplying variable values by constants",
+                        "The correlation only works for variables centered at zero"
+                    ],
+                    "describe": "The correlation coefficient is unaffected by adding a constant to all values of a variable (change of origin) or multiplying all values by a constant (change of scale). If U = (x-A)/h and V = (y-B)/k, then r_xy = r_uv.",
+                    "correct": 2
+                },
+                {
+                    "question": "When calculating r using assumed means (U = X - A, V = Y - B), what is the relationship between r_xy and r_uv?",
+                    "options": [
+                        "r_xy = r_uv + A + B",
+                        "r_xy = r_uv / (A * B)",
+                        "r_xy = r_uv",
+                        "r_xy = 1 / r_uv"
+                    ],
+                    "describe": "Due to the independence of change of origin and scale, the correlation coefficient calculated using the transformed variables U and V (r_uv) is equal to the correlation coefficient of the original variables X and Y (r_xy). So, r_xy = r_uv.",
+                    "correct": 2
+                },
+                {
+                    "question": "If the calculated correlation coefficient is r = 0.85, what does this indicate?",
+                    "options": [
+                        "A weak negative linear correlation",
+                        "A strong negative linear correlation",
+                        "A strong positive linear correlation",
+                        "Almost no linear correlation"
+                    ],
+                    "describe": "A correlation coefficient r close to +1 indicates a strong positive linear correlation. r = 0.85 is close to 1, suggesting a strong positive linear relationship.",
+                    "correct": 2
+                },
+                {
+                    "question": "If most points on a scatter diagram lie close to a line that slopes downwards, the correlation coefficient 'r' is likely to be:",
+                    "options": [
+                        "Close to +1",
+                        "Close to -1",
+                        "Close to 0",
+                        "Exactly 0"
+                    ],
+                    "describe": "Points generally trending downwards from left to right, loosely scattered around an imaginary falling line represent an imperfect negative correlation, where -1 < r < 0. If they lie close to the line, r will be closer to -1.",
+                    "correct": 1
+                },
+                {
+                    "question": "If the points on a scatter diagram are randomly scattered with no clear trend, what is the approximate value of the correlation coefficient 'r'?",
+                    "options": [
+                        "r = 1",
+                        "r = -1",
+                        "r = 0",
+                        "r = 0.5"
+                    ],
+                    "describe": "When points are randomly scattered with no clear upward or downward trend, it indicates zero correlation or no linear relationship, so r is approximately 0.",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Regression",
+            "qa": [
+                {
+                    "question": "What is the primary goal of regression analysis?",
+                    "options": [
+                        "To measure the strength of association between variables",
+                        "To model the relationship between variables for prediction",
+                        "To determine if correlation is positive or negative",
+                        "To calculate the standard deviation of variables"
+                    ],
+                    "describe": "While correlation measures the strength and direction of a relationship, regression aims to model that relationship, typically with a line or curve, to make predictions.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which regression line is used to predict the value of Y for a given value of X?",
+                    "options": [
+                        "Regression line of X on Y",
+                        "Regression line of Y on X",
+                        "The line passing through the origin",
+                        "Both regression lines equally"
+                    ],
+                    "describe": "The Regression Line of Y on X is used to predict the value of Y (dependent variable) for a given value of X (independent variable).",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the general equation form for the regression line of Y on X?",
+                    "options": [
+                        "(x - x_bar) = b_xy (y - y_bar)",
+                        "y = b_yx * x",
+                        "(y - y_bar) = b_yx (x - x_bar)",
+                        "y = x + b_yx"
+                    ],
+                    "describe": "The equation for the Regression Line of Y on X is: (y - y_bar) = b_yx (x - x_bar), where b_yx is the regression coefficient of Y on X.",
+                    "correct": 2
+                },
+                {
+                    "question": "What principle is used to determine the coefficients of a regression line like y = a + bx?",
+                    "options": [
+                        "Principle of Maximum Likelihood",
+                        "Principle of Moments",
+                        "Principle of Least Squares",
+                        "Principle of Sufficient Statistics"
+                    ],
+                    "describe": "The coefficients a and b in a regression line are determined using the principle of least squares, which minimizes the sum of the squared differences between observed y values and the values predicted by the line.",
+                    "correct": 2
+                },
+                {
+                    "question": "The regression coefficient of Y on X (b_yx) is calculated as:",
+                    "options": [
+                        "cov(x,y) / sigma_y^2",
+                        "cov(x,y) / sigma_x^2",
+                        "r * sigma_x / sigma_y",
+                        "r * sigma_y / sigma_x"
+                    ],
+                    "describe": "The regression coefficient of Y on X (b_yx) is calculated as cov(x,y) / sigma_x^2 or equivalently r * (sigma_y / sigma_x).",
+                    "correct": 1
+                },
+                {
+                    "question": "The regression coefficient of Y on X (b_yx) can also be calculated using which formula involving r?",
+                    "options": [
+                        "r * sigma_x / sigma_y",
+                        "r * sigma_y / sigma_x",
+                        "r^2 * sigma_y / sigma_x",
+                        "r / (sigma_x * sigma_y)"
+                    ],
+                    "describe": "The regression coefficient of Y on X (b_yx) is related to the correlation coefficient r by the formula b_yx = r * (sigma_y / sigma_x).",
+                    "correct": 1
+                },
+                {
+                    "question": "The regression coefficient of X on Y (b_xy) is calculated as:",
+                    "options": [
+                        "cov(x,y) / sigma_x^2",
+                        "r * sigma_y / sigma_x",
+                        "cov(x,y) / sigma_y^2",
+                        "r * sigma_x / sigma_y"
+                    ],
+                    "describe": "The regression coefficient of X on Y (b_xy) is calculated as cov(x,y) / sigma_y^2 or equivalently r * (sigma_x / sigma_y).",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the relationship between the correlation coefficient (r) and the two regression coefficients (b_yx and b_xy)?",
+                    "options": [
+                        "r = b_yx + b_xy",
+                        "r = b_yx / b_xy",
+                        "r^2 = b_yx * b_xy",
+                        "r = (b_yx + b_xy) / 2"
+                    ],
+                    "describe": "The correlation coefficient (r) is the geometric mean of the two regression coefficients. Specifically, r^2 = b_xy * b_yx. Therefore, r = +/- sqrt(b_xy * b_yx).",
+                    "correct": 2
+                },
+                {
+                    "question": "If both regression coefficients (b_yx and b_xy) are negative, what must be true about the correlation coefficient (r)?",
+                    "options": [
+                        "r must be positive",
+                        "r must be negative",
+                        "r must be zero",
+                        "r can be positive or negative"
+                    ],
+                    "describe": "The sign of r must be the same as the sign of the regression coefficients (which will always have the same sign). If b_yx and b_xy are negative, r must also be negative.",
+                    "correct": 1
+                },
+                {
+                    "question": "What point do both regression lines (Y on X and X on Y) always pass through?",
+                    "options": [
+                        "The origin (0,0)",
+                        "The point (1,1)",
+                        "The point representing the means (x_bar, y_bar)",
+                        "The point representing the standard deviations (sigma_x, sigma_y)"
+                    ],
+                    "describe": "A property of regression lines is that both lines always pass through the point representing the means of the variables, (x_bar, y_bar).",
+                    "correct": 2
+                },
+                {
+                    "question": "To estimate the value of X for a given value of Y, which regression equation should be used?",
+                    "options": [
+                        "Y on X line: y = y_bar + b_yx(x - x_bar)",
+                        "X on Y line: x = x_bar + b_xy(y - y_bar)",
+                        "The equation with the larger slope",
+                        "Either equation can be used"
+                    ],
+                    "describe": "Use the X on Y line (x = x_bar + b_xy(y - y_bar)) to estimate/predict x for a given y.",
+                    "correct": 1
+                },
+                {
+                    "question": "What does the angle (theta) between the two regression lines indicate?",
+                    "options": [
+                        "The mean of the variables",
+                        "The variance of the variables",
+                        "The strength of the linear correlation",
+                        "The number of data points"
+                    ],
+                    "describe": "The angle (theta) between the two regression lines provides insight into the strength of the correlation. A smaller angle indicates higher correlation, while a larger angle indicates lower correlation.",
+                    "correct": 2
+                },
+                {
+                    "question": "If the correlation coefficient r = 0, what is the angle between the regression lines?",
+                    "options": [
+                        "0 degrees (Coincident lines)",
+                        "45 degrees",
+                        "90 degrees (Perpendicular lines)",
+                        "180 degrees"
+                    ],
+                    "describe": "If r = 0 (Uncorrelated Variables), the slope of Y on X (m1) is 0 and the slope of X on Y (m2, in y=mx+c form) is infinite. Lines with slopes 0 and infinity are perpendicular. Therefore, if r=0, theta = 90 degrees.",
+                    "correct": 2
+                },
+                {
+                    "question": "If the correlation coefficient r = +1 or r = -1, what is the angle between the regression lines?",
+                    "options": [
+                        "0 degrees (Coincident lines)",
+                        "45 degrees",
+                        "90 degrees (Perpendicular lines)",
+                        "Undefined"
+                    ],
+                    "describe": "If r = +/- 1 (Perfect Correlation), tan(theta) = |(1 - r^2)/r| * ... = |(1 - 1)/+/-1| * ... = 0. Therefore, theta = 0 degrees. The two regression lines coincide.",
+                    "correct": 0
+                },
+                {
+                    "question": "If the angle between the two regression lines is very small (close to 0 degrees), what does this imply about the correlation?",
+                    "options": [
+                        "The correlation is close to 0",
+                        "The correlation is weak",
+                        "The correlation is close to +1 or -1 (high degree of correlation)",
+                        "The variables are independent"
+                    ],
+                    "describe": "The smaller the angle (theta) between the regression lines, the higher the degree of linear correlation (closer r is to +/- 1).",
+                    "correct": 2
+                },
+                {
+                    "question": "If the angle between the two regression lines is large (close to 90 degrees), what does this imply about the correlation?",
+                    "options": [
+                        "The correlation is close to +1",
+                        "The correlation is close to -1",
+                        "The correlation is perfect",
+                        "The correlation is close to 0 (low degree of correlation)"
+                    ],
+                    "describe": "The larger the angle (theta) between the regression lines (closer to 90 degrees), the lower the degree of linear correlation (closer r is to 0).",
+                    "correct": 3
+                }
+            ]
+        },
+        {
+            "name": "Curve Fitting",
+            "qa": [
+                {
+                    "question": "When is curve fitting used instead of linear regression?",
+                    "options": [
+                        "When the correlation is perfect (r = +/- 1)",
+                        "When the relationship between variables appears non-linear",
+                        "When the data size is small",
+                        "When the variables are uncorrelated (r = 0)"
+                    ],
+                    "describe": "When the relationship between variables appears non-linear based on a scatter plot or theoretical reasons, fitting a straight line might not be appropriate. Curve fitting is the process of finding a curve that best represents the pattern.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the fundamental principle of the Method of Least Squares in curve fitting?",
+                    "options": [
+                        "Maximize the sum of errors",
+                        "Minimize the sum of absolute errors",
+                        "Minimize the sum of squared errors (residuals)",
+                        "Ensure the curve passes through the first and last points"
+                    ],
+                    "describe": "The Method of Least Squares aims to find the curve such that the sum of the squares of the vertical distances (residuals or errors) between the observed yi values and the values predicted by the curve (yei) is minimized. Minimize S = Sum(ei^2) = Sum(yi - yei)^2.",
+                    "correct": 2
+                },
+                {
+                    "question": "In the Method of Least Squares, how are the parameters of the curve (e.g., a, b, c in y = a + bx + cx^2) found?",
+                    "options": [
+                        "By guessing and checking",
+                        "By solving the 'normal equations'",
+                        "By calculating the correlation coefficient",
+                        "By finding the average of the data points"
+                    ],
+                    "describe": "To minimize the sum of squared errors S, partial derivatives of S with respect to each unknown coefficient are taken and set to zero. This results in a system of linear equations called the normal equations, which are solved to find the coefficients.",
+                    "correct": 1
+                },
+                {
+                    "question": "For fitting a straight line y = a + bx using least squares, what are the two normal equations?",
+                    "options": [
+                        "Sum(y) = a + b*Sum(x); Sum(xy) = a*Sum(x) + b*Sum(x^2)",
+                        "Sum(y) = na + b*Sum(x); Sum(xy) = a*Sum(x) + b*Sum(x^2)",
+                        "Sum(y) = na + b*Sum(x); Sum(xy) = n*a*Sum(x) + n*b*Sum(x^2)",
+                        "y_bar = a + b*x_bar; Sum(y^2) = na^2 + b^2*Sum(x^2)"
+                    ],
+                    "describe": "The normal equations for fitting the straight line y = a + bx are: 1. Sum(yi) = na + b*Sum(xi) and 2. Sum(xi*yi) = a*Sum(xi) + b*Sum(xi^2).",
+                    "correct": 1
+                },
+                {
+                    "question": "Fitting a straight line y = a + bx using the method of least squares is equivalent to finding which regression line?",
+                    "options": [
+                        "The regression line of X on Y",
+                        "The regression line of Y on X",
+                        "A line perpendicular to the regression lines",
+                        "A line passing through the origin"
+                    ],
+                    "describe": "Fitting a straight line y = a + bx using least squares is the simplest case of curve fitting (a polynomial of degree 1) and corresponds to finding the linear regression line of Y on X.",
+                    "correct": 1
+                },
+                {
+                    "question": "How many normal equations are needed to fit a parabola y = a + bx + cx^2 using the method of least squares?",
+                    "options": [
+                        "1",
+                        "2",
+                        "3",
+                        "4"
+                    ],
+                    "describe": "To fit a parabola y = a + bx + cx^2, there are three unknown coefficients (a, b, c). Minimizing the sum of squared errors requires taking partial derivatives with respect to a, b, and c, resulting in three normal equations.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which equation is NOT one of the normal equations for fitting a parabola y = a + bx + cx^2?",
+                    "options": [
+                        "Sum(y) = na + b*Sum(x) + c*Sum(x^2)",
+                        "Sum(xy) = a*Sum(x) + b*Sum(x^2) + c*Sum(x^3)",
+                        "Sum(x^2 y) = a*Sum(x^2) + b*Sum(x^3) + c*Sum(x^4)",
+                        "Sum(y^2) = na^2 + b^2*Sum(x^2) + c^2*Sum(x^4)"
+                    ],
+                    "describe": "The normal equations for a parabola are derived from partial derivatives of S = Sum(y - a - bx - cx^2)^2. They are: Sum(y) = na + b*Sum(x) + c*Sum(x^2); Sum(xy) = a*Sum(x) + b*Sum(x^2) + c*Sum(x^3); Sum(x^2 y) = a*Sum(x^2) + b*Sum(x^3) + c*Sum(x^4). The fourth option is incorrect.",
+                    "correct": 3
+                },
+                {
+                    "question": "To fit an exponential curve of the form y = ab^x using least squares, what is the first step?",
+                    "options": [
+                        "Directly form normal equations for a and b",
+                        "Linearize the equation by taking logarithms",
+                        "Calculate the correlation coefficient",
+                        "Plot the data on log-log paper"
+                    ],
+                    "describe": "To fit y = ab^x, the equation is first linearized by taking logarithms (e.g., natural log): ln(y) = ln(a) + x*ln(b). This transforms the equation into a linear form U = A + Bx.",
+                    "correct": 1
+                },
+                {
+                    "question": "After linearizing y = ab^x to U = A + Bx (where U = ln y, A = ln a, B = ln b), what are the normal equations solved for?",
+                    "options": [
+                        "Directly for a and b",
+                        "For A and B",
+                        "For U and x",
+                        "For y and x"
+                    ],
+                    "describe": "The linear least squares normal equations are applied to the transformed variables U and x to solve for the constants A and B: Sum(U) = nA + B*Sum(x); Sum(xU) = A*Sum(x) + B*Sum(x^2).",
+                    "correct": 1
+                },
+                {
+                    "question": "Once A and B are found for the linearized form U = A + Bx (from y = ab^x, using natural log), how are the original parameters 'a' and 'b' recovered?",
+                    "options": [
+                        "a = A, b = B",
+                        "a = A/n, b = B/n",
+                        "a = ln(A), b = ln(B)",
+                        "a = e^A, b = e^B"
+                    ],
+                    "describe": "Since A = ln a and B = ln b, the original parameters are recovered using the inverse transformation (antilogarithm, which is the exponential function for natural log): a = e^A and b = e^B.",
+                    "correct": 3
+                },
+                {
+                    "question": "How is the power curve y = ax^b typically linearized for fitting using least squares?",
+                    "options": [
+                        "By taking the square root: sqrt(y) = sqrt(a) * x^(b/2)",
+                        "By differentiation: dy/dx = ab*x^(b-1)",
+                        "By taking logarithms: ln(y) = ln(a) + b*ln(x)",
+                        "It cannot be linearized"
+                    ],
+                    "describe": "The power curve y = ax^b is linearized by taking logarithms (e.g., natural log): ln(y) = ln(ax^b) = ln(a) + ln(x^b) = ln(a) + b*ln(x).",
+                    "correct": 2
+                },
+                {
+                    "question": "When y = ax^b is linearized to U = A + bX (where U = ln y, A = ln a, X = ln x), which original parameter is found directly by solving the normal equations for the transformed variables?",
+                    "options": [
+                        "a",
+                        "b",
+                        "A",
+                        "X"
+                    ],
+                    "describe": "The linearized form is U = A + bX. The normal equations Sum(U) = nA + b*Sum(X) and Sum(XU) = A*Sum(X) + b*Sum(X^2) are solved for A and b. Thus, the original parameter 'b' is obtained directly.",
+                    "correct": 1
+                },
+                {
+                    "question": "After solving the normal equations for the linearized power curve U = A + bX, how is the original parameter 'a' found (using natural log)?",
+                    "options": [
+                        "a = A",
+                        "a = ln(A)",
+                        "a = e^A",
+                        "a = A / n"
+                    ],
+                    "describe": "In the linearization U = A + bX, A represents ln(a). Therefore, 'a' is recovered using the inverse transformation: a = e^A.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is Cramer's Rule (Determinant Method) used for in the context of curve fitting?",
+                    "options": [
+                        "To calculate the correlation coefficient",
+                        "To determine if a curve is a good fit",
+                        "To solve the system of linear normal equations for the curve parameters",
+                        "To calculate the sum of squared errors"
+                    ],
+                    "describe": "Cramer's rule is a method for solving systems of linear equations using determinants. In curve fitting, it can be used to solve the normal equations (which form a system of linear equations) to find the unknown coefficients (like a, b, c).",
+                    "correct": 2
+                },
+                {
+                    "question": "To fit a second-degree polynomial y = a + bx + cx^2, which sums are needed for the normal equations?",
+                    "options": [
+                        "Sum(x), Sum(y), Sum(x^2), Sum(y^2), Sum(xy)",
+                        "Sum(x), Sum(y), Sum(x^2), Sum(x^3), Sum(x^4), Sum(xy), Sum(x^2y)",
+                        "Sum(x), Sum(y), Sum(xy)",
+                        "Sum(ln x), Sum(ln y), Sum((ln x)^2), Sum((ln y)^2), Sum(ln x * ln y)"
+                    ],
+                    "describe": "The normal equations for y = a + bx + cx^2 involve terms up to x^4 and cross-product terms like xy and x^2y. The required sums are: n, Sum(x), Sum(y), Sum(x^2), Sum(x^3), Sum(x^4), Sum(xy), Sum(x^2y).",
+                    "correct": 1
+                }
+            ]
+        }
+    ],
+    "sample": {
+        "topics": [
+            "Correlation",
+            "Regression",
+            "Curve Fitting"
+        ],
+        "sections": [
+            {
+                "name": "Section A",
+                "marks": 3,
+                "questions": [
+                    "What type of linear relation is between x and y when the co-efficient of correlation between them is (i) -1; and (ii) +1?",
+                    "What is the meaning of zero correlation between x and y?",
+                    "What are the limits for Pearson's coefficient of correlation?",
+                    "The coefficient of correlation between X and Y is 0.60. Their covariance is 4.80 and variance of X is 9. Find the standard deviation of Y.",
+                    "Define regression analysis.",
+                    "The regression line x on y is 2x - 3y + 5 = 0. Identify the regression co-efficient x on y (b_xy).",
+                    "The line of regression x on y is x - 0.3y - 35 = 0. Identify the value of x when y = 6.",
+                    "If b_XY = -0.90 and b_YX = -0.40, find the value of the correlation coefficient.",
+                    "The two lines of regression are x + 2y - 5 = 0 and 2x + 3y = 8. Find the means of x and y.",
+                    "Define non-linear regression.",
+                    "What is the principle of least squares?",
+                    "Define positive correlation with an example.",
+                    "Define negative correlation with an example.",
+                    "What range must the correlation coefficient 'r' lie within?",
+                    "State the formula for Karl Pearson's coefficient of correlation in terms of covariance and standard deviations.",
+                    "State the computational formula for Karl Pearson's coefficient of correlation using sums.",
+                    "How is the correlation coefficient affected by a change of origin?",
+                    "How is the correlation coefficient affected by a change of scale?",
+                    "If cov(x,y) = 20, sd(x) = 5, sd(y) = 8, find the correlation coefficient r.",
+                    "If r = 0.8, sd(x) = 4, sd(y) = 5, find cov(x,y).",
+                    "If n=10, Sum(xy)=500, Sum(x)=40, Sum(y)=80, find Cov(x,y).",
+                    "If two variables are independent, what is their correlation coefficient likely to be?",
+                    "What does a correlation coefficient close to zero imply about the linear relationship?",
+                    "What is the purpose of the regression line of Y on X?",
+                    "What is the purpose of the regression line of X on Y?",
+                    "State the formula for the regression coefficient b_yx (Y on X).",
+                    "State the formula for the regression coefficient b_xy (X on Y).",
+                    "What point do both regression lines always pass through?",
+                    "If the regression line Y on X is y = 3x - 7, what is the value of b_yx?",
+                    "If the regression line X on Y is x = 0.4y + 10, what is the value of b_xy?",
+                    "Given b_yx = 0.8 and b_xy = 0.45, find the correlation coefficient r.",
+                    "If r=0, what is the angle between the regression lines?"
+                ],
+                "topicNo": [
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Curve Fitting",
+                    "Curve Fitting",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression"
+                ]
+            },
+            {
+                "name": "Section B",
+                "marks": 5,
+                "questions": [
+                    "Explain how the scatter diagram helps in correlation and regression analysis.",
+                    "Calculate Pearson's co-efficient of correlation using the data: x values [1, 2, 3, 4, 5], y values [3, 5, 12, 15, 20].",
+                    "Define correlation and explain different types of correlation (positive, negative, zero).",
+                    "On each of 30 items, two measurements X and Y are made. Given Sum(X) = 120, Sum(Y) = 90, Sum(X^2) = 600, Sum(Y^2) = 300, Sum(XY) = 330. Calculate the product moment correlation coefficient.",
+                    "Explain scatter diagram as a method for correlation analysis.",
+                    "Distinguish between correlation and regression.",
+                    "Explain the two types of regression lines (Y on X, X on Y). What are their uses?",
+                    "Define regression co-efficients. Prove that the geometric mean of regression co-efficients gives the absolute value of the co-efficient of correlation, i.e., r = +/- sqrt(b_xy * b_yx).",
+                    "The lines of regression x on y and y on x are 3x - 2y + 5 = 0 and 5x - 4y + 4 = 0. Find the means of x and y.",
+                    "Explain the concept of regression and write down the general equations of lines of regression. When do these lines coincide?",
+                    "Using the data from Q4 (Sum(X)=120, Sum(Y)=90, Sum(X^2)=600, Sum(Y^2)=300, Sum(XY)=330, n=30), calculate the slope of the regression line of Y on X (b_yx).",
+                    "The two regression lines in a bivariate study are 3x + 12y = 19 and 3y + 9x = 46. Obtain mean(x), mean(y) and r(x, y).",
+                    "Explain the method of fitting of regression equation of the form y = ab^x using the data (x1, y1), (x2, y2) ... (xn, yn).",
+                    "Obtain the best fitted parabola for the data: X values [0, 1, 2, 3, 4], Y values [1, 1.8, 3.3, 2.5, 6.3]. (Calculation expected)",
+                    "Fit a trend line (y=a+bx) for the following data: Year [1982, 1984, 1986, 1988, 1990, 1992, 1994], Production [77, 81, 88, 94, 94, 96, 98]. (Use coded years like 0, 1, 2... or -3, -2,... 3).",
+                    "Describe the steps involved in calculating Karl Pearson's correlation coefficient using the assumed mean method.",
+                    "Explain the interpretation of different patterns in a scatter diagram (perfect positive/negative, strong/weak positive/negative, zero correlation).",
+                    "Derive the formula for the regression coefficient b_yx using the principle of least squares.",
+                    "Given the two regression lines, 5x - y = 22 and x - 0.16y = 3. Identify which is Y on X and which is X on Y, and find the correlation coefficient r.",
+                    "Explain the process of fitting a power curve y = ax^b using the method of least squares after logarithmic transformation."
+                ],
+                "topicNo": [
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Correlation",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Regression",
+                    "Curve Fitting",
+                    "Curve Fitting",
+                    "Curve Fitting",
+                    "Correlation",
+                    "Correlation",
+                    "Regression",
+                    "Regression",
+                    "Curve Fitting"
+                ]
+            },
+            {
+                "name": "Section C",
+                "marks": 10,
+                "questions": [
+                    "Calculate correlation co-efficient for the following data: X values [65, 66, 67, 67, 68, 69], Y values [67, 68, 65, 68, 72, 72]. Also find the two regression equations.",
+                    "The equations of two lines of regression are 3x+12y-10=0 and 3y+9x-46=0. (i) Identify the regression lines. (ii) Obtain the value of x, when y = 10 and the value of y, when x = 3. (iii) If variance of X is 9, find the standard deviation of Y.",
+                    "Fit a straight line of the form y = ax + b using the data: x values [2, 4, 6, 8, 10, 12], y values [9, 12, 18, 30, 34, 42]. Estimate y when x = 7.",
+                    "Fit a parabola y = a + bx + cx^2 to the data: X values [0, 1, 2, 3, 4, 5], Y values [2.1, 3.5, 4.2, 3.8, 4.5, 6.0]. Estimate Y when X = 2.5."
+                ],
+                "topicNo": [
+                    "Correlation",
+                    "Regression",
+                    "Curve Fitting",
+                    "Curve Fitting"
+                ]
+            }
+        ]
+    }
+}
