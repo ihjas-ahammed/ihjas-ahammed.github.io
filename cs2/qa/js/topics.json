@@ -1,0 +1,1937 @@
+{
+    "intro_data": {
+      "title": "Introduction to Data",
+      "description": "Understanding different types of data, their characteristics, analysis types, and the data science process.",
+      "questions": [
+        {
+          "question": "According to the notes, what is 'Data' defined as?",
+          "options": [
+            "Only numerical information",
+            "Insights derived from analysis",
+            "Any information stored in a digital format",
+            "Visual representations like graphs"
+          ],
+          "correct": 2,
+          "explanation": "The notes define data broadly as any information stored digitally."
+        },
+        {
+          "question": "Which of the following is NOT one of the '5 Vs' commonly associated with Big Data?",
+          "options": [
+            "Volume",
+            "Velocity",
+            "Validity",
+            "Variety",
+            "Veracity"
+          ],
+          "correct": 2,
+          "explanation": "The 5 Vs are typically Volume, Velocity, Variety, Veracity, and Value. Validity is related to Veracity but not usually listed as one of the core Vs."
+        },
+        {
+          "question": "Data stored in tables with rows and columns, typical of relational databases, is called:",
+          "options": [
+            "Unstructured Data",
+            "Semi-structured Data",
+            "Structured Data",
+            "Big Data"
+          ],
+          "correct": 2,
+          "explanation": "Structured data is characterized by its tabular format (rows and columns)."
+        },
+        {
+          "question": "Which of the following are examples of semi-structured data?",
+          "options": [
+            "Video files and Audio recordings",
+            "Relational database tables",
+            "Plain text documents",
+            "XML and JSON files"
+          ],
+          "correct": 3,
+          "explanation": "XML and JSON use tags or keys to organize data but don't have a rigid schema like structured data."
+        },
+        {
+          "question": "Image and audio files are typically classified as:",
+          "options": [
+            "Structured Data",
+            "Semi-structured Data",
+            "Unstructured Data",
+            "Tabular Data"
+          ],
+          "correct": 2,
+          "explanation": "Unstructured data lacks a predefined format, like multimedia files."
+        },
+        {
+          "question": "What is a primary characteristic of Data Streams?",
+          "options": [
+            "Data is static and rarely updated",
+            "Data must be processed in batches over long periods",
+            "Data is continuously updated in real-time",
+            "Data volume is always small"
+          ],
+          "correct": 2,
+          "explanation": "Data streams are defined by their continuous, real-time nature."
+        },
+        {
+          "question": "Statistical data is broadly divided into which two main categories?",
+          "options": [
+            "Big and Small",
+            "Discrete and Continuous",
+            "Qualitative and Quantitative",
+            "Primary and Secondary"
+          ],
+          "correct": 2,
+          "explanation": "The primary division is based on whether the data represents measurable quantities (Quantitative) or descriptive qualities (Qualitative)."
+        },
+        {
+          "question": "Data like 'Gender' or 'Hair Color', used for labeling without quantitative value, is called:",
+          "options": [
+            "Ordinal Data",
+            "Nominal Data",
+            "Interval Data",
+            "Ratio Data"
+          ],
+          "correct": 1,
+          "explanation": "Nominal data consists of categories without any intrinsic order."
+        },
+        {
+          "question": "Which type of qualitative data has categories with a meaningful order, but the distance between categories might not be consistent?",
+          "options": [
+            "Nominal Data",
+            "Ordinal Data",
+            "Interval Data",
+            "Ratio Data"
+          ],
+          "correct": 1,
+          "explanation": "Ordinal data has ordered categories, like opinion scales (e.g., agree, neutral, disagree)."
+        },
+        {
+          "question": "Data representing counts, like 'Number of students in a class', is typically:",
+          "options": [
+            "Continuous Data",
+            "Discrete Data",
+            "Qualitative Data",
+            "Ratio Data"
+          ],
+          "correct": 1,
+          "explanation": "Discrete data consists of distinct, separate, countable values."
+        },
+        {
+          "question": "Which measurement scale has equal distances between units but lacks a true zero point (e.g., Temperature in Celsius)?",
+          "options": [
+            "Nominal Scale",
+            "Ordinal Scale",
+            "Interval Scale",
+            "Ratio Scale"
+          ],
+          "correct": 2,
+          "explanation": "Interval scales have equal intervals but no true zero (0°C doesn't mean no temperature)."
+        },
+        {
+          "question": "Which measurement scale has equal intervals AND a true zero point (e.g., Height, Weight)?",
+          "options": [
+            "Nominal Scale",
+            "Ordinal Scale",
+            "Interval Scale",
+            "Ratio Scale"
+          ],
+          "correct": 3,
+          "explanation": "Ratio scales have a meaningful zero, allowing for ratio comparisons (e.g., 10kg is twice as heavy as 5kg)."
+        },
+        {
+          "question": "What is the overall process of inspecting, cleansing, transforming, and modeling data to discover useful information called?",
+          "options": [
+            "Data Mining",
+            "Data Management",
+            "Data Analysis",
+            "Data Presentation"
+          ],
+          "correct": 2,
+          "explanation": "Data analysis encompasses the entire process from cleaning to modeling and interpretation."
+        },
+        {
+          "question": "Which type of data analysis focuses on summarizing and describing the main features of a dataset using measures like mean, median, and standard deviation?",
+          "options": [
+            "Predictive Analysis",
+            "Descriptive Analysis",
+            "Inferential Analysis",
+            "Diagnostic Analysis"
+          ],
+          "correct": 1,
+          "explanation": "Descriptive analysis aims to describe 'what happened' in the data."
+        },
+        {
+          "question": "Which type of analysis uses historical data to understand the reasons behind past events or outcomes?",
+          "options": [
+            "Predictive Analysis",
+            "Descriptive Analysis",
+            "Exploratory Analysis",
+            "Diagnostic Analysis"
+          ],
+          "correct": 3,
+          "explanation": "Diagnostic analysis focuses on 'why did it happen?'."
+        },
+        {
+          "question": "Which type of analysis uses techniques like modeling and machine learning to forecast future events or probabilities?",
+          "options": [
+            "Predictive Analysis",
+            "Descriptive Analysis",
+            "Inferential Analysis",
+            "Diagnostic Analysis"
+          ],
+          "correct": 0,
+          "explanation": "Predictive analysis aims to predict 'what will happen?'."
+        },
+        {
+          "question": "Using sample data to draw conclusions or make inferences about a larger population is the goal of:",
+          "options": [
+            "Descriptive Analysis",
+            "Exploratory Data Analysis (EDA)",
+            "Inferential Data Analysis",
+            "Diagnostic Analysis"
+          ],
+          "correct": 2,
+          "explanation": "Inferential analysis generalizes findings from a sample to a population."
+        },
+        {
+          "question": "What is the primary focus of Exploratory Data Analysis (EDA)?",
+          "options": [
+            "Building final prediction models immediately",
+            "Presenting final results to stakeholders",
+            "Initial examination of data to gain insights and identify patterns",
+            "Deploying models into production"
+          ],
+          "correct": 2,
+          "explanation": "EDA is about initial exploration, understanding, and insight generation before formal modeling."
+        },
+        {
+          "question": "Which step in the data science process involves transforming raw, messy data into a structured and usable format?",
+          "options": [
+            "Data Collection",
+            "Data Processing (Cleaning/Wrangling)",
+            "Exploratory Data Analysis (EDA)",
+            "Modeling"
+          ],
+          "correct": 1,
+          "explanation": "Data processing or cleaning focuses on handling missing values, inconsistencies, etc."
+        },
+        {
+          "question": "Which challenge in the data science process occurs when a model performs well on training data but poorly on new, unseen data?",
+          "options": [
+            "Data Scarcity",
+            "Underfitting",
+            "Overfitting",
+            "Bias in Data"
+          ],
+          "correct": 2,
+          "explanation": "Overfitting means the model learned the training data too specifically, including noise, and fails to generalize."
+        },
+        {
+          "question": "What does a 'Probability Distribution' describe in statistics?",
+          "options": [
+            "The certainty of an event",
+            "The average value of a dataset",
+            "The probability of each possible outcome of a random experiment",
+            "The range of data values"
+          ],
+          "correct": 2,
+          "explanation": "A probability distribution maps each possible outcome to its probability."
+        },
+         {
+          "question": "What language is commonly used to work with Relational Database Management Systems (RDBMS)?",
+          "options": [
+            "Python",
+            "Java",
+            "SQL",
+            "HTML"
+          ],
+          "correct": 2,
+          "explanation": "SQL (Structured Query Language) is the standard language for managing and querying relational databases."
+        },
+        {
+          "question": "In structured data tables, what is another term for a column?",
+          "options": [
+            "Record",
+            "Tuple",
+            "Instance",
+            "Attribute (or Feature)"
+          ],
+          "correct": 3,
+          "explanation": "Columns represent attributes, features, variables, or dimensions of the data objects."
+        },
+        {
+          "question": "In structured data tables, what is another term for a row?",
+          "options": [
+            "Attribute",
+            "Feature",
+            "Data Object (or Record)",
+            "Dimension"
+          ],
+          "correct": 2,
+          "explanation": "Rows represent individual data objects, records, tuples, instances, or samples."
+        },
+        {
+          "question": "Which data type has a flexible schema but includes tags or markers for organization (e.g., HTML, XML, JSON)?",
+          "options": [
+            "Structured Data",
+            "Unstructured Data",
+            "Semi-structured Data",
+            "Relational Data"
+          ],
+          "correct": 2,
+          "explanation": "Semi-structured data has some organizational properties but lacks the rigid schema of structured data."
+        },
+        {
+          "question": "What is 'One-hot encoding' often used for?",
+          "options": [
+            "Transforming quantitative data into qualitative data",
+            "Transforming nominal categorical data into numerical features",
+            "Scaling continuous data",
+            "Handling missing values"
+          ],
+          "correct": 1,
+          "explanation": "One-hot encoding creates binary columns for each category in nominal data, making it suitable for ML algorithms."
+        },
+        {
+          "question": "What type of encoding is typically used to transform ordinal data into a numerical feature while preserving order?",
+          "options": [
+            "One-hot encoding",
+            "Label encoding",
+            "Binary encoding",
+            "Hashing encoding"
+          ],
+          "correct": 1,
+          "explanation": "Label encoding assigns sequential numbers (e.g., 0, 1, 2) to ordered categories."
+        },
+        {
+          "question": "Which challenge arises from data reflecting existing societal biases, potentially leading to unfair model outcomes?",
+          "options": [
+            "Model Overfitting",
+            "Model Underfitting",
+            "Bias in Data and Algorithms",
+            "Data Quality Issues"
+          ],
+          "correct": 2,
+          "explanation": "Bias in data collection or algorithmic processing can lead to discriminatory or unfair results."
+        },
+        {
+          "question": "The process of using data analysis to deduce properties of an underlying population distribution from a sample is called:",
+          "options": [
+            "Statistical Modeling",
+            "Descriptive Statistics",
+            "Statistical Inference",
+            "Data Mining"
+          ],
+          "correct": 2,
+          "explanation": "Statistical inference involves generalizing from a sample to a population."
+        },
+        {
+          "question": "What is the primary characteristic of the 'Normal Distribution'?",
+          "options": [
+            "All outcomes are equally likely",
+            "It is skewed to the right",
+            "It is bell-shaped and symmetric",
+            "It only applies to discrete data"
+          ],
+          "correct": 2,
+          "explanation": "The normal distribution is famously symmetric and bell-shaped, defined by its mean and standard deviation."
+        }
+      ]
+    },
+    "eda_descriptive": {
+      "title": "EDA & Descriptive Stats",
+      "description": "Exploring data using summary statistics and understanding EDA principles.",
+      "questions": [
+        {
+          "question": "What is the primary goal of Exploratory Data Analysis (EDA)?",
+          "options": [
+            "To build and deploy the final machine learning model.",
+            "To strictly validate pre-defined hypotheses.",
+            "To examine data, gain insights, understand patterns, and spot anomalies.",
+            "To generate the final report for stakeholders."
+          ],
+          "correct": 2,
+          "explanation": "EDA is about initial investigation and understanding, like being a 'data detective'."
+        },
+        {
+          "question": "Which Python library is fundamental for data manipulation and working with DataFrames in EDA?",
+          "options": [
+            "Matplotlib",
+            "NumPy",
+            "Seaborn",
+            "Pandas"
+          ],
+          "correct": 3,
+          "explanation": "Pandas provides the DataFrame structure, crucial for organizing and manipulating data."
+        },
+        {
+          "question": "Which Python library is specifically mentioned for creating 'pretty, statistical plots' in EDA?",
+          "options": [
+            "Pandas",
+            "NumPy",
+            "Seaborn",
+            "Plotly"
+          ],
+          "correct": 2,
+          "explanation": "Seaborn builds on Matplotlib to offer more statistically oriented and aesthetically pleasing visualizations."
+        },
+        {
+          "question": "Analyzing multiple variables simultaneously, often focusing on the relationship between two, is called:",
+          "options": [
+            "Univariate Analysis",
+            "Non-graphical Analysis",
+            "Multivariate Analysis",
+            "Cross-Classification"
+          ],
+          "correct": 2,
+          "explanation": "Multivariate analysis looks at multiple variables, with bivariate (two variables) being a common case."
+        },
+        {
+          "question": "Calculating summary statistics like mean, median, and standard deviation falls under which type of EDA technique?",
+          "options": [
+            "Graphical Univariate",
+            "Graphical Multivariate",
+            "Non-graphical",
+            "Inferential"
+          ],
+          "correct": 2,
+          "explanation": "Calculating numerical summaries is a non-graphical EDA technique."
+        },
+        {
+          "question": "For univariate analysis of categorical data, what aspects are typically analyzed?",
+          "options": [
+            "Mean and Standard Deviation",
+            "Range of values and their frequencies",
+            "Correlation and Covariance",
+            "Skewness and Kurtosis"
+          ],
+          "correct": 1,
+          "explanation": "For categorical data, we primarily look at the different categories present and how often each occurs."
+        },
+        {
+          "question": "Which measure of central tendency is most affected by extreme outliers?",
+          "options": [
+            "Median",
+            "Mode",
+            "Mean",
+            "Midrange"
+          ],
+          "correct": 2,
+          "explanation": "The mean uses all values in its calculation, so extreme values can heavily influence it."
+        },
+        {
+          "question": "Which measure of central tendency represents the middle value when data is sorted?",
+          "options": [
+            "Mean",
+            "Median",
+            "Mode",
+            "Weighted Mean"
+          ],
+          "correct": 1,
+          "explanation": "The median is the positional middle of sorted data."
+        },
+        {
+          "question": "Which measure of dispersion represents the difference between the maximum and minimum values?",
+          "options": [
+            "Variance",
+            "Standard Deviation",
+            "Interquartile Range (IQR)",
+            "Range"
+          ],
+          "correct": 3,
+          "explanation": "Range is the simplest measure of spread, calculated as Max - Min."
+        },
+        {
+          "question": "What is the Interquartile Range (IQR)?",
+          "options": [
+            "The difference between the mean and median",
+            "The range of the middle 50% of the data (Q3 - Q1)",
+            "The square root of the variance",
+            "The most frequent value"
+          ],
+          "correct": 1,
+          "explanation": "IQR measures the spread of the central half of the data, making it robust to outliers."
+        },
+        {
+          "question": "The 'Five-Number Summary' consists of:",
+          "options": [
+            "Mean, Median, Mode, Range, Variance",
+            "Min, Q1, Median, Q3, Max",
+            "Min, Max, Mean, Std Dev, Count",
+            "Q1, Q2, Q3, IQR, Range"
+          ],
+          "correct": 1,
+          "explanation": "The five-number summary provides a concise overview of the data's distribution using minimum, quartiles, median, and maximum."
+        },
+        {
+          "question": "What does 'Skewness' measure?",
+          "options": [
+            "The peakedness of a distribution",
+            "The central value of a distribution",
+            "The spread of a distribution",
+            "The asymmetry of a distribution"
+          ],
+          "correct": 3,
+          "explanation": "Skewness quantifies how much a distribution deviates from perfect symmetry."
+        },
+        {
+          "question": "A distribution with a long tail extending to the right is described as:",
+          "options": [
+            "Negatively Skewed (Left-Skewed)",
+            "Symmetrical",
+            "Positively Skewed (Right-Skewed)",
+            "Mesokurtic"
+          ],
+          "correct": 2,
+          "explanation": "Positive skewness means the tail is longer on the positive (right) side, and typically Mean > Median > Mode."
+        },
+        {
+          "question": "What does 'Kurtosis' measure?",
+          "options": [
+            "The asymmetry of a distribution",
+            "The central tendency of a distribution",
+            "The 'tailedness' or 'peakedness' relative to a normal distribution",
+            "The correlation between variables"
+          ],
+          "correct": 2,
+          "explanation": "Kurtosis describes the shape of the distribution's tails and peak compared to a normal distribution."
+        },
+        {
+          "question": "A distribution with heavier tails and a sharper peak than a normal distribution is called:",
+          "options": [
+            "Platykurtic",
+            "Mesokurtic",
+            "Leptokurtic",
+            "Skewed"
+          ],
+          "correct": 2,
+          "explanation": "Leptokurtic distributions have positive excess kurtosis, indicating heavier tails (more outliers) and a sharper peak."
+        },
+        {
+          "question": "Which non-graphical multivariate technique is used to display the frequency of occurrences for combinations of categorical variables?",
+          "options": [
+            "Correlation Matrix",
+            "Covariance Matrix",
+            "Cross-Tabulation (Contingency Table)",
+            "Principal Component Analysis (PCA)"
+          ],
+          "correct": 2,
+          "explanation": "Cross-tabulation shows the joint distribution of two or more categorical variables in a table format."
+        },
+        {
+          "question": "What does a Correlation Matrix primarily show?",
+          "options": [
+            "The central tendency of multiple variables",
+            "The relationship strength between multiple numeric variables",
+            "The frequency distribution of variables",
+            "The underlying factors among variables"
+          ],
+          "correct": 1,
+          "explanation": "A correlation matrix quantifies the linear relationship strength and direction between pairs of numerical variables."
+        },
+        {
+          "question": "What is the term for extreme values that deviate significantly from the rest of the data?",
+          "options": [
+            "Modes",
+            "Medians",
+            "Outliers",
+            "Quartiles"
+          ],
+          "correct": 2,
+          "explanation": "Outliers are data points that lie far away from the bulk of the distribution."
+        },
+        {
+          "question": "In Python pandas, how would you typically calculate the mean of a column named 'age' in a DataFrame `df`?",
+          "options": [
+            "`df.mean('age')`",
+            "`mean(df['age'])`",
+            "`df['age'].mean()`",
+            "`df.age.average()`"
+          ],
+          "correct": 2,
+          "explanation": "Pandas Series objects (like DataFrame columns) have built-in methods like `.mean()`."
+        },
+         {
+          "question": "Which measure of dispersion is calculated as the square root of the variance?",
+          "options": [
+            "Range",
+            "Interquartile Range (IQR)",
+            "Standard Deviation",
+            "Mean Absolute Deviation"
+          ],
+          "correct": 2,
+          "explanation": "Standard deviation is the square root of variance, returning the spread measure to the original units."
+        },
+        {
+          "question": "If a dataset has two distinct peaks in its distribution, it is described as:",
+          "options": [
+            "Unimodal",
+            "Bimodal",
+            "Multimodal",
+            "Uniform"
+          ],
+          "correct": 1,
+          "explanation": "Modality refers to the number of peaks; bimodal means two peaks."
+        },
+        {
+          "question": "Which technique identifies underlying relationships or groupings among a set of variables?",
+          "options": [
+            "Cross-Tabulation",
+            "Correlation Matrix",
+            "Factor Analysis",
+            "Multivariate Regression"
+          ],
+          "correct": 2,
+          "explanation": "Factor analysis is a multivariate technique used to uncover latent structures or factors within variables."
+        },
+        {
+          "question": "Which technique is primarily used for reducing the number of variables (dimensionality reduction) while preserving essential information?",
+          "options": [
+            "Cross-Tabulation",
+            "Factor Analysis",
+            "Principal Component Analysis (PCA)",
+            "Correlation Matrix"
+          ],
+          "correct": 2,
+          "explanation": "PCA is a core technique for dimensionality reduction by creating new uncorrelated variables (components)."
+        },
+        {
+          "question": "Calculating the average of the minimum and maximum values in a dataset gives the:",
+          "options": [
+            "Mean",
+            "Median",
+            "Mode",
+            "Midrange"
+          ],
+          "correct": 3,
+          "explanation": "Midrange is a simple measure of center calculated as (Min + Max) / 2."
+        },
+        {
+          "question": "In a perfectly symmetrical distribution, what is the expected relationship between the mean, median, and mode?",
+          "options": [
+            "Mean > Median > Mode",
+            "Mean < Median < Mode",
+            "Mean ≈ Median ≈ Mode",
+            "Mean ≠ Median ≠ Mode"
+          ],
+          "correct": 2,
+          "explanation": "In a symmetrical distribution, the mean, median, and mode coincide at the center."
+        },
+        {
+          "question": "What does 'Excess Kurtosis' compare the distribution's kurtosis to?",
+          "options": [
+            "The mean of the distribution",
+            "The standard deviation of the distribution",
+            "The kurtosis of a normal distribution (which is 3)",
+            "The skewness of the distribution"
+          ],
+          "correct": 2,
+          "explanation": "Excess Kurtosis = Kurtosis - 3. A value near 0 indicates similar tailedness to a normal distribution."
+        },
+        {
+          "question": "A distribution with light tails (fewer outliers than normal) and a flatter peak is called:",
+          "options": [
+            "Leptokurtic",
+            "Mesokurtic",
+            "Platykurtic",
+            "Bimodal"
+          ],
+          "correct": 2,
+          "explanation": "Platykurtic distributions have negative excess kurtosis, indicating lighter tails and a flatter peak."
+        },
+        {
+          "question": "Why might the median be preferred over the mean as a measure of center?",
+          "options": [
+            "It is always easier to calculate",
+            "It is less sensitive to outliers and skewed data",
+            "It uses all data points directly in its calculation",
+            "It represents the most frequent value"
+          ],
+          "correct": 1,
+          "explanation": "The median is robust to extreme values, making it a better representation of the center for skewed distributions or data with outliers."
+        },
+        {
+          "question": "What is the primary purpose of using visualization tools like Matplotlib and Seaborn in EDA?",
+          "options": [
+            "To perform complex statistical calculations",
+            "To store the data efficiently",
+            "To visually summarize data and identify patterns/relationships",
+            "To clean and preprocess the data"
+          ],
+          "correct": 2,
+          "explanation": "Visualization makes it easier to understand distributions, trends, and relationships compared to looking at raw numbers."
+        }
+      ]
+    },
+    "eda_visualization": {
+      "title": "Data Visualization Techniques",
+      "description": "Understanding and applying various plots for exploring data patterns.",
+      "questions": [
+        {
+          "question": "Which plot type is best suited for displaying the frequency distribution of a single numerical variable?",
+          "options": [
+            "Scatter Plot",
+            "Line Graph",
+            "Histogram",
+            "Pie Chart"
+          ],
+          "correct": 2,
+          "explanation": "Histograms group numerical data into bins and show the frequency of observations in each bin."
+        },
+        {
+          "question": "What key statistical measures does a Box Plot (Whisker Plot) visually represent?",
+          "options": [
+            "Mean, Standard Deviation, and Range",
+            "Median, Quartiles (Q1, Q3), and potential Outliers",
+            "Frequency counts for categories",
+            "Correlation between two variables"
+          ],
+          "correct": 1,
+          "explanation": "Box plots effectively summarize the distribution using the median, IQR (box), and identify outliers (points beyond whiskers)."
+        },
+        {
+          "question": "What is the primary purpose of a Quantile-Quantile (Q-Q) Plot?",
+          "options": [
+            "To show the relationship between two categorical variables",
+            "To compare the distribution of a dataset against a theoretical distribution (often normal)",
+            "To display proportions of a whole",
+            "To visualize trends over time"
+          ],
+          "correct": 1,
+          "explanation": "Q-Q plots are used to check if data follows a specific theoretical distribution, indicated by points falling on a straight line."
+        },
+        {
+          "question": "Which plot is used to visualize the relationship and potential correlation between two numerical variables?",
+          "options": [
+            "Histogram",
+            "Box Plot",
+            "Bar Chart",
+            "Scatter Plot"
+          ],
+          "correct": 3,
+          "explanation": "Scatter plots show individual data points based on the values of two numeric variables, revealing patterns like correlation."
+        },
+        {
+          "question": "What does a Heatmap typically use colors to represent?",
+          "options": [
+            "Frequency counts",
+            "Individual data points",
+            "The magnitude of values in a matrix, often correlation coefficients",
+            "Proportions of categories"
+          ],
+          "correct": 2,
+          "explanation": "Heatmaps use a color scale to represent the values in a 2D matrix, commonly used for correlation matrices."
+        },
+        {
+          "question": "A Bubble Chart is similar to a Scatter Plot but adds a third dimension represented by the:",
+          "options": [
+            "Color of the points",
+            "Shape of the points",
+            "Size of the points (bubbles)",
+            "X-axis position"
+          ],
+          "correct": 2,
+          "explanation": "The size of the bubbles in a bubble chart encodes the value of a third variable."
+        },
+        {
+          "question": "Which plot is most suitable for representing the frequency or values of different categories?",
+          "options": [
+            "Line Graph",
+            "Scatter Plot",
+            "Bar Chart",
+            "Histogram"
+          ],
+          "correct": 2,
+          "explanation": "Bar charts use the length/height of bars to represent values associated with discrete categories."
+        },
+        {
+          "question": "A Distribution Plot (like `sns.histplot` with `kde=True`) often combines a histogram with what?",
+          "options": [
+            "A box plot",
+            "A scatter plot",
+            "A Kernel Density Estimate (KDE) curve",
+            "A pie chart"
+          ],
+          "correct": 2,
+          "explanation": "The KDE provides a smoothed estimate of the probability density function over the histogram."
+        },
+        {
+          "question": "What does a Pair Plot (like `sns.pairplot`) display?",
+          "options": [
+            "A single scatter plot for two chosen variables",
+            "A grid of plots showing relationships between all pairs of variables in a dataset",
+            "A comparison of distributions using box plots",
+            "A time-series trend for multiple variables"
+          ],
+          "correct": 1,
+          "explanation": "Pair plots create a matrix of scatter plots for pairwise relationships and often histograms/KDEs on the diagonal."
+        },
+        {
+          "question": "Which plot type is primarily used to visualize trends in data over time or another continuous sequence?",
+          "options": [
+            "Pie Chart",
+            "Bar Chart",
+            "Line Graph",
+            "Scatter Plot"
+          ],
+          "correct": 2,
+          "explanation": "Line graphs connect data points sequentially, making them ideal for showing trends."
+        },
+        {
+          "question": "What is the main purpose of a Pie Chart?",
+          "options": [
+            "To show the relationship between two numeric variables",
+            "To represent proportions or percentages of a whole for categorical data",
+            "To display the frequency distribution of a continuous variable",
+            "To detect outliers in a dataset"
+          ],
+          "correct": 1,
+          "explanation": "Pie charts divide a circle into slices representing the proportion of each category."
+        },
+        {
+          "question": "An Area Chart is similar to a Line Graph but adds:",
+          "options": [
+            "Error bars to each point",
+            "A second Y-axis",
+            "Filled area below the line(s)",
+            "Categorical groupings"
+          ],
+          "correct": 2,
+          "explanation": "Area charts fill the space between the line and the axis, often used to show cumulative totals or contributions over time."
+        },
+        {
+          "question": "In a Box Plot, the 'box' itself typically represents which part of the data?",
+          "options": [
+            "The full range (Min to Max)",
+            "One Standard Deviation from the Mean",
+            "The Interquartile Range (IQR), from Q1 to Q3",
+            "Only the Median value"
+          ],
+          "correct": 2,
+          "explanation": "The box spans the first quartile (Q1) to the third quartile (Q3), containing the middle 50% of the data."
+        },
+        {
+          "question": "In a Scatter Plot, if points generally trend from the bottom-left to the top-right, what kind of relationship does this suggest?",
+          "options": [
+            "Negative Correlation",
+            "No Correlation",
+            "Positive Correlation",
+            "Zero Slope"
+          ],
+          "correct": 2,
+          "explanation": "An upward trend indicates that as one variable increases, the other tends to increase as well (positive correlation)."
+        },
+        {
+          "question": "If a Q-Q plot shows points forming a curve instead of a straight diagonal line, what might this indicate about the data?",
+          "options": [
+            "The data perfectly follows the theoretical distribution",
+            "The data is likely skewed or has different tail behavior than the theoretical distribution",
+            "There are no outliers in the data",
+            "The variables are strongly correlated"
+          ],
+          "correct": 1,
+          "explanation": "Deviations from the straight line on a Q-Q plot signal differences between the sample distribution and the theoretical one (e.g., non-normality)."
+        },
+         {
+          "question": "Which visualization technique uses icons to represent multi-dimensional data points?",
+          "options": [
+            "Heatmap",
+            "Icon-based plots (e.g., Chernoff faces, Star plots)",
+            "Bubble Chart",
+            "Pair Plot"
+          ],
+          "correct": 1,
+          "explanation": "Icon-based plots map data dimensions to features of an icon (like shape, size, color) to represent multiple variables simultaneously."
+        },
+        {
+          "question": "A Treemap, created using libraries like `squarify`, is an example of which type of plot?",
+          "options": [
+            "Time Series Plot",
+            "Scatter Plot",
+            "Hierarchical Plot",
+            "Distribution Plot"
+          ],
+          "correct": 2,
+          "explanation": "Treemaps are used to visualize hierarchical data using nested rectangles where area represents value."
+        },
+        {
+          "question": "In Seaborn, what does the `hue` parameter typically do in plots like `pairplot` or `scatterplot`?",
+          "options": [
+            "Sets the overall size of the plot",
+            "Adds labels to the axes",
+            "Colors the plot elements based on a categorical variable",
+            "Changes the plot type"
+          ],
+          "correct": 2,
+          "explanation": "The `hue` parameter allows mapping a categorical variable to the color of plot elements, helping distinguish groups."
+        },
+        {
+          "question": "Which plot is NOT typically used for visualizing the distribution of a single numerical variable?",
+          "options": [
+            "Histogram",
+            "Box Plot",
+            "KDE Plot (Kernel Density Estimate)",
+            "Scatter Plot"
+          ],
+          "correct": 3,
+          "explanation": "Scatter plots are designed to show the relationship between *two* numerical variables."
+        },
+        {
+          "question": "While useful for showing proportions, why are Pie Charts sometimes criticized or recommended against?",
+          "options": [
+            "They can only show two categories",
+            "They are difficult to create",
+            "Humans are often bad at accurately comparing angles and areas, making comparisons difficult",
+            "They require numerical data"
+          ],
+          "correct": 2,
+          "explanation": "It can be hard to judge relative sizes accurately in pie charts, especially with many slices. Bar charts are often clearer for comparisons."
+        }
+      ]
+    },
+    "data_preprocessing": {
+      "title": "Data Preprocessing",
+      "description": "Techniques for cleaning, transforming, integrating, and reducing raw data for analysis.",
+      "questions": [
+        {
+          "question": "Why is data preprocessing considered a crucial step in data analysis and machine learning?",
+          "options": [
+            "It's the final step involving model deployment",
+            "Real-world data is often messy (incomplete, noisy, inconsistent)",
+            "It focuses solely on data visualization",
+            "It replaces the need for Exploratory Data Analysis (EDA)"
+          ],
+          "correct": 1,
+          "explanation": "Preprocessing addresses the common issues found in raw data to make it suitable for analysis, improving model performance and reliability."
+        },
+        {
+          "question": "Which of the following is NOT listed as a common characteristic of raw, real-world data needing preprocessing?",
+          "options": [
+            "Incomplete (missing values)",
+            "Noisy (errors, outliers)",
+            "Inconsistent (duplicates, different formats)",
+            "Perfectly Formatted"
+          ],
+          "correct": 3,
+          "explanation": "The need for preprocessing arises precisely because real-world data is rarely perfectly formatted."
+        },
+        {
+          "question": "Handling missing values, correcting errors, and removing duplicates are parts of which preprocessing task?",
+          "options": [
+            "Data Integration",
+            "Data Transformation",
+            "Data Reduction",
+            "Data Cleaning"
+          ],
+          "correct": 3,
+          "explanation": "Data cleaning focuses on fixing inaccuracies, inconsistencies, and missing information in the data."
+        },
+        {
+          "question": "Replacing all missing values in a column with the word 'Missing' or a specific number like -1 is an example of using a:",
+          "options": [
+            "Mean Imputation",
+            "Median Imputation",
+            "Global Constant",
+            "Regression Prediction"
+          ],
+          "correct": 2,
+          "explanation": "This method fills all missing entries with a single, predefined constant value."
+        },
+        {
+          "question": "Which method for handling missing numerical values is generally more robust to outliers?",
+          "options": [
+            "Replacing with the Mean",
+            "Replacing with the Median",
+            "Replacing with a Global Constant (e.g., 0)",
+            "Deleting the row"
+          ],
+          "correct": 1,
+          "explanation": "The median is less affected by extreme values than the mean, making it a better choice for imputation in skewed data or data with outliers."
+        },
+        {
+          "question": "Sorting data and averaging values within small groups (bins) is a noise handling technique called:",
+          "options": [
+            "Regression",
+            "Clustering",
+            "Binning",
+            "Outlier Removal"
+          ],
+          "correct": 2,
+          "explanation": "Binning smooths data by grouping values and replacing them with a representative value for the bin (e.g., mean or median)."
+        },
+        {
+          "question": "The Z-score method identifies outliers based on what criteria?",
+          "options": [
+            "Values falling outside the Interquartile Range (IQR)",
+            "Values being far from the median",
+            "Values being a certain number of standard deviations away from the mean",
+            "Values belonging to low-density clusters"
+          ],
+          "correct": 2,
+          "explanation": "Z-score measures how many standard deviations a data point is from the mean. A common threshold for outliers is a Z-score > 3 or < -3."
+        },
+        {
+          "question": "Which outlier detection method uses quartiles (Q1, Q3) and is visualized by box plots?",
+          "options": [
+            "Z-Score Method",
+            "Isolation Forest",
+            "Interquartile Range (IQR) Method",
+            "DBSCAN"
+          ],
+          "correct": 2,
+          "explanation": "The IQR method defines outliers as points falling below Q1 - 1.5*IQR or above Q3 + 1.5*IQR, which correspond to the whiskers in a standard box plot."
+        },
+        {
+          "question": "Combining data from multiple sources (databases, files) into a unified dataset is called:",
+          "options": [
+            "Data Cleaning",
+            "Data Transformation",
+            "Data Integration",
+            "Data Reduction"
+          ],
+          "correct": 2,
+          "explanation": "Data integration is the process of merging data from disparate sources."
+        },
+        {
+          "question": "What is a major challenge during data integration involving matching identical real-world entities across different data sources?",
+          "options": [
+            "Tuple Duplication",
+            "Schema Integration",
+            "Entity Identification Problem",
+            "Data Transformation"
+          ],
+          "correct": 2,
+          "explanation": "Identifying and merging records that refer to the same entity (e.g., the same customer listed differently in two databases) is a key challenge."
+        },
+        {
+          "question": "Scaling data to have a mean of 0 and a standard deviation of 1 is known as:",
+          "options": [
+            "Min-Max Scaling",
+            "Robust Scaling",
+            "Standardization (Z-Score Scaling)",
+            "Normalization (Unit Vector)"
+          ],
+          "correct": 2,
+          "explanation": "Standardization centers the data around 0 and scales it based on the standard deviation."
+        },
+        {
+          "question": "Which scaling technique transforms data into a specific range, typically [0, 1]?",
+          "options": [
+            "Standardization (Z-Score Scaling)",
+            "Min-Max Scaling",
+            "Robust Scaling",
+            "Log Transformation"
+          ],
+          "correct": 1,
+          "explanation": "Min-Max scaling rescales features to fit within a fixed minimum and maximum value, usually 0 and 1."
+        },
+        {
+          "question": "Which scaling technique is less sensitive to outliers because it uses the Interquartile Range?",
+          "options": [
+            "Standardization (Z-Score Scaling)",
+            "Min-Max Scaling",
+            "Robust Scaling",
+            "Normalization (Unit Vector)"
+          ],
+          "correct": 2,
+          "explanation": "Robust scaling uses the median and IQR, which are less affected by outliers than the mean and standard deviation or min/max values."
+        },
+        {
+          "question": "Converting numerical data into categorical intervals (e.g., age groups from specific ages) is an example of:",
+          "options": [
+            "Aggregation",
+            "Smoothing",
+            "Discretization",
+            "Normalization"
+          ],
+          "correct": 2,
+          "explanation": "Discretization transforms continuous or numerous discrete values into a smaller number of categorical bins."
+        },
+        {
+          "question": "What is the primary goal of Dimensionality Reduction?",
+          "options": [
+            "To increase the number of features",
+            "To reduce the number of features (columns) while preserving important information",
+            "To reduce the number of rows (data points)",
+            "To handle missing values"
+          ],
+          "correct": 1,
+          "explanation": "Dimensionality reduction aims to simplify data by reducing the number of variables, which can improve model performance and reduce complexity."
+        },
+        {
+          "question": "Which technique creates new, uncorrelated features (principal components) that capture the maximum variance in the data?",
+          "options": [
+            "Feature Selection",
+            "Principal Component Analysis (PCA)",
+            "Data Aggregation",
+            "Binning"
+          ],
+          "correct": 1,
+          "explanation": "PCA transforms the original variables into a new set of orthogonal components ordered by the amount of variance they explain."
+        },
+        {
+          "question": "In Python pandas, which function is typically used to remove entire rows containing any missing values?",
+          "options": [
+            "`.fillna()`",
+            "`.replace()`",
+            "`.dropna()`",
+            "`.drop_duplicates()`"
+          ],
+          "correct": 2,
+          "explanation": "`.dropna()` is used to remove rows (or columns) with NaN/missing values."
+        },
+        {
+          "question": "In Python pandas, how can you replace specific incorrect values (e.g., typos) within a column?",
+          "options": [
+            "`.fillna()`",
+            "`.replace()`",
+            "`.dropna()`",
+            "`.astype()`"
+          ],
+          "correct": 1,
+          "explanation": "The `.replace()` method is versatile for substituting specific values with others."
+        },
+        {
+          "question": "What does the `SimpleImputer` class from scikit-learn primarily help with?",
+          "options": [
+            "Scaling numerical data",
+            "Encoding categorical data",
+            "Handling missing values using strategies like mean, median, or most frequent",
+            "Removing duplicate rows"
+          ],
+          "correct": 2,
+          "explanation": "`SimpleImputer` provides standard methods for filling in missing (NaN) values in datasets."
+        },
+        {
+          "question": "Which benefit is associated with dimensionality reduction?",
+          "options": [
+            "Increased data storage requirements",
+            "Prevention of underfitting",
+            "Reduced computational complexity and potential prevention of overfitting",
+            "Introduction of noise"
+          ],
+          "correct": 2,
+          "explanation": "Fewer dimensions mean faster processing, less risk of models fitting noise (overfitting), and easier visualization."
+        },
+         {
+          "question": "What is 'Data cleaning as a process' primarily concerned with?",
+          "options": [
+            "Visualizing the final results",
+            "Detecting and correcting discrepancies or problems in the data",
+            "Choosing the right machine learning model",
+            "Integrating data from different sources"
+          ],
+          "correct": 1,
+          "explanation": "The process involves identifying issues (discrepancy detection) and then applying transformations to fix them."
+        },
+        {
+          "question": "Using metadata, data profiling tools, or domain knowledge to find errors or inconsistencies relates to which part of the data cleaning process?",
+          "options": [
+            "Data Transformation",
+            "Data Reduction",
+            "Discrepancy Detection",
+            "Data Integration"
+          ],
+          "correct": 2,
+          "explanation": "Before correcting data, you must first detect where the problems lie."
+        },
+        {
+          "question": "Applying ETL (Extract, Transform, Load) tools or custom scripts to correct detected data problems falls under which part of the data cleaning process?",
+          "options": [
+            "Data Visualization",
+            "Data Transformation (as part of cleaning)",
+            "Discrepancy Detection",
+            "Data Sampling"
+          ],
+          "correct": 1,
+          "explanation": "Once discrepancies are found, transformation techniques are used to correct them."
+        },
+        {
+          "question": "Which data reduction technique focuses on reducing the volume of data points (rows)?",
+          "options": [
+            "Dimensionality Reduction (e.g., PCA)",
+            "Numerosity Reduction (e.g., Sampling, Clustering, Aggregation)",
+            "Data Compression",
+            "Feature Engineering"
+          ],
+          "correct": 1,
+          "explanation": "Numerosity reduction techniques aim to represent the data with fewer records while maintaining key characteristics."
+        },
+        {
+          "question": "Using regression models or log-linear models to estimate data and reduce the dataset size falls under which type of numerosity reduction?",
+          "options": [
+            "Parametric Methods",
+            "Non-Parametric Methods",
+            "Sampling Methods",
+            "Clustering Methods"
+          ],
+          "correct": 0,
+          "explanation": "Parametric methods assume the data fits a model and store only the model parameters instead of the full data."
+        },
+        {
+          "question": "Using histograms, clustering, or sampling to reduce data volume without assuming an underlying model is considered:",
+          "options": [
+            "Parametric Numerosity Reduction",
+            "Non-Parametric Numerosity Reduction",
+            "Dimensionality Reduction",
+            "Data Compression"
+          ],
+          "correct": 1,
+          "explanation": "Non-parametric methods reduce data size without relying on model parameters."
+        },
+        {
+          "question": "Which type of data compression allows the original data to be perfectly reconstructed?",
+          "options": [
+            "Lossy Compression",
+            "Lossless Compression",
+            "Dimensionality Reduction",
+            "Numerosity Reduction"
+          ],
+          "correct": 1,
+          "explanation": "Lossless compression reduces size without discarding any information."
+        },
+        {
+          "question": "Which type of data compression reduces file size significantly but involves discarding some information, meaning the original data cannot be perfectly reconstructed?",
+          "options": [
+            "Lossy Compression",
+            "Lossless Compression",
+            "Standardization",
+            "Normalization"
+          ],
+          "correct": 0,
+          "explanation": "Lossy compression achieves greater size reduction by removing data deemed less important (common in image/audio compression)."
+        },
+        {
+          "question": "Replacing low-level data (e.g., specific city names) with higher-level concepts (e.g., state or country) is a transformation technique known as:",
+          "options": [
+            "Discretization",
+            "Aggregation",
+            "Concept Hierarchy Generation",
+            "Smoothing"
+          ],
+          "correct": 2,
+          "explanation": "Concept hierarchies allow data to be represented at different levels of abstraction."
+        },
+        {
+          "question": "In pandas, how would you remove rows where the 'Age' column has a Z-score greater than 3 (assuming `z_score` contains the absolute Z-scores)?",
+          "options": [
+            "`df[z_score['Age'] > 3]`",
+            "`df.drop(z_score['Age'] > 3)`",
+            "`df[z_score['Age'] < 3]`",
+            "`df.clean(z_score > 3)`"
+          ],
+          "correct": 2,
+          "explanation": "Boolean indexing `df[condition]` keeps rows where the condition is True. We want rows where the Z-score is less than 3."
+        }
+      ]
+    },
+     "ml_concepts": {
+      "title": "Machine Learning Concepts",
+      "description": "Fundamental ideas of machine learning, types of learning, and the modeling workflow.",
+      "questions": [
+        {
+          "question": "What is the core idea of Machine Learning (ML)?",
+          "options": [
+            "Programming computers with explicit step-by-step instructions for every task.",
+            "Building systems that can learn patterns and make decisions from data.",
+            "Storing and retrieving large amounts of data efficiently.",
+            "Creating visually appealing data dashboards."
+          ],
+          "correct": 1,
+          "explanation": "ML focuses on algorithms learning from data rather than being explicitly programmed for a specific task."
+        },
+        {
+          "question": "Which type of machine learning uses labeled data (input features + correct outputs) to train models?",
+          "options": [
+            "Unsupervised Learning",
+            "Reinforcement Learning",
+            "Supervised Learning",
+            "Semi-Supervised Learning"
+          ],
+          "correct": 2,
+          "explanation": "Supervised learning requires known output labels for the training examples."
+        },
+        {
+          "question": "Predicting a continuous numerical value, like the price of a house, is what type of supervised learning problem?",
+          "options": [
+            "Classification",
+            "Clustering",
+            "Regression",
+            "Dimensionality Reduction"
+          ],
+          "correct": 2,
+          "explanation": "Regression problems involve predicting a quantity on a continuous scale."
+        },
+        {
+          "question": "Predicting a category or class label, like 'spam' or 'not spam', is what type of supervised learning problem?",
+          "options": [
+            "Classification",
+            "Clustering",
+            "Regression",
+            "Association Rule Mining"
+          ],
+          "correct": 0,
+          "explanation": "Classification problems involve assigning data points to predefined discrete categories."
+        },
+        {
+          "question": "Which type of machine learning deals with unlabeled data, aiming to find hidden structures or patterns?",
+          "options": [
+            "Unsupervised Learning",
+            "Reinforcement Learning",
+            "Supervised Learning",
+            "Regression"
+          ],
+          "correct": 0,
+          "explanation": "Unsupervised learning explores data without predefined answers to discover groupings or relationships."
+        },
+        {
+          "question": "Grouping similar customers based on their purchasing habits without prior labels is an example of:",
+          "options": [
+            "Classification",
+            "Regression",
+            "Clustering",
+            "Reinforcement Learning"
+          ],
+          "correct": 2,
+          "explanation": "Clustering is an unsupervised task that groups similar data points together."
+        },
+        {
+          "question": "Reducing the number of input features while preserving important information is known as:",
+          "options": [
+            "Clustering",
+            "Dimensionality Reduction",
+            "Classification",
+            "Regression"
+          ],
+          "correct": 1,
+          "explanation": "Dimensionality reduction techniques like PCA simplify data by reducing the number of features."
+        },
+        {
+          "question": "Which type of learning involves an agent learning to make sequences of decisions by interacting with an environment and receiving rewards or penalties?",
+          "options": [
+            "Supervised Learning",
+            "Unsupervised Learning",
+            "Reinforcement Learning",
+            "Semi-Supervised Learning"
+          ],
+          "correct": 2,
+          "explanation": "Reinforcement learning is based on learning optimal behaviors through trial and error guided by rewards."
+        },
+        {
+          "question": "In the machine learning workflow, why is data typically split into a training set and a test set?",
+          "options": [
+            "To train the model on all available data.",
+            "To make the training process faster.",
+            "To evaluate the model's performance on unseen data and check for generalization.",
+            "To reduce the dimensionality of the data."
+          ],
+          "correct": 2,
+          "explanation": "The test set provides an unbiased estimate of how well the model performs on new data it hasn't seen during training."
+        },
+        {
+          "question": "What is the purpose of the training set?",
+          "options": [
+            "To evaluate the final model performance.",
+            "To provide unseen data for testing generalization.",
+            "To allow the algorithm to learn patterns and adjust its parameters.",
+            "To select the best evaluation metric."
+          ],
+          "correct": 2,
+          "explanation": "The model learns from the patterns and labels present only in the training data."
+        },
+        {
+          "question": "What technique involves splitting data into 'k' folds and iteratively training on k-1 folds while testing on the remaining fold?",
+          "options": [
+            "Holdout Method",
+            "Bootstrap Sampling",
+            "k-Fold Cross-Validation",
+            "Train/Test Split"
+          ],
+          "correct": 2,
+          "explanation": "k-Fold Cross-Validation provides a more robust estimate of model performance by using different subsets for testing."
+        },
+        {
+          "question": "During model training, the algorithm typically tries to adjust its parameters to minimize a:",
+          "options": [
+            "Feature set",
+            "Loss function",
+            "Hyperparameter",
+            "Dataset size"
+          ],
+          "correct": 1,
+          "explanation": "A loss function measures the difference between the model's predictions and the actual target values; training aims to minimize this error."
+        },
+        {
+          "question": "A model that is too simple and fails to capture the underlying complexity of the data, performing poorly on both training and test sets, is likely suffering from:",
+          "options": [
+            "High Variance (Overfitting)",
+            "High Bias (Underfitting)",
+            "Low Bias",
+            "Good Generalization"
+          ],
+          "correct": 1,
+          "explanation": "High bias (underfitting) occurs when the model is too simplistic to learn the true patterns."
+        },
+        {
+          "question": "A model that fits the training data extremely well but performs poorly on the test set is likely suffering from:",
+          "options": [
+            "High Variance (Overfitting)",
+            "High Bias (Underfitting)",
+            "Low Variance",
+            "Good Balance"
+          ],
+          "correct": 0,
+          "explanation": "High variance (overfitting) occurs when the model learns the noise in the training data and fails to generalize to new data."
+        },
+        {
+          "question": "What is the 'Bias-Variance Tradeoff' in machine learning?",
+          "options": [
+            "The tradeoff between training time and prediction time.",
+            "The need to balance model complexity to minimize both bias and variance errors.",
+            "The choice between supervised and unsupervised learning.",
+            "The tradeoff between accuracy and precision."
+          ],
+          "correct": 1,
+          "explanation": "Often, decreasing bias (making the model more complex) increases variance, and vice-versa. The goal is to find a good balance for optimal generalization."
+        },
+         {
+          "question": "Discovering rules like 'Customers who buy X also tend to buy Y' is the goal of which unsupervised learning task?",
+          "options": [
+            "Clustering",
+            "Dimensionality Reduction",
+            "Association Rule Mining",
+            "Regression"
+          ],
+          "correct": 2,
+          "explanation": "Association rule mining finds interesting relationships or correlations between items in large datasets, like in market basket analysis."
+        },
+        {
+          "question": "Which common optimization technique is often used during model training to find parameter values that minimize the loss function?",
+          "options": [
+            "Cross-Validation",
+            "Feature Scaling",
+            "Gradient Descent",
+            "Principal Component Analysis"
+          ],
+          "correct": 2,
+          "explanation": "Gradient descent is an iterative optimization algorithm used to find the minimum of a function (the loss function in ML)."
+        },
+        {
+          "question": "What is the primary difference between a parameter and a hyperparameter in machine learning?",
+          "options": [
+            "Parameters are learned from data; hyperparameters are set before training.",
+            "Hyperparameters are learned from data; parameters are set before training.",
+            "They are the same thing.",
+            "Parameters are only used in supervised learning; hyperparameters in unsupervised."
+          ],
+          "correct": 0,
+          "explanation": "Parameters (like weights in linear regression) are learned by the model during training. Hyperparameters (like 'k' in k-NN or learning rate) are settings configured before training starts."
+        },
+        {
+          "question": "Techniques like regularization (e.g., L1, L2) are often used to specifically combat which problem?",
+          "options": [
+            "High Bias (Underfitting)",
+            "High Variance (Overfitting)",
+            "Slow training time",
+            "Lack of data"
+          ],
+          "correct": 1,
+          "explanation": "Regularization adds a penalty for model complexity to the loss function, discouraging the model from fitting noise and thus reducing overfitting."
+        },
+        {
+          "question": "Which field is Machine Learning considered a subfield of?",
+          "options": [
+            "Statistics",
+            "Computer Programming",
+            "Artificial Intelligence (AI)",
+            "Data Visualization"
+          ],
+          "correct": 2,
+          "explanation": "ML is a core component of AI, focusing on systems that learn from data."
+        }
+      ]
+    },
+    "ml_evaluation": {
+      "title": "Model Evaluation Metrics",
+      "description": "Assessing the performance of machine learning models for classification and regression.",
+      "questions": [
+        {
+          "question": "What is the primary purpose of evaluating a machine learning model using a test set?",
+          "options": [
+            "To further train the model.",
+            "To estimate how well the model will generalize to new, unseen data.",
+            "To choose the model's hyperparameters.",
+            "To simplify the model."
+          ],
+          "correct": 1,
+          "explanation": "Evaluation on the test set gives an unbiased assessment of the model's real-world performance."
+        },
+        {
+          "question": "In a binary classification confusion matrix, what does 'True Positive' (TP) represent?",
+          "options": [
+            "Correctly predicted negative class.",
+            "Incorrectly predicted positive class.",
+            "Correctly predicted positive class.",
+            "Incorrectly predicted negative class."
+          ],
+          "correct": 2,
+          "explanation": "TP is when the model correctly identifies an instance belonging to the positive class."
+        },
+        {
+          "question": "What does 'False Positive' (FP) represent in a confusion matrix (Type I Error)?",
+          "options": [
+            "Correctly predicted negative class.",
+            "Incorrectly predicted positive class.",
+            "Correctly predicted positive class.",
+            "Incorrectly predicted negative class."
+          ],
+          "correct": 1,
+          "explanation": "FP is when the model incorrectly predicts an instance as positive when it's actually negative (e.g., marking a normal email as spam)."
+        },
+        {
+          "question": "What does 'False Negative' (FN) represent in a confusion matrix (Type II Error)?",
+          "options": [
+            "Correctly predicted negative class.",
+            "Incorrectly predicted positive class.",
+            "Correctly predicted positive class.",
+            "Incorrectly predicted negative class."
+          ],
+          "correct": 3,
+          "explanation": "FN is when the model incorrectly predicts an instance as negative when it's actually positive (e.g., failing to detect spam)."
+        },
+        {
+          "question": "Which classification metric calculates the overall correctness: (TP + TN) / (TP + TN + FP + FN)?",
+          "options": [
+            "Precision",
+            "Recall",
+            "Accuracy",
+            "F1-Score"
+          ],
+          "correct": 2,
+          "explanation": "Accuracy measures the proportion of total predictions that were correct."
+        },
+        {
+          "question": "Why can accuracy be a misleading metric for imbalanced datasets?",
+          "options": [
+            "It is too complex to calculate.",
+            "It doesn't consider True Negatives.",
+            "A model can achieve high accuracy by always predicting the majority class.",
+            "It only works for binary classification."
+          ],
+          "correct": 2,
+          "explanation": "If one class dominates (e.g., 99% negatives), a model predicting negative always gets 99% accuracy but fails to identify any positives."
+        },
+        {
+          "question": "Which metric measures the proportion of correctly predicted positives out of all instances predicted as positive (TP / (TP + FP))?",
+          "options": [
+            "Precision",
+            "Recall",
+            "Accuracy",
+            "Specificity"
+          ],
+          "correct": 0,
+          "explanation": "Precision answers: 'Of all the items the model flagged as positive, how many actually were positive?' High precision means fewer false positives."
+        },
+        {
+          "question": "Which metric measures the proportion of actual positives that were correctly identified by the model (TP / (TP + FN))?",
+          "options": [
+            "Precision",
+            "Recall (Sensitivity)",
+            "Accuracy",
+            "Specificity"
+          ],
+          "correct": 1,
+          "explanation": "Recall answers: 'Of all the actual positive items, how many did the model correctly identify?' High recall means fewer false negatives."
+        },
+        {
+          "question": "The F1-Score is the harmonic mean of which two metrics?",
+          "options": [
+            "Accuracy and Precision",
+            "Precision and Recall",
+            "Recall and Specificity",
+            "Accuracy and Recall"
+          ],
+          "correct": 1,
+          "explanation": "F1-score provides a balance between Precision and Recall, useful when both FP and FN are important."
+        },
+        {
+          "question": "What does the Area Under the ROC Curve (AUC) represent?",
+          "options": [
+            "The balance between bias and variance.",
+            "The model's ability to distinguish between positive and negative classes across various thresholds.",
+            "The absolute error of the model's predictions.",
+            "The percentage of variance explained by the model."
+          ],
+          "correct": 1,
+          "explanation": "AUC measures the overall discriminative power of a classifier. A value of 1 is perfect, 0.5 is random guessing."
+        },
+        {
+          "question": "The ROC curve plots which two rates against each other?",
+          "options": [
+            "Precision vs. Recall",
+            "True Positive Rate (Recall) vs. False Positive Rate",
+            "Accuracy vs. F1-Score",
+            "True Negative Rate vs. False Negative Rate"
+          ],
+          "correct": 1,
+          "explanation": "ROC curve shows the trade-off between sensitivity (TPR) and specificity (1 - FPR) at different classification thresholds."
+        },
+        {
+          "question": "Which regression metric calculates the average of the absolute differences between predicted and actual values?",
+          "options": [
+            "Mean Squared Error (MSE)",
+            "Root Mean Squared Error (RMSE)",
+            "R-squared (R²)",
+            "Mean Absolute Error (MAE)"
+          ],
+          "correct": 3,
+          "explanation": "MAE gives the average magnitude of errors in the original units, without squaring them."
+        },
+        {
+          "question": "Which regression metric calculates the average of the squared differences between predicted and actual values, penalizing larger errors more heavily?",
+          "options": [
+            "Mean Squared Error (MSE)",
+            "Root Mean Squared Error (RMSE)",
+            "R-squared (R²)",
+            "Mean Absolute Error (MAE)"
+          ],
+          "correct": 0,
+          "explanation": "MSE squares the errors before averaging, giving more weight to large deviations."
+        },
+        {
+          "question": "Which regression metric is the square root of MSE and is interpretable in the original units of the target variable?",
+          "options": [
+            "Mean Squared Error (MSE)",
+            "Root Mean Squared Error (RMSE)",
+            "R-squared (R²)",
+            "Mean Absolute Error (MAE)"
+          ],
+          "correct": 1,
+          "explanation": "RMSE takes the square root of MSE, bringing the error measure back to the original scale while still penalizing large errors."
+        },
+        {
+          "question": "What does R-squared (Coefficient of Determination) measure?",
+          "options": [
+            "The average prediction error.",
+            "The model's ability to distinguish classes.",
+            "The proportion of variance in the dependent variable explained by the independent variables.",
+            "The correlation between predicted and actual values."
+          ],
+          "correct": 2,
+          "explanation": "R-squared indicates how much of the variability in the outcome variable is captured by the model. A value closer to 1 is generally better."
+        },
+         {
+          "question": "When is Precision a particularly important metric?",
+          "options": [
+            "When the cost of a False Negative is high (e.g., missing a disease diagnosis).",
+            "When the cost of a False Positive is high (e.g., marking a legitimate email as spam).",
+            "When the dataset is perfectly balanced.",
+            "When you want to maximize the number of positives found."
+          ],
+          "correct": 1,
+          "explanation": "High precision minimizes False Positives, which is crucial when incorrectly classifying something as positive has significant consequences."
+        },
+        {
+          "question": "When is Recall (Sensitivity) a particularly important metric?",
+          "options": [
+            "When the cost of a False Negative is high (e.g., missing a disease diagnosis).",
+            "When the cost of a False Positive is high (e.g., marking a legitimate email as spam).",
+            "When you want to be very sure about your positive predictions.",
+            "When the dataset is perfectly balanced."
+          ],
+          "correct": 0,
+          "explanation": "High recall minimizes False Negatives, which is critical when failing to identify a positive case is highly undesirable."
+        },
+        {
+          "question": "What does Specificity (True Negative Rate) measure?",
+          "options": [
+            "Proportion of actual positives correctly identified.",
+            "Proportion of actual negatives correctly identified.",
+            "Proportion of predicted positives that were correct.",
+            "Overall accuracy."
+          ],
+          "correct": 1,
+          "explanation": "Specificity (TN / (TN + FP)) measures how well the model correctly identifies negative instances."
+        },
+        {
+          "question": "An AUC score of 0.5 typically indicates what?",
+          "options": [
+            "A perfect classifier.",
+            "A classifier performing no better than random guessing.",
+            "A classifier that always predicts the negative class.",
+            "A classifier with high bias."
+          ],
+          "correct": 1,
+          "explanation": "An AUC of 0.5 corresponds to the diagonal line on the ROC plot, representing random chance performance."
+        },
+        {
+          "question": "Why might Adjusted R-squared be preferred over R-squared in multiple linear regression?",
+          "options": [
+            "It is always higher than R-squared.",
+            "It penalizes the addition of irrelevant predictor variables to the model.",
+            "It is easier to calculate.",
+            "It represents the absolute error."
+          ],
+          "correct": 1,
+          "explanation": "Adjusted R-squared accounts for the number of predictors, preventing the R-squared value from artificially increasing just by adding more (even useless) variables."
+        }
+      ]
+    },
+    "ml_algorithms": {
+      "title": "Core ML Algorithms",
+      "description": "Exploring key supervised and unsupervised algorithms like Regression, k-NN, k-means, Naive Bayes, and SVD.",
+      "questions": [
+        {
+          "question": "Linear Regression is what type of machine learning algorithm?",
+          "options": [
+            "Unsupervised Clustering",
+            "Supervised Regression",
+            "Supervised Classification",
+            "Reinforcement Learning"
+          ],
+          "correct": 1,
+          "explanation": "Linear regression is used to predict a continuous target variable based on input features, making it a supervised regression technique."
+        },
+        {
+          "question": "What is the fundamental goal of Simple Linear Regression?",
+          "options": [
+            "To group data into clusters.",
+            "To find the best-fitting straight line through the data points.",
+            "To classify data into two categories.",
+            "To reduce the number of features."
+          ],
+          "correct": 1,
+          "explanation": "It models the linear relationship between one independent and one dependent variable by finding the line that minimizes errors."
+        },
+        {
+          "question": "Linear Regression typically minimizes which quantity to find the 'line of best fit'?",
+          "options": [
+            "The number of data points",
+            "The sum of absolute errors",
+            "The sum of squared errors (residuals)",
+            "The number of features"
+          ],
+          "correct": 2,
+          "explanation": "The Ordinary Least Squares (OLS) method used in linear regression minimizes the sum of the squared differences between actual and predicted values."
+        },
+        {
+          "question": "Which of the following is a key assumption of Linear Regression for reliable inference?",
+          "options": [
+            "Non-linearity between X and Y",
+            "Dependence of errors",
+            "Homoscedasticity (constant variance of errors)",
+            "Non-normally distributed errors"
+          ],
+          "correct": 2,
+          "explanation": "Homoscedasticity, along with linearity, independence, and normality of errors, are important assumptions for interpreting linear regression coefficients and p-values."
+        },
+        {
+          "question": "k-Nearest Neighbors (k-NN) can be used for which types of problems?",
+          "options": [
+            "Only Classification",
+            "Only Regression",
+            "Both Classification and Regression",
+            "Only Clustering"
+          ],
+          "correct": 2,
+          "explanation": "k-NN predicts based on the 'k' closest neighbors: majority vote for classification, average value for regression."
+        },
+        {
+          "question": "k-NN is considered a 'lazy learning' algorithm because:",
+          "options": [
+            "It is very slow to make predictions.",
+            "It doesn't build an explicit model during training, it just stores the data.",
+            "It requires very little data to train.",
+            "It only works on small datasets."
+          ],
+          "correct": 1,
+          "explanation": "Lazy learners defer computation until prediction time, relying on comparing the new instance to stored training instances."
+        },
+        {
+          "question": "How does k-NN make a prediction for a new data point in a classification task?",
+          "options": [
+            "It calculates the mean of the k nearest neighbors.",
+            "It takes a majority vote among the k nearest neighbors.",
+            "It builds a decision tree from the k nearest neighbors.",
+            "It finds the single closest neighbor."
+          ],
+          "correct": 1,
+          "explanation": "The class label that appears most frequently among the k closest training examples is assigned to the new point."
+        },
+        {
+          "question": "What is a major disadvantage of the k-NN algorithm?",
+          "options": [
+            "It builds complex models during training.",
+            "It is insensitive to the choice of 'k'.",
+            "It can be computationally expensive during prediction, especially with large datasets.",
+            "It requires features to be non-numeric."
+          ],
+          "correct": 2,
+          "explanation": "k-NN needs to calculate the distance between the new point and all training points at prediction time."
+        },
+        {
+          "question": "Why is feature scaling (e.g., normalization or standardization) often crucial for k-NN?",
+          "options": [
+            "To speed up the training process.",
+            "Because features with larger ranges can disproportionately influence the distance calculation.",
+            "To handle missing values.",
+            "To convert categorical features to numeric."
+          ],
+          "correct": 1,
+          "explanation": "Distance metrics are sensitive to the scale of features; scaling ensures all features contribute fairly."
+        },
+        {
+          "question": "k-means is what type of machine learning algorithm?",
+          "options": [
+            "Supervised Classification",
+            "Supervised Regression",
+            "Unsupervised Clustering",
+            "Reinforcement Learning"
+          ],
+          "correct": 2,
+          "explanation": "k-means is used to partition unlabeled data into 'k' distinct groups or clusters."
+        },
+        {
+          "question": "What does the k-means algorithm aim to minimize?",
+          "options": [
+            "The distance between cluster centroids.",
+            "The number of clusters 'k'.",
+            "The Within-Cluster Sum of Squares (WCSS) or Inertia.",
+            "The number of iterations."
+          ],
+          "correct": 2,
+          "explanation": "It tries to make clusters internally coherent by minimizing the sum of squared distances between points and their assigned centroid."
+        },
+        {
+          "question": "What is a significant challenge when using the k-means algorithm?",
+          "options": [
+            "It automatically determines the optimal number of clusters.",
+            "It requires labeled data.",
+            "You must specify the number of clusters (k) beforehand.",
+            "It is very slow to train."
+          ],
+          "correct": 2,
+          "explanation": "Choosing the appropriate 'k' is often non-trivial and requires methods like the Elbow method or Silhouette analysis."
+        },
+        {
+          "question": "The Elbow Method and Silhouette Score analysis are primarily used for what purpose in k-means?",
+          "options": [
+            "To initialize the centroids.",
+            "To scale the features.",
+            "To help determine the optimal number of clusters (k).",
+            "To evaluate classification accuracy."
+          ],
+          "correct": 2,
+          "explanation": "These methods provide heuristics for selecting a 'k' that balances cluster cohesion and separation."
+        },
+        {
+          "question": "Naive Bayes classifiers are based on which fundamental theorem?",
+          "options": [
+            "Central Limit Theorem",
+            "Pythagorean Theorem",
+            "Bayes' Theorem",
+            "Law of Large Numbers"
+          ],
+          "correct": 2,
+          "explanation": "Naive Bayes uses Bayes' Theorem to calculate the probability of a class given a set of features."
+        },
+        {
+          "question": "What is the 'naive' assumption made by Naive Bayes classifiers?",
+          "options": [
+            "That all features follow a normal distribution.",
+            "That all features are conditionally independent given the class.",
+            "That the dataset is perfectly balanced.",
+            "That there are no missing values."
+          ],
+          "correct": 1,
+          "explanation": "This simplifying (and often unrealistic) assumption makes calculations tractable by assuming features don't influence each other, given the class."
+        },
+        {
+          "question": "Which type of Naive Bayes is typically used for text classification with word counts?",
+          "options": [
+            "Gaussian NB",
+            "Multinomial NB",
+            "Bernoulli NB",
+            "Complement NB"
+          ],
+          "correct": 1,
+          "explanation": "Multinomial NB is designed for discrete count data, like the frequency of words in a document."
+        },
+        {
+          "question": "What is a common application where Naive Bayes performs surprisingly well, despite its strong assumption?",
+          "options": [
+            "Image recognition",
+            "Spam email filtering",
+            "Stock price prediction",
+            "Autonomous driving"
+          ],
+          "correct": 1,
+          "explanation": "Naive Bayes is a classic and effective algorithm for text-based spam detection."
+        },
+        {
+          "question": "What technique is used in Naive Bayes to handle the 'zero probability problem' (when a feature value wasn't seen with a class during training)?",
+          "options": [
+            "Feature Scaling",
+            "Cross-Validation",
+            "Laplace Smoothing (Additive Smoothing)",
+            "Principal Component Analysis"
+          ],
+          "correct": 2,
+          "explanation": "Smoothing adds a small value to all counts to prevent probabilities from becoming zero."
+        },
+        {
+          "question": "Singular Value Decomposition (SVD) is primarily a technique for:",
+          "options": [
+            "Training neural networks",
+            "Clustering data points",
+            "Matrix Factorization",
+            "Calculating classification accuracy"
+          ],
+          "correct": 2,
+          "explanation": "SVD is a fundamental linear algebra method that decomposes a matrix into three other matrices (U, Sigma, V^T)."
+        },
+        {
+          "question": "In the context of machine learning, SVD is often used for which unsupervised task?",
+          "options": [
+            "Classification",
+            "Regression",
+            "Dimensionality Reduction and Recommender Systems",
+            "Reinforcement Learning"
+          ],
+          "correct": 2,
+          "explanation": "SVD can be used for dimensionality reduction (related to PCA) and is a core technique in collaborative filtering for recommender systems."
+        },
+        {
+          "question": "Which algorithm updates cluster centers by calculating the mean of the points assigned to that cluster?",
+          "options": [
+            "k-Nearest Neighbors (k-NN)",
+            "Linear Regression",
+            "Naive Bayes",
+            "k-means Clustering"
+          ],
+          "correct": 3,
+          "explanation": "The 'update centroids' step in k-means involves recalculating the centroid as the mean of its assigned points."
+        },
+        {
+          "question": "Which algorithm's performance is highly sensitive to the initial random placement of centroids?",
+          "options": [
+            "Linear Regression",
+            "k-means Clustering",
+            "Naive Bayes",
+            "k-Nearest Neighbors (k-NN)"
+          ],
+          "correct": 1,
+          "explanation": "k-means can converge to suboptimal solutions depending on the initial centroid positions. Running it multiple times (n_init > 1) helps mitigate this."
+        },
+        {
+          "question": "Which algorithm calculates the distance between a new point and all training points during prediction?",
+          "options": [
+            "Linear Regression",
+            "k-means Clustering",
+            "Naive Bayes",
+            "k-Nearest Neighbors (k-NN)"
+          ],
+          "correct": 3,
+          "explanation": "k-NN's prediction phase involves finding the nearest neighbors by calculating distances to all stored training examples."
+        }
+      ]
+    }
+  }

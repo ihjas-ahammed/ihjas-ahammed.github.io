@@ -132,7 +132,7 @@ function getLevelDescription(level) {
         1: "Data",
         2: "Explorative Data Analysis",
         3: "Data Preprocessing",
-        4: "Page 29-36"
+        4: "Machine Learning"
     };
     return descriptions[level] || `Level ${level}`;
 }

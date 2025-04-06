@@ -774,5 +774,307 @@
       ],
       "correct": 1
     }
+  ],
+  "4": [
+    {
+      "question": "What is the core idea behind Machine Learning (ML) as described in the text?",
+      "options": [
+        "Programming computers with explicit step-by-step instructions for every task.",
+        "Allowing algorithms to learn patterns and rules from data without explicit programming.",
+        "Building complex databases to store large amounts of information.",
+        "Using human intuition to guide computer decisions."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "According to the text, what is the ultimate goal when building ML models?",
+      "options": [
+        "To create the most complex algorithm possible.",
+        "To use the largest dataset available.",
+        "To make predictions about new data or decisions in complex environments.",
+        "To visualize data patterns effectively."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which type of Machine Learning uses data with 'correct answers' or labels for training?",
+      "options": [
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Supervised Learning",
+        "Semi-Supervised Learning"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Predicting whether an email is 'SPAM' or 'NOT SPAM' is an example of which type of Supervised Learning task?",
+      "options": [
+        "Regression",
+        "Clustering",
+        "Dimensionality Reduction",
+        "Classification"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Predicting the price of a house based on its features falls under which category of Machine Learning?",
+      "options": [
+        "Classification",
+        "Regression",
+        "Clustering",
+        "Association Rule Mining"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What is the defining characteristic of Unsupervised Learning?",
+      "options": [
+        "It uses labeled training data.",
+        "It learns through rewards and penalties.",
+        "It uses data without predefined labels to find patterns.",
+        "It requires human supervision during the learning process."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Grouping customers with similar purchasing habits is a typical application of which Unsupervised Learning technique?",
+      "options": [
+        "Dimensionality Reduction",
+        "Regression",
+        "Association Rule Mining",
+        "Clustering"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "Which Machine Learning approach involves an agent learning by interacting with an environment and receiving rewards or penalties?",
+      "options": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Dimensionality Reduction"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the primary purpose of splitting a dataset into a Training Set and a Test Set?",
+      "options": [
+        "To make the training process faster.",
+        "To have more data for the model to learn from.",
+        "To get an unbiased estimate of how well the model generalizes to unseen data.",
+        "To satisfy the requirements of the algorithm."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What happens during the Model Training phase?",
+      "options": [
+        "The model's performance is evaluated on the test set.",
+        "The algorithm adjusts its internal parameters based on the training data to minimize a loss function.",
+        "The dataset is split into training and testing parts.",
+        "The final predictions are generated for deployment."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What does 'Overfitting' mean in Machine Learning?",
+      "options": [
+        "The model is too simple and performs poorly on both training and test data.",
+        "The model performs exceptionally well on the test data but poorly on the training data.",
+        "The model learns the training data too well, including noise, and performs poorly on unseen data.",
+        "The model fails to converge during training."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "A model that performs poorly on both the training set and the test set is likely suffering from:",
+      "options": [
+        "High Variance",
+        "Low Bias",
+        "Overfitting",
+        "High Bias (Underfitting)"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "The Bias-Variance Tradeoff suggests that:",
+      "options": [
+        "Increasing model complexity always improves test performance.",
+        "Simple models typically have low bias and high variance.",
+        "Complex models typically have low bias and high variance.",
+        "Bias and variance are independent of model complexity."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "In a Confusion Matrix, what does 'TP' (True Positive) represent?",
+      "options": [
+        "Correctly predicted negative instance.",
+        "Incorrectly predicted positive instance.",
+        "Correctly predicted positive instance.",
+        "Incorrectly predicted negative instance."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which classification metric measures the proportion of actual positive instances that were correctly identified by the model?",
+      "options": [
+        "Accuracy",
+        "Precision",
+        "Recall (Sensitivity)",
+        "Specificity"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "The F1-Score is the harmonic mean of which two metrics?",
+      "options": [
+        "Accuracy and Precision",
+        "Precision and Recall",
+        "Recall and Specificity",
+        "Accuracy and Recall"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which regression metric calculates the square root of the average squared differences between predicted and actual values?",
+      "options": [
+        "Mean Absolute Error (MAE)",
+        "Mean Squared Error (MSE)",
+        "R-squared (R²)",
+        "Root Mean Squared Error (RMSE)"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What does an R-squared value close to 1 indicate in a regression model?",
+      "options": [
+        "The model explains very little of the variance in the dependent variable.",
+        "The model is likely underfitting.",
+        "The model explains a large proportion of the variance in the dependent variable.",
+        "The model has high bias."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is the fundamental idea behind Simple Linear Regression?",
+      "options": [
+        "Finding the best curve to fit the data.",
+        "Grouping data points into clusters.",
+        "Finding the 'line of best fit' that minimizes the sum of squared errors.",
+        "Classifying data points based on their neighbors."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "How does the k-Nearest Neighbors (k-NN) algorithm classify a new data point?",
+      "options": [
+        "By building a decision tree from the training data.",
+        "By calculating the probability based on Bayes' Theorem.",
+        "By assigning the majority class label among its 'k' closest neighbors in the training set.",
+        "By finding the best-fitting line through the neighbors."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "What is a significant disadvantage of the k-NN algorithm?",
+      "options": [
+        "It requires explicit model training.",
+        "It is very fast during prediction, regardless of dataset size.",
+        "It is insensitive to the choice of 'k'.",
+        "It can be computationally expensive during prediction for large datasets."
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What is the primary goal of the k-means clustering algorithm?",
+      "options": [
+        "To maximize the distance between points within a cluster.",
+        "To partition data into 'k' clusters by minimizing the within-cluster sum of squares (WCSS).",
+        "To find the optimal number of clusters automatically.",
+        "To assign labels to data points based on predefined classes."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Which method is commonly used to help choose the optimal number of clusters ('k') for k-means?",
+      "options": [
+        "Gradient Descent",
+        "The Elbow Method (using WCSS/Inertia)",
+        "Calculating R-squared",
+        "Using a Confusion Matrix"
+      ],
+      "correct": 1
+    },
+    {
+      "question": "What core assumption makes Naive Bayes classifiers 'naive'?",
+      "options": [
+        "Features follow a Gaussian distribution.",
+        "All features are conditionally independent given the class.",
+        "The dataset is perfectly balanced.",
+        "The model parameters are learned through iteration."
+      ],
+      "correct": 1
+    },
+    {
+      "question": "Spam email filtering is a classic application of which algorithm, according to the text?",
+      "options": [
+        "k-means Clustering",
+        "Linear Regression",
+        "k-Nearest Neighbors (k-NN)",
+        "Naive Bayes"
+      ],
+      "correct": 3
+    },
+    {
+      "question": "What does Singular Value Decomposition (SVD) fundamentally do?",
+      "options": [
+        "Classifies data into predefined categories.",
+        "Predicts continuous values.",
+        "Breaks down a matrix into the product of three other specific matrices ($U \\Sigma V^T$).",
+        "Groups similar data points together without labels."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which of the following is a common application of SVD in Machine Learning?",
+      "options": [
+        "Training deep neural networks.",
+        "Implementing reinforcement learning agents.",
+        "Dimensionality reduction and recommender systems.",
+        "Performing real-time classification tasks."
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Identifying unusual data points like network intrusions or defective products is an example of:",
+      "options": [
+        "Classification",
+        "Regression",
+        "Anomaly Detection (Unsupervised Learning)",
+        "Reinforcement Learning"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Training a program to play chess by rewarding winning moves and penalizing losing moves falls under which category?",
+      "options": [
+        "Supervised Learning",
+        "Unsupervised Learning",
+        "Reinforcement Learning",
+        "Dimensionality Reduction"
+      ],
+      "correct": 2
+    },
+    {
+      "question": "Which evaluation metric is often misleading for classification problems with imbalanced classes?",
+      "options": [
+        "Precision",
+        "Recall",
+        "F1-Score",
+        "Accuracy"
+      ],
+      "correct": 3
+    }
   ]
 }
