@@ -233,7 +233,7 @@ Used when predicting continuous values.
     $$ RMSE = \sqrt{\frac{1}{n} \sum_{i=1}^{n} (y_i - \hat{y}_i)^2} $$
 *   **R-squared (R² or Coefficient of Determination):** Proportion of the variance in the dependent variable that is predictable from the independent variables. Ranges from 0 to 1 (or sometimes negative for very poor models). 1 indicates a perfect fit.
     $$ R^2 = 1 - \frac{\sum_{i=1}^{n} (y_i - \hat{y}_i)^2}{\sum_{i=1}^{n} (y_i - \bar{y})^2} $$
-    where $\hat{y}_i$ is the predicted value, $y_i$ is the actual value, and $\bar{y}$ is the mean of the actual values.
+    where $ \hat{y}_i $ is the predicted value, $ y_i $ is the actual value, and $ \bar{y} $ is the mean of the actual values.
 *   **Adjusted R-squared:** Modifies R² to account for the number of predictors in the model. Penalizes adding irrelevant features.
 
 ```python
