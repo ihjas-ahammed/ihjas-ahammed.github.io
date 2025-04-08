@@ -286,6 +286,12 @@
                     "qa": {}
                 },
                 {
+                    "text": "PI",
+                    "path": "/eng/mod3.2.md",
+                    "webview": false,
+                    "qa": {}
+                },
+                {
                     "text": "Nanoclay",
                     "path": "/eng/mod4.1.md",
                     "webview": false,
