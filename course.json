@@ -255,11 +255,7 @@
                     "text":"Wonders of Science",
                     "path":"/eng/mod2.1.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.21.json",
-                        "obj": 8
-                    }
+                    "qa": {}
                 },
                 {
                     "text":"All Palaces are Temporary Palaces",
@@ -270,6 +266,12 @@
                         "path": "eng/qa.22.json",
                         "obj": 9
                     }
+                },
+                {
+                    "text":"The Star",
+                    "path":"/eng/mod2.3.md",
+                    "webview": false,
+                    "qa": {}
                 },
                 {
                     "text": "Nanoclay",
