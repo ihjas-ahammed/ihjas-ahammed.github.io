@@ -252,14 +252,14 @@
                     }
                 },
                 {
-                    "text":"Wonders of Science",
-                    "path":"/eng/mod2.1.md",
+                    "text": "Wonders of Science",
+                    "path": "/eng/mod2.1.md",
                     "webview": false,
                     "qa": {}
                 },
                 {
-                    "text":"All Palaces are Temporary Palaces",
-                    "path":"/eng/mod2.2.md",
+                    "text": "All Palaces are Temporary Palaces",
+                    "path": "/eng/mod2.2.md",
                     "webview": false,
                     "qa": {},
                     "qa2": {
@@ -268,11 +268,23 @@
                     }
                 },
                 {
-                    "text":"The Star",
-                    "path":"/eng/mod2.3.md",
+                    "text": "The Star",
+                    "path": "/eng/mod2.3.md",
                     "webview": false,
                     "qa": {}
                 },
+                {
+                    "text": "Age of Cancer",
+                    "path": "/eng/mod2.4.md",
+                    "webview": false,
+                    "qa": {}
+                },
+                {
+                    "text": "On Earth as in the Heavens",
+                    "path": "/eng/mod3.1.md",
+                    "webview": false,
+                    "qa": {}
+                }
                 {
                     "text": "Nanoclay",
                     "path": "/eng/mod4.1.md",
