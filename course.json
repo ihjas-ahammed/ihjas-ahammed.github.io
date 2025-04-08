@@ -252,6 +252,16 @@
                     }
                 },
                 {
+                    "text":"Wonders of Science",
+                    "path":"/eng/mod2.1.md",
+                    "webview": false,
+                    "qa": {},
+                    "qa2": {
+                        "path": "eng/qa2.1.json",
+                        "obj": 1
+                    }
+                },
+                {
                     "text": "Nanoclay",
                     "path": "/eng/mod4.1.md",
                     "webview": false,
