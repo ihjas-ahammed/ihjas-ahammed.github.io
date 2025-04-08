@@ -262,6 +262,16 @@
                     }
                 },
                 {
+                    "text":"All Palaces are Temporary Palaces",
+                    "path":"/eng/mod2.1.md",
+                    "webview": false,
+                    "qa": {},
+                    "qa2": {
+                        "path": "eng/qa2.22.json",
+                        "obj": 8
+                    }
+                },
+                {
                     "text": "Nanoclay",
                     "path": "/eng/mod4.1.md",
                     "webview": false,

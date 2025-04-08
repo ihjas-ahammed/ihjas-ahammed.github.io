@@ -1,0 +1,706 @@
+{
+    "9": [
+        {
+            "name": "About the Poet",
+            "qa": [
+                {
+                    "question": "What are the cultural backgrounds mentioned for Rosebud Ben-Oni?",
+                    "options": [
+                        "Latina-Jewish American",
+                        "African American-Catholic",
+                        "Asian-Buddhist",
+                        "European-Protestant"
+                    ],
+                    "describe": "The text identifies Rosebud Ben-Oni as 'a promising Latina-Jewish American poet'.",
+                    "correct": 0
+                },
+                {
+                    "question": "Which noted series is Rosebud Ben-Oni known for?",
+                    "options": [
+                        "Cosmic Queries",
+                        "Poet Wrestling With",
+                        "Temporary Palaces Saga",
+                        "Quantum Verses"
+                    ],
+                    "describe": "The text states she is 'noted for her \"Poet Wrestling With\" series'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What major award did Rosebud Ben-Oni receive in 2019?",
+                    "options": [
+                        "Pulitzer Prize for Poetry",
+                        "National Book Award",
+                        "The Alice James Award",
+                        "Nobel Prize in Literature"
+                    ],
+                    "describe": "The text mentions she is the 'recipient of The Alice James Award in 2019'.",
+                    "correct": 2
+                },
+                {
+                    "question": "For which award was Rosebud Ben-Oni a finalist in the poetry category?",
+                    "options": [
+                        "Griffin Poetry Prize",
+                        "Booker Prize",
+                        "PEN/Faulkner Award",
+                        "National Jewish Book Award"
+                    ],
+                    "describe": "She was 'a finalist for the National Jewish Book Award in poetry'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the title of Ben-Oni's 'trail-blazing' work published in 2021?",
+                    "options": [
+                        "All Palaces are Temporary Palaces",
+                        "If This is the Age We End Discovery",
+                        "Poet Wrestling With Quarks",
+                        "Evolution by Nullification"
+                    ],
+                    "describe": "Her trail-blazing work is titled '*If This is the Age We End Discovery* (2021)'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What concept does '*If This is the Age We End Discovery*' primarily explore?",
+                    "options": [
+                        "Asteroid mining",
+                        "Evolution as /transformation by nullification/",
+                        "The history of Judaism",
+                        "Latina cultural identity"
+                    ],
+                    "describe": "The work 'speaks about the concept of evolution as /transformation by nullification/'.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which fields does Ben-Oni's work '*If This is the Age We End Discovery*' mix?",
+                    "options": [
+                        "History, Politics, and Art",
+                        "Modern Physics, Poetry, and Judaism",
+                        "Biology, Music, and Philosophy",
+                        "Chemistry, Sculpture, and Buddhism"
+                    ],
+                    "describe": "Her work involves 'mixing modern physics, poetry, and Judaism'.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which organization commissioned poetry or lyrical essays from Ben-Oni related to entertainment?",
+                    "options": [
+                        "NASA",
+                        "Paramount",
+                        "The Smithsonian",
+                        "National Geographic"
+                    ],
+                    "describe": "Her work has been 'commissioned by Paramount'.",
+                    "correct": 1
+                },
+                {
+                    "question": "Which memorial site commissioned work from Rosebud Ben-Oni?",
+                    "options": [
+                        "Vietnam Veterans Memorial",
+                        "Lincoln Memorial",
+                        "National September 11 Memorial",
+                        "Pearl Harbor Memorial"
+                    ],
+                    "describe": "Her work has been commissioned by 'the National September 11 Memorial'.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which museum focused on heritage commissioned work from Ben-Oni?",
+                    "options": [
+                        "The Metropolitan Museum of Art",
+                        "The Museum of Modern Art",
+                        "The British Museum",
+                        "Museum of Jewish Heritage"
+                    ],
+                    "describe": "Her work has been commissioned by the 'Museum of Jewish Heritage'.",
+                    "correct": 3
+                },
+                {
+                    "question": "How is Rosebud Ben-Oni described in terms of her career stage?",
+                    "options": [
+                        "Established literary giant",
+                        "Promising poet",
+                        "Retired academic",
+                        "Debut writer"
+                    ],
+                    "describe": "The text refers to her as 'a promising Latina-Jewish American poet'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What specific type of transformation does her 2021 book discuss regarding evolution?",
+                    "options": [
+                        "Gradual adaptation",
+                        "Random mutation",
+                        "Transformation by nullification",
+                        "Intelligent design"
+                    ],
+                    "describe": "The book speaks about 'evolution as /transformation by nullification/'.",
+                    "correct": 2
+                },
+                {
+                    "question": "Besides poetry, what other form of writing by Ben-Oni has been commissioned?",
+                    "options": [
+                        "Novels",
+                        "Screenplays",
+                        "Lyrical essays",
+                        "Short stories"
+                    ],
+                    "describe": "The text mentions 'Her poetry and lyrical essays have been commissioned'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What description is given to Ben-Oni's 2021 work?",
+                    "options": [
+                        "Controversial",
+                        "Traditional",
+                        "Trail-blazing",
+                        "Academic"
+                    ],
+                    "describe": "The text calls her 2021 work 'trail-blazing'.",
+                    "correct": 2
+                },
+                {
+                    "question": "Which combination of identities is highlighted for Rosebud Ben-Oni?",
+                    "options": [
+                        "Poet and Scientist",
+                        "Latina and Jewish",
+                        "American and Activist",
+                        "Essayist and Physicist"
+                    ],
+                    "describe": "The text states she is a 'Latina-Jewish American poet'.",
+                    "correct": 1
+                }
+            ]
+        },
+        {
+            "name": "About the Text",
+            "qa": [
+                {
+                    "question": "What is the title of the poem discussed in this section?",
+                    "options": [
+                        "Poet Wrestling With Asteroids",
+                        "If This is the Age We End Discovery",
+                        "All Palaces are Temporary Palaces",
+                        "Quarks, Anti-Quarks, and Us"
+                    ],
+                    "describe": "The section is titled 'About the Text' and discusses 'Rosebud Ben-Oni's \"All Palaces are Temporary Palaces\"'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What primary themes does the poem explore?",
+                    "options": [
+                        "Political revolution and social justice",
+                        "The history of scientific discovery",
+                        "The ethereality of the cosmos and ephemeral nature of existence",
+                        "Romantic love and loss"
+                    ],
+                    "describe": "The poem is described as 'a poignant exploration of the ethereality of the cosmos and the ephemeral nature of existence'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What initially inspired the poem?",
+                    "options": [
+                        "A major scientific breakthrough",
+                        "A historical event",
+                        "A personal loss",
+                        "A conversation with her six-year-old niece"
+                    ],
+                    "describe": "The poem was 'Inspired by a conversation with her six-year-old niece'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What feeling in the child helped kindle the poem?",
+                    "options": [
+                        "Fear of the dark",
+                        "Sense of awe and wonder",
+                        "Anger at injustice",
+                        "Boredom"
+                    ],
+                    "describe": "The poem was 'kindled by the child's sense of awe and wonder'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What kind of philosophical questions does the poem delve into?",
+                    "options": [
+                        "Ethical dilemmas in science",
+                        "The nature of political power",
+                        "Questions on mortality",
+                        "The definition of art"
+                    ],
+                    "describe": "The poem 'delves deep into philosophical questions on mortality'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What specific topics did the child's questions cover?",
+                    "options": [
+                        "Dinosaurs and fossils",
+                        "Stars and planets",
+                        "Asteroids, quarks, and anti-quarks",
+                        "History and geography"
+                    ],
+                    "describe": "The text mentions 'The child's questions about asteroids, quarks, and anti-quarks'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What role did the child's questions play in the poem's creation?",
+                    "options": [
+                        "They were dismissed by the poet.",
+                        "They formed the poem's conclusion.",
+                        "They served as a catalyst for the poet's contemplation.",
+                        "They were the main scientific data presented."
+                    ],
+                    "describe": "The child's questions 'serve as a catalyst for the poet's contemplation on life'.",
+                    "correct": 2
+                },
+                {
+                    "question": "Through which 'lens' does Ben-Oni examine the vastness of the cosmos?",
+                    "options": [
+                        "History and mythology",
+                        "Politics and economics",
+                        "Science and sense",
+                        "Religion and faith"
+                    ],
+                    "describe": "'Through the lens of science and sense, Ben-Oni examines the vastness of the cosmos...'.",
+                    "correct": 2
+                },
+                {
+                    "question": "Besides the cosmos' vastness, what else does the poem examine?",
+                    "options": [
+                        "The structure of atoms",
+                        "The fragility of human existence",
+                        "The politics of space exploration",
+                        "The beauty of nature"
+                    ],
+                    "describe": "Ben-Oni examines 'the vastness of the cosmos and the fragility of human existence'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What is the core meaning encapsulated by the poem's title?",
+                    "options": [
+                        "All governments eventually fall.",
+                        "Temporary housing is common.",
+                        "Symbols of power and magnificent structures perish over time.",
+                        "Material wealth is unimportant."
+                    ],
+                    "describe": "'The title encapsulates the core of the poem: the symbols of power and all magnificent structures perish in the course of time.'",
+                    "correct": 2
+                },
+                {
+                    "question": "How is the poem described in terms of its emotional quality?",
+                    "options": [
+                        "Humorous",
+                        "Angry",
+                        "Poignant",
+                        "Detached"
+                    ],
+                    "describe": "The poem is described as a 'poignant exploration'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What specific aspect of existence does the poem explore alongside the cosmos?",
+                    "options": [
+                        "Eternal nature",
+                        "Predictable nature",
+                        "Ephemeral nature",
+                        "Purposeful nature"
+                    ],
+                    "describe": "The poem explores 'the ephemeral nature of existence'.",
+                    "correct": 2
+                },
+                {
+                    "question": "The niece's questions serve as a catalyst for the poet's contemplation on what subject?",
+                    "options": [
+                        "Art",
+                        "Politics",
+                        "Life",
+                        "History"
+                    ],
+                    "describe": "They serve as 'a catalyst for the poet's contemplation on life'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What does the text imply about 'palaces' in the context of the title?",
+                    "options": [
+                        "They are only built by royalty.",
+                        "They represent enduring power.",
+                        "They are symbols that eventually perish.",
+                        "They are the ideal place to live."
+                    ],
+                    "describe": "The title means 'the symbols of power and all magnificent structures perish in the course of time'.",
+                    "correct": 2
+                },
+                {
+                    "question": "The poem connects philosophical questions on mortality to inspiration from whom?",
+                    "options": [
+                        "A famous scientist",
+                        "An ancient philosopher",
+                        "Her six-year-old niece",
+                        "A historical text"
+                    ],
+                    "describe": "The poem delves into mortality, inspired by 'a conversation with her six-year-old niece'.",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Text Analysis",
+            "qa": [
+                {
+                    "question": "What elements does the poem juxtapose, according to the analysis?",
+                    "options": [
+                        "Past and present events",
+                        "Scientific concepts and everyday moments",
+                        "Urban and rural settings",
+                        "Joy and sorrow"
+                    ],
+                    "describe": "'The poem juxtaposes scientific concepts with everyday moments in life.'",
+                    "correct": 1
+                },
+                {
+                    "question": "What kind of tone does the poem possess?",
+                    "options": [
+                        "Sarcastic and biting",
+                        "Formal and academic",
+                        "Lyrical and thoughtful",
+                        "Joyful and celebratory"
+                    ],
+                    "describe": "'Through a lyrical tone, it sets a thoughtful note...'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What does the poem seek readers to 'herald'?",
+                    "options": [
+                        "Scientific certainty",
+                        "Human achievement",
+                        "The mystery of the universe",
+                        "Political change"
+                    ],
+                    "describe": "It seeks 'readers to herald the mystery of the universe'.",
+                    "correct": 2
+                },
+                {
+                    "question": "Where does the poem suggest readers might find refuge?",
+                    "options": [
+                        "In solitude",
+                        "In nature",
+                        "In ignorance",
+                        "In knowledge"
+                    ],
+                    "describe": "It encourages readers to 'find refuge in knowledge even as the cosmic tapestry appears grand'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What is the suggested significance of the 'cosmic tapestry' appearing grand?",
+                    "options": [
+                        "It proves human insignificance.",
+                        "It makes knowledge irrelevant.",
+                        "It highlights the context for finding refuge in knowledge.",
+                        "It guarantees safety."
+                    ],
+                    "describe": "Readers should 'find refuge in knowledge even as the cosmic tapestry appears grand'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What attitude towards the present moment does the poem encourage?",
+                    "options": [
+                        "To escape it",
+                        "To analyze it scientifically",
+                        "To cherish it",
+                        "To ignore it"
+                    ],
+                    "describe": "'The poem encourages readers to cherish the present...'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What specific aspect of life does the poem encourage readers to appreciate?",
+                    "options": [
+                        "Its challenges",
+                        "Its predictability",
+                        "Its beauty",
+                        "Its financial rewards"
+                    ],
+                    "describe": "The poem encourages readers to 'appreciate the beauty of life'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What realization about humanity's place is encouraged by the poem?",
+                    "options": [
+                        "Humans are masters of the universe.",
+                        "Humans are separate from the cosmos.",
+                        "Humans are part of a larger cosmic cycle.",
+                        "Humans are insignificant and powerless."
+                    ],
+                    "describe": "Readers should 'deeply realize that humans are part of a larger cosmic cycle'.",
+                    "correct": 2
+                },
+                {
+                    "question": "How is the poem's overall note described?",
+                    "options": [
+                        "Critical",
+                        "Thoughtful",
+                        "Ambiguous",
+                        "Didactic"
+                    ],
+                    "describe": "It 'sets a thoughtful note'.",
+                    "correct": 1
+                },
+                {
+                    "question": "The juxtaposition in the poem links science with what?",
+                    "options": [
+                        "Historical events",
+                        "Abstract philosophy",
+                        "Everyday life",
+                        "Future predictions"
+                    ],
+                    "describe": "The poem juxtaposes 'scientific concepts with everyday moments in life'.",
+                    "correct": 2
+                },
+                {
+                    "question": "The analysis suggests the poem prompts a deep realization about humans and what else?",
+                    "options": [
+                        "Technology",
+                        "Politics",
+                        "A cosmic cycle",
+                        "Artistic expression"
+                    ],
+                    "describe": "The analysis mentions realizing 'that humans are part of a larger cosmic cycle'.",
+                    "correct": 2
+                },
+                {
+                    "question": "According to the analysis, the poem uses a lyrical tone to achieve what?",
+                    "options": [
+                        "To confuse the reader",
+                        "To set a thoughtful note",
+                        "To criticize science",
+                        "To tell a simple story"
+                    ],
+                    "describe": "'Through a lyrical tone, it sets a thoughtful note...'.",
+                    "correct": 1
+                },
+                {
+                    "question": "What action does the analysis say the poem encourages regarding the universe's mysteries?",
+                    "options": [
+                        "Solve them",
+                        "Ignore them",
+                        "Fear them",
+                        "Herald them"
+                    ],
+                    "describe": "It seeks 'readers to herald the mystery of the universe'.",
+                    "correct": 3
+                },
+                {
+                    "question": "What quality of the 'cosmic tapestry' is mentioned in the analysis?",
+                    "options": [
+                        "Simple",
+                        "Predictable",
+                        "Grand",
+                        "Monochromatic"
+                    ],
+                    "describe": "The analysis refers to the 'cosmic tapestry appears grand'.",
+                    "correct": 2
+                },
+                {
+                    "question": "The poem encourages appreciating the beauty of life and realizing humans' connection to what?",
+                    "options": [
+                        "Their immediate family",
+                        "Their nation",
+                        "A larger cosmic cycle",
+                        "Technological progress"
+                    ],
+                    "describe": "Appreciate life's beauty and 'realize that humans are part of a larger cosmic cycle'.",
+                    "correct": 2
+                }
+            ]
+        },
+        {
+            "name": "Text (The Poem)",
+            "qa": [
+                {
+                    "question": "What topic initiates the phone call in the poem?",
+                    "options": [
+                        "The weather",
+                        "Asteroid mining",
+                        "A school project",
+                        "A family event"
+                    ],
+                    "describe": "The first line states: 'My niece calls with questions of asteroid mining.'",
+                    "correct": 1
+                },
+                {
+                    "question": "How old is the niece mentioned in the poem?",
+                    "options": [
+                        "Four",
+                        "Five",
+                        "Six",
+                        "Seven"
+                    ],
+                    "describe": "The second line says: 'At six she’s worried & can’t tell me why.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What precious metals are mentioned as potentially being on spent comets?",
+                    "options": [
+                        "Iron, Nickel, Cobalt",
+                        "Copper, Zinc, Lead",
+                        "Gold, Silver, Platinum",
+                        "Titanium, Aluminum, Magnesium"
+                    ],
+                    "describe": "The poem states: 'I hear there is gold, silver, platinum / On spent comets.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What activity are the 'very rich' described as doing?",
+                    "options": [
+                        "Funding space exploration",
+                        "Building underwater cities",
+                        "Driving cars on coral reefs",
+                        "Mining asteroids themselves"
+                    ],
+                    "describe": "The poem mentions: 'The very rich driving cars on coral reefs.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What subatomic particle structure is mentioned as requiring new frontiers in technology?",
+                    "options": [
+                        "The electron",
+                        "The proton",
+                        "The pentaquark",
+                        "The neutron"
+                    ],
+                    "describe": "The poem mentions: '& if the newest frontiers require technology / Smaller than an atom, well, now there’s the / pentaquark'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What component is crucial to the pentaquark's existence as described in the poem?",
+                    "options": [
+                        "A gluon",
+                        "A lepton",
+                        "An antiquark",
+                        "A boson"
+                    ],
+                    "describe": "The poem asks: 'Which is almost all quark save for one / Antiquark, & if not for the anti- / Quark, would anything... be?'",
+                    "correct": 2
+                },
+                {
+                    "question": "What fundamental question does the niece ask 'for the first time'?",
+                    "options": [
+                        "What is platinum?",
+                        "Can we live underwater?",
+                        "Why are we here?",
+                        "What is an antiquark?"
+                    ],
+                    "describe": "The poem states: 'Why are we here? She’s asking for / the first time'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What image is used to describe the anxiety of discovering a fundamental question like 'Why are we here?'",
+                    "options": [
+                        "Driving cars on coral reefs",
+                        "Mining asteroids for gold",
+                        "Stumbling upon a burning temple",
+                        "Missing a train"
+                    ],
+                    "describe": "The poem describes it as: 'the anxiety of one who’s stumbled upon a / burning / Temple in the fields.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What action does the speaker take while listening to the niece?",
+                    "options": [
+                        "Boards the train quickly",
+                        "Hangs up the phone",
+                        "Misses the train",
+                        "Starts mining asteroids"
+                    ],
+                    "describe": "The poem says: 'We listen to each other / Breathe. I miss my train...'",
+                    "correct": 2
+                },
+                {
+                    "question": "In which New York City neighborhood does the speaker linger on a staircase?",
+                    "options": [
+                        "Astoria, Queens",
+                        "Woodside, Queens",
+                        "Flushing, Queens",
+                        "Long Island City, Queens"
+                    ],
+                    "describe": "The speaker lingers 'on a winding / staircase / In Woodside, Queens.'",
+                    "correct": 1
+                },
+                {
+                    "question": "What discovery made the speaker feel 'I’d come home'?",
+                    "options": [
+                        "A hidden park",
+                        "A specific apartment",
+                        "A small stretch of exposed track subverting the sky",
+                        "An old friend"
+                    ],
+                    "describe": "The speaker remembers discovering 'This small stretch of exposed track subverting the / sky & knew / I’d come home.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What conditions does the speaker wish for 'life on asteroids'?",
+                    "options": [
+                        "Advanced technology and luxury",
+                        "Strict laws and governance",
+                        "Without fences or fracking",
+                        "Limited population and resources"
+                    ],
+                    "describe": "The speaker wishes for 'life on asteroids without fences / or fracking'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What scientific phenomenon does the speaker wish dreams would 'know no'?",
+                    "options": [
+                        "Quantum entanglement",
+                        "General relativity",
+                        "Deep inelastic scattering",
+                        "Thermodynamics"
+                    ],
+                    "describe": "The speaker wishes '& dreams know no deep inelastic scattering.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What condition is wished for regarding silence in the ideal place?",
+                    "options": [
+                        "Silence is constant",
+                        "Silence is occasionally summoned",
+                        "Silence is never summoned",
+                        "Silence alternates with noise"
+                    ],
+                    "describe": "The speaker imagines a place 'Where silence is never summoned'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What properties are associated with the colliding rays at the end of the poem?",
+                    "options": [
+                        "Up & Down",
+                        "Red & Blue",
+                        "Charm & Strange",
+                        "Positive & Negative"
+                    ],
+                    "describe": "The poem ends 'where rays / Collide in charm & strange'.",
+                    "correct": 2
+                },
+                {
+                    "question": "What is the state of the sky described on the day the niece calls?",
+                    "options": [
+                        "Bright blue and clear",
+                        "Dark and stormy",
+                        "Overcast with impassivity",
+                        "Filled with stars"
+                    ],
+                    "describe": "The niece calls 'on this overcast day in the spring, where / sky is one long cover / Of impassivity.'",
+                    "correct": 2
+                },
+                {
+                    "question": "What is implied about the concept of 'enough' in the poem?",
+                    "options": [
+                        "Having enough resources is key",
+                        "What's next is always enough",
+                        "What's next is never enough",
+                        "Contentment is easy to achieve"
+                    ],
+                    "describe": "The poem states: 'What’s next is never / Enough.'",
+                    "correct": 2
+                }
+            ]
+        }
+    ]
+}
