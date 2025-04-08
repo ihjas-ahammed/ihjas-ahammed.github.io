@@ -257,8 +257,8 @@
                     "webview": false,
                     "qa": {},
                     "qa2": {
-                        "path": "eng/qa2.1.json",
-                        "obj": 1
+                        "path": "eng/qa2.json",
+                        "obj": 8
                     }
                 },
                 {
