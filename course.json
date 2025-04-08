@@ -1,255 +1,31 @@
 {
     "semester2": [
         {
-            "title": "Data Science",
-            "modules": [
-                {
-                    "text": "Data",
-                    "path": "/cs2/mod1.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "cs2/qa.json",
-                        "obj": 1
-                    },
-                    "qa2": {
-                        "path": "cs2/qa21.json",
-                        "obj": 1
-                    }
-                },
-                {
-                    "text": "Exploratory Data Analysis (EDA)",
-                    "path": "/cs2/mod2.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "cs2/qa.json",
-                        "obj": 2
-                    },
-                    "qa2": {
-                        "path": "cs2/qa22.json",
-                        "obj": 2
-                    }
-                },
-                {
-                    "text": "Data Preprocessing",
-                    "path": "/cs2/mod3.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "cs2/qa.json",
-                        "obj": 3
-                    },
-                    "qa2": {
-                        "path": "cs2/qa23.json",
-                        "obj": 3
-                    }
-                },
-                {
-                    "text": "Introduction to Machine Learning",
-                    "path": "/cs2/mod4.md",
-                    "webview": false,
-                    "qa": {}
-                },
-                {
-                    "text": "Summary: Data Science",
-                    "path": "/cs2/sum.md",
-                    "webview": false,
-                    "qa": {}
-                }
-            ]
-        },
-        {
-            "title": "Probability Theory",
-            "modules": [
-                {
-                    "text": "Discrete Random Variables",
-                    "path": "/stat2/mod1",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "stat2/qa1.json",
-                        "obj": 1
-                    },
-                    "qa2": {
-                        "path": "stat2/qa2.3.json",
-                        "obj": 1
-                    }
-                },
-                {
-                    "text": "Continuous Random Variables",
-                    "path": "/stat2/mod2",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "stat2/qa1.json",
-                        "obj": 2
-                    },
-                    "qa2": {
-                        "path": "stat2/qa22.3.json",
-                        "obj": 2
-                    }
-                },
-                {
-                    "text": "Correlation and Regression",
-                    "path": "/stat2/mod3",
-                    "webview": false,
-                    "qa2": {
-                        "path": "stat2/qa21.1.json",
-                        "obj": 3
-                    }
-                },
-                {
-                    "text": "Sampling Distributions",
-                    "path": "/stat2/mod4.html",
-                    "webview": true,
-                    "qa2": {
-                        "path": "stat2/qa23.json",
-                        "obj": 4
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Electronics",
-            "modules": [
-                {
-                    "text": "Semiconductors",
-                    "path": "/electronics/mod1.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "electronics/qa4.json",
-                        "obj": 1
-                    },
-                    "qa2": {
-                        "path": "electronics/qa4.2.json",
-                        "obj": 1
-                    }
-                },
-                {
-                    "text": "Rectifiers",
-                    "path": "/electronics/mod2.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "electronics/qa4.json",
-                        "obj": 2
-                    },
-                    "qa2": {
-                        "path": "electronics/qa4.2.json",
-                        "obj": 2
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Arabic",
-            "modules": [
-                {
-                    "text": "To My Daughter",
-                    "path": "/arabic/lesson1/",
-                    "webview": true,
-                    "qa": {},
-                    "qa2": {
-                        "path": "arabic/qa.json",
-                        "obj": 1
-                    }
-                },
-                {
-                    "text": "Nature",
-                    "path": "/arabic/lesson2/",
-                    "webview": true,
-                    "qa": {},
-                    "qa2": {
-                        "path": "arabic/qa.json",
-                        "obj": 2
-                    }
-                },
-                {
-                    "text": "The Father and Son",
-                    "path": "/arabic/lesson3/",
-                    "webview": true,
-                    "qa": {},
-                    "qa2": {
-                        "path": "arabic/qa.json",
-                        "obj": 3
-                    }
-                },
-                {
-                    "text": "Morality",
-                    "path": "/arabic/lesson4/",
-                    "webview": true,
-                    "qa": {},
-                    "qa2": {
-                        "path": "arabic/qa.json",
-                        "obj": 4
-                    }
-                },
-                {
-                    "text": "The Patient's Clinic",
-                    "path": "/arabic/lesson5/",
-                    "webview": true,
-                    "qa": {},
-                    "qa2": {
-                        "path": "arabic/qa.json",
-                        "obj": 5
-                    }
-                },
-                {
-                    "text": "Friendship",
-                    "path": "/arabic/lesson7/",
-                    "webview": true,
-                    "qa": {},
-                    "qa2": {
-                        "path": "arabic/qa.json",
-                        "obj": 7
-                    }
-                }
-            ]
-        },
-        {
             "title": "English",
             "modules": [
                 {
                     "text": "The Fouth State of Matter",
                     "path": "/eng/mod1.1.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 1
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "Relativity",
                     "path": "/eng/mod1.2.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 2
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "The Cure",
                     "path": "/eng/mod1.3.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 3
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "Only an Axe Away",
                     "path": "/eng/mod1.4.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 4
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "Wonders of Science",
@@ -261,11 +37,7 @@
                     "text": "All Palaces are Temporary Palaces",
                     "path": "/eng/mod2.2.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa.22.json",
-                        "obj": 9
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "The Star",
@@ -292,24 +64,28 @@
                     "qa": {}
                 },
                 {
+                    "text": "A Study in Emerald",
+                    "path": "/eng/mod3.3.md",
+                    "webview": false,
+                    "qa": {}
+                },
+                {
+                    "text": "A Love Poem for Lonely Prime Numbers",
+                    "path": "/eng/mod3.2.md",
+                    "webview": false,
+                    "qa": {}
+                },
+                {
                     "text": "Nanoclay",
                     "path": "/eng/mod4.1.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 5
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "Preface to The Reader",
                     "path": "/eng/mod4.2.md",
                     "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 6
-                    }
+                    "qa": {}
                 },
                 {
                     "text": "A Trip to Inifinity",
@@ -320,51 +96,6 @@
                 {
                     "text": "Scientific Temper by Indian Scientists",
                     "path": "/eng/mod4.4.md",
-                    "webview": false,
-                    "qa": {},
-                    "qa2": {
-                        "path": "eng/qa2.json",
-                        "obj": 7
-                    }
-                }
-            ]
-        },
-        {
-            "title": "Web Design",
-            "modules": [
-                {
-                    "text": "Introduction to Web Design",
-                    "path": "/cs2.1/mod1.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "cs2.1/qa/levels.json",
-                        "obj": 1
-                    }
-                },
-                {
-                    "text": "HTML: Foundation ",
-                    "path": "/cs2.1/mod2.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "cs2.1/qa/levels.json",
-                        "obj": 2
-                    }
-                },
-                {
-                    "text": "CSS: Basics",
-                    "path": "/cs2.1/mod3.md",
-                    "webview": false,
-                    "qa": {
-                        "name": "obj",
-                        "path": "cs2.1/qa/levels.json",
-                        "obj": 3
-                    }
-                },
-                {
-                    "text": "JavaScript Essentials",
-                    "path": "/cs2.1/mod4.md",
                     "webview": false,
                     "qa": {}
                 }
